@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "博客搭建教程"
+date:   2017-11-23 14:49:51 +0800
 categories: Other
 tags: Other
 author: pepe
