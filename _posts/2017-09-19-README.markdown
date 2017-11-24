@@ -32,7 +32,7 @@ the latest changes. Pull requests are encouraged and accepted!
 
 Preview
 =======
-![Xixia]({{ site.baseurl }}//assets/images/preview.png)
+![预览](//assets/images/preview.png)
 
 License
 =======
