@@ -13,7 +13,7 @@ url: https://494778200pepe.github.io
 baseurl: ''
 ## default date_format
 date_format: 
-  title: "%B-%-d-%Y"
+  title: "%Y-%-B-%d"
   archive: "%b"
   categories: "%b-%Y"
   tag: "%b-%Y"
