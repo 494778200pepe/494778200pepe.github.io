@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "Read Me"
+title:  "博客搭建教程"
 categories: Other
 tags: Other
-author: Xixia
-description: The read me page of jekyll-xixia.
+author: pepe
+description: The read me page of pepe‘s blog.
 ---
 
-Jekyll Xixia
+博客
 ============
-Jekyll Themes
+搭建参考
 
 
 
@@ -30,7 +30,7 @@ and you can do the same thing for any other sections added to the sidebar.
 Don't forget to occassionally merge against my upstream repository so you can get
 the latest changes. Pull requests are encouraged and accepted!
 
-Preview
+预览
 =======
 ![预览](//assets/images/preview.png)
 
