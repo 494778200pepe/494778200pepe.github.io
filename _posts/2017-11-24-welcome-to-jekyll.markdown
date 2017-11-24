@@ -2,8 +2,8 @@
 layout: post
 title:  "博客说明"
 date:   2017-11-24 14:46:51 +0800
-categories: pepe
-tags: pepe
+categories: categories
+tags: tags
 description: 博客，是为了做学习笔记！
 ---
 博客，是为了做学习笔记！
