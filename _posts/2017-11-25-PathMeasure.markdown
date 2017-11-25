@@ -10,18 +10,25 @@ description: The read me page of pepe‘s blog.
 
 Path & PathMeasure
 ============
-顾名思义，PathMeasure是一个用来测量Path的类，主要有以下方法:
+顾名思义，PathMeasure是一个用来测量Path的类。
 
 构造方法
 ==========
 ~~~
 PathMeasure()
 ~~~
-创建一个空的PathMeasure
+说明：	创建一个空的PathMeasure。
+		用这个构造函数可创建一个空的用这个构造函数可创建一个空的 PathMeasure，但是使用之前需要先调用 setPath 方法来与 Path 进行关联。
+        被关联的 Path 必须是已经创建好的，如果关联之后 Path 内容进行了更改，则需要使用 setPath 方法重新关联。
 ~~~
 PathMeasure(Path path, boolean forceClosed)
 ~~~
-创建 PathMeasure 并关联一个指定的Path(Path需要已经创建完成)
+说明：	创建 PathMeasure 并关联一个指定的Path(Path需要已经创建完成)。
+		1、第一个参数自然就是被关联的 Path 了，第二个参数是用来确保 Path 闭合，如果设置为 true，
+			则不论之前Path是否闭合，都会自动闭合该 Path(如果Path可以闭合的话)。
+		2、不论 forceClosed 设置为何种状态(true 或者 false)， 都不会影响原有Path的状态，即 Path 与 PathMeasure 关联之后，之前的的 Path 不会有任何改变。
+		3、forceClosed 的设置状态可能会影响测量结果，如果 Path 未闭合但在与 PathMeasure 关联的时候设置 forceClosed 为 true 时，
+            测量结果可能会比 Path 实际长度稍长一点，获取到到是该 Path 闭合时的状态。
 
 公共方法
 ===
@@ -42,6 +49,7 @@ float      getLength()
 boolean    nextContour()
 ~~~																
 跳转到下一个轮廓
+~~~
 boolean    getSegment(float startD, float stopD, Path dst, boolean startWithMoveTo)	
 ~~~		
 截取片段
