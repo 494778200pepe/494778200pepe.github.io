@@ -13,7 +13,7 @@ Path & PathMeasure
 顾名思义，PathMeasure是一个用来测量Path的类。
 # PathMeasure
 ## 构造方法
-==========
+
 ~~~
 PathMeasure()
 ~~~
@@ -32,7 +32,6 @@ PathMeasure(Path path, boolean forceClosed)
             测量结果可能会比 Path 实际长度稍长一点，获取到到是该 Path 闭合时的状态。
 
 ## 公共方法
-==========
 
 ~~~
 void       setPath(Path path, boolean forceClosed)	
