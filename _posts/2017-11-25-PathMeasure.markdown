@@ -14,17 +14,12 @@ Path & PathMeasure
 
 #构造方法
 
-<table>
-    <tr>
-        <td>方法名</td><td>释义</td>
-    </tr>
-	<tr>
-       	<td>PathMeasure()</td><td>创建一个空的PathMeasure</td>
-    </tr>
-	<tr>
-       	<td>PathMeasure(Path path, boolean forceClosed)</td><td>创建 PathMeasure 并关联一个指定的Path(Path需要已经创建完成)</td>
-    </tr>
-</table>
+
+|方法名|释义|
+|-|-|
+|PathMeasure()|创建一个空的PathMeasure|
+|PathMeasure(Path path, boolean forceClosed)|创建 PathMeasure 并关联一个指定的Path(Path需要已经创建完成)|
+
 #公共方法
 <table>
  	<tr>  
