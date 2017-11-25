@@ -23,8 +23,8 @@ Path & PathMeasure
 公共方法
 ==========
 
-|返回值|方法名|释义|
-|--|--|--|
+|返回值	|方法名	|释义	|
+|--		|------ |--		|
 |void	|setPath(Path path, boolean forceClosed)									|关联一个Path|
 |boolean|isClosed()																	|是否闭合|
 |float	|getLength()																|获取Path的长度|
