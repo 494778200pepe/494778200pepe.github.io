@@ -97,9 +97,26 @@ https://developer.android.google.cn/reference/android/content/res/TypedArray.htm
 |TypedValue	|peekValue(int index)
 |void	|recycle()
 
+#代码
 
+```
+    public CircleImg(Context context) {
+        super(context);
+    }
 
+    public CircleImg(Context context, @Nullable AttributeSet attrs) {
+        super(context, attrs);
+    }
 
+    public CircleImg(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
+
+	//第四个，要求API21以上
+    public CircleImg(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes)  {
+        super(context, attrs, defStyleAttr, defStyleRes);
+    }
+```
 
 
 
