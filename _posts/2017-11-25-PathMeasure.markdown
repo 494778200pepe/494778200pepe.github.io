@@ -11,7 +11,7 @@ description: The read me page of pepe‘s blog.
 Path & PathMeasure
 ============
 顾名思义，PathMeasure是一个用来测量Path的类。
-# PathMeasure
+# 介绍
 ## 构造方法
 
 ~~~
@@ -62,7 +62,7 @@ boolean    getMatrix(float distance, Matrix matrix, int flags)
 ~~~							
 获取指定长度的位置坐标及该点Matrix
 
-#代码
+# 使用
 ==========
 ~~~
 	//测试圆和矩形的起始点，中心均为(0,0)
