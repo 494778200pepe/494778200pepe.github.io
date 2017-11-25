@@ -36,7 +36,7 @@ Path & PathMeasure
 代码
 ==========
 ~~~
-		//测试圆和矩形的起始点，中心均为(0,0)
+	//测试圆和矩形的起始点，中心均为(0,0)
         //圆的起始点（radius，0）
         Path circlePath = new Path();
         circlePath.addCircle(0,0,250, Path.Direction.CW);
@@ -53,7 +53,6 @@ Path & PathMeasure
         Path rectTestPath = new Path();
         measure4.getSegment(0,400,rectTestPath,true);
         canvas.drawPath(rectTestPath,mPaint);
-
 ~~~
 
 
