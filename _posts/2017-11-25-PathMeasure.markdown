@@ -33,8 +33,40 @@ Path & PathMeasure
 |boolean|getPosTan(float distance, float[] pos, float[] tan)						|获取指定长度的位置坐标及该点切线值|
 |boolean|getMatrix(float distance, Matrix matrix, int flags)						|获取指定长度的位置坐标及该点Matrix|
 
+表一
+==========
 
+|---
+| Default aligned | Left aligned | Center aligned | Right aligned
+|-|:-|:-:|-:
+| First body part | Second cell | Third cell | fourth cell
+| Second line |foo | **strong** | baz
+| Third line |quux | baz | bar
+|---
+| Second body
+| 2 line
+|===
+| Footer row
 
+表二
+==========
 
+|-----------------+------------+-----------------+----------------|
+| Default aligned |Left aligned| Center aligned  | Right aligned  |
+|-----------------|:-----------|:---------------:|---------------:|
+| First body part |Second cell | Third cell      | fourth cell    |
+| Second line     |foo         | **strong**      | baz            |
+| Third line      |quux        | baz             | bar            |
+|-----------------+------------+-----------------+----------------|
+| Second body     |            |                 |                |
+| 2 line          |            |                 |                |
+|=================+============+=================+================|
+| Footer row      |            |                 |                |
+|-----------------+------------+-----------------+----------------|
 
+表三
+==========
+| First cell|Second cell|Third cell
+| First | Second | Third |
 
+First | Second | | Fourth |
