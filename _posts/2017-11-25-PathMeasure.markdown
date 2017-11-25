@@ -70,3 +70,26 @@ Path & PathMeasure
 | First | Second | Third |
 
 First | Second | | Fourth |
+
+代码
+==========
+~~~~~~~~
+//测试圆和矩形的起始点，中心均为(0,0)
+        //圆的起始点（radius，0）
+        Path circlePath = new Path();
+        circlePath.addCircle(0,0,250, Path.Direction.CW);
+        PathMeasure measure3 = new PathMeasure(circlePath,false);
+        Path circleTestPath = new Path();
+        measure3.getSegment(0,300,circleTestPath,true);
+        mPaint.setColor(Color.GREEN);
+        canvas.drawPath(circleTestPath,mPaint);
+
+        //矩形的起始点（-radius，-radius）
+        Path rectPah = new Path();
+        rectPah.addRect(-300,-300,300,300, Path.Direction.CW);
+        PathMeasure measure4 = new PathMeasure(rectPah,false);
+        Path rectTestPath = new Path();
+        measure4.getSegment(0,400,rectTestPath,true);
+        canvas.drawPath(rectTestPath,mPaint);
+
+~~~~~~~~
