@@ -11,8 +11,8 @@ description: The read me page of pepe‘s blog.
 Path & PathMeasure
 ============
 顾名思义，PathMeasure是一个用来测量Path的类。
-#PathMeasure
-##构造方法
+# PathMeasure
+## 构造方法
 ==========
 ~~~
 PathMeasure()
@@ -20,6 +20,7 @@ PathMeasure()
 * 创建一个空的PathMeasure。
 * 用这个构造函数可创建一个空的用这个构造函数可创建一个空的 PathMeasure，但是使用之前需要先调用 setPath 方法来与 Path 进行关联。
         被关联的 Path 必须是已经创建好的，如果关联之后 Path 内容进行了更改，则需要使用 setPath 方法重新关联。
+		
 ~~~
 PathMeasure(Path path, boolean forceClosed)
 ~~~
@@ -30,7 +31,7 @@ PathMeasure(Path path, boolean forceClosed)
 * forceClosed 的设置状态可能会影响测量结果，如果 Path 未闭合但在与 PathMeasure 关联的时候设置 forceClosed 为 true 时，
             测量结果可能会比 Path 实际长度稍长一点，获取到到是该 Path 闭合时的状态。
 
-##公共方法
+## 公共方法
 ==========
 
 ~~~
