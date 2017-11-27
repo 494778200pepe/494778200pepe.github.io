@@ -33,7 +33,7 @@ description: 自定义ViewGroup.
 
 # 关键方法
    
-ViewGroup:
+## ViewGroup:
 ~~~   
     /**
      *遍历ViewGroup中所有的子控件，调用measuireChild测量宽高
@@ -85,11 +85,10 @@ ViewGroup:
 ~~~
 
 注意：
+    这里的 widthMeasureSpec 和 heightMeasureSpec 从哪里来的？生成的，根据 ViewGroup 的 LayoutParams来的，最顶层一定是 MatchParent。
 
-    * 这里的 widthMeasureSpec 和 heightMeasureSpec 从哪里来的？生成的，根据 ViewGroup 的 LayoutParams来的，最顶层一定是 MatchParent。
 
-
-View:
+## View:
 
 ~~~
     protected void onMeasure( int widthMeasureSpec, int heightMeasureSpec) {
@@ -124,12 +123,11 @@ View:
     }
 ~~~
 注意：
+    1 "子View的MeasureSpec由父容器的MeasureSpec和自身的LayoutParams共同决定"
+    2 onMeasure方法最后需要调用setMeasuredDimension方法来保存测量的宽高值，如果不调用这个方法，可能会产生不可预测的问题。
 
-    * “子View的MeasureSpec由父容器的MeasureSpec和自身的LayoutParams共同决定”
-    * onMeasure方法最后需要调用setMeasuredDimension方法来保存测量的宽高值，如果不调用这个方法，可能会产生不可预测的问题。
 
-
-getChildMeasureSpec():      
+## getChildMeasureSpec():      
     父                   子                               子控件的约束规则                 
     EXACTLY         具体的size（20dip）/MATCH_PARENT         EXACTLY	
 说明：子控件如果是具体值，约束尺寸就是这个值，模式为确定的；子控件为填充父窗体，约束尺寸是父控件剩余大小，模式为确定的。    
@@ -143,8 +141,10 @@ getChildMeasureSpec():
 说明：子控件如果是具体值，约束尺寸就是这个值，模式为确定的   
                     MATCH_PARENT/WRAP_CONTENT                UNSPECIFIED
 说明：子控件为填充父窗体或者包裹内容 ，约束尺寸0，模式为未指定                    
-    
-
+   
+## MeasureSpec 
+    网上介绍的资料很多
+   
 
 # 常用方法
 
