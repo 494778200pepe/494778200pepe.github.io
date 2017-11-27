@@ -32,7 +32,7 @@ description: 自定义ViewGroup.
 计算出所有的childView的宽和高  	
 
 ~~~		
-	setMeasuredDimension(measuredWidth, measuredHeight);
+    setMeasuredDimension(measuredWidth, measuredHeight);
 ~~~
 设置ViewGroup的宽和高	
 
