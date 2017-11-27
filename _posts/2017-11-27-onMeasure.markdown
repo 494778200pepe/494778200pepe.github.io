@@ -9,7 +9,8 @@ description: 自定义ViewGroup.
 ---
 
 
-# 测量流程
+### 测量流程
+
 	先定义一个结构：ViewGroup1 包含  ViewGroup2 和一个 TextView1
 	
     ViewGroup2 包含 TextView2 和 TextView3
@@ -27,9 +28,9 @@ description: 自定义ViewGroup.
 ~~~
 	测量之后是保存，调用setMeasuredDimension()保存在 mMeasuredWidth 和 mMeasuredHeight 里面。
 
-# 关键方法
+### 关键方法
    
-## ViewGroup:
+#### ViewGroup:
 ~~~   
     /**
      *遍历ViewGroup中所有的子控件，调用measuireChild测量宽高
@@ -84,7 +85,7 @@ description: 自定义ViewGroup.
     这里的 widthMeasureSpec 和 heightMeasureSpec 从哪里来的？生成的，根据 ViewGroup 的 LayoutParams来的，最顶层一定是 MatchParent。
 
 
-## View:
+#### View:
 
 ~~~
     protected void onMeasure( int widthMeasureSpec, int heightMeasureSpec) {
@@ -123,7 +124,7 @@ description: 自定义ViewGroup.
     2 onMeasure方法最后需要调用setMeasuredDimension方法来保存测量的宽高值，如果不调用这个方法，可能会产生不可预测的问题。
 
 
-## getChildMeasureSpec():      
+#### getChildMeasureSpec():      
 
     父                   子                               子控件的约束规则                 
     EXACTLY         具体的size（20dip）/MATCH_PARENT         EXACTLY	
@@ -151,9 +152,8 @@ description: 自定义ViewGroup.
 说明：子控件为填充父窗体或者包裹内容 ，约束尺寸0，模式为未指定   
                  
    
-## MeasureSpec 
+#### MeasureSpec 
     网上介绍的资料很多 
-
    
 onMeasure方法测量控件大小的流程，以及里面执行的一些细节，总结一下知识点：
 
