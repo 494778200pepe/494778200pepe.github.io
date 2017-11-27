@@ -11,9 +11,76 @@ description: 自定义ViewGroup.
 做学问，容不得半点马虎和偷懒!
 ============
 
-measure过程都干了点什么事？
- 由于在用自适应尺寸来定义View大小的时候，View的真实尺寸还不能确定。但是View尺寸最终需要映射到屏幕上的像素大小，所以measure过程就是干这件事，把各种尺寸值，经过计算，得到具体的像素值。measure过程会遍历整棵View树，然后依次测量每个View真实的尺寸。具体是每个ViewGroup会向它内部的每个子View发送measure命令，然后由具体子View的onMeasure()来测量自己的尺寸。最后测量的结果保存在View的mMeasuredWidth和mMeasuredHeight中，保存的数据单位是像素。
+# 测量流程
 
+	先定义一个结构：ViewGroup1 包含  ViewGroup2 和一个 TextView1
+	
+    ViewGroup2 包含 TextView2 和 TextView3
+	那么测量的过程是：
+~~~
+        ViewGroup1.measure -> ViewGroup1.onMeasure 然后循环遍历子View，先ViewGroup2，接着TextView1，
+            //也就是在measureChildren()中调用measureChild()
+            ViewGroup2.measure -> ViewGroup2.onMeasure 然后循环遍历子View，TextView2，TextView3
+                    TextView2.measure -> TextView2.onMeasure -> TextView2.setMeasuredDimension
+                    TextView3.measure -> TextView3.onMeasure -> TextView3.setMeasuredDimension
+        		ViewGroup2.setMeasuredDimension
+			TextView1.measure -> TextView1.onMeasure
+				TextView1.setMeasuredDimension
+		ViewGroup1.setMeasuredDimension
+~~~
+	测量之后是保存，调用setMeasuredDimension()保存在 mMeasuredWidth 和 mMeasuredHeight 里面。
+
+# 关键方法
+   
+~~~   
+    /**
+    *遍历ViewGroup中所有的子控件，调用measuireChild测量宽高
+    */
+    protected void measureChildren (int widthMeasureSpec, int heightMeasureSpec) {
+        final int size = mChildrenCount;
+        final View[] children = mChildren;
+        for (int i = 0; i < size; ++i) {
+            final View child = children[i];
+            if ((child.mViewFlags & VISIBILITY_MASK) != GONE) {
+                //测量某一个子控件宽高
+                measureChild(child, widthMeasureSpec, heightMeasureSpec);
+            }
+        }
+    }
+    
+    /**
+     * 测量某一个child的宽高
+    */
+    protected void measureChild (View child, int parentWidthMeasureSpec,
+        int parentHeightMeasureSpec) {
+        final LayoutParams lp = child.getLayoutParams();
+        //获取子控件的宽高约束规则
+        final int childWidthMeasureSpec = getChildMeasureSpec(parentWidthMeasureSpec,
+            mPaddingLeft + mPaddingRight, lp. width);
+        final int childHeightMeasureSpec = getChildMeasureSpec(parentHeightMeasureSpec,
+            mPaddingTop + mPaddingBottom, lp. height);
+
+        child.measure(childWidthMeasureSpec, childHeightMeasureSpec);
+    }
+
+    /**
+     * 测量某一个child的宽高，考虑margin值
+    */
+    protected void measureChildWithMargins (View child,
+        int parentWidthMeasureSpec, int widthUsed,
+        int parentHeightMeasureSpec, int heightUsed) {
+        final MarginLayoutParams lp = (MarginLayoutParams) child.getLayoutParams();
+        //获取子控件的宽高约束规则
+        final int childWidthMeasureSpec = getChildMeasureSpec(parentWidthMeasureSpec,
+            mPaddingLeft + mPaddingRight + lp. leftMargin + lp.rightMargin
+                   + widthUsed, lp. width);
+        final int childHeightMeasureSpec = getChildMeasureSpec(parentHeightMeasureSpec,
+            mPaddingTop + mPaddingBottom + lp. topMargin + lp.bottomMargin
+                   + heightUsed, lp. height);
+        //测量子控件
+        child.measure(childWidthMeasureSpec, childHeightMeasureSpec);
+    }
+~~~
 
 # 常用方法
 
