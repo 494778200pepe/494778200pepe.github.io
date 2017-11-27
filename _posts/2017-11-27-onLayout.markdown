@@ -12,3 +12,6 @@ description: 自定义ViewGroup.
 ============
 
 [Android开发之自定义控件(二)---onLayout详解 - CSDN博客](http://blog.csdn.net/dmk877/article/details/49632959)
+
+Android View框架的layout机制 - 黄金夫 - 博客园
+http://www.cnblogs.com/xyhuangjinfu/p/5435253.html
