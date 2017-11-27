@@ -2,7 +2,7 @@
 layout: post
 title:  "Read Me"
 categories: Other
-tags: Other
+tags: other
 author: Xixia
 description: The read me page of jekyll-xixia.
 ---

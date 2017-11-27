@@ -2,8 +2,8 @@
 layout: post
 title:  "Readme of Jekyll!"
 date:   2017-09-05 14:10:51 +0800
-categories: Jekyll
-tags: Jekyll
+categories: Other
+tags: other
 description: The read me page of Jekyll.
 ---
 # [Jekyll](https://jekyllrb.com/)
