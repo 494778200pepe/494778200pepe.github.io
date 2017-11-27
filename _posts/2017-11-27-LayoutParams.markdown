@@ -18,6 +18,7 @@ description: 自定义ViewGroup.
     8、 我们平时在RelativeLayout中使用的布局属性都来自它。
     
 View在 Layout 时，必须要知道父ViewGroup 的 LayoutParams。从哪儿来呢？
+
 generateLayoutParams()，这个方法主要是用于父容器添加子View时调用。
 
 在ViewGroup中有下面几个关于LayoutParams的方法：
@@ -36,11 +37,19 @@ protected ViewGroup.LayoutParams generateLayoutParams(ViewGroup.LayoutParams p) 
     return new CustomLayoutParams (p);
 }
 
+/**
+ * 如果ViewGroup的generateLayoutParams()返回值为空，那么会启用此方法
+*/
 @Override
 protected LayoutParams generateDefaultLayoutParams() {
     return new CustomLayoutParams (LayoutParams.MATCH_PARENT , LayoutParams.MATCH_PARENT);
 }
 
+
+/**
+ * checkLayoutParams 这个方法在更新或者设置LayoutParams的时候会调用
+ * 如果不重写，可能会导致设置的属性无效
+*/
 @Override
 protected boolean checkLayoutParams(ViewGroup.LayoutParams p) {
     return p instanceof CustomLayoutParams ;
@@ -53,8 +62,8 @@ protected boolean checkLayoutParams(ViewGroup.LayoutParams p) {
 #### 参考：
 
 [Android自定义ViewGroup（四、打造自己的布局容器） - CSDN博客](http://blog.csdn.net/xmxkf/article/details/51500304#￢ﾑﾢ-￩ﾇﾍ￥ﾆﾙgeneratelayoutparams)
-[浅谈自己对 ViewGroup.generateLayoutParams(attrs) 方法理解](http://www.360doc.com/content/15/1030/11/16427899_509413926.shtml)
 [LayoutParams，setContentView，generateDefaultLayoutParams - pageTan的小基地 - CSDN博客](http://blog.csdn.net/u013818990/article/details/50570944)
 [自定义LayoutParams - pageTan的小基地 - CSDN博客](http://blog.csdn.net/u013818990/article/details/50603889)
+
 
 
