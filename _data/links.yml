@@ -6,6 +6,15 @@
   
 - url: "http://gank.io/"
   title: "干货集中营"  
+ 
+- url: "https://developer.android.google.cn/index.html"
+  title: "Android Developers"  
+  
+- url: "http://www.android-doc.com/sdk/"
+  title: "Android中文API" 
+
+
+
   
 
   
