@@ -157,7 +157,20 @@ description: 自定义ViewGroup.
     网上介绍的资料很多
    
 
+   
+onMeasure方法测量控件大小的流程，以及里面执行的一些细节，总结一下知识点：
 
+    * 测量控件大小是父控件发起的
+    * 父控件要测量子控件大小，需要重写onMeasure方法，然后调用measureChildren或者measureChildWithMargin方法
+    * on Measure方法的参数是通过getChildMeasureSpec生成的
+    * 如果我们自定义控件需要使用wrap_content，我们需要重写onMeasure方法
+    * 测量控件的步骤：
+        * 父控件onMeasure->measureChildren`measureChildWithMargin->getChildMeasureSpec->
+        * 子控件的measure->onMeasure->setMeasureDimension->
+        * 父控件onMeasure结束调用setMeasureDimension`保存自己的大小
+   
+   
+   
 
 参考：
 
