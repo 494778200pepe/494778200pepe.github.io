@@ -23,8 +23,8 @@ description: 自定义ViewGroup.
 获得此ViewGroup上级容器为其推荐的宽和高，以及计算模式 	
 
 ~~~	
-	measureChildren(widthMeasureSpec, heightMeasureSpec);  
-	View childView = getChildAt(i);  
+measureChildren(widthMeasureSpec, heightMeasureSpec);  
+View childView = getChildAt(i);  
     cWidth = childView.getMeasuredWidth();  
     cHeight = childView.getMeasuredHeight();  
     cParams = (MarginLayoutParams) childView.getLayoutParams();  
