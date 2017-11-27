@@ -10,8 +10,9 @@ description: 自定义ViewGroup.
 
 
 ### 测量流程
-先定义一个结构：ViewGroup1 包含  ViewGroup2 和一个 TextView1
-ViewGroup2 包含 TextView2 和 TextView3
+先定义一个结构：
+ViewGroup1 包含  ViewGroup2 和一个 TextView1，
+ViewGroup2 包含 TextView2 和 TextView3，
 那么测量的过程是：
     
 ~~~
@@ -81,6 +82,7 @@ ViewGroup2 包含 TextView2 和 TextView3
 ~~~
 
 注意：
+
     这里的 widthMeasureSpec 和 heightMeasureSpec 从哪里来的？生成的，根据 ViewGroup 的 LayoutParams来的，最顶层一定是 MatchParent。
 
 
@@ -119,8 +121,9 @@ ViewGroup2 包含 TextView2 和 TextView3
     }
 ~~~
 注意：
-    1 "子View的MeasureSpec由父容器的MeasureSpec和自身的LayoutParams共同决定"
-    2 onMeasure方法最后需要调用setMeasuredDimension方法来保存测量的宽高值，如果不调用这个方法，可能会产生不可预测的问题。
+
+    1、 "子View的MeasureSpec由父容器的MeasureSpec和自身的LayoutParams共同决定"
+    2、 onMeasure方法最后需要调用setMeasuredDimension方法来保存测量的宽高值，如果不调用这个方法，可能会产生不可预测的问题。
 
 
 #### getChildMeasureSpec():      

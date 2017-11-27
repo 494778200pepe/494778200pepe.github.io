@@ -22,8 +22,9 @@ onLayout()应该说是比较简单的。
             mPrivateFlags &= ~LAYOUT_REQUIRED;  
         }  
         mPrivateFlags &= ~FORCE_LAYOUT;  
-    }  
-在其中调用了setFrame方法的源码如下
+    } 
+~~~    
+    在其中调用了setFrame方法的源码如下
 ~~~
     protected boolean setFrame(int left, int top, int right, int bottom) {  
         boolean changed = false;  
@@ -51,7 +52,8 @@ onLayout()应该说是比较简单的。
     } 
 ~~~    
 onLayout的目的是确定子View在父View中的位置，那么这个步骤肯定是由父View来决定的，因此在View中onLayout是一个空的实现。
-ViewGroup——onLayout
+
+#### ViewGroup——onLayout
 ~~~
     @Override  
     protected abstract void onLayout(boolean changed,  
@@ -62,7 +64,6 @@ ViewGroup——onLayout
 好像都没什么内容...
 
 参考FrameLayout的onLayout方法。虽然各个具体实现都很复杂，但是基本流程是一样的。
-
 #### FrameLayout——onLayout
 ~~~
 @Override
