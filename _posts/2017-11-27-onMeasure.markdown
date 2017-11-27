@@ -19,7 +19,6 @@ description: 自定义ViewGroup.
     int heightMode = MeasureSpec.getMode(heightMeasureSpec);  
     int sizeWidth = MeasureSpec.getSize(widthMeasureSpec);  
     int sizeHeight = MeasureSpec.getSize(heightMeasureSpec); 
-	
 ~~~
 获得此ViewGroup上级容器为其推荐的宽和高，以及计算模式 	
 
