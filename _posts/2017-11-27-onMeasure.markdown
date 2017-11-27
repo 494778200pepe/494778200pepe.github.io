@@ -10,12 +10,10 @@ description: 自定义ViewGroup.
 
 
 # 测量流程
-
 	先定义一个结构：ViewGroup1 包含  ViewGroup2 和一个 TextView1
 	
     ViewGroup2 包含 TextView2 和 TextView3
 	那么测量的过程是：
-    
 ~~~
         ViewGroup1.measure -> ViewGroup1.onMeasure 然后循环遍历子View，先ViewGroup2，接着TextView1，
             //也就是在measureChildren()中调用measureChild()
@@ -154,20 +152,19 @@ description: 自定义ViewGroup.
                  
    
 ## MeasureSpec 
-    网上介绍的资料很多
-   
+    网上介绍的资料很多 
 
    
 onMeasure方法测量控件大小的流程，以及里面执行的一些细节，总结一下知识点：
 
-    * 测量控件大小是父控件发起的
-    * 父控件要测量子控件大小，需要重写onMeasure方法，然后调用measureChildren或者measureChildWithMargin方法
-    * on Measure方法的参数是通过getChildMeasureSpec生成的
-    * 如果我们自定义控件需要使用wrap_content，我们需要重写onMeasure方法
-    * 测量控件的步骤：
-        * 父控件onMeasure->measureChildren`measureChildWithMargin->getChildMeasureSpec->
-        * 子控件的measure->onMeasure->setMeasureDimension->
-        * 父控件onMeasure结束调用setMeasureDimension`保存自己的大小
+    1、 测量控件大小是父控件发起的
+    2、 父控件要测量子控件大小，需要重写onMeasure方法，然后调用measureChildren或者measureChildWithMargin方法
+    3、 on Measure方法的参数是通过getChildMeasureSpec生成的
+    4、 如果我们自定义控件需要使用wrap_content，我们需要重写onMeasure方法
+    5、 测量控件的步骤：
+        1、 父控件onMeasure->measureChildren`measureChildWithMargin->getChildMeasureSpec->
+        2、 子控件的measure->onMeasure->setMeasureDimension->
+        3、 父控件onMeasure结束调用setMeasureDimension`保存自己的大小
    
    
    
