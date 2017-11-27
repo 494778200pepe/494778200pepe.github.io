@@ -23,7 +23,7 @@ onLayout()应该说是比较简单的。
         }  
         mPrivateFlags &= ~FORCE_LAYOUT;  
     } 
-~~~    
+~~~
 在其中调用了setFrame方法的源码如下
 ~~~
     protected boolean setFrame(int left, int top, int right, int bottom) {  
