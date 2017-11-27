@@ -8,8 +8,6 @@ author: pepe
 description: 自定义ViewGroup.
 ---
 
-做学问，容不得半点马虎和偷懒!
-============
 
 # 测量流程
 
@@ -128,48 +126,36 @@ description: 自定义ViewGroup.
 
 
 ## getChildMeasureSpec():      
+
     父                   子                               子控件的约束规则                 
     EXACTLY         具体的size（20dip）/MATCH_PARENT         EXACTLY	
-说明：子控件如果是具体值，约束尺寸就是这个值，模式为确定的；子控件为填充父窗体，约束尺寸是父控件剩余大小，模式为确定的。    
+    
+说明：子控件如果是具体值，约束尺寸就是这个值，模式为确定的；子控件为填充父窗体，约束尺寸是父控件剩余大小，模式为确定的。
+    
                     WRAP-CONTENT                             AT_MOST
-说明：子控件如果是包裹内容，约束尺寸值为父控件剩余大小 ，模式为至多                    
+                    
+说明：子控件如果是包裹内容，约束尺寸值为父控件剩余大小 ，模式为至多   
+                 
     AT_MOST         具体的size（20dip）/MATCH_PARENT         EXACTLY
+    
 说明：子控件如果是具体值，约束尺寸就是这个值，模式为确定的；
+
                     WRAP-CONTENT                             AT_MOST
+                    
 说明：子控件为填充父窗体或者包裹内容 ，约束尺寸是父控件剩余大小 ，模式为至多
+
     UNSPECIFIED     具体的size（20dip）                      EXACTLY
+    
 说明：子控件如果是具体值，约束尺寸就是这个值，模式为确定的   
+
                     MATCH_PARENT/WRAP_CONTENT                UNSPECIFIED
-说明：子控件为填充父窗体或者包裹内容 ，约束尺寸0，模式为未指定                    
+                    
+说明：子控件为填充父窗体或者包裹内容 ，约束尺寸0，模式为未指定   
+                 
    
 ## MeasureSpec 
     网上介绍的资料很多
    
-
-# 常用方法
-
-~~~
-    int widthMode = MeasureSpec.getMode(widthMeasureSpec);  
-    int heightMode = MeasureSpec.getMode(heightMeasureSpec);  
-    int sizeWidth = MeasureSpec.getSize(widthMeasureSpec);  
-    int sizeHeight = MeasureSpec.getSize(heightMeasureSpec); 
-~~~
-获得此ViewGroup上级容器为其推荐的宽和高，以及计算模式 	
-~~~
-    measureChildren(widthMeasureSpec, heightMeasureSpec);  
-    View childView = getChildAt(i);  
-    cWidth = childView.getMeasuredWidth();  
-    cHeight = childView.getMeasuredHeight();  
-    cParams = (MarginLayoutParams) childView.getLayoutParams(); 
-~~~
-计算出所有的childView的宽和高  	
-~~~	
-    setMeasuredDimension(measuredWidth, measuredHeight);
-~~~
-设置ViewGroup的宽和高	
-
-
-
 
 
 
