@@ -21,16 +21,14 @@ description: 自定义ViewGroup.
     int sizeHeight = MeasureSpec.getSize(heightMeasureSpec); 
 ~~~
 获得此ViewGroup上级容器为其推荐的宽和高，以及计算模式 	
-
 ~~~
-  measureChildren(widthMeasureSpec, heightMeasureSpec);  
+    measureChildren(widthMeasureSpec, heightMeasureSpec);  
 	View childView = getChildAt(i);  
     cWidth = childView.getMeasuredWidth();  
     cHeight = childView.getMeasuredHeight();  
     cParams = (MarginLayoutParams) childView.getLayoutParams(); 
 ~~~
 计算出所有的childView的宽和高  	
-
 ~~~	
     setMeasuredDimension(measuredWidth, measuredHeight);
 ~~~
