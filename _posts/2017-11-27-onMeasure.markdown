@@ -39,7 +39,8 @@ description: 自定义ViewGroup.
 
 
 
-
+参考：
+[Android自定义View（三、深入解析控件测量onMeasure） - CSDN博客](http://blog.csdn.net/xmxkf/article/details/51490283)
 
 
 
