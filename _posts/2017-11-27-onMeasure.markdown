@@ -15,15 +15,15 @@ description: 自定义ViewGroup.
 	那么测量的过程是：
     
 ~~~
-        ViewGroup1.measure -> ViewGroup1.onMeasure 然后循环遍历子View，先ViewGroup2，接着TextView1，
-            //也就是在measureChildren()中调用measureChild()
-            ViewGroup2.measure -> ViewGroup2.onMeasure 然后循环遍历子View，TextView2，TextView3
-                    TextView2.measure -> TextView2.onMeasure -> TextView2.setMeasuredDimension
-                    TextView3.measure -> TextView3.onMeasure -> TextView3.setMeasuredDimension
-        		ViewGroup2.setMeasuredDimension
-			TextView1.measure -> TextView1.onMeasure
-				TextView1.setMeasuredDimension
-		ViewGroup1.setMeasuredDimension
+    ViewGroup1.measure -> ViewGroup1.onMeasure 然后循环遍历子View，先ViewGroup2，接着TextView1，
+        //也就是在measureChildren()中调用measureChild()
+        ViewGroup2.measure -> ViewGroup2.onMeasure 然后循环遍历子View，TextView2，TextView3
+                TextView2.measure -> TextView2.onMeasure -> TextView2.setMeasuredDimension
+                TextView3.measure -> TextView3.onMeasure -> TextView3.setMeasuredDimension
+            ViewGroup2.setMeasuredDimension
+	    TextView1.measure -> TextView1.onMeasure
+            TextView1.setMeasuredDimension
+    ViewGroup1.setMeasuredDimension
 ~~~
 
 	测量之后是保存，调用setMeasuredDimension()保存在 mMeasuredWidth 和 mMeasuredHeight 里面。
