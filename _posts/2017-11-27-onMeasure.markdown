@@ -10,9 +10,9 @@ description: 自定义ViewGroup.
 
 
 ### 测量流程
-	先定义一个结构：ViewGroup1 包含  ViewGroup2 和一个 TextView1
-    ViewGroup2 包含 TextView2 和 TextView3
-	那么测量的过程是：
+先定义一个结构：ViewGroup1 包含  ViewGroup2 和一个 TextView1
+ViewGroup2 包含 TextView2 和 TextView3
+那么测量的过程是：
     
 ~~~
     ViewGroup1.measure -> ViewGroup1.onMeasure 然后循环遍历子View，先ViewGroup2，接着TextView1，
@@ -25,8 +25,7 @@ description: 自定义ViewGroup.
             TextView1.setMeasuredDimension
     ViewGroup1.setMeasuredDimension
 ~~~
-
-	测量之后是保存，调用setMeasuredDimension()保存在 mMeasuredWidth 和 mMeasuredHeight 里面。
+测量之后是保存，调用setMeasuredDimension()保存在 mMeasuredWidth 和 mMeasuredHeight 里面。
 
 ### 关键方法
    
@@ -153,7 +152,7 @@ description: 自定义ViewGroup.
                  
    
 #### MeasureSpec 
-    网上介绍的资料很多 
+网上介绍的资料很多 
    
 onMeasure方法测量控件大小的流程，以及里面执行的一些细节，总结一下知识点：
 
@@ -169,7 +168,7 @@ onMeasure方法测量控件大小的流程，以及里面执行的一些细节�
    
    
 
-参考：
+#### 参考：
 
 [Android自定义View（三、深入解析控件测量onMeasure）](http://blog.csdn.net/xmxkf/article/details/51490283)
 
