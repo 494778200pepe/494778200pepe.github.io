@@ -166,11 +166,10 @@ void layoutChildren(int left, int top, int right, int bottom,
 
 #### 参考：
 
-[Android开发之自定义控件(二)---onLayout详解 - CSDN博客](http://blog.csdn.net/dmk877/article/details/49632959)
+[Android开发之自定义控件(二)---onLayout详解](http://blog.csdn.net/dmk877/article/details/49632959)
 
-[Android View框架的layout机制 - 黄金夫 - 博客园](http://www.cnblogs.com/xyhuangjinfu/p/5435253.html)
+[Android View框架的layout机制](http://www.cnblogs.com/xyhuangjinfu/p/5435253.html)
 
-[Android View 布局流程(Layout)完全解析 - 蓝天白云梦的csdn博客 - CSDN博客](http://blog.csdn.net/a553181867/article/details/51524527)
+[Android View 布局流程(Layout)完全解析](http://blog.csdn.net/a553181867/article/details/51524527)
 
-Android View 全解析(三) -- onLayout - 简书
-http://www.jianshu.com/p/ad0a5485aba9
+[Android View 全解析(三) -- onLayout - 简书](http://www.jianshu.com/p/ad0a5485aba9)
