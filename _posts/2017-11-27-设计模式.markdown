@@ -1,19 +1,18 @@
 ---
 layout: post
-title:  "模板方法模式Template"
+title:  "设计模式"
 date:   2017-11-27 17:32:00 +0800
-categories: 设计模式
+categories: Android
 tags: 设计模式
 author: pepe
-description: 模板方法模式Template.
+description: 设计模式
 ---
 
    
    
-   
+### 模板方法模式Template  
 
 参考：
-
 
 [设计模式 ( 十九 ) 模板方法模式Template method（类行为型） - CSDN博客](http://blog.csdn.net/hguisu/article/details/7564039)
 

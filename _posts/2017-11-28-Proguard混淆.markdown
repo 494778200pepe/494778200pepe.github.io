@@ -27,3 +27,6 @@ description: Proguard混淆.
 [美团Android资源混淆保护实践](https://tech.meituan.com/mt-android-resource-obfuscation.html)
 
 [5步搞定android混淆](https://mp.weixin.qq.com/s?__biz=MzI3MDE0NzYwNA==&mid=2651433815&idx=1&sn=89a6f5329d93187b99320a55d16d4670&scene=1&srcid=0915lDylCJr0594xKg4dvVGS#rd)
+
+[Android 反编译利器，jadx 的高级技巧](https://mp.weixin.qq.com/s/8ayLeGavaYfMxqLoTxFIlQ)
+
