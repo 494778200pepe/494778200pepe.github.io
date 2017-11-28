@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "Proguard混淆"
+date:   2017-11-28 17:23:00 +0800
+categories: Android
+tags: android
+author: pepe
+description: Proguard混淆.
+---
+
+混淆为什么要保留类名或方法名？
+    
+    1、让C/C++程序可以通过 jni 使用对应的 java 方法
+    2、四大组件由于在Android Manifest.xml 里面注册了，防止系统找不到
+    3、R文件混淆会导致引用错误
+   
+   
+   
+
+参考：
+
+
+[Android代码混淆与加固技术](https://www.imooc.com/learn/879)
+
+
