@@ -62,7 +62,9 @@ protected boolean checkLayoutParams(ViewGroup.LayoutParams p) {
 #### 参考：
 
 [Android自定义ViewGroup（四、打造自己的布局容器） - CSDN博客](http://blog.csdn.net/xmxkf/article/details/51500304#￢ﾑﾢ-￩ﾇﾍ￥ﾆﾙgeneratelayoutparams)
+
 [LayoutParams，setContentView，generateDefaultLayoutParams - pageTan的小基地 - CSDN博客](http://blog.csdn.net/u013818990/article/details/50570944)
+
 [自定义LayoutParams - pageTan的小基地 - CSDN博客](http://blog.csdn.net/u013818990/article/details/50603889)
 
 
