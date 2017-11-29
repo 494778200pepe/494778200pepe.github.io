@@ -52,6 +52,8 @@ public class View {
     6、如果从上往下滑动，那么 mScrollY 为负值，反之为正值。
     
 ### Scroller
+
+[Scroller源码][scroller-url]
 #### 构造方法
 ~~~
 /** 
@@ -181,26 +183,15 @@ public boolean computeScrollOffset() {
             invalidate();
         }
     }   
-~~~    
+~~~   
+View重绘到调用 computeScroll()的详细过程，可以参考[夏神][xiaanming-url]的博客。
     
-    
-相关API：
-~~~
-mScroller.getCurrX() //获取mScroller当前水平滚动的位置  
-mScroller.getCurrY() //获取mScroller当前竖直滚动的位置  
-mScroller.getFinalX() //获取mScroller最终停止的水平位置  
-mScroller.getFinalY() //获取mScroller最终停止的竖直位置  
-mScroller.setFinalX(int newX) //设置mScroller最终停留的水平位置，没有动画效果，直接跳到目标位置  
-mScroller.setFinalY(int newY) //设置mScroller最终停留的竖直位置，没有动画效果，直接跳到目标位置  
-  
-//滚动，startX, startY为开始滚动的位置，dx,dy为滚动的偏移量, duration为完成滚动的时间  
-mScroller.startScroll(int startX, int startY, int dx, int dy) //使用默认完成时间250ms  
-mScroller.startScroll(int startX, int startY, int dx, int dy, int duration)  
-  
-mScroller.computeScrollOffset() //返回值为boolean，true说明滚动尚未完成，false说明滚动已经完成。这是一个很重要的方法，通常放在View.computeScroll()中，用来判断是否滚动是否结束。  
-~~~
 
 
 参考：
 
 [Android 带你从源码的角度解析Scroller的滚动实现原理 - CSDN博客](http://blog.csdn.net/xiaanming/article/details/17483273)
+
+[scroller-url]:http://www.grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/2.0_r1/android/widget/Scroller.java#Scroller.0mCurrX
+
+[xiaanming-url]: http://blog.csdn.net/xiaanming
