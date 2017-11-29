@@ -52,71 +52,121 @@ public class View {
     6、如果从上往下滑动，那么 mScrollY 为负值，反之为正值。
     
 ### Scroller
-
+#### 构造方法
 ~~~
-public class Scroller  {  
+/** 
+ * Create a Scroller with the default duration and interpolator. 
+ */  
+public Scroller(Context context) {  
+    this(context, null);  
+}  
   
-    private int mStartX;    //起始坐标点 ,  X轴方向  
-    private int mStartY;    //起始坐标点 ,  Y轴方向  
-    private int mCurrX;     //当前坐标点  X轴， 即调用startScroll函数后,经过一定时间所达到的值  
-    private int mCurrY;     //当前坐标点  Y轴， 即调用startScroll函数后,经过一定时间所达到的值  
-     
-    private float mDeltaX;  //应该继续滑动的距离， X轴方向  
-    private float mDeltaY;  //应该继续滑动的距离， Y轴方向  
-    private boolean mFinished;  //是否已经完成本次滑动操作， 如果完成则为 true  
-  
-    //构造函数  
-    public Scroller(Context context) {  
-        this(context, null);  
-    }  
-    public final boolean isFinished() {  
-        return mFinished;  
-    }  
-    //强制结束本次滑屏操作  
-    public final void forceFinished(boolean finished) {  
-        mFinished = finished;  
-    }  
-    public final int getCurrX() {  
-        return mCurrX;  
-    }  
-     /* Call this when you want to know the new location.  If it returns true, 
-     * the animation is not yet finished.  loc will be altered to provide the 
-     * new location. */    
-    //根据当前已经消逝的时间计算当前的坐标点，保存在mCurrX和mCurrY值中  
-    public boolean computeScrollOffset() {  
-        if (mFinished) {  //已经完成了本次动画控制，直接返回为false  
-            return false;  
-        }  
-        int timePassed = (int)(AnimationUtils.currentAnimationTimeMillis() - mStartTime);  
-        if (timePassed < mDuration) {  
-            switch (mMode) {  
-            case SCROLL_MODE:  
-                float x = (float)timePassed * mDurationReciprocal;  
-                ...  
-                mCurrX = mStartX + Math.round(x * mDeltaX);  
-                mCurrY = mStartY + Math.round(x * mDeltaY);  
-                break;  
-            ...  
-        }  
-        else {  
-            mCurrX = mFinalX;  
-            mCurrY = mFinalY;  
-            mFinished = true;  
-        }  
-        return true;  
-    }  
-    //开始一个动画控制，由(startX , startY)在duration时间内前进(dx,dy)个单位，即到达坐标为(startX+dx , startY+dy)出  
-    public void startScroll(int startX, int startY, int dx, int dy, int duration) {  
-        mFinished = false;  
-        mDuration = duration;  
-        mStartTime = AnimationUtils.currentAnimationTimeMillis();  
-        mStartX = startX;       mStartY = startY;  
-        mFinalX = startX + dx;  mFinalY = startY + dy;  
-        mDeltaX = dx;            mDeltaY = dy;  
-        ...  
-    }  
+/** 
+ * Create a Scroller with the specified interpolator. If the interpolator is 
+ * null, the default (viscous) interpolator will be used. 
+ */  
+public Scroller(Context context, Interpolator interpolator) {  
+    mFinished = true;  
+    mInterpolator = interpolator;  
+    float ppi = context.getResources().getDisplayMetrics().density * 160.0f;  
+    mDeceleration = SensorManager.GRAVITY_EARTH   // g (m/s^2)  
+                  * 39.37f                        // inch/meter  
+                  * ppi                           // pixels per inch  
+                  * ViewConfiguration.getScrollFriction();  
 }  
 ~~~
+
+#### startScroll()
+~~~
+public void startScroll(int startX, int startY, int dx, int dy, int duration) {  
+    mMode = SCROLL_MODE;  
+    mFinished = false;  
+    mDuration = duration;  
+    mStartTime = AnimationUtils.currentAnimationTimeMillis();  
+    mStartX = startX;  
+    mStartY = startY;  
+    mFinalX = startX + dx;  
+    mFinalY = startY + dy;  
+    mDeltaX = dx;  
+    mDeltaY = dy;  
+    mDurationReciprocal = 1.0f / (float) mDuration;  
+    // This controls the viscous fluid effect (how much of it)  
+    mViscousFluidScale = 8.0f;  
+    // must be set to 1.0 (used in viscousFluid())  
+    mViscousFluidNormalize = 1.0f;  
+    mViscousFluidNormalize = 1.0f / viscousFluid(1.0f);  
+} 
+~~~
+从名字上来看，这应该是滚动的方法。但在这个方法中我们只看到了对一些滚动的基本设置动作，比如设置滚动模式，开始时间，持续时间等等，并没有任何对View的滚动操作。
+#### computeScrollOffset()
+~~~
+/** 
+ * Call this when you want to know the new location.  If it returns true, 
+ * the animation is not yet finished.  loc will be altered to provide the 
+ * new location. 
+ */   
+public boolean computeScrollOffset() {  
+    if (mFinished) {  
+        return false;  
+    }  
+  
+    int timePassed = (int)(AnimationUtils.currentAnimationTimeMillis() - mStartTime);  
+  
+    if (timePassed < mDuration) {  
+        switch (mMode) {  
+        case SCROLL_MODE:  
+            float x = (float)timePassed * mDurationReciprocal;  
+  
+            if (mInterpolator == null)  
+                x = viscousFluid(x);   
+            else  
+                x = mInterpolator.getInterpolation(x);  
+  
+            mCurrX = mStartX + Math.round(x * mDeltaX);  
+            mCurrY = mStartY + Math.round(x * mDeltaY);  
+            break;  
+        case FLING_MODE:  
+            float timePassedSeconds = timePassed / 1000.0f;  
+            float distance = (mVelocity * timePassedSeconds)  
+                    - (mDeceleration * timePassedSeconds * timePassedSeconds / 2.0f);  
+              
+            mCurrX = mStartX + Math.round(distance * mCoeffX);  
+            // Pin to mMinX <= mCurrX <= mMaxX  
+            mCurrX = Math.min(mCurrX, mMaxX);  
+            mCurrX = Math.max(mCurrX, mMinX);  
+              
+            mCurrY = mStartY + Math.round(distance * mCoeffY);  
+            // Pin to mMinY <= mCurrY <= mMaxY  
+            mCurrY = Math.min(mCurrY, mMaxY);  
+            mCurrY = Math.max(mCurrY, mMinY);  
+              
+            break;  
+        }  
+    }  
+    else {  
+        mCurrX = mFinalX;  
+        mCurrY = mFinalY;  
+        mFinished = true;  
+    }  
+    return true;  
+} 
+~~~
+这个方法有两个作用：
+
+    1、判断滚动是否结束，返回值为boolean，true说明滚动尚未完成，false说明滚动已经完成。
+    2、如果滚动没结束，那么将下一次刷新界面时要移动的位置赋值给 mCurrX， mCurrX可以通过 mScroller.getCurrX() 获取。
+    
+说道这里，似乎还是没弄清楚Scroller跟View滚动的联系在哪里？话不多说，看下图：
+
+![Scroller]({{ site.baseurl }}/assets/images/scroller.png)
+
+说明：
+    
+    1、
+    
+    
+    
+    
 相关API：
 ~~~
 mScroller.getCurrX() //获取mScroller当前水平滚动的位置  
@@ -132,3 +182,8 @@ mScroller.startScroll(int startX, int startY, int dx, int dy, int duration)
   
 mScroller.computeScrollOffset() //返回值为boolean，true说明滚动尚未完成，false说明滚动已经完成。这是一个很重要的方法，通常放在View.computeScroll()中，用来判断是否滚动是否结束。  
 ~~~
+
+
+参考：
+
+[Android 带你从源码的角度解析Scroller的滚动实现原理 - CSDN博客](http://blog.csdn.net/xiaanming/article/details/17483273)
