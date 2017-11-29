@@ -163,14 +163,14 @@ public boolean computeScrollOffset() {
 
 说明：
     
-    1、在你想要执行滚动是，调用 `startScroll()` ,设置滚动参数
-    2、刷新界面 `invalidate()` 或者 `postInvalidate()`
-    3、在View重绘时，会调用 `computeScrollOffset()`
-    4、我们需要来重写此方法，见下文
-    5、在 `computeScrollOffset()` 中，通过 `computeScrollOffset()` 判断滚动是否完成
-    6、没有完成的话，下一次刷新界面需要到达的位置 在`computeScrollOffset()` 中已经计算完成
-    7、保存在mCurrX， mCurrX 里面，可以通过 mScroller.getCurrX() 获取
-    8、再次调用 `scrollTo()` 和 `invalidate()`，刷新界面，达到动画的效果
+* 1、在你想要执行滚动是，调用 `startScroll()` ,设置滚动参数
+* 2、刷新界面 `invalidate()` 或者 `postInvalidate()`
+* 3、在View重绘时，会调用 `computeScrollOffset()`
+* 4、我们需要来重写此方法，见下文
+* 5、在 `computeScrollOffset()` 中，通过 `computeScrollOffset()` 判断滚动是否完成
+* 6、没有完成的话，下一次刷新界面需要到达的位置 在`computeScrollOffset()` 中已经计算完成
+* 7、保存在mCurrX， mCurrX 里面，可以通过 mScroller.getCurrX() 获取
+* 8、再次调用 `scrollTo()` 和 `invalidate()`，刷新界面，达到动画的效果
     
 #### computeScroll()
 ~~~
