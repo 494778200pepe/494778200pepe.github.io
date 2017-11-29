@@ -188,7 +188,7 @@ public boolean computeScrollOffset() {
         }
     }   
 ~~~   
-View重绘到调用 `computeScroll()`的详细过程，可以参考[夏神][xiaanming-url]的博客。
+<font color=#ff0000 size=6 >View重绘到调用 `computeScroll()`的详细过程，可以参考[夏神][xiaanming-url]的博客。</font>
     
 
 
