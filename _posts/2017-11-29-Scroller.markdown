@@ -171,6 +171,11 @@ public boolean computeScrollOffset() {
 * 6、没有完成的话，下一次刷新界面需要到达的位置 在`computeScrollOffset()` 中已经计算完成
 * 7、保存在mCurrX， mCurrX 里面，可以通过 mScroller.getCurrX() 获取
 * 8、再次调用 `scrollTo()` 和 `invalidate()`，刷新界面，达到动画的效果
+
+
+ * 第一行
+  * 第二行
+   * 第三行
     
 #### computeScroll()
 ~~~
