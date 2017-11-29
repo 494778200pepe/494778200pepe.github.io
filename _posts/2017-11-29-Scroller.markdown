@@ -44,16 +44,15 @@ public class View {
 ~~~
 说明：
 
-    1、scrollTo 和 scrollBy 只能改变 View内容 的位置，而不能改变View在布局中的位置。
+    1、`scrollTo` 和 `scrollBy` 只能改变 View内容 的位置，而不能改变View在布局中的位置。
     2、在滑动过程中，mScrollX 的值总等于 View左边缘 和 View内容左边缘 在水平方向上的距离。
     3、mScrollY 的值总等于 View上边缘 和 View内容上边缘 在垂直方向上的距离。
     4、mScrollX 和 mScrollY 的单位为像素。
     5、如果从左向右滑动，那么 mScrollX 为负值，反之为正值。
     6、如果从上往下滑动，那么 mScrollY 为负值，反之为正值。
     
-### Scroller
+### [Scroller][scroller-url]
 
-[Scroller源码][scroller-url]
 #### 构造方法
 ~~~
 /** 
@@ -158,20 +157,20 @@ public boolean computeScrollOffset() {
     1、判断滚动是否结束，返回值为boolean，true说明滚动尚未完成，false说明滚动已经完成。
     2、如果滚动没结束，那么将下一次刷新界面时要移动的位置赋值给 mCurrX， mCurrX可以通过 mScroller.getCurrX() 获取。
     
-说道这里，似乎还是没弄清楚Scroller跟View滚动的联系在哪里？话不多说，看下图：
+说道这里，似乎还是没弄清楚`Scroller`跟View滚动的联系在哪里？话不多说，看下图：
 
 ![Scroller]({{ site.baseurl }}/assets/images/scroller.png)
 
 说明：
     
-    1、在你想要执行滚动是，调用 startScroll(),设置滚动参数
-    2、刷新界面 invalidate() 或者 postInvalidate()
-    3、在View重绘时，会调用 computeScrollOffset()
+    1、在你想要执行滚动是，调用 `startScroll()`,设置滚动参数
+    2、刷新界面 `invalidate()` 或者 `postInvalidate()`
+    3、在View重绘时，会调用 `computeScrollOffset()`
     4、我们需要来重写此方法，见下文
-    5、在 computeScrollOffset() 中，通过 computeScrollOffset() 判断滚动是否完成
-    6、没有完成的话，下一次刷新界面需要到达的位置 在computeScrollOffset() 中已经计算完成
+    5、在 `computeScrollOffset()` 中，通过 `computeScrollOffset()` 判断滚动是否完成
+    6、没有完成的话，下一次刷新界面需要到达的位置 在`computeScrollOffset()` 中已经计算完成
     7、保存在mCurrX， mCurrX 里面，可以通过 mScroller.getCurrX() 获取
-    8、再次调用 scrollTo() 和 invalidate()，刷新界面，达到动画的效果
+    8、再次调用 `scrollTo()` 和 `invalidate()`，刷新界面，达到动画的效果
     
 #### computeScroll()
 ~~~
@@ -184,7 +183,7 @@ public boolean computeScrollOffset() {
         }
     }   
 ~~~   
-View重绘到调用 computeScroll()的详细过程，可以参考[夏神][xiaanming-url]的博客。
+View重绘到调用 `computeScroll()`的详细过程，可以参考[夏神][xiaanming-url]的博客。
     
 
 
