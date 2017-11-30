@@ -54,7 +54,7 @@ public float getYVelocity(int id);
 
 [android VelocityTracker简单用法 - CSDN博客](http://blog.csdn.net/new_abc/article/details/46927399)
 
-[自定义布局中的平滑移动|VelocityTracker()-速度追踪器的用法](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2012/1114/558.html)
+[自定义布局中的平滑移动 VelocityTracker()-速度追踪器的用法](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2012/1114/558.html)
 
 [velocitytracker-url]:http://www.grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/2.0_r1/android/view/VelocityTracker.java#VelocityTracker
 
