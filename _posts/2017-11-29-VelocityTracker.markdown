@@ -10,6 +10,8 @@ description: 自定义ViewGroup.
     
 ### [VelocityTracker][velocitytracker-url]
 
+### [Scroller][scroller-url]
+
 主要函数：
 ![VelocityTracker]({{ site.baseurl }}/assets/images/VelocityTracker.png)
 
@@ -23,5 +25,6 @@ description: 自定义ViewGroup.
 
 [android VelocityTracker简单用法 - CSDN博客](http://blog.csdn.net/new_abc/article/details/46927399)
 
-[velocitytracker-url]:
-http://www.grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/2.0_r1/android/view/VelocityTracker.java#VelocityTracker
+[velocitytracker-url]:http://www.grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/2.0_r1/android/view/VelocityTracker.java#VelocityTracker
+
+[scroller-url]:http://www.grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/2.0_r1/android/widget/Scroller.java#Scroller.0mCurrX
