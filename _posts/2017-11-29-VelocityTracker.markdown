@@ -44,7 +44,7 @@ public float getYVelocity(int id);
 
 #### [ViewConfiguration][ViewConfiguration-url]
 主要使用了该类的下面三个方法:
-
+* `final ViewConfiguration configuration = ViewConfiguration.get(context);` 
 * `configuration.getScaledTouchSlop()` //获得能够进行手势滑动的距离
 * `configuration.getScaledMinimumFlingVelocity()`//获得允许执行一个fling手势动作的最小速度值
 * `configuration.getScaledMaximumFlingVelocity()`//获得允许执行一个fling手势动作的最大速度值
