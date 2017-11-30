@@ -53,6 +53,8 @@ public class View {
     
 ### [Scroller][scroller-url]
 
+本质上是一个帮助你计算滚动距离，一遍刷新界面时形成动画效果的工具。
+
 #### 构造方法
 ~~~
 /** 
@@ -154,8 +156,8 @@ public boolean computeScrollOffset() {
 ~~~
 这个方法有两个作用：
 
-    1、判断滚动是否结束，返回值为boolean，true说明滚动尚未完成，false说明滚动已经完成。
-    2、如果滚动没结束，那么将下一次刷新界面时要移动的位置赋值给 mCurrX， mCurrX可以通过 `mScroller.getCurrX()` 获取。
+* 1、判断滚动是否结束，返回值为boolean，true说明滚动尚未完成，false说明滚动已经完成。
+* 2、如果滚动没结束，那么将下一次刷新界面时要移动的位置赋值给 mCurrX， mCurrX可以通过 `mScroller.getCurrX()` 获取。
     
 说道这里，似乎还是没弄清楚 `Scroller` 跟View滚动的联系在哪里？话不多说，看下图：
 
@@ -185,6 +187,103 @@ public boolean computeScrollOffset() {
 ~~~   
 View重绘到调用 `computeScroll()`的详细过程，可以参考[夏神][xiaanming-url]的博客。
     
+#### fling ()
+~~~
+    public void fling(int startX, int startY, int velocityX, int velocityY,  
+            int minX, int maxX, int minY, int maxY) {  
+        // Continue a scroll or fling in progress  
+        if (mFlywheel && !mFinished) {  
+            float oldVel = getCurrVelocity();  
+  
+            float dx = (float) (mFinalX - mStartX);  
+            float dy = (float) (mFinalY - mStartY);  
+            float hyp = FloatMath.sqrt(dx * dx + dy * dy);  
+  
+            float ndx = dx / hyp;  
+            float ndy = dy / hyp;  
+  
+            float oldVelocityX = ndx * oldVel;  
+            float oldVelocityY = ndy * oldVel;  
+            if (Math.signum(velocityX) == Math.signum(oldVelocityX) &&  
+                    Math.signum(velocityY) == Math.signum(oldVelocityY)) {  
+                velocityX += oldVelocityX;  
+                velocityY += oldVelocityY;  
+            }  
+        }  
+  
+        mMode = FLING_MODE;  
+        mFinished = false;  
+  
+        float velocity = FloatMath.sqrt(velocityX * velocityX + velocityY * velocityY);  
+       
+        mVelocity = velocity;  
+        mDuration = getSplineFlingDuration(velocity);  
+        mStartTime = AnimationUtils.currentAnimationTimeMillis();  
+        mStartX = startX;  
+        mStartY = startY;  
+  
+        float coeffX = velocity == 0 ? 1.0f : velocityX / velocity;  
+        float coeffY = velocity == 0 ? 1.0f : velocityY / velocity;  
+  
+        double totalDistance = getSplineFlingDistance(velocity);  
+        mDistance = (int) (totalDistance * Math.signum(velocity));  
+          
+        mMinX = minX;  
+        mMaxX = maxX;  
+        mMinY = minY;  
+        mMaxY = maxY;  
+  
+        mFinalX = startX + (int) Math.round(totalDistance * coeffX);  
+        // Pin to mMinX <= mFinalX <= mMaxX  
+        mFinalX = Math.min(mFinalX, mMaxX);  
+        mFinalX = Math.max(mFinalX, mMinX);  
+          
+        mFinalY = startY + (int) Math.round(totalDistance * coeffY);  
+        // Pin to mMinY <= mFinalY <= mMaxY  
+        mFinalY = Math.min(mFinalY, mMaxY);  
+        mFinalY = Math.max(mFinalY, mMinY);  
+    } 
+~~~
+参数：
+
+* tartX 滚动起始点X坐标
+* startY 滚动起始点Y坐标
+* velocityX   当滑动屏幕时X方向初速度，以每秒像素数计算
+* velocityY   当滑动屏幕时Y方向初速度，以每秒像素数计算
+* minX    X方向的最小值，scroller不会滚过此点。
+* maxX    X方向的最大值，scroller不会滚过此点。
+* minY    Y方向的最小值，scroller不会滚过此点。
+* maxY    Y方向的最大值，scroller不会滚过此点。
+
+在fling（快滑，用户按下触摸屏、快速移动后松开）手势基础上开始滚动。滚动的距离取决于fling的初速度。
+
+#### abortAnimation()
+~~~
+public void abortAnimation() {
+    mCurrX = mFinalX;
+    mCurrY = mFinalY;
+    mFinished = true;
+}
+~~~
+直接跳转到结束状态。
+
+#### forceFinished()
+~~~
+public final void forceFinished(boolean finished) {
+        mFinished = finished;
+    }
+~~~
+强制结束，在原地结束。
+#### extendDuration()
+~~~
+public void More ...extendDuration(int extend) {
+    int passed = timePassed();
+    mDuration = passed + extend;
+    mDurationReciprocal = 1.0f / (float)mDuration;
+    mFinished = false;
+}
+~~~
+延长滚动动画时间。此函数允许当使用setFinalX(int) or setFinalY(int) 时，卷动动作持续更长时间并且卷动更长距离。
 
 
 参考：
@@ -192,6 +291,8 @@ View重绘到调用 `computeScroll()`的详细过程，可以参考[夏神][xiaa
 [Android 带你从源码的角度解析Scroller的滚动实现原理 - CSDN博客](http://blog.csdn.net/xiaanming/article/details/17483273)
 
 [Scroller的应用--滑屏实现 - CSDN博客](http://blog.csdn.net/jwzhangjie/article/details/38894379)
+
+[Android的Scroller介绍 滑动 - 流动的存在 - 博客园](http://www.cnblogs.com/wzachenjian/p/3667554.html)
 
 [Android Scroller完全解析，关于Scroller你所需知道的一切](http://blog.csdn.net/guolin_blog/article/details/48719871)
 
