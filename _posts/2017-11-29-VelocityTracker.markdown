@@ -10,6 +10,12 @@ description: 自定义ViewGroup.
     
 ### [VelocityTracker][velocitytracker-url]
 
+* `VelocityTracker`从字面意思理解那就是速度追踪器了，在滑动效果的开发中通常都是要使用该类计算出当前手势的初始速度.
+* 对应的方法是`velocityTracker.computeCurrentVelocity(1000,mMaximumVelocity))`
+* 并通过`getXVelocity`或`getYVelocity`方法得到对应的速度值`initialVelocity`
+* 并将获得的速度值传递给Scroller类的`fling(int startX, int startY, int velocityX, int velocityY, int minX, int maxX, int minY, int maxY) `方法进行控件滚动时各种位置坐标数值的计算
+* API中对fling 方法的解释是基于一个fling手势开始滑动动作,滑动的距离将由所获得的初始速度initialVelocity来决定。
+
 #### 主要函数：
 ![VelocityTracker]({{ site.baseurl }}/assets/images/VelocityTracker.png)
 
@@ -38,10 +44,9 @@ public float getYVelocity(int id);
 
 参考：
 
-
-[滑动速度跟踪类VelocityTracker介绍](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2012/1117/574.html)
-
 [android VelocityTracker简单用法 - CSDN博客](http://blog.csdn.net/new_abc/article/details/46927399)
+
+[自定义布局中的平滑移动|VelocityTracker（）速度追踪器的用法](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2012/1114/558.html)
 
 [velocitytracker-url]:http://www.grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/2.0_r1/android/view/VelocityTracker.java#VelocityTracker
 

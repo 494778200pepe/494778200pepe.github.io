@@ -191,6 +191,8 @@ View重绘到调用 `computeScroll()`的详细过程，可以参考[夏神][xiaa
 
 [Android 带你从源码的角度解析Scroller的滚动实现原理 - CSDN博客](http://blog.csdn.net/xiaanming/article/details/17483273)
 
+[Scroller的应用--滑屏实现 - CSDN博客](http://blog.csdn.net/jwzhangjie/article/details/38894379)
+
 [Android Scroller完全解析，关于Scroller你所需知道的一切](http://blog.csdn.net/guolin_blog/article/details/48719871)
 
 [scroller-url]:http://www.grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/2.0_r1/android/widget/Scroller.java#Scroller.0mCurrX
