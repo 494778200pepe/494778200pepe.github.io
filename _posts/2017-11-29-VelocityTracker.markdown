@@ -42,6 +42,14 @@ public float getYVelocity(int id);
 ~~~
 
 
+#### [ViewConfiguration][ViewConfiguration-url]
+主要使用了该类的下面三个方法:
+
+* `configuration.getScaledTouchSlop()` //获得能够进行手势滑动的距离
+* `configuration.getScaledMinimumFlingVelocity()`//获得允许执行一个fling手势动作的最小速度值
+* `configuration.getScaledMaximumFlingVelocity()`//获得允许执行一个fling手势动作的最大速度值
+
+
 参考：
 
 [android VelocityTracker简单用法 - CSDN博客](http://blog.csdn.net/new_abc/article/details/46927399)
@@ -50,3 +58,4 @@ public float getYVelocity(int id);
 
 [velocitytracker-url]:http://www.grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/2.0_r1/android/view/VelocityTracker.java#VelocityTracker
 
+[ViewConfiguration-url]:http://www.grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/2.0_r1/android/view/ViewConfiguration.java#ViewConfiguration
