@@ -8,6 +8,7 @@ author: pepe
 description: 自定义ViewGroup.
 ---
 ### GestureDetector
+
 GestureDetector（Gesture：手势Detector：识别）
 
 ### 回调接口
