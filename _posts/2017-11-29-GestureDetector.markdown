@@ -11,6 +11,13 @@ description: 自定义ViewGroup.
 
 GestureDetector（Gesture：手势Detector：识别）
 
+### 构造方法
+~~~
+GestureDetector gestureDetector=new GestureDetector(GestureDetector.OnGestureListener listener);  
+GestureDetector gestureDetector=new GestureDetector(Context context,GestureDetector.OnGestureListener listener);  
+GestureDetector gestureDetector=new GestureDetector(Context context,GestureDetector.SimpleOnGestureListener listener);
+~~~
+
 ### 回调接口
 ~~~
 public interface OnGestureListener {
@@ -40,7 +47,7 @@ public interface OnDoubleTapListener {
 
 参考：
 
+[浅析GestureDetector - xirihanlin - 博客园](https://www.cnblogs.com/xirihanlin/archive/2010/12/29/1920356.html)
 
-
-[用户手势检测-GestureDetector使用详解 - CSDN博客](http://blog.csdn.net/harvic880925/article/details/39520901)
+[Android_GestureDetector手势滑动使用 - CSDN博客](http://blog.csdn.net/y22222ly/article/details/51462674)
 
