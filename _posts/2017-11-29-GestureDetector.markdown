@@ -7,10 +7,10 @@ tags: 自定义ViewGroup
 author: pepe
 description: 自定义ViewGroup.
 ---
-###GestureDetector
+### GestureDetector
 GestureDetector（Gesture：手势Detector：识别）
 
-###回调接口
+### 回调接口
 ~~~
 public interface OnGestureListener {
                 // Touch down时触发, e为down时的MotionEvent
