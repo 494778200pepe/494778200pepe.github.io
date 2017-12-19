@@ -13,14 +13,7 @@ description: 自定义ViewGroup.
 
 参考：
 
-[Android 带你从源码的角度解析Scroller的滚动实现原理 - CSDN博客](http://blog.csdn.net/xiaanming/article/details/17483273)
 
-[Scroller的应用--滑屏实现 - CSDN博客](http://blog.csdn.net/jwzhangjie/article/details/38894379)
 
-[Android的Scroller介绍 滑动 - 流动的存在 - 博客园](http://www.cnblogs.com/wzachenjian/p/3667554.html)
+[用户手势检测-GestureDetector使用详解 - CSDN博客](http://blog.csdn.net/harvic880925/article/details/39520901)
 
-[Android Scroller完全解析，关于Scroller你所需知道的一切](http://blog.csdn.net/guolin_blog/article/details/48719871)
-
-[scroller-url]:http://www.grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/2.0_r1/android/widget/Scroller.java#Scroller.0mCurrX
-
-[xiaanming-url]: http://blog.csdn.net/xiaanming
