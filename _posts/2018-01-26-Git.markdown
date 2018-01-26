@@ -12,7 +12,17 @@ description: Git指令说明.
 ~~~
 git status
 ~~~
-* 查看当前状态
+* 查看【本地】当前状态
+
+~~~
+git log
+~~~
+* 查看【本地】日志
+
+~~~
+git log origin/master
+~~~
+* 查看【远程】`master branch` 日志
 
 
 参考：
