@@ -2,10 +2,10 @@
 layout: post
 title:  "Scroller"
 date:   2017-11-29 14:07:00 +0800
-categories: Android
-tags: 自定义ViewGroup
+categories: Other
+tags: Other
 author: pepe
-description: 自定义ViewGroup.
+description: Git指令说明.
 ---
 
 ### Git指令
