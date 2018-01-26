@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Scroller"
+title:  "Git指令"
 date:   2017-11-29 14:07:00 +0800
 categories: Other
 tags: Other
