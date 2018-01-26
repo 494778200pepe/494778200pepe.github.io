@@ -22,7 +22,14 @@ git log
 ~~~
 git log origin/master
 ~~~
-* 查看【远程】`master branch` 日志
+* 查看【远程】`master`分支的日志
+
+~~~
+git clone url
+~~~
+* 把【远程】仓库取到【本地】
+
+
 
 
 参考：
