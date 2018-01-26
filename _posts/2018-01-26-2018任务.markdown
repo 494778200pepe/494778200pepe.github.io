@@ -1,14 +1,15 @@
 ---
 layout: post
-title:  "Git指令"
-date:   2018-01-26 09:11:00 +0800
+title:  "2018任务"
+date:   2018-01-26 09:43:00 +0800
 categories: Other
 tags: Other
 author: pepe
-description: Git指令说明.
+description: 我的2018任务.
 ---
 
 ### Android
+
 * 自定义控件
 * RxJava
 * Http
