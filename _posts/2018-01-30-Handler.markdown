@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Handler"
+date:   2018-01-30 17:10:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: Handler.
+---
+
+### Handler
+
+参考：
+[Handler基本使用（一） new Handler（）和new Handler（Handler.Callback）](http://blog.csdn.net/u011791526/article/details/53609599)
+
+[Handle的原理(Looper、Handler、Message三者关系)](https://mp.weixin.qq.com/s/hYIPwqD48XEtgdrIq69aPw)
+
+[探索 Android 大杀器——Handler](https://zhuanlan.zhihu.com/p/22904405)
+
+
+
+
