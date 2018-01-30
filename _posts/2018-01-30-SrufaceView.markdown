@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Scroller"
-date:   2017-11-29 14:07:00 +0800
+title:  "SurfaceView"
+date:   2018-01-30 16:07:00 +0800
 categories: Android
-tags: 自定义ViewGroup
+tags: android
 author: pepe
-description: 自定义ViewGroup.
+description: SurfaceView.
 ---
 
 ### Activity 和 SurfaceView 的生命周期
