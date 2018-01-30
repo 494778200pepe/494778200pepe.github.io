@@ -18,8 +18,8 @@ description: Handler.
 ```
 注意：
 
-    * 使用这种写法时，需要你在结束Activity的时候handler.removeCallbacksAndMessages(null);让系统能够正常进行回收操作。
-    * 也可以用static修饰handler，避免对activity的引用。
+    * 使用这种写法时，需要你在结束`Activity`的时候`handler.removeCallbacksAndMessages(null);`让系统能够正常进行回收操作。
+    * 也可以用`static`修饰`handler`，避免对`activity`的引用。
 
 ### 写法二
 ```
@@ -41,13 +41,14 @@ public abstract class MyWeakReferenceHandler<T extends Activity> extends Handler
     }  
 }  
 ```
-这样在Activity结束回收的时候WeakReference不会阻止系统进行回收操作，能有效的避免因为handler引起的内存泄露风险。
+这样在`Activity`结束回收的时候`WeakReference`不会阻止系统进行回收操作，能有效的避免因为`handler`引起的内存泄露风险。
 
 ### Handler发送消息
 
 
 
 参考：
+
 [正规的Handler写法 - CSDN博客](http://blog.csdn.net/parcool/article/details/49154189)
 
 [Handler基本使用（一） new Handler（）和new Handler（Handler.Callback）](http://blog.csdn.net/u011791526/article/details/53609599)
@@ -56,23 +57,17 @@ public abstract class MyWeakReferenceHandler<T extends Activity> extends Handler
 
 [探索 Android 大杀器——Handler](https://zhuanlan.zhihu.com/p/22904405)
 
-Android消息机制Message消息池 - CSDN博客
-http://blog.csdn.net/zlp1992/article/details/50295773
+[Android消息机制Message消息池 - CSDN博客](http://blog.csdn.net/zlp1992/article/details/50295773)
 
-看完这篇文章，你就了解了Android Handler的一切 - 观千剑而后识器，操千曲而后晓声。20130816 - CSDN博客
-http://blog.csdn.net/u011733020/article/details/49589863
+[看完这篇文章，你就了解了Android Handler的一切 - 观千剑而后识器，操千曲而后晓声。20130816 - CSDN博客](http://blog.csdn.net/u011733020/article/details/49589863)
 
-Android消息传递之Handler消息机制 - 总李写代码 - 博客园
-https://www.cnblogs.com/whoislcj/p/5590615.html
+[Android消息传递之Handler消息机制 - 总李写代码 - 博客园](https://www.cnblogs.com/whoislcj/p/5590615.html)
 
-Android消息处理机制(Handler、Looper、MessageQueue与Message) - AngelDevil - 博客园
-http://www.cnblogs.com/angeldevil/p/3340644.html
+[Android消息处理机制(Handler、Looper、MessageQueue与Message) - AngelDevil - 博客园](http://www.cnblogs.com/angeldevil/p/3340644.html)
 
-handler.post 为什么要将thread对象post到handler中执行呢？ - CSDN博客
-http://blog.csdn.net/fei0724/article/details/8664462
+[handler.post 为什么要将thread对象post到handler中执行呢？ - CSDN博客](http://blog.csdn.net/fei0724/article/details/8664462)
 
-Android消息处理机制(Handler 与Message)---01 - 我所向往的美好 - 博客园
-https://www.cnblogs.com/fuck1/p/5513412.html
+[Android消息处理机制(Handler 与Message)---01 - 我所向往的美好 - 博客园](https://www.cnblogs.com/fuck1/p/5513412.html)
 
 
 
