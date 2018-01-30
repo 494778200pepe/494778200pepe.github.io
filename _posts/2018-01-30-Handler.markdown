@@ -18,8 +18,8 @@ description: Handler.
 ```
 注意：
 
-    * 使用这种写法时，需要你在结束`Activity`的时候`handler.removeCallbacksAndMessages(null);`让系统能够正常进行回收操作。
-    * 也可以用`static`修饰`handler`，避免对`activity`的引用。
+    * 1、使用这种写法时，需要你在结束 `Activity` 的时候 `handler.removeCallbacksAndMessages(null);` 让系统能够正常进行回收操作。
+    * 2、也可以用 `static` 修饰 `handler` ，避免对 `activity` 的引用。
 
 ### 写法二
 ```
