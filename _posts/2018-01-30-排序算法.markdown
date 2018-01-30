@@ -1,0 +1,88 @@
+---
+layout: post
+title:  "排序算法"
+date:   2018-01-30 13:28:00 +0800
+categories: Other
+tags: Other
+author: pepe
+description: 排序算法.
+---
+
+
+![排序算法]({{ site.baseurl }}/assets/images/sort1.png)
+![算法比较]({{ site.baseurl }}/assets/images/sort2.png)
+
+### 选择排序
+```
+    public static void selectSort(int[] data) {
+        if (null == data || data.length == 0) {
+            return;
+        }
+        int k;
+        int j;
+        for (int i = 0; i < data.length; i++) {
+            k = i;
+            for (j = i + 1; j < data.length; j++) {
+                if (data[k] > data[j]) {
+                    k = j;
+                }
+            }
+            if (k != i) {
+                int temp = data[i];
+                data[i] = data[k];
+                data[k] = temp;
+            }
+        }
+    }
+```
+
+### 插入排序
+```
+    public static void insertSort(int[] data) {
+        if (null == data || data.length == 0) {
+            return;
+        }
+        int j;
+        int target;
+        for (int i = 1; i < data.length; i++) {
+            j = i;
+            target = data[i];
+            while (j > 0 && target < data[j - 1]) {
+                data[j] = data[j - 1];
+                j--;
+            }
+            data[j] = target;
+        }
+    }
+```
+
+### 折半插入排序
+```
+    public static void binaryInsertSort(int[] data) {
+        for (int i = 1; i < data.length; i++) {
+            int temp = data[i];
+            int low = 0;
+            int high = i - 1;
+            while (low <= high) {
+                int mid = (low + high) / 2;
+                if (temp < data[mid]) {
+                    high = mid - 1;
+                } else {
+                    low = mid + 1;
+                }
+            }
+            for (int j = i; j >= low + 1; j--) {
+                data[j] = data[j - 1];
+            }
+            data[low] = temp;
+        }
+    }
+```
+
+
+
+
+
+
+
+
