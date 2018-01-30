@@ -53,8 +53,6 @@ public abstract class MyWeakReferenceHandler<T extends Activity> extends Handler
 
 [Handler基本使用（一） new Handler（）和new Handler（Handler.Callback）](http://blog.csdn.net/u011791526/article/details/53609599)
 
-[Handle的原理(Looper、Handler、Message三者关系)](https://mp.weixin.qq.com/s/hYIPwqD48XEtgdrIq69aPw)
-
 [探索 Android 大杀器——Handler](https://zhuanlan.zhihu.com/p/22904405)
 
 [Android消息机制Message消息池 - CSDN博客](http://blog.csdn.net/zlp1992/article/details/50295773)
