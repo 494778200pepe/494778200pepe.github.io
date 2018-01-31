@@ -73,15 +73,15 @@ Message是容纳任意数据的容器。生产线程发送消息给 Handler，Ha
 
 [从源码看Android MessageQueue消息循环处理机制（epoll实现） - CSDN博客](http://blog.csdn.net/ashqal/article/details/32107099)
 
+[ActivityThread的main方法究竟做了什么？ - MeloDev的博客 - CSDN博客](http://blog.csdn.net/melodev/article/details/51959347)
+
 [Android消息传递之Handler消息机制 - 总李写代码 - 博客园](https://www.cnblogs.com/whoislcj/p/5590615.html)
 
 [Android消息处理机制(Handler、Looper、MessageQueue与Message) - AngelDevil - 博客园](http://www.cnblogs.com/angeldevil/p/3340644.html)
 
 [Android 异步消息处理机制（Handler 、 Looper 、MessageQueue）源码解析 - CSDN博客](http://blog.csdn.net/amazing7/article/details/51424038)
 
-[handler.post 为什么要将thread对象post到handler中执行呢？ - CSDN博客](http://blog.csdn.net/fei0724/article/details/8664462)
 
-[Android消息处理机制(Handler 与Message)---01 - 我所向往的美好 - 博客园](https://www.cnblogs.com/fuck1/p/5513412.html)
 
 
 
