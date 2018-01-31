@@ -8,7 +8,7 @@ author: pepe
 description: Handler.
 ---
 
-### 写法一
+### Handler构造方法一
 ```
     Handler handler = new Handler() {
         public void handleMessage(Message msg) {
@@ -22,7 +22,7 @@ description: Handler.
 * 2、也可以用 `static` 修饰 `handler` ，避免对 `activity` 的引用。
 
 
-### 写法二
+### Handler构造方法二
 ```
 public abstract class MyWeakReferenceHandler<T extends Activity> extends Handler {  
   
@@ -43,6 +43,17 @@ public abstract class MyWeakReferenceHandler<T extends Activity> extends Handler
 }  
 ```
 这样在`Activity`结束回收的时候`WeakReference`不会阻止系统进行回收操作，能有效的避免因为`handler`引起的内存泄露风险。
+
+### Message
+
+Message是容纳任意数据的容器。生产线程发送消息给 Handler，Handler 将消息加入到消息队列中。消息提供了三种额外的信息，以供 Handler 和消息队列处理时使用：
+
+* 1、what ——一种标识符，Handler 能使用它来区分不同消息，从而采取不同的处理方法
+* 2、time ——告知消息队列何时处理消息
+* 3、target —— 表示哪一个 Handler 应当处理消息
+* 4、callback —— msg自带的回调
+* 5、data[bundle] —— 携带的数据
+* 6、obj/arg1/arg2 —— 携带的数据
 
 ### Handler发送消息
 
