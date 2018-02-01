@@ -36,10 +36,14 @@ description: Microsoft Visual Studio 快捷键.
 * CTRL + SHIFT + O      打开项目
 * CTRL + SHIFT + C      显示类视图窗口
 * SHIFT + ALT + ENTER   全屏显示
-* 
-* 
+
 * CTRL + ALT + F1帮助目录
 * CTRL + F1 动态帮助
+
+
+
+参考：
+[Microsoft Visual Studio 2012常用快捷键 - CSDN博客](http://blog.csdn.net/xiaodenanhai/article/details/8721889)
 
 
 
