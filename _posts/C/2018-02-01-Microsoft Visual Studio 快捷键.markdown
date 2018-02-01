@@ -38,38 +38,9 @@ description: Microsoft Visual Studio 快捷键.
 * SHIFT + ALT + ENTER   全屏显示
 * 
 * 
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-
-
-
-
-
-
-
-
-
-
-
-
-
 * CTRL + ALT + F1帮助目录
 * CTRL + F1 动态帮助
 
-
-
-参考：
-
-[各类排序算法的对比及实现 - CSDN博客](http://blog.csdn.net/wangiijing/article/details/51485119)
 
 
 
