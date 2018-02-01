@@ -52,6 +52,7 @@ description: Microsoft Visual Studio 快捷键.
 
 
 参考：
+
 [Microsoft Visual Studio 2012常用快捷键 - CSDN博客](http://blog.csdn.net/xiaodenanhai/article/details/8721889)
 
 [visual studio 2015快捷键整理 - CSDN博客](http://blog.csdn.net/fifamvp/article/details/52311519)
