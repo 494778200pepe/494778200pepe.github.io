@@ -22,6 +22,7 @@ description: Microsoft Visual Studio 快捷键.
 * Shift+F3:             查找上一个
 
 * Ctrl+H:               替换
+* Ctrl+Shift+L:         删除当前行
 
 * CTRL + F4             关闭文档窗口
 * CTRL + F6             下一个文档窗口(不带提示，快速却换)
@@ -29,12 +30,7 @@ description: Microsoft Visual Studio 快捷键.
 * CTRL + SHIFT + F6
 * CTRL + SHIFT + TAB    上一个文档窗口
 
-
-
-
 * CTRL + ALT + J        对象浏览
-
-
 
 * CTRL + O              打开文件
 * CTRL + SHIFT + O      打开项目
