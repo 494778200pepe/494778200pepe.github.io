@@ -13,24 +13,33 @@ description: SurfaceView.
 1、程序打开
  * Activity 调用顺序:onCreate()->onStart()->onResume()
  * SurfaceView 调用顺序: surfaceCreated()->surfaceChanged()
+ * onCreate()->onStart()->onResume()->surfaceCreated()->surfaceChanged()
 
 2、程序关闭（按 BACK 键）
  * Activity 调用顺序:onPause()->onStop()->onDestory()
  * SurfaceView 调用顺序: surfaceDestroyed()
+ * onPause()->surfaceDestroyed()->onStop()->onDestory()
 
 3、程序切到后台（按 HOME 键）
  * Activity 调用顺序:onPause()->onStop()
  * SurfaceView 调用顺序: surfaceDestroyed()
+ * onPause()->surfaceDestroyed()->onStop()
 
 4、程序切到前台
  * Activity 调用顺序: onRestart()->onStart()->onResume()
  * SurfaceView 调用顺序: surfaceChanged()->surfaceCreated()
+ 
+5、SurfaceView.setVisibility(View.VISIBLE)
+ * surfaceCreated()->surfaceChanged()
+ 
+6、SurfaceView.setVisibility(View.GONE)
+ * surfaceDestroyed()
 
-5、屏幕锁定（挂断键或锁定屏幕）
+7、屏幕锁定（挂断键或锁定屏幕）
  * Activity 调用顺序: onPause()
  * SurfaceView 什么方法都不调用
 
-6、屏幕解锁 
+8、屏幕解锁 
  * Activity 调用顺序: onResume()
  * SurfaceView 什么方法都不调用
 
