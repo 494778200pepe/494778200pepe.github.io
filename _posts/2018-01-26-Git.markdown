@@ -16,10 +16,10 @@ git init
 
 ~~~
 git clone url
-git clone url localBranchName
+git clone url [branch-name]
 ~~~
 * 把【远程】仓库取到【本地】
-* 把【远程】仓库取到【本地】，并命名为 localBranchName
+* 把【远程】仓库取到【本地】，并命名为 [branch-name]
 
 ~~~
 git config --list
@@ -40,7 +40,7 @@ git status
 * 查看【本地】当前状态
 
 ~~~
-git add fileName
+git add [file-name]
 git add . 
 ~~~
 * untracked -> tracked
@@ -48,23 +48,23 @@ git add .
 ### branch
 
 ~~~
-git branch branchName
+git branch [branch-name]
 ~~~
 * 创建分支
 
 ~~~
-git checkout branchname
+git checkout [branch-name]
 ~~~
 * 切换分支
 
 ~~~
-git checkout -b branchname
+git checkout -b [branch-name]
 ~~~
 * 创建并切换分支
 
 ~~~
-git branch -d branchName  #删除本地分支  
-git push origin --delete branchNameame #删除远程分支
+git branch -d [branch-name]  #删除本地分支  
+git push origin --delete [branch-name] #删除远程分支
 ~~~
 * 删除分支
 
@@ -79,14 +79,15 @@ git log origin/master
 ~~~
 * 查看【远程】`master`分支的日志
 
+### pull
 
 
+### push
+~~~
+git push [remote-name] [branch-name]
+~~~
 
-
-
-
-
-
+### OTHER
 ~~~
 git branch -r -a -l
 ~~~
@@ -97,7 +98,13 @@ git branch -r -a -l
 
 [Git 原理详解及实用指南 - 扔物线 - 掘金小册](https://juejin.im/book/5a124b29f265da431d3c472e/section/5a14142bf265da432528eee5)
 
+[Git - 关于版本控制](https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%85%B3%E4%BA%8E%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6)
+
 [git pull时出现冲突 放弃本地修改，使远程库内容强制覆盖本地代码 - CSDN博客](http://blog.csdn.net/qq_22441525/article/details/52240311)
+
+[git - the simple guide - no deep shit!](http://rogerdudler.github.io/git-guide/index.zh.html)
+
+[Git 命令梳理 - 简书](https://www.jianshu.com/p/2f26b7b98298)
 
 
 
