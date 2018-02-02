@@ -29,6 +29,30 @@ git clone url
 ~~~
 * 把【远程】仓库取到【本地】
 
+~~~
+git config --list
+~~~
+* 查看配置列表
+
+~~~
+git config --global user.name "alan"
+git config --global user.email alancheen06@gmail.com
+~~~
+* 全局配置
+
+~~~
+git init
+~~~
+* 用来初始化项目,它会创建一个`.git`目录,它包含所有初始化git的所有文件
+
+~~~
+git clone url 
+git clone url name #重命名成name
+~~~
+* clone远程仓库到本地(某个)分支
+
+
+
 
 
 
