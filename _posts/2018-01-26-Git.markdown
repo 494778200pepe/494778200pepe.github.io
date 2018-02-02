@@ -9,10 +9,17 @@ description: Git指令说明.
 ---
 
 ### Git指令
+![文件状态]({{ site.baseurl }}/assets/images/git_status.png)
 ~~~
 git status
 ~~~
 * 查看【本地】当前状态
+
+~~~
+git add fileName
+git add . 
+~~~
+* untracked -> tracked
 
 ~~~
 git log
@@ -26,8 +33,10 @@ git log origin/master
 
 ~~~
 git clone url
+git clone url localBranchName
 ~~~
 * 把【远程】仓库取到【本地】
+* 把【远程】仓库取到【本地】，并命名为 localBranchName
 
 ~~~
 git config --list
@@ -45,11 +54,7 @@ git init
 ~~~
 * 用来初始化项目,它会创建一个`.git`目录,它包含所有初始化git的所有文件
 
-~~~
-git clone url 
-git clone url name #重命名成name
-~~~
-* clone远程仓库到本地(某个)分支
+
 
 
 
