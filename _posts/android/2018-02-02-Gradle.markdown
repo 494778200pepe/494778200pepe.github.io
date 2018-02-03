@@ -13,6 +13,8 @@ description: Gradle学习.
 
 参考：
 
+[Gradle 版本下载](http://services.gradle.org/distributions/)
+
 [Android 带你从源码的角度解析Scroller的滚动实现原理 - CSDN博客](http://blog.csdn.net/xiaanming/article/details/17483273)
 
 [xiaanming-url]: http://blog.csdn.net/xiaanming
