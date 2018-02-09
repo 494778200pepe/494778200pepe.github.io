@@ -25,6 +25,7 @@ description: 我的2018任务.
 
 ### Android
 
+* JNI和NDK
 * 自定义控件
 * RxJava
 * Http
