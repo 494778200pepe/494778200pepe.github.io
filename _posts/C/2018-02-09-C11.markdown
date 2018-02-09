@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "C11新特性"
-date:   2018-02-09 10458:00 +0800
+date:   2018-02-09 10:45:00 +0800
 categories: C
 tags: C
 author: pepe
@@ -29,12 +29,6 @@ C11（也被称为C1X）指ISO标准ISO/IEC 9899:2011，是当前最新的C语�
 * 新增 quick_exit() 函数作为第三种终止程序的方式。当 exit()失败时可以做最少的清理工作。
 
 
-
-参考：
-
-[Microsoft Visual Studio 2012常用快捷键 - CSDN博客](http://blog.csdn.net/xiaodenanhai/article/details/8721889)
-
-[visual studio 2015快捷键整理 - CSDN博客](http://blog.csdn.net/fifamvp/article/details/52311519)
 
 
 
