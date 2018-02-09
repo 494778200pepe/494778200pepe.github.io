@@ -77,7 +77,9 @@ C 是区分大小写的变成语言。
     _Alignas        _Alignof        _Atomic         _Generic    _Noreturn   
     _Static_assert                  _Thread_local
 
+
 |关键字	        |描述|
+|-|-|
 |auto	        |声明自动变量|
 |double	        |声明双精度变量或函数|
 |typedef	    |用以给数据类型取别名|
