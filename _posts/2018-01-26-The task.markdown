@@ -8,6 +8,21 @@ author: pepe
 description: 我的2018任务.
 ---
 
+### C - 2月
+
+
+### C++ - 3月
+
+[C++ 教程 | 菜鸟教程](http://www.runoob.com/cplusplus/cpp-tutorial.html)
+
+### Linux - 4月
+
+[分区之分区设备文件名与挂载， Linux达人养成计划 I教程-慕课网](https://www.imooc.com/video/3244)
+
+### 数据结构算法 - 5月
+
+### Python - 6月
+
 ### Android
 
 * 自定义控件
@@ -31,18 +46,6 @@ description: 我的2018任务.
 * Tomcat
 
 ### SQL
-
-### C、C++
-
-[C++ 教程 | 菜鸟教程](http://www.runoob.com/cplusplus/cpp-tutorial.html)
-
-### Linux
-
-[分区之分区设备文件名与挂载， Linux达人养成计划 I教程-慕课网](https://www.imooc.com/video/3244)
-
-### 数据结构算法
-
-### Python
 
 ### Photoshop
 
