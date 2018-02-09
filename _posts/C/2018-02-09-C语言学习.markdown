@@ -77,14 +77,14 @@ C 是区分大小写的变成语言。
     _Alignas        _Alignof        _Atomic         _Generic    _Noreturn   
     _Static_assert                  _Thread_local
 
+|关键字	        |描述|
+|auto	        |声明自动变量|
+|double	        |声明双精度变量或函数|
+|typedef	    |用以给数据类型取别名|
+|register	    |声明寄存器变量|
+|short	        |声明短整型变量或函数|
+|char	        |声明字符型变量或函数|
 
-* 关键字	    描述
-* auto	        声明自动变量
-* double	    声明双精度变量或函数
-* typedef	    用以给数据类型取别名
-* register	    声明寄存器变量
-* short	        声明短整型变量或函数
-* char	        声明字符型变量或函数
 * const	        声明只读变量
 * static	    声明静态变量int声明整型变量或函数
 * struct	    声明结构体变量或函数
