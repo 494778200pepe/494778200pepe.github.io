@@ -59,7 +59,7 @@ C 是区分大小写的变成语言。
 #### 关键字
 关键字，不能作为常量名、变量名 或其他标识符名称。
 
-    int         char        shortlong   long        float       double
+    int         char        short       long        float       double
     switch      case        break       default
     if          else        do          while       for         continue   
     enum        struct      union       
@@ -74,8 +74,8 @@ C 是区分大小写的变成语言。
     
 ###### C11新增关键字
 
-    _Alignas        _Alignof    _Atomic     _Generic    _Noreturn   
-    _Static_assert  _Thread_local
+    _Alignas        _Alignof        _Atomic         _Generic    _Noreturn   
+    _Static_assert                  _Thread_local
 
 
 关键字	    描述
