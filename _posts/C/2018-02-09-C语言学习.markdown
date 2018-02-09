@@ -50,8 +50,62 @@ printf                  //要开始在屏幕显示内容了
 ```
 
 #### 标识符
+C 标识符是用来标识变量、函数，或任何其他用户自定义项目的名称；
+起始：A-Z 或 a-z 或 _
+后续：字母、下划线、数字
+C 标识符中，不允许出现标点字符，比如 @、￥、% 等。
+C 是区分大小写的变成语言。
+
+#### 关键字
+关键字，不能作为常量名、变量名 或其他标识符名称。
+
+    int         char        shortlong   long        float       double
+    switch      case        break       default
+    if          else        do          while       for         continue   
+    enum        struct      union       
+    static      signed      unsigned    volatile
+    return      void
+    auto        const       extern      goto        register
+    sizeof      typedef     _Packed  
+
+##### C99新增关键字
+
+    _Bool       _Compex     _Imaginary      inline      restrict
+    
+###### C11新增关键字
+
+    _Alignas        _Alignof    _Atomic     _Generic    _Noreturn   
+    _Static_assert  _Thread_local
 
 
+关键字	    描述
+auto	    声明自动变量
+double	    声明双精度变量或函数
+typedef	    用以给数据类型取别名
+register	声明寄存器变量
+short	    声明短整型变量或函数
+char	    声明字符型变量或函数
+const	    声明只读变量
+static	    声明静态变量int声明整型变量或函数
+struct	    声明结构体变量或函数
+unsigned	声明无符号类型变量或函数
+volatile	说明变量在程序执行中可被隐含地改变long声明长整型变量或函数
+union	    声明共用数据类型
+signed	    声明有符号类型变量或函数
+void	    声明函数无返回值或无参数，声明无类型指针float声明浮点型变量或函数
+enum	    声明枚举类型
+extern	    声明变量是在其他文件正声明
+if	        条件语句
+else	    条件语句否定分支（与 if 连用）
+switch	    用于开关语句
+case	    开关语句分支
+for	        一种循环语句do循环语句的循环体
+while	    循环语句的循环条件
+goto	    无条件跳转语句
+continue	结束当前循环，开始下一轮循环break跳出当前循环
+default	    开关语句中的"其他"分支
+sizeof	    计算数据类型长度
+return	    子程序返回语句（可以带参数，也可不带参数）循环条件
 
 
 
