@@ -111,6 +111,17 @@ C 是区分大小写的变成语言。
 * return	    子程序返回语句（可以带参数，也可不带参数）循环条件
 
 
+|---
+| Default aligned | Left aligned | Center aligned | Right aligned
+|-|:-|:-:|-:
+| First body part | Second cell | Third cell | fourth cell
+| Second line |foo | **strong** | baz
+| Third line |quux | baz | bar
+|---
+| Second body
+| 2 line
+|===
+| Footer row
 
 
 
