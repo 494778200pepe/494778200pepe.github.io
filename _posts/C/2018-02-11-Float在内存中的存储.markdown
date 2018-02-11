@@ -1,14 +1,14 @@
 ---
 layout: post
 title:  "Float在内存中的存储"
-date:   2018-02-011 13:52:00 +0800
+date:   2018-02-011 15:00:00 +0800
 categories: C
 tags: C
 author: pepe
 description: Float在内存中的存储.
 ---
 
-### C11
+### Float的存储
 
 
 
