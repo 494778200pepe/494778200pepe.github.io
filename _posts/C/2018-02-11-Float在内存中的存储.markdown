@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Float在内存中的存储"
-date:   2018-02-011 15:00:00 +0800
+date:   2018-02-11 15:00:00 +0800
 categories: C
 tags: C
 author: pepe
