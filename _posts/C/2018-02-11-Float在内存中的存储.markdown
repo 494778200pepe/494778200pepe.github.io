@@ -69,8 +69,7 @@ description: Float在内存中的存储.
 #### 再来说值范围
 
 float在内存中保存的数值模型大概是这样子的：1.1000101*2^n，那么这个值的范围基本上可以由 2^n 来确定。
-同时我们知道 n 的范围是 0 ~ 127，那么加上符号位，float的值范围大概就是 -2^128 ~ +2^128，也就是也即-3.40E+38 ~ +3.40E+38。
-
+同时我们知道 n 的范围是 0 ~ 127，那么加上符号位，float的值范围大概就是 -2^127 ~ +2^127，也就是也即-3.40E+38 ~ +3.40E+38。
 
 [C语言中关于float、double、long double精度及数值范围理解 - CSDN博客](http://blog.csdn.net/zhenganzhong_csdn/article/details/50039289)
 [C语言中float double等类型在内存中的存储 - 冰岛彩虹 - 博客园](https://www.cnblogs.com/bingdaocaihong/p/6993028.html)
