@@ -87,7 +87,7 @@ float在内存中保存的数值模型大概是这样子的：1.1000101*2^n，�
 #### 第二个
 指数值的存储问题。
 
-
+[浮点数在计算机中的存储方式 - wuyuan2011woaini - 博客园](https://www.cnblogs.com/wuyuan2011woaini/p/4105765.html)
 
 
 ### **从float到值**
