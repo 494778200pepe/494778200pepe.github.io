@@ -8,7 +8,7 @@ author: pepe
 description: Float在内存中的存储.
 ---
 
-### 从十进制到二进制
+### **从十进制到二进制**
 
 * 给你举个例子吧,例如0.125D
 * 0.125X2=0.25,整数部分为0
@@ -32,7 +32,7 @@ description: Float在内存中的存储.
 
 [二进制十进制间小数怎么转换_百度经验](https://jingyan.baidu.com/article/425e69e6e93ca9be15fc1626.html)
 
-### float的表示方式
+### **float的表示方式**
 
 先说一下 十进制 到 float在内存中保存的转换过程：
 
@@ -46,12 +46,12 @@ description: Float在内存中的存储.
 
 [(1)c语言中FLOAT 是如何表示的_爱云横_新浪博客](http://blog.sina.com.cn/s/blog_70bab92301016zqm.html)
 
-### 精度和值范围
+### **精度和值范围**
 
 [C语言中关于float、double、long double精度及数值范围理解 - CSDN博客](http://blog.csdn.net/zhenganzhong_csdn/article/details/50039289)
 [C语言中float double等类型在内存中的存储 - 冰岛彩虹 - 博客园](https://www.cnblogs.com/bingdaocaihong/p/6993028.html)
 
-### 从float到值
+### **从float到值**
 
 
 
