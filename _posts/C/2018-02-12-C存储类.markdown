@@ -1,0 +1,39 @@
+---
+layout: post
+title:  "C存储类"
+date:   2018-02-12 15:04:00 +0800
+categories: C
+tags: C
+author: pepe
+description: C存储类.
+---
+
+### **auto 存储类**
+
+* auto 存储类是所有局部变量默认的存储类。
+* auto 只能用在函数内，即 auto 只能修饰局部变量。
+
+### **register 存储类**
+
+* register 存储类用于定义存储在寄存器中而不是 RAM 中的局部变量。
+* 因为register变量可能不存放在内存中，所以不能用“&”来获取register变量的地址。
+* 局部静态变量不能定义为寄存器变量。不能写成：register static int a, b, c;
+* register变量必须是一个单个的值，并且长度应该小于或者等于整型的长度
+
+```
+{
+   register int  miles;
+}
+```
+
+[浅析C语言的一个关键字——register - CSDN博客](http://blog.csdn.net/21aspnet/article/details/257511)
+
+### **static 存储类**
+
+
+
+
+### **extern 存储类**
+
+
+
