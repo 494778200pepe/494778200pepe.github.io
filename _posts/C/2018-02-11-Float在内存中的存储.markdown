@@ -42,7 +42,7 @@ description: Float在内存中的存储.
 * 第四点，float在内存中占4个字节，32个bit位
 * 第五点，float表示浮点数，就是用32个bit位来保存上面的三个信息。
 
-![float]({{ site.baseurl }}/assets/images/C/float.png)
+![float]({{ site.baseurl }}/assets/images/c/float.png)
 
 [(1)c语言中FLOAT 是如何表示的_爱云横_新浪博客](http://blog.sina.com.cn/s/blog_70bab92301016zqm.html)
 
