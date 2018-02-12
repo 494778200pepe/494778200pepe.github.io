@@ -93,16 +93,6 @@ float在内存中保存的数值模型大概是这样子的：1.1000101*2^n，�
 [浮点数在计算机中的存储方式 - wuyuan2011woaini - 博客园](https://www.cnblogs.com/wuyuan2011woaini/p/4105765.html)
 
 
-### **从float到值**
-
-
-
-
-
-
-
-
-
 [Scientific counting method-url]:https://baike.baidu.com/item/%E7%A7%91%E5%AD%A6%E8%AE%B0%E6%95%B0%E6%B3%95/1612882?fr=aladdin
 
 
