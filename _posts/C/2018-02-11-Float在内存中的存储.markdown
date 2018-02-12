@@ -53,11 +53,14 @@ description: Float在内存中的存储.
 
 * 1、31位保存的是符号位，"1"代表负，"0"代表正。
 * 2、23-30位，是指数位，如果指数是正的，第30位放入"1"。如果n是右移得到的或指数为0，则第30位放入"0"。
-* 3、
+* 3、23-29位，存放指数的值，指数的范围为 0 - 127.
+* 4、22-0位，用来表示有效值。
 
 [(1)c语言中FLOAT 是如何表示的_爱云横_新浪博客](http://blog.sina.com.cn/s/blog_70bab92301016zqm.html)
 
 ### **精度和值范围**
+
+#### 精度
 
 [C语言中关于float、double、long double精度及数值范围理解 - CSDN博客](http://blog.csdn.net/zhenganzhong_csdn/article/details/50039289)
 [C语言中float double等类型在内存中的存储 - 冰岛彩虹 - 博客园](https://www.cnblogs.com/bingdaocaihong/p/6993028.html)
