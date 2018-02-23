@@ -43,4 +43,37 @@ description: C运算符.
 ### **C 中的运算符优先级**
 
 
+### 实例
+
+利用异或 ^ 来交换两个数的值，而且不引入其他变量。
+```
+unsigned int a=60;  //0011 1100
+unsigned int b=13;  //0000 1101
+a=a^b;              //a=a^b=0011 0001
+b=a^b;              //b=a^b=0011 1100  相当于b1=(a^b)^b
+a=a^b;              //a=a^b=0000 1101  相当于a1=(a^b)^((a^b)^b)
+```
+实例
+```
+#include<stdio.h>
+
+int main( )
+{
+    unsigned int a=60;         //0011 1100
+    unsigned int b=13;         //0000 1101
+    printf("a=%d,b=%d",a,b);   //输出a，b的值
+    printf("\n");
+    a=a^b;                     //a=a^b=0011 0001
+    b=a^b;                     //b=a^b=0011 1100
+    a=a^b;                     //a=a^b=0000 1101
+    printf("a=%d,b=%d",a,b);   //输出a，b的值
+}
+```
+结果：
+```
+a=60，b=13；
+a=13，b=60；
+```
+
+
 
