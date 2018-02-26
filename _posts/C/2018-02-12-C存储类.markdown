@@ -39,6 +39,8 @@ description: C存储类.
 重点说明：static 修饰局部变量的时候，每次进入该函数，该局部变量的值，并不会重置。也就是说这个变量与函数是同一级别的，其初始化只进行一次。
 
 
+[C语言中static关键词使用在函数外部和内部的疑惑 - CSDN博客](http://blog.csdn.net/xiaobai2458/article/details/51880291)
+
 ### **extern 存储类**
 
 * extern 修饰符通常用于当有两个或多个文件共享相同的全局变量或函数的时候。
