@@ -52,7 +52,22 @@ struct Books
 #### 访问结构成员
 
 定义： `struct Books Book1; ` 
+
 使用： `Book1.title`
+
+#### 结构作为函数参数
+```
+/* 函数声明 */
+void printBook( struct Books book );
+```
+
+#### 指向结构的指针
+
+定义： `struct Books *struct_pointer;`
+
+赋值： `struct_pointer = &Book1;`
+
+使用： `struct_pointer->title;`
 
 ### **C共用体**
 
