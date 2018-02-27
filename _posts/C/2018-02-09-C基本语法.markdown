@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "C语言学习"
+title:  "C基本语法"
 date:   2018-02-09 10:51:00 +0800
 categories: C
 tags: C
 author: pepe
-description: C语言学习.
+description: C基本语法.
 ---
 
 ### **C程序结构**
@@ -79,7 +79,7 @@ C 是区分大小写的变成语言。
 
 
 |关键字---------|描述|
-| :--------     | :---- |
+|:--------------|:----|
 |auto	        |声明自动变量|
 |double	        |声明双精度变量或函数|
 |typedef	    |用以给数据类型取别名|
