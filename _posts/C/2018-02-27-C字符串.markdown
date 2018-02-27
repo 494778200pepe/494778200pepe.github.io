@@ -8,7 +8,7 @@ author: pepe
 description: C字符串.
 ---
 
-### **常见函数**
+### **字符串处理常见函数**
 
 |函数------------------ |目的|
 | :--------             | :---- |
@@ -19,9 +19,37 @@ description: C字符串.
 |strchr(s1, ch)	        |返回一个指针，指向字符串 s1 中字符 ch 的第一次出现的位置|
 |strstr(s1, s2)	        |返回一个指针，指向字符串 s1 中字符串 s2 的第一次出现的位置|
 
+### **C结构体**
 
+结构体是 C 编程中另一种用户自定义的可用的数据类型，它允许您存储不同类型的数据项。
 
+#### 定义结构
+struct 语句定义了一个包含多个成员的新的数据类型，struct 语句的格式如下：
+```
+struct [structure tag]
+{
+   member definition;
+   member definition;
+   ...
+   member definition;
+} [one or more structure variables];
+```
 
+* structure tag 是可选的，每个 member definition 是标准的变量定义，比如 int i; 或者 float f; 或者其他有效的变量定义。
+* 在结构定义的末尾，最后一个分号之前，您可以指定一个或多个结构变量，这是可选的。
+
+下面是声明 Book 结构的方式：
+```
+struct Books
+{
+   char  title[50];
+   char  author[50];
+   char  subject[100];
+   int   book_id;
+} book;
+```
+
+### **C共用体**
 
 
 
