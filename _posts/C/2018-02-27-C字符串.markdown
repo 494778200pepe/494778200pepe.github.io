@@ -35,7 +35,7 @@ struct [structure tag]
 } [one or more structure variables];
 ```
 
-* structure tag 是可选的，每个 member definition 是标准的变量定义，比如 int i; 或者 float f; 或者其他有效的变量定义。
+* `structure tag` 是可选的，每个 member definition 是标准的变量定义，比如 int i; 或者 float f; 或者其他有效的变量定义。
 * 在结构定义的末尾，最后一个分号之前，您可以指定一个或多个结构变量，这是可选的。
 
 下面是声明 Book 结构的方式：
