@@ -102,3 +102,121 @@ if(!ptr)    /* 如果 p 为空，则完成 */
 |指向指针的指针	        |允许指向指针的指针。|
 |传递指针给函数	        |通过引用或地址传递参数，使传递的参数在调用函数中被改变。|
 |从函数返回指针	        |C 允许函数返回指针到局部变量、静态变量和动态内存分配。|
+
+### **函数指针**
+
+函数指针是指向函数的指针变量。
+函数指针可以像一般函数一样，用于调用函数、传递参数。
+函数指针变量的声明：
+```
+typedef int (*fun_ptr)(int,int); // 声明一个指向同样参数、返回值的函数指针类型
+```
+
+实例
+以下实例声明了函数指针变量 p，指向函数 max：
+```
+#include <stdio.h>
+ 
+int max(int x, int y)
+{
+    return x > y ? x : y;
+}
+ 
+int main(void)
+{
+    /* p 是函数指针 */
+    int (* p)(int, int) = &max; // &可以省略
+    int a, b, c, d;
+ 
+    printf("请输入三个数字:");
+    scanf("%d %d %d", &a, &b, &c);
+    
+    getchar();
+ 
+    /* 与直接调用函数等价，d = max(max(a, b), c) */
+    d = p(p(a, b), c); 
+ 
+    printf("最大的数字是: %d\n", d);
+ 
+    getchar();
+ 
+    return 0;
+}
+```
+编译执行，输出结果如下：
+```
+请输入三个数字:1 2 3
+最大的数字是: 3
+```
+
+### **回调函数**
+
+* 函数指针作为某个函数的参数
+* 函数指针变量可以作为某个函数的参数来使用的，回调函数就是一个通过函数指针调用的函数。
+* 简单来说就是，指针p既然可以指向函数A，并使用该指针来调用函数A
+* 同时，指针p又可以作为函数B的参数，那么在函数B里面就可以使用p来使用函数A
+* 简单讲：回调函数是由别人的函数执行时调用你实现的函数。
+* 也就是说的在函数B中的指针p
+
+实例
+```
+#include <stdlib.h>  
+#include <stdio.h>
+
+// 回调函数
+// size_t 是一种数据类型，近似于无符号整型，但容量范围一般大于 int 和 unsigned。这里使用 size_t 是为了保证 arraysize
+// 变量能够有足够大的容量来储存可能大的数组。
+void populate_array(int *array, size_t arraySize, int (*getNextValue)(void))
+{
+	for (size_t i=0; i<arraySize; i++)
+		array[i] = getNextValue();
+}
+
+// 获取随机值
+int getNextRandomValue(void)
+{
+	return rand();
+}
+
+int main(void)
+{
+	int myarray[10];
+	populate_array(myarray, 10, getNextRandomValue);
+	for(int i = 0; i < 10; i++) {
+		printf("%d ", myarray[i]);
+	}
+	printf("\n");
+	getchar();
+	return 0;
+}
+```
+编译执行，输出结果如下：
+```
+16807 282475249 1622650073 984943658 1144108930 470211272 101027544 1457850878 1458777923 2007237709 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
