@@ -49,6 +49,11 @@ struct Books
 } book;
 ```
 
+#### 访问结构成员
+
+定义： `struct Books Book1; ` 
+使用： `Book1.title`
+
 ### **C共用体**
 
 
