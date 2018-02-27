@@ -212,8 +212,22 @@ typedef struct Books
 * typedef 仅限于为类型定义符号名称，#define 不仅可以为类型定义别名，也能为数值定义别名，比如您可以定义 1 为 ONE。
 * typedef 是由编译器执行解释的，#define 语句是由预编译器进行处理的。
 
+#### typedef 与 #define 的区别
 
-
+（1）#define可以使用其他类型说明符对宏类型名进行扩展，但对 typedef 所定义的类型名却不能这样做。例如：
+```
+    #define INTERGE int
+    unsigned INTERGE n;  //没问题
+    typedef int INTERGE;
+    unsigned INTERGE n;  //错误，不能在 INTERGE 前面添加 unsigned
+```
+（2） 在连续定义几个变量的时候，typedef 能够保证定义的所有变量均为同一类型，而 #define 则无法保证。例如：
+```
+    #define PTR_INT int *
+    PTR_INT p1, p2;        //p1、p2 类型不相同，宏展开后变为int *p1, p2;
+    typedef int * PTR_INT
+    PTR_INT p1, p2;        //p1、p2 类型相同，它们都是指向 int 类型的指针。
+```
 
 
 
