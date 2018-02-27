@@ -1,0 +1,33 @@
+---
+layout: post
+title:  "C文件读写"
+date:   2018-02-27 15:45:00 +0800
+categories: C
+tags: C
+author: pepe
+description: C文件读写.
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
