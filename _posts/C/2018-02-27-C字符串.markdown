@@ -129,6 +129,19 @@ Book author : Zara Ali
 Book subject : Telecom Billing Tutorial
 Book book_id : 6495700
 ```
+#### 结构体后面接指针
+```
+typedef struct file{
+...
+}FileInfo, *FileP;
+```
+意思是：
+```
+给struct file 取个别名为FileInfo  给struct file * 取个别名为FileP
+```
+
+
+[结构体struct和typedef后面接指针的含义 - CSDN博客](http://blog.csdn.net/pengpengblog/article/details/52599778)
 
 ### **C共用体**
 
@@ -165,9 +178,32 @@ typedef unsigned char BYTE;
 ```
 BYTE  b1, b2;
 ```
+例子,使用 typedef；
+```
+typedef struct Books
+{
+   char  title[50];
+   char  author[50];
+   char  subject[100];
+   int   book_id;
+} Book;
+```
+这里的 Book 就是 Books 的别名了。
 
+* 使用 typedef 之前，定义变量：` struct Books book;`
+* 使用 typedef 之后，定义变量：` Book book;`
 
-
+不使用 typedef ：
+```
+typedef struct Books
+{
+   char  title[50];
+   char  author[50];
+   char  subject[100];
+   int   book_id;
+} Book;
+```
+这里的 Book，就是类型为 Books 的一个变量。
 
 
 
