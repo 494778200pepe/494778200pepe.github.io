@@ -204,6 +204,63 @@ int main(void)
 Max between 20 and 10 is 20
 ```
 
+### **注意**
+
+1、使用#define含参时，参数括号很重要，如上例中省略括号会导致运算错误：
+```
+#include <stdio.h>
+
+#define square(x) ((x) * (x))
+
+#define square_1(x) (x * x)
+
+int main(void)
+{
+   printf("square 5+4 is %d\n", square(5+4));  
+   printf("square_1 5+4 is %d\n", square(5+4)); 
+   return 0;
+}
+```
+输出结果为：
+```
+square 5+4 is 81
+square_1 5+4 is 29
+```
+原因:
+```
+square   等价于   （5+4）*（5+4）=81
+square_1 等价于   5+4*5+4=29
+```
+
+
+2、用#define宏定义将a,b交换，不使用中间变量，两种方法实现swap(x,y);
+```
+#include <stdio.h>
+#define MAX(x,y) ((x>y)?(x):(y))
+#define SWAP1(x,y) {x=x+y;y=x-y;x=x-y;}
+#define SWAP2(x,y) {x=x^y;y=x^y;x=x^y;}
+
+int main()
+{
+    int a,b;
+    scanf("%d %d",&a,&b);
+    printf("Max number is:%d\n",MAX(a,b));
+    printf("交换前：x=%d,y=%d\n",a,b);
+    SWAP1(a,b);
+    printf("交换后：x=%d,y=%d\n",a,b);
+    SWAP2(a,b);
+    printf("再次交换后：x=%d,y=%d\n",a,b);
+    return 0;
+}
+```
+输出结果为：
+```
+2 4
+Max number is:4
+交换前：x=2,y=4
+交换后：x=4,y=2
+再次交换后：x=2,y=4
+```
 
 
 
