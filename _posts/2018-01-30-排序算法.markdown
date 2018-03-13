@@ -138,7 +138,10 @@ description: 排序算法.
 [MoreWindows Blog - CSDN博客](http://blog.csdn.net/morewindows/article/category/859207)
 
 
-
+ * 快速排序基本思路（通俗易懂+例子） - CSDN博客
+ * http://blog.csdn.net/code_ac/article/details/74158681
+ * 白话经典算法系列之六 快速排序 快速搞定 - CSDN博客
+ * http://blog.csdn.net/morewindows/article/details/6684558
 
 
 
