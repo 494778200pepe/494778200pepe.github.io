@@ -125,6 +125,35 @@ description: 排序算法.
     }
 ```
 
+### 快速排序
+```
+     public static void fastSort(int[] array, int l, int r) {
+        if (l < r) {
+            int left = l;
+            int right = r;
+            int midValue = array[left + (right - left) / 2];
+            do {
+                while (array[right] > midValue) {
+                    right--;
+                }
+                while (array[left] < midValue) {
+                    left++;
+                }
+                if (left <= right) {
+                    int temp = array[left];
+                    array[left] = array[right];
+                    array[right] = temp;
+                    right--;
+                    left++;
+                }else{
+                    break;
+                }
+            } while (left <= right);
+            fastSort(array, l, right);
+            fastSort(array, left, r);
+        }
+```
+
 参考：
 
 [各类排序算法的对比及实现 - CSDN博客](http://blog.csdn.net/wangiijing/article/details/51485119)
