@@ -10,14 +10,19 @@ description: Linux脚本基本语法.
 
 
 ### **打印log**
+```
     logcat -v time  >> ${STORAGE_PATH}log.tx
+```
+
 ### **=/!=**    
-    -eq 等于               equal
-    -ne 不等于             not equal
-    -gt 大于               greater than
-    -ge 大于等于           greater equal
-    -lt 小于               less than
-    -le 小于等于           less equal
+    
+* -eq 等于               equal
+* -ne 不等于             not equal
+* -gt 大于               greater than
+* -ge 大于等于           greater equal
+* -lt 小于               less than
+* -le 小于等于           less equal
+
 ### **条件测试**     
    通常用” [ ] “来表示条件测试。注意这里的空格很重要。要确保方括号的空格。
     [ -f “somefile” ] ：判断是否是一个文件
