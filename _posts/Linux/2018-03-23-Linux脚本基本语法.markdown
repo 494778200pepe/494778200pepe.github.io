@@ -142,6 +142,13 @@ until语句是只要条件为假就执行下列语句
 
 
 
+参考：
+
+[linux中的sh脚本语法](http://tsov.net/sh-script-syntax/)
+
+[_ACME_的博客 - CSDN博客](https://blog.csdn.net/qq_18297675/article/category/6420863)
+
+[Shell 变量 - 菜鸟教程](http://www.runoob.com/linux/linux-shell-variable.html)
 
 
 
