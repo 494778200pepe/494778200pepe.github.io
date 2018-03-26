@@ -156,6 +156,9 @@ until语句是只要条件为假就执行下列语句
 
 [Shell 变量 - 菜鸟教程](http://www.runoob.com/linux/linux-shell-variable.html)
 
+[sync命令_Linux sync 命令用法详解：用于强制被改变的内容立刻写入磁盘](http://man.linuxde.net/sync)
+
+[Linux基础知识之挂载详解（mount,umount及开机自动挂载](https://www.linuxidc.com/Linux/2016-08/134666.htm)
 
 
 
