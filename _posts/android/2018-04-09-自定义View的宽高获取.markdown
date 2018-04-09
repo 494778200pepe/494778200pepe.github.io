@@ -10,9 +10,9 @@ description: 自定义View的宽高获取.
 
 ### 执行顺序
 ```
-Constructor->onFinishInflate->onMeasure..->onSizeChanged->onLayout->addOnGlobalLayoutListener->onWindowFocusChanged->onMeasure->onLayout
+Constructor -> onFinishInflate -> onMeasure.. -> onSizeChanged -> onLayout -> addOnGlobalLayoutListener -> onWindowFocusChanged -> onMeasure -> onLayout
 ```
-由上可知,onMeasure和onLayout会被多次调用.
+由上可知,`onMeasure`和`onLayout`会被多次调用.
 
 ### API分析
 
