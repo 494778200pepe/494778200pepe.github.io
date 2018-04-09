@@ -10,11 +10,35 @@ description: 基本数据类型与输入输出.
 
 ### C++字符集
 
+* 26个小写字母：  abcdefghijklmnopqrstuvwxyz
+* 26个大写字母：  ABCDEFGHIJKLMNOPQRSTUVWXYZ
+* 10个数字        0123456789
+* 其他符号        +-*/=,._:;?\"'~|!#%&()[]{}^<>(空格)
+
 ### C++保留字
 
+[C++关键字详解 - CSDN博客](https://blog.csdn.net/scmuzi18/article/details/53696778)
 
 ### 数据类型
 
+数据类型：基本数据类型、非基本数据类型
+
+基本数据类型：
+
+* 整型 int
+* 字符型(单字符型 char, 宽字符型 wcha_r)
+* 实型(单精度型 float, 双精度型 double)
+* 逻辑型 bool
+
+非基本数据类型：
+
+* 数组 type[]
+* 指针 type *
+* 空类型 void
+* 结构 struct
+* 联合 union
+* 枚举 enum
+* 类 class
 
 ### 变量定义
 
