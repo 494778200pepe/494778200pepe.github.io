@@ -9,7 +9,7 @@ description: SVN小技巧
 
 ### 技巧一：重命名(保留Log)
 
-    在查看Log的界面`Show log`,把下方的“复制/改名时终止`Stop on copy/rename`这项勾选去掉就可以了。
+* 在查看Log的界面`Show log`,把下方的“复制/改名时终止`Stop on copy/rename`这项勾选去掉就可以了。
     
 ### 技巧二：移动目录(保留Log)
 
