@@ -67,6 +67,12 @@ description: 基本数据类型与输入输出.
 
 ### 八、**常量const**
 
+* 1、常量定义中初始化的值可以是一个不依赖于运行的表达式。该表达式在程序运行之前就能计算，所以，编译时就能求值。
+* 2、`const int size = 100 * sizeof(int);     //ok`
+* 3、`const int number = max(15,23);          //error`
+* 4、第一个语句，`sizeof`不是函数，而是C++的基本操作符，该表达式在编译之前能确定值。
+* 5、第二个语句则要求函数值，而函数一般都要在程序开始运行时才能求值，该表达式不能在编译之前确定值，所以错误。
+
 [C++ const关键字总结 - C.g - 博客园](https://www.cnblogs.com/chogen/p/4574118.html)
 
 [C++ const关键字总结 - C.g - 博客园](https://www.cnblogs.com/chogen/p/4574118.html)
