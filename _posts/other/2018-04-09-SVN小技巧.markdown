@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "SVN小技巧"
+date:   2018-04-09 15:36:00 +0800
+categories: Other
+tags: Other
+description: SVN小技巧
+---
+
+### 技巧一：重命名(保留Log)
+
+    在查看Log的界面`Show log`,把下方的“复制/改名时终止`Stop on copy/rename`这项勾选去掉就可以了。
+    
+### 技巧二：移动目录(保留Log)
+
+* 1、目标文件夹必须是版本控制的文件夹
+* 2、用鼠标右键选中原目录，拖动到目标目录
+* 3、释放鼠标右键的时候会弹出菜单，选中`SVN Move versioned item(s) here`,然后`commit`即可保留Log。
+
+
+
