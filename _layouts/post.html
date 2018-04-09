@@ -8,6 +8,7 @@ layout: default
             {% assign date_format = site.date_format.title %}
             {{ page.date | date: date_format }}
         </span>
+        <h2>{{ page.description }}</h2>
         <hr style="border-top:1px solid #28323C;"/>
     {% if site.comments and page.comments %}
         {% if site.disqus != '' %}
