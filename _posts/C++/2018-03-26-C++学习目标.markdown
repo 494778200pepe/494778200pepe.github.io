@@ -5,7 +5,7 @@ date:   2018-03-26 09:32:00 +0800
 categories: C++
 tags: C++
 author: pepe
-description: C++学习目标.
+description: C++学习目标
 ---
 
 学习目标：

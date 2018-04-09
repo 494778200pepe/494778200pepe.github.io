@@ -5,7 +5,7 @@ date:   2018-03-13 10:01:00 +0800
 categories: C++
 tags: C++
 author: pepe
-description: C++问题点.
+description: C++问题点
 ---
 
 ### **const**
