@@ -5,7 +5,7 @@ date:   2018-04-09 18:54:00 +0800
 categories: C++
 tags: C++
 author: pepe
-description: 基本数据类型与输入输出.
+description: 基本数据类型与输入输出
 ---
 
 ### 一、**C++字符集**
