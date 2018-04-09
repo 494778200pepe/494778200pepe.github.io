@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "定时器"
-date:   2018-04-09 09:54:00 +0800
-categories: Android
-tags: Android
+title:  "泛型"
+date:   2018-04-09 13:13:00 +0800
+categories: Java
+tags: Java
 author: pepe
-description: 定时器.
+description: 泛型.
 ---
 
 
