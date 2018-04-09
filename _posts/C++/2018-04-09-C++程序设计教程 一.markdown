@@ -5,7 +5,7 @@ date:   2018-04-09 18:13:00 +0800
 categories: C++
 tags: C++
 author: pepe
-description: 第一章.
+description: C++入门.
 ---
 
 ### C语言的特点
