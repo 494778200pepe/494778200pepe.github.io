@@ -49,6 +49,8 @@ description: 基本数据类型与输入输出.
 ### 五、**typedef说明**
 
 [C/C++ typedef用法详解（真的很详细） - CSDN博客](https://blog.csdn.net/superhoy/article/details/53504472)
+[C++ typedef用法详解 - seventhsaint - 博客园](https://www.cnblogs.com/seventhsaint/archive/2012/11/18/2805660.html)
+[C/C++ 函数指针使用总结 - 白菜菜白 - ](https://www.cnblogs.com/lvchaoshun/p/7806248.html)
 
 ### 六、**整数、小数、字符、字符串**
 
@@ -62,6 +64,10 @@ description: 基本数据类型与输入输出.
 * 3、也可以给定枚举值：`enum COLOR{RED = 100,BLUE = 200,GREEN,WHITE = 400}`，`GREEN`被自动赋值为201.
 
 ### 八、**常量const**
+
+[C++ const关键字总结 - C.g - 博客园](https://www.cnblogs.com/chogen/p/4574118.html)
+[C++ const关键字总结 - C.g - 博客园](https://www.cnblogs.com/chogen/p/4574118.html)
+[C++中const和引用修饰变量和函数的总结 - CSDN博客](https://blog.csdn.net/haolexiao/article/details/53471063)
 
 ### 九、**#define**
 
