@@ -59,16 +59,17 @@ PCHAR pa,pb;    //两个字符指针
 
 2、用在旧的C代码中，帮助 `struct`
 
-在C++中，则可以直接写：`结构名 对象名`
-在C中，则必须是：`struct 结构名 对象名`
-
-用`typedef`可以少写`struct`
+* 在C++中，则可以直接写：`结构名 对象名`
+* 在C中，则必须是：`struct 结构名 对象名`
+* 用`typedef`可以少写`struct`
 
 3、用typedef来定义与平台无关的类型
 ```
 typedef long double REAL;   //在A平台上
 typedef double REAL;        //在B平台上，只要改下typedef就好了，不用改源码
 ```
+
+4、
 
 [C/C++ typedef用法详解（真的很详细） - CSDN博客](https://blog.csdn.net/superhoy/article/details/53504472)
 
