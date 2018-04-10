@@ -69,7 +69,18 @@ typedef long double REAL;   //在A平台上
 typedef double REAL;        //在B平台上，只要改下typedef就好了，不用改源码
 ```
 
-4、
+4、为复杂的声明定义一个新的简单的别名
+
+记住2个模式：
+
+* type (*)(....)函数指针 
+* type (*)[]数组指针
+
+1. 原声明：`int *(*a[5])(int, char*);`
+变量名为a，直接用一个新别名pFun替换a就可以了：
+`typedef int *(*pFun)(int, char*); `
+原声明的最简化版：
+`pFun a[5];`
 
 [C/C++ typedef用法详解（真的很详细） - CSDN博客](https://blog.csdn.net/superhoy/article/details/53504472)
 
