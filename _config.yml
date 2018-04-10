@@ -12,11 +12,13 @@ url: https://494778200pepe.github.io
 #     run it like so: jekyll serve --baseurl=''
 baseurl: ''
 ## default date_format
+## archive: "%b" 只显示英文月份
+## categories: "%b-%Y" APR-2018 中文年英文月
 date_format: 
   title: "%Y-%m-%d"
-  archive: "%b"
-  categories: "%b-%Y"
-  tag: "%b-%Y"
+  archive: "%Y-%m"
+  categories: "%Y-%m"
+  tag: "%Y-%m-%d"
 # Language
 lan: "cn" 
 
