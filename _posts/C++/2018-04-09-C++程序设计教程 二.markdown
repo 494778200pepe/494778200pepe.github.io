@@ -154,9 +154,7 @@ typedef static int INT2; //不可行
 
 [C++ const关键字总结 - C.g - 博客园](https://www.cnblogs.com/chogen/p/4574118.html)
 
-[C++ const关键字总结 - C.g - 博客园](https://www.cnblogs.com/chogen/p/4574118.html)
-
-[C++中const和引用修饰变量和函数的总结 - CSDN博客](https://blog.csdn.net/haolexiao/article/details/53471063)
+[关于C++ const 的全面总结 - CSDN博客](https://blog.csdn.net/Eric_Jo/article/details/4138548)
 
 ### 九、**#define**
 ```
