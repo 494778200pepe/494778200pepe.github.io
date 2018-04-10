@@ -98,7 +98,9 @@ typedef char* PSTR;
 int mystrcmp(const PSTR, const PSTR);
 ```
 
-const PSTR实际上相当于const char*吗？不是的，它实际上相当于char* const。表示 const 修饰的指针，该指针不能修改，能由指向变量A改为指向变量B。
+* `const PSTR`实际上相当于`const char*`吗？
+* 不是的，它实际上相当于`char* const`。
+* 表示`const`修饰的指针，该指针不能修改，能由指向变量A改为指向变量B。
 
 ```
 //const int* p 和 int* const p
