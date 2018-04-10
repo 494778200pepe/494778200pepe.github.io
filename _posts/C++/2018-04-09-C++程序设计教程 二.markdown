@@ -90,7 +90,37 @@ typedef double REAL;        //在B平台上，只要改下typedef就好了，不
 * 再替换右边的变量e，pFunParamy为别名二:`typedef pFuny (*pFunParamy)[9];`
 * 原声明的最简化版：`pFunParamy e;`
 
+#### **两大陷阱**
+
+1、typedef是定义了一种类型的新别名，不同于宏，不是简单的字符串替换
+```
+typedef char* PSTR;
+int mystrcmp(const PSTR, const PSTR);
+```
+
+const PSTR实际上相当于const char*吗？不是的，它实际上相当于char* const。表示 const 修饰的指针，该指针不能修改，能由指向变量A改为指向变量B。
+
+```
+//const int* p 和 int* const p
+
+const int* p;   
+//const int *p;     
+//p是指向int类型变量的指针，p所指向的变量为const类型。p指向的变量不能修改。
+
+int* const p;
+//p是指向int类型变量的指针，p为const类型。p的值不能修改，即p不能由指向变量A改为指向变量B。
+```
+
+2、
+```
+typedef在语法上是一个存储类的关键字（如auto、extern、mutable、static、register等一样），虽然它并不真正影响对象的存储特性，如：
+typedef static int INT2; //不可行
+编译将失败，会提示“指定了一个以上的存储类”。
+```
+
 [C/C++ typedef用法详解（真的很详细） - CSDN博客](https://blog.csdn.net/superhoy/article/details/53504472)
+
+[指针、const 和 typedef - CSDN博客](https://blog.csdn.net/jakemiao/article/details/17971523)
 
 [C++ typedef用法详解 - seventhsaint - 博客园](https://www.cnblogs.com/seventhsaint/archive/2012/11/18/2805660.html)
 
