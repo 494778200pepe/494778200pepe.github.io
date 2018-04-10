@@ -76,11 +76,19 @@ typedef double REAL;        //在B平台上，只要改下typedef就好了，不
 * type (*)(....)函数指针 
 * type (*)[]数组指针
 
-1. 原声明：`int *(*a[5])(int, char*);`
-变量名为a，直接用一个新别名pFun替换a就可以了：
-`typedef int *(*pFun)(int, char*); `
-原声明的最简化版：
-`pFun a[5];`
+* 原声明：`int *(*a[5])(int, char*);`
+* 变量名为a，直接用一个新别名pFun替换a就可以了：`typedef int *(*pFun)(int, char*); `
+* 原声明的最简化版：`pFun a[5];`
+
+* 原声明：`void (*b[10]) (void (*)());`
+* 变量名为b，先替换右边部分括号里的，pFunParam为别名一：`typedef void (*pFunParam)();`
+* 再替换左边的变量b，pFunx为别名二：`typedef void (*pFunx)(pFunParam);`
+* 原声明的最简化版：`pFunx b[10];`
+
+* 原声明：`doube(*)() (*e)[9]; `
+* 变量名为e，先替换左边部分，pFuny为别名一：`typedef double(*pFuny)();`
+* 再替换右边的变量e，pFunParamy为别名二:`typedef pFuny (*pFunParamy)[9];`
+* 原声明的最简化版：`pFunParamy e;`
 
 [C/C++ typedef用法详解（真的很详细） - CSDN博客](https://blog.csdn.net/superhoy/article/details/53504472)
 
