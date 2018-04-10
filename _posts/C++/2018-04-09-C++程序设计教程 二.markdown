@@ -48,6 +48,22 @@ description: 基本数据类型与输入输出
 
 ### 五、**typedef说明**
 
+#### **四个用途**
+
+1、定义一种类型的别名
+```
+char* pa,pb;    //一个字符指针，一个字符
+typedef char* PCHAR;    //一般用大写
+PCHAR pa,pb;    //两个字符指针
+```
+
+2、用在旧的C代码中，帮助 `struct`
+
+在C++中，则可以直接写：`结构名 对象名`
+在C中，则必须是：`struct 结构名 对象名`
+
+用`typedef`可以少写`struct`
+
 [C/C++ typedef用法详解（真的很详细） - CSDN博客](https://blog.csdn.net/superhoy/article/details/53504472)
 
 [C++ typedef用法详解 - seventhsaint - 博客园](https://www.cnblogs.com/seventhsaint/archive/2012/11/18/2805660.html)
