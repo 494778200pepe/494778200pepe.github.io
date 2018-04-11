@@ -45,10 +45,30 @@ description: 程序结构
 * 5、局部变量(函数参数，函数内部声明的变量，块中声明的变量)，具有局部生命期。
 * 6、动态生命期：malloc()和free(),new 和delete。
 
+### 五、**头文件**
+头文件一般可包含：
 
+* 类型声明，如`enum CLOLOR{//...}`
+* 函数声明，如`extern int fn(char s);`
+* 内联函数定义，如`inline char fn(char p){return *p++;}`
+* 常量定义，如`const float pi = 3.14;`
+* 数据声明，如`extern int m; extern int a[];`
+* 枚举，如`enum BOOLEAN{false ,true};`
+* 包含指令(可嵌套)，如`#include<iostream.h>`
+* 宏定义，如`#define Case break;case`
+* 注释，如`//check for end of file`
 
+头文件不宜包含：
 
+* 一般函数定义，如`char fn(char p){return *p++};`
+* 数据定义，如`int a; int b[5];`
+* 常量聚集定义，如`const int c[] = {1,2,3};`
 
+### 六、**编译预处理**
+
+* 1、`#include`，两种格式:`#include<文件名>`和`#include "文件名"`
+* 2、`#define`，建立常量被`const`取代，定义带参数的宏，被inline内联函数取代。
+3、条件编译指令：`#if,#else,#elif,#endif,#ifdef,#ifndef,#undef`
 
 
 
