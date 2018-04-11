@@ -3,7 +3,7 @@ layout: post
 title:  "C++程序设计教程 二"
 date:   2018-04-09 18:54:00 +0800
 categories: C++
-tags: C++
+tags: C++程序设计教程
 author: pepe
 description: 基本数据类型与输入输出
 ---

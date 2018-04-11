@@ -3,7 +3,7 @@ layout: post
 title:  "C++程序设计教程 五"
 date:   2018-04-10 15:25:00 +0800
 categories: C++
-tags: C++
+tags: C++程序设计教程
 author: pepe
 description: 函数
 ---
