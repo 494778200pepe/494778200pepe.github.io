@@ -13,9 +13,9 @@ layout: default
 </div>
 -->
 
-
+{% assign trans = site.data.values[site.lan] %}
 <div class="well article">
-{% assign sortedtags = site.categories limit:C %}
+{% assign sortedtags = site.categories limit:trans.c %}
 {% for tag in sortedtags %}
     <h2>{{ tag[0] | capitalize }}</h2>
     <ul>
