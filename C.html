@@ -18,7 +18,6 @@ layout: default
 {% assign sortedtags = sortedcategories[1].tags | sort %}
 {% for tag in sortedtags %}
     <h2>{{ tag[0] | capitalize }}</h2>
-    <h2>{{ tag[1] | capitalize }}</h2>
 {% endfor %}    
 </div>
 <!--
