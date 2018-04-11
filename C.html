@@ -16,7 +16,7 @@ layout: default
 
 <div class="well article">
 {% assign sortedcategories = site.categories.C %}
-{% assign sortedtags = sortedcategories[1] | sort %}
+{% assign sortedtags = sortedcategories[0] | sort %}
 {% for tag in sortedtags %}
     <h2>{{ tag[0] | capitalize }}</h2>
     <ul>
