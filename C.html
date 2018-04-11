@@ -4,9 +4,9 @@ layout: default
 
 {% assign trans = site.data.values[site.lan] %}
 <div class="article well">
-    <h1>{{ trans.linux }}</h1>
+    <h1>{{ trans.c }}</h1>
     <ul>
-        {% for post in site.categories.Linux %}
+        {% for post in site.categories.C %}
           <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
     </ul>
