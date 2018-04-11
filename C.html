@@ -13,7 +13,14 @@ layout: default
 </div>
 -->
 
-
+<div class="well article">
+{% assign sortedcategories = site.categories.C %}
+{% for tag in sortedcategories %}
+    <h2>{{ tag[0] | capitalize }}</h2>
+   
+{% endfor %}    
+</div>
+<!--
 <div class="well article">
 {% assign sortedcategories = site.categories.C %}
 {% assign sortedtags = sortedcategories[1].tags | sort %}
@@ -34,4 +41,4 @@ layout: default
     </ul>
 {% endfor %}    
 </div>
-
+-->
