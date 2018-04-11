@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<!--
+
 {% assign trans = site.data.values[site.lan] %}
 <div class="article well">
     <h1>{{ trans.c }}</h1>
@@ -11,15 +11,8 @@ layout: default
         {% endfor %}
     </ul>
 </div>
--->
 
-<div class="well article">
-{% assign sortedcategories = site.categories.C %}
-{% assign sortedtags = sortedcategories[1].tags | sort %}
-{% for tag in sortedtags %}
-    <h2>{{ tag[0] | capitalize }}</h2>
-{% endfor %}    
-</div>
+
 <!--
 <div class="well article">
 {% assign sortedcategories = site.categories.C %}
