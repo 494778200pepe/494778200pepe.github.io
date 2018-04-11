@@ -14,7 +14,8 @@ layout: default
 -->
 {% assign trans = site.data.values[site.lan] %}
 <div class="well article">
-{% for post in site.categories.C %}
+{% assign sortedtags = site.categories.C | sort %}
+{% for tag in sortedtags %}
     <h2>{{ tag[0] | capitalize }}</h2>
     <ul>
         {% assign pages_list = tag[1] %}
