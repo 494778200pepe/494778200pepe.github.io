@@ -68,7 +68,7 @@ description: 程序结构
 
 * 1、`#include`，两种格式:`#include<文件名>`和`#include "文件名"`
 * 2、`#define`，建立常量被`const`取代，定义带参数的宏，被inline内联函数取代。
-3、条件编译指令：`#if,#else,#elif,#endif,#ifdef,#ifndef,#undef`
+* 3、条件编译指令：`#if,#else,#elif,#endif,#ifdef,#ifndef,#undef`
 
 
 
