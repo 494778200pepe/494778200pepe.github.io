@@ -4,9 +4,15 @@ layout: default
 
 {% assign trans = site.data.values[site.lan] %}
 <div class="article well">
-    <h1>{{ "绘制" }}</h1>
+    <h2>{{ "绘制" }}</h2>
     <ul>
         {% for post in site.tags["绘制"] %}
+          <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+    <h2>{{ "自定义viewgroup" }}</h2>
+    <ul>
+        {% for post in site.tags["自定义viewgroup"] %}
           <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
     </ul>
