@@ -16,16 +16,17 @@ layout: default
 
 {% assign sortedcategories = site.categories | sort %}
 {% for category in sortedcategories %}
-    {% if category[0] == "Linux" %}
-    {% assign sortedtags = category[1] | sort %}
+    <h2>{{ category[0] | capitalize }}</h2>
+   
     
-    {% endif %}
+    
 {% endfor %}
 </div>
 <!--
 {% assign trans = site.data.values[site.lan] %}
 
-
+{% if category[0] == "Linux" %}
+    {% assign sortedtags = category[1] | sort %}
     {% for tag in sortedtags %}
         <h2>{{ tag[0] | capitalize }}</h2>
         <ul>
@@ -41,5 +42,6 @@ layout: default
             {% endfor %}
             {% assign pages_list = nil %}
         </ul>
-    {% endfor %} 
+    {% endfor %}
+{% endif %}    
 -->
