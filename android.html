@@ -11,9 +11,9 @@ layout: default
             {{ post.date | date: date_format }} </span></span><a href="{{ site.baseurl}}{{ post.url }}"> {{ post.title }}</a></li>
         {% endfor %}
     </ul>
-    <h2>{{ "自定义viewgroup" }}</h2>
+    <h2>{{ "自定义ViewGroup" }}</h2>
     <ul>
-        {% for post in site.tags["自定义Viewgroup"] %}
+        {% for post in site.tags["自定义ViewGroup"] %}
           <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
     </ul>
