@@ -21,6 +21,10 @@ date_format:
   tag: "%Y-%m-%d"
 # Language
 lan: "cn" 
+# collections
+collections:
+  c_collection:
+
 
 paginate: 10
 
