@@ -5,8 +5,9 @@ layout: default
 <div class="well article">
 {% assign sortedcategories = site.categories | sort %}
 {% for category in sortedcategories %}
-    <h2>{{ category[0] | capitalize }}</h2> 
-    
+    {% if category[0] == "Linux" %}
+        <h2>{{ category[0] | capitalize }}</h2> 
+    {% endif %}
 {% endfor %}
 </div>
 
