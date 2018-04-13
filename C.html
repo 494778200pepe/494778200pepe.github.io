@@ -17,25 +17,23 @@ layout: default
 {% assign sortedcategories = site.categories | sort %}
 {% for category in sortedcategories %}
     {% if category[0] == trans.c %}
-    <h2>{{ category[0] | capitalize }}</h2>
-    <h2>{{ category[2] }}</h2>
-    <h2>{{ category[3] }}</h2>
-    <h2>{{ category[4] }}</h2>
-    <h2>{{ category[5] }}</h2>
-    <h2>{{ category[6] }}</h2>
+    {% assign sortedtags = category[0] | sort %}
+    {% for tag in sortedtags %}
+    <h2>{{ tag[0] | capitalize }}</h2>
     <ul>
-        {% assign pages_list = category[1] %}
+        {% assign pages_list = tag[1] %}
         {% for node in pages_list %}
             {% if node.title != null %}
             {% if group == null or group == node.group %}
                 <li><span class="post-date">
-                    {% assign date_format = site.date_format.categories %}
-                    {{ node.date | date: date_format }} </span><a href="{{ site.baseurl}}{{ node.url }}">{{ node.title }}</a></li>
+                    {% assign date_format = site.date_format.tag %}
+                    {{ node.date | date: date_format }} </span></span><a href="{{ site.baseurl}}{{ node.url }}"> {{ node.title }}</a></li>
             {% endif %}
             {% endif %}
         {% endfor %}
         {% assign pages_list = nil %}
     </ul>
+{% endfor %} 
     {% endif %}
 {% endfor %}
 </div>
