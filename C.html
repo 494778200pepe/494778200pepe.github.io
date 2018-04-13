@@ -4,7 +4,7 @@ layout: default
 
 <div class="well article">
 {% assign trans = site.data.values[site.lan] %}
-{% assign sortedcategories = site.categories | sort %}
+{% assign sortedcategories = site.categories | sort | site.categories == "C"%}
 {% for category in sortedcategories %}
     {% if category[0] == "C" %}
         {% assign sortedtags = category[1] %}
