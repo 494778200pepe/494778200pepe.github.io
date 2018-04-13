@@ -7,6 +7,7 @@ layout: default
     <h2>{{ link.title }}</h2>
     <ul>
         {% for post in site.tags[link.title] %}
+            <h2>{{ "合计"+forloop.length+"篇" }}</h2>
             <li>
                 <span class="post-date">
                 {% assign date_format = site.date_format.tag %}
