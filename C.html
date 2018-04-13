@@ -13,13 +13,9 @@ layout: default
 </div>
 -->
 <div class="well article">
-
 {% assign sortedcategories = site.categories | sort %}
 {% for category in sortedcategories %}
-    <h2>{{ category[0] | capitalize }}</h2>
-   
-    
-    
+    <h2>{{ category[0] | capitalize }}</h2> 
 {% endfor %}
 </div>
 <!--
