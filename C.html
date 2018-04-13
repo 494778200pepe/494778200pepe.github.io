@@ -8,7 +8,8 @@ layout: default
     {% if category[0] == "Linux" %}
         <h2>{{ category[0] | capitalize }}</h2> 
         {% assign sortedtags = category[1] | sort %}
-            
+            {% for tag in sortedtags %}
+            {% endfor %}
     {% endif %}
 {% endfor %}
 </div>
