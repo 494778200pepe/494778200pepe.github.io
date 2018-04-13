@@ -3,7 +3,7 @@ layout: post
 title:  "博客说明"
 date:   2017-11-25 14:46:51 +0800
 categories: Other
-tags: Other
+tags: other
 description: 博客，是为了做学习笔记！
 ---
 博客，是为了做学习笔记！

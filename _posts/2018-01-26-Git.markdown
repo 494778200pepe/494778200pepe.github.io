@@ -3,7 +3,7 @@ layout: post
 title:  "Git指令"
 date:   2018-01-26 09:11:00 +0800
 categories: Other
-tags: Other
+tags: other
 author: pepe
 description: Git指令说明.
 ---

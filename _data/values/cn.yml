@@ -10,6 +10,7 @@ c: C
 cpp: C++
 android: Android
 java: Java
+other: Other
 thanks: " ， 感谢："
 page: 当前页
 newer_post: 前一篇

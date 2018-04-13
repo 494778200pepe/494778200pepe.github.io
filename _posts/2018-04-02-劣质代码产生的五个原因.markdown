@@ -3,7 +3,7 @@ layout: post
 title:  "劣质代码产生的五个原因"
 date:   2018-04-02 10:41:00 +0800
 categories: Other
-tags: Other
+tags: other
 author: pepe
 description: 劣质代码产生的五个原因
 ---
