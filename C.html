@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="well article">
-{% assign sortedcategories = site.categories.C | sort %}
+{% assign sortedcategories = site.categories.LINUX | sort %}
 {% for category in sortedcategories %}
     {% if category[0] == "C" %}
         {% assign sortedtags = category[1] %}
