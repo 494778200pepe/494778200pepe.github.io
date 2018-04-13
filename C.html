@@ -5,12 +5,11 @@ layout: default
 <div class="well article">
 {% assign sortedcategories = site.categories | sort %}
 {% for category in sortedcategories %}
-    {% if category[0] == "Linux" %}
+    {% if category[0] == "C" %}
         <h2>{{ category[0] | capitalize }}</h2> 
-        <h2>{{ category[1][0] | capitalize }}</h2> 
         {% assign sortedtags = category[1] %}
             {% for tag in sortedtags %}
-                
+                <h2>{{ "abcdefg" | capitalize }}</h2> 
             {% endfor %}
     {% endif %}
 {% endfor %}
