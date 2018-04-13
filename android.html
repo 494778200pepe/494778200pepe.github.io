@@ -4,11 +4,10 @@ layout: default
 
 {% assign trans = site.data.values[site.lan] %}
 <div class="article well">
-    <h1>{{ trans.android }}</h1>
+    <h1>{{ "绘制" }}</h1>
     <ul>
-        {% assign sortedcategories = site.categories.Android | sort %}
-        {% for category in sortedcategories %}
-            <h2>{{ category[0] | capitalize }}</h2>
+        {% for post in site.tags["绘制"] %}
+          <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
     </ul>
 </div>
