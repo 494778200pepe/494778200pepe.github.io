@@ -3,7 +3,7 @@ layout: post
 title:  "Proguard混淆"
 date:   2017-11-28 17:23:00 +0800
 categories: Android
-tags: Android
+tags: android_other
 author: pepe
 description: Proguard混淆.
 ---

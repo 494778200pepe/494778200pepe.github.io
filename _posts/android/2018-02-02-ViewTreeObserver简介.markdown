@@ -3,7 +3,7 @@ layout: post
 title:  "ViewTreeObserver简介"
 date:   2018-02-02 13:10:00 +0800
 categories: Android
-tags: Android
+tags: android_other
 author: pepe
 description: Android ViewTreeObserver简介.
 ---
