@@ -10,6 +10,7 @@ c: C
 cpp: C++
 android: Android
 java: Java
+algorithm: Algorithm
 other: Other
 thanks: " , Powered by"
 page: Page
