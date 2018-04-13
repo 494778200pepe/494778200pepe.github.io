@@ -3,7 +3,7 @@ layout: post
 title:  "Microsoft Visual Studio 快捷键"
 date:   2018-02-01 10:28:00 +0800
 categories: C
-tags: c_other
+tags: C
 author: pepe
 description: Microsoft Visual Studio 快捷键.
 ---
