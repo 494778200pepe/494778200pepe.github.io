@@ -3,7 +3,7 @@ layout: post
 title:  "C运算符"
 date:   2018-02-12 15:41:00 +0800
 categories: C
-tags: C
+tags: C语言程序设计
 author: pepe
 description: C运算符.
 ---

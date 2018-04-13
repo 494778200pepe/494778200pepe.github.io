@@ -3,7 +3,7 @@ layout: post
 title:  "C数据类型"
 date:   2018-02-09 10:51:00 +0800
 categories: C
-tags: C
+tags: C语言程序设计
 author: pepe
 description: C数据类型.
 ---
