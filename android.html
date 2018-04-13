@@ -7,6 +7,7 @@ layout: default
     <h2>{{ "绘制" }}</h2>
     <ul>
         {% for post in site.tags["绘制"] %}
+            <li><span class="post-date">
             {% assign date_format = site.date_format.tag %}
             {{ post.date | date: date_format }} </span></span><a href="{{ site.baseurl}}{{ post.url }}"> {{ post.title }}</a></li>
         {% endfor %}
@@ -14,8 +15,10 @@ layout: default
     <h2>{{ "自定义ViewGroup" }}</h2>
     <ul>
         {% for post in site.tags["自定义ViewGroup"] %}
+            <li><span class="post-date">
             {% assign date_format = site.date_format.tag %}
-            {{ post.date | date: date_format }} </span></span><a href="{{ site.baseurl}}{{ post.url }}"> {{ post.title }}</a></li>
+            {{ post.date | date: date_format }} 
+            </span></span><a href="{{ site.baseurl}}{{ post.url }}"> {{ post.title }}</a></li>
         {% endfor %}
     </ul>
 </div>
