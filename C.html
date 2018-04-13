@@ -1,23 +1,13 @@
 ---
 layout: default
 ---
-<!--
-{% assign trans = site.data.values[site.lan] %}
-<div class="article well">
-    <h1>{{ trans.c }}</h1>
-    <ul>
-        {% for post in site.categories.C %}
-          <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-    </ul>
-</div>
--->
 <div class="well article">
 {% assign sortedcategories = site.categories | sort %}
 {% for category in sortedcategories %}
     <h2>{{ category[0] | capitalize }}</h2> 
 {% endfor %}
-</div>
+
+
 <!--
 {% assign trans = site.data.values[site.lan] %}
 
@@ -41,3 +31,19 @@ layout: default
     {% endfor %}
 {% endif %}    
 -->
+
+
+
+<!--
+{% assign trans = site.data.values[site.lan] %}
+<div class="article well">
+    <h1>{{ trans.c }}</h1>
+    <ul>
+        {% for post in site.categories.C %}
+          <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+-->
+</div>
+
