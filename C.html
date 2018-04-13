@@ -3,7 +3,8 @@ layout: default
 ---
 
 <div class="well article">
-{% assign sortedcategories = site.categories.LINUX | sort %}
+{% assign trans = site.data.values[site.lan] %}
+{% assign sortedcategories = site.categories.trans.c | sort %}
 {% for category in sortedcategories %}
     {% if category[0] == "C" %}
         {% assign sortedtags = category[1] %}
