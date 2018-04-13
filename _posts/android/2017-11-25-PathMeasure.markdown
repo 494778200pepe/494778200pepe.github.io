@@ -2,7 +2,7 @@
 layout: post
 title:  "PathMeasure"
 date:   2017-11-25 10:58:00 +0800
-categories:Android
+categories: Android
 tags: 绘制
 author: pepe
 description: The read me page of pepe‘s blog.
