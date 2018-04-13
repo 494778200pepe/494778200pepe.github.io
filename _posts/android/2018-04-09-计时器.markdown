@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "计时器"
+date:   2018-04-09 09:54:11 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 计时器.
+---
+
+
+
+
+
+参考：
+
+[android中的定时器 - CSDN博客](https://blog.csdn.net/qq_20198405/article/details/56481531)
+
+[Android中常用的几种定时器 - CSDN博客](https://blog.csdn.net/godiors_163/article/details/74644466)
+
+
+

@@ -1,0 +1,47 @@
+---
+layout: post
+title:  "自定义View的宽高获取"
+date:   2018-04-09 09:05:10 +0800
+categories: Android
+tags: 自定义ViewGroup
+author: pepe
+description: 自定义View的宽高获取.
+---
+
+### 执行顺序
+```
+Constructor -> onFinishInflate -> onMeasure.. -> onSizeChanged -> onLayout -> addOnGlobalLayoutListener -> onWindowFocusChanged -> onMeasure -> onLayout
+```
+由上可知,`onMeasure`和`onLayout`会被多次调用.
+
+### API分析
+
+* 1) `Constructor`:构造方法,View初始化的时候调用,在这里是无法获取其子控件的引用的.更加无法获取宽高了.
+
+* 2) `onFinishInflate`:当布局初始化完毕后回调,在这里可以获取所有直接子View的引用,但是无法获取宽高.
+
+* 3) `onMeasure`:当测量控件宽高时回调,当调用了`requestLayout()`也会回调`onMeasure`.在这里一定可以通过`getMeasuredHeight()`和`getMeasuredWidth()`来获取控件的高和宽,但不一定可以通过`getHeight()`和`getWidth()`来获取控件宽高,因为`getHeight()`和`getWidth()`必须要等`onLayout`方法回调之后才能确定.
+
+* 4) `onSizeChanged`:当控件的宽高发生变化时回调,和`onMeasure`一样,一定可以通过`getMeasuredHeight()`和`getMeasuredWidth()`来获取控件的高和宽,因为它是在`onMeasure`方法执行之后和`onLayout`方法之前回调的.
+
+* 5) `onLayout`:当确定控件的位置时回调,当调用了`requestLayout()`也会回调`onLayout`.在这里一定可以通过`getHeight()`和`getWidth()`获取控件的宽高,同时由于`onMeasure`方法比`onLayout`方法先执行,所以在这里也可以通过`getMeasuredHeight()`和`getMeasuredWidth()`来获取控件的高和宽.
+
+* 6) `addOnGlobalLayoutListener`:当View的位置确定完后会回调改监听方法,它是紧接着`onLayout`方法执行而执行的,只要`onLayout`方法调用了,那么`addOnGlobalLayoutListener`的监听器就会监听到.在这里`getMeasuredHeight()`和`getMeasuredWidth()`和`getHeight()`和`getWidth()`都可以获取到宽高.
+
+
+* 7) `onWindowFocusChanged`:当View的焦点发送改变时回调,在这里`getMeasuredHeight()`和`getMeasuredWidth()`和`getHeight()`和`getWidth()`都可以获取到宽高.Activity也可以通过重写该方法来判断当前的焦点是否发送改变了;需要注意的是这里View获取焦点和失去焦点都会回调.
+
+
+### 具用哪一种
+
+具体要用哪一种,是需要根据View的宽高是否会发生变化来决定:
+
+* 1.如果自定义的View在使用的过程中宽高信息是不会改变的,那么上面方式3~方式7都可以使用.
+
+* 2.如果自定义的View在使用过程中宽高信息都会发生改变的,而且又需要获取一开始时的宽高信息,那么建议使用`View.getViewTreeObserver().addOnGlobalLayoutListener(OnGlobalLayoutListener listener)`的方式,因为这种方式有`getViewTreeObserver().removeOnGlobalLayoutListener(this)`;来避免回调函数因宽高信息的变化而多次调用,如果使用其他方式的话,就要借助额外的变量来保证获取到的宽高是View的初始高度.
+
+
+参考：
+
+[浅谈自定义View的宽高获取 - CSDN博客](https://blog.csdn.net/mchenys/article/details/50408819)
+
