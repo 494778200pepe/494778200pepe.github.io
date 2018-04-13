@@ -9,10 +9,7 @@ layout: default
         <h2>{{ category[0] | capitalize }}</h2> 
         {% assign sortedtags = category[1] %}
             {% for tag in sortedtags %}
-                <li><span class="post-date">
-                    {% assign date_format = site.date_format.tag %}
-                    {{ tag.date | date: date_format }} </span></span><a href="{{ site.baseurl}}{{ tag.url }}"> {{ tag.title }}</a>
-                </li>
+                <h2>{{ tag.title }}</h2>
             {% endfor %}
     {% endif %}
 {% endfor %}
