@@ -4,11 +4,11 @@ layout: default
 
 <div class="well article">
 {% assign trans = site.data.values[site.lan] %}
-{% assign sortedcategories = site.categories | sort | site.categories == "Android"%}
+{% assign sortedcategories = site.categories | sort %}
 {% for category in sortedcategories %}
     <h2>{{ category[0] | capitalize }}</h2>
     {% if category[0] == "C" %}
-        {% assign sortedtags = category[1] %}
+        {% assign sortedtags = category[1].tags | sort %}
             {% for tag in sortedtags %}
                 <h2>{{ tag.tags | capitalize }}</h2>
                 {% if tag.title != null %}
