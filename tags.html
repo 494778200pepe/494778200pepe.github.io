@@ -10,7 +10,7 @@ layout: default
     <ul>
         {% assign pages_list = tag[1] %}
         {% for node in pages_list %}
-            {% if node.categories == trans.c %}
+            {% if node.categories = "C" %}
             {% if node.title != null %}
             {% if group == null or group == node.group %}
                 <li><span class="post-date">
