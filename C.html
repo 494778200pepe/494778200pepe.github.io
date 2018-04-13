@@ -7,7 +7,7 @@ layout: default
 {% for category in sortedcategories %}
     {% if category[0] == "C" %}
         {% assign sortedtags = category[1] | sort %}
-            <h2>{{ sortedtags[1] | capitalize }}</h2>
+            <h2>{{ sortedtags[1].tags | capitalize }}</h2>
             {% for tag in sortedtags %}
                 {% if tag.title != null %}
                 {% if group == null or group == tag.group %}
