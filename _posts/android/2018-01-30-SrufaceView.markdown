@@ -3,7 +3,7 @@ layout: post
 title:  "SurfaceView"
 date:   2018-01-30 16:07:00 +0800
 categories: Android
-tags: android_other
+tags: Android
 author: pepe
 description: SurfaceView.
 ---
