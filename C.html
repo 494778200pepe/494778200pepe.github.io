@@ -19,6 +19,10 @@ layout: default
     {% if category[0] == trans.c %}
     <h2>{{ category[0] | capitalize }}</h2>
     <h2>{{ category[2] }}</h2>
+    <h2>{{ category[3] }}</h2>
+    <h2>{{ category[4] }}</h2>
+    <h2>{{ category[5] }}</h2>
+    <h2>{{ category[6] }}</h2>
     <ul>
         {% assign pages_list = category[1] %}
         {% for node in pages_list %}
