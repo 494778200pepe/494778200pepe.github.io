@@ -16,11 +16,23 @@ layout: default
 {% assign trans = site.data.values[site.lan] %}
 {% assign sortedcategories = site.categories | sort %}
 {% for category in sortedcategories %}
-    {% if category[0] == trans.c %}
+    {% if category[0] == "Linux" %}
     {% assign sortedtags = category[1] %}
     {% for tag in sortedtags %}
         <h2>{{ tag[0] | capitalize }}</h2>
-        
+        <ul>
+            {% assign pages_list = tag[1] %}
+            {% for node in pages_list %}
+                {% if node.title != null %}
+                {% if group == null or group == node.group %}
+                    <li><span class="post-date">
+                        {% assign date_format = site.date_format.tag %}
+                        {{ node.date | date: date_format }} </span></span><a href="{{ site.baseurl}}{{ node.url }}"> {{ node.tit</a></li>
+                {% endif %}
+                {% endif %}
+            {% endfor %}
+            {% assign pages_list = nil %}
+        </ul>
     {% endfor %} 
     {% endif %}
 {% endfor %}
