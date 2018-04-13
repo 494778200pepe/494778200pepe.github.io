@@ -16,8 +16,9 @@ layout: default
 {% assign trans = site.data.values[site.lan] %}
 {% assign sortedcategories = site.categories | sort %}
 {% for category in sortedcategories %}
-    {% if category[0] == trans.linux %}
+    {% if category[0] == trans.c %}
     <h2>{{ category[0] | capitalize }}</h2>
+    <h2>{{ category[2] }}</h2>
     <ul>
         {% assign pages_list = category[1] %}
         {% for node in pages_list %}
