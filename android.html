@@ -6,8 +6,9 @@ layout: default
 <div class="article well">
     <h1>{{ trans.android }}</h1>
     <ul>
-        {% for post in site.categories.Android %}
-          <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
+        {% assign sortedcategories = site.categories.Android | sort %}
+        {% for category in sortedcategories %}
+            <h2>{{ category[0] | capitalize }}</h2>
         {% endfor %}
     </ul>
 </div>
