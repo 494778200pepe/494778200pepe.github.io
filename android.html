@@ -6,7 +6,7 @@ layout: default
 <div class="article well">
     <h1>{{ trans.android }}</h1>
     <ul>
-        {% assign sortedtags = site.categories.Android | sort %}
+        {% assign sortedtags = page.categories.Android | sort %}
         {% for tag in sortedtags %}
             {% if tag[0] == trans.c %}
                 {% assign pages_list = tag[1] %}
