@@ -15,10 +15,13 @@ layout: default
     <h2>{{ "自定义ViewGroup" }}</h2>
     <ul>
         {% for post in site.tags["自定义ViewGroup"] %}
-            <li><span class="post-date">
-            {% assign date_format = site.date_format.tag %}
-            {{ post.date | date: date_format }} 
-            </span></span><a href="{{ site.baseurl}}{{ post.url }}"> {{ post.title }}</a></li>
+            <li>
+                <span class="post-date">
+                {% assign date_format = site.date_format.tag %}
+                {{ post.date | date: date_format }} 
+                </span>
+                <a href="{{ site.baseurl}}{{ post.url }}"> {{ post.title }}</a>
+            </li>
         {% endfor %}
     </ul>
 </div>
