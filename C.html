@@ -8,7 +8,7 @@ layout: default
     {% if category[0] == "C" %}
         {% assign sortedtags = category[1] | sort %}
             {% for tag in sortedtags %}
-                <h2>{{ sortedtags[1].tags | capitalize }}</h2>
+                <h2>{{ tag.tags | capitalize }}</h2>
                 {% if tag.title != null %}
                 {% if group == null or group == tag.group %}
                 <li><span class="post-date">
