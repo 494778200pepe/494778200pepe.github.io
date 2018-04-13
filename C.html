@@ -13,7 +13,7 @@ layout: default
 </div>
 -->
 <div class="well article">
-{% assign trans = site.data.values[site.lan] %}
+
 {% assign sortedcategories = site.categories | sort %}
 {% for category in sortedcategories %}
     {% if category[0] == "Linux" %}
@@ -23,6 +23,9 @@ layout: default
 {% endfor %}
 </div>
 <!--
+{% assign trans = site.data.values[site.lan] %}
+
+
     {% for tag in sortedtags %}
         <h2>{{ tag[0] | capitalize }}</h2>
         <ul>
