@@ -14,4 +14,6 @@ description: 面试指南.
 
 [Android 面试指南 － 小专栏](https://xiaozhuanlan.com/android-interview)
 
+[2017腾讯实习生Android客户端开发面试总结](https://mp.weixin.qq.com/s/apmj8W9CEoktdlJklsYhcg）
+
 
