@@ -37,6 +37,12 @@ description: 数组
 * 3、比如`int array[3][4]`，array作为实参时，array[0]就代表4*2=8个字节。而&array[0][0]作为实参时，array[0]则只代表2个字节。
 
 
+C++中new和delete来创建和释放动态数组 - 泡面小王子 - 博客园
+https://www.cnblogs.com/wft1990/p/5962898.html
+C++new数组 - CSDN博客
+https://blog.csdn.net/wujiafei_njgcxy/article/details/69269194
+C++中使用new动态生成一个数组空间以及使用delete对存储空间进行释放 - 志者之梦 - 博客园
+https://www.cnblogs.com/yuzhuwei/p/4173374.html
 
 
 
