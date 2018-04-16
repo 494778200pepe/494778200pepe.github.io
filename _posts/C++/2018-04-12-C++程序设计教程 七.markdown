@@ -39,7 +39,9 @@ description: 数组
 
 参考：
 [C++中new和delete来创建和释放动态数组 - 泡面小王子 - 博客园](https://www.cnblogs.com/wft1990/p/5962898.html)
+
 [C++new数组 - CSDN博客](https://blog.csdn.net/wujiafei_njgcxy/article/details/69269194)
+
 [C++中使用new动态生成一个数组空间以及使用delete对存储空间进行释放 - 志者之梦 - 博客园](https://www.cnblogs.com/yuzhuwei/p/4173374.html)
 
 
