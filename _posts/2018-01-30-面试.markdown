@@ -10,6 +10,8 @@ description: 面试指南.
 
 ### Android
 
+[Android 面试指南 － 小专栏](https://xiaozhuanlan.com/android-interview)
+
 [我们需要怎样的工程师，我们需要成为怎样的工程师？](https://zhuanlan.zhihu.com/p/30159850?utm_medium=social&utm_source=qq)
 
 [Android 面试指南 － 小专栏](https://xiaozhuanlan.com/android-interview)
