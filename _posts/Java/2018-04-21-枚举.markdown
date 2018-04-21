@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "泛型"
-date:   2018-04-09 13:13:00 +0800
+title:  "枚举"
+date:   2018-04-21 16:12:00 +0800
 categories: Java
 tags: Java基础
 author: pepe
-description: 泛型.
+description: 枚举.
 ---
+
 
 
 
