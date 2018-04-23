@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "书单"
+date:   2018-04-23 09:02:00 +0800
+categories: Other
+tags: other
+author: pepe
+description: 书单
+---
+
+* 《程序员修炼之道-从小工到专家》
+* 《设计模式之禅》
+* 《编码--隐匿在计算机软硬件背后的语言》
+* 《大型网站技术架构》
+* 《算法》
