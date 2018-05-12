@@ -1,0 +1,192 @@
+---
+layout: post
+title:  "C++程序设计教程 二"
+date:   2018-04-09 18:54:00 +0800
+categories: C++
+tags: C++程序设计教程
+author: pepe
+description: 『 基本数据类型与输入输出 』
+---
+
+### 一、**C++字符集**
+
+* 26个小写字母：  abcdefghijklmnopqrstuvwxyz
+* 26个大写字母：  ABCDEFGHIJKLMNOPQRSTUVWXYZ
+* 10个数字        0123456789
+* 其他符号        +-*/=,._:;?\"'~|!#%&()[]{}^<>(空格)
+
+### 二、**C++保留字**
+
+[C++关键字详解 - CSDN博客](https://blog.csdn.net/scmuzi18/article/details/53696778)
+
+### 三、**数据类型**
+
+数据类型：基本数据类型、非基本数据类型
+
+基本数据类型：
+
+* 整型 int
+* 字符型(单字符型 char, 宽字符型 wcha_r)
+* 实型(单精度型 float, 双精度型 double)
+* 逻辑型 bool
+
+非基本数据类型：
+
+* 数组 type[]
+* 指针 type *
+* 空类型 void
+* 结构 struct
+* 联合 union
+* 枚举 enum
+* 类 class
+
+### 四、**变量定义**
+
+* C++程序是大小写敏感的，即大写和小写字母认为是不同的字母。
+* 如果是定义的全局变量或者静态变量，未初始化的话就是0.如果是局部变量，那就是以前残留在堆栈里的随机值。 
+* 静态局部变量，被`static`修饰，函数结束时，静态局部变量不会消失，再次进入时，不会重新赋值。如果初次不赋值，则为0。
+* `typedef`没有实际地定义一个新的数据类型，在建立一个`typedef`类型时没有分配内存空间，`typedef`在程序中起到帮助理解的作用。
+
+### 五、**typedef说明**
+
+#### **四个用途**
+
+1、定义一种类型的别名
+```
+char* pa,pb;    //一个字符指针，一个字符
+typedef char* PCHAR;    //一般用大写
+PCHAR pa,pb;    //两个字符指针
+```
+
+2、用在旧的C代码中，帮助 `struct`
+
+* 在C++中，则可以直接写：`结构名 对象名`
+* 在C中，则必须是：`struct 结构名 对象名`
+* 用`typedef`可以少写`struct`
+
+3、用typedef来定义与平台无关的类型
+```
+typedef long double REAL;   //在A平台上
+typedef double REAL;        //在B平台上，只要改下typedef就好了，不用改源码
+```
+4、简化数组声明
+```
+typedef char Line[81];      //相当于 typedef char[81] Line;
+Line text, secondline;getline(text);
+```
+
+5、为复杂的声明定义一个新的简单的别名
+
+记住2个模式：
+
+* type (*)(....)函数指针 
+* type (*)[]数组指针
+
+* 原声明：`int *(*a[5])(int, char*);`
+* 变量名为a，直接用一个新别名pFun替换a就可以了：`typedef int *(*pFun)(int, char*); `
+* 原声明的最简化版：`pFun a[5];`
+
+* 原声明：`void (*b[10]) (void (*)());`
+* 变量名为b，先替换右边部分括号里的，pFunParam为别名一：`typedef void (*pFunParam)();`
+* 再替换左边的变量b，pFunx为别名二：`typedef void (*pFunx)(pFunParam);`
+* 原声明的最简化版：`pFunx b[10];`
+
+* 原声明：`doube(*)() (*e)[9]; `
+* 变量名为e，先替换左边部分，pFuny为别名一：`typedef double(*pFuny)();`
+* 再替换右边的变量e，pFunParamy为别名二:`typedef pFuny (*pFunParamy)[9];`
+* 原声明的最简化版：`pFunParamy e;`
+
+#### **两大陷阱**
+
+1、typedef是定义了一种类型的新别名，不同于宏，不是简单的字符串替换
+```
+typedef char* PSTR;
+int mystrcmp(const PSTR, const PSTR);
+```
+
+* `const PSTR`实际上相当于`const char*`吗？
+* 不是的，它实际上相当于`char* const`。
+* 表示`const`修饰的指针，该指针不能修改，不能由指向变量A改为指向变量B。
+
+```
+//const int* p 和 int* const p
+
+const int* p;   
+//const int *p;     
+//p是指向int类型变量的指针，p所指向的变量为const类型。p指向的变量不能修改。
+
+int* const p;
+//p是指向int类型变量的指针，p为const类型。p的值不能修改，即p不能由指向变量A改为指向变量B。
+```
+
+2、
+```
+typedef在语法上是一个存储类的关键字（如auto、extern、mutable、static、register等一样），虽然它并不真正影响对象的存储特性，如：
+typedef static int INT2; //不可行
+编译将失败，会提示“指定了一个以上的存储类”。
+```
+
+[C/C++ typedef用法详解（真的很详细） - CSDN博客](https://blog.csdn.net/superhoy/article/details/53504472)
+
+[指针、const 和 typedef - CSDN博客](https://blog.csdn.net/jakemiao/article/details/17971523)
+
+[C++ typedef用法详解 - seventhsaint - 博客园](https://www.cnblogs.com/seventhsaint/archive/2012/11/18/2805660.html)
+
+[C/C++ 函数指针使用总结 - 白菜菜白 - ](https://www.cnblogs.com/lvchaoshun/p/7806248.html)
+
+### 六、**整数、小数、字符、字符串**
+
+* 1、'0'与0不同。'0'是数字字符，其ASCII码等于值48或0x30。而0则是整数值，除此之外，'\0'和NULL也表示整数0。
+* 2、"0"与'0'不同。一个字符占一个内存单元，而含有一个字符的字符串占2个内存单元，第2个内存单元存放'\0'。
+
+### 七、**枚举**
+
+* 1、枚举符是一种符号常量，在内存中以整数表示。
+* 2、如果没有专门指定，第 1 个符号常量的枚举值就是 0 ，其他枚举值依次往上加。
+* 3、也可以给定枚举值：`enum COLOR{RED = 100,BLUE = 200,GREEN,WHITE = 400}`，`GREEN`被自动赋值为201.
+* 4、可以使用`color == GREEN`，也可以使用`color == 201`。
+
+### 八、**常量const**
+
+* 1、常量定义中初始化的值可以是一个不依赖于运行的表达式。该表达式在程序运行之前就能计算，所以，编译时就能求值。
+* 2、定义时必须赋初始值，要不然是错误的，除非这个变量是用`extern`修饰的外部变量。 
+* 3、`const int size = 100 * sizeof(int);     //ok`
+* 4、`const int number = max(15,23);          //error`
+* 5、第一个语句，`sizeof`不是函数，而是C++的基本操作符，该表达式在编译之前能确定值。
+* 6、第二个语句则要求函数值，而函数一般都要在程序开始运行时才能求值，该表达式不能在编译之前确定值，所以错误。
+
+[C++ const关键字总结 - C.g - 博客园](https://www.cnblogs.com/chogen/p/4574118.html)
+
+[关于C++ const 的全面总结 - CSDN博客](https://blog.csdn.net/Eric_Jo/article/details/4138548)
+
+### 九、**#define**
+```
+#define f(x) x*x 
+main( ) 
+{ 
+　　int a=6，b=2，c； 
+　　c=f(a) / f(b)； 
+　　printf("%d //n "，c)； 
+} 
+//以下程序的输出结果是: 36。 
+```
+
+* 因为如此原因，在许多C语言编程规范中提到使用#define定义时，如果定义中包含表达式，必须使用括号，
+* 则上述定义应该如下定义才对： `#define f(x) (x*x) `
+
+### 十、**输入和输出**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
