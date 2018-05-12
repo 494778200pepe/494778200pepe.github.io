@@ -12,6 +12,8 @@ description: AIDL.
 
 [Android：学习AIDL，这一篇文章就够了(下) - lypeer的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/luoyanglizi/article/details/52029091)  
 
+你真的理解AIDL中的in，out，inout么？ - CSDN博客
+https://blog.csdn.net/luoyanglizi/article/details/51958091
 
 
 
