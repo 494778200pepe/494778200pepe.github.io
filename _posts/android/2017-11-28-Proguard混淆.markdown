@@ -5,7 +5,7 @@ date:   2017-11-28 17:23:00 +0800
 categories: Android
 tags: Android
 author: pepe
-description: Proguard混淆.
+description: 『 Proguard混淆 』
 ---
 
 混淆为什么要保留类名或方法名？

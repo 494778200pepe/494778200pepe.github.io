@@ -5,7 +5,7 @@ date:   2018-01-30 16:07:00 +0800
 categories: Android
 tags: Android
 author: pepe
-description: SurfaceView.
+description: 『 SurfaceView 』
 ---
 
 ### Activity 和 SurfaceView 的生命周期

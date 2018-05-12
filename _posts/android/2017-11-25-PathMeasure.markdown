@@ -5,7 +5,7 @@ date:   2017-11-25 10:58:00 +0800
 categories: Android
 tags: 绘制
 author: pepe
-description: The read me page of pepe‘s blog.
+description: 『 PathMeasure 』
 ---
 
 Path & PathMeasure
