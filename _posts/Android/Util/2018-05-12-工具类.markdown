@@ -5,7 +5,7 @@ date:   2018-05-12 10:26:00 +0800
 categories: Android
 tags: Util
 author: pepe
-description: 『 工具类 』
+description:『 工具类 』
 ---
 
 [Activity管理工具类----Android工具类】Activity管理工具类AppManager](http://www.xuebuyuan.com/2227031.html)
