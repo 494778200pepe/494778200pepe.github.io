@@ -4,7 +4,7 @@ title:  "SVN小技巧"
 date:   2018-04-09 15:36:00 +0800
 categories: Other
 tags: other
-description: SVN小技巧
+description: 『 SVN小技巧 』
 ---
 
 ### 技巧一：**重命名(保留Log)**
