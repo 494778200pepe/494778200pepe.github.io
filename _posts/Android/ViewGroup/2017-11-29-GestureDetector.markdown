@@ -5,7 +5,7 @@ date:   2017-11-30 16:45:00 +0800
 categories: Android
 tags: 自定义ViewGroup
 author: pepe
-description: 自定义ViewGroup.
+description: 『 GestureDetector 』
 ---
 ### GestureDetector
 

@@ -5,7 +5,7 @@ date:   2018-02-01 10:28:00 +0800
 categories: C
 tags: C
 author: pepe
-description: Microsoft Visual Studio 快捷键.
+description: 『 Microsoft Visual Studio 快捷键 』
 ---
 
 * F12                   转到定义

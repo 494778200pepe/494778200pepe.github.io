@@ -5,7 +5,7 @@ date:   2018-02-12 14:04:00 +0800
 categories: C
 tags: C语言程序设计
 author: pepe
-description: C变量与常量.
+description: 『 C变量与常量 』
 ---
 
 ### **变量**

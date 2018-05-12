@@ -5,7 +5,7 @@ date:   2018-02-02 13:10:00 +0800
 categories: Android
 tags: Android
 author: pepe
-description: Android ViewTreeObserver简介.
+description: 『 Android ViewTreeObserver简介 』
 ---
 
 ### 一、结构

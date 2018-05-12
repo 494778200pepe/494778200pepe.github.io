@@ -5,7 +5,7 @@ date:   2018-04-21 16:12:00 +0800
 categories: Java
 tags: Java基础
 author: pepe
-description: 枚举.
+description: 『 枚举 』
 ---
 
 [Java基础---枚举 - CSDN博客](https://blog.csdn.net/qq_20198405/article/details/51700983)

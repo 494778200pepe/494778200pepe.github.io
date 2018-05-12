@@ -5,7 +5,7 @@ date:   2017-11-27 20:14:00 +0800
 categories: Android
 tags: 自定义ViewGroup
 author: pepe
-description: 自定义ViewGroup.
+description: 『 LayoutParams 』
 ---
 
     1、 ViewGroup中有两个内部类ViewGroup.LayoutParams和ViewGroup.MarginLayoutParams，MarginLayoutParams继承自LayoutParams。   

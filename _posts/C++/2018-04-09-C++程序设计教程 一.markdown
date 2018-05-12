@@ -5,7 +5,7 @@ date:   2018-04-09 18:13:00 +0800
 categories: C++
 tags: C++程序设计教程
 author: pepe
-description: C++入门
+description: 『 C++入门 』
 ---
 
 ### 一、**C语言的特点**

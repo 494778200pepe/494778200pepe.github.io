@@ -5,7 +5,7 @@ date:   2018-04-10 15:25:00 +0800
 categories: C++
 tags: C++程序设计教程
 author: pepe
-description: 函数
+description: 『 函数 』
 ---
 
 ### 一：**程序的内存区域**

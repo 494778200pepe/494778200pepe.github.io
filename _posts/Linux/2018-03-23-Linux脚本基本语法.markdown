@@ -5,7 +5,7 @@ date:   2018-03-23 19:24:00 +0800
 categories: Linux
 tags: Linux
 author: pepe
-description: Linux脚本基本语法.
+description: 『 Linux脚本基本语法 』
 ---
 
 
