@@ -7,6 +7,7 @@ tags: Android
 author: pepe
 description: 『 Log 』
 ---
+
 ### Logger
 
 [Logger](https://494778200pepe.github.io/android/2018/05/12/Logger.html)

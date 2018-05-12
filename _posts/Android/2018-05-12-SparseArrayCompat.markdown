@@ -7,6 +7,7 @@ tags: Android
 author: pepe
 description: 『 SparseArrayCompat 』
 ---
+
 ### SparseArrayCompat
 
 `SparseArrayCompat`其实是一个map容器,它使用了一套算法优化了hashMap;
