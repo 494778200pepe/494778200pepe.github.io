@@ -8,14 +8,11 @@ author: pepe
 description: Messager.
 ---
 
-Android中的Service：Binder，Messenger，AIDL（2） - CSDN博客
-https://blog.csdn.net/luoyanglizi/article/details/51594016
+[Android中的Service：Binder，Messenger，AIDL（2） - CSDN博客](https://blog.csdn.net/luoyanglizi/article/details/51594016) 
 
-Messenger与AIDL的异同 - CSDN博客
-https://blog.csdn.net/jiwangkailai02/article/details/48098087
+[Messenger与AIDL的异同 - CSDN博客](https://blog.csdn.net/jiwangkailai02/article/details/48098087) 
 
-Android进程通信之Messenger&AIDL使用详解 - CSDN博客
-https://blog.csdn.net/djwmzyl/article/details/53991819
+[Android进程通信之Messenger&AIDL使用详解 - CSDN博客](https://blog.csdn.net/djwmzyl/article/details/53991819) 
 
 
 
