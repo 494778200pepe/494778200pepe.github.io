@@ -5,7 +5,7 @@ date:   2018-05-12 11:29:00 +0800
 categories: Android
 tags: Util
 author: pepe
-description:『 线程工具类 』
+description: 『 线程工具类 』
 ---
 
 ```
