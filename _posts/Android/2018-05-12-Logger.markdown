@@ -7,6 +7,19 @@ tags: Android
 author: pepe
 description: Logger.
 ---
+
+### Log实践
+
+[Android开发Log最佳实践-一个简单、漂亮、功能强大的Android日志程序：logger - 聚精会神搞建设 - 博客频道 - CSDN.NET](http://blog.csdn.net/wangshihui512/article/details/51042704)
+
+[tianzhijiexian/logger: Simple, pretty and powerful logger for android](https://github.com/tianzhijiexian/logger)
+
+### Logger
+
+[android Logger 一二三 - laozhu1124 - 博客园](http://www.cnblogs.com/manuosex/p/3592636.html)
+
+[开源日志库Logger的剖析](http://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650821090&idx=1&sn=c4158dbb9691c3fbaf2dcb23348d954f&chksm=80b7857cb7c00c6a1c5f0e3290777e9fff21811ba8c42449426656cada8802f79d48c319aeaa&scene=1&srcid=0921slE857Knxk12TJ4Q6b2x#rd)
+
 ### Logcat
 
 [android log机制——用logcat读取log - WolfCS - 开源中国社区](https://my.oschina.net/wolfcs/blog/165639)
@@ -25,19 +38,17 @@ description: Logger.
 
 
 
-[Android开发Log最佳实践-一个简单、漂亮、功能强大的Android日志程序：logger - 聚精会神搞建设 - 博客频道 - CSDN.NET](http://blog.csdn.net/wangshihui512/article/details/51042704)
 
-[android Logger 一二三 - laozhu1124 - 博客园](http://www.cnblogs.com/manuosex/p/3592636.html)
 
-[tianzhijiexian/logger: Simple, pretty and powerful logger for android](https://github.com/tianzhijiexian/logger)
+
+
+
 
 [JakeWharton/timber: A logger with a small, extensible API which provides utility on top of Android's normal Log class.](https://github.com/JakeWharton/timber)
 
 [orhanobut/logger: Simple, pretty and powerful logger for android](https://github.com/orhanobut/logger)
 
-[Android Log 最佳实践 - 掘金](https://gold.xitu.io/entry/56f957421ea493005d04c0ea)
 
-[开源日志库Logger的剖析](http://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650821090&idx=1&sn=c4158dbb9691c3fbaf2dcb23348d954f&chksm=80b7857cb7c00c6a1c5f0e3290777e9fff21811ba8c42449426656cada8802f79d48c319aeaa&scene=1&srcid=0921slE857Knxk12TJ4Q6b2x#rd)
 
 
 
