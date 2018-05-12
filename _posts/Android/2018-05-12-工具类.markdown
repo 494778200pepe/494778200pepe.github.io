@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "AIDL"
+title:  "工具类"
 date:   2018-05-12 11:29:00 +0800
 categories: Android
 tags: Android
 author: pepe
-description: AIDL.
+description: 工具类.
 ---
 
 [Activity管理工具类----Android工具类】Activity管理工具类AppManager](http://www.xuebuyuan.com/2227031.html)

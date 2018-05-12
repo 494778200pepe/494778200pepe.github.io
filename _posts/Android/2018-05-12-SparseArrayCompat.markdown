@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "AIDL"
+title:  "SparseArrayCompat"
 date:   2018-05-12 11:28:00 +0800
 categories: Android
 tags: Android
 author: pepe
-description: AIDL.
+description: SparseArrayCompat.
 ---
 
 [android Google推荐的容器SparseArrayCompat简介 - 爱程序网](http://www.aichengxu.com/android/2412785.htm)
