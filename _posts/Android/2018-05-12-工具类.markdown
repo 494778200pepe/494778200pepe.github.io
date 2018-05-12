@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "AIDL"
+date:   2018-05-12 11:29:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: AIDL.
+---
+
+[Activity管理工具类----Android工具类】Activity管理工具类AppManager](http://www.xuebuyuan.com/2227031.html)
+
+[Android开发人员不得不收集的代码(持续更新中)](http://mp.weixin.qq.com/s?__biz=MzI3MDE0NzYwNA==&mid=2651433871&idx=1&sn=8fbaf284bdb1f4073f058a56cf892197&chksm=f12882f4c65f0be22e1287aab6cb32e33772e62df1f6d053e7059879cd3a1772e01f9877be01&scene=1&srcid=0915dWInT4LNtxYjj4hXQKsM#rd)
+
+[退出提示工具类--Android SnackBar - 享受技术带来的快乐 - 博客频道 - CSDN.NET](http://blog.csdn.net/jdsjlzx/article/details/46892363)
+
+[Android防止按钮连续点击 - java豆子 - 博客园](http://www.cnblogs.com/error404/p/3860147.html)  
+
+[Android开发工具类之TimeUtils](http://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=208986347&idx=1&sn=48abc83e0b271d91a048f8b0d2aa3ab2&scene=23&srcid=0331mjChPnL6S5qMze6l0eHd#rd)
+
+[自封装Android软键盘工具类ImeUtil](http://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=400061944&idx=1&sn=141b6a264a292c899f11967ba46ce68e&scene=23&srcid=0331FfQiDljDGyIXh78RLOC4#rd)
+
+[Android开发工具之ParcelUtils和SerializeUtils](http://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=209064496&idx=1&sn=980ed1f25ab193fd9780bde2ba14319f&scene=23&srcid=0331sDeQ8sG4IPfrYhRXvlQ0#rd)
+
+[Android开发工具类之DownloadManagerPro](http://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=209049539&idx=1&sn=0cdf55c70b81de98ac3e7389d6849318&scene=23&srcid=0331IoXbyVvuXlNE1AJ2OxAQ#rd)
+
+[详解7.0带来的新工具类：DiffUtil - zxt0601的博客 - 博客频道 - CSDN.NET](http://blog.csdn.net/zxt0601/article/details/52562770)
+
+
+
+
+
