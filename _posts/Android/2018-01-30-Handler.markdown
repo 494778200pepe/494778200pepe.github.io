@@ -1,0 +1,90 @@
+---
+layout: post
+title:  "Handler"
+date:   2018-01-30 17:10:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 Handler 』
+---
+
+### Handler构造方法一
+```
+    Handler handler = new Handler() {
+        public void handleMessage(Message msg) {
+            //do something
+        };
+    };
+``` 
+注意：
+
+* 1、使用这种写法时，需要你在结束 `Activity` 的时候 `handler.removeCallbacksAndMessages(null);` 让系统能够正常进行回收操作。
+* 2、也可以用 `static` 修饰 `handler` ，避免对 `activity` 的引用。
+
+
+### Handler构造方法二
+```
+public abstract class MyWeakReferenceHandler<T extends Activity> extends Handler {  
+  
+    private WeakReference<T> weakReferenceActivity = null;  
+  
+    public MyWeakReferenceHandler(T t) {  
+        this.weakReferenceActivity = new WeakReference<T>(t);  
+    }  
+  
+    public abstract void handleMessage(Message msg, T weakReferenceActivity);  
+  
+    @Override  
+    public void handleMessage(Message msg) {  
+        // TODO Auto-generated method stub  
+        super.handleMessage(msg);  
+        handleMessage(msg, weakReferenceActivity.get());  
+    }  
+}  
+```
+这样在`Activity`结束回收的时候`WeakReference`不会阻止系统进行回收操作，能有效的避免因为`handler`引起的内存泄露风险。
+
+### Message
+
+Message是容纳任意数据的容器。生产线程发送消息给 Handler，Handler 将消息加入到消息队列中。消息提供了三种额外的信息，以供 Handler 和消息队列处理时使用：
+
+* 1、what ——一种标识符，Handler 能使用它来区分不同消息，从而采取不同的处理方法
+* 2、time ——告知消息队列何时处理消息
+* 3、target —— 表示哪一个 Handler 应当处理消息
+* 4、callback —— msg自带的回调
+* 5、data[bundle] —— 携带的数据
+* 6、obj/arg1/arg2 —— 携带的数据
+
+### Handler发送消息
+
+
+
+参考：
+
+[正规的Handler写法 - CSDN博客](http://blog.csdn.net/parcool/article/details/49154189)
+
+[Handler基本使用（一） new Handler（）和new Handler（Handler.Callback）](http://blog.csdn.net/u011791526/article/details/53609599)
+
+[探索 Android 大杀器——Handler](https://zhuanlan.zhihu.com/p/22904405)
+
+[Android消息机制Message消息池 - CSDN博客](http://blog.csdn.net/zlp1992/article/details/50295773)
+
+[看完这篇文章，你就了解了Android Handler的一切  20130816 - CSDN博客](http://blog.csdn.net/u011733020/article/details/49589863)
+
+[从源码看Android MessageQueue消息循环处理机制（epoll实现） - CSDN博客](http://blog.csdn.net/ashqal/article/details/32107099)
+
+[ActivityThread的main方法究竟做了什么？ - MeloDev的博客 - CSDN博客](http://blog.csdn.net/melodev/article/details/51959347)
+
+[Android消息传递之Handler消息机制 - 总李写代码 - 博客园](https://www.cnblogs.com/whoislcj/p/5590615.html)
+
+[Android消息处理机制(Handler、Looper、MessageQueue与Message) - AngelDevil - 博客园](http://www.cnblogs.com/angeldevil/p/3340644.html)
+
+[Android 异步消息处理机制（Handler 、 Looper 、MessageQueue）源码解析 - CSDN博客](http://blog.csdn.net/amazing7/article/details/51424038)
+
+
+
+
+
+
+
+

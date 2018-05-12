@@ -1,0 +1,175 @@
+---
+layout: post
+title:  "onLayout"
+date:   2017-11-27 10:58:00 +0800
+categories: Android
+tags: 自定义ViewGroup
+author: pepe
+description: 『 onLayout 』
+---
+
+onLayout()应该说是比较简单的。
+
+#### layout的源码
+~~~
+    public final void layout(int l, int t, int r, int b) {  
+        boolean changed = setFrame(l, t, r, b);  
+        if (changed || (mPrivateFlags & LAYOUT_REQUIRED) == LAYOUT_REQUIRED) {  
+            if (ViewDebug.TRACE_HIERARCHY) {  
+                ViewDebug.trace(this, ViewDebug.HierarchyTraceType.ON_LAYOUT);  
+            }  
+            onLayout(changed, l, t, r, b);  
+            mPrivateFlags &= ~LAYOUT_REQUIRED;  
+        }  
+        mPrivateFlags &= ~FORCE_LAYOUT;  
+    } 
+~~~
+在其中调用了setFrame方法的源码如下
+~~~
+    protected boolean setFrame(int left, int top, int right, int bottom) {  
+        boolean changed = false;  
+        if (mLeft != left || mRight != right || mTop != top || mBottom != bottom) {  
+            changed = true;  
+              
+            。。。省略部分代码。。。  
+  
+            mLeft = left;  
+            mTop = top;  
+            mRight = right;  
+            mBottom = bottom;  
+              
+            。。。省略部分代码。。。  
+              
+        }  
+        return changed;  
+    }
+~~~
+也就是更新自身数据而已，然后调用onLayout()将值传出去。
+
+#### View——onLayout
+~~~
+protected void onLayout(boolean changed, int left, int top, int right, int bottom) {  
+} 
+~~~    
+onLayout的目的是确定子View在父View中的位置，那么这个步骤肯定是由父View来决定的，因此在View中onLayout是一个空的实现。
+
+#### ViewGroup——onLayout
+~~~
+@Override  
+protected abstract void onLayout(boolean changed,  
+        int l, int t, int r, int b);  
+~~~
+一个抽象方法
+
+好像都没什么内容...
+
+参考FrameLayout的onLayout方法。虽然各个具体实现都很复杂，但是基本流程是一样的。
+#### FrameLayout——onLayout
+~~~
+@Override
+protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+
+    //把父容器的位置参数传递进去
+    layoutChildren(left, top, right, bottom, false /* no force left gravity */);
+}
+
+void layoutChildren(int left, int top, int right, int bottom,
+                                  boolean forceLeftGravity) {
+    final int count = getChildCount();
+
+    //以下四个值会影响到子View的布局参数
+    //parentLeft由父容器的padding和Foreground决定
+    final int parentLeft = getPaddingLeftWithForeground();
+    //parentRight由父容器的width和padding和Foreground决定
+    final int parentRight = right - left - getPaddingRightWithForeground();
+
+    final int parentTop = getPaddingTopWithForeground();
+    final int parentBottom = bottom - top - getPaddingBottomWithForeground();
+
+    for (int i = 0; i < count; i++) {
+        final View child = getChildAt(i);
+        if (child.getVisibility() != GONE) {
+            final LayoutParams lp = (LayoutParams) child.getLayoutParams();
+
+            //获取子View的测量宽高
+            final int width = child.getMeasuredWidth();
+            final int height = child.getMeasuredHeight();
+
+            int childLeft;
+            int childTop;
+
+            int gravity = lp.gravity;
+            if (gravity == -1) {
+                gravity = DEFAULT_CHILD_GRAVITY;
+            }
+
+            final int layoutDirection = getLayoutDirection();
+            final int absoluteGravity = Gravity.getAbsoluteGravity(gravity, layoutDirection);
+            final int verticalGravity = gravity & Gravity.VERTICAL_GRAVITY_MASK;
+
+            //当子View设置了水平方向的layout_gravity属性时，根据不同的属性设置不同的childLeft
+            //childLeft表示子View的 左上角坐标X值
+            switch (absoluteGravity & Gravity.HORIZONTAL_GRAVITY_MASK) {
+
+                /* 水平居中，由于子View要在水平中间的位置显示，因此，要先计算出以下：
+                 * (parentRight - parentLeft -width)/2 此时得出的是父容器减去子View宽度后的
+                 * 剩余空间的一半，那么再加上parentLeft后，就是子View初始左上角横坐标(此时正好位于中间位置)，
+                 * 假如子View还受到margin约束，由于leftMargin使子View右偏而rightMargin使子View左偏，所以最后
+                 * 是 +leftMargin -rightMargin .
+                 */
+                case Gravity.CENTER_HORIZONTAL:
+                    childLeft = parentLeft + (parentRight - parentLeft - width) / 2 +
+                    lp.leftMargin - lp.rightMargin;
+                    break;
+
+                //水平居右，子View左上角横坐标等于 parentRight 减去子View的测量宽度 减去 margin
+                case Gravity.RIGHT:
+                    if (!forceLeftGravity) {
+                        childLeft = parentRight - width - lp.rightMargin;
+                        break;
+                    }
+
+                //如果没设置水平方向的layout_gravity，那么它默认是水平居左
+                //水平居左，子View的左上角横坐标等于 parentLeft 加上子View的magin值
+                case Gravity.LEFT:
+                default:
+                    childLeft = parentLeft + lp.leftMargin;
+            }
+
+            //当子View设置了竖直方向的layout_gravity时，根据不同的属性设置同的childTop
+            //childTop表示子View的 左上角坐标的Y值
+            //分析方法同上
+            switch (verticalGravity) {
+                case Gravity.TOP:
+                    childTop = parentTop + lp.topMargin;
+                    break;
+                case Gravity.CENTER_VERTICAL:
+                    childTop = parentTop + (parentBottom - parentTop - height) / 2 +
+                    lp.topMargin - lp.bottomMargin;
+                    break;
+                case Gravity.BOTTOM:
+                    childTop = parentBottom - height - lp.bottomMargin;
+                    break;
+                default:
+                    childTop = parentTop + lp.topMargin;
+            }
+
+            //对子元素进行布局，左上角坐标为(childLeft，childTop)，右下角坐标为(childLeft+width,childTop+height)
+            child.layout(childLeft, childTop, childLeft + width, childTop + height);
+        }
+    }
+}
+~~~
+过程就是根据父ViewGroup的 padding 和子View的 margin值，结合 Gravity属性，来确定 left 和 top。
+然后 加上子View的 width 和 height，就得到了 right 和 bottom。
+确定子View的位置。
+
+#### 参考：
+
+[Android开发之自定义控件(二)---onLayout详解](http://blog.csdn.net/dmk877/article/details/49632959)
+
+[Android View框架的layout机制](http://www.cnblogs.com/xyhuangjinfu/p/5435253.html)
+
+[Android View 布局流程(Layout)完全解析](http://blog.csdn.net/a553181867/article/details/51524527)
+
+[Android View 全解析(三) -- onLayout - 简书](http://www.jianshu.com/p/ad0a5485aba9)

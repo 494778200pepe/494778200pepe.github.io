@@ -1,0 +1,301 @@
+---
+layout: post
+title:  "Scroller"
+date:   2017-11-29 14:07:00 +0800
+categories: Android
+tags: 自定义ViewGroup
+author: pepe
+description: 『 Scroller 』
+---
+
+### scrollTo 和 scrollBy
+~~~
+public class View {  
+    ....  
+    protected int mScrollX;   //该视图内容相当于视图起始坐标的偏移量   ， X轴 方向      
+    protected int mScrollY;   //该视图内容相当于视图起始坐标的偏移量   ， Y轴方向  
+    //返回值  
+    public final int getScrollX() {  
+        return mScrollX;  
+    }  
+    public final int getScrollY() {  
+        return mScrollY;  
+    }  
+    public void scrollTo(int x, int y) {  
+        //偏移位置发生了改变  
+        if (mScrollX != x || mScrollY != y) {  
+            int oldX = mScrollX;  
+            int oldY = mScrollY;  
+            mScrollX = x;  //赋新值，保存当前便宜量  
+            mScrollY = y;  
+            //回调onScrollChanged方法  
+            onScrollChanged(mScrollX, mScrollY, oldX, oldY);  
+            if (!awakenScrollBars()) {  
+                invalidate();  //一般都引起重绘  
+            }  
+        }  
+    }  
+    // 看出原因了吧 。。 mScrollX 与 mScrollY 代表我们当前偏移的位置 ， 在当前位置继续偏移(x ,y)个单位  
+    public void scrollBy(int x, int y) {  
+        scrollTo(mScrollX + x, mScrollY + y);  
+    }  
+    //...  
+} 
+~~~
+说明：
+
+* 1、`scrollTo` 和 `scrollBy` 只能改变 View内容 的位置，而不能改变View在布局中的位置。
+* 2、在滑动过程中，mScrollX 的值总等于 View左边缘 和 View内容左边缘 在水平方向上的距离。
+* 3、mScrollY 的值总等于 View上边缘 和 View内容上边缘 在垂直方向上的距离。
+* 4、mScrollX 和 mScrollY 的单位为像素。
+* 5、如果从左向右滑动，那么 mScrollX 为负值，反之为正值。
+* 6、如果从上往下滑动，那么 mScrollY 为负值，反之为正值。
+    
+### [Scroller][scroller-url]
+
+本质上是一个帮助你计算滚动距离，一遍刷新界面时形成动画效果的工具。
+
+#### 构造方法
+~~~
+/** 
+ * Create a Scroller with the default duration and interpolator. 
+ */  
+public Scroller(Context context) {  
+    this(context, null);  
+}  
+  
+/** 
+ * Create a Scroller with the specified interpolator. If the interpolator is 
+ * null, the default (viscous) interpolator will be used. 
+ */  
+public Scroller(Context context, Interpolator interpolator) {  
+    mFinished = true;  
+    mInterpolator = interpolator;  
+    float ppi = context.getResources().getDisplayMetrics().density * 160.0f;  
+    mDeceleration = SensorManager.GRAVITY_EARTH   // g (m/s^2)  
+                  * 39.37f                        // inch/meter  
+                  * ppi                           // pixels per inch  
+                  * ViewConfiguration.getScrollFriction();  
+}  
+~~~
+
+#### startScroll()
+~~~
+public void startScroll(int startX, int startY, int dx, int dy, int duration) {  
+    mMode = SCROLL_MODE;  
+    mFinished = false;  
+    mDuration = duration;  
+    mStartTime = AnimationUtils.currentAnimationTimeMillis();  
+    mStartX = startX;  
+    mStartY = startY;  
+    mFinalX = startX + dx;  
+    mFinalY = startY + dy;  
+    mDeltaX = dx;  
+    mDeltaY = dy;  
+    mDurationReciprocal = 1.0f / (float) mDuration;  
+    // This controls the viscous fluid effect (how much of it)  
+    mViscousFluidScale = 8.0f;  
+    // must be set to 1.0 (used in viscousFluid())  
+    mViscousFluidNormalize = 1.0f;  
+    mViscousFluidNormalize = 1.0f / viscousFluid(1.0f);  
+} 
+~~~
+从名字上来看，这应该是滚动的方法。但在这个方法中我们只看到了对一些滚动的基本设置动作，比如设置滚动模式，开始时间，持续时间等等，并没有任何对View的滚动操作。
+#### computeScrollOffset()
+~~~
+/** 
+ * Call this when you want to know the new location.  If it returns true, 
+ * the animation is not yet finished.  loc will be altered to provide the 
+ * new location. 
+ */   
+public boolean computeScrollOffset() {  
+    if (mFinished) {  
+        return false;  
+    }  
+  
+    int timePassed = (int)(AnimationUtils.currentAnimationTimeMillis() - mStartTime);  
+  
+    if (timePassed < mDuration) {  
+        switch (mMode) {  
+        case SCROLL_MODE:  
+            float x = (float)timePassed * mDurationReciprocal;  
+  
+            if (mInterpolator == null)  
+                x = viscousFluid(x);   
+            else  
+                x = mInterpolator.getInterpolation(x);  
+  
+            mCurrX = mStartX + Math.round(x * mDeltaX);  
+            mCurrY = mStartY + Math.round(x * mDeltaY);  
+            break;  
+        case FLING_MODE:  
+            float timePassedSeconds = timePassed / 1000.0f;  
+            float distance = (mVelocity * timePassedSeconds)  
+                    - (mDeceleration * timePassedSeconds * timePassedSeconds / 2.0f);  
+              
+            mCurrX = mStartX + Math.round(distance * mCoeffX);  
+            // Pin to mMinX <= mCurrX <= mMaxX  
+            mCurrX = Math.min(mCurrX, mMaxX);  
+            mCurrX = Math.max(mCurrX, mMinX);  
+              
+            mCurrY = mStartY + Math.round(distance * mCoeffY);  
+            // Pin to mMinY <= mCurrY <= mMaxY  
+            mCurrY = Math.min(mCurrY, mMaxY);  
+            mCurrY = Math.max(mCurrY, mMinY);  
+              
+            break;  
+        }  
+    }  
+    else {  
+        mCurrX = mFinalX;  
+        mCurrY = mFinalY;  
+        mFinished = true;  
+    }  
+    return true;  
+} 
+~~~
+这个方法有两个作用：
+
+* 1、判断滚动是否结束，返回值为boolean，true说明滚动尚未完成，false说明滚动已经完成。
+* 2、如果滚动没结束，那么将下一次刷新界面时要移动的位置赋值给 mCurrX， mCurrX可以通过 `mScroller.getCurrX()` 获取。
+    
+说道这里，似乎还是没弄清楚 `Scroller` 跟View滚动的联系在哪里？话不多说，看下图：
+
+![Scroller]({{ site.baseurl }}/assets/images/scroller.png)
+
+说明：
+    
+* 1、在你想要执行滚动是，调用 `startScroll()` ,设置滚动参数
+* 2、刷新界面 `invalidate()` 或者 `postInvalidate()`
+* 3、在View重绘时，会调用 `computeScrollOffset()`
+* 4、我们需要来重写此方法，见下文
+* 5、在 `computeScrollOffset()` 中，通过 `computeScrollOffset()` 判断滚动是否完成
+* 6、没有完成的话，下一次刷新界面需要到达的位置 在`computeScrollOffset()` 中已经计算完成
+* 7、保存在mCurrX， mCurrX 里面，可以通过 mScroller.getCurrX() 获取
+* 8、再次调用 `scrollTo()` 和 `invalidate()`，刷新界面，达到动画的效果
+    
+#### computeScroll()
+~~~
+@Override
+    public void computeScroll() {
+        // 第三步，重写computeScroll()方法，并在其内部完成平滑滚动的逻辑
+        if (mScroller.computeScrollOffset()) {
+            scrollTo(mScroller.getCurrX(), mScroller.getCurrY());
+            invalidate();
+        }
+    }   
+~~~   
+View重绘到调用 `computeScroll()`的详细过程，可以参考[夏神][xiaanming-url]的博客。
+    
+#### fling ()
+~~~
+    public void fling(int startX, int startY, int velocityX, int velocityY,  
+            int minX, int maxX, int minY, int maxY) {  
+        // Continue a scroll or fling in progress  
+        if (mFlywheel && !mFinished) {  
+            float oldVel = getCurrVelocity();  
+  
+            float dx = (float) (mFinalX - mStartX);  
+            float dy = (float) (mFinalY - mStartY);  
+            float hyp = FloatMath.sqrt(dx * dx + dy * dy);  
+  
+            float ndx = dx / hyp;  
+            float ndy = dy / hyp;  
+  
+            float oldVelocityX = ndx * oldVel;  
+            float oldVelocityY = ndy * oldVel;  
+            if (Math.signum(velocityX) == Math.signum(oldVelocityX) &&  
+                    Math.signum(velocityY) == Math.signum(oldVelocityY)) {  
+                velocityX += oldVelocityX;  
+                velocityY += oldVelocityY;  
+            }  
+        }  
+  
+        mMode = FLING_MODE;  
+        mFinished = false;  
+  
+        float velocity = FloatMath.sqrt(velocityX * velocityX + velocityY * velocityY);  
+       
+        mVelocity = velocity;  
+        mDuration = getSplineFlingDuration(velocity);  
+        mStartTime = AnimationUtils.currentAnimationTimeMillis();  
+        mStartX = startX;  
+        mStartY = startY;  
+  
+        float coeffX = velocity == 0 ? 1.0f : velocityX / velocity;  
+        float coeffY = velocity == 0 ? 1.0f : velocityY / velocity;  
+  
+        double totalDistance = getSplineFlingDistance(velocity);  
+        mDistance = (int) (totalDistance * Math.signum(velocity));  
+          
+        mMinX = minX;  
+        mMaxX = maxX;  
+        mMinY = minY;  
+        mMaxY = maxY;  
+  
+        mFinalX = startX + (int) Math.round(totalDistance * coeffX);  
+        // Pin to mMinX <= mFinalX <= mMaxX  
+        mFinalX = Math.min(mFinalX, mMaxX);  
+        mFinalX = Math.max(mFinalX, mMinX);  
+          
+        mFinalY = startY + (int) Math.round(totalDistance * coeffY);  
+        // Pin to mMinY <= mFinalY <= mMaxY  
+        mFinalY = Math.min(mFinalY, mMaxY);  
+        mFinalY = Math.max(mFinalY, mMinY);  
+    } 
+~~~
+参数：
+
+* tartX 滚动起始点X坐标
+* startY 滚动起始点Y坐标
+* velocityX   当滑动屏幕时X方向初速度，以每秒像素数计算
+* velocityY   当滑动屏幕时Y方向初速度，以每秒像素数计算
+* minX    X方向的最小值，scroller不会滚过此点。
+* maxX    X方向的最大值，scroller不会滚过此点。
+* minY    Y方向的最小值，scroller不会滚过此点。
+* maxY    Y方向的最大值，scroller不会滚过此点。
+
+在fling（快滑，用户按下触摸屏、快速移动后松开）手势基础上开始滚动。滚动的距离取决于fling的初速度。
+
+#### abortAnimation()
+~~~
+public void abortAnimation() {
+    mCurrX = mFinalX;
+    mCurrY = mFinalY;
+    mFinished = true;
+}
+~~~
+直接跳转到结束状态。
+
+#### forceFinished()
+~~~
+public final void forceFinished(boolean finished) {
+        mFinished = finished;
+    }
+~~~
+强制结束，在原地结束。
+#### extendDuration()
+~~~
+public void More ...extendDuration(int extend) {
+    int passed = timePassed();
+    mDuration = passed + extend;
+    mDurationReciprocal = 1.0f / (float)mDuration;
+    mFinished = false;
+}
+~~~
+延长滚动动画时间。此函数允许当使用setFinalX(int) or setFinalY(int) 时，卷动动作持续更长时间并且卷动更长距离。
+
+
+参考：
+
+[Android 带你从源码的角度解析Scroller的滚动实现原理 - CSDN博客](http://blog.csdn.net/xiaanming/article/details/17483273)
+
+[Scroller的应用--滑屏实现 - CSDN博客](http://blog.csdn.net/jwzhangjie/article/details/38894379)
+
+[Android的Scroller介绍 滑动 - 流动的存在 - 博客园](http://www.cnblogs.com/wzachenjian/p/3667554.html)
+
+[Android Scroller完全解析，关于Scroller你所需知道的一切](http://blog.csdn.net/guolin_blog/article/details/48719871)
+
+[scroller-url]:http://www.grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/2.0_r1/android/widget/Scroller.java#Scroller.0mCurrX
+
+[xiaanming-url]: http://blog.csdn.net/xiaanming
