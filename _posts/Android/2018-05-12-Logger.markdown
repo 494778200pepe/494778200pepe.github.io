@@ -20,6 +20,10 @@ description: Logger.
 
 [开源日志库Logger的剖析](http://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650821090&idx=1&sn=c4158dbb9691c3fbaf2dcb23348d954f&chksm=80b7857cb7c00c6a1c5f0e3290777e9fff21811ba8c42449426656cada8802f79d48c319aeaa&scene=1&srcid=0921slE857Knxk12TJ4Q6b2x#rd)
 
+[JakeWharton/timber: A logger with a small, extensible API which provides utility on top of Android's normal Log class.](https://github.com/JakeWharton/timber)
+
+[orhanobut/logger: Simple, pretty and powerful logger for android](https://github.com/orhanobut/logger)
+
 ### Logcat
 
 [android log机制——用logcat读取log - WolfCS - 开源中国社区](https://my.oschina.net/wolfcs/blog/165639)
@@ -44,9 +48,7 @@ description: Logger.
 
 
 
-[JakeWharton/timber: A logger with a small, extensible API which provides utility on top of Android's normal Log class.](https://github.com/JakeWharton/timber)
 
-[orhanobut/logger: Simple, pretty and powerful logger for android](https://github.com/orhanobut/logger)
 
 
 
