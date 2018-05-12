@@ -1,13 +1,14 @@
 ---
 layout: post
 title:  "工具类"
-date:   2018-05-12 10:26:00 +0800
+date:   2017-11-25 10:58:10 +0800
 categories: Android
 tags: Util
 author: pepe
 description: 『 工具类 』
 ---
 
+date:   2018-05-12 10:26:00 +0800
 [Activity管理工具类----Android工具类】Activity管理工具类AppManager](http://www.xuebuyuan.com/2227031.html)
 
 [Android开发人员不得不收集的代码(持续更新中)](http://mp.weixin.qq.com/s?__biz=MzI3MDE0NzYwNA==&mid=2651433871&idx=1&sn=8fbaf284bdb1f4073f058a56cf892197&chksm=f12882f4c65f0be22e1287aab6cb32e33772e62df1f6d053e7059879cd3a1772e01f9877be01&scene=1&srcid=0915dWInT4LNtxYjj4hXQKsM#rd)
