@@ -8,8 +8,101 @@ author: pepe
 description: 『 泛型 』
 ---
 
+### **泛型**
 
+* 泛型，即“参数化类型”。一提到参数，最熟悉的就是定义方法时有形参，然后调用此方法时传递实参。
+* 那么参数化类型怎么理解呢？顾名思义，就是将类型由原来的具体的类型参数化。
+* 类似于方法中的变量参数，此时类型也定义成参数形式（可以称之为类型形参），然后在使用/调用时传入具体的类型（类型实参）。
 
+### **泛型类**
+```
+public class Container<K, V> {
+    private K key;
+    private V value;
 
+    public Container(K k, V v) {
+        key = k;
+        value = v;
+    }
 
+    public K getKey() {
+        return key;
+    }
+
+    public void setKey(K key) {
+        this.key = key;
+    }
+
+    public V getValue() {
+        return value;
+    }
+
+    public void setValue(V value) {
+        this.value = value;
+    }
+}
+```
+
+### **泛型接口**
+在泛型接口中，生成器是一个很好的理解，看如下的生成器接口定义：
+```
+public interface Generator<T> {
+    public T next();
+}
+```
+然后定义一个生成器类来实现这个接口：
+```
+public class FruitGenerator implements Generator<String> {
+
+    private String[] fruits = new String[]{"Apple", "Banana", "Pear"};
+
+    @Override
+    public String next() {
+        Random rand = new Random();
+        return fruits[rand.nextInt(3)];
+    }
+}
+```
+调用：
+```
+public class Main {
+
+    public static void main(String[] args) {
+        FruitGenerator generator = new FruitGenerator();
+        System.out.println(generator.next());
+        System.out.println(generator.next());
+        System.out.println(generator.next());
+        System.out.println(generator.next());
+    }
+}
+```
+输出：
+```
+Banana
+Banana
+Pear
+Banana
+```
+
+### **泛型方法**
+
+* 一个基本的原则是：无论何时，只要你能做到，你就应该尽量使用泛型方法。
+* 也就是说，如果使用泛型方法可以取代将整个类泛化，那么应该有限采用泛型方法。
+
+下面来看一个简单的泛型方法的定义：
+```
+public class Main {
+
+    public static <T> void out(T t) {
+        System.out.println(t);
+    }
+
+    public static void main(String[] args) {
+        out("findingsea");
+        out(123);
+        out(11.11);
+        out(true);
+    }
+}
+```
 
