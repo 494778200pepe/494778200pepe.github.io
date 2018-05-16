@@ -231,6 +231,23 @@ public void drawAll(List<？exends Shape> shapes) {
 
 `<? super T>`表示类型下界（Java Core中叫超类型限定），表示参数化类型是此类型的超类型（父类型），直至Object
 
+```
+List<Shape> shapes = new ArrayList<Shape>();  
+List<? super Cicle> cicleSupers = shapes;  
+cicleSupers.add(new Cicle()); //OK, subclass of Cicle also OK  
+cicleSupers.add(new Shape()); //ERROR  
+```
+
+* 这表示cicleSupers列表存储的元素为Cicle的超类，因此我们可以往其中加入Cicle对象或者Cicle的子类对象，
+* 但是不能加入Shape对象。这里的原因在于列表cicleSupers存储的元素类型为Cicle的超类，
+* 但是具体是Cicle的什么超类并不清楚。但是我们可以确定的是只要是Cicle或者Circle的子类，则一定是与该元素类别兼容。
+   
+### **边界通配符总结**
+
+* 如果你想从一个数据类型里获取数据，使用 ? extends 通配符
+* 如果你想把对象写入一个数据结构里，使用 ? super 通配符
+* 如果你既想存，又想取，那就别用通配符。 
+  
 ### **注意**
 
 1、`List<String>`和`List<Integer>`是同一类型
@@ -246,10 +263,34 @@ public class Erasure{
     }  
 }  
 ```
+2、泛型类型是被所有调用共享的
 
-2、泛型数组
+* 所有泛型类的实例都共享同一个运行时类，类型参数信息会在编译时被擦除。
+* 因此考虑如下代码，虽然`ArrayList<String>和ArrayList<Integer>`类型参数不同，
+* 但是他们都共享ArrayList类，所以结果会是true。
 
+```
+List<String>l1 = new ArrayList<String>();  
+List<Integer>l2 = new ArrayList<Integer>();  
+System.out.println(l1.getClass() == l2.getClass()); //True  
+```
+
+3、instanceof
+
+不能对确切的泛型类型使用instanceOf操作。如下面的操作是非法的，编译时会出错。
+
+```
+Collection cs = new ArrayList<String>();  
+if (cs instanceof Collection<String>){…}// compile error.如果改成instanceof Collection<?>则不会出错。  
+```
+
+4、泛型数组
+
+不能创建一个确切泛型类型的数组。
 
 参考：
 
 [Java泛型编程最全总结 - 切梦 - ITeye博客](http://qiemengdao.iteye.com/blog/1525624)
+
+《站在巨著之上谈泛型》系列内容公告 – 金丝燕网
+http://swiftlet.net/archives/1964
