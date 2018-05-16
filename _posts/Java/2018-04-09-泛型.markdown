@@ -220,7 +220,7 @@ public void drawAll(List<？exends Shape> shapes) {
 } 
 ```
 
-* 这里就又有个问题要注意了，如果我们希望在List<？exends Shape> shapes中加入一个矩形对象，
+* 这里就又有个问题要注意了，如果我们希望在`List<？exends Shape> shapes`中加入一个矩形对象，
 * 如下所示：`shapes.add(0, new Rectangle()); //compile-time error`
 * 那么这时会出现一个编译时错误，原因在于：我们只知道shapes中的元素时Shape类型的子类型，
 * 具体是什么子类型我们并不清楚，所以我们不能往shapes中加入任何类型的对象。
@@ -241,6 +241,22 @@ cicleSupers.add(new Shape()); //ERROR
 * 这表示cicleSupers列表存储的元素为Cicle的超类，因此我们可以往其中加入Cicle对象或者Cicle的子类对象，
 * 但是不能加入Shape对象。这里的原因在于列表cicleSupers存储的元素类型为Cicle的超类，
 * 但是具体是Cicle的什么超类并不清楚。但是我们可以确定的是只要是Cicle或者Circle的子类，则一定是与该元素类别兼容。
+
+```
+// compile error:
+List<? super Shape> shapes = new ArrayList<Cicle>();
+```
+* `List<? super Shape>` 示“具有任何 Shape 超类型的列表”，列表的类型至少是一个 Shape 类型，
+* 因此可以安全的向其中添加 Shape 及其子类型。
+* 由于`List<? super Shape>`中的类型可能是任何 Shape 的超类型，无法赋值为 Shape 的子类型 Cicle 的`List<Cicle>`.
+
+```
+// compile error:
+Shape item = shapes.get(0);
+```
+
+* 因为，List<? super Shape>中的类型可能是任何 Shape 的超类型，
+* 所以编译器无法确定get返回的对象类型是 Shape ,还是 Shape 的父类 或 Object.
    
 ### **边界通配符总结**
 
