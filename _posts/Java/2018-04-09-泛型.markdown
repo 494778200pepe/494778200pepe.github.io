@@ -154,9 +154,9 @@ void printCollection(Collection<Object> c) {
 } 
 ``` 
  
-* 很容易发现，使用泛型的版本只能接受元素类型为Object类型的集合如ArrayList<Object>();
-* 如果是ArrayList<String>，则会编译时出错。
-* 因为我们前面说过，Collection<Object>并不是所有集合的超类。
+* 很容易发现，使用泛型的版本只能接受元素类型为Object类型的集合如`ArrayList<Object>()`;
+* 如果是`ArrayList<String>`，则会编译时出错。
+* 因为我们前面说过，`Collection<Object>`并不是所有集合的超类。
 * 而老版本可以打印任何类型的集合，那么如何改造新版本以便它能接受所有类型的集合呢？
 * 这个问题可以通过使用通配符来解决。修改后的代码如下所示：
 
@@ -183,8 +183,8 @@ c.add(newObject()); //compile time error，不管加入什么对象都出错，�
 c.add(null); //OK  
 ```
  
-* 另一方面，我们可以从List<?> lists中获取对象，虽然不知道List中存储的是什么类型，但是可以肯定的是存储的类型一定是Object的子类型，
-* 所以可以用Object类型来获取值。如for(Object obj: lists)，这是合法的。
+* 另一方面，我们可以从`List<?> lists`中获取对象，虽然不知道List中存储的是什么类型，但是可以肯定的是存储的类型一定是Object的子类型，
+* 所以可以用Object类型来获取值。如`for(Object obj: lists)`，这是合法的。
 
 ### **`<? extends T>`**
 
@@ -244,8 +244,8 @@ cicleSupers.add(new Shape()); //ERROR
    
 ### **边界通配符总结**
 
-* 如果你想从一个数据类型里获取数据，使用 ? extends 通配符
-* 如果你想把对象写入一个数据结构里，使用 ? super 通配符
+* 如果你想从一个数据类型里获取数据，使用` ? extends `通配符
+* 如果你想把对象写入一个数据结构里，使用` ? super `通配符
 * 如果你既想存，又想取，那就别用通配符。 
   
 ### **注意**
@@ -266,7 +266,7 @@ public class Erasure{
 2、泛型类型是被所有调用共享的
 
 * 所有泛型类的实例都共享同一个运行时类，类型参数信息会在编译时被擦除。
-* 因此考虑如下代码，虽然`ArrayList<String>和ArrayList<Integer>`类型参数不同，
+* 因此考虑如下代码，虽然`ArrayList<String>`和`ArrayList<Integer>`类型参数不同，
 * 但是他们都共享ArrayList类，所以结果会是true。
 
 ```
