@@ -257,22 +257,22 @@ shapes.contains(new Circle());
 
 ```
 List<Shape> shapes = new ArrayList<Shape>();  
-List<? super Cicle> cicleSupers = shapes;  
-cicleSupers.add(new Cicle()); //OK, subclass of Cicle also OK  
+List<? super Circle> cicleSupers = shapes;  
+cicleSupers.add(new Circle()); //OK, subclass of Circle also OK  
 cicleSupers.add(new Shape()); //ERROR  
 ```
 
-* 这表示cicleSupers列表存储的元素为Cicle的超类，因此我们可以往其中加入Cicle对象或者Cicle的子类对象，
-* 但是不能加入Shape对象。这里的原因在于列表cicleSupers存储的元素类型为Cicle的超类，
-* 但是具体是Cicle的什么超类并不清楚。但是我们可以确定的是只要是Cicle或者Circle的子类，则一定是与该元素类别兼容。
+* 这表示circleSupers列表存储的元素为 Circle 的超类，因此我们可以往其中加入 Circle 对象或者 Circle 的子类对象，
+* 但是不能加入Shape对象。这里的原因在于列表cicleSupers存储的元素类型为 Circle 的超类，
+* 但是具体是 Circle 的什么超类并不清楚。但是我们可以确定的是只要是Cicle或者Circle的子类，则一定是与该元素类别兼容。
 
 ```
 // compile error:
-List<? super Shape> shapes = new ArrayList<Cicle>();
+List<? super Shape> shapes = new ArrayList<Circle>();
 ```
 * `List<? super Shape>` 示“具有任何 Shape 超类型的列表”，列表的类型至少是一个 Shape 类型，
 * 因此可以安全的向其中添加 Shape 及其子类型。
-* 由于`List<? super Shape>`中的类型可能是任何 Shape 的超类型，无法赋值为 Shape 的子类型 Cicle 的`List<Cicle>`.
+* 由于`List<? super Shape>`中的类型可能是任何 Shape 的超类型，无法赋值为 Shape 的子类型 Circle 的`List<Circle>`.
 
 ```
 // compile error:
@@ -281,6 +281,7 @@ Shape item = shapes.get(0);
 
 * 因为，List<? super Shape>中的类型可能是任何 Shape 的超类型，
 * 所以编译器无法确定get返回的对象类型是 Shape ,还是 Shape 的父类 或 Object.
+* 你只能取出Object实例：因为我们不知道超类究竟是什么，编译器唯一能保证的只是它是个Object，因为Object是任何Java类型的超类。
    
 ### **边界通配符总结**
 
@@ -353,8 +354,6 @@ System.out.println(list)
 [Java泛型简明教程](http://www.vaikan.com/java-generics-quick-tutorial/)
 
 [Java深度历险（五）——Java泛型](http://www.infoq.com/cn/articles/cf-java-generics)
-
-[JAVA泛型中的有界类型(extends super) - CSDN博客](https://blog.csdn.net/daniel_h1986/article/details/5708605)
 
 [Effective Java (泛型) - Stephen_Liu - 博客园](http://www.cnblogs.com/stephen-liu74/archive/2012/01/20/2228938.html)
 
