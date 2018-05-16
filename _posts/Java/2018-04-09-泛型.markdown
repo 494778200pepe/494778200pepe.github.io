@@ -227,6 +227,30 @@ public void drawAll(List<？exends Shape> shapes) {
 * 不过我们在取出其中对象时，可以使用Shape类型来取值，
 * 因为虽然我们不知道列表中的元素类型具体是什么类型，但是我们肯定的是它一定是Shape类的子类型。
 
+```
+List<? extends Shape> shapes = new ArrayList<Circle>();
+// complie error:
+// shapes.add(new Circle());
+// shapes.add(new Shape());
+// shapes.add(new Object());
+shapes.add(null); // only work for null 
+```
+* `List<? extends Shape>`表示 “具有任何从 Shape 继承类型的列表”，编译器无法确定List所持有的类型，
+* 所以无法安全的向其中添加对象。可以添加null,因为null 可以表示任何类型。
+* 所以 List 的add 方法不能添加任何有意义的元素，但是可以接受现有的子类型List<Circle> 赋值。
+
+```
+Shape shape = shapes.get(0);
+Circle circle = (Circle)shapes.get(0);
+```
+由于，其中放置是从 Shape 中继承的类型，所以可以安全地取出 Shape 类型。
+
+```
+shapes.contains(new Shape());
+shapes.contains(new Circle());
+```
+在使用Collection中的contains 方法时，接受Object 参数类型，可以不涉及任何通配符，编译器也允许这么调用。
+
 ### **`<? super T>`**
 
 `<? super T>`表示类型下界（Java Core中叫超类型限定），表示参数化类型是此类型的超类型（父类型），直至Object
@@ -260,8 +284,8 @@ Shape item = shapes.get(0);
    
 ### **边界通配符总结**
 
-* 如果你想从一个数据类型里获取数据，使用` ? extends `通配符
-* 如果你想把对象写入一个数据结构里，使用` ? super `通配符
+* 如果你想从一个数据类型里获取数据，使用` ? extends `通配符,取父类？
+* 如果你想把对象写入一个数据结构里，使用` ? super `通配符，存？子类
 * 如果你既想存，又想取，那就别用通配符。 
   
 ### **注意**
