@@ -288,9 +288,33 @@ if (cs instanceof Collection<String>){…}// compile error.如果改成instanceo
 
 不能创建一个确切泛型类型的数组。
 
+5、反射的话还是能用分辨出对象的类型并且调用相应的方法
+
+* 对于泛型，只是允许程序员在编译时检测到非法的类型而已。
+* 但是在运行期时，其中的泛型标志会变化为 Object 类型。
+
+```
+List<Integer> list = new ArrayList<>();
+list.add(12);
+//这里直接添加会报错
+list.add("a");
+Class<? extends List> clazz = list.getClass();
+Method add = clazz.getDeclaredMethod("add", Object.class);
+//但是通过反射添加，是可以的
+add.invoke(list, "kl");
+
+System.out.println(list)
+```
+
 参考：
 
 [Java泛型编程最全总结 - 切梦 - ITeye博客](http://qiemengdao.iteye.com/blog/1525624)
 
+？super T 和? extends T区别 - wf110 - 博客园
+http://www.cnblogs.com/friends-wf/p/3582841.html
+
 《站在巨著之上谈泛型》系列内容公告 – 金丝燕网
 http://swiftlet.net/archives/1964
+
+Java泛型让声明方法返回子类型 – 编码人生
+http://codelife.me/blog/2014/03/05/returning-subtype-of-declared-type-from-method-by-java-generics/?utm_source=tuicool&utm_medium=referral
