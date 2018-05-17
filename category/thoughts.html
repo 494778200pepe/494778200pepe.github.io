@@ -2,7 +2,8 @@
 layout: default
 ---
 <div class="well article">
-{%for post in site.data.values[site.lan] %}
+{% assign trans = site.data.values[site.lan] %}
+{% for post in site.data.tag.thoughts %}
     {% unless post.next %}
         <h2>{{ post.date | date: '%Y' }}</h2>
         <ul>
