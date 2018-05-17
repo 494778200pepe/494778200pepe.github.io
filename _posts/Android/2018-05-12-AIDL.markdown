@@ -7,6 +7,24 @@ tags: Android
 author: pepe
 description: 『 AIDL 』
 ---
+> AIDL是一个缩写，全称是Android Interface Definition Language，也就是Android接口定义语言。设计这门语言的目的是为了实现进程间通信，尤其是在涉及多进程并发情况下的进程间通信。
+
+#### **默认支持的数据类型**
+ 
+ - Java中的八种基本数据类型，包括 byte，short，int，long，float，double，boolean，char。
+ - String 类型。
+ - CharSequence类型。
+ - List类型：List中的所有元素必须是AIDL支持的类型之一，或者是一个其他AIDL生成的接口，或者是定义的parcelable（下文关于这个会有详解）。List可以使用泛型。
+ - Map类型：Map中的所有元素必须是AIDL支持的类型之一，或者是一个其他AIDL生成的接口，或者是定义的parcelable。Map是不支持泛型的。
+
+
+
+
+### **Messenger与AIDL的比较**
+
+* Messager 单线程，AIDL 多线程。
+
+参考：
 
 [Android：学习AIDL，这一篇文章就够了(上) - lypeer的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/luoyanglizi/article/details/51980630)  
 
