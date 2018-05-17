@@ -127,8 +127,8 @@ public enum EnumTest {
     }
 ```
 ```
-		//EnumTest
-		EnumTest test = EnumTest.TUE;
+        //EnumTest
+        EnumTest test = EnumTest.TUE;
 
         //compareTo(E o)
         switch (test.compareTo(EnumTest.MON)) {
@@ -326,8 +326,9 @@ public enum MyColor{
 ```
 
 ### **EnumSet，EnumMap 的应用**
+
 ```
-		// EnumSet的使用
+        // EnumSet的使用
         EnumSet<EnumTest> weekSet = EnumSet.allOf(EnumTest.class);
         for (EnumTest day : weekSet) {
             Log.d("pepe",day.toString());
