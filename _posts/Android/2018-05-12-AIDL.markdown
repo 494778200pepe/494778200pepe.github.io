@@ -16,6 +16,8 @@ description: 『 AIDL 』
 
 [Android AIDL SERVICE 双向通信 详解 - 希尔瓦娜斯女神 - 博客园](https://www.cnblogs.com/punkisnotdead/p/5158016.html) 
 
+[Android 多进程编程 15问15答！ - 希尔瓦娜斯女神 - 博客园](http://www.cnblogs.com/punkisnotdead/p/5168857.html) 
+
 [你真的理解AIDL中的in，out，inout么？ - CSDN博客](https://blog.csdn.net/luoyanglizi/article/details/51958091) 
 
 
