@@ -21,7 +21,6 @@ description: 『 枚举 』
 package com.hmw.test;
 /**
  * 枚举测试类
- * @author <a href="mailto:hemingwang0902@126.com">何明旺</a>
  */
 public enum EnumTest {
     MON, TUE, WED, THU, FRI, SAT, SUN;
@@ -186,8 +185,8 @@ name(): TUE
 toString(): TUE
 ordinal(): 1
 ```
-#enum 的方法和接口
-##覆盖方法
+### **enum 的方法和接口**
+#### 覆盖方法
 ```
 public enum Enumtestt{
         MON(1), TUE(2), WED(3), THU(4), FRI(5), SAT(6) {
@@ -227,7 +226,7 @@ public enum Enumtestt{
 ```
 Enumtestt.SAT 的 isRest = true
 ```
-##实现接口
+#### 实现接口
 ```
 public enum MyColor implements Behaviour{
         RED,GREEN,BLUE;
@@ -285,7 +284,7 @@ public enum MyColor implements Behaviour{
     }
 ```
 
-#EnumSet，EnumMap 的应用
+### **EnumSet，EnumMap 的应用**
 ```
 		// EnumSet的使用
         EnumSet<EnumTest> weekSet = EnumSet.allOf(EnumTest.class);
@@ -315,7 +314,7 @@ SUN
 MON:星期一
 TUE:星期二
 ```
-#原理分析
+### **原理分析**
 enum 的语法结构尽管和 class 的语法不一样，但是经过编译器编译之后产生的是一个class文件。该class文件经过反编译可以看到实际上是生成了一个类，该类继承了java.lang.Enum<E>。EnumTest 经过反编译(javap com.hmw.test.EnumTest 命令)之后得到的内容如下：
 ```
 public class com.hmw.test.EnumTest extends java.lang.Enum{
