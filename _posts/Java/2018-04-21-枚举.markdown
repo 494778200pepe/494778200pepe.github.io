@@ -356,7 +356,7 @@ MON:星期一
 TUE:星期二
 ```
 ### **原理分析**
-enum 的语法结构尽管和 class 的语法不一样，但是经过编译器编译之后产生的是一个class文件。该class文件经过反编译可以看到实际上是生成了一个类，该类继承了java.lang.Enum<E>。EnumTest 经过反编译(javap com.hmw.test.EnumTest 命令)之后得到的内容如下：
+enum 的语法结构尽管和 class 的语法不一样，但是经过编译器编译之后产生的是一个class文件。该class文件经过反编译可以看到实际上是生成了一个类，该类继承了`java.lang.Enum<E>`。EnumTest 经过反编译(`javap com.hmw.test.EnumTest`命令)之后得到的内容如下：
 ```
 public class com.hmw.test.EnumTest extends java.lang.Enum{
     public static final com.hmw.test.EnumTest MON;
