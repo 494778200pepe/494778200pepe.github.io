@@ -19,6 +19,7 @@ description: 『 AIDL 』
 
 
 
+### **in、out、inout**
 
 ### **Messenger与AIDL的比较**
 
@@ -26,9 +27,9 @@ description: 『 AIDL 』
 
 参考：
 
-[Android：学习AIDL，这一篇文章就够了(上) - lypeer的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/luoyanglizi/article/details/51980630)  
+[Android：学习AIDL，这一篇文章就够了(上) - 简书](https://www.jianshu.com/p/a8e43ad5d7d2) 
 
-[Android：学习AIDL，这一篇文章就够了(下) - lypeer的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/luoyanglizi/article/details/52029091)  
+[Android：学习AIDL，这一篇文章就够了(下) - 简书](https://www.jianshu.com/p/0cca211df63c) 
 
 [Android AIDL 双向调用的使用及相关原理 - CSDN博客](https://blog.csdn.net/swjtufq/article/details/52527920) 
 
