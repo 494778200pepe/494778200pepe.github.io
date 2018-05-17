@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "宁可一思进 莫在一思停"
+date:   2018-05-17 11:25:00 +0800
+categories: Thoughts
+tags: thoughts
+author: pepe
+description: 『 宁可一思进 莫在一思停 』
+---
