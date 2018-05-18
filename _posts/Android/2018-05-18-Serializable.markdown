@@ -59,11 +59,11 @@ in.close();
 
 ### **serialVersionUID**
 
-* 如果在序列化写 时的版本号和序列化读 时的版本号，不一致，将会有异常：java.io.InvalidClassException。
-* serialVersionUID用于在反序列化时，做校验。比如网络传输时，serialVersionUID不一致，反序列化就不能正常进行。
-* 如果在class中不声明serialVersionUID，那么在序列化写 的时候，虚拟机会自动为它计算出一个serialVersionUID，计算的方法是依据class的信息。
-* 如果两个虚拟机是不同类型的虚拟机，那么计算方法可能就不一样了，于是即使相同的class，serialVersionUID也可能会不同。
-* 所以最好自己指定 serialVersionUID。
+* 如果在序列化写 时的版本号和序列化读 时的版本号，不一致，将会有异常：`java.io.InvalidClassException`。
+* `serialVersionUID`用于在反序列化时，做校验。比如网络传输时，serialVersionUID不一致，反序列化就不能正常进行。
+* 如果在`class`中不声明`serialVersionUID`，那么在序列化写 的时候，虚拟机会自动为它计算出一个`serialVersionUID`，计算的方法是依据`class`的信息。
+* 如果两个虚拟机是不同类型的虚拟机，那么计算方法可能就不一样了，于是即使相同的`class`，`serialVersionUID`也可能会不同。
+* 所以最好自己指定 `serialVersionUID`。
 
 [关于Serializable的serialVersionUID - CSDN博客](https://blog.csdn.net/smcwwh/article/details/8787561)
 
@@ -76,6 +76,8 @@ in.close();
  - 3）、如果虚拟机A中的AClass有一个属性，在虚拟机B中的AClass也有这个属性，但这个属性的类型变了，比如说int变成了long，抑或其他的变化，将会有异常：java.io.InvalidClassException:incompatible types for field …
 
 经过序列化而产生的异常都是 `java.io.InvalidClassException`，不会产生`java.lang.ClassCastException`，两者还是有比较大的区别的，从名字上就可以看得出来。
+
+### **静态变量序列化**
 
 
 参考：
