@@ -81,6 +81,14 @@ in.readStringList(list);
 
 ### **Parcelable相关方法说明**
 
+|方法----------------------------------|功能----------------------------------------|标记位|
+|:-------------------------------------|:-------------------------------------------|:---- |
+|createFromParcel(Parcel in)	       |从序列化后的对象中创建原始对象		        ||
+|newArray(int size)	                   |创建指定长度的原始对象数组                  ||
+|User(Parcel in)	                   |从序列化后的对象中创建原始对象	            ||
+|writeToParcel(Parcel out,int flags)   |将当前对象写入序列化结构中	                |PARCALABLE_WRITE_RETURN_VALUE|
+|describeContents	                   |返回当前对象的内容描述，几乎所有情况都返回0，仅在当前对象中存在文件描述符时返回1|CONTENTS_FILE_DESCRIPTOR|
+
 方法	功能	标记位
 createFromParcel(Parcel in)	从序列化后的对象中创建原始对象	
 newArray(int size)	创建指定长度的原始对象数组	
