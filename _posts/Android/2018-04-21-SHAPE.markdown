@@ -11,7 +11,9 @@ description: 『 Shape、Layer_list、selector 』
 
 
 
+[Android动态设置Shape - CSDN博客](https://blog.csdn.net/snailbaby_soko/article/details/53289276)
 
+[在代码中修改Shape的solid属性的color值 - 简书](https://www.jianshu.com/p/5353745f07db)
 
 
 

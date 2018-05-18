@@ -18,4 +18,8 @@ description: 『 面试指南 』
 
 [2017腾讯实习生Android客户端开发面试总结](https://mp.weixin.qq.com/s/apmj8W9CEoktdlJklsYhcg)
 
+[最全的BAT大厂面试题整理 - 简书](https://www.jianshu.com/p/c70989bd5f29)
+
+[一个五年开发者百度、阿里、聚美、映客的面试心经](https://mp.weixin.qq.com/s?__biz=MzA5MzY4NTQwMA==&mid=2650995860&idx=1&sn=3f9bd584233d12963ce432d2c7e0222b&scene=0#rd)
+
 

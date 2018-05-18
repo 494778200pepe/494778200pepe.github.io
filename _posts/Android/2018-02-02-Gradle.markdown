@@ -12,6 +12,7 @@ description: 『 Gradle学习 』
 
 
 参考：
+[彻底弄明白Gradle相关配置](https://mp.weixin.qq.com/s/1UHcYOudViMhpUYeREZzGA)
 
 [Gradle 版本下载](http://services.gradle.org/distributions/)
 
