@@ -90,9 +90,9 @@ describeContents	返回当前对象的内容描述，几乎所有情况都返回
 
 ### **Parcelable和Serializable的区别**
 
-|区别-----------------|Serializable-----------|Parcelable|
+|区别                 |Serializable           |Parcelable|
 |:--------------------|:----------------------|:---- |
-|所属API	          |JAVA API	            |Android SDK API|
+|所属API	          |JAVA API	              |Android SDK API|
 |原理	              |序列化和反序列化过程需要大量的I/O操作	            |序列化和反序列化过程不需要大量的I/O操作|
 |开销	              |开销大	                |开销小|
 |效率	              |低	                    |很高|
