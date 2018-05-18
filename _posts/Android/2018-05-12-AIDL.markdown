@@ -31,6 +31,8 @@ description: 『 AIDL 』
 
 [Android：学习AIDL，这一篇文章就够了(下) - 简书](https://www.jianshu.com/p/0cca211df63c) 
 
+[AIDL 客户端与服务端的双向通信 - CSDN博客](https://blog.csdn.net/qq_26787115/article/details/78590063) 
+
 [Android AIDL 双向调用的使用及相关原理 - CSDN博客](https://blog.csdn.net/swjtufq/article/details/52527920) 
 
 [Android AIDL SERVICE 双向通信 详解 - 希尔瓦娜斯女神 - 博客园](https://www.cnblogs.com/punkisnotdead/p/5158016.html) 
