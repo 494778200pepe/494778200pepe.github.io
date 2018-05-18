@@ -76,7 +76,7 @@ public E valueAt(int index)
 ```
 public int indexOfKey(int key)  
 ```
-####查看值所在位置，没有的话返回-1：
+#### 查看值所在位置，没有的话返回-1：
 ```
 public int indexOfValue(E value) 
 ```
