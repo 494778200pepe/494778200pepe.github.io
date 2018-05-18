@@ -118,21 +118,16 @@ public void put(int key, E value)
 * 优点：可以节省至少50%的缓存.
 * 缺点：有局限性只针对下面类型：`key: Integer; value: object`
 
+参考：
 
+[Android编程之SparseArray<E>详解 - CSDN博客](https://blog.csdn.net/pi9nc/article/details/11352491)
 
 [Android开发中高效的数据结构用SparseArray代替HashMap - fancychendong的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/fancylovejava/article/details/45148325)
 
-Android内存优化（使用SparseArray和ArrayMap代替HashMap） - CSDN博客
-https://blog.csdn.net/u010687392/article/details/47809295
+[Android内存优化（使用SparseArray和ArrayMap代替HashMap） - CSDN博客](https://blog.csdn.net/u010687392/article/details/47809295)
 
-Android编程之SparseArray<E>详解 - CSDN博客
-https://blog.csdn.net/pi9nc/article/details/11352491
+[Android中的HashMap,ArrayMap和SparseArray - 简书](https://www.jianshu.com/p/aff3b8990ab3)
 
-Android中的HashMap,ArrayMap和SparseArray - 简书
-https://www.jianshu.com/p/aff3b8990ab3
+[SparseArray - Android SDK | Android Developers](http://www.android-doc.com/reference/android/util/SparseArray.html)
 
-SparseArray - Android SDK | Android Developers
-http://www.android-doc.com/reference/android/util/SparseArray.html
-
-GC: SparseArray - android.util.SparseArray (.java) - GrepCode Class Source
-http://www.grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/5.1.1_r1/android/util/SparseArray.java?av=f
+[GC: SparseArray - android.util.SparseArray (.java) - GrepCode Class Source](http://www.grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/5.1.1_r1/android/util/SparseArray.java?av=f)
