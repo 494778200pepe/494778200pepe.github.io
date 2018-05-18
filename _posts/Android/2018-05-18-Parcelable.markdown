@@ -14,58 +14,55 @@ description: 『 Parcelable 』
  -  步骤 2：该实体类必须添加一个常量CREATOR（名字大小写都不能使其他的），该常量必须实现Parcelable的内部接口：Parcelable.Creator，并实现该接口中的两个方法。
 
 ```
-public class MyParcelable implements Parcelable {
-    private int mData;
-    private String mStr;
-    
-    // 将对象中的属性保存至目标对象dest中  
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(mData);
-        dest.writeString(mStr);
-    }
-    
-    //用来创建自定义的Parcelable的对象
-    public static final Creator<MyParcelable> CREATOR = new Creator<MyParcelable>() {
-        @Override
-        public MyParcelable createFromParcel(Parcel in) {
-            return new MyParcelable(in);
-        }
+public class User implements Parcelable{
+    public int userId;
+    public String userName;
+    public String password;
+    public Book book;
 
-        //重写createFromParcel方法，创建并返回一个获得了数据的MyParcelable对象  
-        public MyParcelable[] newArray(int size) {
-            return new MyParcelable[size];
-        }
-    };
-
-    // 读数据进行恢复，带参构造器方法私用化，本构造器仅供类的方法createFromParcel调用  
-    protected MyParcelable(Parcel in) {
-        mData = in.readInt();
-        mStr = in.readString();
+    public User(int userId,String userName,String password,Book book){
+        this.userId=userId;
+        this.userName=userName;
+        this.password=password;
+        this.book=book;
     }
 
-    @Override
-    public int describeContents() {
+    public int describeContents(){
+        //几乎所有情况都返回0，仅在当前对象中存在文件描述符时返回1
         return 0;
     }
     
-    public String getmStr() {
-        return mStr;
+    // 将对象中的属性保存至目标对象out中  
+    public void writeToParcel(Parcel out,int flags){
+        out.writeInt(userId);
+        out.writeString(userName);
+        out.writeString(password);
+        out.writeParcelable(book,0);
     }
 
-    public void setmStr(String mStr) {
-        this.mStr = mStr;
+    //用来创建自定义的Parcelable的对象
+    public static final Parcelable.Creator<User> CREATOR=new Parcelable.Creator<User>(){
+    
+        //重写createFromParcel方法，创建并返回一个获得了数据的MyParcelable对象  
+        public User createFromParcel(Parcel in){
+            return new User(in);
+        }
+
+        public User[] newArray(int size){
+            return new User[size];
+        }
     }
 
-    public int getmData() {
-        return mData;
-    }
-
-    public void setmData(int mData) {
-        this.mData = mData;
+    // 读数据进行恢复，带参构造器方法私用化，本构造器仅供类的方法createFromParcel调用  
+    private User(Parcel in){
+        userId=in.readInt();
+        userName=in.readString();
+        password=in.readString();       
+        book=in.readParcelable(Thread.currentThread().getContextClassLoader());
     }
 }
 ```
-<font color=#ff0000 size=4 face="宋体">从上面我们</font>可以看出Parcel的写入和读出顺序是一致的。如果元素是list读出时需要先new一个ArrayList传入，否则会报空指针异常。如下：
+从上面我们可以看出Parcel的写入和读出顺序是一致的。如果元素是list读出时需要先new一个ArrayList传入，否则会报空指针异常。如下：
 ```
 list = new ArrayList<String>();
 in.readStringList(list);
