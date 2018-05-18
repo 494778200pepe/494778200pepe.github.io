@@ -96,5 +96,6 @@ in.close();
 
 参考：
 
-[Serializable - CSDN博客](
-https://blog.csdn.net/u011568312/article/details/57611440)
+[Serializable - CSDN博客](https://blog.csdn.net/u011568312/article/details/57611440)
+
+[Java Serializable系列化与反系列化 - CSDN博客](https://blog.csdn.net/smcwwh/article/details/7032764)
