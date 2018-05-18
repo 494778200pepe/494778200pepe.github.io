@@ -15,7 +15,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class DateTools {
+public class DateTool {
 
     /**
      * 将时间戳转为字符串 ，格式：yyyy-MM-dd HH:mm
