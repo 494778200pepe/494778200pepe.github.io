@@ -90,12 +90,13 @@ describeContents	返回当前对象的内容描述，几乎所有情况都返回
 
 ### **Parcelable和Serializable的区别**
 
-区别	Serializable	Parcelable
-所属API	JAVA API	Android SDK API
-原理	序列化和反序列化过程需要大量的I/O操作	序列化和反序列化过程不需要大量的I/O操作
-开销	开销大	开销小
-效率	低	很高
-使用场景	序列化到本地或者通过网络传输	内存序列化
+|区别---------------------------|------Serializable-----|Parcelable|
+|:------------------------------|:---------------------:|:---- |
+|所属API	                    |JAVA API	            |Android SDK API|
+|原理	                        |序列化和反序列化过程需要大量的I/O操作	            |序列化和反序列化过程不需要大量的I/O操作|
+|开销	                        |开销大	                |开销小|
+|效率	                        |低	                    |很高|
+|使用场景	                    |序列化到本地或者通过网络传输	    |内存序列化|
 
 ### **效率和选择**
 
@@ -104,10 +105,6 @@ describeContents	返回当前对象的内容描述，几乎所有情况都返回
  - 因为android不同版本Parcelable可能不同，所以不推荐使用Parcelable进行数据持久化
 
 
- 
- |-|-|
-|-|-|
-|源码|[小说Android源码解析篇 第一期——GitHub小伙伴出品 - 简书](http://www.jianshu.com/p/71a8ef305e2c#rd)
 参考：
 
 [Android中两种序列化方式的比较Serializable和Parcelable - CSDN博客](https://blog.csdn.net/wangchunlei123/article/details/51345130)
