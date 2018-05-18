@@ -65,7 +65,7 @@ public class MyParcelable implements Parcelable {
     }
 }
 ```
-从上面我们可以看出Parcel的写入和读出顺序是一致的。如果元素是list读出时需要先new一个ArrayList传入，否则会报空指针异常。如下：
+<font color=#ff0000 size=4 face="宋体">从上面我们</font>可以看出Parcel的写入和读出顺序是一致的。如果元素是list读出时需要先new一个ArrayList传入，否则会报空指针异常。如下：
 ```
 list = new ArrayList<String>();
 in.readStringList(list);
@@ -79,7 +79,7 @@ in.readStringList(list);
 
 > Parcelable接口是Android SDK提供的一种专门用于Android应用中对象的序列化和反序列化的方式，相比于Seriablizable具有更好的性能。实现Parcelable接口的对象就可以实现序列化并可以通过Intent和Binder传递。
 
-### **<font color=#ff0000 size=4 face="宋体">Parcelable相关方法说明</font>**
+### **Parcelable相关方法说明**
 
 方法	功能	标记位
 createFromParcel(Parcel in)	从序列化后的对象中创建原始对象	
