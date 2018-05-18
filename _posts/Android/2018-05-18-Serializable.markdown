@@ -73,11 +73,20 @@ in.close();
 
  - 2）、如果虚拟机A中的AClass没有的属性，而在虚拟机B中多出来的属性，那么这个属性将被赋予一个缺省值，而不会有异常。
 
- - 3）、如果虚拟机A中的AClass有一个属性，在虚拟机B中的AClass也有这个属性，但这个属性的类型变了，比如说int变成了long，抑或其他的变化，将会有异常：java.io.InvalidClassException:incompatible types for field …
+ - 3）、如果虚拟机A中的AClass有一个属性，在虚拟机B中的AClass也有这个属性，但这个属性的类型变了，比如说int变成了long，抑或其他的变化，将会有异常：`java.io.InvalidClassException:incompatible types for field …`
 
 经过序列化而产生的异常都是 `java.io.InvalidClassException`，不会产生`java.lang.ClassCastException`，两者还是有比较大的区别的，从名字上就可以看得出来。
 
 ### **静态变量序列化**
+
+* 串行化只能保存对象的非静态成员交量，不能保存任何的成员方法和静态的成员变量.
+* 而且串行化保存的只是变量的值，对于变量的任何修饰符都不能保存。
+
+### **transient关键字**
+
+> transient关键字的作用是：阻止实例中那些用此关键字声明的变量持久化；当对象被反序列化时（从源文件读取字节序列进行重构），这样的实例变量值不会被持久化和恢复。
+> 当某些变量不想被序列化，同是又不适合使用static关键字声明，那么此时就需要用transient关键字来声明该变量。
+
 
 
 参考：
