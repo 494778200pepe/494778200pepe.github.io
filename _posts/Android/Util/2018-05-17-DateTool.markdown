@@ -54,23 +54,6 @@ public class DateTool {
     }
 
     /**
-     * 将字符串转为时间戳
-     * @return
-     */
-    public static String getTime() {
-        String re_time = null;
-        long currentTime = System.currentTimeMillis();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd");
-        Date d;
-        d = new Date(currentTime);
-        long l = d.getTime();
-        String str = String.valueOf(l);
-        re_time = str.substring(0, 10);
-        return re_time;
-    }
-
-
-    /**
      * 将时间String转换成long 例如2015-12-12 12:15 有误差
      * @param time 时间戳（String）
      * @return 转换后的字符串
