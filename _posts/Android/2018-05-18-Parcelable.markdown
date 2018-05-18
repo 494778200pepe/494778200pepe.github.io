@@ -79,6 +79,24 @@ in.readStringList(list);
 
 > Parcelable接口是Android SDK提供的一种专门用于Android应用中对象的序列化和反序列化的方式，相比于Seriablizable具有更好的性能。实现Parcelable接口的对象就可以实现序列化并可以通过Intent和Binder传递。
 
+### **<font color=#ff0000 size=4 face="宋体">Parcelable相关方法说明</font>**
+
+方法	功能	标记位
+createFromParcel(Parcel in)	从序列化后的对象中创建原始对象	
+newArray(int size)	创建指定长度的原始对象数组	
+User(Parcel in)	从序列化后的对象中创建原始对象	
+writeToParcel(Parcel out,int flags)	将当前对象写入序列化结构中	PARCALABLE_WRITE_RETURN_VALUE
+describeContents	返回当前对象的内容描述，几乎所有情况都返回0，仅在当前对象中存在文件描述符时返回1	CONTENTS_FILE_DESCRIPTOR
+
+### **Parcelable和Serializable的区别**
+
+区别	Serializable	Parcelable
+所属API	JAVA API	Android SDK API
+原理	序列化和反序列化过程需要大量的I/O操作	序列化和反序列化过程不需要大量的I/O操作
+开销	开销大	开销小
+效率	低	很高
+使用场景	序列化到本地或者通过网络传输	内存序列化
+
 ### **效率和选择**
 
  - Parcelable的性能比Serializable好，在内存开销方面较小，所以在内存间数据传输时推荐使用Parcelable，如activity间传输数据。
