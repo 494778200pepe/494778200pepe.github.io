@@ -101,6 +101,14 @@ in.readStringList(list);
 ```
 11-21 20:14:10.317: E/AndroidRuntime(21114): Caused by: java.lang.RuntimeException: Parcel android.os.Parcel@4126ed60: Unmarshalling unknown type code 3014773 at offset 164
 ```
+
+### **效率和选择**
+
+ - Parcelable的性能比Serializable好，在内存开销方面较小，所以在内存间数据传输时推荐使用Parcelable，如activity间传输数据。
+ - 而Serializable可将数据持久化方便保存，所以在需要保存或网络传输数据时选择Serializable 
+ - 因为android不同版本Parcelable可能不同，所以不推荐使用Parcelable进行数据持久化
+
+
 参考：
 
 [Android中两种序列化方式的比较Serializable和Parcelable - CSDN博客](https://blog.csdn.net/wangchunlei123/article/details/51345130)
