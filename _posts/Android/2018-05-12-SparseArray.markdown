@@ -120,7 +120,7 @@ public void put(int key, E value)
 
 参考：
 
-[Android编程之SparseArray<E>详解 - CSDN博客](https://blog.csdn.net/pi9nc/article/details/11352491)
+[Android编程之SparseArray详解 - CSDN博客](https://blog.csdn.net/pi9nc/article/details/11352491)
 
 [Android内存优化（使用SparseArray和ArrayMap代替HashMap） - CSDN博客](https://blog.csdn.net/u010687392/article/details/47809295)
 
