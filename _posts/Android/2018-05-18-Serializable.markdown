@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Serializable和Parcelable"
+title:  "Serializable"
 date:   2018-05-18 08:47:00 +0800
 categories: Android
 tags: Android
 author: pepe
-description: 『 Serializable和Parcelable 』
+description: 『 Serializable 』
 ---
 
 > Serializable和Parcelable接口可以完成对象的序列化过程，当我们需要通过Intent和Binder传输数据时就需要使用者两种序列化方式。
