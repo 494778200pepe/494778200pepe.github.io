@@ -75,6 +75,10 @@ in.readStringList(list);
 11-21 20:14:10.317: E/AndroidRuntime(21114): Caused by: java.lang.RuntimeException: Parcel android.os.Parcel@4126ed60: Unmarshalling unknown type code 3014773 at offset 164
 ```
 
+### **Parcelable**
+
+> Parcelable接口是Android SDK提供的一种专门用于Android应用中对象的序列化和反序列化的方式，相比于Seriablizable具有更好的性能。实现Parcelable接口的对象就可以实现序列化并可以通过Intent和Binder传递。
+
 ### **效率和选择**
 
  - Parcelable的性能比Serializable好，在内存开销方面较小，所以在内存间数据传输时推荐使用Parcelable，如activity间传输数据。
