@@ -104,6 +104,10 @@ describeContents	返回当前对象的内容描述，几乎所有情况都返回
  - 因为android不同版本Parcelable可能不同，所以不推荐使用Parcelable进行数据持久化
 
 
+ 
+ |-|-|
+|-|-|
+|源码|[小说Android源码解析篇 第一期——GitHub小伙伴出品 - 简书](http://www.jianshu.com/p/71a8ef305e2c#rd)
 参考：
 
 [Android中两种序列化方式的比较Serializable和Parcelable - CSDN博客](https://blog.csdn.net/wangchunlei123/article/details/51345130)
