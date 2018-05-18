@@ -79,7 +79,25 @@ public int indexOfKey(int key)
 ####查看值所在位置，没有的话返回-1：
 ```
 public int indexOfValue(E value) 
-``` 
+```
+
+### **删**
+它有四个方法：
+```
+public void delete(int key)  
+public void remove(int key)  
+```
+但其实，delete和remove的效果是一样的，remove方法中调用了delete方法，remove源码：
+```
+
+public void remove(int key) {  
+        delete(key);  
+}  
+
+public void removeAt(int index)  
+public void clear()  
+```
+最后一个就是清除全部 
 ### SparseArrayCompat
 
 `SparseArrayCompat`其实是一个map容器,它使用了一套算法优化了hashMap;
