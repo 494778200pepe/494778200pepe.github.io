@@ -106,3 +106,5 @@ in.readStringList(list);
 参考：
 
 [Android中两种序列化方式的比较Serializable和Parcelable - CSDN博客](https://blog.csdn.net/wangchunlei123/article/details/51345130)
+
+[Android Serializable与Parcelable原理与区别 - CSDN博客](https://blog.csdn.net/androiddevelop/article/details/22108843?utm_source=tuicool&utm_medium=referral)
