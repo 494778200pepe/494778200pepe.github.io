@@ -38,7 +38,7 @@ public class MySerializable implements Serializable{
 ### **Parcelable的实现**
 
  -  步骤 1：自定义实体类，实现Parcelable接口，重写其两个方法。
- -  步骤2：该实体类必须添加一个常量CREATOR（名字大小写都不能使其他的），该常量必须实现Parcelable的内部接口：Parcelable.Creator，并实现该接口中的两个方法。
+ -  步骤 2：该实体类必须添加一个常量CREATOR（名字大小写都不能使其他的），该常量必须实现Parcelable的内部接口：Parcelable.Creator，并实现该接口中的两个方法。
 
 ```
 public class MyParcelable implements Parcelable {
