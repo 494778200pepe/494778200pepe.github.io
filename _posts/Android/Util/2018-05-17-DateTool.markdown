@@ -111,9 +111,9 @@ public class DateTool {
 
 ```
 
+参考：
 
-mazouri/AndroidTools: Android开发工具类库.Toolkit of Android development, make your app developing easier!
-https://github.com/mazouri/AndroidTools
+[mazouri/AndroidTools: Android开发工具类库](https://github.com/mazouri/AndroidTools)
 
 
 
