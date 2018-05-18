@@ -72,7 +72,7 @@ public int keyAt(int index)
 public E valueAt(int index)  
 ```
 #### 查看键所在位置
-由于采用二分法查找键的位置，所以没有的话返回小于0的数值，而不是返回-1，这点要注意，返回的负数其实是表示它在哪个位置就找不到了，如果你存了5个，查找的键大于5个值的话，返回就是-6：
+由于采用`二分法查`找键的位置，所以没有的话返回小于0的数值，而不是返回-1，这点要注意，返回的负数其实是表示它在哪个位置就找不到了，如果你存了5个，查找的键大于5个值的话，返回就是-6：
 ```
 public int indexOfKey(int key)  
 ```
@@ -87,7 +87,7 @@ public int indexOfValue(E value)
 public void delete(int key)  
 public void remove(int key)  
 ```
-但其实，delete和remove的效果是一样的，remove方法中调用了delete方法，remove源码：
+但其实，`delete`和`remove`的效果是一样的，`remove`方法中调用了`delete`方法，`remove`源码：
 ```
 
 public void remove(int key) {  
@@ -98,6 +98,19 @@ public void removeAt(int index)
 public void clear()  
 ```
 最后一个就是清除全部 
+
+### **改**
+```
+public void setValueAt(int index, E value)  
+public void put(int key, E value)  
+```
+
+`put`方法还可以修改键值对，注意：如果键不存在，就会变为添加新键值对
+
+### **其他**
+
+`SparseArray`实现了`Cloneable`接口，还可以调用`clone`方法。
+
 ### SparseArrayCompat
 
 `SparseArrayCompat`其实是一个map容器,它使用了一套算法优化了hashMap;
