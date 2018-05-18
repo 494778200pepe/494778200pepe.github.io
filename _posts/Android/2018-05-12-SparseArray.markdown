@@ -122,9 +122,9 @@ public void put(int key, E value)
 
 [Android编程之SparseArray<E>详解 - CSDN博客](https://blog.csdn.net/pi9nc/article/details/11352491)
 
-[Android开发中高效的数据结构用SparseArray代替HashMap - fancychendong的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/fancylovejava/article/details/45148325)
-
 [Android内存优化（使用SparseArray和ArrayMap代替HashMap） - CSDN博客](https://blog.csdn.net/u010687392/article/details/47809295)
+
+[Android开发中高效的数据结构用SparseArray代替HashMap - fancychendong的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/fancylovejava/article/details/45148325)
 
 [Android中的HashMap,ArrayMap和SparseArray - 简书](https://www.jianshu.com/p/aff3b8990ab3)
 
