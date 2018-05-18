@@ -100,4 +100,4 @@ in.close();
 
 [Java Serializable系列化与反系列化 - CSDN博客](https://blog.csdn.net/smcwwh/article/details/7032764)
 
-[实现Serializable的单例模式 | 学步园](http://www.xuebuyuan.com/1984718.html)
+[实现Serializable的单例模式](http://www.xuebuyuan.com/1984718.html)
