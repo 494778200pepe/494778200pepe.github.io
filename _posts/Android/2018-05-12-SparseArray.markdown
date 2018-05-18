@@ -111,13 +111,16 @@ public void put(int key, E value)
 
 `SparseArray`实现了`Cloneable`接口，还可以调用`clone`方法。
 
-### SparseArrayCompat
 
-`SparseArrayCompat`其实是一个map容器,它使用了一套算法优化了hashMap;
+### **比较**
 
-* 优点：可以节省至少50%的缓存.
-* 缺点：有局限性只针对下面类型：`key: Integer; value: object`
+> `HashMap`内部是使用一个默认容量为16的数组来存储数据的，而数组中每一个元素却又是一个链表的头结点，所以，更准确的来说，`HashMap`内部存储结构是使用哈希表的拉链结构（数组+链表），这种存储数据的方法叫做拉链法。
 
+> `SparseArray`比`HashMap`更省内存，在某些条件下性能更好，主要是因为它避免了对key的自动装箱（int转为Integer类型），它内部则是通过两个数组来进行数据存储的，一个存储key，另外一个存储value，为了优化性能，它内部对数据还采取了压缩的方式来表示稀疏数组的数据，从而节约内存空间，
+
+> `ArrayMap`是一个`<key,value>`映射的数据结构，它设计上更多的是考虑内存的优化，内部是使用两个数组进行数据存储，一个数组记录key的hash值，另外一个数组记录Value值，它和`SparseArray`一样，也会对key使用二分法进行从小到大排序，在添加、删除、查找数据的时候都是先使用二分查找法得到相应的index，然后通过index来进行添加、查找、删除等操作，所以，应用场景和SparseArray的一样，如果在数据量比较大的情况下，那么它的性能将退化至少50%。
+
+> `SparseArrayCompat`其实是一个map容器,它使用了一套算法优化了hashMap.优点：可以节省至少50%的缓存。缺点：有局限性只针对下面类型：`key: Integer; value: object`。
 参考：
 
 [Android编程之SparseArray详解 - CSDN博客](https://blog.csdn.net/pi9nc/article/details/11352491)
