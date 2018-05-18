@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Serializable和Parcelable"
-date:   2018-05-12 17:28:00 +0800
+date:   2018-05-18 08:47:00 +0800
 categories: Android
 tags: Android
 author: pepe
