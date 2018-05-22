@@ -53,7 +53,7 @@ description: 『 Shape 』
 
     `android:shape的几个值`：rectagle矩形（默认），oval椭圆，line水平直线，ring环形。
 
-其中**`android:shape=“ring”`会单独多出几个属性**：
+其中**`android:shape="ring"`会单独多出几个属性**：
 
  - android:innerRadius：内环的半径
  - android:innerRadiusRatio：
@@ -62,7 +62,7 @@ description: 『 Shape 』
  - android:useLevel：只有当我们的shape使用在LevelListDrawable中的时候，这个值为true，否则为false。
 ### **corners**
 
-圆角半径， **仅在`shape=“rectangle”(默认)`时使用**，radius值越大角越圆，radius默认为0。
+圆角半径， **仅在`shape="rectangle"(默认)`时使用**，radius值越大角越圆，radius默认为0。
 
  - android:radius：同时设置四个角的半径，会被下面每个特定的圆角属性覆盖。可以是0dp，表示没有圆角。
 
@@ -87,12 +87,12 @@ description: 『 Shape 』
 
  - android:endColor：表示渐变的结束颜
 
- - android:gradientRadius：渐变半径，当`android:type=“radial”`时，需要设置
+ - android:gradientRadius：渐变半径，当`android:type="radial"`时，需要设置
 
  - android:type：表示渐变的类型，有三种，分别是：
 
   - "linear"	线性变化（默认）
-  - "radial"	辐射渐变，startColor即辐射中心的颜色，当type为radial时，我们要设置`android:gradientRadius=“”`，这个表示渐变的半径（线性渐变和扫描渐变不需要设置）
+  - "radial"	辐射渐变，startColor即辐射中心的颜色，当type为radial时，我们要设置`android:gradientRadius=""`，这个表示渐变的半径（线性渐变和扫描渐变不需要设置）
   - "sweep"	扫描渐变
  - android:useLevel：只有当我们的shape使用在LevelListDrawable中的时候，这个值为true，否则为false。
 ### **padding**
