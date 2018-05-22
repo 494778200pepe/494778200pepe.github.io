@@ -11,7 +11,7 @@ description: 『 AIDL 』
 
 ### **最简单的实现**
  
-    第一步，定义AIDL文件：
+第一步，定义AIDL文件：
     
 ```
 //IAirService.aidl
@@ -23,7 +23,7 @@ interface IAirService {
 }
 ```
 
-    第二步，服务端(Service)：
+第二步，服务端(Service)：
     
 ```
     private final IAirService.Stub mBinder = new IAirService.Stub() {
@@ -41,7 +41,7 @@ interface IAirService {
     }
 ```
 
-    第三部，客户端(前台APP)：
+第三步，客户端(前台APP)：
     
 ```
     public void sendSocketMessage(String[] msg) {
@@ -94,9 +94,10 @@ interface IAirService {
     这样，一个简单的AIDL调用就完成了，客服端(前台APP)可以调用服务端(Service)的方法了。
 
 ### **双向通信**
+
     通过在服务端(Service)注册一个回调，实现双向通信。
     
-    第一步，定义AIDL文件：
+第一步，定义AIDL文件：
     
 ```
 //IAirService.aidl
@@ -124,7 +125,7 @@ interface ICallback {
   
 ```
 
-    第二步，服务端(Service)：
+第二步，服务端(Service)：
     
 ```
     private ICallback mCallback;
@@ -158,7 +159,7 @@ interface ICallback {
     
 ```
 
-    第三部，客户端(前台APP)：
+第三步，客户端(前台APP)：
     
 ```
     // 连接服务端
