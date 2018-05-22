@@ -15,3 +15,7 @@ description: 『 书单 』
 * 《算法》
 * 《Linux设备驱动开发详解：基于新的Linux 4.0内核》
 * 《时间管理-如何充分利用你的24小时》
+
+
+阿里技术
+https://mp.weixin.qq.com/s/LDVyYCESvllL1n8v5kSmsQ

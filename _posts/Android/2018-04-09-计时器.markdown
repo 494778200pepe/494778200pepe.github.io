@@ -8,6 +8,10 @@ author: pepe
 description: 『 计时器 』
 ---
 
+Handler 与 Thread()
+
+Handler 与 Messager(Runnable)
+
 
 
 
