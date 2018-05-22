@@ -38,7 +38,7 @@ public class MyThreadPool {
     }
 
     /**
-     * 执行任务
+     * schedule(callable/runnable, delay,unit):第一个参数任务，第二个参数表示执行任务前等待的时间，第三参数表示时间单位。
      * @param task         任务
      * @param initialDelay 执行延迟
      * @return 任务
@@ -48,16 +48,27 @@ public class MyThreadPool {
     }
 
     /**
-     * schedule:下一次的执行时间点=上一次程序  完成  执行的时间点+间隔时间
-     * scheduleAtFixedRate:下一次的执行时间点=上一次程序  开始  执行的时间点+间隔时间
+     * 第一个参数表示周期线执行的任务，第二个参数表示第一次执行前的延迟时间，第三个参数表示任务启动间隔时间，第四个参数表示时间单位。虽然任务类型是Runnable但该方法有返回值ScheduledFuture。可以通过该对象获取线程信息。
      * @param task         任务
      * @param initialDelay 执行延迟
      * @param period       执行周期
      * @return 任务
      */
-    public ScheduledFuture executeTask(TimerTask task, long initialDelay,
-                                       long period) {
+    public ScheduledFuture executeAtFixedTask(TimerTask task, long initialDelay,
+                                              long period) {
         return getScheduledThreadPoolExecutor().scheduleAtFixedRate(task, initialDelay, period, TimeUnit.MILLISECONDS);
+    }
+
+    /**
+     * 与scheduleAtFixedRate方法类似，不同的是第三个参数表示前一次结束的时间和下一次任务启动的间隔时间。
+     * @param task         任务
+     * @param initialDelay 执行延迟
+     * @param period       前一次结束的时间和下一次任务启动的间隔时间
+     * @return
+     */
+    public ScheduledFuture executeWithFixedTask(TimerTask task, long initialDelay,
+                                                long period) {
+        return getScheduledThreadPoolExecutor().scheduleWithFixedDelay(task, initialDelay, period, TimeUnit.MILLISECONDS);
     }
 
     /**
@@ -80,14 +91,25 @@ public class MyThreadPool {
     }
 
     /**
-     * 执行任务
+     * 第一个参数表示周期线执行的任务，第二个参数表示第一次执行前的延迟时间，第三个参数表示任务启动间隔时间，第四个参数表示时间单位。虽然任务类型是Runnable但该方法有返回值ScheduledFuture。可以通过该对象获取线程信息。
      * @param runnable     任务
      * @param initialDelay 执行延迟
      * @param period       执行周期
      * @return 任务
      */
-    public void executeTask(Runnable runnable, long initialDelay, long period) {
+    public void executeAtFixedTask(Runnable runnable, long initialDelay, long period) {
         getScheduledThreadPoolExecutor().scheduleAtFixedRate(runnable, initialDelay, period, TimeUnit.MILLISECONDS);
+    }
+
+    /**
+     * 与scheduleAtFixedRate方法类似，不同的是第三个参数表示前一次结束的时间和下一次任务启动的间隔时间。
+     * @param runnable     任务
+     * @param initialDelay 执行延迟
+     * @param period       前一次结束的时间和下一次任务启动的间隔时间
+     * @return
+     */
+    public void executeWithFixedTask(Runnable runnable, long initialDelay, long period) {
+        getScheduledThreadPoolExecutor().scheduleWithFixedDelay(runnable, initialDelay, period, TimeUnit.MILLISECONDS);
     }
 
     /**
