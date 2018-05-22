@@ -132,6 +132,7 @@ description: 『 layer-list 』
 
 [Android开发：shape和selector和layer-list的（详细说明） - CSDN博客](https://blog.csdn.net/brokge/article/details/9713041)
 
+[Android样式的开发:layer-list篇](http://keeganlee.me/post/android/20150909)
 
 
 
