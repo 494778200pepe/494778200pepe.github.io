@@ -12,6 +12,7 @@ description: 『 AIDL 』
 ### **最简单的实现**
  
     第一步，定义AIDL文件：
+    
 ```
 //IAirService.aidl
 package com.hopechart.airservice;
@@ -21,7 +22,9 @@ interface IAirService {
 
 }
 ```
+
     第二步，服务端(Service)：
+    
 ```
     private final IAirService.Stub mBinder = new IAirService.Stub() {
 
@@ -36,9 +39,10 @@ interface IAirService {
     public IBinder onBind(Intent intent) {
         return mBinder;
     }
-    
 ```
+
     第三部，客户端(前台APP)：
+    
 ```
     public void sendSocketMessage(String[] msg) {
         Logger.d("===> sendSocketMessage  msg = " + msg);
@@ -93,6 +97,7 @@ interface IAirService {
     通过在服务端(Service)注册一个回调，实现双向通信。
     
     第一步，定义AIDL文件：
+    
 ```
 //IAirService.aidl
 package com.hopechart.airservice;
@@ -118,7 +123,9 @@ interface ICallback {
 }
   
 ```
+
     第二步，服务端(Service)：
+    
 ```
     private ICallback mCallback;
     private final IAirService.Stub mBinder = new IAirService.Stub() {
@@ -150,7 +157,9 @@ interface ICallback {
     }
     
 ```
+
     第三部，客户端(前台APP)：
+    
 ```
     // 连接服务端
     public void sendSocketMessage(String[] msg) {
