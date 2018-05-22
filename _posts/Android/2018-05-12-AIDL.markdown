@@ -9,6 +9,260 @@ description: 『 AIDL 』
 ---
 > AIDL是一个缩写，全称是Android Interface Definition Language，也就是Android接口定义语言。设计这门语言的目的是为了实现进程间通信，尤其是在涉及多进程并发情况下的进程间通信。
 
+### **最简单的实现**
+ 
+    第一步，定义AIDL文件：
+```
+//IAirService.aidl
+package com.hopechart.airservice;
+interface IAirService {
+
+    void sendSocketMessage(String msg1,String msg2);
+
+}
+```
+    第二步，服务端(Service)：
+```
+    private final IAirService.Stub mBinder = new IAirService.Stub() {
+
+        @Override
+        public void sendSocketMessage(String msg1, String msg2) throws RemoteException {
+           // do something...
+        }
+    };
+    
+    // 同时在绑定成功时，返回 Binder 对象
+    @Override
+    public IBinder onBind(Intent intent) {
+        return mBinder;
+    }
+    
+```
+    第三部，客户端(前台APP)：
+```
+    public void sendSocketMessage(String[] msg) {
+        Logger.d("===> sendSocketMessage  msg = " + msg);
+        if (iAirService != null) {
+            try {
+                iAirService.sendSocketMessage(msg[0], msg[1]);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            connectAirService();
+        }
+    }
+
+    private void connectAirService() {
+        if (System.currentTimeMillis() - lastToBindAirService > AIDL_BIND_CONN_INTV) {
+            startAirService();
+            bindAirService();
+        }
+    }
+
+    private void bindAirService() {
+        Intent intent = new Intent(ACTION_BIND_AIRS);
+        intent.setPackage(PKG_AIR_SERVICE);
+        mContext.bindService(intent, new AirServiceConnection(), Service.BIND_AUTO_CREATE);
+        lastToBindAirService = System.currentTimeMillis();
+    }
+
+    private void startAirService() {
+        Intent intent = new Intent();
+        intent.setAction(ACTION_START_AIRS);
+        mContext.sendBroadcast(intent);
+    }
+
+    private final class AirServiceConnection implements ServiceConnection {
+
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            iAirService = IAirService.Stub.asInterface(service);        
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+            iAirService = null;           
+        }
+    }
+```
+
+    这样，一个简单的AIDL调用就完成了，客服端(前台APP)可以调用服务端(Service)的方法了。
+
+### **双向通信**
+    通过在服务端(Service)注册一个回调，实现双向通信。
+    
+    第一步，定义AIDL文件：
+```
+//IAirService.aidl
+package com.hopechart.airservice;
+import com.hopechart.airservice.ICallback;
+interface IAirService {
+
+    void sendSocketMessage(String msg1,String msg2);
+    
+    void registerCallback(ICallback cb);
+
+    void unregisterCallback();
+
+}
+//ICallback.aidl
+package com.hopechart.airservice;
+interface ICallback {
+	  
+	void sendKeyData(int what);  
+
+    void sendBackOff(int seconds);
+
+    void sendForward(int seconds);
+}
+  
+```
+    第二步，服务端(Service)：
+```
+    private ICallback mCallback;
+    private final IAirService.Stub mBinder = new IAirService.Stub() {
+
+        @Override
+        public void sendSocketMessage(String msg1, String msg2) throws RemoteException {
+           // do something...
+        }
+        
+        @Override
+        public void registerCallback(ICallback cb) throws RemoteException {
+            if (cb != null) {
+                mCallback = cb;
+                // 之后就可以通过 mCallback 直接调用 客服端的方法了
+                // 如果有多个客户端，可以对 Callback 做标记
+            }
+        }
+
+        @Override
+        public void unregisterCallback() throws RemoteException {
+            mCallback = null;
+        }
+    };
+    
+    // 同时在绑定成功时，返回 Binder 对象
+    @Override
+    public IBinder onBind(Intent intent) {
+        return mBinder;
+    }
+    
+```
+    第三部，客户端(前台APP)：
+```
+    // 连接服务端
+    public void sendSocketMessage(String[] msg) {
+        Logger.d("===> sendSocketMessage  msg = " + msg);
+        if (iAirService != null) {
+            try {
+                iAirService.sendSocketMessage(msg[0], msg[1]);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            connectAirService();
+        }
+    }
+    
+    /**
+     * 注册后台服务回调
+     */
+    public void registerCallback(Handler handler) {
+        if (iFloatMediaPlayer != null) {
+            try {
+                iFloatMediaPlayer.registerCallback(Callback.getInstance().setHandler(handler));
+            } catch (Exception e) {
+            }
+        } else {
+            connectFloatMediaPlayer();
+        }
+    }
+
+    /**
+     * 取消后台服务的回调
+     */
+    public void unregisterCallback() {
+        if (iFloatMediaPlayer != null) {
+            try {
+                iFloatMediaPlayer.unregisterCallback();
+            } catch (Exception e) {
+            }
+        } else {
+            connectFloatMediaPlayer();
+        }
+    }
+
+    private void connectAirService() {
+        if (System.currentTimeMillis() - lastToBindAirService > AIDL_BIND_CONN_INTV) {
+            startAirService();
+            bindAirService();
+        }
+    }
+
+    private void bindAirService() {
+        Intent intent = new Intent(ACTION_BIND_AIRS);
+        intent.setPackage(PKG_AIR_SERVICE);
+        mContext.bindService(intent, new AirServiceConnection(), Service.BIND_AUTO_CREATE);
+        lastToBindAirService = System.currentTimeMillis();
+    }
+
+    private void startAirService() {
+        Intent intent = new Intent();
+        intent.setAction(ACTION_START_AIRS);
+        mContext.sendBroadcast(intent);
+    }
+
+    private final class AirServiceConnection implements ServiceConnection {
+
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            iAirService = IAirService.Stub.asInterface(service);        
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+            iAirService = null;           
+        }
+    }
+// Callback.java
+public class Callback extends ICallback.Stub {
+    private static Callback instance = new Callback();
+    private Handler mMainHandler;
+
+    private Callback() {
+    }
+
+    public static Callback getInstance() {
+        return instance;
+    }
+
+    public Callback setHandler(Handler mainHandler) {
+        mMainHandler = mainHandler;
+        return this;
+    }
+
+    @Override
+    public void sendKeyData(int what) throws RemoteException {
+        if (null != mMainHandler) {
+            mMainHandler.sendEmptyMessage(what);
+        }
+    }
+
+    @Override
+    public void sendBackOff(int seconds) throws RemoteException {
+        // do something...
+    }
+
+    @Override
+    public void sendForward(int seconds) throws RemoteException {
+        // do something...
+    }
+}
+```    
+    
+    
 #### **默认支持的数据类型**
  
  - Java中的八种基本数据类型，包括 byte，short，int，long，float，double，boolean，char。
