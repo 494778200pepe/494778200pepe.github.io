@@ -5,7 +5,7 @@ date:   2018-05-22 11:37:00 +0800
 categories: Android
 tags: Android
 author: pepe
-description: 『 Shape 』
+description: 『 selector 』
 ---
 
 
