@@ -60,6 +60,7 @@ description: 『 Shape 』
  - android:thickness：
  - android:thicknessRatio：
  - android:useLevel：只有当我们的shape使用在LevelListDrawable中的时候，这个值为true，否则为false。
+ 
 ### **corners**
 
 圆角半径， **仅在`shape="rectangle"(默认)`时使用**，radius值越大角越圆，radius默认为0。
@@ -73,6 +74,7 @@ description: 『 Shape 』
  - android:bottomLeftRadius：设置左下角的半径
 
  - android:bottomRightRadius：设置右下角的半径
+ 
 ### **gradient**
 
  - android:angle：**angle表示渐变的起始位置**，这个值必须为45的倍数，包括0，且默认为0，0表示从左往右渐变，逆时针旋转，依次是45，90，135.....，90表示从下往上渐变（亲自测试过），270表示从上往下渐变，剩下的大家依次去推理。
@@ -95,6 +97,7 @@ description: 『 Shape 』
   - "radial"	辐射渐变，startColor即辐射中心的颜色，当type为radial时，我们要设置`android:gradientRadius=""`，这个表示渐变的半径（线性渐变和扫描渐变不需要设置）
   - "sweep"	扫描渐变
  - android:useLevel：只有当我们的shape使用在LevelListDrawable中的时候，这个值为true，否则为false。
+ 
 ### **padding**
 
 内容与视图边界的距离
@@ -106,6 +109,7 @@ description: 『 Shape 』
  - android:right：右边填充距离
 
  - android:bottom：底部填充距离
+ 
 ### **size**
 这个shape的大小。
 
