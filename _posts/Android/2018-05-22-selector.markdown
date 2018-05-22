@@ -1,0 +1,180 @@
+---
+layout: post
+title:  "selector"
+date:   2018-05-22 11:37:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 Shape 』
+---
+
+
+### **Selector**
+
+    selector就是状态列表（StateList）， 它分为两种，一种Color-Selector 和Drawable-Selector。
+    
+### **Drawable-Selector**
+
+`drawable-selector`是背景图状态列表，可以跟图片一样使用，背景会根据组件的状态变化而变化。文件存储于
+
+Drawable-Selector有三个属性：
+
+ -  `android:constantSize=["true" | "false"]`：drawable的大小是否当中状态变化，true表示是变化，false表示不变换，默认为false
+ - android:dither=["true" | "false"]：当位图与屏幕的像素配置不一样时(例如，一个ARGB为8888的位图与RGB为555的屏幕)会自行递色(dither)。设置为false时不可递色。默认true
+ - `android:variablePadding=["true" | "false"]` ：内边距是否变化，默认false
+
+drawable的item中可以有以下属性：
+ 
+```
+<item
+        android:drawable="@[package:]drawable/drawable_resource"//图片资源
+        android:state_pressed=["true" | "false"]//是否触摸
+        android:state_focused=["true" | "false"]//是否获取到焦点
+        android:state_hovered=["true" | "false"]//光标是否经过
+        android:state_selected=["true" | "false"]//是否选中
+        android:state_checkable=["true" | "false"]//是否可勾选
+        android:state_checked=["true" | "false"]//是否勾选
+        android:state_enabled=["true" | "false"]//是否可用
+        android:state_activated=["true" | "false"]//是否激活
+        android:state_window_focused=["true" | "false"] />//所在窗口是否获取焦点
+```
+下面是一个例子：
+```
+<?xml version="1.0" encoding="utf-8" ?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- 默认时的背景图片-->
+    <item android:drawable="@drawable/pic1" />
+
+<!-- 没有焦点时的背景图片 -->
+    <item android:state_window_focused="false"
+                android:drawable="@drawable/pic1" />
+
+<!-- 非触摸模式下获得焦点并单击时的背景图片 -->
+    <item android:state_focused="true"
+                android:state_pressed="true"
+                android:drawable= "@drawable/pic2" />
+
+<!-- 触摸模式下单击时的背景图片-->
+    <item android:state_focused="false"
+                android:state_pressed="true"
+                android:drawable="@drawable/pic3" />
+
+<!--选中时的图片背景-->
+    <item android:state_selected="true"
+                android:drawable="@drawable/pic4" />
+
+<!--获得焦点时的图片背景-->
+    <item android:state_focused="true"
+                android:drawable="@drawable/pic5" />
+</selector>
+```        
+注意：
+
+> Item顺序是有讲究的，条件限定越细致，则应该放到前面。比如这儿如果把1，2行和3，4行的item交换，那么pressed的就永远无法触发了，因为有item已经满足条件返回了。可以理解为代码中的if语句。
+
+
+
+以下是配置button中的文字效果：
+drawable/button_font.xml
+```    
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:state_selected="true" android:color="#FFF" />
+        <item android:state_focused="true" android:color="#FFF" />
+        <item android:state_pressed="true" android:color="#FFF" />
+        <item android:color="#000" />
+</selector>
+```    
+Button还可以实现更复杂的效果，例如渐变
+drawable/button_color.xml
+```    
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">                 /
+        <item android:state_pressed="true">//定义当button 处于pressed 状态时的形态。
+                <shape>
+                        <gradient android:startColor="#8600ff" />
+                        <stroke     android:width="2dp" android:color="#000000" />
+                        <corners android:radius="5dp" />
+                        <padding android:left="10dp" android:top="10dp"
+                                         android:bottom="10dp" android:right="10dp"/>
+                </shape>
+        </item>
+        <item android:state_focused="true">//定义当button获得 focus时的形态
+                <shape>
+                        <gradient android:startColor="#eac100"/>
+                        <stroke     android:width="2dp" android:color="#333333"    color="#ffffff"/>
+                        <corners android:radius="8dp" />
+                        <padding android:left="10dp" android:top="10dp"
+                                         android:bottom="10dp" android:right="10dp"/>
+                </shape>
+        </item>
+</selector>
+```    
+    最后，需要在包含 button的xml文件里添加两项。假如是 main.xml 文件，
+我们需要在<Button />里加两项。 
+```    
+     android：focusable="true" 
+     android:backgroud="@drawable/button_color"
+```    
+这样当你使用Button的时候就可以甩掉系统自带的那黄颜色的背景了，实现个性化的背景，配合应用的整体布局非常之有用啊。
+
+### **ListView使用xml文件**
+
+ - 1.方法一：在listview中配置android:listSelector="@drawable/xxx"
+或者在listview的item中添加属性android：background="@drawable/xxx"
+
+ - 2.方法二：
+  Drawable drawable = getResources().getDrawable(R.drawable.xxx);  
+  ListView.setSelector(drawable);
+  
+但是这样会出现列表有时候为黑的情况，需要加上：android:cacheColorHint="@android:color/transparent"使其透明。
+
+### **Color-Selector**
+
+`color-selector`，顾名思义就是颜色状态列表，可以跟color一样使用，颜色会随着组件的状态而改变。文件的位置存储于
+
+具体语法如下：
+```
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:color="hex_color"               //颜色值，#RGB,$ARGB,#RRGGBB,#AARRGGBB
+        android:state_pressed=["true" | "false"]//是否触摸
+        android:state_focused=["true" | "false"]//是否获得焦点
+        android:state_selected=["true" | "false"]//是否被状态
+        android:state_checkable=["true" | "false"]//是否可选
+        android:state_checked=["true" | "false"]//是否选中
+        android:state_enabled=["true" | "false"]//是否可用
+        android:state_window_focused=["true" | "false"] />//是否窗口聚焦
+</selector>
+```
+下面通过一个具体示例为大家展示：
+ 
+在/res/color/文件夹下新建test_color_selector.xml
+```
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"
+          android:color="#ffff0000"/> <!-- pressed -->
+    <item android:state_focused="true"
+          android:color="#ff0000ff"/> <!-- focused -->
+    <item android:color="#ff000000"/> <!-- default -->
+</selector>
+``` 
+调用：
+```
+    <Button
+        android:id="@+id/bt_about"
+        style="@style/Button_style"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/test_color_selector"
+        android:text="@string/about" />
+``` 
+
+
+
+
+
+
