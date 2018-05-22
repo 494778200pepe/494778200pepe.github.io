@@ -72,11 +72,9 @@ drawable的item中可以有以下属性：
 
 > Item顺序是有讲究的，条件限定越细致，则应该放到前面。比如这儿如果把1，2行和3，4行的item交换，那么pressed的就永远无法触发了，因为有item已经满足条件返回了。可以理解为代码中的if语句。
 
-
-
 以下是配置button中的文字效果：
-drawable/button_font.xml
 ```    
+// drawable/button_font.xml
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
         <item android:state_selected="true" android:color="#FFF" />
@@ -86,8 +84,9 @@ drawable/button_font.xml
 </selector>
 ```    
 Button还可以实现更复杂的效果，例如渐变
-drawable/button_color.xml
-```    
+
+```   
+// drawable/button_color.xml
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">                 /
         <item android:state_pressed="true">//定义当button 处于pressed 状态时的形态。
