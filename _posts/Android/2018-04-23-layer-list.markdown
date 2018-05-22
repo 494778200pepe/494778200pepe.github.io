@@ -8,8 +8,40 @@ author: pepe
 description: 『 layer-list 』
 ---
 
-### ****
+### **layer-list**
 
+> 将多个 bitmap 或shape、selector按照顺序层叠起来
+
+### **应用**
+
+```
+<?xml version="1.0" encoding="utf-8"?>    
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >    
+    
+    <item>    
+        <shape android:shape="rectangle" >    
+            <solid android:color="@color/green" />    
+        </shape>    
+    </item>    
+    
+    <item android:bottom="6dp">    
+        <shape android:shape="rectangle" >    
+            <solid android:color="@color/white" />    
+        </shape>    
+    </item>    
+  <!-- 第三层 通过叠层 左下右间距 画钩子 -->  
+    <item    
+        android:bottom="1dp"    
+        android:left="1dp"    
+        android:right="1dp">    
+        <shape android:shape="rectangle" >    
+            <solid android:color="@color/white" />    
+        </shape>    
+    </item>    
+    
+</layer-list> 
+```
+![EditText]({{ site.baseurl }}/assets/images/android/layer-list1.png)
 
 ### **layer-list 结合 bitmap**
 ```
@@ -36,6 +68,7 @@ description: 『 layer-list 』
     android:layout_width="wrap_content"  
     android:src="@drawable/layers" />  
 ```
+![bitmap]({{ site.baseurl }}/assets/images/android/layer-list2.png)
 
 ### **糅合三个标签**
 ```
