@@ -119,14 +119,14 @@ Button还可以实现更复杂的效果，例如渐变
 
 ### **ListView使用xml文件**
 
- - 1.方法一：在listview中配置android:listSelector="@drawable/xxx"
-或者在listview的item中添加属性android：background="@drawable/xxx"
+ - 1.方法一：在l`istview`中配置`android:listSelector="@drawable/xxx"`
+或者在`listview`的`item`中添加属性`android：background="@drawable/xxx"`
 
  - 2.方法二：
-  Drawable drawable = getResources().getDrawable(R.drawable.xxx);  
-  ListView.setSelector(drawable);
+  `Drawable drawable = getResources().getDrawable(R.drawable.xxx);  
+  ListView.setSelector(drawable);`
   
-但是这样会出现列表有时候为黑的情况，需要加上：android:cacheColorHint="@android:color/transparent"使其透明。
+但是这样会出现列表有时候为黑的情况，需要加上：`android:cacheColorHint="@android:color/transparent"`使其透明。
 
 ### **Color-Selector**
 
