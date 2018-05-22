@@ -173,6 +173,10 @@ Button还可以实现更复杂的效果，例如渐变
         android:text="@string/about" />
 ``` 
 
+参考：
+
+[Android样式的开发:selector篇](http://keeganlee.me/post/android/20150905)
+
 
 
 
