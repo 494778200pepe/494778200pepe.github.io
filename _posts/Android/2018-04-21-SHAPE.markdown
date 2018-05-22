@@ -139,11 +139,16 @@ description: 『 Shape 』
 
 dashWidth和dashGap两个属性，如果不设置则为实线，并且只要其中一个设置为0dp，则边框仍然为实线边框
 
+### **动态设置**
+```
+GradientDrawable drawable =(GradientDrawable)view.getBackground();
+//GradientDrawable drawable = new GradientDrawable();
+drawable.setCornerRadius(5);
+drawable.setStroke(1, Color.parseColor("#cccccc"));
+drawable.setColor(Color.parseColor("#eeeeee"));
+view.setBackgroundDrawable(drawable);
+```
 
-
-[Android动态设置Shape - CSDN博客](https://blog.csdn.net/snailbaby_soko/article/details/53289276)
-
-[在代码中修改Shape的solid属性的color值 - 简书](https://www.jianshu.com/p/5353745f07db)
 
 
 
