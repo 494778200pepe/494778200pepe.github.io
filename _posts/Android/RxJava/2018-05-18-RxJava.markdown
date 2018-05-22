@@ -10,6 +10,7 @@ description: 『 RxJava系列一 』
 
 
 
+[给 Android 开发者的 RxJava 详解](http://gank.io/post/560e15be2dca930e00da1083)
 
 [给初学者的RxJava2.0教程(一) - 简书](https://www.jianshu.com/p/464fa025229e)
 
