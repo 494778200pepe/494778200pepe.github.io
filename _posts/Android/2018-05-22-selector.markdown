@@ -19,8 +19,8 @@ description: 『 Shape 』
 
 Drawable-Selector有三个属性：
 
- -  `android:constantSize=["true" | "false"]`：drawable的大小是否当中状态变化，true表示是变化，false表示不变换，默认为false
- - android:dither=["true" | "false"]：当位图与屏幕的像素配置不一样时(例如，一个ARGB为8888的位图与RGB为555的屏幕)会自行递色(dither)。设置为false时不可递色。默认true
+ - `android:constantSize=["true" | "false"]`：drawable的大小是否当中状态变化，true表示是变化，false表示不变换，默认为false
+ - `android:dither=["true" | "false"]`：当位图与屏幕的像素配置不一样时(例如，一个ARGB为8888的位图与RGB为555的屏幕)会自行递色(dither)。设置为false时不可递色。默认true
  - `android:variablePadding=["true" | "false"]` ：内边距是否变化，默认false
 
 drawable的item中可以有以下属性：
@@ -108,16 +108,17 @@ Button还可以实现更复杂的效果，例如渐变
                 </shape>
         </item>
 </selector>
+```   
+ 
+最后，需要在包含 button的xml文件里添加两项。假如是 `main.xml` 文件，
+我们需要在`<Button />`里加两项。 
 ```    
-    最后，需要在包含 button的xml文件里添加两项。假如是 main.xml 文件，
-我们需要在<Button />里加两项。 
-```    
-     android：focusable="true" 
+     android:focusable="true" 
      android:backgroud="@drawable/button_color"
 ```    
 这样当你使用Button的时候就可以甩掉系统自带的那黄颜色的背景了，实现个性化的背景，配合应用的整体布局非常之有用啊。
 
-### **ListView使用xml文件**
+### **ListView的使用**
 
  - 1.方法一：在l`istview`中配置`android:listSelector="@drawable/xxx"`
 或者在`listview`的`item`中添加属性`android：background="@drawable/xxx"`
