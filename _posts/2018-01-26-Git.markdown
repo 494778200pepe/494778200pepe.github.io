@@ -106,5 +106,6 @@ git branch -r -a -l
 
 [Git 命令梳理 - 简书](https://www.jianshu.com/p/2f26b7b98298)
 
+[介绍Android Studio使用Git最详细的文章](https://mp.weixin.qq.com/s/Uq3s9HBfBIEo70O1ysTl3g)
 
 

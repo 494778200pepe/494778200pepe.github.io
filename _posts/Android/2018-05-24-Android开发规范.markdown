@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Android开发规范"
+date:   2018-05-24 15:40:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 Android开发规范 』
+---
+
+[Android 你应该注意的开发规范](https://mp.weixin.qq.com/s/Xn7fM4zsNrvpDW8xW2m_hQ)
