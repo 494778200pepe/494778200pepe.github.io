@@ -42,9 +42,12 @@ description: 『 SurfaceView 』
 8、屏幕解锁 
  * Activity 调用顺序: `onResume()`
  * SurfaceView 什么方法都不调用
-
+ 
+9、跳转到一个非完全覆盖的activity时也不会调`surfaceDestroyed`，返回时也不会调`surfaceCreated`
 
 参考：
 
 
 [ Activity 和 SurfaceView 的生命周期](http://www.liuxiao.org/2016/12/android-activity-%E5%92%8C-surfaceview-%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/)
+
+[MipcaActivityCapture代码阅读------surfaceview的生命周期 - CSDN博客](https://blog.csdn.net/yuxmdef1/article/details/18046237)
