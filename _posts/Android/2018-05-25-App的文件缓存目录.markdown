@@ -95,7 +95,29 @@ getObbDirs()                    /storage/0C0A-C469/Android/obb/com.hopechart.tes
 
 ### **SD卡公有目录**
 
+该目录下的文件卸载应用之后还会留存，所以为了 SD 卡的整洁度，不要随便在 SD 卡的根目录下面创建文件，最好以应用名字创建一个目录，所有的需要卸载之后留存或者需要给其他应用共享的文件都放到该目录下，不要在根目录下创建文件。
 
+* `Environment.getExternalStorageState()`
+这个函数用来获取 SD 卡的挂载状态，如果传入参数 path 则是获取该路径的的挂载状态，比如这个目录被用户的 PC 挂载，或者从设备中移除，或者其他问题发生，状态的返回是不一样的；
+* `Environment.getExternalStorageDirectory()`
+该函数用来返回 SD 卡的根目录，即 /storage/emulated/0，注意不要在根目录下创建文件，强烈建立创建一个子目录去操作，要不然会污染 SD 卡的主目录，该目录所有应用都可操作，为共享目录；
+* `Environment.getDownloadCacheDirectory()`
+该函数用来返回 SD 卡下面的下载缓存目录；
+* `Environment.getDataDirectory()`
+该函数用来获取用户的数据目录；
+* `Environment.getExternalStoragePublicDirectory(String type)`
+该函数用来根据类型返回相关目录，类型为 Environment 的一些变量，传入的类型参数不能是 null，返回的目录路径有可能不存在，所以必须在使用之前确认一下，没有就创建该目录；
+* `Environment.getRootDirectory()`
+该函数用来返回根 System 目录，只挂载为只读;
+
+```
+Environment.getDataDirectory();                 /data
+Environment.getExternalStorageState()           mounted
+Environment.getExternalStorageDirectory()       /storage/emulated/0
+Environment.getDownloadCacheDirectory()         /data/cache
+Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC)          /storage/emulated/0/Music
+Environment.getRootDirectory()                  /system
+```
 
 
 
