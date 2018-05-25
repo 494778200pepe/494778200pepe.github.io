@@ -40,6 +40,53 @@ getPackageCodePath()                        /data/app/com.hopechart.test-1/base.
 getPackageResourcePath()                    /data/app/com.hopechart.test-1/base.apk
 ```
 
+#### 读写数据
+
+> context还可以通过`openFileInput(name)`和`openFileOutput(name, mode)`获取`FileInputStream`和`FileOutputStream`，分别对应的是`/data/data/[packagename]/files/`下的文件输入流和输出流。name是文件名，mode指定打开文件的模式，有以下几种:
+
+* Context.MODE_PRIVATE                  默认模式，表示文件只能被自身应用访问，如果向文件中写入数据，会覆盖之前数据
+* Context.MODE_MODE_APPEND              文件写入时，文件不存在则创建文件，存在则在已有的内容上追加
+* Context.MODE_MODE_WORLD_READABLE      表示文件可以被其他应用读取
+* Context.MODE_WORLD_WRITEABLE          表示文件可以被其他文件写入
+
+当调用openFileOutput时，如果文件不存在，系统会创建文件。
+
+```
+    // 读取数据
+    public String readData(String filaName) throws IOException, JSONException {
+        BufferedReader reader = null;
+        StringBuilder dataStr = new StringBuilder();
+        try {
+
+            InputStream in = mContext.openFileInput(filaName);
+            reader = new BufferedReader(new InputStreamReader(in));
+            String line = null;
+            while ((line = reader.readLine()) != null) {
+                dataStr.append(line);
+            }
+        } catch (FileNotFoundException e) {
+
+        } finally {
+            if (reader != null){
+                reader.close();
+            }
+        }
+        return dataStr.toString();
+    }
+
+    // 写入数据
+    public void writeData(String fileName,String data) throws JSONException, IOException {
+        Writer writer = null;
+        try {
+            OutputStream out = mContext.openFileOutput(fileName, Context.MODE_PRIVATE);
+            writer = new OutputStreamWriter(out);
+            writer.write(data);
+        } finally {
+            if (writer != null)
+                writer.close();
+        }
+    }
+```
 ### **SD卡私有目录**
 
 > 该目录下的文件卸载应用之后会自动删除。
