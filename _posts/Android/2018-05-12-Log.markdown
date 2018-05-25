@@ -43,11 +43,14 @@ description: 『 Log 』
 * `logcat -c`:可以将之前的日志信息清空, 重新开始输出日志信息;
 * `logcat -t 5`:可以输出最近的5行日志, 并且不会阻塞;
 
-* `logcat | grep -i pepe`:管道过滤，-i 表示 忽略大小写。
-* `logcat | grep "^..MyApp"`:过滤MyApp  这个字符串，所有包含这个字符串的日志都会输出
-* `logcat | grep "^E.MyApp"`:仅显示 Error 级别 tag 为 MyApp 的输出：
-* `logcat | grep "^..MyApp\|^..MyActivity"`:匹配 tag 为 MyApp 和 MyActivity 的输出
+* `logcat | grep -i pepe`:管道过滤，过滤 pepe 这个字符串，-i 表示 忽略大小写。
+* `logcat -v brief | grep "^..MyApp"`:忽略前两个字符，匹配 MyApp 这个字符串，进行输出
+* `logcat -v brief | grep "^E.MyApp"`:仅显示 Error 级别 tag 为 MyApp 的输出：
+* `logcat -v brief | grep "^..MyApp\|^..MyActivity"`:匹配 tag 为 MyApp 和 MyActivity 的输出
+
+* `logcat | grep -v pepe`:过滤含有 字符串 pepe 的输出
 * `logcat -v brief | grep -v "^..video"`:先回复默认的输出格式，然后过滤TAG为 video 的输出
+
 * `logcat | grep pid:匹配pid，这个是进程id，的输出
 
 * `cat log.txt | grep pepe > my.log`:过滤log.txt中TAG为pepe的输出，并重定向到 my.log中。
