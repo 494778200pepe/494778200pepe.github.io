@@ -166,8 +166,9 @@ Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC)      
 Environment.getRootDirectory()                  /system
 ```
 
+参考：
 
-
+[android 最全缓存目录获取方式和函数解析 - CSDN博客](https://blog.csdn.net/self_study/article/details/58587412)
 
 
 
