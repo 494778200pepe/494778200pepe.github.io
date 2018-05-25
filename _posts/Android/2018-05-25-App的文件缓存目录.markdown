@@ -29,19 +29,66 @@ description: 『 App的文件缓存目录 』
 该目录可以使用函数 `getFilesDir()` 获取，`openFileInput()` 和 `openFileOutput()` 函数也是在该目录下操作文件，`fileList()` 函数是用来列出该 files 目录下的所有文件，`deleteFile(String name)` 用来删除该 files 目录下的文件；
 
 * `/data/data/[packagename]/XXXX`
-这个目录下面当然也能够创建子集的目录，使用的方法就是 `getDir(String name, int mode)`，参数中的 name 就是需要在该目录下创建的子目录名字。
+这个目录下面当然也能够创建子集的目录，使用的方法就是 `getDir(String name, int mode)`，参数中的 name 就是需要在该目录下创建的子目录名字，子目录名字为 `app_name`。
+
+```
+getDatabasePath("student.db")               /data/user/0/com.hopechart.test/databases/student.db
+getCacheDir()                               /data/user/0/com.hopechart.test/cache
+getFilesDir()                               /data/user/0/com.hopechart.test/files
+getDir("zhao")                              /data/user/0/com.hopechart.test/app_zhao
+getPackageCodePath()                        /data/app/com.hopechart.test-1/base.apk
+getPackageResourcePath()                    /data/app/com.hopechart.test-1/base.apk
+```
+
+### **SD卡私有目录**
+
+> 该目录下的文件卸载应用之后会自动删除。
+
+#### `/sdcard/Android/data/package_name/`
+
+对应为 `/sdcard/Android/data/com.hopechart.test/`。
+
+* `Android/data/com.android.framework/files/`
+该目录可用 `getExternalFilesDir(String type)` 和 `getExternalFilesDirs(String type)` 获取，参数 type 为子目录名字，null 则为根目录，后者调用之后会自动生成该目录，并且后者返回的是一个数组，如果插入外置存储卡，外置存储卡目录也会一并返回，具体区别可以查看后面的源码和结果；
+* `Android/data/com.android.framework/cache/`
+该目录可用 `getExternalCacheDir()` 和 `getExternalCacheDirs() `获取，后者调用之后自动生成该目录，和上面一样，后者返回的是一个数组，如果插入外置存储卡，外置存储卡目录也会一并返回，具体区别可以查看后面的源码和结果。
+
+```
+        Log.d("pepe","getExternalFilesDir():" + getExternalFilesDir(null));
+        File[] paths = getExternalFilesDirs(null);
+        for (File path : paths){
+            Log.d("pepe","getExternalFilesDirs():---" + path.getPath());
+        }
+        
+        Log.d("pepe","getExternalCacheDir():" + getExternalCacheDir());
+        paths = getExternalCacheDirs();
+        for (File path : paths){
+            Log.d("pepe","getExternalCacheDirs():---" + path.getPath());
+        }
+getExternalFilesDir()           /storage/emulated/0/Android/data/com.hopechart.test/files
+getExternalFilesDirs()          /storage/emulated/0/Android/data/com.hopechart.test/files
+getExternalFilesDirs()          /storage/0C0A-C469/Android/data/com.hopechart.test/files
+getExternalCacheDir()           /storage/emulated/0/Android/data/com.hopechart.test/cache
+getExternalCacheDirs()          /storage/emulated/0/Android/data/com.hopechart.test/cache
+getExternalCacheDirs()          /storage/0C0A-C469/Android/data/com.hopechart.test/cache
+```
+
+#### `/sdcard/Android/obb/package_name/`
+
+对应为 `/sdcard/Android/obb/com.android.framework/`。 
+
+需要注意的是，obb 目录也可能不存在，原文：`Note if the application does not have any OBB files, this directory may not exist`，
+一般游戏 APP 会将游戏相关的数据包放到这个目录下。 
+该目录的的相关函数简单只有两个：`getObbDirs()` 和 `getObbDir()`，前者调用之后会自动生成该目录，
+后者在插入外置存储卡之后会在前者的基础上另外返回外置存储卡的 obb 目录，具体的结果可以查看后面的源码和结果。
 
 
-
-### **内置SDCARD目录**
-
-
-
+05-25 15:14:13.793 29412 29412 D pepe    : getObbDir():/storage/emulated/0/Android/obb/com.hopechart.test
+05-25 15:14:13.797 29412 29412 D pepe    : getObbDirs():---/storage/emulated/0/Android/obb/com.hopechart.test
+05-25 15:14:13.797 29412 29412 D pepe    : getObbDirs():---/storage/0C0A-C469/Android/obb/com.hopechart.test
 
 
-
-
-
+### **SD卡公有目录**
 
 
 
