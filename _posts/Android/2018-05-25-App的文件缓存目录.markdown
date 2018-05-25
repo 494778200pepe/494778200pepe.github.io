@@ -82,11 +82,16 @@ getExternalCacheDirs()          /storage/0C0A-C469/Android/data/com.hopechart.te
 该目录的的相关函数简单只有两个：`getObbDirs()` 和 `getObbDir()`，前者调用之后会自动生成该目录，
 后者在插入外置存储卡之后会在前者的基础上另外返回外置存储卡的 obb 目录，具体的结果可以查看后面的源码和结果。
 
-
-05-25 15:14:13.793 29412 29412 D pepe    : getObbDir():/storage/emulated/0/Android/obb/com.hopechart.test
-05-25 15:14:13.797 29412 29412 D pepe    : getObbDirs():---/storage/emulated/0/Android/obb/com.hopechart.test
-05-25 15:14:13.797 29412 29412 D pepe    : getObbDirs():---/storage/0C0A-C469/Android/obb/com.hopechart.test
-
+```
+        Log.d("pepe","getObbDir():" + getObbDir());
+        paths = getObbDirs();
+        for (File path : paths){
+            Log.d("pepe","getObbDirs():---" + path.getPath());
+        }
+getObbDir()                     /storage/emulated/0/Android/obb/com.hopechart.test
+getObbDirs()                    /storage/emulated/0/Android/obb/com.hopechart.test
+getObbDirs()                    /storage/0C0A-C469/Android/obb/com.hopechart.test
+```
 
 ### **SD卡公有目录**
 
