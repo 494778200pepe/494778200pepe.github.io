@@ -39,7 +39,14 @@ description: 『 Log 』
 * -- S : Silent(Super all output) (最高的优先级, 可能不会记载东西);
 
 * `logcat pepe:D *:S`：日志是标签为 pepe, 并且优先级 Debug(调试) 等级以上的级别的日志，*:S 用来表示优先级。
+* `logcat -c`:可以将之前的日志信息清空, 重新开始输出日志信息;
+* `logcat -t 5`:可以输出最近的5行日志, 并且不会阻塞;
+
 * `logcat | grep -i pepe`:管道过滤，-i 表示 忽略大小写。
+* `logcat | grep "^..MyApp"`:过滤MyApp  这个字符串，所有包含这个字符串的日志都会打印
+* `logcat | grep "^E.MyApp"`:仅显示 Error 级别 tag 为 MyApp 的输出：
+* `logcat | grep "^..MyApp\|^..MyActivity"`:匹配 tag 为 MyApp 和 MyActivity 的输出
+
 
 [android log机制——用logcat读取log - WolfCS - 开源中国社区](https://my.oschina.net/wolfcs/blog/165639)
 
