@@ -29,6 +29,17 @@ description: 『 Log 』
 [orhanobut/logger: Simple, pretty and powerful logger for android](https://github.com/orhanobut/logger)
 
 ### Logcat
+ 
+* -- V : Verbose (明细);
+* -- D : Debug (调试);
+* -- I : Info (信息);
+* -- W : Warn (警告);
+* -- E : Error (错误);
+* -- F : Fatal (严重错误);
+* -- S : Silent(Super all output) (最高的优先级, 可能不会记载东西);
+
+* `logcat pepe:D *:S`：日志是标签为 pepe, 并且优先级 Debug(调试) 等级以上的级别的日志，*:S 用来表示优先级。
+* `logcat | grep -i pepe`:管道过滤，-i 表示 忽略大小写。
 
 [android log机制——用logcat读取log - WolfCS - 开源中国社区](https://my.oschina.net/wolfcs/blog/165639)
 
