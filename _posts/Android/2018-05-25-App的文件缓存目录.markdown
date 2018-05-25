@@ -1,0 +1,68 @@
+---
+layout: post
+title:  "App的文件缓存目录"
+date:   2018-05-25 13:53:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 App的文件缓存目录 』
+---
+
+### **内置私有目录**
+
+* `/data/data/com.android.framework/shared_prefs/`
+用来存储 SharedPreference，对应函数为：getSharedPreferences(String fileName, int mode)；
+
+* `/data/data/com.android.framework/databases/`
+用来存储数据库 DB，相关函数还有 getDatabasePath()；
+
+* `/data/data/com.android.framework/app_webview` 和 `/data/data/com.android.framework/xxxwebviewcachexxx`
+来存储应用内置 webview 所产生的 cache 和 cookies 等，该目录由于 android 版本不同名字和位置也可能不同；
+
+* `/data/data/com.android.framework/lib`
+用来存储该应用的 .so 静态库文件；
+
+* `/data/data/com.android.framework/cache`
+该目录可以使用函数 getCacheDir() 获取；
+
+* `/data/data/com.android.framework/files`
+该目录可以使用函数 getFilesDir() 获取，openFileInput() 和 openFileOutput() 函数也是在该目录下操作文件， fileList() 函数是用来列出该 files 目录下的所有文件，deleteFile(String name) 用来删除该 files 目录下的文件；
+
+* `/data/data/com.android.framework/XXXX`
+这个目录下面当然也能够创建子集的目录，使用的方法就是 getDir(String name, int mode)，参数中的 name 就是需要在该目录下创建的子目录名字。
+
+
+
+### **内置SDCARD目录**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
