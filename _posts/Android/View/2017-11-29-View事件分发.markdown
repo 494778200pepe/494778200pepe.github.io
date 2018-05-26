@@ -53,36 +53,39 @@ description: 『 View事件分发 』
                                     true表示已经执行onLongClick
     两个任务    CheckForTap                 延迟115ms之后，
                 CheckForLongPress           延迟（500 - 115）ms之后，
-    MotionEvent.ACTION_DOWN:
-        mPrivateFlags 添加 PREPRESSED标记
-        mHasPerformedLongPress 置 false
-        开始  CheckForTap 任务，115ms之后，mPrivateFlags 去除 PREPRESSED标记标记，添加 PRESSED 标记
-        同时刷新view状态
-        同时如果 View 是有长按事件的，那么开始 CheckForLongPress 任务。
-        （500 - 115）之后，如果有设置长按事件，并且返回true，那么 mHasPerformedLongPress 置 true。
-        那么现在就有两个问题：
-        如果115之内有 move 或 up呢？
-        如果（500 - 115）之内有 move 或 up呢？
-    MotionEvent.ACTION_MOVE:
-        这个里面只涉及到移出控件范围的判断，如果移出控件范围：
-        1、移除 CheckForTap 任务，同时  mPrivateFlags 去除 PREPRESSED标记
-           这个判断无论115ms之内还是之外
-        2、如果 mPrivateFlags 含有 PRESSED 标记，也就是115ms已经过了，已经开始检测长按了
-           那么移除 CheckForLongPress 任务，同时 mPrivateFlags 去除 PRESSED 标记
-           同时刷新view状态
-        那么现在可以回答 down 时的问题了，如果115 或者 （500 -115）之内有 move ，只要没移出view，没啥影响
-    MotionEvent.ACTION_UP:
-         1、判断  mPrivateFlags 是否包含 PRESSED 和 PREPRESSED 标记
-         2、只要move时没移出控件，mPrivateFlags 是肯定包含 其中一个标记的
-         3、如果 mHasPerformedLongPress == false，也就是说  有执行onLongClick或者onLongClick 返回false
-         4、那么移出 CheckForLongPress 任务，不在进行长按的判断，直接执行 onClick （如果有设置点击事件的话）
-         5、如果 mPrivateFlags 包含 PREPRESSED 标记，也就是说 在115 ms之内
-         6、那么 mPrivateFlags 添加 PRESSED 标记，同时刷新view状态
-         7、然后执行125ms之后的延迟任务，mPrivateFlags 去除 PRESSED 标记
-         8,、同时如果 CheckForTap 不为空，那么移除 CheckForTap 任务
-        现在来回答 down 时的问题，如果115ms之后，那么判断有点击事件，有的话执行 onClick
-        如果（500 -115）之内，那么移除长按的检测，那么判断有点击事件，有的话执行 onClick
-        如果 500 之外，也就是或长按已经判断执行完成了，那么判断长按的返回值e，如果为false，那么判断有点击事件，有的话执行 onClick
+#### MotionEvent.ACTION_DOWN:
+* mPrivateFlags 添加 PREPRESSED标记
+* mHasPerformedLongPress 置 false
+* 开始  CheckForTap 任务，115ms之后，mPrivateFlags 去除 PREPRESSED标记标记，添加 PRESSED 标记
+* 同时刷新view状态
+* 同时如果 View 是有长按事件的，那么开始 CheckForLongPress 任务。
+* （500 - 115）之后，如果有设置长按事件，并且返回true，那么 mHasPerformedLongPress 置 true。
+* 那么现在就有两个问题：
+* 如果115之内有 move 或 up呢？
+* 如果（500 - 115）之内有 move 或 up呢？
+        
+#### MotionEvent.ACTION_MOVE:
+* 这个里面只涉及到移出控件范围的判断，如果移出控件范围：
+* 1、移除 CheckForTap 任务，同时  mPrivateFlags 去除 PREPRESSED标记
+*    这个判断无论115ms之内还是之外
+* 2、如果 mPrivateFlags 含有 PRESSED 标记，也就是115ms已经过了，已经开始检测长按了
+*    那么移除 CheckForLongPress 任务，同时 mPrivateFlags 去除 PRESSED 标记
+*    同时刷新view状态
+* 那么现在可以回答 down 时的问题了，如果115 或者 （500 -115）之内有 move ，只要没移出view，没啥影响
+        
+#### MotionEvent.ACTION_UP:
+* 1、判断  mPrivateFlags 是否包含 PRESSED 和 PREPRESSED 标记
+* 2、只要move时没移出控件，mPrivateFlags 是肯定包含 其中一个标记的
+* 3、如果 mHasPerformedLongPress == false，也就是说  有执行onLongClick或者onLongClick 返回false
+* 4、那么移出 CheckForLongPress 任务，不在进行长按的判断，直接执行 onClick （如果有设置点击事件的话）
+* 5、如果 mPrivateFlags 包含 PREPRESSED 标记，也就是说 在115 ms之内
+* 6、那么 mPrivateFlags 添加 PRESSED 标记，同时刷新view状态
+* 7、然后执行125ms之后的延迟任务，mPrivateFlags 去除 PRESSED 标记
+* 8,、同时如果 CheckForTap 不为空，那么移除 CheckForTap 任务
+
+* 现在来回答 down 时的问题，如果115ms之后，那么判断有点击事件，有的话执行 onClick
+* 如果（500 -115）之内，那么移除长按的检测，那么判断有点击事件，有的话执行 onClick
+* 如果 500 之外，也就是或长按已经判断执行完成了，那么判断长按的返回值e，如果为false，那么判断有点击事件，有的话执行 onClick
 
     还有一个问题，如果 onTouch 返回false，那么 所有事件  onTouch 和 onTouchEvent 都会执行
 
