@@ -38,6 +38,7 @@ description: 『 View事件分发 』
 
 
 重新梳理一下View的事件分发流程：
+
 * 1、dispatchTouchEvent -> onTouchListener.onTouch() -> onTouchEvent
 * 2   如果没有设置onTouchListener，那么继续执行onTouchEvent
     如果设置了onTouchListener，并返回false，那么继续执行onTouchEvent
