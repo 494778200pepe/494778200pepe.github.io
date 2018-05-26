@@ -38,10 +38,11 @@ description: 『 Log 』
 * -- F : Fatal (严重错误);
 * -- S : Silent(Super all output) (最高的优先级, 可能不会记载东西);
 
-* `logcat -v prief`:日志输出的默认格式，**优先级 / 标签 (进程ID) : 日志信息**。
+* `logcat -v brief`:日志输出的默认格式，**优先级 / 标签 (进程ID) : 日志信息**。
 * `logcat pepe:D *:S`：日志是标签为 pepe, 并且优先级 Debug(调试) 等级以上的级别的日志，*:S 用来表示优先级。
 * `logcat -c`:可以将之前的日志信息清空, 重新开始输出日志信息;
 * `logcat -t 5`:可以输出最近的5行日志, 并且不会阻塞;
+* `logcat *:E`:输出优先级为 E 的日志。
 
 * `logcat | grep -i pepe`:管道过滤，过滤 pepe 这个字符串，-i 表示 忽略大小写。
 * `logcat -v brief | grep "^..MyApp"`:忽略前两个字符，匹配 MyApp 这个字符串，进行输出
