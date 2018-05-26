@@ -8,43 +8,41 @@ author: pepe
 description: 『 View事件分发 』
 ---
 
-做学问，容不得半点马虎和偷懒!
-
-1、View 中只有 dispatchTouchEvent 和 onTouchEvent
-2、dispatchTouchEvent -> setOnTouchListener 的 onTouch 方法 -> onTouchEvent
-3、onTouchEvent 中执行 onLongClick 和 onClick
-4、setOnLongClickListener 中返回false时，onClick也会执行。
-5、onLongClick 在 onTouchEvent 的 down 事件中执行
-6、onClick 在 onTouchEvent 的 up 事件中执行
-7、onTouch 返回 false 时，表示 onTouch 没有消费事件，会继续判断 onTouchEvent。
-8、onTouch 返回 true 时，表示消费事件，onTouch 会执行 down、move、up事件，onTouchEvent 不会执行任何事件。
-9、无论是 TextView 还是 ImageView，只要是 clickable，均会消费事件
-10、onTouch 和 onTouchEvent 都在 dispatchTouchEvent 中执行，onTouch 先执行。
-11、onTouch 和 onTouchEvent 的返回值，决定了是否消费事件，也就决定了后续的 action 是否会传递过来。
-12、onTouch 返回false，那么 dispatchTouchEvent 也会返回false，后续的 action 就不会传过来了
-13、还有一个很重要的知识点需要说明，就是touch事件的层级传递。
+* 1、View 中只有 dispatchTouchEvent 和 onTouchEvent
+* 2、dispatchTouchEvent -> setOnTouchListener 的 onTouch 方法 -> onTouchEvent
+* 3、onTouchEvent 中执行 onLongClick 和 onClick
+* 4、setOnLongClickListener 中返回false时，onClick也会执行。
+* 5、onLongClick 在 onTouchEvent 的 down 事件中执行
+* 6、onClick 在 onTouchEvent 的 up 事件中执行
+* 7、onTouch 返回 false 时，表示 onTouch 没有消费事件，会继续判断 onTouchEvent。
+* 8、onTouch 返回 true 时，表示消费事件，onTouch 会执行 down、move、up事件，onTouchEvent 不会执行任何事件。
+* 9、无论是 TextView 还是 ImageView，只要是 clickable，均会消费事件
+* 10、onTouch 和 onTouchEvent 都在 dispatchTouchEvent 中执行，onTouch 先执行。
+* 11、onTouch 和 onTouchEvent 的返回值，决定了是否消费事件，也就决定了后续的 action 是否会传递过来。
+* 12、onTouch 返回false，那么 dispatchTouchEvent 也会返回false，后续的 action 就不会传过来了
+* 13、还有一个很重要的知识点需要说明，就是touch事件的层级传递。
     我们都知道如果给一个控件注册了touch事件，每次点击它的时候都会触发一系列的ACTION_DOWN，ACTION_MOVE，ACTION_UP等事件。
     这里需要注意，如果你在执行ACTION_DOWN的时候返回了false，后面一系列其它的action就不会再得到执行了。
     简单的说，就是当dispatchTouchEvent在进行事件分发的时候，只有前一个action返回true，才会触发后一个action。
-14、如果 onTouch 返回false，但是onTouchEvent 返回true的话，同样是消费了事件。onTouch 和 onTouchEvent 的三个action都会执行了。
-15、onTouchEvent 的默认处理是 判断 clickable。
+* 14、如果 onTouch 返回false，但是onTouchEvent 返回true的话，同样是消费了事件。onTouch 和 onTouchEvent 的三个action都会执行了。
+* 15、onTouchEvent 的默认处理是 判断 clickable。
 
 
 参考blog：
-    Android View 事件分发机制 源码解析 （上） - Hongyang - CSDN博客
-    http://blog.csdn.net/lmj623565791/article/details/38960443
-    Android事件分发机制完全解析，带你从源码的角度彻底理解(上) - 郭霖的专栏 - CSDN博客
-    http://blog.csdn.net/guolin_blog/article/details/9097463/
-    Android事件分发机制——View(一) - CSDN博客
-    http://blog.csdn.net/dmk877/article/details/48781845
+
+[Android View 事件分发机制 源码解析 （上） - Hongyang - CSDN博客](http://blog.csdn.net/lmj623565791/article/details/38960443)
+
+[Android事件分发机制完全解析，带你从源码的角度彻底理解(上) - 郭霖的专栏 - CSDN博客](http://blog.csdn.net/guolin_blog/article/details/9097463/)
+
+[Android事件分发机制——View(一) - CSDN博客](http://blog.csdn.net/dmk877/article/details/48781845)
 
 
 重新梳理一下View的事件分发流程：
-1、dispatchTouchEvent -> onTouchListener.onTouch() -> onTouchEvent
-2   如果没有设置onTouchListener，那么继续执行onTouchEvent
+* 1、dispatchTouchEvent -> onTouchListener.onTouch() -> onTouchEvent
+* 2   如果没有设置onTouchListener，那么继续执行onTouchEvent
     如果设置了onTouchListener，并返回false，那么继续执行onTouchEvent
     如果设置了onTouchListener，并返回true，同时view必须要是Enable状态才行，那么事件被消费，不执行onTouchEvent；否则，仍然会继续执行onTouchEvent
-3、进入onTouchEvent,这里涉及 onClick 和 onLongClick 的判断
+* 3、进入onTouchEvent,这里涉及 onClick 和 onLongClick 的判断
     参数 mPrivateFlags              通过 PREPRESSED 标记115ms之内
                                     通过 PRESSED    标记
     参数 mHasPerformedLongPress     false表示没有执行onLongClick或者onLongClick 返回false
