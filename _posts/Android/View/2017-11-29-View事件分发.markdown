@@ -41,8 +41,9 @@ description: 『 View事件分发 』
 
 * 1、dispatchTouchEvent -> onTouchListener.onTouch() -> onTouchEvent
 * 2、如果没有设置onTouchListener，那么继续执行onTouchEvent
-    如果设置了onTouchListener，并返回false，那么继续执行onTouchEvent
-    如果设置了onTouchListener，并返回true，同时view必须要是Enable状态才行，那么事件被消费，不执行onTouchEvent；否则，仍然会继续执行onTouchEvent
+
+    。 如果设置了onTouchListener，并返回false，那么继续执行onTouchEvent
+    。 如果设置了onTouchListener，并返回true，同时view必须要是Enable状态才行，那么事件被消费，不执行onTouchEvent；否则，仍然会继续执行onTouchEvent
 * 3、进入onTouchEvent,这里涉及 onClick 和 onLongClick 的判断
     参数 mPrivateFlags              通过 PREPRESSED 标记115ms之内
                                     通过 PRESSED    标记
