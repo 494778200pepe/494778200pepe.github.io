@@ -3,7 +3,7 @@ layout: post
 title:  "CardView"
 date:   2018-05-26 16:01:00 +0800
 categories: Android
-tags: Util
+tags: CustonWidget
 author: pepe
 description: 『 实现翻转卡片的动画效果 』
 ---
