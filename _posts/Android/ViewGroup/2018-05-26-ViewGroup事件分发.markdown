@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "View事件分发"
+title:  "ViewGroup事件分发"
 date:   2017-11-30 16:53:00 +0800
 categories: Android
-tags: 自定义View
+tags: 自定义ViewGroup
 author: pepe
 description: 『 View事件分发 』
 ---
