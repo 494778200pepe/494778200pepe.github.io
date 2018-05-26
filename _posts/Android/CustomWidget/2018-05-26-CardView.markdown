@@ -249,8 +249,6 @@ public class CardView extends View implements View.OnClickListener {
 ```
 参考：
 
-[SpikeKing/wcl-flip-anim-demo: 卡片的翻页动画](https://github.com/SpikeKing/wcl-flip-anim-demo)
-
 [实现翻转卡片的动画效果 - 简书](http://www.jianshu.com/p/7db8425e84fc)
 
 
