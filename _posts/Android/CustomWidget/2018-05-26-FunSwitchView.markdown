@@ -8,6 +8,8 @@ author: pepe
 description: 『 FunSwitchView 』
 ---
 
+![funswitch]({{ site.baseurl }}/assets/images/android/custom_widget/funswitch.gif)
+
 ```
 /**
  * Created on 2017/10/11.

@@ -7,6 +7,9 @@ tags: CustomWidget
 author: pepe
 description: 『 实现翻转卡片的动画效果 』
 ---
+
+![cardview]({{ site.baseurl }}/assets/images/android/custom_widget/cardview.gif)
+
 还有一种用ViewGroup写的。
 ```
 // 自定义属性
