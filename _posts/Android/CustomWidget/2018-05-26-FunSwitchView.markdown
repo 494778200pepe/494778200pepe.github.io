@@ -3,7 +3,7 @@ layout: post
 title:  "FunSwitchView"
 date:   2018-05-26 16:29:00 +0800
 categories: Android
-tags: CustonWidget
+tags: CustomWidget
 author: pepe
 description: 『 FunSwitchView 』
 ---
