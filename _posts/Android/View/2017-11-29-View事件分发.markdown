@@ -1,0 +1,101 @@
+---
+layout: post
+title:  "View事件分发"
+date:   2017-11-30 16:53:00 +0800
+categories: Android
+tags: 自定义View
+author: pepe
+description: 『 View事件分发 』
+---
+
+做学问，容不得半点马虎和偷懒!
+
+1、View 中只有 dispatchTouchEvent 和 onTouchEvent
+2、dispatchTouchEvent -> setOnTouchListener 的 onTouch 方法 -> onTouchEvent
+3、onTouchEvent 中执行 onLongClick 和 onClick
+4、setOnLongClickListener 中返回false时，onClick也会执行。
+5、onLongClick 在 onTouchEvent 的 down 事件中执行
+6、onClick 在 onTouchEvent 的 up 事件中执行
+7、onTouch 返回 false 时，表示 onTouch 没有消费事件，会继续判断 onTouchEvent。
+8、onTouch 返回 true 时，表示消费事件，onTouch 会执行 down、move、up事件，onTouchEvent 不会执行任何事件。
+9、无论是 TextView 还是 ImageView，只要是 clickable，均会消费事件
+10、onTouch 和 onTouchEvent 都在 dispatchTouchEvent 中执行，onTouch 先执行。
+11、onTouch 和 onTouchEvent 的返回值，决定了是否消费事件，也就决定了后续的 action 是否会传递过来。
+12、onTouch 返回false，那么 dispatchTouchEvent 也会返回false，后续的 action 就不会传过来了
+13、还有一个很重要的知识点需要说明，就是touch事件的层级传递。
+    我们都知道如果给一个控件注册了touch事件，每次点击它的时候都会触发一系列的ACTION_DOWN，ACTION_MOVE，ACTION_UP等事件。
+    这里需要注意，如果你在执行ACTION_DOWN的时候返回了false，后面一系列其它的action就不会再得到执行了。
+    简单的说，就是当dispatchTouchEvent在进行事件分发的时候，只有前一个action返回true，才会触发后一个action。
+14、如果 onTouch 返回false，但是onTouchEvent 返回true的话，同样是消费了事件。onTouch 和 onTouchEvent 的三个action都会执行了。
+15、onTouchEvent 的默认处理是 判断 clickable。
+
+
+参考blog：
+    Android View 事件分发机制 源码解析 （上） - Hongyang - CSDN博客
+    http://blog.csdn.net/lmj623565791/article/details/38960443
+    Android事件分发机制完全解析，带你从源码的角度彻底理解(上) - 郭霖的专栏 - CSDN博客
+    http://blog.csdn.net/guolin_blog/article/details/9097463/
+    Android事件分发机制——View(一) - CSDN博客
+    http://blog.csdn.net/dmk877/article/details/48781845
+
+
+重新梳理一下View的事件分发流程：
+1、dispatchTouchEvent -> onTouchListener.onTouch() -> onTouchEvent
+2   如果没有设置onTouchListener，那么继续执行onTouchEvent
+    如果设置了onTouchListener，并返回false，那么继续执行onTouchEvent
+    如果设置了onTouchListener，并返回true，同时view必须要是Enable状态才行，那么事件被消费，不执行onTouchEvent；否则，仍然会继续执行onTouchEvent
+3、进入onTouchEvent,这里涉及 onClick 和 onLongClick 的判断
+    参数 mPrivateFlags              通过 PREPRESSED 标记115ms之内
+                                    通过 PRESSED    标记
+    参数 mHasPerformedLongPress     false表示没有执行onLongClick或者onLongClick 返回false
+                                    true表示已经执行onLongClick
+    两个任务    CheckForTap                 延迟115ms之后，
+                CheckForLongPress           延迟（500 - 115）ms之后，
+    MotionEvent.ACTION_DOWN:
+        mPrivateFlags 添加 PREPRESSED标记
+        mHasPerformedLongPress 置 false
+        开始  CheckForTap 任务，115ms之后，mPrivateFlags 去除 PREPRESSED标记标记，添加 PRESSED 标记
+        同时刷新view状态
+        同时如果 View 是有长按事件的，那么开始 CheckForLongPress 任务。
+        （500 - 115）之后，如果有设置长按事件，并且返回true，那么 mHasPerformedLongPress 置 true。
+        那么现在就有两个问题：
+        如果115之内有 move 或 up呢？
+        如果（500 - 115）之内有 move 或 up呢？
+    MotionEvent.ACTION_MOVE:
+        这个里面只涉及到移出控件范围的判断，如果移出控件范围：
+        1、移除 CheckForTap 任务，同时  mPrivateFlags 去除 PREPRESSED标记
+           这个判断无论115ms之内还是之外
+        2、如果 mPrivateFlags 含有 PRESSED 标记，也就是115ms已经过了，已经开始检测长按了
+           那么移除 CheckForLongPress 任务，同时 mPrivateFlags 去除 PRESSED 标记
+           同时刷新view状态
+        那么现在可以回答 down 时的问题了，如果115 或者 （500 -115）之内有 move ，只要没移出view，没啥影响
+    MotionEvent.ACTION_UP:
+         1、判断  mPrivateFlags 是否包含 PRESSED 和 PREPRESSED 标记
+         2、只要move时没移出控件，mPrivateFlags 是肯定包含 其中一个标记的
+         3、如果 mHasPerformedLongPress == false，也就是说  有执行onLongClick或者onLongClick 返回false
+         4、那么移出 CheckForLongPress 任务，不在进行长按的判断，直接执行 onClick （如果有设置点击事件的话）
+         5、如果 mPrivateFlags 包含 PREPRESSED 标记，也就是说 在115 ms之内
+         6、那么 mPrivateFlags 添加 PRESSED 标记，同时刷新view状态
+         7、然后执行125ms之后的延迟任务，mPrivateFlags 去除 PRESSED 标记
+         8,、同时如果 CheckForTap 不为空，那么移除 CheckForTap 任务
+        现在来回答 down 时的问题，如果115ms之后，那么判断有点击事件，有的话执行 onClick
+        如果（500 -115）之内，那么移除长按的检测，那么判断有点击事件，有的话执行 onClick
+        如果 500 之外，也就是或长按已经判断执行完成了，那么判断长按的返回值e，如果为false，那么判断有点击事件，有的话执行 onClick
+
+    还有一个问题，如果 onTouch 返回false，那么 所有事件  onTouch 和 onTouchEvent 都会执行
+
+
+
+参考：
+
+[Android 带你从源码的角度解析Scroller的滚动实现原理 - CSDN博客](http://blog.csdn.net/xiaanming/article/details/17483273)
+
+[Scroller的应用--滑屏实现 - CSDN博客](http://blog.csdn.net/jwzhangjie/article/details/38894379)
+
+[Android的Scroller介绍 滑动 - 流动的存在 - 博客园](http://www.cnblogs.com/wzachenjian/p/3667554.html)
+
+[Android Scroller完全解析，关于Scroller你所需知道的一切](http://blog.csdn.net/guolin_blog/article/details/48719871)
+
+[scroller-url]:http://www.grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/2.0_r1/android/widget/Scroller.java#Scroller.0mCurrX
+
+[xiaanming-url]: http://blog.csdn.net/xiaanming
