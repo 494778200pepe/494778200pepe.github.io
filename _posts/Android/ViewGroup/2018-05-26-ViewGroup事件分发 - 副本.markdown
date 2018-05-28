@@ -9,10 +9,10 @@ description: 『 View事件分发 』
 ---
 
 自定义ViewGroup的四个方法：
-① onInterceptTouchEvent(MotionEvent ev)
-② dispatchTouchEvent(MotionEvent ev)
-③ onTouchEvent(MotionEvent event)
-④ requestDisallowInterceptTouchEvent(boolean disallowIntercept)
+* ① onInterceptTouchEvent(MotionEvent ev)
+* ② dispatchTouchEvent(MotionEvent ev)
+* ③ onTouchEvent(MotionEvent event)
+* ④ requestDisallowInterceptTouchEvent(boolean disallowIntercept)
 
     MotionEvent.ACTION_DOWN:
         mMotionTarget = null;
