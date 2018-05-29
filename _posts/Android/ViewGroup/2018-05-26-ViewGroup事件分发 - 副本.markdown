@@ -49,7 +49,7 @@ description: 『 View事件分发 』
 
 
 
-1、进入ViewGroup：onInterceptTouchEvent,判断是否拦截，两个参数：disallowIntercept || !onInterceptTouchEvent(ev) 。
+* 1、进入ViewGroup：onInterceptTouchEvent,判断是否拦截，两个参数：disallowIntercept || !onInterceptTouchEvent(ev) 。
       disallowIntercept 默认是false，主要是根据 onInterceptTouchEvent(ev)来判断，这个默认也是false，！之后就是true了。也就是不拦截。
       disallowIntercept 可以通过requestDisallowInterceptTouchEvent(true)方法进行修改，修改flag。
      默认不拦截：查找是哪个 child 的坐标范围，进入该 child 的 dispatchTouchEvent。
@@ -57,11 +57,11 @@ description: 『 View事件分发 』
           拦截不成功，mMotionTarget = null，那么  return super.dispatchTouchEvent(ev);  也就是把ViewGroup 当做一个View了。
      如果拦截：onInterceptTouchEvent(ev) 返回 true。mMotionTarget = null。
           直接进入：return super.dispatchTouchEvent(ev);  也就是把ViewGroup 当做一个View了。
-2、整个ViewGroup的事件分发流程：
+* 2、整个ViewGroup的事件分发流程：
     Android事件分发是先传递到ViewGroup，再由ViewGroup传递到View的。
     在ViewGroup中可以通过 onInterceptTouchEvent 方法对事件传递进行拦截，onInterceptTouchEvent方法返回true代表不允许事件继续向子View传递，返回false代表不对事件进行拦截，默认返回false。
     子View中如果将传递的事件消费掉，ViewGroup中将无法接收到任何事件。
-3、
+* 3、
     ACTION_DOWN中，ViewGroup捕获到事件，然后判断是否拦截，如果没有拦截，则找到包含当前x,y坐标的子View，赋值给mMotionTarget，然后调用	mMotionTarget.dispatchTouchEvent
         如果被拦截，mMotionTarget = null，执行 ViewGroup 的 super.dispatchTouchEvent(ev)。
     ACTION_MOVE中，ViewGroup捕获到事件，然后判断是否拦截，如果没有拦截，则直接调用mMotionTarget.dispatchTouchEvent(ev)
@@ -69,7 +69,7 @@ description: 『 View事件分发 』
     ACTION_UP中，ViewGroup捕获到事件，然后判断是否拦截，如果没有拦截，则直接调用mMotionTarget.dispatchTouchEvent(ev)
         如果被拦截，mMotionTarget执行完dispatchTouchEvent后， mMotionTarget = null,然后执行一次 MotionEvent.ACTION_CANCEL。
     当然了在分发之前都会修改下坐标系统，把当前的x，y分别减去child.left 和 child.top ，然后传给child;
-4、如何不被拦截？
+* 4、如何不被拦截？
     如果ViewGroup的onInterceptTouchEvent(ev) 当ACTION_MOVE时return true ，即拦截了子View的MOVE以及UP事件；
     此时子View希望依然能够响应MOVE和UP时该咋办呢？
     Android给我们提供了一个方法：requestDisallowInterceptTouchEvent(boolean) 用于设置是否允许拦截。
@@ -79,21 +79,23 @@ description: 『 View事件分发 』
 
 
 
-参考blog：
-    Android事件分发机制完全解析，带你从源码的角度彻底理解(下) - 郭霖的专栏 - CSDN博客
-    http://blog.csdn.net/guolin_blog/article/details/9153747
-    Android ViewGroup事件分发机制 - Hongyang - CSDN博客
-    http://blog.csdn.net/lmj623565791/article/details/39102591/
-    Android事件分发机制--ViewGroup(二) - CSDN博客
-    http://blog.csdn.net/dmk877/article/details/49055815
-    Android中的dispatchTouchEvent()、onInterceptTouchEvent()和onTouchEvent() - 张兴业的博客 - CSDN博客
-    onInterceptTouchEvent 与 onTouchEvent 分析与MotionEvent在ViewGroup与View中的分发 - 大叔的愤怒，你驾驭不了 - CSDN博客
-    http://blog.csdn.net/jaysong2012/article/details/46909959
-    http://blog.csdn.net/xyz_lmn/article/details/12517911
-            Android 手把手教您自定义ViewGroup（一） - Hongyang - CSDN博客
-            http://blog.csdn.net/lmj623565791/article/details/38339817/
-            Android 自定义控件打造史上最简单的侧滑菜单 - Hongyang - CSDN博客
-            http://blog.csdn.net/lmj623565791/article/details/39185641
+参考：
+
+[Android事件分发机制完全解析，带你从源码的角度彻底理解(下) - 郭霖的专栏 - CSDN博客]http://blog.csdn.net/guolin_blog/article/details/9153747)
+    
+[Android ViewGroup事件分发机制 - Hongyang - CSDN博客](http://blog.csdn.net/lmj623565791/article/details/39102591/)
+    
+[Android事件分发机制--ViewGroup(二) - CSDN博客](http://blog.csdn.net/dmk877/article/details/49055815)
+    
+[Android中的dispatchTouchEvent()、onInterceptTouchEvent()和onTouchEvent() - 张兴业的博客 - CSDN博客](
+http://blog.csdn.net/xyz_lmn/article/details/12517911)
+
+[onInterceptTouchEvent 与 onTouchEvent 分析与MotionEvent在ViewGroup与View中的分发 - 大叔的愤怒，你驾驭不了 - CSDN博客](
+http://blog.csdn.net/jaysong2012/article/details/46909959)
+
+[Android 手把手教您自定义ViewGroup（一） - Hongyang - CSDN博客](http://blog.csdn.net/lmj623565791/article/details/38339817/)
+
+[Android 自定义控件打造史上最简单的侧滑菜单 - Hongyang - CSDN博客](http://blog.csdn.net/lmj623565791/article/details/39185641)
 
 
 dispatchTouchEvent分析：
