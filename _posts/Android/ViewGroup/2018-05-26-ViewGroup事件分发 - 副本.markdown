@@ -81,7 +81,7 @@ description: 『 View事件分发 』
 
 参考：
 
-[Android事件分发机制完全解析，带你从源码的角度彻底理解(下) - 郭霖的专栏 - CSDN博客]http://blog.csdn.net/guolin_blog/article/details/9153747)
+[Android事件分发机制完全解析，带你从源码的角度彻底理解(下) - 郭霖的专栏 - CSDN博客](http://blog.csdn.net/guolin_blog/article/details/9153747)
     
 [Android ViewGroup事件分发机制 - Hongyang - CSDN博客](http://blog.csdn.net/lmj623565791/article/details/39102591/)
     
@@ -99,13 +99,19 @@ http://blog.csdn.net/jaysong2012/article/details/46909959)
 
 
 dispatchTouchEvent分析：
-1、如果是down  先清空上次down的信息
-2、判断是否拦截：a、如果是down，或者mFirstTouchTarget != null
-                b、判断group的tag，是否允许拦截
-                    如果允许拦截，执行intercepted = onInterceptTouchEvent(ev);
-                    如果不允许拦截，intercepted = false;
-                c、如果不是down，并且 或者mFirstTouchTarget == null，那么intercepted = true;
-3、如果不是取消，并且不是拦截
+* 1、如果是down  先清空上次down的信息
+* 2、判断是否拦截：
+
+    。 a、如果是down，或者mFirstTouchTarget != null
+    
+    。 b、判断group的tag，是否允许拦截
+    
+        - 如果允许拦截，执行intercepted = onInterceptTouchEvent(ev);
+        - 如果不允许拦截，intercepted = false;
+        
+    。 c、如果不是down，并且 或者mFirstTouchTarget == null，那么intercepted = true;
+    
+* 3、如果不是取消，并且不是拦截
 
 
 
