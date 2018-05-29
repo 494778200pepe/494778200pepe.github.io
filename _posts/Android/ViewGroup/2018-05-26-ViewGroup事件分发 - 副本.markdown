@@ -109,12 +109,17 @@ description: 『 View事件分发 』
         - 如果被拦截，mMotionTarget执行完dispatchTouchEvent后， mMotionTarget = null,然后执行一次 MotionEvent.ACTION_CANCEL。
         
     当然了在分发之前都会修改下坐标系统，把当前的x，y分别减去child.left 和 child.top ，然后传给child;
+    
 * 4、如何不被拦截？
 
     。 如果ViewGroup的onInterceptTouchEvent(ev) 当ACTION_MOVE时return true ，即拦截了子View的MOVE以及UP事件；
+    
     。 此时子View希望依然能够响应MOVE和UP时该咋办呢？
+    
     。 Android给我们提供了一个方法：requestDisallowInterceptTouchEvent(boolean) 用于设置是否允许拦截。
+    
     。 getParent().requestDisallowInterceptTouchEvent(true);
+    
     。 当我们把disallowIntercept设置为true时，!disallowIntercept直接为false，于是拦截的方法体就被跳过了~
 
 
