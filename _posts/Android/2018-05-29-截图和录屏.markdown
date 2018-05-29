@@ -1,0 +1,27 @@
+---
+layout: post
+title:  "截图和录屏"
+date:   2018-05-29 10:18:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 截图和录屏 』
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
