@@ -14,11 +14,11 @@ description: 『 View事件分发 』
 * ③ onTouchEvent(MotionEvent event)
 * ④ requestDisallowInterceptTouchEvent(boolean disallowIntercept)
 
-* MotionEvent.ACTION_DOWN:
+* `MotionEvent.ACTION_DOWN`:
 
-    。 mMotionTarget = null;
+    。 `mMotionTarget = null`;
         
-    。 如果不拦截，能找到对应的子view，清除子view.mPrivateFlags 的 CANCEL_NEXT_UP_EVENT;  
+    。 如果不拦截，能找到对应的子view，清除子`view.mPrivateFlags` 的 `CANCEL_NEXT_UP_EVENT`;  
     
         - 如果该子view消费事件：mMotionTarget = child，return  true;
         - 如果该子view不消费事件：mMotionTarget 仍然为 null
@@ -27,45 +27,45 @@ description: 『 View事件分发 』
     
     。 继续往下看，
     
-    。 final View target = mMotionTarget;
+    。 `final View target = mMotionTarget;`
     
-    。 return super.dispatchTouchEvent(ev);
+    。 `return super.dispatchTouchEvent(ev);`
     
-* MotionEvent.ACTION_MOVE:
+* `MotionEvent.ACTION_MOVE`:
 
-    。 final View target = mMotionTarget;
+    。 `final View target = mMotionTarget;`
     
-    。 如果 target == null ,return super.dispatchTouchEvent(ev);
+    。 如果 `target == null ,return super.dispatchTouchEvent(ev);`
     
-    。 如果 target != null ,再次判断是否拦截
+    。 如果 `target != null` ,再次判断是否拦截
     
-        - 如果拦截， mMotionTarget = null，return true; 那么下一部 up 也就是一样的了，交给 super
+        - 如果拦截， `mMotionTarget = null，return true;` 那么下一部 up 也就是一样的了，交给 super
         - 如果不拦截，判断 view.mPrivateFlags 是否包含 CANCEL_NEXT_UP_EVENT
-            - 如果包含，也就是说要取消咯，那么 mMotionTarget = null; 下一步 交给 super
-            - 如果不包含，return target.dispatchTouchEvent(ev);  正常执行
+            - 如果包含，也就是说要取消咯，那么 `mMotionTarget = null;` 下一步 交给 super
+            - 如果不包含，`return target.dispatchTouchEvent(ev);`  正常执行
             
-* MotionEvent.ACTION_UP:
+* `MotionEvent.ACTION_UP`:
 
-    。 final View target = mMotionTarget;
+    。 `final View target = mMotionTarget;`
     
-    。 如果 target == null ,return super.dispatchTouchEvent(ev);
+    。 如果 `target == null ,return super.dispatchTouchEvent(ev);`
     
     。 如果 target != null ,再次判断是否拦截
     
-        - 如果拦截， mMotionTarget = null，return true;
-        - 如果不拦截，mMotionTarget = null;
-        - 然后 return target.dispatchTouchEvent(ev);  正常执行
+        - 如果拦截， `mMotionTarget = null，return true;`
+        - 如果不拦截，`mMotionTarget = null;`
+        - 然后 `return target.dispatchTouchEvent(ev);`  正常执行
 
-* 一、只要我们的onInterceptTouchEvent return true 那么我们的MotionEvent 与ChildView 无缘
-* 二、如果我们的onInterceptTouchEvent  return false；那么我们的ChildView  会优先获得MotionEvent ，
+* 一、只要我们的`onInterceptTouchEvent return true `那么我们的MotionEvent 与ChildView 无缘
+* 二、如果我们的`onInterceptTouchEvent  return false；`那么我们的ChildView  会优先获得MotionEvent ，
 
     。 但是当我们的ChildView  并不在TouchTarget上，我们的ViewGroup依然有机会得到本次MotionEvent 。
     
-    。 获得之后执行super.dispatchTouchEvent(ev)；也就是把ViewGroup 当做一个View了。
+    。 获得之后执行`super.dispatchTouchEvent(ev)`；也就是把ViewGroup 当做一个View了。
     
-* 三、 onInterceptTouchEvent 并不会在每一次 MotionEvent事件（ACTION_DOWN、ACTION_MOVE、ACTION_UP 等）调用，
+* 三、 `onInterceptTouchEvent` 并不会在每一次 MotionEvent事件（ACTION_DOWN、ACTION_MOVE、ACTION_UP 等）调用，
 
-    。 例如果在ACTION_DOWN 时，onInterceptTouchEvent 拦截，return true 交给了ViewGroup 而View没有得到的话，ACTION_MOVE时就不会调用，
+    。 例如果在`ACTION_DOWN `时，onInterceptTouchEvent 拦截，return true 交给了ViewGroup 而View没有得到的话，ACTION_MOVE时就不会调用，
     
     。 但是如果return false，ChildView 得到了ACTION_MOVE时，onInterceptTouchEvent 就会再次调用
 
@@ -73,20 +73,20 @@ description: 『 View事件分发 』
     
     
 
-* 1、进入ViewGroup：onInterceptTouchEvent,判断是否拦截，两个参数：disallowIntercept || !onInterceptTouchEvent(ev) 。
+* 1、进入ViewGroup：onInterceptTouchEvent,判断是否拦截，两个参数：`disallowIntercept || !onInterceptTouchEvent(ev)` 。
 
-    。 disallowIntercept 默认是false，主要是根据 onInterceptTouchEvent(ev)来判断，这个默认也是false，！之后就是true了。也就是不拦截。
+    。 `disallowIntercept` 默认是false，主要是根据 `onInterceptTouchEvent(ev)`来判断，这个默认也是false，！之后就是true了。也就是不拦截。
     
-    。 disallowIntercept 可以通过requestDisallowInterceptTouchEvent(true)方法进行修改，修改flag。
+    。 `disallowIntercept` 可以通过`requestDisallowInterceptTouchEvent(true)`方法进行修改，修改flag。
     
     。 默认不拦截：查找是哪个 child 的坐标范围，进入该 child 的 dispatchTouchEvent。
     
-        - 如果 dispatchTouchEvent 返回true，设置 mMotionTarget = child。同时返回true。
-        - 拦截不成功，mMotionTarget = null，那么  return super.dispatchTouchEvent(ev);  也就是把ViewGroup 当做一个View了。
+        - 如果 dispatchTouchEvent 返回true，设置 `mMotionTarget = child`。同时返回true。
+        - 拦截不成功，`mMotionTarget = null`，那么  `return super.dispatchTouchEvent(ev)`;  也就是把ViewGroup 当做一个View了。
         
-    。 如果拦截：onInterceptTouchEvent(ev) 返回 true。mMotionTarget = null。
+    。 如果拦截：`onInterceptTouchEvent(ev)` 返回 `true`。`mMotionTarget = null`。
     
-        - 直接进入：return super.dispatchTouchEvent(ev);  也就是把ViewGroup 当做一个View了。
+        - 直接进入：`return super.dispatchTouchEvent(ev)`;  也就是把ViewGroup 当做一个View了。
         
 * 2、整个ViewGroup的事件分发流程：
 
@@ -98,7 +98,7 @@ description: 『 View事件分发 』
 * 3、
     。 ACTION_DOWN中，ViewGroup捕获到事件，然后判断是否拦截，如果没有拦截，则找到包含当前x,y坐标的子View，赋值给mMotionTarget，然后调用	mMotionTarget.dispatchTouchEvent
     
-        - 如果被拦截，mMotionTarget = null，执行 ViewGroup 的 super.dispatchTouchEvent(ev)。
+        - 如果被拦截，`mMotionTarget = null`，执行 ViewGroup 的 `super.dispatchTouchEvent(ev)`。
         
     。 ACTION_MOVE中，ViewGroup捕获到事件，然后判断是否拦截，如果没有拦截，则直接调用mMotionTarget.dispatchTouchEvent(ev)
     
@@ -112,15 +112,15 @@ description: 『 View事件分发 』
     
 * 4、如何不被拦截？
 
-    。 如果ViewGroup的onInterceptTouchEvent(ev) 当ACTION_MOVE时return true ，即拦截了子View的MOVE以及UP事件；
+    。 如果ViewGroup的`onInterceptTouchEvent(ev) `当ACTION_MOVE时return true ，即拦截了子View的MOVE以及UP事件；
     
     。 此时子View希望依然能够响应MOVE和UP时该咋办呢？
     
     。 Android给我们提供了一个方法：requestDisallowInterceptTouchEvent(boolean) 用于设置是否允许拦截。
     
-    。 getParent().requestDisallowInterceptTouchEvent(true);
+    。 `getParent().requestDisallowInterceptTouchEvent(true);`
     
-    。 当我们把disallowIntercept设置为true时，!disallowIntercept直接为false，于是拦截的方法体就被跳过了~
+    。 当我们把disallowIntercept设置为true时，`!disallowIntercept`直接为false，于是拦截的方法体就被跳过了~
 
 
 
