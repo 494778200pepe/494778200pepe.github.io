@@ -14,23 +14,38 @@ description: 『 View事件分发 』
 * ③ onTouchEvent(MotionEvent event)
 * ④ requestDisallowInterceptTouchEvent(boolean disallowIntercept)
 
-    MotionEvent.ACTION_DOWN:
-        mMotionTarget = null;
-        如果不拦截，能找到对应的子view，清除子view.mPrivateFlags 的 CANCEL_NEXT_UP_EVENT;  如果该子view消费事件：mMotionTarget = child，return  true;
-                                                                                        如果该子view不消费事件：mMotionTarget 仍然为 null
-                   不能找到对应的子view，view.mPrivateFlags 包含 CANCEL_NEXT_UP_EVENT，同时 mMotionTarget 仍然为 null
-        继续往下看，
-        final View target = mMotionTarget;
-        return super.dispatchTouchEvent(ev);
-    MotionEvent.ACTION_MOVE:
-        final View target = mMotionTarget;
-        如果 target == null ,return super.dispatchTouchEvent(ev);
-        如果 target != null ,再次判断是否拦截
-            如果拦截， mMotionTarget = null，return true; 那么下一部 up 也就是一样的了，交给 super
-            如果不拦截，判断 view.mPrivateFlags 是否包含 CANCEL_NEXT_UP_EVENT
-                        如果包含，也就是说要取消咯，那么 mMotionTarget = null; 下一步 交给 super
-                        如果不包含，return target.dispatchTouchEvent(ev);  正常执行
-    MotionEvent.ACTION_UP:
+* MotionEvent.ACTION_DOWN:
+
+    。 mMotionTarget = null;
+        
+    。 如果不拦截，能找到对应的子view，清除子view.mPrivateFlags 的 CANCEL_NEXT_UP_EVENT;  
+    
+        - 如果该子view消费事件：mMotionTarget = child，return  true;
+    
+        - 如果该子view不消费事件：mMotionTarget 仍然为 null
+    
+    。 不能找到对应的子view，view.mPrivateFlags 包含 CANCEL_NEXT_UP_EVENT，同时 mMotionTarget 仍然为 null
+    
+    。 继续往下看，
+    
+    。 final View target = mMotionTarget;
+    
+    。 return super.dispatchTouchEvent(ev);
+    
+* MotionEvent.ACTION_MOVE:
+
+    。 final View target = mMotionTarget;
+    
+    。 如果 target == null ,return super.dispatchTouchEvent(ev);
+    
+    。 如果 target != null ,再次判断是否拦截
+    
+        - 如果拦截， mMotionTarget = null，return true; 那么下一部 up 也就是一样的了，交给 super
+        - 如果不拦截，判断 view.mPrivateFlags 是否包含 CANCEL_NEXT_UP_EVENT
+            - 如果包含，也就是说要取消咯，那么 mMotionTarget = null; 下一步 交给 super
+            - 如果不包含，return target.dispatchTouchEvent(ev);  正常执行
+            
+* MotionEvent.ACTION_UP:
         final View target = mMotionTarget;
         如果 target == null ,return super.dispatchTouchEvent(ev);
         如果 target != null ,再次判断是否拦截
@@ -39,11 +54,11 @@ description: 『 View事件分发 』
             然后 return target.dispatchTouchEvent(ev);  正常执行
 
 
-      一、只要我们的onInterceptTouchEvent return true 那么我们的MotionEvent 与ChildView 无缘
-      二、如果我们的onInterceptTouchEvent  return false；那么我们的ChildView  会优先获得MotionEvent ，
+* 一、只要我们的onInterceptTouchEvent return true 那么我们的MotionEvent 与ChildView 无缘
+* 二、如果我们的onInterceptTouchEvent  return false；那么我们的ChildView  会优先获得MotionEvent ，
             但是当我们的ChildView  并不在TouchTarget上，我们的ViewGroup依然有机会得到本次MotionEvent 。
             获得之后执行super.dispatchTouchEvent(ev)；也就是把ViewGroup 当做一个View了。
-      三、 onInterceptTouchEvent 并不会在每一次 MotionEvent事件（ACTION_DOWN、ACTION_MOVE、ACTION_UP 等）调用，
+* 三、 onInterceptTouchEvent 并不会在每一次 MotionEvent事件（ACTION_DOWN、ACTION_MOVE、ACTION_UP 等）调用，
             例如果在ACTION_DOWN 时，onInterceptTouchEvent 拦截，return true 交给了ViewGroup 而View没有得到的话，ACTION_MOVE时就不会调用，
             但是如果return false，ChildView 得到了ACTION_MOVE时，onInterceptTouchEvent 就会再次调用
 
