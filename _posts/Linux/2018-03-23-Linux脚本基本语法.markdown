@@ -8,6 +8,12 @@ author: pepe
 description: 『 Linux脚本基本语法 』
 ---
 
+### 远程拷贝命令
+```
+scp
+// scp -r [本地文件夹] [[user@]host1:]file1  [[user@]host2:]file2
+rsync
+```
 
 ### **打印log**
 ```
