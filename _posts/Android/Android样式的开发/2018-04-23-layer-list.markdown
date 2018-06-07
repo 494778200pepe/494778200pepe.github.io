@@ -8,6 +8,8 @@ author: pepe
 description: 『 layer-list 』
 ---
 
+[android里面layer-list中的inset和clip到底有什么作用 - CSDN博客](https://blog.csdn.net/candyguy242/article/details/44176503)
+
 ### **layer-list**
 
 > 将多个 bitmap 或shape、selector按照顺序层叠起来
