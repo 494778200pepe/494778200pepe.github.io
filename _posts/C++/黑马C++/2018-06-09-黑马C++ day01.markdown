@@ -1,0 +1,47 @@
+---
+layout: post
+title:  "黑马C++ day01"
+date:   2018-06-09 10:26:00 +0800
+categories: C++
+tags: 黑马C++
+author: pepe
+description: 『 黑马C++ day01 』
+---
+
+### 命名空间的使用
+
+```
+//方式一
+std::cout << "hello world" << std::endl;
+
+//方式二
+using std::cout;
+usint std::endl;
+
+//方式三
+using namespace std;
+```
+* 1、namespace可以嵌套
+* 2、spaceA包含spaceB和spaceC，要使用spaceB中的成员，必须using 到 spaceB，不能只到spaceA，因为spaceC中可能也有同名成员。
+* 3、可以在spaceA中调用`using namespace spaceB`，那么只需`using namespace spaceA`，就可以用到spaceB的成员。
+
+### const
+
+* 1、`const int a;`和`int const a;`一样，表示一个整型常量。
+* 2、`const int* p`表示：const修饰的是 int*，表示指针p的指向不能变，不用使用*p来改变int的值，但p可以修改。
+* 3、`int* const p`表示：const修饰的是 p，表示这个一个指针常量，但p的指向可以修改。
+* 4、`const int* const p`表示一个指向常量整型的常量指针。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
