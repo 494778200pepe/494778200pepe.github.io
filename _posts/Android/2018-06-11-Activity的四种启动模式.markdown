@@ -23,12 +23,13 @@ description: 『 Activity的四种启动模式 』
 * 1、在这种模式下，如果新Activity已经位于任务栈的栈顶，那么此Activity不会被重新创建。同时它的`onNewIntent`方法会被回调。
 * 2、需要注意的是，这个`Activity`的`onCreate、onStart`不会被系统调用，因为它并没有发生改变。
 * 3、如果新`Activity`的实例已存在但不是位于栈顶，那么新`Activity`仍然会重新创建。
+* 4、`onResume`在`onNewIntent`顺序之后，所以也会调用。
 
 ### **singleTask**
 
 栈内复用模式。
 * 1、在这种模式下，主要`Activity`在一个栈中存在，那么多次启动此`Activity`都不会重新创建实例。
-* 2、和`singleTop`一样，系统也会回到其`onNewIntent`。
+* 2、和`singleTop`一样，系统也会回到其`onNewIntent`，之后调用`onResume`。
 * 3、注意：可以存在多个实例，但必须是不同的任务栈，每个任务栈只能有一个。
 * 4、如果以`singleTask`模式启动`Activity B`,其所需的任务栈为S2，有与S2和D的实例均不存在，会先创建S2，在创建D并入栈。
 * 5、如果S2已存在，那么系统会直接创建D的实例，然后入栈。
@@ -42,20 +43,20 @@ description: 『 Activity的四种启动模式 』
 
 注意：
 * 1、前台栈S1中有`Activity B`和`Activity A`，后台栈S2中有`Activity C(SingleTask)`和`Activity D(singleTask)`。
-* 2、A打开D之前，栈结构变成S2[C、D],S1[B、A]。
+* 2、A打开D之前，栈结构变成`S2[C、D],S1[B、A]`。
 * 3、A打开D，由于D所需的任务栈S2和D的实例都存在，且D在S2的栈顶，那么S2和D都不会重新创建。S2会变成前台栈，S1变成后台栈。
-* 4、A打开D之后，栈结构变成S1[A、B],S2[C、D]。
-* 5、按`Back`键，一次打开的是D->C->B-A。
+* 4、A打开D之后，栈结构变成`S1[A、B],S2[C、D]`。
+* 5、按`Back`键，一次打开的是`D->C->B-A`。
 * 6、如果后台栈S2中有`Activity D(SingleTask)`和`Activity C(singleTask)`。
-* 7、A打开D之前，栈结构变成S2[D、C],S1[B、A]。
+* 7、A打开D之前，栈结构变成`S2[D、C],S1[B、A]`。
 * 8、那么A打开D，D由于不在栈顶，就会`clearTop`，将C出栈。
-* 9、A打开D之后，栈结构变成S1[A、B],S2[D]。
-* 10、按`Back`键，一次打开的是D->B-A。
+* 9、A打开D之后，栈结构变成`S1[A、B],S2[D]`。
+* 10、按`Back`键，一次打开的是`D->B-A`。
 
 ### **TaskAffinity**
 
 TaskAffinity可以翻译为"任务相关性"。
-* 1、这个参数表示了一个`Activity`所需要的任务栈的名字。
+* 1、这个参数表示了一个`Activity`所需要的任务栈的名字，为字符串，且中间必须含有包名分隔符"."。
 * 2、默认情况下，所有`Activity`所需的任务栈的名字为应用的包名。
 * 3、`TaskAffinity`属性主要和`singleTask`启动模式或者`allowTaskReparenting`属性配对使用。
 * 4、`TaskAffinity`和`singleTask`配对使用时，Activity会运行在名字和`TaskAffinity`相同的任务栈中。
@@ -66,10 +67,19 @@ TaskAffinity可以翻译为"任务相关性"。
 * 9、可以理解为：`Activity B`创建时，只能运行在AppA的任务栈中，但`Activity B`本来应该是运行在AppB的任务栈中。
 * 10、当AppB启动后，会创建自己的任务栈，这时系统发现`Activity B`原本想要的任务栈已经被创建了，就把`Activity B`从AppA的任务栈转过来。
 
+### **设置启动模式**
 
+* 方式一：`AndroidMenifest`中设置。
+* 方式二：通过在Intent中设置标志位来为`Activity`指定`LaunchMode`。
+* 1、优先级上，方式二高于方式一，同时存在时，以方式二为准。
+* 2、方式一无法直接为`Activity`设定`FLAG_ACTIVITY_NEW_TASK`标志。
+* 3、方式二无法为`Activity`指定`singleInstance`模式。
 
+### **Activity的Flags**
 
-
+* 1、`FLAG_ACTIVITY_NEW_TASK`，等同于在 XML 中指定 `singleTask`。
+* 2、`FLAG_ACTIVITY_SINGLE_TOP`，等同于在 XML 中指定 `singleTop`。
+* 3、`FLAG_ACTIVITY_CLEAR_TOP`，一个和`FLAG_ACTIVITY_NEW_TASK`一起出现。如果栈中已存在，之上的全部出栈。
 
 
 
