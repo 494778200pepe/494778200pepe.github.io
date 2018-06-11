@@ -40,6 +40,7 @@ description: 『 Activity的四种启动模式 』
 
 单实例模式。
 * 1、加强的`singleTask`，在这种模式下，`Activity`只能单独的位于一个任务栈中。
+* 2、再次启动时，任然是调用`onNewIntent`。
 
 注意：
 * 1、前台栈S1中有`Activity B`和`Activity A`，后台栈S2中有`Activity C(SingleTask)`和`Activity D(singleTask)`。
@@ -81,6 +82,16 @@ TaskAffinity可以翻译为"任务相关性"。
 * 2、`FLAG_ACTIVITY_SINGLE_TOP`，等同于在 XML 中指定 `singleTop`。
 * 3、`FLAG_ACTIVITY_CLEAR_TOP`，一个和`FLAG_ACTIVITY_NEW_TASK`一起出现。如果栈中已存在，之上的全部出栈。
 
+### **注意**
+
+* 1、`ActivityA`通过`startActivityForResult()`启动`ActivityB`。
+* 2、`ActivityB`需用通过`setResult()`传值回去。
+* 3、那么`ActivityB`不容许设置`LaunchMode`为`singleTask`或者`singleInstance`，或只能设为标准模式，不然将在`startActivityForResult()`后直接调用`onActivityResult()`。
+* 4、另外，`requestCode`值必须要大于等于0，不然，`startActivityForResult`就变成了`startactivity`。
+
+参考：
+
+[调用startActivityForResult启动activity，返回当前页不响应的问题（附带activity携带参数流程） - CSDN博客](https://blog.csdn.net/qq_16064871/article/details/46963871)
 
 
 
