@@ -1,5 +1,4 @@
 - title: "CustomWidget" 
-- title: "绘制"
 - title: "自定义View" 
 - title: "自定义ViewGroup" 
 - title: "Widget"  
@@ -7,7 +6,10 @@
 - title: "RxJava" 
 - title: "开源框架" 
 - title: "Util"  
+- title: "Drawable" 
 - title: "Android样式的开发"  
+- title: "动画"
+- title: "绘制"
 - title: "Android"  
   
 
