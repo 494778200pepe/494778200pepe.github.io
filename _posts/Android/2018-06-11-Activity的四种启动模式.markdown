@@ -88,6 +88,9 @@ TaskAffinity可以翻译为"任务相关性"。
 * 2、`ActivityB`需用通过`setResult()`传值回去。
 * 3、那么`ActivityB`不容许设置`LaunchMode`为`singleTask`或者`singleInstance`，或只能设为标准模式，不然将在`startActivityForResult()`后直接调用`onActivityResult()`。
 * 4、另外，`requestCode`值必须要大于等于0，不然，`startActivityForResult`就变成了`startactivity`。
+* 5、在`ActivityB`中必须是`setResult()`后调用`finish()`，然后回到`ActivityA`，`ActivityA`才会自动调用`onActivityResult()`。
+* 6、如果你是直接按`Back`回去的,肯定不会调。
+* 7、好在`Android 5.0`以后，修正了这个问题。不过当你在`Intent`中设置`FLAG_ACTIVITY_NEW_TASK`后还是会出现这样的问题。
 
 参考：
 
