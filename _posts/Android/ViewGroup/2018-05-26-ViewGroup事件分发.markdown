@@ -121,6 +121,8 @@ description: 『 View事件分发 』
     。 `getParent().requestDisallowInterceptTouchEvent(true);`
     
     。 当我们把disallowIntercept设置为true时，`!disallowIntercept`直接为false，于是拦截的方法体就被跳过了~
+    
+    。 子View可以通过调用getParent().requestDisallowInterceptTouchEvent(true);  阻止ViewGroup对其MOVE或者UP事件进行拦截。
 
 
 

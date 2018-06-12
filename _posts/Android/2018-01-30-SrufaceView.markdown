@@ -8,6 +8,9 @@ author: pepe
 description: 『 SurfaceView 』
 ---
 
+Android SurfaceView实战 打造抽奖转盘 - CSDN博客
+https://blog.csdn.net/lmj623565791/article/details/41722441
+
 ### Activity 和 SurfaceView 的生命周期
 
 1、程序打开
