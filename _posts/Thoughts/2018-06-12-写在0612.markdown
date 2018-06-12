@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "写在06012"
+date:   2018-06-12 08:49:00 +0800
+categories: Thoughts
+tags: Thoughts
+author: pepe
+description: 『 工作感想 』
+---
+
+* 1、关于学习，之前一定要定好框架和结构，做到心中有象。
+
