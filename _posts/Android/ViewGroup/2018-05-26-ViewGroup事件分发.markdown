@@ -127,6 +127,10 @@ description: 『 View事件分发 』
 
 参考：
 
+[View的事件分发机制和滑动冲突解决方案 - 简书](https://www.jianshu.com/p/057832528bdd)
+
+[Android View 事件分发机制源码详解(ViewGroup篇) - CSDN博客](https://blog.csdn.net/a553181867/article/details/51287844)
+
 [Android事件分发机制完全解析，带你从源码的角度彻底理解(下) - 郭霖的专栏 - CSDN博客](http://blog.csdn.net/guolin_blog/article/details/9153747)
     
 [Android ViewGroup事件分发机制 - Hongyang - CSDN博客](http://blog.csdn.net/lmj623565791/article/details/39102591/)

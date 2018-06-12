@@ -12,20 +12,23 @@ description: 『 View事件分发 』
 * 2、dispatchTouchEvent -> setOnTouchListener 的 onTouch 方法 -> onTouchEvent
 * 3、onTouchEvent 中执行 onLongClick 和 onClick
 * 4、setOnLongClickListener 中返回false时，onClick也会执行。
-* 5、onLongClick 在 onTouchEvent 的 down 事件中执行
+* 5、onLongClick 在 onTouchEvent 的 down 事件中执行，要想执行长按事件该View必须是longClickable的，并且不能产生ACTION_MOVE
 * 6、onClick 在 onTouchEvent 的 up 事件中执行
 * 7、onTouch 返回 false 时，表示 onTouch 没有消费事件，会继续判断 onTouchEvent。
 * 8、onTouch 返回 true 时，表示消费事件，onTouch 会执行 down、move、up事件，onTouchEvent 不会执行任何事件。
 * 9、无论是 TextView 还是 ImageView，只要是 clickable，均会消费事件
 * 10、onTouch 和 onTouchEvent 都在 dispatchTouchEvent 中执行，onTouch 先执行。
 * 11、onTouch 和 onTouchEvent 的返回值，决定了是否消费事件，也就决定了后续的 action 是否会传递过来。
-* 12、onTouch 返回false，那么 dispatchTouchEvent 也会返回false，后续的 action 就不会传过来了
+* 12、onTouch 和 onTouchEvent 都返回false，那么 dispatchTouchEvent 也会返回false，后续的 action 就不会传过来了
 * 13、还有一个很重要的知识点需要说明，就是touch事件的层级传递。
     我们都知道如果给一个控件注册了touch事件，每次点击它的时候都会触发一系列的ACTION_DOWN，ACTION_MOVE，ACTION_UP等事件。
     这里需要注意，如果你在执行ACTION_DOWN的时候返回了false，后面一系列其它的action就不会再得到执行了。
     简单的说，就是当dispatchTouchEvent在进行事件分发的时候，只有前一个action返回true，才会触发后一个action。
 * 14、如果 onTouch 返回false，但是onTouchEvent 返回true的话，同样是消费了事件。onTouch 和 onTouchEvent 的三个action都会执行了。
-* 15、onTouchEvent 的默认处理是 判断 clickable。
+* 15、onTouchEvent 的默认处理是 判断 clickable 和 longclickable。
+* 16、一个clickable或者longclickable的View是一直消费Touch事件的，而一般的View既不是clickable也不是longclickable的(即不会消费Touch事件，只会执行ACTION_DOWN而不会执行ACTION_MOVE和ACTION_UP) Button是clickable的，可以消费Touch事件，但是我们可以通过setClickable()和setLongClickable()来设置View是否为clickable和longClickable。
+* 17、Touch事件的分发过程中，如果消费了ACTION_DOWN,而在分发ACTION_MOVE的时候,某个ViewGroup拦截了Touch事件，就像上面那个自定义CustomLayout，则会将ACTION_CANCEL分发给该ViewGroup下面的Touch到的View,然后将Touch事件交给ViewGroup处理，并返回true
+
 
 
 参考blog：
@@ -35,6 +38,9 @@ description: 『 View事件分发 』
 [Android事件分发机制完全解析，带你从源码的角度彻底理解(上) - 郭霖的专栏 - CSDN博客](http://blog.csdn.net/guolin_blog/article/details/9097463/)
 
 [Android事件分发机制——View(一) - CSDN博客](http://blog.csdn.net/dmk877/article/details/48781845)
+
+[Andriod 从源码的角度详解View,ViewGroup的Touch事件的分发机制 - CSDN博客](https://blog.csdn.net/xiaanming/article/details/21696315)
+
 
 
 重新梳理一下View的事件分发流程：
