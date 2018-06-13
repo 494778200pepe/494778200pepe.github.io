@@ -167,9 +167,9 @@ public boolean computeScrollOffset() {
     
 * 1、在你想要执行滚动是，调用 `startScroll()` ,设置滚动参数
 * 2、刷新界面 `invalidate()` 或者 `postInvalidate()`
-* 3、在View重绘时，会调用 `computeScrollOffset()`
+* 3、在View重绘时，会调用 `computeScroll()`
 * 4、我们需要来重写此方法，见下文
-* 5、在 `computeScroll()` 中，通过 `computeScrollOffset()` 判断滚动是否完成
+* 5、在 `computeScroll()` 中，通过 `mScroller.computeScrollOffset()` 判断滚动是否完成
 * 6、没有完成的话，下一次刷新界面需要到达的位置 在`computeScrollOffset()` 中已经计算完成
 * 7、保存在mCurrX， mCurrX 里面，可以通过 mScroller.getCurrX() 获取
 * 8、再次调用 `scrollTo()` 和 `invalidate()`，刷新界面，达到动画的效果
@@ -180,6 +180,7 @@ public boolean computeScrollOffset() {
     public void computeScroll() {
         // 第三步，重写computeScroll()方法，并在其内部完成平滑滚动的逻辑
         if (mScroller.computeScrollOffset()) {
+            // 还没有完成滑动
             scrollTo(mScroller.getCurrX(), mScroller.getCurrY());
             invalidate();
         }
@@ -246,14 +247,14 @@ View重绘到调用 `computeScroll()`的详细过程，可以参考[夏神][xiaa
 ~~~
 参数：
 
-* tartX 滚动起始点X坐标
-* startY 滚动起始点Y坐标
-* velocityX   当滑动屏幕时X方向初速度，以每秒像素数计算
-* velocityY   当滑动屏幕时Y方向初速度，以每秒像素数计算
-* minX    X方向的最小值，scroller不会滚过此点。
-* maxX    X方向的最大值，scroller不会滚过此点。
-* minY    Y方向的最小值，scroller不会滚过此点。
-* maxY    Y方向的最大值，scroller不会滚过此点。
+* `startX` : 滚动起始点X坐标
+* `startY` : 滚动起始点Y坐标
+* `velocityX` :   当滑动屏幕时X方向初速度，以每秒像素数计算
+* `velocityY` :   当滑动屏幕时Y方向初速度，以每秒像素数计算
+* `minX` :   X方向的最小值，scroller不会滚过此点。
+* `maxX` :   X方向的最大值，scroller不会滚过此点。
+* `minY` :   Y方向的最小值，scroller不会滚过此点。
+* `maxY` :   Y方向的最大值，scroller不会滚过此点。
 
 在fling（快滑，用户按下触摸屏、快速移动后松开）手势基础上开始滚动。滚动的距离取决于fling的初速度。
 
