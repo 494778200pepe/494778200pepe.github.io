@@ -68,6 +68,8 @@ public class ScrollerLayout extends ViewGroup {
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
+                //event.getRawX:表示的是触摸点距离 屏幕左边界的距离
+                //event.getRawY:表示的是触摸点距离 屏幕上边界的距离
                 mXDown = ev.getRawX();
                 mXlastMove = mXDown;
                 break;
@@ -89,6 +91,8 @@ public class ScrollerLayout extends ViewGroup {
             case MotionEvent.ACTION_DOWN:
                 break;
             case MotionEvent.ACTION_MOVE:
+                //event.getRawX:表示的是触摸点距离 屏幕左边界的距离
+                //event.getRawY:表示的是触摸点距离 屏幕上边界的距离
                 mXMove = event.getRawX();
                 int scrolledX = (int) (mXlastMove - mXMove);
                 if (getScrollX() + scrolledX < leftBorder) {
