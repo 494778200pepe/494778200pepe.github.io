@@ -58,13 +58,15 @@ description: 『 View事件分发 』
  
 总结一下：
  
-* 1、ACTION_DOWN中，ViewGroup捕获到事件，然后判断是否拦截，如果没有拦截，则找到包含当前x,y坐标的子View，赋值给mMotionTarget，然后调用	mMotionTarget.dispatchTouchEvent
+* 1、`ACTION_DOWN`中，`ViewGroup`捕获到事件，然后判断是否拦截，如果没有拦截，则找到包含当前x,y坐标的子View，赋值给`mMotionTarget`，然后调用	`mMotionTarget.dispatchTouchEvent`
 
-* 2、ACTION_MOVE中，ViewGroup捕获到事件，然后判断是否拦截，如果没有拦截，则直接调用mMotionTarget.dispatchTouchEvent(ev)
+* 2、`ACTION_MOVE`中，`ViewGroup`捕获到事件，然后判断是否拦截，如果没有拦截，则直接调用`mMotionTarget.dispatchTouchEvent(ev)`
 
-* 3、ACTION_UP中，ViewGroup捕获到事件，然后判断是否拦截，如果没有拦截，则直接调用mMotionTarget.dispatchTouchEvent(ev)
+* 3、`ACTION_UP中`，`ViewGroup`捕获到事件，然后判断是否拦截，如果没有拦截，则直接调用`mMotionTarget.dispatchTouchEvent(ev)`
 
-当然了在分发之前都会修改下坐标系统，把当前的x，y分别减去child.left 和 child.top ，然后传给child;
+当然了在分发之前都会修改下坐标系统，把当前的x，y分别减去`child.left`和`child.top`，然后传给child;
+
+* 4、如果`MotionEvent`最终都没有被消费，例如`dispatchTouchEvent`在`Action_Down`返回了false，那么系统便不会再分发`Action_Move`或者`Action_UP`
 
 说明：
 
