@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Scroller实现简易版ViewPager"
+title:  "Scroller实现VelocityTracker版ViewPager"
 date:   2017-11-30 21:44:00 +0800
 categories: Android
 tags: 自定义ViewGroup
 author: pepe
-description: 『 Scroller实现简易版ViewPager 』
+description: 『 Scroller实现VelocityTracker版ViewPager 』
 ---
 
 ### `ScrollerLayout.java`
