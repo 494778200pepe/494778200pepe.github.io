@@ -296,3 +296,5 @@ public void More ...extendDuration(int extend) {
 
 [Android的Scroller介绍 滑动 - 流动的存在 - 博客园](http://www.cnblogs.com/wzachenjian/p/3667554.html)
 
+[scroller-url]:http://www.grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/2.0_r1/android/widget/Scroller.java#Scroller.0mCurrX
+
