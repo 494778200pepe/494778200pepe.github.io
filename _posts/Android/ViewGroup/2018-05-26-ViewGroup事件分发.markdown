@@ -55,6 +55,18 @@ description: 『 View事件分发 』
         - 如果拦截， `mMotionTarget = null，return true;`
         - 如果不拦截，`mMotionTarget = null;`
         - 然后 `return target.dispatchTouchEvent(ev);`  正常执行
+ 
+总结一下：
+ 
+* 1、ACTION_DOWN中，ViewGroup捕获到事件，然后判断是否拦截，如果没有拦截，则找到包含当前x,y坐标的子View，赋值给mMotionTarget，然后调用	mMotionTarget.dispatchTouchEvent
+
+* 2、ACTION_MOVE中，ViewGroup捕获到事件，然后判断是否拦截，如果没有拦截，则直接调用mMotionTarget.dispatchTouchEvent(ev)
+
+* 3、ACTION_UP中，ViewGroup捕获到事件，然后判断是否拦截，如果没有拦截，则直接调用mMotionTarget.dispatchTouchEvent(ev)
+
+当然了在分发之前都会修改下坐标系统，把当前的x，y分别减去child.left 和 child.top ，然后传给child;
+
+说明：
 
 * 一、只要我们的`onInterceptTouchEvent return true `那么我们的MotionEvent 与ChildView 无缘
 * 二、如果我们的`onInterceptTouchEvent  return false；`那么我们的ChildView  会优先获得MotionEvent ，
@@ -131,14 +143,14 @@ description: 『 View事件分发 』
 
 [Andriod 从源码的角度详解View,ViewGroup的Touch事件的分发机制 - CSDN博客](https://blog.csdn.net/xiaanming/article/details/21696315)
 
+[Android ViewGroup事件分发机制 - Hongyang - CSDN博客](http://blog.csdn.net/lmj623565791/article/details/39102591/)
+
 [View的事件分发机制和滑动冲突解决方案 - 简书](https://www.jianshu.com/p/057832528bdd)
 
 [Android View 事件分发机制源码详解(ViewGroup篇) - CSDN博客](https://blog.csdn.net/a553181867/article/details/51287844)
 
 [Android事件分发机制完全解析，带你从源码的角度彻底理解(下) - 郭霖的专栏 - CSDN博客](http://blog.csdn.net/guolin_blog/article/details/9153747)
-    
-[Android ViewGroup事件分发机制 - Hongyang - CSDN博客](http://blog.csdn.net/lmj623565791/article/details/39102591/)
-    
+     
 [Android事件分发机制--ViewGroup(二) - CSDN博客](http://blog.csdn.net/dmk877/article/details/49055815)
     
 [Android中的dispatchTouchEvent()、onInterceptTouchEvent()和onTouchEvent() - 张兴业的博客 - CSDN博客](
