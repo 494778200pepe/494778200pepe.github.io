@@ -68,18 +68,18 @@ description: 『 View事件分发 』
 
 说明：
 
-* 一、只要我们的`onInterceptTouchEvent return true `那么我们的MotionEvent 与ChildView 无缘
-* 二、如果我们的`onInterceptTouchEvent  return false；`那么我们的ChildView  会优先获得MotionEvent ，
+* 一、只要我们的`onInterceptTouchEvent return true `那么我们的`MotionEvent`与ChildView 无缘
+* 二、如果我们的`onInterceptTouchEvent  return false;`那么我们的ChildView  会优先获得`MotionEvent`。
 
-    。 但是当我们的ChildView  并不在TouchTarget上，我们的ViewGroup依然有机会得到本次MotionEvent 。
+    。 但是当我们的`ChildView`并不在`TouchTarget`上，我们的ViewGroup依然有机会得到本次`MotionEvent`。
     
-    。 获得之后执行`super.dispatchTouchEvent(ev)`；也就是把ViewGroup 当做一个View了。
+    。 获得之后执行`super.dispatchTouchEvent(ev)`；也就是把`ViewGroup`当做一个View了。
     
-* 三、 `onInterceptTouchEvent` 并不会在每一次 MotionEvent事件（ACTION_DOWN、ACTION_MOVE、ACTION_UP 等）调用，
+* 三、`onInterceptTouchEvent`并不会在每一次`MotionEvent`事件（`ACTION_DOWN、ACTION_MOVE、ACTION_UP` 等）调用，
 
-    。 例如果在`ACTION_DOWN `时，onInterceptTouchEvent 拦截，return true 交给了ViewGroup 而View没有得到的话，ACTION_MOVE时就不会调用，
+    。 例如果在`ACTION_DOWN `时，`onInterceptTouchEvent` 拦截，`return true`交给了`ViewGroup` 而View没有得到的话，`ACTION_MOVE`时就不会调用，
     
-    。 但是如果return false，ChildView 得到了ACTION_MOVE时，onInterceptTouchEvent 就会再次调用
+    。 但是如果`return false`，`ChildView`得到了`ACTION_MOVE`时，`onInterceptTouchEvent`就会再次调用
 
 
     
