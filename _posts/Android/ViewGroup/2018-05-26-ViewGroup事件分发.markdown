@@ -154,16 +154,6 @@ description: 『 View事件分发 』
 
 [View的事件分发机制和滑动冲突解决方案 - 简书](https://www.jianshu.com/p/057832528bdd)
 
-[Android View 事件分发机制源码详解(ViewGroup篇) - CSDN博客](https://blog.csdn.net/a553181867/article/details/51287844)
-     
-[Android事件分发机制--ViewGroup(二) - CSDN博客](http://blog.csdn.net/dmk877/article/details/49055815)
-    
-[Android中的dispatchTouchEvent()、onInterceptTouchEvent()和onTouchEvent() - 张兴业的博客 - CSDN博客](
-http://blog.csdn.net/xyz_lmn/article/details/12517911)
-
-[onInterceptTouchEvent 与 onTouchEvent 分析与MotionEvent在ViewGroup与View中的分发 - 大叔的愤怒，你驾驭不了 - CSDN博客](
-http://blog.csdn.net/jaysong2012/article/details/46909959)
-
 [Android 手把手教您自定义ViewGroup（一） - Hongyang - CSDN博客](http://blog.csdn.net/lmj623565791/article/details/38339817/)
 
 [Android 自定义控件打造史上最简单的侧滑菜单 - Hongyang - CSDN博客](http://blog.csdn.net/lmj623565791/article/details/39185641)
@@ -184,6 +174,17 @@ dispatchTouchEvent分析：
     
 * 3、如果不是取消，并且不是拦截
 
+
+
+[Android事件分发机制--ViewGroup(二) - CSDN博客](http://blog.csdn.net/dmk877/article/details/49055815)
+    
+[Android中的dispatchTouchEvent()、onInterceptTouchEvent()和onTouchEvent() - 张兴业的博客 - CSDN博客](
+http://blog.csdn.net/xyz_lmn/article/details/12517911)
+
+[onInterceptTouchEvent 与 onTouchEvent 分析与MotionEvent在ViewGroup与View中的分发 - 大叔的愤怒，你驾驭不了 - CSDN博客](
+http://blog.csdn.net/jaysong2012/article/details/46909959)
+
+[Android View 事件分发机制源码详解(ViewGroup篇) - CSDN博客](https://blog.csdn.net/a553181867/article/details/51287844)
 
 
 
