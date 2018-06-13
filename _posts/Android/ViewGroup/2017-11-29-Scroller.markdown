@@ -258,25 +258,35 @@ View重绘到调用 `computeScroll()`的详细过程，可以参考[夏神][xiaa
 
 在fling（快滑，用户按下触摸屏、快速移动后松开）手势基础上开始滚动。滚动的距离取决于fling的初速度。
 
+### **公共方法**
 #### abortAnimation()
 ~~~
+// 停止动画。与forceFinished(boolean)相反，Scroller滚动到最终x与y位置时中止动画。
 public void abortAnimation() {
     mCurrX = mFinalX;
     mCurrY = mFinalY;
     mFinished = true;
 }
 ~~~
-直接跳转到结束状态。
+
+#### computeScrollOffset()
+~~~
+// 当想要知道新的位置时，调用此函数。如果返回true，表示动画还没有结束。位置改变以提供一个新的位置。
+public boolean computeScrollOffset (){
+}
+~~~
 
 #### forceFinished()
 ~~~
+// 强制结束，在原地结束。
 public final void forceFinished(boolean finished) {
         mFinished = finished;
     }
 ~~~
-强制结束，在原地结束。
+
 #### extendDuration()
 ~~~
+// 延长滚动动画时间。此函数允许当使用setFinalX(int) or setFinalY(int) 时，卷动动作持续更长时间并且卷动更长距离。
 public void More ...extendDuration(int extend) {
     int passed = timePassed();
     mDuration = passed + extend;
@@ -284,7 +294,6 @@ public void More ...extendDuration(int extend) {
     mFinished = false;
 }
 ~~~
-延长滚动动画时间。此函数允许当使用setFinalX(int) or setFinalY(int) 时，卷动动作持续更长时间并且卷动更长距离。
 
 
 参考：

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Scroller实现简易版ViewPager"
-date:   2018-06-13 10:42:00 +0800
+date:   2017-11-30 21:44:00 +0800
 categories: Android
 tags: 自定义ViewGroup
 author: pepe

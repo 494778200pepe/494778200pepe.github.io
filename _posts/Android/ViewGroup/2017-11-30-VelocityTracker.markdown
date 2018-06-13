@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "VelocityTracker"
-date:   2017-11-29 20:44:00 +0800
+date:   2017-11-30 20:44:00 +0800
 categories: Android
 tags: 自定义ViewGroup
 author: pepe
