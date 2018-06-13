@@ -160,13 +160,13 @@ ViewGroup2 包含 TextView2 和 TextView3，
 onMeasure方法测量控件大小的流程，以及里面执行的一些细节，总结一下知识点：
 
     1、 测量控件大小是父控件发起的
-    2、 父控件要测量子控件大小，需要重写onMeasure方法，然后调用measureChildren或者measureChildWithMargin方法
-    3、 on Measure方法的参数是通过getChildMeasureSpec生成的
-    4、 如果我们自定义控件需要使用wrap_content，我们需要重写onMeasure方法
+    2、 父控件要测量子控件大小，需要重写`onMeasure`方法，然后调用`measureChildren`或者`measureChildWithMargin`方法
+    3、 `onMeasure`方法的参数是通过`getChildMeasureSpec`生成的
+    4、 如果我们自定义控件需要使用`wrap_content`，我们需要重写`onMeasure`方法
     5、 测量控件的步骤：
-        1、 父控件onMeasure->measureChildren`measureChildWithMargin->getChildMeasureSpec->
-        2、 子控件的measure->onMeasure->setMeasureDimension->
-        3、 父控件onMeasure结束调用setMeasureDimension`保存自己的大小
+        1、 父控件`onMeasure->measureChildren/measureChildWithMargin->getChildMeasureSpec->`
+        2、 子控件的`measure->onMeasure->setMeasureDimension->`
+        3、 父控件`onMeasure`结束调用`setMeasureDimension`保存自己的大小
    
    
    
