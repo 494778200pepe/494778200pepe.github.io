@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "GestureDetector"
-date:   2017-12-01 16:45:00 +0800
+date:   2018-02-01 16:45:00 +0800
 categories: Android
 tags: 自定义ViewGroup
 author: pepe

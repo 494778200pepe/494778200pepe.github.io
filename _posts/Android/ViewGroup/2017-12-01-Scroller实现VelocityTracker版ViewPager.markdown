@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Scroller实现VelocityTracker版ViewPager"
-date:   2017-11-30 21:44:00 +0800
+date:   2017-12-01 21:44:00 +0800
 categories: Android
 tags: 自定义ViewGroup
 author: pepe
