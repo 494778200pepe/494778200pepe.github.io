@@ -157,7 +157,7 @@ public class ScrollerLayout1 extends ViewGroup {
     android:focusable="true"
     android:background="@android:color/holo_green_dark">
 
-    <com.hopechart.widget.MyViewGroup
+    <com.hopechart.widget.ScrollerLayout1
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -182,7 +182,7 @@ public class ScrollerLayout1 extends ViewGroup {
             android:text="page3"
             android:textColor="@color/main_color" />
 
-    </com.hopechart.widget.MyViewGroup>
+    </com.hopechart.widget.ScrollerLayout1>
 </RelativeLayout>
 ```
 
