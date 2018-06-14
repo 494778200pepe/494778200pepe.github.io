@@ -25,7 +25,7 @@ import android.widget.Scroller;
  * @date 2018/6/12.
  */
 
-public class ScrollerLayout extends ViewGroup {
+public class ScrollerLayout2 extends ViewGroup {
 
     public static final String TAG = "pepe";
     /**
@@ -74,7 +74,7 @@ public class ScrollerLayout extends ViewGroup {
     private int mMinimumVelocity;
     private int mMaximumVelocity;
 
-    public ScrollerLayout(Context context, AttributeSet attrs) {
+    public ScrollerLayout2(Context context, AttributeSet attrs) {
         super(context, attrs);
         mScreenWidth = ScreenUtils.getScreenWidth(context);
         mScreenHeight = ScreenUtils.getScreenHeight(context);
