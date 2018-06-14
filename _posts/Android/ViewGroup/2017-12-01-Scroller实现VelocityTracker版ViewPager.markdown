@@ -157,10 +157,22 @@ public class ScrollerLayout2 extends ViewGroup {
         return super.onInterceptTouchEvent(ev);
     }
 
-    //mScrollX 的值总等于 『View左边缘』 和 『View内容左边缘』 在水平方向上的距离。
-    //mScrollY 的值总等于 『View上边缘』 和 『View内容上边缘』 在垂直方向上的距离。
-    //event.getRawX:表示的是触摸点距离 屏幕左边界的距离
-    //event.getRawY:表示的是触摸点距离 屏幕上边界的距离
+    //event.getRawX:表示的是触摸点距离 屏幕左边界的距离;event.getRawY:表示的是触摸点距离 屏幕上边界的距离
+    //event.getX():表示的是触摸的点距离 自身左边界的距离;event.getY():表示的是触摸的点距离 自身上边界的距离
+    
+    //mScrollX 的值总等于 『View控件左边缘』 和 『View内容左边缘』 在水平方向上的距离。
+    //mScrollY 的值总等于 『View控件上边缘』 和 『View内容上边缘』 在垂直方向上的距离
+    // getScrollX() = getLeft() - getX();
+    // getScrollY() = getTop() - getY();
+    //『View控件』:View.getWidth()/View.getHeight()。View.getWidth() = getRight()-getLeft()
+    //『View控件』:View.getTop()/View.getRight()/View.getBottom()/View.getLeft()
+    //『View内容』:View.getX()/View.getY()，相对于ViewGroup
+    //『View内容』:View.getTranslationX()/getTranslationY.getY()，相对于自身
+    //View.getTranslationX()计算的是该View在X轴的偏移量。初始值为0，向左偏移值为负，向右偏移值为正。 = newX - oldX
+    //View.getTranslationY()计算的是该View在Y轴的偏移量。初始值为0，向上偏移为负，向下偏移为证。 = newY = oldY
+    // getX() = getLeft() + getTranslationX();
+    // getY() = getTop() + getTranslationY();
+    // getScrollX() = getLeft() - (getLeft() + getTranslationX()) = - getTranslationX(); 向右为负
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         Log.d("pepe", "onTouchEvent");
