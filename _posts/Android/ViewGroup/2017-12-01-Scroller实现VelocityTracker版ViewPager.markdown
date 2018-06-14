@@ -200,13 +200,6 @@ public class ScrollerLayout2 extends ViewGroup {
                 break;
             case MotionEvent.ACTION_UP:
                 Log.d("pepe", "onTouchEvent     MotionEvent.ACTION_UP");
-                // 当手指抬起时，根据当前的滚动值来判定应该滚动到哪个子控件的界面
-//                int targetIndex = (getScrollX() + getWidth() / 2) / getWidth();
-//                int dx = targetIndex * getWidth() - getScrollX();
-//                // 第二步，调用startScroll()方法来初始化滚动数据并刷新界面
-//                mScroller.startScroll(getScrollX(), 0, dx, 0);
-//                invalidate();
-
                 mVelocityTracker.computeCurrentVelocity(1000, mMaximumVelocity);
                 int initialVelocity = (int) mVelocityTracker.getXVelocity();
                 if ((Math.abs(initialVelocity) > mMinimumVelocity)
@@ -214,6 +207,7 @@ public class ScrollerLayout2 extends ViewGroup {
                     isFling = true;
                     fling(-initialVelocity);
                 } else {
+                    // 当手指抬起时，根据当前的滚动值来判定应该滚动到哪个子控件的界面
                     int targetIndex = (getScrollX() + getWidth() / 2) / getWidth();
                     int dx = targetIndex * getWidth() - getScrollX();
                     // 第二步，调用startScroll()方法来初始化滚动数据并刷新界面
