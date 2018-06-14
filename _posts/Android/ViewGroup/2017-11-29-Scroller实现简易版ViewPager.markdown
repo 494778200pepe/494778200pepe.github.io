@@ -105,7 +105,7 @@ public class ScrollerLayout1 extends ViewGroup {
     }
 
     //mScrollX 的值总等于 『View控件左边缘』 和 『View内容左边缘』 在水平方向上的距离。
-    //mScrollY 的值总等于 『View控件上边缘』 和 『View内容上边缘』 在垂直方向上的距离
+    //mScrollY 的值总等于 『View控件上边缘』 和 『View内容上边缘』 在垂直方向上的距离。
     //event.getRawX:表示的是触摸点距离 屏幕左边界的距离
     //event.getRawY:表示的是触摸点距离 屏幕上边界的距离
     @Override
