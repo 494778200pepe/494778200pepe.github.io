@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "滑动冲突二：两个垂直，哪一个？"
+date:   2017-12-04 16:07:00 +0800
+categories: Android
+tags: 自定义ViewGroup
+author: pepe
+description: 『 滑动冲突二：两个垂直，哪一个？ 』
+---
+
+
+### **外部拦截**
+
+
+### **内部拦截**
+
+
+参考：
+
+[View的事件分发机制和滑动冲突解决方案 - 简书](https://www.jianshu.com/p/057832528bdd)
+
+[Andoird 自定义ViewGroup实现竖向引导界面 - CSDN博客](https://blog.csdn.net/lmj623565791/article/details/23692439)
+
+
+
+
+
+
