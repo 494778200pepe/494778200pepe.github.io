@@ -67,6 +67,7 @@ description: 『 View事件分发 』
 当然了在分发之前都会修改下坐标系统，把当前的x，y分别减去`child.left`和`child.top`，然后传给child;
 
 * 4、如果`MotionEvent`最终都没有被消费，例如`dispatchTouchEvent`在`Action_Down`返回了false，那么系统便不会再分发`Action_Move`或者`Action_UP`
+* 5、如果`View`不消耗除`Action_Down`以为的其他事件，那么这个点击事件会消失，此时父元素的`onTouchEvent`并不会被调用，并且当前View可以持续受到后续的事件，最终这些消失的点击事件会传递给`Activity`处理。
 
 说明：
 
@@ -150,9 +151,6 @@ description: 『 View事件分发 』
 [Android事件分发机制完全解析，带你从源码的角度彻底理解(下) - 郭霖的专栏 - CSDN博客](http://blog.csdn.net/guolin_blog/article/details/9153747)
 
 上面三篇文章足矣！
-
-
-[View的事件分发机制和滑动冲突解决方案 - 简书](https://www.jianshu.com/p/057832528bdd)
 
 [Android 手把手教您自定义ViewGroup（一） - Hongyang - CSDN博客](http://blog.csdn.net/lmj623565791/article/details/38339817/)
 
