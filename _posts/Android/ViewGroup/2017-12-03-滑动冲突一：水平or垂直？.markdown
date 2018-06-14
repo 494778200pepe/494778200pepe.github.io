@@ -177,7 +177,10 @@ public class ScrollerLayout3 extends ViewGroup {
                 mYDown = ev.getRawY();
                 mXLastMove = mXDown;
                 mYLastMove = mYDown;
-                break;
+                // 这里必须返回false，即不拦截 ACTION_DOWN 事件
+                // 一旦父容器拦截了 ACTION_DOWN 事件，那么后续的 ACTION_MOVE 和 ACTION_UP 都会交由父容器来处理
+                // 这个时候事件没法再传给子View了
+                return false;
             case MotionEvent.ACTION_MOVE:
                 Log.d("pepe", "MotionEvent.ACTION_MOVE");
                 mXMove = ev.getRawX();
@@ -194,6 +197,11 @@ public class ScrollerLayout3 extends ViewGroup {
                     return true;
                 }
                 break;
+            case MotionEvent.ACTION_UP:
+                // 如果这里返回了true，就会导致子View无法收到 ACTION_UP，子View里面的 OnClick 事件就无法触发
+                // 父容器比较特殊，一旦它开始拦截任何事件，后续事件都会交给它处理，ACTION_UP 作为最后一个事件也会收到
+                // 即使 父容器在 这里返回了 false
+                return false;
             default:
                 break;
         }
@@ -250,6 +258,7 @@ public class ScrollerLayout3 extends ViewGroup {
                     isFling = true;
                     fling(-initialVelocity);
                 } else {
+                    // 当手指抬起时，根据当前的滚动值来判定应该滚动到哪个子控件的界面
                     int targetIndex = (getScrollX() + getWidth() / 2) / getWidth();
                     int dx = targetIndex * getWidth() - getScrollX();
                     // 第二步，调用startScroll()方法来初始化滚动数据并刷新界面
@@ -315,6 +324,9 @@ public class ScrollerLayout3 extends ViewGroup {
     }
 }
 ```
+
+> 核心就在`if (diffX > diffY)  return true;`这里，横向移动距离大于纵向时，就拦截事件，由ViewGroup处理，否则就不拦截，交由子View处理。
+           
 
 ### **内部拦截**
 
