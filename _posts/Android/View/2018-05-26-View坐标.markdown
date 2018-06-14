@@ -26,6 +26,8 @@ description: 『 View坐标 』
 * `View.getX()`:子View相对于父View在X轴上的实时偏移值。`getX() = getLeft() + getTranslationX();`
 * `View.getY()`:子View相对于父View在y轴上的实时偏移值。`getY() = getTop() + getTranslationY();`
 
+> 注意：View在平移过程中，top和left表示的是原始左上角的位置信息，其值并不会发生改变，此时发生改变的是x、y、translationX、translationY这四个参数。
+
 ### **`View.getMeasuredWidth()`和`View.getWidth()`的区别**：
 * ①`View.getMeasuredWidth()`:获得的值是`setMeasuredDimension`方法设置的值，它的值在`measure()`运行后就会确定
 * ②`View.getWidth()`:获得是是`layout()`中传递的四个参数中的`mRight - mLeft`，它的值在`layot()`后确定
