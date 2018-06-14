@@ -44,7 +44,7 @@ public class View {
 ~~~
 说明：
 
-* 1、`scrollTo` 和 `scrollBy` 只能改变 『View内容』 的位置，而不能改变View在布局中的位置。
+* 1、*`scrollTo` 和 `scrollBy` 只能改变 『View内容』 的位置，而不能改变View在布局中的位置。*
 * 2、在滑动过程中，mScrollX 的值总等于 『View控件左边缘』 和 『View内容左边缘』 在水平方向上的距离。
 * 3、mScrollY 的值总等于 『View控件上边缘』 和 『View内容上边缘』 在垂直方向上的距离。
 * 4、mScrollX 和 mScrollY 的单位为像素。
