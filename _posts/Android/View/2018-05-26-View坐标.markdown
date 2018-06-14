@@ -18,9 +18,13 @@ description: 『 View坐标 』
 * `View.getBottom()`:子View的                底部到父View的顶部的距离
 * `View.getLeft()`:子View的                  左边界到父View的左边界的距离
 
-### **自身View - 偏移**
+### **view相对于自身 - 偏移**
 * `View.getTranslationX()`:计算的是该View在X轴的偏移量。初始值为0，向左偏移值为负，向右偏移值为正。 可以通过执行属性动画来使偏移。
 * `View.getTranslationY()`:计算的是该View在Y轴的偏移量。初始值为0，向上偏移为负，向下偏移为证。
+
+### **view相对于父View - 偏移**
+* `View.getX()`:子View相对于父View在X轴上的实时偏移值。`getX() = getLeft() + getTranslationX();`
+* `View.getY()`:子View相对于父View在y轴上的实时偏移值。`getY() = getTop() + getTranslationY();`
 
 ### **`View.getMeasuredWidth()`和`View.getWidth()`的区别**：
 * ①`View.getMeasuredWidth()`:获得的值是`setMeasuredDimension`方法设置的值，它的值在`measure()`运行后就会确定
