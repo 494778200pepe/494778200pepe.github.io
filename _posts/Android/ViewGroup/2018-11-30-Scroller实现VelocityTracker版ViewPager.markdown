@@ -25,7 +25,7 @@ import android.widget.Scroller;
  * @date 2018/6/12.
  */
 
-public class MyViewGroup extends ViewGroup {
+public class ScrollerLayout extends ViewGroup {
 
     public static final String TAG = "pepe";
     /**
@@ -62,17 +62,19 @@ public class MyViewGroup extends ViewGroup {
      * 界面可滚动的左边界
      */
     private int leftBorder;
-
+    /**
+     * 界面可滚动的右边界
+     */
+    private int rightBorder;
     /**
      * getScaledPagingTouchSlop
      */
-    private int rightBorder;
-    private int curScreen = 1;
+    private VelocityTracker mVelocityTracker;
+    
     private int mMinimumVelocity;
     private int mMaximumVelocity;
-    private VelocityTracker mVelocityTracker;
 
-    public MyViewGroup(Context context, AttributeSet attrs) {
+    public ScrollerLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         mScreenWidth = ScreenUtils.getScreenWidth(context);
         mScreenHeight = ScreenUtils.getScreenHeight(context);
@@ -162,13 +164,14 @@ public class MyViewGroup extends ViewGroup {
         Log.d("pepe", "onTouchEvent");
         obtainVelocityTracker(event);
         switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                break;
             case MotionEvent.ACTION_MOVE:
                 Log.d("pepe", "onTouchEvent     MotionEvent.ACTION_MOVE");
                 mXMove = event.getRawX();
                 int scrolledX = (int) (mXLastMove - mXMove);
                 Log.d("pepe", "scrolledX = " + scrolledX);
                 Log.d("pepe", "getScrollX() = " + getScrollX());
-
                 Log.d("pepe", "getScrollX() + scrolledX = " + (getScrollX() + scrolledX));
                 Log.d("pepe", "getScrollX() + getWidth() + scrolledX = " + (getScrollX() + getWidth() + scrolledX));
                 if (getScrollX() + scrolledX < leftBorder) {
@@ -183,7 +186,7 @@ public class MyViewGroup extends ViewGroup {
                 break;
             case MotionEvent.ACTION_UP:
                 Log.d("pepe", "onTouchEvent     MotionEvent.ACTION_UP");
-//                // 当手指抬起时，根据当前的滚动值来判定应该滚动到哪个子控件的界面
+                // 当手指抬起时，根据当前的滚动值来判定应该滚动到哪个子控件的界面
 //                int targetIndex = (getScrollX() + getWidth() / 2) / getWidth();
 //                int dx = targetIndex * getWidth() - getScrollX();
 //                // 第二步，调用startScroll()方法来初始化滚动数据并刷新界面
@@ -194,7 +197,14 @@ public class MyViewGroup extends ViewGroup {
                 int initialVelocity = (int) mVelocityTracker.getXVelocity();
                 if ((Math.abs(initialVelocity) > mMinimumVelocity)
                         && getChildCount() > 0) {
+                    isFling = true;
                     fling(-initialVelocity);
+                } else {
+                    int targetIndex = (getScrollX() + getWidth() / 2) / getWidth();
+                    int dx = targetIndex * getWidth() - getScrollX();
+                    // 第二步，调用startScroll()方法来初始化滚动数据并刷新界面
+                    mScroller.startScroll(getScrollX(), 0, dx, 0);
+                    invalidate();
                 }
                 releaseVelocityTracker();
                 break;
@@ -204,19 +214,26 @@ public class MyViewGroup extends ViewGroup {
         return true;
     }
 
+    boolean isFling = false;
     @Override
     public void computeScroll() {
         // 第三步，重写computeScroll()方法，并在其内部完成平滑滚动的逻辑
         if (mScroller.computeScrollOffset()) {
             scrollTo(mScroller.getCurrX(), mScroller.getCurrY());
+            if(isFling){
+                //这是最后OverScroller的最后一次滑动，如果这次滑动完了mCurrentScale不是整数，则把尺子移动到最近的整数位置
+                if (!mScroller.computeScrollOffset()) {
+                    isFling = false;
+                    int targetIndex = (getScrollX() + getWidth() / 2) / getWidth();
+                    int dx = targetIndex * getWidth() - getScrollX();
+                    // 第二步，调用startScroll()方法来初始化滚动数据并刷新界面
+                    mScroller.startScroll(getScrollX(), 0, dx, 0);
+                    invalidate();
+                }
+            }
             invalidate();
-        } else {
-            // 当手指抬起时，根据当前的滚动值来判定应该滚动到哪个子控件的界面
-            int targetIndex = (getScrollX() + getWidth() / 2) / getWidth();
-            int dx = targetIndex * getWidth() - getScrollX();
-            // 第二步，调用startScroll()方法来初始化滚动数据并刷新界面
-            mScroller.startScroll(getScrollX(), 0, dx, 0);
-            invalidate();
+        }else{
+            isFling = false;
         }
     }
 

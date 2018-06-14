@@ -8,7 +8,7 @@ author: pepe
 description: 『 Scroller实现简易版ViewPager 』
 ---
 
-### `ScrollerLayout.java`
+### `ScrollerLayout1.java`
 ~~~
 import android.content.Context;
 import android.util.AttributeSet;
@@ -23,7 +23,7 @@ import android.widget.Scroller;
  * Created by wang on 2017/7/17.
  */
 
-public class ScrollerLayout extends ViewGroup {
+public class ScrollerLayout1 extends ViewGroup {
 
     /**
      * 屏幕宽度
@@ -38,7 +38,7 @@ public class ScrollerLayout extends ViewGroup {
     private int leftBorder;
     private int rightBorder;
 
-    public ScrollerLayout(Context context, AttributeSet attrs) {
+    public ScrollerLayout1(Context context, AttributeSet attrs) {
         super(context, attrs);
         mScreenWidth = ScreenUtils.getScreenWidth(context);
         mScreenHeight = ScreenUtils.getScreenHeight(context);
