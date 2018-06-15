@@ -46,12 +46,6 @@ description: 『 滑动冲突一：水平or垂直？(内部拦截) 』
 #### `MyListView.java`
 先自定义一个`MyListView`继承`ListView`，重写其`dispatchTouchEvent`方法：
 ```
-import android.content.Context;
-import android.util.AttributeSet;
-import android.util.Log;
-import android.view.MotionEvent;
-import android.widget.ListView;
-
 /**
  * @author wang
  * @date 2018/6/14.
@@ -67,19 +61,23 @@ public class MyListView extends ListView {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
+        Log.d("pepe", "===========> ListView    dispatchTouchEvent   +" + event.getAction());
         int x = (int) event.getX();
         int y = (int) event.getY();
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN: {
-                Log.d("pepe", "ListView     MotionEvent.ACTION_DOWN");
+                Log.d("pepe", "ListView     dispatchTouchEvent   MotionEvent.ACTION_DOWN");
                 // disallowIntercept默认是false
-                // 这是设置 parent 的 disallowIntercept 为true
+                // 这里设置 parent 的 disallowIntercept 为true
+                // 因为外部的ViewGroup默认是有 MOVE 事件过来就拦截的，所以这里必须设计 不准拦截，只有我不需要时，漏过去了 ViewGroup 才能处理
+                // ViewGroup 针对 MOVE 事件，在 onInterceptTouchEvent(ev)是默认拦截的，也就是说是一直在等着事件过来
                 // 是为了绕开 if (!disallowIntercept && onInterceptTouchEvent(ev)) 的判断，避免被 parent 拦截 ACTION_MOVE
+                // 不然，MOVE 事件还没到 子View，就被 ViewGroup 吃掉了
                 this.getParent().requestDisallowInterceptTouchEvent(true);
                 break;
             }
             case MotionEvent.ACTION_MOVE: {
-                Log.d("pepe", "ListView     MotionEvent.ACTION_MOVE");
+                Log.d("pepe", "ListView     dispatchTouchEvent  MotionEvent.ACTION_MOVE");
                 int deltaX = x - mLastX;
                 int deltaY = y - mLastY;
                 Log.d("pepe", "dx:" + deltaX + " dy:" + deltaY);
@@ -97,7 +95,10 @@ public class MyListView extends ListView {
         }
         mLastX = x;
         mLastY = y;
-        return super.dispatchTouchEvent(event);
+        boolean result = super.dispatchTouchEvent(event);
+        // ListView默认是拦截事件的
+        Log.d("pepe", "===========> ListView    result = " + result);
+        return result;
     }
 }
 ```
