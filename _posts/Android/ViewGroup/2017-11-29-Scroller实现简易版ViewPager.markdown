@@ -10,31 +10,16 @@ description: 『 Scroller实现简易版ViewPager 』
 
 ### `ScrollerLayout1.java`
 ~~~
-import android.content.Context;
-import android.util.AttributeSet;
-import android.util.Log;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.ViewConfiguration;
-import android.view.ViewGroup;
-import android.widget.Scroller;
-
 /**
  * Created by wang on 2017/7/17.
  */
 
 public class ScrollerLayout1 extends ViewGroup {
 
-    /**
-     * 屏幕宽度
-     */
-    private int mScreenWidth;
-    private int mScreenHeight;
+    private int mScreenWidth;//屏幕宽度
+    private int mScreenHeight;//屏幕高度
     private Scroller mScroller;
     private int mTouchSlop;
-    private float mXDown;
-    private float mXMove;
-    private float mXLastMove;
     private int leftBorder;
     private int rightBorder;
 
@@ -42,7 +27,7 @@ public class ScrollerLayout1 extends ViewGroup {
         super(context, attrs);
         mScreenWidth = ScreenUtils.getScreenWidth(context);
         mScreenHeight = ScreenUtils.getScreenHeight(context);
-        mScroller= new Scroller(context);
+        mScroller = new Scroller(context);
         ViewConfiguration configuration = ViewConfiguration.get(context);
         mTouchSlop = configuration.getScaledTouchSlop();
     }
@@ -62,14 +47,11 @@ public class ScrollerLayout1 extends ViewGroup {
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
-        Log.d("pepe", "onLayout     getChildCount = " + getChildCount());
         if (changed) {
             for (int i = 0; i < getChildCount(); i++) {
                 View child = getChildAt(i);
                 int childWidth = child.getMeasuredWidth();
                 int childHeight = child.getMeasuredHeight();
-                Log.d("pepe", "childWidth = " + childWidth);
-                Log.d("pepe", "childHeight = " + childHeight);
                 int childLeft = i * mScreenWidth + (mScreenWidth - childWidth) / 2;
                 int childTop = (mScreenHeight - childHeight) / 2;
                 int childRight = childLeft + childWidth;
@@ -78,44 +60,99 @@ public class ScrollerLayout1 extends ViewGroup {
             }
             leftBorder = 0;
             rightBorder = getChildCount() * mScreenWidth;
-            Log.d("pepe", "leftBorder = " + leftBorder);
-            Log.d("pepe", "rightBorder = " + rightBorder);
         }
     }
 
     @Override
-    public boolean onInterceptTouchEvent(MotionEvent ev) {
-        switch (ev.getAction()) {
-            case MotionEvent.ACTION_DOWN:
-                //event.getRawX:表示的是触摸点距离 屏幕左边界的距离
-                //event.getRawY:表示的是触摸点距离 屏幕上边界的距离
-                mXDown = ev.getRawX();
-                mXLastMove = mXDown;
-                break;
-            case MotionEvent.ACTION_MOVE:
-                mXMove = ev.getRawX();
-                float diff = mXMove - mXLastMove;
-                mXLastMove = mXMove;
-                if (diff > mTouchSlop) {
-                    return true;
-                }
-                break;
-        }
-        return super.onInterceptTouchEvent(ev);
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        Log.d("pepe", "===========> dispatchTouchEvent   +" + ev.getAction());
+        return super.dispatchTouchEvent(ev);
     }
 
+//    private float mInterceptLastMoveX;
+//    private float mInterceptDownX;
+//    private float mInterceptMoveX;
+//
+//    //disallowIntercept默认是false,0down,1up,2move,3cancel
+//    @Override
+//    public boolean onInterceptTouchEvent(MotionEvent ev) {
+//        Log.d("pepe", "===========> onInterceptTouchEvent   +" + ev.getAction());
+//        switch (ev.getAction()) {
+//            case MotionEvent.ACTION_DOWN:
+//                Log.d("pepe", "onInterceptTouchEvent    MotionEvent.ACTION_DOWN");
+//                mInterceptDownX = ev.getRawX();
+//                mInterceptLastMoveX = mInterceptDownX;
+//                Log.d("pepe", "onInterceptTouchEvent     mInterceptLastMoveX = " + mInterceptLastMoveX);
+//                break;
+//            case MotionEvent.ACTION_MOVE:
+//                Log.d("pepe", "onInterceptTouchEvent     MotionEvent.ACTION_MOVE");
+//                mInterceptMoveX = ev.getRawX();
+//                Log.d("pepe", "onInterceptTouchEvent     mInterceptMoveX = " + mInterceptMoveX);
+//                float diff = mInterceptMoveX - mInterceptLastMoveX;
+//                Log.d("pepe", "onInterceptTouchEvent     diff = " + diff);
+//                mInterceptLastMoveX = mInterceptMoveX;
+//                Log.d("pepe", "onInterceptTouchEvent mLastMoveX = " + mInterceptLastMoveX);
+//                if (diff > mTouchSlop) {
+//                    return true;
+//                }
+//                break;
+//            default:
+//                break;
+//        }
+//        return super.onInterceptTouchEvent(ev);
+//    }
+    private float mTouchLastMoveX;
+    private float mTouchDownX;
+    private float mTouchMoveX;
+
+    //『View控件』的「原始位置信息」
+    //『View控件』:View.getWidth()/View.getHeight()。View.getWidth() = getRight()-getLeft()
+    //『View控件』:View.getTop()/View.getRight()/View.getBottom()/View.getLeft()
+
+    //『View控件』的「实时位置信息和偏移值」
+    //getTranslationX():计算的是该『View控件』在X轴的偏移量。初始值为0，向左偏移值为负，向右偏移值为正。
+    //getTranslationY():计算的是该『View控件』在Y轴的偏移量。初始值为0，向上偏移为负，向下偏移为证。
+    // 可以通过执行属性动画来使偏移。
+    //View.getX():子View相对于父View在X轴上的实时偏移值。getX() = getLeft() + getTranslationX();
+    //View.getY():子View相对于父View在y轴上的实时偏移值。getY() = getTop() + getTranslationY();
+
+    //『View内容』的 「位置信息」
     //mScrollX 的值总等于 『View控件左边缘』 和 『View内容左边缘』 在水平方向上的距离。
     //mScrollY 的值总等于 『View控件上边缘』 和 『View内容上边缘』 在垂直方向上的距离。
-    //event.getRawX:表示的是触摸点距离 屏幕左边界的距离
-    //event.getRawY:表示的是触摸点距离 屏幕上边界的距离
+    //Android并没有提供『View内容』的坐标信息接口，所以View.getScrollX()间接的表示了『View内容』的坐标信息。
+    //记住  滑动时，滑动的是『View内容』，而不是『View控件』，所以 下面的 event.getX()  。。。
+
+    //『触摸点』相对 「屏幕」
+    //event.getRawX:表示的是触摸点距离 屏幕左边界的距离;
+    // event.getRawY:表示的是触摸点距离 屏幕上边界的距离
+    //『触摸点』相对 「View控件」
+    //event.getX():表示的是触摸的点距离 自身左边界的距离;event.getY():表示的是触摸的点距离 自身上边界的距离
+    //event.getX()  相对的是『View控件』，滑动时『View控件』不动，所以 event.getX() = event.getRawX
+    //如果用属性动画，改变了『View控件』 的「实时位置信息和偏移值」，那么event.getX()和event.getRawX()就不相同了。
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        Log.d("pepe", "===========> onTouchEvent   +" + event.getAction());
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
+                Log.d("pepe", "onTouchEvent    MotionEvent.ACTION_DOWN");
+                mTouchDownX = event.getRawX();
+                mTouchLastMoveX = mTouchDownX;
+                Log.d("pepe", "onTouchEvent     mTouchLastMoveX = " + mTouchLastMoveX);
                 break;
             case MotionEvent.ACTION_MOVE:
-                mXMove = event.getRawX();
-                int scrolledX = (int) (mXLastMove - mXMove);
+                Log.d("pepe", "onTouchEvent    MotionEvent.ACTION_MOVE");
+                Log.d("pepe", "onTouchEvent     mTouchLastMoveX = " + mTouchLastMoveX);
+                mTouchMoveX = event.getRawX();
+                Log.d("pepe", "onTouchEvent     mTouchMoveX = " + mTouchMoveX);
+                // 从左向右滑动，getScrollX()需要减，mLastMoveX < mTouchMoveX，scrolledX正好为负值
+                // 从右向左滑动，getScrollX()需要加，mLastMoveX > mTouchMoveX，scrolledX正好为正值
+                // scrolledX 直接和 getScrollX() 做加法就好了
+                int scrolledX = (int) (mTouchLastMoveX - mTouchMoveX);
+                Log.d("pepe", "onTouchEvent     scrolledX = " + scrolledX);
+                Log.d("pepe", "onTouchEvent     getScrollX() = " + getScrollX());
+                Log.d("pepe", "onTouchEvent     getScrollX() + scrolledX = " + (getScrollX() + scrolledX));
+                Log.d("pepe", "onTouchEvent     getScrollX() + getWidth() + scrolledX = " + (getScrollX() + getWidth() + scrolledX));
                 if (getScrollX() + scrolledX < leftBorder) {
                     scrollTo(leftBorder, 0);
                     return true;
@@ -124,13 +161,15 @@ public class ScrollerLayout1 extends ViewGroup {
                     return true;
                 }
                 scrollBy(scrolledX, 0);
-                mXLastMove = mXMove;
+                mTouchLastMoveX = mTouchMoveX;
                 break;
             case MotionEvent.ACTION_UP:
                 int targetIndex = (getScrollX() + getWidth() / 2) / getWidth();
                 int dx = targetIndex * getWidth() - getScrollX();
-                mScroller.startScroll(getScrollX(),0,dx,0);
+                mScroller.startScroll(getScrollX(), 0, dx, 0);
                 invalidate();
+                break;
+            default:
                 break;
         }
         //return super.onTouchEvent(event);//如果MyViewGroup里面放的是Button，这样可以
@@ -140,8 +179,8 @@ public class ScrollerLayout1 extends ViewGroup {
 
     @Override
     public void computeScroll() {
-        if(mScroller.computeScrollOffset()){
-            scrollTo(mScroller.getCurrX(),mScroller.getCurrY());
+        if (mScroller.computeScrollOffset()) {
+            scrollTo(mScroller.getCurrX(), mScroller.getCurrY());
             invalidate();
         }
     }
