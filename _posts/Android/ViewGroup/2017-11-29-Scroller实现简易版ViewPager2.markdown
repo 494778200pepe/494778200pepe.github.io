@@ -86,7 +86,10 @@ public class ScrollerLayout5 extends ViewGroup {
                 Log.d("pepe", "onInterceptTouchEvent     mInterceptMoveX = " + mInterceptMoveX);
                 float diff = Math.abs(mInterceptMoveX - mInterceptLastMoveX);
                 Log.d("pepe", "onInterceptTouchEvent     diff = " + diff);
-                mInterceptLastMoveX = mInterceptMoveX;
+                // 这里 mTouchInterceptMoveX 是否需要赋值？都可以
+                // 如果赋值，那么从 DOWN 到这个 MOVE，之间的移动距离就损失了
+                // 如果不赋值，那么 mTouchInterceptMoveX 直接就是 DOWN 时的值了，没有移动损失
+                mTouchInterceptMoveX = mInterceptLastMoveX = mInterceptMoveX;
                 Log.d("pepe", "onInterceptTouchEvent mLastMoveX = " + mInterceptLastMoveX);
                 if (diff > mTouchSlop) {
                     Log.d("pepe", "===> onInterceptTouchEvent = true");
