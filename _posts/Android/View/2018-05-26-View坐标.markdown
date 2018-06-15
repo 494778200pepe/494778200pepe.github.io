@@ -19,6 +19,10 @@ description: 『 View坐标 』
 * `View.getWidth()`:表示的是当前控件的宽度，即`View.getWidth() = getRight()-getLeft()`
 * `View.getHeight()`：表示的是当前控件的高度，即`View.getHeight() = getBottom()-getTop()`
 
+### **自身View**
+* `View.getScrollX()`: mScrollX 的值总等于 『View控件左边缘』 和 『View内容左边缘』 在水平方向上的距离。
+* `View.getScrollY()`: mScrollY 的值总等于 『View控件上边缘』 和 『View内容上边缘』 在垂直方向上的距离。
+
 ### **触摸点 - 屏幕**
 * `event.getRawX`:表示的是触摸点距离          屏幕左边界的距离
 * `event.getRawY`:表示的是触摸点距离          屏幕上边界的距离
