@@ -46,7 +46,7 @@ public final int getScrollY() {
 * `event.getX()`:表示的是触摸的点距离         自身左边界的距离
 * `event.getY()`:表示的是触摸的点距离         自身上边界的距离
 
-> 这里的自身是指`『View控件』，scrollTo和scrollBy，改变的是『View内容』，对event.getX()和event.getY()无影响，event.getX()和event.getRawX()`相同。`如果用属性动画，改变了『View控件』 的`「实时位置信息和偏移值」`，那么`event.getX()`和`event.getRawX()`就不相同了。
+> 这里的自身是指`『View控件』，scrollTo和scrollBy，改变的是『View内容』，对event.getX()和event.getY()无影响，event.getX()和event.getRawX()`相同。`如果用属性动画，改变了『View控件』 的「实时位置信息和偏移值」`，那么`event.getX()`和`event.getRawX()`就不相同了。
 
 ### **`View.getMeasuredWidth()`和`View.getWidth()`的区别**：
 * ①`View.getMeasuredWidth()`:获得的值是`setMeasuredDimension`方法设置的值，它的值在`measure()`运行后就会确定
