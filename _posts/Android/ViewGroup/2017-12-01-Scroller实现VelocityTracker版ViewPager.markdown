@@ -267,7 +267,7 @@ public class ScrollerLayout2 extends ViewGroup {
 }
 ~~~
 
-### `activity_main.xml`
+### `layout2.xml`
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"

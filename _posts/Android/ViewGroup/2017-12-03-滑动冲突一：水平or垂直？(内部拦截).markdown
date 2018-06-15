@@ -10,7 +10,7 @@ description: 『 滑动冲突一：水平or垂直？(内部拦截) 』
 
 ### **内部拦截**
 
-#### `activity_main.xml`
+#### `layout4.xml`
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
