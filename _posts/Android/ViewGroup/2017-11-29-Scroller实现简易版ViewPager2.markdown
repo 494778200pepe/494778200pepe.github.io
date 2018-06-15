@@ -1,16 +1,16 @@
 ---
 layout: post
-title:  "Scroller实现简易版ViewPager"
-date:   2017-11-29 15:07:00 +0800
+title:  "Scroller实现简易版ViewPager2"
+date:   2017-11-29 16:07:00 +0800
 categories: Android
 tags: 自定义ViewGroup
 author: pepe
-description: 『 Scroller实现简易版ViewPager 』
+description: 『 将布局文件中的TextView换成Button(默认消费事件) 』
 ---
 
-### `ScrollerLayout1.java`
+### `ScrollerLayout5.java`
 ~~~
-public class ScrollerLayout1 extends ViewGroup {
+public class ScrollerLayout5 extends ViewGroup {
 
     private int mScreenWidth;//屏幕宽度
     private int mScreenHeight;//屏幕高度
@@ -19,7 +19,7 @@ public class ScrollerLayout1 extends ViewGroup {
     private int leftBorder;
     private int rightBorder;
 
-    public ScrollerLayout1(Context context, AttributeSet attrs) {
+    public ScrollerLayout5(Context context, AttributeSet attrs) {
         super(context, attrs);
         mScreenWidth = ScreenUtils.getScreenWidth(context);
         mScreenHeight = ScreenUtils.getScreenHeight(context);
@@ -65,38 +65,45 @@ public class ScrollerLayout1 extends ViewGroup {
         return super.dispatchTouchEvent(ev);
     }
 
-//    private float mInterceptLastMoveX;
-//    private float mInterceptDownX;
-//    private float mInterceptMoveX;
-//
-//    //disallowIntercept默认是false,0down,1up,2move,3cancel
-//    @Override
-//    public boolean onInterceptTouchEvent(MotionEvent ev) {
-//        Log.d("pepe", "===========> onInterceptTouchEvent   +" + ev.getAction());
-//        switch (ev.getAction()) {
-//            case MotionEvent.ACTION_DOWN:
-//                Log.d("pepe", "onInterceptTouchEvent    MotionEvent.ACTION_DOWN");
-//                mInterceptDownX = ev.getRawX();
-//                mInterceptLastMoveX = mInterceptDownX;
-//                Log.d("pepe", "onInterceptTouchEvent     mInterceptLastMoveX = " + mInterceptLastMoveX);
-//                break;
-//            case MotionEvent.ACTION_MOVE:
-//                Log.d("pepe", "onInterceptTouchEvent     MotionEvent.ACTION_MOVE");
-//                mInterceptMoveX = ev.getRawX();
-//                Log.d("pepe", "onInterceptTouchEvent     mInterceptMoveX = " + mInterceptMoveX);
-//                float diff = Math.abs(mInterceptMoveX - mInterceptLastMoveX);
-//                Log.d("pepe", "onInterceptTouchEvent     diff = " + diff);
-//                mInterceptLastMoveX = mInterceptMoveX;
-//                Log.d("pepe", "onInterceptTouchEvent mLastMoveX = " + mInterceptLastMoveX);
-//                if (diff > mTouchSlop) {
-//                    return true;
-//                }
-//                break;
-//            default:
-//                break;
-//        }
-//        return super.onInterceptTouchEvent(ev);
-//    }
+    private float mInterceptLastMoveX;
+    private float mInterceptDownX;
+    private float mInterceptMoveX;
+
+    //disallowIntercept默认是false,0down,1up,2move,3cancel
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent ev) {
+        Log.d("pepe", "===========> onInterceptTouchEvent   +" + ev.getAction());
+        switch (ev.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                Log.d("pepe", "onInterceptTouchEvent    MotionEvent.ACTION_DOWN");
+                mInterceptDownX = ev.getRawX();
+                mTouchInterceptMoveX = mInterceptLastMoveX = mInterceptDownX;
+                Log.d("pepe", "onInterceptTouchEvent     mInterceptLastMoveX = " + mInterceptLastMoveX);
+                break;
+            case MotionEvent.ACTION_MOVE:
+                Log.d("pepe", "onInterceptTouchEvent     MotionEvent.ACTION_MOVE");
+                mInterceptMoveX = ev.getRawX();
+                Log.d("pepe", "onInterceptTouchEvent     mInterceptMoveX = " + mInterceptMoveX);
+                float diff = Math.abs(mInterceptMoveX - mInterceptLastMoveX);
+                Log.d("pepe", "onInterceptTouchEvent     diff = " + diff);
+                mInterceptLastMoveX = mInterceptMoveX;
+                Log.d("pepe", "onInterceptTouchEvent mLastMoveX = " + mInterceptLastMoveX);
+                if (diff > mTouchSlop) {
+                    Log.d("pepe", "===> onInterceptTouchEvent = true");
+                    return true;
+                }
+                break;
+            default:
+                break;
+        }
+        boolean result = super.onInterceptTouchEvent(ev);
+        // 默认都是不拦截的，所以Button能接受到事件，然后拦截，但是空白区域无法接收事件，也就不拦截了
+        Log.d("pepe", "===========> onInterceptTouchEvent    result = " + result);
+        return result;
+    }
+    // 这个变量是用于从 onInterceptTouchEvent 中获取 mInterceptLastMoveX 的值
+    // 因为 Button 默认是消费事件的，所以onTouchEvent 是接收不到 MotionEvent.ACTION_DOWN  事件的， 所以mTouchLastMoveX是没有初始值的。
+    private float mTouchInterceptMoveX;
     private float mTouchLastMoveX;
     private float mTouchDownX;
     private float mTouchMoveX;
@@ -132,19 +139,21 @@ public class ScrollerLayout1 extends ViewGroup {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 Log.d("pepe", "onTouchEvent    MotionEvent.ACTION_DOWN");
+                // 如果是触摸 Button，button 就会拦截了，这里就不会执行
+                // 如果是空白部分，就不会拦截
                 mTouchDownX = event.getRawX();
                 mTouchLastMoveX = mTouchDownX;
                 Log.d("pepe", "onTouchEvent     mTouchLastMoveX = " + mTouchLastMoveX);
                 break;
             case MotionEvent.ACTION_MOVE:
                 Log.d("pepe", "onTouchEvent    MotionEvent.ACTION_MOVE");
-                Log.d("pepe", "onTouchEvent     mTouchLastMoveX = " + mTouchLastMoveX);
+                Log.d("pepe", "onTouchEvent     mTouchInterceptMoveX = " + mTouchInterceptMoveX);
                 mTouchMoveX = event.getRawX();
                 Log.d("pepe", "onTouchEvent     mTouchMoveX = " + mTouchMoveX);
                 // 从左向右滑动，getScrollX()需要减，mLastMoveX < mTouchMoveX，scrolledX正好为负值
                 // 从右向左滑动，getScrollX()需要加，mLastMoveX > mTouchMoveX，scrolledX正好为正值
                 // scrolledX 直接和 getScrollX() 做加法就好了
-                int scrolledX = (int) (mTouchLastMoveX - mTouchMoveX);
+                int scrolledX = (int) (mTouchInterceptMoveX - mTouchMoveX);
                 Log.d("pepe", "onTouchEvent     scrolledX = " + scrolledX);
                 Log.d("pepe", "onTouchEvent     getScrollX() = " + getScrollX());
                 Log.d("pepe", "onTouchEvent     getScrollX() + scrolledX = " + (getScrollX() + scrolledX));
@@ -157,7 +166,7 @@ public class ScrollerLayout1 extends ViewGroup {
                     return true;
                 }
                 scrollBy(scrolledX, 0);
-                mTouchLastMoveX = mTouchMoveX;
+                mTouchInterceptMoveX = mTouchMoveX;
                 break;
             case MotionEvent.ACTION_UP:
                 int targetIndex = (getScrollX() + getWidth() / 2) / getWidth();
@@ -183,7 +192,7 @@ public class ScrollerLayout1 extends ViewGroup {
 }
 ~~~
 
-### `activity_main.xml`
+### `layout5.xml`
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -196,26 +205,36 @@ public class ScrollerLayout1 extends ViewGroup {
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="match_parent"
+            android:layout_marginTop="200dp"
+            android:layout_height="500dp"
             android:background="@android:color/white"
+            android:onClick="onClick"
             android:text="page1"
             android:textColor="@color/main_color" />
 
-        <TextView
-            android:layout_width="200dp"
-            android:layout_height="300dp"
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="match_parent"
+            android:layout_marginTop="200dp"
+            android:layout_height="500dp"
             android:background="@android:color/white"
+            android:onClick="onClick"
             android:text="page2"
             android:textColor="@color/main_color" />
 
-        <TextView
-            android:layout_width="300dp"
-            android:layout_height="200dp"
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="match_parent"
+            android:layout_marginTop="200dp"
+            android:layout_height="500dp"
             android:background="@android:color/white"
+            android:onClick="onClick"
             android:text="page3"
             android:textColor="@color/main_color" />
+
 
     </com.hopechart.widget.ScrollerLayout1>
 </RelativeLayout>
