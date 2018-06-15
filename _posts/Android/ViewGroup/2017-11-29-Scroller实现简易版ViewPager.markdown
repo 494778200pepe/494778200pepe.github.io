@@ -88,7 +88,7 @@ public class ScrollerLayout1 extends ViewGroup {
 //                Log.d("pepe", "onInterceptTouchEvent     MotionEvent.ACTION_MOVE");
 //                mInterceptMoveX = ev.getRawX();
 //                Log.d("pepe", "onInterceptTouchEvent     mInterceptMoveX = " + mInterceptMoveX);
-//                float diff = mInterceptMoveX - mInterceptLastMoveX;
+//                float diff = Math.abs(mInterceptMoveX - mInterceptLastMoveX);
 //                Log.d("pepe", "onInterceptTouchEvent     diff = " + diff);
 //                mInterceptLastMoveX = mInterceptMoveX;
 //                Log.d("pepe", "onInterceptTouchEvent mLastMoveX = " + mInterceptLastMoveX);
