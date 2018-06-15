@@ -138,7 +138,7 @@ public class ScrollerLayout3 extends ViewGroup {
                 Log.d("pepe", "onInterceptTouchEvent    MotionEvent.ACTION_DOWN");
                 mInterceptDownX = ev.getRawX();
                 mInterceptDownY = ev.getRawY();
-                 mInterceptLastMoveX = mInterceptDownX;
+                mInterceptLastMoveX = mInterceptDownX;
                 mInterceptLastMoveY = mInterceptDownY;
                 // 这里必须返回false，即不拦截 ACTION_DOWN 事件
                 // 一旦父容器拦截了 ACTION_DOWN 事件，那么后续的 ACTION_MOVE 和 ACTION_UP 都会交由父容器来处理
@@ -209,6 +209,7 @@ public class ScrollerLayout3 extends ViewGroup {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 Log.d("pepe", "onTouchEvent     MotionEvent.ACTION_DOWN");
+                // 这里始终都不会执行
                 mTouchDownX = event.getRawX();
                 mTouchLastMoveX = mTouchDownX;
                 break;
