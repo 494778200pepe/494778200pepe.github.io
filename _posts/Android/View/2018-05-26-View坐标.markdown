@@ -8,15 +8,31 @@ author: pepe
 description: 『 View坐标 』
 ---
 
-### **自身View**
-* `View.getWidth()`:表示的是当前控件的宽度，即`getRight()-getLeft()`
-* `View.getHeight()`：表示的是当前控件的高度，即`getBottom()-getTop()`
 
 ### **自身View - 父View**
 * `View.getTop()`:子View的                   顶部到父View顶部的距离
 * `View.getRight()`:子View的                 右边界到父View的左边界的距离
 * `View.getBottom()`:子View的                底部到父View的顶部的距离
 * `View.getLeft()`:子View的                  左边界到父View的左边界的距离
+
+### **自身View**
+* `View.getWidth()`:表示的是当前控件的宽度，即`View.getWidth() = getRight()-getLeft()`
+* `View.getHeight()`：表示的是当前控件的高度，即`View.getHeight() = getBottom()-getTop()`
+
+### **触摸点 - 屏幕**
+* `event.getRawX`:表示的是触摸点距离          屏幕左边界的距离
+* `event.getRawY`:表示的是触摸点距离          屏幕上边界的距离
+
+### **触摸点 - 自身**
+* `event.getX()`:表示的是触摸的点距离         自身左边界的距离
+* `event.getY()`:表示的是触摸的点距离         自身上边界的距离
+
+> 这里的自身是指`『View控件』，scrollTo和scrollBy，改变的是『View内容』，对getX()和getY()无影响。`
+
+### **`View.getMeasuredWidth()`和`View.getWidth()`的区别**：
+* ①`View.getMeasuredWidth()`:获得的值是`setMeasuredDimension`方法设置的值，它的值在`measure()`运行后就会确定
+* ②`View.getWidth()`:获得是是`layout()`中传递的四个参数中的`mRight - mLeft`，它的值在`layot()`后确定
+* ③一般情况下，在`onLayout()`中使用`getMeasuredWidth()`,在除`onLayout()`之外的地方使用g`etWidth()`。
 
 ### **view相对于自身 - 偏移**
 * `View.getTranslationX()`:计算的是该View在X轴的偏移量。初始值为0，向左偏移值为负，向右偏移值为正。 可以通过执行属性动画来使偏移。
@@ -28,19 +44,6 @@ description: 『 View坐标 』
 
 > 注意：View在平移过程中，top和left表示的是原始左上角的位置信息，其值并不会发生改变，此时发生改变的是x、y、translationX、translationY这四个参数。因为`view.getX()`和`view.getY()`，还有`translationX、translationY`，表示的应该是『View内容』 的位置信息和偏移值。而`view.getTop()`和`view.getLeft()`则表示的是『View控件』的位置信息。
 
-### **`View.getMeasuredWidth()`和`View.getWidth()`的区别**：
-* ①`View.getMeasuredWidth()`:获得的值是`setMeasuredDimension`方法设置的值，它的值在`measure()`运行后就会确定
-* ②`View.getWidth()`:获得是是`layout()`中传递的四个参数中的`mRight - mLeft`，它的值在`layot()`后确定
-* ③一般情况下，在`onLayout()`中使用`getMeasuredWidth()`,在除`onLayout()`之外的地方使用g`etWidth()`。
-
-
-### **触摸点 - 自身**
-* `event.getX()`:表示的是触摸的点距离         自身左边界的距离
-* `event.getY()`:表示的是触摸的点距离         自身上边界的距离
-
-### **触摸点 - 屏幕**
-* `event.getRawX`:表示的是触摸点距离          屏幕左边界的距离
-* `event.getRawY`:表示的是触摸点距离          屏幕上边界的距离
 
 
 参考：
