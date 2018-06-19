@@ -1,18 +1,16 @@
 ---
 layout: post
-title:  "滑动冲突二：两个垂直，哪一个？"
+title:  "滑动冲突二：两个垂直，哪一个？(外部拦截)"
 date:   2017-12-04 16:07:00 +0800
 categories: Android
 tags: 自定义ViewGroup
 author: pepe
-description: 『 滑动冲突二：两个垂直，哪一个？ 』
+description: 『 滑动冲突二：两个垂直，哪一个？(外部拦截) 』
 ---
-
 
 ### **外部拦截**
 
 
-### **内部拦截**
 
 
 参考：
