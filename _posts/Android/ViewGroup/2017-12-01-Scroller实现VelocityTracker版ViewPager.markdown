@@ -8,7 +8,7 @@ author: pepe
 description: 『 Scroller实现VelocityTracker版ViewPager 』
 ---
 
-### `ScrollerLayout.java`
+### `ScrollerLayout2.java`
 ~~~
 /**
  * @author wang
