@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "C++对C语言的加强一：实用性 增强"
+title:  "C++对C语言的加强二：实用性 增强"
 date:   2018-06-20 11:04:00 +0800
 categories: C++
 tags: 黑马C++
 author: pepe
-description: 『 C++对C语言的加强一：实用性 增强 』
+description: 『 C++对C语言的加强二：实用性 增强 』
 ---
 
 ### 实用性增强
