@@ -1,0 +1,2 @@
+LayoutTransiton实现简单的录制按钮
+https://mp.weixin.qq.com/s/qE2szJOCWansrDnWy3nefQ
