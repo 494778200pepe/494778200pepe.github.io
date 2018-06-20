@@ -7,6 +7,13 @@ tags: 黑马C++
 author: pepe
 description: 『 C++对C语言的加强一：namespace命名空间 』
 ---
+### include和using namespace
+
+* #include用于引用其他文件的内容（如#include “a.h”），编译器在编译时，在使用include的文件中（如名为main.cpp），将include这句话替换为其文件内容，相当于物理上的复制替换。
+* 当不同的两个文件中，使用了相同的函数名（a.h 和b.h两个文件中都有fun()），函数内容却不同，根据上文来看，如果使用include同时引用两个文件，则在编译时，mai.cpp文件中出现了两个fun()，因此重名，后面调用函数时也不知道调用的哪个函数。 
+* 那么，如何避免上面出现的问题呢？这就需要使用命名空间namespace，把两个函数定义在不同的命名空间中，然后在需要调用函数的文件中加入using namespace（注意#include也需要写），将当前使用的函数链接到它声明的地方。
+
+[C++：#include和using namespace - CSDN博客](https://blog.csdn.net/u013719339/article/details/80221899)
 
 ### C++命名空间基本常识
 
