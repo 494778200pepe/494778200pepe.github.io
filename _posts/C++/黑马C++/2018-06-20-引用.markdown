@@ -213,7 +213,34 @@ const int &ref = temp;
 * 1、如果ref不是const的，那么改变ref值，修改的是temp，而不是val。`这里面有一个类型转换的中间值。`
 * 2、期望对ref的赋值会修改val的程序员会发现val实际并未修改。
 
+```
+#include <iostream>
+using namespace std;
 
+int main(void){
+    //1> 用变量 初始化 常引用
+    int x1 = 30;
+    const int &y1 = x1;// 用x1变量去初始化 常引用
+    
+    //2> 用字面量 初始化 常量引用
+    const int a = 40; //C++编译器把a放在符号表中
+    
+    //int &m = 41; //error,普通引用 引用一个字面量 请问 字面量有没有内存地址
+    
+    const int &m = 43;  // C++编译器 会 分配内存空间
+                        // int temp = 43;        
+                        // const int &m = temp;
+    
+    return 0;
+}
+```
+
+结论：
+
+* 1、const int &e 相当于 cosnt int* const e
+* 2、普通引用相当于 int* const e
+* 3、当使用常量(字面量)对const引用进行初始化时，C++编译器会为常量值分配空间，并将引用名作为这段空间的别名
+* 4、使用字面量对const引用初始化后，将生成一个只读变量
 
     
     
