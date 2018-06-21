@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "new和delete"
-date:   2018-06-21 19:10:00 +0800
+title:  "静态成员变量和成员函数"
+date:   2018-06-21 19:23:00 +0800
 categories: C++
 tags: 黑马C++
 author: pepe
-description: 『 new和delete 』
+description: 『 静态成员变量和成员函数 』
 ---
 
 > C++提供了较简便而功能较强的`运算符new和delete`来取代`malloc和free函数`,运算符效率高。
@@ -35,12 +35,10 @@ float *p = new float(3.14159);
 * delete会调用类的析构函数。
 
 ### **delete**
-delete 运算符释放已分配的内存空间。
-
+delete 运算符释放已分配的内存空间
 使用形式：
-
-        。 delete 指针变量；
-        。 delete []指针变量；
+        delete 指针变量；
+        delete []指针变量；
 
 
     
