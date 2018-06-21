@@ -186,6 +186,32 @@ const引用有较多使用。它可以防止对象的值被随意修改。因而
     
 ### const引用的原理
     
+> const引用的目的是，禁止通过修改引用值来改变被引用的对象。const引用的 初始化特性较为微妙。
+
+```
+double val = 3.14;
+const int &ref = val;
+const &ref2 = val;
+
+cout << ref << "---" << ref2 << endl;
+//结果： 3 --- 3.14
+
+val = 4.14;
+
+cout << ref << "    " << ref2 << endl;
+//结果： 3 --- 4.14
+```
+因为ref是const的，在初始化的过程中已经给定值，不允许修改。而被引用的对象是val，是非const的，所以val的修改并未影响ref的值，而ref2的值发生了相应的改变。
+
+> 为什么非const的引用不能使用相关类型初始化呢？实际上，const引用使用「相关类型对象」初始化时，发生了如下过程：
+
+```
+int temp = val;
+const int &ref = temp;
+```
+
+* 1、如果ref不是const的，那么改变ref值，修改的是temp，而不是val。`这里面有一个类型转换的中间值。`
+* 2、期望对ref的赋值会修改val的程序员会发现val实际并未修改。
 
 
 
