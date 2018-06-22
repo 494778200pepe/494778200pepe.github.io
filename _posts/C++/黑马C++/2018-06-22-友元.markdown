@@ -15,15 +15,126 @@ description: 『 友元 』
 ```
 friend 返回类型 函数名(形参);
 ```
-    
+一个函数可以是多个类的友元函数，只需要在各个类中分别声明。   
     
 说明：
 
 * 1、友元函数虽然可以访问类对象的私有成员，但它毕竟不是成员函数，因此，在类的外部定义友元函数时，不必像成员函数那样，在函数名前加 "类名::"
 * 2、因为友元函数不是类的成员，所以它不能直接访问对象的数据成员，也不能通过this指针访问对象的数据成员，它必须通过作为入口参数传递进来的对象名(或对象指针、对象引用)来访问引用对象的数据成员。    
     
+#### 全局函数作友元函数
+```
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+class Point
+{
+    public:
+        Point(double xx,double yy)
+        {
+            x = xx;
+            y = yy;
+        }
+        void Getxy();
+        friend double Distance(Point &a,Point &b);
+    private:
+        double x,y;
+};
+
+void Point::Getxy()
+{
+    cout << "(" << x <, "," << y << ")" << endl;
+}
+
+double Distance(Point &a,Point &b)
+{
+    double dx = a.x - b.x;
+    double dy = a.y - b.y;
+    return sqrt(dx*dx+dy*dy);
+}
+
+int main(void)
+{
+    Point p1(3.0,4.0),p2(6.0,8.0);
+    p1.Getxy();
+    p2.Getxy();
+    double d = Distance(p1,p2);
+    cout << "Distance is " << d << endl;
     
-    
+    return 0;
+}
+```
+  
+#### 类成员函数作友元函数
+```
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+class Point;
+// 向前声明，是一种不完全型声明，即只需提供类名(无需提供类实现)即可。仅可用于声明指针和引用
+
+class ManagerPoint
+{
+    public:
+        double Distance(Point &a,Point &b);
+};
+
+class Point
+{
+    public:
+        Point(double xx,double yy)
+        {
+            x = xx;
+            y = yy;        
+        }
+        void Getxy();
+        friend double ManagerPoint::Distance(Point &a,Point &b);
+        private:
+            double x,y;
+}
+
+void Point::Getxy()
+{
+    cout << "(" << x << "," << y << ")" << endl;
+}
+
+double ManagerPoint::Distance(Point &a,Point &b)
+{
+    double dx = a.x - b.x;
+    double dy = a.y - b.y;
+    return sqrt(dx*dx + dy*dy);
+}
+
+int main(void)
+{
+    Point p1(3.0,4.0),p2(6.0,8.0);
+    p1.Getxy();
+    p2.Getxy();
+    ManagerPoint mp;
+    float d = mp.Distance(p1,p2);
+    cout << "Distance is " << d << endl;
+}
+```
+
+### 友元对象
+
+> 友元类的所有成员函数都是另一个类的友元函数，都可以访问另一个类中的隐藏信息(包括私有成员和保护成员)。当希望一个类可以存取另一个类的私有成员时，可以将该类声明为另一类的友元类。定义友元类的格式如下：
+
+```
+friend class 类名
+// 其中：friend 和 class 是关键字，类名必须是程序中的一个已定义过的类。
+// 例如，以下语句说明类 B 是类 A 的友元类：
+class A
+{
+    ...
+    public:
+        friend class B;
+        ...
+}
+// 经过以上说明后，类 B 的所有成员函数都是类 A 的友元函数，能存取类 A 的私有成员和保护成员。
+``
     
     
     
