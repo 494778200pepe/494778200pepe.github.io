@@ -25,6 +25,8 @@ bss是英文Block Started by Symbol的简称，通常是指用来存放程序中
 堆(heap)保存函数内部动态分配内存，是另外一种用来保存程序信息的数据结构，更准确的说是保存程序的动态变量。堆是“先进先出”（First In first Out，FIFO）数据结构。它只允许在堆的一端插入数据，在另一端移走数据。堆的地址空间“向上增加”，即当堆上保存的数据越多，堆的地址就越高。  
     
     
+![memory_part]({{ site.baseurl }}/assets/images/C++/heima/memory_part.png)
+    
 [程序或-内存区域分配（五个段）--终于搞明白了 - CSDN博客](
 https://blog.csdn.net/love_gaohz/article/details/41310597)  
 
