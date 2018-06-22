@@ -30,6 +30,7 @@ char getData() const{         return this->letter;
     
     
 请看这两个函数:`const int getValue();`和`int getValue2() const;`
+
 ```
 /*
  * FunctionConst.h
