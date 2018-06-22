@@ -17,6 +17,7 @@ description: 『 const 』
 * 2、表示成员函数隐含传入的this指针为const指针，决定了在该成员函数中，   任意修改它所在的类的成员的操作都是不允许的（因为隐含了对this指针的const引用）
 * 3、唯一的例外是对于mutable修饰的成员。     
 * 4、加了const的成员函数可以被非const对象和const对象调用，但不加const的成员函数只能被非const对象调用
+
 ```
 char getData() const{         return this->letter;
 
