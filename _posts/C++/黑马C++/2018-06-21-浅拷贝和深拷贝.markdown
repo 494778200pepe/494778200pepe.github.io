@@ -12,8 +12,51 @@ description: 『 浅拷贝和深拷贝 』
 
 > 为什么浅拷贝会出问题？因为如果有堆上的数据，拷贝之后，两个对象都含有一个指向同一块内存区域的指针。前面一个对象释放之后，将该块内存释放。后面一个再使用的时候，内存使用非法，报错。所以必须进行深拷贝，在拷贝函数里面，再次开辟内存区域，然后复制内容进去。
 
-    
-    
+```
+#include <iostream>
+using namespace std;
+
+class Name
+{
+    public:
+        Name(const char *myp)
+        {
+            m_len = str(myp);
+            m_p = (char*)malloc(m_len + 1);
+            strcpy(m_p,myp);
+        }
+        
+        /*
+        Name(const Name &obj1)
+        {
+            m_len = obj1.m_len；
+            m_p = obj1.m_p; // 浅拷贝
+        }
+        */
+        
+        // Name obj2 = ojb1;
+        // 解决方案：手工的编写拷贝构造函数，使用深拷贝
+        Name(const Name &obj1)
+        {
+            m_len = obj1.m_len；
+            m_p = (char*)malloc(m_len + 1);
+            strcpy(m_p,ojb1.m_p);
+        }
+        ~Name
+        {
+            if(m_p != NULL)
+            {
+                free(m_p);
+                m_p = NULL;
+                m_len = 0;
+            }
+        }
+        private:
+            char *m_p;
+            int m_len;
+}
+
+```
     
     
     
