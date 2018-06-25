@@ -8,9 +8,76 @@ author: pepe
 description: 『 构造函数初始化列表 』
 ---
 
+* 1、类成员如果是一个类或者结构，且只有一个有参的构造函数，没有默认的无参构造函数，那么初始化类时，就必须主动对类成员进行初始化。
+* 2、在类的构造函数时，尚未给类分配空间，因此在构造函数无法对成员类进行构造。
+* 3、`当类成员中含有一个const对象时，或者是一个引用时，他们也必须用通过成员初始化列表进行初始化。`因为这两种对象要在声明后马上初始化，而在构造函数中，做的是对他们的赋值，这样是不被允许的。
+* 4、`初始化列表中的初始化顺序，与声明顺序有关，与前后赋值的顺序无关。`
 
+
+```
+#include <iostream>
+using namespace std;
+
+class A
+{
+public:
+	A(int a)
+	{
+		cout << "A().." << endl;
+		m_a = a;
+	}
+	void printA()
+	{
+		cout << "m_a = " << m_a << endl;
+	}
+	~A()
+	{
+		cout << "~A().. " << endl;
+	}
+private:
+	int  m_a;
+
+};
+class B
+{
+public:
+	B(A &a1,A &a2,int b):m_a1(a1),m_a2(a2)
+	{
+		cout << "B(a1,a2,b).." << endl;
+		m_b = b;
+	}
+	void printB()
+	{
+		cout << "b = " << m_b << endl;
+		m_a1.printA();
+		m_a2.printA();                
+	}
+	~B()
+	{
+		cout << "~B().. " << endl;
+	}
+
+private:
+	int m_b;
+	A m_a1;
+	A m_a2;
+};
+
+void test(){
+	A a1(10),a2(100);
+	B b(a1,a2,1000);
+	b.printB();
+}
+
+int main()
+{
+	test();
+	system( "PAUSE "); 
+	return 0;
+}
+```
     
-    
+   
     
     
     
