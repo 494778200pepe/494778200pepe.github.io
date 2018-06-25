@@ -22,6 +22,49 @@ description: 『 对象的构造和析构 』
     
 * `手动调用`：在一些情况下则需要手动调用构造函数。
 
+#### 分类
+
+* 1、无参构造函数：`Test t;`
+* 2、有参构造函数：`Test t(10);`
+* 3、拷贝构造函数：由已存在的对象，创建新对象。也就是说新对象，不由构造器来构造，而是由拷贝构造器来完成。拷贝构造器的格式是固定的。
+
+```
+#include <iostream>
+using namespace std;
+
+class Test
+{
+    public:
+        Test()
+        {
+            cout << "无参构造函数" << endl;        
+        }
+        Test(int a)
+        {
+            m_a = a;
+            cout << "无参构造函数" << endl;     
+        }
+        Test(const Test &anthor_obj)
+        {
+            m_a = anthor_obj.m_a;
+            cout << "拷贝构造函数" << endl;  
+        }
+        ~Test()
+        {
+            cout << "析构函数，自动被调用" << endl;
+        }
+        private:
+            int m_a;
+}
+```
+
+拷贝构造函数的应用场景：
+
+* 1、`Test t2 = t1; // 用对象t1 初始化 对象 t2`
+* 2、`Test t2(t1); // 用对象t1 初始化 对象 t2`
+* 3、Test作为实参用来初始化形参p时，会调用copy构造函数
+
+
 ### 析构函数
 
 > 定义：C++中的类可以定义一个特殊的成员函数，用来清理对象，这个特殊的成员函数叫做析构函数。
