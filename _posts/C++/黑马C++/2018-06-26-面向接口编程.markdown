@@ -8,14 +8,95 @@ author: pepe
 description: 『 面向接口编程 』
 ---
 
+> 函数三要素：名称、参数、返回值
+  
+### 函数指针
 
-    
+函数指针用于指向一个函数，函数名是函数体的入口地址
 
+* 1、可通过函数类型定义函数指针：`FuncType* pointer;`
+* 2、也可以直接定义：`type(*pointer)(parameter list);`
+
+    。`pointer`为函数指针变量名
     
+    。`type`为指向函数的返回值类型
     
+    。`parameter list`为指向函数的参数类型列表
+
+```
+#include <stdio.h>
+
+typedef int(FUNC)(int); // 定义一个函数类型
+
+int test(int i) // 定义一个函数
+{
+    return i*i;
+}
+
+void f()        // 定义一个函数
+{
+    printf("Call f()...\n");
+}
+
+int main()
+{
+    FUNC* pt = test;    // 定义一个指向函数的类型FUNC的指针pt，并初始化指向 test 函数
     
+    printf("Function pointer call:%d\n",pt(3)); // 通过函数指针pt 间接调用test
     
+    void(*pf)() = &f;   // 直接定义一个函数指针 指向f
     
+    pf();               // 通过函数指针间接调用
+    (*pf)();            // 通过函数指针间接调用 等价于上述调用方法
+    
+    return 0;
+}
+```   
+
+### **函数指针做函数参数**
+
+> 当函数指针作为函数参数的一部分，传递给一个被调用函数，被调用函数就可以通过这个指针调用外部的函数，这就形成了回调。
+    
+```
+#include <stdio.h>
+
+int add(int a,int b);
+int libfun(int(*pDis)(int a,int b));
+
+int main()
+{
+    int (*pfun)(int a,int b);   // 定义一个函数指针pfun 指向 int()(int,int) 函数类型
+    
+    pfun = add;
+    libfun(pfun);
+    
+    return 0;
+}
+
+int add(int a,int b)
+{
+    return a+b;
+}
+
+int libfun(int(*pDis)(int a,int b))
+{
+    int a,b;
+    a = 1;
+    b = 2;
+    
+    add(1,3);   // 直接调用add函数
+    printf("%d",pDis(a,b));     // 通过函数指针做函数参数，间接调用add函数
+    
+    return 0;
+}
+```  
+    
+回调函数的优点
+
+* 1、函数的调用和函数的实现，有效的分离
+* 2、类似C++的多态，可扩展
+
+> 回调函数的本质：提前做了一个协议的约定(把函数的参数、返回值提前约定)   
     
     
     
