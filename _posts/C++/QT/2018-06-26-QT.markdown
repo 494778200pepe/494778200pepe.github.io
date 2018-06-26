@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "QT"
+date:   2018-06-26 21:01:00 +0800
+categories: C++
+tags: QT
+author: pepe
+description: 『 QT 』
+---
+
+
+
+[为什么qt成为c++界面编程的第一选择 - 夏曹俊 - 博客园](https://www.cnblogs.com/xiacaojun/p/7842780.html)
+
+
+[C++_图形界面、Qt 简单的使用、Hello world - CSDN博客](https://blog.csdn.net/larger5/article/details/78587076)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
