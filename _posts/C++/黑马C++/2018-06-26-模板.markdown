@@ -18,6 +18,14 @@ template<typename 类型参数表>
 {
     函数模板体
 }
+
+template<typename T>
+void myswap(T &a,T &b)
+{
+    T t = a;
+    a = b;
+    b = t;
+}
 ```
 
 > template的语义是模板的意思，尖括号中先写关键字 typename 或者 clas ，后面跟一个类型 T，此类即是虚拟的类型。
@@ -32,7 +40,77 @@ template<typename 类型参数表>
 * 3、编译器会对函数模板进行`两次编译`，在声明的地方对模板代码本身进行编译;在调用的地方对参数替换后的代码进行编译。
     
 ### **类模板** 
+```
+template<typename T>
+template<class T>
+
+template<class T>
+class A
+{
+public:
+    A(T a)
+    {
+        this->a = a;
+    }
+protected:
+    T a;
+}
+```   
+
+#### 模板类的派生
+```
+#include <iostream>
+using namespace std;
+
+template<class T>
+class A
+{
+public:
+    A(T a)
+    {
+        this->a = a;
+    }
+protected:
+    T a;
+};
+
+// 模板类派生普通类
+// 结论：子类从模板类继承的时候，需要让编译器知道  父类的数据类型具体是什么(数据类型的本质：固定大小内存块的别名)A<int>
+class B:public A<int>
+{
+public:
+    B(int a,int b):A<int>(a)
+    {
+        this->b = b;
+    }
     
+    void printB()
+    {
+        cout << "b:     " << b << endl;
+    }
+private:
+    int b;
+};
+
+// 模板类派生模板类
+template<class T>
+class C:public A<T>
+{
+public:
+    C(T a,T c):A<T>(a)
+    {
+        this->c = c;
+    }
+    
+    void printC()
+    {
+        cout << "C:     " << c << endl;
+    }
+private:
+    T c;
+}
+```
+
     
     
     
