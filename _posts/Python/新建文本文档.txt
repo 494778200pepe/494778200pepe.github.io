@@ -1,2 +1,5 @@
 承香墨影
 https://mp.weixin.qq.com/s/RhHwsnFaYWMexP4RDMu6hw
+
+Flask 快速入门 - CSDN博客
+https://blog.csdn.net/u011054333/article/details/70151857/

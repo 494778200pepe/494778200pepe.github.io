@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "python"
+date:   2018-06-27 19:56:00 +0800
+categories: Python
+tags: Python
+author: pepe
+description: 『 python 』
+---
+
+[承香墨影](https://mp.weixin.qq.com/s/RhHwsnFaYWMexP4RDMu6hw)
+
+[Flask 快速入门 - CSDN博客](https://blog.csdn.net/u011054333/article/details/70151857/)
+
