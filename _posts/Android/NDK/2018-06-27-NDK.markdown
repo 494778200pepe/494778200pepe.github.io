@@ -43,20 +43,29 @@ description: 『 NDK开发 』
 ![ndk1]({{ site.baseurl }}/assets/images/android/NDK/ndk1.png)
 #### 额外注意
 ![ndk2]({{ site.baseurl }}/assets/images/android/NDK/ndk2.png)
-#### 
+#### 使用步骤
 
+* 1、配置Android NDK环境
+* 2、创建Android项目，并与NDK进行关联
+* 3、在Android项目中声明所需要调用的Native方法
+* 4、使用Android小交互的本地代码，实现在Android中声明的Native方法
 
-Android：JNI 与 NDK到底是什么？（含实例教学） - CSDN博客
-https://blog.csdn.net/carson_ho/article/details/73250163
+    。 比如Android需要与C++交互，那么就用C++实现Java的Native方法。
+    
+* 5、通过ndk-bulid命令编译产生.so库文件
+* 6、编译Android Studio工程，从而实现Android调用本地代码
 
-使用VisualStudio高效开发调试AndroidNDK - CSDN博客
-https://blog.csdn.net/asmcvc/article/details/78646826
+### NDK与JNI关系
+![ndk3]({{ site.baseurl }}/assets/images/android/NDK/ndk3.png)
 
-Windows下Android NDK开发的几种方法总结 - CSDN博客
-https://blog.csdn.net/asmcvc/article/details/24457557
+参考：
 
-使用 visual studio 调试android NDK 程序 - CSDN博客
-https://blog.csdn.net/u012813451/article/details/61916333
+[Android：JNI 与 NDK到底是什么？（含实例教学） - CSDN博客](https://blog.csdn.net/carson_ho/article/details/73250163)
 
-JNI/NDK开发指南（一）—— JNI开发流程及HelloWorld - CSDN博客
-https://blog.csdn.net/xyang81/article/details/41777471
+[使用VisualStudio高效开发调试AndroidNDK - CSDN博客](https://blog.csdn.net/asmcvc/article/details/78646826)
+
+[Windows下Android NDK开发的几种方法总结 - CSDN博客](https://blog.csdn.net/asmcvc/article/details/24457557)
+
+[使用 visual studio 调试android NDK 程序 - CSDN博客](https://blog.csdn.net/u012813451/article/details/61916333)
+
+[JNI/NDK开发指南（一）—— JNI开发流程及HelloWorld - CSDN博客](https://blog.csdn.net/xyang81/article/details/41777471)
