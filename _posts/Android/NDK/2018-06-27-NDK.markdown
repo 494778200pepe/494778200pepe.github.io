@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "NDK开发"
+date:   2018-06-27 10:54:00 +0800
+categories: Android
+tags: NDK
+author: pepe
+description: 『 NDK开发 』
+---
+
+使用VisualStudio高效开发调试AndroidNDK - CSDN博客
+https://blog.csdn.net/asmcvc/article/details/78646826
+
+使用 visual studio 调试android NDK 程序 - CSDN博客
+https://blog.csdn.net/u012813451/article/details/61916333
+
+JNI/NDK开发指南（一）—— JNI开发流程及HelloWorld - CSDN博客
+https://blog.csdn.net/xyang81/article/details/41777471
