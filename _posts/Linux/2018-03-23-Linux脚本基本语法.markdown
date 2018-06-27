@@ -167,6 +167,15 @@ until语句是只要条件为假就执行下列语句
 [Linux基础知识之挂载详解（mount,umount及开机自动挂载](https://www.linuxidc.com/Linux/2016-08/134666.htm)
 
 
+10套高质量Linux教程，放在百度网盘了 - CSDN博客
+https://blog.csdn.net/xiaoye142034/article/details/79177098
 
+Linux免费教程及免费书籍的解压密码为本站网址↓
+
+www.linuxprobe.com
+
+或
+
+bbs.linuxprobe.com
 
 
