@@ -7,6 +7,44 @@ tags: NDK
 author: pepe
 description: 『 NDK开发 』
 ---
+### **JNI**
+
+> JNI:Java Native Interface,即Java本地接口。作用：使得Java与本地其他类型语言(如C、C++)交互。
+
+* 1、JNI是Java调用Native语言的一种特性
+* 2、JNI是属于Java的，与Android无直接关系
+
+#### 为什么要有 JNI
+
+* 背景：实际使用中，Java 需要与 本地代码 进行交互
+* 问题：因为 Java 具备跨平台的特点，所以Java 与 本地代码交互的能力非常弱
+* 解决方案： 采用 JNI特性 增强 Java 与 本地代码交互的能力
+
+#### 实现步骤
+
+* 1、在Java中声明Native方法（即需要调用的本地方法）
+* 2、编译上述 Java源文件javac（得到 .class文件）
+* 3、通过 javah 命令导出JNI的头文件（.h文件）
+* 4、使用 Java需要交互的本地代码 实现在 Java中声明的Native方法 
+
+    。 如 Java 需要与 C++ 交互，那么就用C++实现 Java的Native方法
+
+* 5、编译.so库文件
+* 6、通过Java命令执行 Java程序，最终实现Java调用本地代码
+
+### **NDK**
+
+> NDK：Native Development Kit，是Android的一个工具开发包。NDK是属于Android的，与Java并无直接关系。
+
+* 作用：快速开发C、C++的动态库，并自动将so和应用一起打包成APK，即可通过NDK在Android中使用JNI与本地代码(如C、C++)交互。
+* 应用场景：在Android的场景下使用JNI，即Android开发的功能需要本地代码(C/C++)实现。
+
+#### 特点
+![ndk1]({{ site.baseurl }}/assets/images/android/NDK/ndk1.png)
+#### 额外注意
+![ndk2]({{ site.baseurl }}/assets/images/android/NDK/ndk2.png)
+#### 
+
 
 Android：JNI 与 NDK到底是什么？（含实例教学） - CSDN博客
 https://blog.csdn.net/carson_ho/article/details/73250163
