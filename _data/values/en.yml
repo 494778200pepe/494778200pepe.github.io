@@ -11,6 +11,7 @@ cpp: C++
 android: Android
 java: Java
 python: Python
+frontend: Frontend
 algorithm: Algorithm
 thoughts: Thoughts
 other: Other
