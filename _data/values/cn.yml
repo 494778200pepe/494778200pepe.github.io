@@ -14,6 +14,7 @@ python: Python
 frontend: 前端
 algorithm: 算法
 git: Git
+http: Http
 thoughts: 感悟
 other: Other
 thanks: " ， 感谢："

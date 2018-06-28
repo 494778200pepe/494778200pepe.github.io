@@ -14,6 +14,7 @@ python: Python
 frontend: Frontend
 algorithm: Algorithm
 git: Git
+http: Http
 thoughts: Thoughts
 other: Other
 thanks: " , Powered by"
