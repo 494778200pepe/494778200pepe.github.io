@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "选择排序"
-date:   2018-01-30 15:28:00 +0800
+date:   2018-06-28 15:28:00 +0800
 categories: Algorithm
 tags: 排序算法
 author: pepe
