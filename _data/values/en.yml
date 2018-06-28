@@ -13,6 +13,7 @@ java: Java
 python: Python
 frontend: Frontend
 algorithm: Algorithm
+git: Git
 thoughts: Thoughts
 other: Other
 thanks: " , Powered by"

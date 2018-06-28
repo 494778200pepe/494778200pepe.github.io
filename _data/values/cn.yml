@@ -13,6 +13,7 @@ java: Java
 python: Python
 frontend: 前端
 algorithm: 算法
+git: Git
 thoughts: 感悟
 other: Other
 thanks: " ， 感谢："

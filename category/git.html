@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<div class="well article">
+{% assign trans = site.data.values[site.lan] %}
+{% for link in site.data.tag.git %}
+    <h2>{{ link.title }}</h2>
+    <ul>
+        {% for post in site.tags[link.title] %}
+            <li>
+                <span class="post-date">
+                {% assign date_format = site.date_format.tag %}
+                {{ post.date | date: date_format }} 
+                </span>
+                <a href="{{ site.baseurl}}{{ post.url }}"> {{ post.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+</div>
+
+
+
+
+
+
+
+
