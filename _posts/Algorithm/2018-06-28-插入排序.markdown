@@ -1,0 +1,35 @@
+---
+layout: post
+title:  "插入排序"
+date:   2018-01-30 16:28:00 +0800
+categories: Algorithm
+tags: 排序算法
+author: pepe
+description: 『 插入排序 』
+---
+
+### 插入排序
+```
+    public static void insertSort(int[] data) {
+        if (null == data || data.length == 0) {
+            return;
+        }
+        int j;
+        int target;
+        for (int i = 1; i < data.length; i++) {
+            j = i;
+            target = data[i];
+            while (j > 0 && target < data[j - 1]) {
+                data[j] = data[j - 1];
+                j--;
+            }
+            data[j] = target;
+        }
+    }
+```
+
+
+
+
+
+

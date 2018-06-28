@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "冒泡排序"
+date:   2018-01-30 14:28:00 +0800
+categories: Algorithm
+tags: 排序算法
+author: pepe
+description: 『 冒泡排序 』
+---
+
+### 冒泡排序
+```
+    public static void bubbleSort(int[] array) {
+        if (null == array || array.length == 0) {
+            return;
+        }
+        int j;
+        int temp;
+        for (int i = 0; i < array.length - 1; i++) {
+            for (j = 0; j < array.length - 1; j++) {
+                if (array[j] > array[j + 1]) {
+                    temp = array[j + 1];
+                    array[j + 1] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+    }
+```
+
+
+
+
+
+
+
+
