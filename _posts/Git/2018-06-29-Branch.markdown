@@ -8,8 +8,9 @@ author: pepe
 description: 『 Branch 』
 ---
 
+### **HEAD：当前 commit 的引用**
 
-
+> 当前`commit`在哪里，`HEAD`就在哪里，这是一个永远自动指向当前`commit`的引用，所以你永远可以用`HEAD`来操作当前`commit`。
 
 
 
