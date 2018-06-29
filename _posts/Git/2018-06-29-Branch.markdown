@@ -34,17 +34,17 @@ description: 『 Branch 』
 
 ### **branch 的创建、切换和删除**
 ```
-git`branch`feature1         // 创建分支，不会自动切换
+git branch feature1         // 创建分支，不会自动切换
 git checkout feature1       // 切换分支
 git checkout -b feature1    // 创建并切换分支
-git`branch`-d feature1      // 删除分支
+git branch -d feature1      // 删除分支
 ```
 
 需要说明的有两点：
 
 * 1、`HEAD`指向的`branch`不能删除。如果要删除`HEAD`指向的`branch`，需要先用`checkout`把`HEAD`指向其他地方。
 
-* 2、由于 Git 中的`branch`只是一个引用，所以删除`branch`的操作也只会删掉这个引用，并不会删除任何的`commit``。（不过如果一个 commit 不在任何一个`branch`的「路径」上，或者换句话说，如果没有任何一个`branch`可以回溯到这条`commit`（也许可以称为野生 `commit`？），那么在一定时间后，它会被 Git 的回收机制删除掉。）
+* 2、由于 Git 中的`branch`只是一个引用，所以删除`branch`的操作也只会删掉这个引用，并不会删除任何的`commit`。（不过如果一个`commit` 不在任何一个`branch`的「路径」上，或者换句话说，如果没有任何一个`branch`可以回溯到这条`commit`（也许可以称为野生 `commit`？），那么在一定时间后，它会被 Git 的回收机制删除掉。）
 
 * 3、出于安全考虑，没有被合并到`master`过的`branch`在删除时会失败（因为怕你误删掉「未完成」的`branch`啊）：
 
