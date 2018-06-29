@@ -12,7 +12,7 @@ description: 『 Branch 』
 
 > 当前`commit`在哪里，`HEAD`就在哪里，这是一个永远自动指向当前`commit`的引用，所以你永远可以用`HEAD`来操作当前`commit`。
 
-###`**branch**
+### **branch**
 
 > 尽管在Git中，`branch`只是一个指向`commit`的引用，但它有一个更通俗的理解：你还可以把一个`branch`理解为从初始`commit`到`branch`所指向的`commit`之间的所有`commits`的一个「串」。
 
