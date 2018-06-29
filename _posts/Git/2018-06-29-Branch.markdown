@@ -8,9 +8,9 @@ author:`pepe
 description:`『`Branch`』
 ---
 
-###`**HEAD：当前`commit`的引用**
+###`**`HEAD`：当前`commit`的引用**
 
->`当前`commit`在哪里，`HEAD`就在哪里，这是一个永远自动指向当前`commit`的引用，所以你永远可以用`HEAD`来操作当前`commit`。
+>`当前`commit`在哪里，``HEAD``就在哪里，这是一个永远自动指向当前`commit`的引用，所以你永远可以用``HEAD``来操作当前`commit`。
 
 ###`**branch**
 
@@ -19,18 +19,36 @@ description:`『`Branch`』
 * 1、所有`branch`之间都是平等的。
 * 2、`branch`包含了从初始`commit`到它的`所有路径`，而不是一条路径。并且，这些路径之间也是彼此平等的。
 
-###`**master**
+#### master
 
 >`默认`Branch`。
 
 特点：
 
-* 1、新创建的repository（仓库）是没有任何`commit`的。但在它创建第一个`commit`时，会把`master`指向它，并把`HEAD`指向`master`。
-* 2、当有人使用`git clone`时，除了从远程仓库把`.git`这个仓库目录下载到工作目录中，还会`checkout`（签出）`master（checkout `的意思就是把某个`commit`作为当前`commit`，把`HEAD`移动过去，并把工作目录的文件内容替换成这个`commit`所对应的内容）。
+* 1、新创建的repository（仓库）是没有任何`commit`的。但在它创建第一个`commit`时，会把`master`指向它，并把``HEAD``指向`master`。
+* 2、当有人使用`git clone`时，除了从远程仓库把`.git`这个仓库目录下载到工作目录中，还会`checkout`（签出）`master（checkout`的意思就是把某个`commit`作为当前`commit`，把``HEAD``移动过去，并把工作目录的文件内容替换成这个`commit`所对应的内容）。
 
-> 疑问：远端有没有HEAD，如果远端不是指向master，那么clone时，是否还是克隆的master，并签出到master呢？？
+> 疑问：远端有没有`HEAD`，如果远端不是指向master，那么clone时，是否还是克隆的master，并签出到master呢？？
 
+> 答疑：远端也有`HEAD`。
 
+### **branch 的创建、切换和删除**
+```
+git`branch`feature1         // 创建分支，不会自动切换
+git checkout feature1       // 切换分支
+git checkout -b feature1    // 创建并切换分支
+git`branch`-d feature1      // 删除分支
+```
+
+需要说明的有两点：
+
+* 1、`HEAD`指向的`branch`不能删除。如果要删除`HEAD`指向的`branch`，需要先用`checkout`把`HEAD`指向其他地方。
+
+* 2、由于 Git 中的`branch`只是一个引用，所以删除`branch`的操作也只会删掉这个引用，并不会删除任何的`commit``。（不过如果一个 commit 不在任何一个`branch`的「路径」上，或者换句话说，如果没有任何一个`branch`可以回溯到这条`commit`（也许可以称为野生 `commit`？），那么在一定时间后，它会被 Git 的回收机制删除掉。）
+
+* 3、出于安全考虑，没有被合并到`master`过的`branch`在删除时会失败（因为怕你误删掉「未完成」的`branch`啊）：
+
+    。 这种情况如果你确认是要删除这个`branch`（例如某个未完成的功能被团队确认永久毙掉了，不再做了），可以把`-d`改成 `-D`，小写换成大写，就能删除了。...
 
 
 
