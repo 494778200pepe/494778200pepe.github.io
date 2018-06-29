@@ -8,11 +8,15 @@ author: pepe
 description: 『 git push 』
 ---
 
+> `push`的本质：把当前`branch`的位置（即它指向哪个`commit`）上传到远端仓库，并把它的路径上的`commits`一并上传。
 
+* 1、`push`只会上传当前分支，而不是所有分支，如果要上传分支`feature1`：
 
+    。`git checkout feature1`
+    
+    。`git push origin feature1`
 
-
-
+ > 在`feature1`被`push`时，远程仓库的`HEAD`并没有和本地仓库的`HEAD`一样指向`feature1`。这是因为，`push`的时候只会上传当前的`branch`的指向，并不会把本地的`HEAD`的指向也一起上传到远程仓库。事实上，远程仓库的`HEAD`是永远指向它的默认分支（即`master`，如果不修改它的名称的话），并会随着默认分支的移动而移动的。
 
 
 
