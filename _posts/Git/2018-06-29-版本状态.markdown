@@ -1,0 +1,53 @@
+---
+layout: post
+title:  "版本状态"
+date:   2018-06-29 10:04:00 +0800
+categories: Git
+tags: Git
+author: pepe
+description: 『 版本状态 』
+---
+
+### **本地与远端同步**
+```
+Your branch is up-to-date with 'origin/master'.
+```
+
+### **本地领先远端**
+```
+Your branch is ahead of 'origin/master' by 2 commit.
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
