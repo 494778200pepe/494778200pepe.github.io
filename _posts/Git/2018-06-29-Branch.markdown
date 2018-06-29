@@ -1,32 +1,32 @@
 ---
-layout:`post
-title:``"Branch"
-date:```2018-06-29`10:10:00`+0800
-categories:`Git
-tags:`Git
-author:`pepe
-description:`『`Branch`』
+layout: post
+title:  "Branch"
+date:   2018-06-29 10:10:00 +0800
+categories: Git
+tags: Git
+author: pepe
+description: 『 Branch 』
 ---
 
-###`**`HEAD`：当前`commit`的引用**
+### **`HEAD`：当前`commit`的引用**
 
->`当前`commit`在哪里，``HEAD``就在哪里，这是一个永远自动指向当前`commit`的引用，所以你永远可以用``HEAD``来操作当前`commit`。
+> 当前`commit`在哪里，`HEAD`就在哪里，这是一个永远自动指向当前`commit`的引用，所以你永远可以用`HEAD`来操作当前`commit`。
 
 ###`**branch**
 
->`尽管在Git中，`branch`只是一个指向`commit`的引用，但它有一个更通俗的理解：你还可以把一个`branch`理解为从初始`commit`到`branch`所指向的`commit`之间的所有`commits`的一个「串」。
+> 尽管在Git中，`branch`只是一个指向`commit`的引用，但它有一个更通俗的理解：你还可以把一个`branch`理解为从初始`commit`到`branch`所指向的`commit`之间的所有`commits`的一个「串」。
 
 * 1、所有`branch`之间都是平等的。
 * 2、`branch`包含了从初始`commit`到它的`所有路径`，而不是一条路径。并且，这些路径之间也是彼此平等的。
 
 #### master
 
->`默认`Branch`。
+> 默认`Branch`。
 
 特点：
 
-* 1、新创建的repository（仓库）是没有任何`commit`的。但在它创建第一个`commit`时，会把`master`指向它，并把``HEAD``指向`master`。
-* 2、当有人使用`git clone`时，除了从远程仓库把`.git`这个仓库目录下载到工作目录中，还会`checkout`（签出）`master（checkout`的意思就是把某个`commit`作为当前`commit`，把``HEAD``移动过去，并把工作目录的文件内容替换成这个`commit`所对应的内容）。
+* 1、新创建的repository（仓库）是没有任何`commit`的。但在它创建第一个`commit`时，会把`master`指向它，并把`HEAD`指向`master`。
+* 2、当有人使用`git clone`时，除了从远程仓库把`.git`这个仓库目录下载到工作目录中，还会`checkout`（签出）`master（checkout`的意思就是把某个`commit`作为当前`commit`，把`HEAD`移动过去，并把工作目录的文件内容替换成这个`commit`所对应的内容）。
 
 > 疑问：远端有没有`HEAD`，如果远端不是指向master，那么clone时，是否还是克隆的master，并签出到master呢？？
 
