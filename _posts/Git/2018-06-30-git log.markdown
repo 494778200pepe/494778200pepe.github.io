@@ -1,0 +1,61 @@
+---
+layout: post
+title:  "git log"
+date:   2018-06-30 09:02:00 +0800
+categories: Git
+tags: Git
+author: pepe
+description: 『 git log 』
+---
+
+```
+git log         // 查看历史记录
+git log -p      // 查看详细历史
+git log --stat  // 查看简要统计
+git show        // 查看当前commit的具体改动内容
+git show  5e68b0d8    // 查看指定commit
+git show  5e68b0d8 shopping\ list.txt   // 查看指定commit中的指定文件
+```
+
+### **比对暂存区和上一条提交**
+
+> 使用`git diff --staged`可以显示暂存区和上一条提交之间的不同。换句话说，这条指令可以让你看到「如果你立即输入 `git commit`，你将会提交什么」：
+
+```
+git diff --staged
+```
+`--staged`有一个等价的选项叫做`--cached`。
+
+
+### **比对工作目录和暂存区**
+
+> 使用`git diff`（不加选项参数）可以显示工作目录和暂存区之间的不同。换句话说，这条指令可以让你看到「如果你现在把所有文件都 add，你会向暂存区中增加哪些内容」：
+```
+git diff
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
