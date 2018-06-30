@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "git add"
+date:   2018-06-29 14:34:00 +0800
+categories: Git
+tags: Git
+author: pepe
+description: 『 git add 』
+---
+
+```
+git add -A stages All
+git add . stages new and modified, without deleted
+git add -u stages modified and deleted, without new
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

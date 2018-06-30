@@ -1,0 +1,40 @@
+---
+layout: post
+title:  "git merge"
+date:   2018-06-29 13:29:00 +0800
+categories: Git
+tags: Git
+author: pepe
+description: 『 git merge 』
+---
+
+```
+git merge feature1
+```
+
+### **merge成功**
+
+> 如果无冲突,`merge`之后，还需要`commit`吗？
+
+### **merge失败**
+
+> `merge`失败，是因为发生冲突后。然后，Git 仓库处于一个「merge 冲突待解决」的中间状态。
+
+* 解决冲突
+* `add`
+* `commit`
+
+### **放弃解决冲突，取消 merge？**
+```
+git merge --abort
+```
+
+
+
+
+
+
+
+
+
+
