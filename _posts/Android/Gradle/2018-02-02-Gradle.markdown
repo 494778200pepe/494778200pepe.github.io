@@ -1,0 +1,33 @@
+---
+layout: post
+title:  "Gradle"
+date:   2018-02-02 13:10:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 Gradle学习 』
+---
+
+### Gradle
+
+
+参考：
+[彻底弄明白Gradle相关配置](https://mp.weixin.qq.com/s/1UHcYOudViMhpUYeREZzGA)
+
+[从Android Plugin源码开始彻底理解gradle构建：Extension（二） - CSDN博客](https://blog.csdn.net/verymrq/article/details/80426594#10006-weixin-1-52626-6b3bffd01fdde4900130bc5a2751b6d1)
+
+[Gradle 版本下载](http://services.gradle.org/distributions/)
+
+[Android 利用Gradle实现差异化构建](https://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650822765&idx=1&sn=027fa74bd88050f34bbcf9d4bef5d39e)
+
+[build.gradle配置参数详解 - CSDN博客](http://blog.csdn.net/baidu_31093133/article/details/51860637)
+
+[Gradle脚本基础全攻略 - 工匠若水 - CSDN博客](http://blog.csdn.net/yanbober/article/details/49314255)
+
+[build.gradle - CSDN博客](http://blog.csdn.net/baidu_35761016/article/details/54670230)
+
+[Gradle for Android 第二篇( Build.gradle入门 ) - CSDN博客](http://blog.csdn.net/u011904605/article/details/52124981)
+
+[Android studio gradle配置 - 习惯_搬砖](https://my.oschina.net/u/1471093/blog/341990)
+
+[android studio gradle使用说明 - avalon451990](https://my.oschina.net/u/1186928/blog/744302)
