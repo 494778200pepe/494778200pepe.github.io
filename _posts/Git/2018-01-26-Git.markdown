@@ -100,14 +100,12 @@ git branch -r -a -l
 
 [Git - 关于版本控制](https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%85%B3%E4%BA%8E%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6)
 
-[git pull时出现冲突 放弃本地修改，使远程库内容强制覆盖本地代码 - CSDN博客](http://blog.csdn.net/qq_22441525/article/details/52240311)
-
 [git - the simple guide - no deep shit!](http://rogerdudler.github.io/git-guide/index.zh.html)
 
 [Git 命令梳理 - 简书](https://www.jianshu.com/p/2f26b7b98298)
 
 [介绍Android Studio使用Git最详细的文章](https://mp.weixin.qq.com/s/Uq3s9HBfBIEo70O1ysTl3g)
 
-[git 入门 重写项目历史 git commit --amend - 简书](shttps://www.jianshu.com/p/fc4b6b64fe0a?from=singlemessage)
+[git 入门 重写项目历史 git commit --amend - 简书](https://www.jianshu.com/p/fc4b6b64fe0a?from=singlemessage)
 
 
