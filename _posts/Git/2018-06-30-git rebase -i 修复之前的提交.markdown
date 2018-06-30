@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "git rebase -i"
+title:  "git rebase -i 修复之前的提交"
 date:   2018-06-30 10:21:00 +0800
 categories: Git
 tags: Git
 author: pepe
-description: 『 git rebase -i 』
+description: 『 git rebase -i 修复之前的提交 』
 ---
 
 > 如果不是最新的`commit`写错，就不能用`commit --amend`来修复了，而是要用`rebase`。不过需要给`rebase`也加一个参数：`-i`。

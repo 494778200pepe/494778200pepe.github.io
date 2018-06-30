@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "git commit --amend"
+title:  "git commit --amend 修复最新的提交"
 date:   2018-06-30 09:43:00 +0800
 categories: Git
 tags: Git
 author: pepe
-description: 『 git commit --amend 』
+description: 『 git commit --amend 修复最新的提交 』
 ---
 
 > 针对前一个`commit`，如果需要修正，可以`先修改并add`，然后执行`git commit --amend`，会生成一条`新的commit`，并删除之前有错误的`commit`。

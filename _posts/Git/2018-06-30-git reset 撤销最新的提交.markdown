@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "git reset 撤销最新的提交"
+date:   2018-06-30 11:05:00 +0800
+categories: Git
+tags: Git
+author: pepe
+description: 『 git reset 撤销最新的提交 』
+---
+
+> 撤销最新的`commit`。
+
+```
+git reset --hard 目标commit
+git reset --hard HEAD^      // HEAD^ 表示你要恢复到哪个 commit。因为你要撤销最新的一个 commit，所以你需要恢复到它的父 commit ，也就是 HEAD^。
+```
+
+
+
+
+
+
+
+
+
