@@ -1,0 +1,49 @@
+---
+layout: post
+title:  "git stash 临时存储"
+date:   2018-06-30 13:59:00 +0800
+categories: Git
+tags: Git
+author: pepe
+description: 『 git stash 临时存储 』
+---
+
+> `stash`：临时存放工作目录的改动.
+
+```
+git stash       // 把有add过的文件暂存在本地
+// 切换分支，干活
+git stash pop   // 去除暂存的改动
+
+
+// 注意：没有被 track 的文件（即从来没有被 add 过的文件不会被 stash 起来，因为 Git 会忽略它们。
+// 如果想把这些文件也一起 stash，可以加上 `-u` 参数，它是 `--include-untracked` 的简写。就像这样：
+git stash -u
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
