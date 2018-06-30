@@ -108,4 +108,6 @@ git branch -r -a -l
 
 [介绍Android Studio使用Git最详细的文章](https://mp.weixin.qq.com/s/Uq3s9HBfBIEo70O1ysTl3g)
 
+[git 入门 重写项目历史 git commit --amend - 简书](shttps://www.jianshu.com/p/fc4b6b64fe0a?from=singlemessage)
+
 

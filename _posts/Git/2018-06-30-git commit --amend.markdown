@@ -12,7 +12,8 @@ description: 『 git commit --amend 』
 
 ```
 git add 笑声.txt
-git commit --amend
+git commit --amend              // 需要在原有commit信息基础上重新编辑
+git commit --amend --no-edit    // 直接按原有commit信息提交
 ```
 
 
