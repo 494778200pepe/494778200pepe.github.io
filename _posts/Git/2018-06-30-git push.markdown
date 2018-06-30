@@ -1,0 +1,41 @@
+---
+layout: post
+title:  "git push"
+date:   2018-06-30 13:08:00 +0800
+categories: Git
+tags: Git
+author: pepe
+description: 『 git push 』
+---
+
+### **强制push**
+```
+git push origin branch1 -f
+```
+
+### **反转commit**
+```
+git revert HEAD^    // 新增一个内容与HEAD^相反的commit
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
