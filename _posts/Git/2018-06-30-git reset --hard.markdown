@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "git reset --hard"
-date:   2018-06-30 11:05:00 +0800
+date:   2018-06-30 13:42:00 +0800
 categories: Git
 tags: Git
 author: pepe
