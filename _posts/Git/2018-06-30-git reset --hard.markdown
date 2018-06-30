@@ -21,7 +21,7 @@ description: 『 git reset --hard 』
 > `reset --soft`会在重置`HEAD`和`branch`时，保留工作目录和暂存区中的内容，并把重置`HEAD`所带来的新的差异放进暂存区。
 
 ### **reset 不加参数：保留工作目录，并清空暂存区**
-> 不加参数，就是默认`--mixed`：跟`reset --soft`差不多，不过就是暂存区的内容被移出，挪到非暂存区(`已tracked`)。`untracked`的文件继续`untracked`。同时当前`commit`的改动，会放非暂存区(`untracked`)。
+> 不加参数，就是`默认--mixed`：跟`reset --soft`差不多，不过就是暂存区的内容被移出，挪到非暂存区(`已tracked`)。`untracked`的文件继续`untracked`。同时当前`commit`的改动，会放非暂存区(`untracked`)。
 
 
 
