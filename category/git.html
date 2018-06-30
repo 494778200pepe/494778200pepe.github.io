@@ -6,7 +6,7 @@ layout: default
 {% for link in site.data.tag.git %}
     <h2>{{ link.title }}</h2>
     <ul>
-        {% for ~post in site.tags[link.title] %}
+        {% for post in site.tags[link.title] %}
             <li>
                 <span class="post-date">
                 {% assign date_format = site.date_format.tag %}
