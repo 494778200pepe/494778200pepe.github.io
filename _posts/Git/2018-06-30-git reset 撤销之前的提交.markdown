@@ -22,7 +22,7 @@ git rebase --onto 「HEAD^^」 「HEAD^」 「branch1」
 
 
 ### **在合并分支时，如果不想合并某个commit**
-如果要剔除多个commit，那么要求剔除的commit必须是连续的。
+如果要剔除多个`commit`，那么要求剔除的`commit`必须是连续的。
 
 ```
 git rebase --onto 「master的第3个commit」 「branch1的第4个commit」 「branch1」
