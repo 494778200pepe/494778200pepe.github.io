@@ -27,7 +27,17 @@ git rebase -i HEAD^^
 
 > `~`的用法：在`commit`的后面加上`~`号和一个数，可以把`commit`往回偏移，偏移的数量是`~`号后面的数。例如：`HEAD~5`表示`HEAD`指向的`commit`往前数 5 个`commit`。
 
-
+### **完整修复过程**
+```
+git rebase -i HEAD^^
+// 进入编辑界面，选择 commit 和对应的操作
+// 把 pick 修改成 edit 后，退出编辑界面
+// 修改内容
+git add 笑声
+git commit --amend
+// 继续 rebase 过程
+git rebase --continue
+```
 
 
 
