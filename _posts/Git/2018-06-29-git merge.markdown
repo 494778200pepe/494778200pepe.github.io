@@ -14,6 +14,10 @@ git merge feature1
 
 ### **merge成功**
 
+* `merge`在做合并的时候，是有一定的自动合并能力的：
+* 如果一个分支改了 A 文件，另一个分支改了 B 文件，那么合并后就是既改 A 也改 B，这个动作会自动完成；
+* 如果两个分支都改了同一个文件，但一个改的是第 1 行，另一个改的是第 2 行，那么合并后就是第 1 行和第 2 行都改，也是自动完成。
+
 > 如果无冲突,`merge`之后，还需要`commit`吗？
 
 ### **merge失败**
@@ -23,6 +27,18 @@ git merge feature1
 * 解决冲突
 * `add`
 * `commit`
+
+### **特殊情况：HEAD 领先于目标 commit**
+空操作。
+
+> 如果`merge`时的目标`commit`和`HEAD`处的`commit`并不存在分叉，而是`HEAD`领先于目标`commit`：
+那么`merge`就没必要再创建一个新的`commit`来进行合并操作，因为并没有什么需要合并的。在这种情况下， Git 什么也不会做，`merge` 是一个`空操作`。
+
+### **特殊情况：HEAD 落后于 目标 commit——fast-forward**
+这种操作有一个专有称谓，叫做 "fast-forward"（快速前移）。
+
+> 如果`HEAD`和目标`commit`依然是不存在分叉，但`HEAD`不是领先于目标`commit，而是落后于目标`commit`：
+那么 Git 会直接把`HEAD`（以及它所指向的`branch`，如果有的话）移动到目标`commit`。
 
 ### **放弃解决冲突，取消 merge？**
 ```
