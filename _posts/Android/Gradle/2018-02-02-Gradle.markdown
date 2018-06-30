@@ -32,3 +32,5 @@ description: 『 Gradle学习 』
 [Android studio gradle配置 - 习惯_搬砖](https://my.oschina.net/u/1471093/blog/341990)
 
 [android studio gradle使用说明 - avalon451990](https://my.oschina.net/u/1186928/blog/744302)
+
+[Gradle 入门 - CSDN博客](https://blog.csdn.net/H176Nhx7/article/details/78949465)
