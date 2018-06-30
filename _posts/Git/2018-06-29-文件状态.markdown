@@ -41,7 +41,7 @@ Changes not staged for commit:
 ### **相关操作**
 ```
 git reset HEAD Test.txt     // 取消 Test.txt 的add 操作
-git checkout -- Test.txt    // 还原到之前的add状态，并取消度内容的修改
+git checkout -- Test.txt    // 还原到之前的add状态，并取消对内容的修改
 ```
 
 > 退出commit的编辑界面：Esc键以确保您退出插入模式，然后:wq（冒号W Q）或ZZ（按住Shift Z）。
