@@ -106,7 +106,7 @@ android 启动模式：
 
 
 
-
+参考：
 
 [Android manifest属性总结 - 飞天小鳄 - 博客园](https://www.cnblogs.com/ftxe/p/3642458.html)
 
