@@ -86,6 +86,9 @@ android 启动模式：
 ### **android:taskAffinity**
 
 ### **android:process**
+> 应用程序运行的进程名，它的默认值为`<manifest>`元素里设置的包名，当然每个组件都可以通过设置该属性来覆盖默认值。如果你想两个应用程序共用一个进程的话，你可以设置他们的`android:process`相同，但前提条件是他们共享一个用户ID及被赋予了相同证书的时候。
+
+[Android:关于声明文件中android:process属性说明 - 一点点征服 - 博客园](https://www.cnblogs.com/ldq2016/p/6233022.html)
 
 ### **android:exported**
 是否允许activity被其他程序调用
