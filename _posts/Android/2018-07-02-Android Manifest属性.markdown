@@ -92,6 +92,10 @@ android 启动模式：
 ### **android:exported**
 是否允许activity被其他程序调用
 
+> 默认值：如果包含有intent-filter 默认值为true; 没有intent-filter默认值为false。
+
+[android:exported 属性详解 - CSDN博客](https://blog.csdn.net/watermusicyes/article/details/46460347)
+
 ### **android:multiprocess**
 是否允许此activity加入到启动它的那个组件的process里。
 
