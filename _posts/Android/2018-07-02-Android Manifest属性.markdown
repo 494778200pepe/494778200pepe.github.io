@@ -64,6 +64,11 @@ android 启动模式：
 
 [android中mainifest属性总结 - CSDN博客](https://blog.csdn.net/huangyanan1989/article/details/12046833)
 
+### **android:excludeFromRecents**
+控制该`activity`所在的`task栈`在不在recent列表中显示。`true`时不显示；`false`显示，默认。
+
+一般其使用也是放在`根Activity`中。
+
 ### **android:permission**
 
 
@@ -79,8 +84,8 @@ android 启动模式：
 
 
 
-### **android:excludeFromRecents**
-是否可被显示在最近打开的activity列表里
+
+
 ### **android:exported**
 是否允许activity被其他程序调用
 ### **android:finishOnTaskLaunch**
