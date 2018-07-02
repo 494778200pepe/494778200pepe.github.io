@@ -8,5 +8,4 @@ author: pepe
 description: 『 Algorithm 』
 ---
 
-数据加密算法详解
-https://mp.weixin.qq.com/s/-Jb-_PpbEN5HYpueUqtxzA
+[数据加密算法详解](https://mp.weixin.qq.com/s/-Jb-_PpbEN5HYpueUqtxzA)

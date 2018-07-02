@@ -69,3 +69,5 @@ description: 『 NDK开发 』
 [使用 visual studio 调试android NDK 程序 - CSDN博客](https://blog.csdn.net/u012813451/article/details/61916333)
 
 [JNI/NDK开发指南（一）—— JNI开发流程及HelloWorld - CSDN博客](https://blog.csdn.net/xyang81/article/details/41777471)
+
+[Android Studio 2.3下NDK开发流程](https://mp.weixin.qq.com/s/5DHJa5E-lZzy21-9edxoIg)
