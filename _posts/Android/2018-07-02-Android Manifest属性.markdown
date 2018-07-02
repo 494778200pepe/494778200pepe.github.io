@@ -71,6 +71,10 @@ android 启动模式：
 
 [android属性之excludeFromRecents - CSDN博客](https://blog.csdn.net/yayun0516/article/details/52108210)
 
+### **android:onHistory**
+
+> 当用户从`Activity`上离开并且它在屏幕上不再可见时，`Activity`是否从`Activity stack`中清除并结束。默认是`false`。如果设置为`true`，`Activity`不会留下历史痕迹。它不会在这个`Task`中保留，用户将不能在这个`Task`中回到这个`activity`实例。
+
 ### **android:permission**
 
 
@@ -94,7 +98,6 @@ android 启动模式：
 是否关闭已打开的activity，当用户重新启动这个任务的时候
 ### **multiprocess**
 允许多进程
-### **android:onHistory**
 
 
 ### **android:stateNotNeeded**
