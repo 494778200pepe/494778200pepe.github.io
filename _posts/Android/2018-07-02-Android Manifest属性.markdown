@@ -11,6 +11,7 @@ description: 『 Android Manifest属性 』
 ### **android:icon**
 ### **android:name**
 ### **android:theme**
+### **android:permission**
 ### **android:launchMode**
 android 启动模式：
 
@@ -23,6 +24,9 @@ android 启动模式：
 
 * `landscape`: 横屏显示
 * `portrait`: 竖屏显示
+
+### **android:taskAffinity**
+> 它是应用程序所有`Activity`都适用的任务亲和力，除了那些将不同任务亲和力设置在自身`taskAffinity`属性里的`Activity`。我们可以这样理解这个属性：该`Activity`更喜欢待在哪个任务中。
 
 ### **android:windowSoftInputMode**
 设置窗体软键盘交互模式。
@@ -80,10 +84,6 @@ android 启动模式：
 > 当用户从`Activity`上离开并且它在屏幕上不再可见时，`Activity`是否从`Activity stack`中清除并结束。默认是`false`。如果设置为`true`，`Activity`不会留下历史痕迹。它不会在这个`Task`中保留，用户将不能在这个`Task`中回到这个`activity`实例。
 
 [android属性之noHistory - CSDN博客](https://blog.csdn.net/yayun0516/article/details/52108174)
-
-### **android:permission**
-
-### **android:taskAffinity**
 
 ### **android:process**
 > 应用程序运行的进程名，它的默认值为`<manifest>`元素里设置的包名，当然每个组件都可以通过设置该属性来覆盖默认值。如果你想两个应用程序共用一个进程的话，你可以设置他们的`android:process`相同，但前提条件是他们共享一个用户ID及被赋予了相同证书的时候。
