@@ -64,16 +64,16 @@ android 启动模式：
 
 [android中mainifest属性总结 - CSDN博客](https://blog.csdn.net/huangyanan1989/article/details/12046833)
 
+### **android:finishOnTaskLaunch**
+
+> 用来标记当用户再次启动它的`Task`（在主画面选择这个`Task`）时已经存在的`Activity`实例是否要关闭（结束）——`true`，表示应该关闭，`false`表示不关闭。默认值是`false`。如果这个特性和`allowTaskReparenting`都设定为`true`，这个特性胜出。`Activity`的`affinity`忽略。这个 `Activity`不会重新宿主，但是会销毁。
+
 ### **android:excludeFromRecents**
 控制该`activity`所在的`task栈`在不在recent列表中显示。`true`时不显示；`false`显示，默认。
 
 一般其使用也是放在`根Activity`中。
 
 [android属性之excludeFromRecents - CSDN博客](https://blog.csdn.net/yayun0516/article/details/52108210)
-
-### **android:finishOnTaskLaunch**
-
-> 用来标记当用户再次启动它的`Task`（在主画面选择这个`Task`）时已经存在的`Activity`实例是否要关闭（结束）——`true`，表示应该关闭，`false`表示不关闭。默认值是`false`。如果这个特性和`allowTaskReparenting`都设定为`true`，这个特性胜出。`Activity`的`affinity`忽略。这个 `Activity`不会重新宿主，但是会销毁。
 
 ### **android:onHistory**
 
