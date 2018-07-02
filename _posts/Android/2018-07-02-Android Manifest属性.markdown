@@ -69,6 +69,8 @@ android 启动模式：
 
 一般其使用也是放在`根Activity`中。
 
+[android属性之excludeFromRecents - CSDN博客](https://blog.csdn.net/yayun0516/article/details/52108210)
+
 ### **android:permission**
 
 
