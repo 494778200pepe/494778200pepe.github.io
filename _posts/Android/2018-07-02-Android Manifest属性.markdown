@@ -93,6 +93,8 @@ https://www.cnblogs.com/ftxe/p/3642458.html
 AndroidManifest中android:persistent属性研究 - CSDN博客
 https://blog.csdn.net/a87636764/article/details/50330507
 
+AndroidManifest属性 - CSDN博客
+https://blog.csdn.net/lty406910111/article/details/70226212
 
 
 
