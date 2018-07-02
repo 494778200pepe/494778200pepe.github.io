@@ -100,7 +100,7 @@ android 启动模式：
 > 通常，一个新的`activity`的实例会加入到应用程序定义的那个`process`里面，所以这个`activity`的所有实例都运行在同一个`process`里面。但是，如果这个属性设置为`true`，这个`activity`的实例可以运行在多个`process`里面，允许系统在任何它想使用这个`activity`的地方创建它的实例，一般情况下，这个属性是不需要的，也是不期望使用的。
 
 ### **android:stateNotNeeded**
-
+> 这个属性默认情况为`false`，若设为`true`，则当`Activity`重新启动时不会调用`onSaveInstanceState()`方法，同样，`onCreate()`方法中的`Bundle`参数将会用`null`值传进去，也就是说，`Activity`每次启动都跟第一次启动一样。这样，在某种特殊场合下，由于用户按了`Home`键，该属性设置为`true`时，可以保证不用保存原先的状态引用，节省了空间资源，从而可以让`Activity`不会像默认设置那样`Crash`掉。
 
 
 
