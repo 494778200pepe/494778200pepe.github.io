@@ -41,6 +41,11 @@ android 启动模式：
 * 如果将该属性配置在`<application>`节点上，并且没有在`<activity>`节点上配置的情况下，`<application>`节点上的值将会应用到每一个`<activity>`节点上。
 * 反之，如果`<activity>`节点上配置了这个属性，则以`<activity>`节点上的值为准。
 
+### **android:enabled**
+`activity`是否可以被Android系统自动实例化
+
+> 默认情况下，Android系统会自行实例化每一个应用程序的组件，包括Android四大组件，但如果我们需要自己完成这些事情的话，就需要使用`android:enabled`属性来限制Android系统的行为。这个属性表明Android系统是否可以被实例化应用程序组件，如果其值为`true`，则说明应用程序组件可以被Android系统自动实例化；如果为`false`，则说明实例化组件的工作需要手工完成。该属性的默认值为`true`。每一个组件都可以单独定义自己的`enabled`属性。如果这个属性定义在`<application>`节点中，那么它会默认将每个组件的`enabled`属性设置为相同的值。如果每一个组件单独定义了这个属性，那么`<application>`节点上定义的属性对此组件不再生效，就由自己的`enabled`属性决定。
+
 ### **android:permission**
 
 
@@ -59,8 +64,8 @@ android 启动模式：
 ### **android:clearTaskOnLanunch**
 
 
-### **android:enabled**
-activity是否可以被实例化
+
+
 ### **android:excludeFromRecents**
 是否可被显示在最近打开的activity列表里
 ### **android:exported**
