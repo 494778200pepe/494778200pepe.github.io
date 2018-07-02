@@ -47,6 +47,23 @@ android 启动模式：
 
 > 默认情况下，Android系统会自行实例化每一个应用程序的组件，包括Android四大组件，但如果我们需要自己完成这些事情的话，就需要使用`android:enabled`属性来限制Android系统的行为。这个属性表明Android系统是否可以被实例化应用程序组件，如果其值为`true`，则说明应用程序组件可以被Android系统自动实例化；如果为`false`，则说明实例化组件的工作需要手工完成。该属性的默认值为`true`。每一个组件都可以单独定义自己的`enabled`属性。如果这个属性定义在`<application>`节点中，那么它会默认将每个组件的`enabled`属性设置为相同的值。如果每一个组件单独定义了这个属性，那么`<application>`节点上定义的属性对此组件不再生效，就由自己的`enabled`属性决定。
 
+### **android:alwaysRetainTaskState**
+> 系统是否永久保存当前`Activity`所在的`Task`的状态。`true`将会保存，`false`系统将允许在明确的情况下把`Task`的状态重置为初始状态。默认值是`false`。这个属性只对这个`Task`的`root(根) activity`有意义，它将忽略其它所有的`activity`。
+通常情况下，当用户从主屏幕重新选择这个`Task`时系统将清除这个`Task`(移除`root activity`之上的所有`activity`)。通常，如果用户在确定的时间内没有再访问这个`Task`，例如30分钟，系统将执行清除操作。
+可是，当这个属性设置为`true`时，用户将总是回到这个`Task`的最后状态，无论他们采取任何方式。这是非常有用的，例如，像网页浏览器这样的应用程序有很多的状态（例如有很多tab），用户不想忘记他们在浏览哪个网页。
+
+简单来说就是：如果打开客户端的顺序是`SplashActivity --> GuideActivity --> MainActivity`（欢迎页面 --> 功能引导页面 --> 主页面）,当我们按`HOME`键返回桌面，任务栈的状态被保留着，当我们点击应用图标打开再次应用时，系统会判断是否已经存在以`SplashActivity`为`根Activity`的栈，如果有，那么就直接使用该栈，并显示栈顶的`Activity`。
+
+[Android实现不重复启动APP的方法_太史孟山_新浪博客](http://blog.sina.com.cn/s/blog_5de73d0b0102vpai.html)
+
+### **android:clearTaskOnLanunch**
+
+用法`<activity android:clearTaskOnLanunch=”true/false”></activity>`。
+
+> 用来标记是否从`Task`中清除所有的`Activity`，除了`根Activity`外（每当从主画面重新启动时）——`true`，表示总是清除至它的`根Activity`，`false`表示不。默认值是`false`。这个特性只对启动一个新的`Task`的`Activity（根Activity）`有意义； 对`Task`中其它的`Activity`忽略。当这个值为`true`，每次用户重新启动这个`Task`时，都会进入到它的`根Activity`中，不管这个`Task`最后在做些什么，也不管用户是使用`BACK`还是`HOME`离开的。当这个值为`false`时，可能会在一些情形下（参考alwaysRetainTaskState特性）清除`Task`的`Activity`，但不总是。假设，某人从主画面启动了`Activity P`，并从那里迁移至`Activity Q`。接下来用户按下`HOME`，然后返回`Activity P`。一般，用户可能见到的是`Activity Q`，因为它是`P的Task`中最后工作的内容。然而，如果`P`设定这个特性为`true`，当用户按下`HOME`并使这个`Task`再次进入前台时，其上的所有的 `Activity(在这里是Q)`都将被清除。因此，当返回到这个`Task`时，用户只能看到`P`。如果这个特性和`allowTaskReparenting`都设定为`true`，那些能重新宿主的`Activity`会移动到共享`affinity`的`Task`中；剩下的`Activity`都将被抛弃，如上所述。
+
+[android中mainifest属性总结 - CSDN博客](https://blog.csdn.net/huangyanan1989/article/details/12046833)
+
 ### **android:permission**
 
 
@@ -58,13 +75,6 @@ android 启动模式：
 
 
 
-
-### **android:alwaysRetainTaskState**
-> 系统是否永久保存当前`Activity`所在的`Task`的状态。`true`将会保存，`false`系统将允许在明确的情况下把`Task`的状态重置为初始状态。默认值是`false`。这个属性只对这个`Task`的`root activity`有意义，它将忽略其它所有的`activity`。
-通常情况下，当用户从主屏幕重新选择这个`Task`时系统将清除这个`Task`(移除`root activity`之上的所有`activity`)。通常，如果用户在确定的时间内没有再访问这个`Task`，例如30分钟，系统将执行清除操作。
-可是，当这个属性设置为`true`时，用户将总是回到这个`Task`的最后状态，无论他们采取任何方式。这是非常有用的，例如，像网页浏览器这样的应用程序有很多的状态（例如有很多tab），用户不想忘记他们在浏览哪个网页。
-
-### **android:clearTaskOnLanunch**
 
 
 
