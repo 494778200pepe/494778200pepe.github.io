@@ -70,4 +70,10 @@ description: 『 NDK开发 』
 
 [JNI/NDK开发指南（一）—— JNI开发流程及HelloWorld - CSDN博客](https://blog.csdn.net/xyang81/article/details/41777471)
 
+[Android-NDK入门-慕课网](https://www.imooc.com/learn/411)
+
 [Android Studio 2.3下NDK开发流程](https://mp.weixin.qq.com/s/5DHJa5E-lZzy21-9edxoIg)
+
+[JNI学习积累之一 ---- 常用函数大全 - CSDN博客](https://blog.csdn.net/qinjuning/article/details/7595104)
+
+[JNI 实战全面解析 - CSDN博客](https://blog.csdn.net/banketree/article/details/40535325)

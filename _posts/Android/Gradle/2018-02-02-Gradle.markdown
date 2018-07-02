@@ -49,3 +49,5 @@ Groovy Version: 2.4.8 JVM: 1.8.0_25 Vendor: Oracle Corporation OS: Windows 7
 [android studio gradle使用说明 - avalon451990](https://my.oschina.net/u/1186928/blog/744302)
 
 [Gradle 入门 - CSDN博客](https://blog.csdn.net/H176Nhx7/article/details/78949465)
+
+[通过gradle实现自动切换测试环境和线上环境 - CSDN博客](https://blog.csdn.net/qifengdeqingchen/article/details/78032560)
