@@ -71,6 +71,10 @@ android 启动模式：
 
 [android属性之excludeFromRecents - CSDN博客](https://blog.csdn.net/yayun0516/article/details/52108210)
 
+### **android:finishOnTaskLaunch**
+
+> 用来标记当用户再次启动它的`Task`（在主画面选择这个`Task`）时已经存在的`Activity`实例是否要关闭（结束）——`true`，表示应该关闭，`false`表示不关闭。默认值是`false`。如果这个特性和`allowTaskReparenting`都设定为`true`，这个特性胜出。`Activity`的`affinity`忽略。这个 `Activity`不会重新宿主，但是会销毁。
+
 ### **android:onHistory**
 
 > 当用户从`Activity`上离开并且它在屏幕上不再可见时，`Activity`是否从`Activity stack`中清除并结束。默认是`false`。如果设置为`true`，`Activity`不会留下历史痕迹。它不会在这个`Task`中保留，用户将不能在这个`Task`中回到这个`activity`实例。
@@ -95,8 +99,8 @@ android 启动模式：
 
 ### **android:exported**
 是否允许activity被其他程序调用
-### **android:finishOnTaskLaunch**
-是否关闭已打开的activity，当用户重新启动这个任务的时候
+
+
 ### **multiprocess**
 允许多进程
 
