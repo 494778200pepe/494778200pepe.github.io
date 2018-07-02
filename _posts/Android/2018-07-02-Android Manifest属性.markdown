@@ -93,7 +93,9 @@ android 启动模式：
 是否允许activity被其他程序调用
 
 ### **multiprocess**
-允许多进程
+是否允许此activity加入到启动它的那个组件的process里。
+
+> 通常，一个新的`activity`的实例会加入到应用程序定义的那个`process`里面，所以这个`activity`的所有实例都运行在同一个`process`里面。但是，如果这个属性设置为`true`，这个`activity`的实例可以运行在多个`process`里面，允许系统在任何它想使用这个`activity`的地方创建它的实例，一般情况下，这个属性是不需要的，也是不期望使用的。
 
 ### **android:stateNotNeeded**
 
