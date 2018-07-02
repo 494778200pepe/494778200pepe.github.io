@@ -10,6 +10,7 @@ description: 『 Android Manifest属性 』
 ### **android:label**
 ### **android:icon**
 ### **android:name**
+### **android:theme**
 ### **android:launchMode**
 android 启动模式：
 
@@ -49,8 +50,6 @@ android 启动模式：
 ### **android:permission**
 
 
-### **android:theme**
-
 ### **android:taskAffinity**
 
 
@@ -61,6 +60,10 @@ android 启动模式：
 
 
 ### **android:alwaysRetainTaskState**
+> 系统是否永久保存当前`Activity`所在的`Task`的状态。`true`将会保存，`false`系统将允许在明确的情况下把`Task`的状态重置为初始状态。默认值是`false`。这个属性只对这个`Task`的`root activity`有意义，它将忽略其它所有的`activity`。
+通常情况下，当用户从主屏幕重新选择这个`Task`时系统将清除这个`Task`(移除`root activity`之上的所有`activity`)。通常，如果用户在确定的时间内没有再访问这个`Task`，例如30分钟，系统将执行清除操作。
+可是，当这个属性设置为`true`时，用户将总是回到这个`Task`的最后状态，无论他们采取任何方式。这是非常有用的，例如，像网页浏览器这样的应用程序有很多的状态（例如有很多tab），用户不想忘记他们在浏览哪个网页。
+
 ### **android:clearTaskOnLanunch**
 
 
@@ -92,6 +95,7 @@ android 启动模式：
 
 [AndroidManifest属性 - CSDN博客](https://blog.csdn.net/lty406910111/article/details/70226212)
 
+[AndroidManifest.xml中一些常用的属性 - CSDN博客](https://blog.csdn.net/qinxiaoli0309a/article/details/52755314)
 
 
 
