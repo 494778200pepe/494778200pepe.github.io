@@ -82,28 +82,15 @@ android 启动模式：
 [android属性之noHistory - CSDN博客](https://blog.csdn.net/yayun0516/article/details/52108174)
 ### **android:permission**
 
-
 ### **android:taskAffinity**
 
-
-
 ### **android:process**
-
-
-
-
-
-
-
-
 
 ### **android:exported**
 是否允许activity被其他程序调用
 
-
 ### **multiprocess**
 允许多进程
-
 
 ### **android:stateNotNeeded**
 
