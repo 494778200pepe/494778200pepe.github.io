@@ -25,6 +25,7 @@ description: 『 一、了解Web及网络基础 』
 
 * SGML：Standard Generalized Markup Language，标准通用标记语言。
 * NIC：Network Interface Card，网络适配器，即网卡。
+* ARP：Address Resolution Procotol，一种用来解析地址的协议，根据通信方的IP地址就可以反查出对应的MAC地址。
 
 ### **网络基础TCP/IP**
 
@@ -43,10 +44,13 @@ TCP/IP协议族按层次分别分为以下：应用层、传输层、网络层�
 
 > IP协议的作用是把各种数据包传送给对方。而要保证确实传送到对方那里，则需要满足各类条件。其中两个重要的条件是`IP地址`和`MAC地址`。
 
+### **TCP协议**
 
+> TCP位于传输层，提供可靠的字节流服务(Byte Stream Service)。TCP协议为了更容易传送大数据才把数据分割，而且TCP协议能够确认数据最终是否送达到对方。
 
+### **DNS服务**
 
-
+> DNS提供域名到IP地址之间的解析服务。DNS协议提供通过域名查找IP地址，或逆向从IP地址反查域名的服务。
 
 
 
