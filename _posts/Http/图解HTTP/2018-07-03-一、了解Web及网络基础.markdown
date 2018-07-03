@@ -14,14 +14,72 @@ description: 『 一、了解Web及网络基础 』
 * WWW：World Wide Web，万维网。
 * HTML：HyperText Markup Language，超文本标记语言。
 * URL：Uniform Resource Locator，统一资源定位符。
+* FTP：File Transfer Protocol，文件传输协议。
+* DNS：Domain Name System，域名系统。
+* TCP：Transmission Control Protocol，传输控制协议。
+* UDP：User Data Protocol，用户数据包协议。
+* IP：Internet Protocol，网际协议。
+* MAC：Media Access Control Address，网卡所属的固定地址。
 
 #### 其他
 
 * SGML：Standard Generalized Markup Language，标准通用标记语言。
+* NIC：Network Interface Card，网络适配器，即网卡。
 
 ### **网络基础TCP/IP**
 
 > TCP/IP是互联网相关的各类协议族的总称。
+
+包含：TCP、UDP、HTTP、FTP、IP、DNS、PPPoE、SNMP、ICMP、FDDI、IEEE 802.3。
+
+TCP/IP协议族按层次分别分为以下：应用层、传输层、网络层、数据链路层。
+
+* 应用层：决定向用户提供应用服务时的通信活动，比如：FTP、DNS、HTTP
+* 传输层：提供处于网络连接中的两台计算机之间的数据传输。包括：TCP和UDP。
+* 网络层：用来处理在网络上流动的数据包。包括：IP。
+* 链路层：用来处理连接网络的硬件部分。
+
+### **IP协议**
+
+> IP协议的作用是把各种数据包传送给对方。而要保证确实传送到对方那里，则需要满足各类条件。其中两个重要的条件是`IP地址`和`MAC地址`。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
