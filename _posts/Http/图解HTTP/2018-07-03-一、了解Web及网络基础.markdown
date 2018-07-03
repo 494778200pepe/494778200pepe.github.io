@@ -8,6 +8,21 @@ author: pepe
 description: 『 一、了解Web及网络基础 』
 ---
 
+### **基本概念**
+
+* HTTP：HyperText Transfer Protocol，超文本传输协议。
+* WWW：World Wide Web，万维网。
+* HTML：HyperText Markup Language，超文本标记语言。
+* URL：Uniform Resource Locator，统一资源定位符。
+
+#### 其他
+
+* SGML：Standard Generalized Markup Language，标准通用标记语言。
+
+### **网络基础TCP/IP**
+
+> TCP/IP是互联网相关的各类协议族的总称。
+
 
 
 
