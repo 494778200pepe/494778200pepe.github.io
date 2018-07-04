@@ -1,20 +1,57 @@
-AndroidĞÔÄÜÓÅ»¯ÏµÁĞÖ®AppÆô¶¯ÓÅ»¯
+---
+layout: post
+title:  "æ€§èƒ½ä¼˜åŒ–"
+date:   2018-07-04 11:18:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: ã€ æ€§èƒ½ä¼˜åŒ– ã€
+---
+
+Androidæ€§èƒ½ä¼˜åŒ–ç³»åˆ—ä¹‹Appå¯åŠ¨ä¼˜åŒ–
 https://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650822284&idx=1&sn=d6b30ab442f417cbd992e784945c7799&chksm=80b78212b7c00b049243a474933e7a3f356c8b6fca1e8d67a9fcf654cef095c0c28f6a51e31c&mpshare=1&scene=23&srcid=0310SZs3jXcTKXTB8KyOZ2Jc#rd
 
-AndroidĞÔÄÜÓÅ»¯Ö®Ê¹ÓÃLint
+Androidæ€§èƒ½ä¼˜åŒ–ä¹‹ä½¿ç”¨Lint
 https://mp.weixin.qq.com/s/qQ6-mVvsWyO9utmDLWHrzw
 
 
-AndroidĞÔÄÜÓÅ»¯ÏµÁĞÖ®ÄÚ´æÓÅ»¯
+Androidæ€§èƒ½ä¼˜åŒ–ç³»åˆ—ä¹‹å†…å­˜ä¼˜åŒ–
 https://mp.weixin.qq.com/s/RV0NHClnpD9xMVLGdcUYDg
 
 
-AndroidĞÔÄÜÓÅ»¯-ÄÚ´æĞ¹Â©µÄ8¸öCase
+Androidæ€§èƒ½ä¼˜åŒ–-å†…å­˜æ³„æ¼çš„8ä¸ªCase
 https://mp.weixin.qq.com/s/zswNArUj8PqPXmVHMUUxuA
 
 
-Android ÄÚ´æÓÅ»¯×Ü½á&Êµ¼ù
+Android å†…å­˜ä¼˜åŒ–æ€»ç»“&å®è·µ
 https://mp.weixin.qq.com/s?__biz=MzA3NTYzODYzMg==&mid=2653578816&idx=1&sn=20b6160e92167dde676561f3a43d0860&chksm=84b3b447b3c43d51c8042b58fef7dcb2755bdb4ceffaf8244b1e88acc6231411e3e9a5f0368f&mpshare=1&scene=23&srcid=0327exBF0XMlQUmSDZAN8szc#rd
 
-Android×Ô¶¨ÒåLintÊµ¼ù -
+Androidè‡ªå®šä¹‰Lintå®è·µ -
 https://tech.meituan.com/android_custom_lint.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
