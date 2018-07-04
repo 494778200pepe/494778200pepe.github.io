@@ -70,8 +70,20 @@ HTTP/1.1    200     OK
 Allow: GET,POST,HEAD,OPTIONS
 ```
 #### TRACE
+`TRACE`方法是让WEB服务器端将之前的请求通信环回给客户端的方法。基本用不到。
+#### CONNECT
+`CONNECT`方法要求在与代理服务器通信时建立隧道，实现用隧道协议进行TCP通信。主要使用`SSL`和`TLS`协议把通信内容加密后经网络隧道传输。
 
+* SSL:Secure Sockets Layer,安全套接层。
+* TLS:Transport Layer Security,传输层安全。
 
+```
+//请求
+CONNECT     proxy.hackr.jp:8080     HTTP/1.10
+Host: proxy.hackr.jp
+//响应
+HTTP/1.1    200     OK (之后进入网络隧道)
+```
 
 
 
