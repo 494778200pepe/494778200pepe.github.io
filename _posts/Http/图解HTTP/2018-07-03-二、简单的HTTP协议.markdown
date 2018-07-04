@@ -8,8 +8,31 @@ author: pepe
 description: 『 二、简单的HTTP协议 』
 ---
 
-
-
+### **请求和响应**
+请求报文的构成
+```
+//方法    URI         协议版本
+POST    /form/ertry     HTTP/1.1
+//请求首部字段
+Host：hackr.jp
+Connection: keep-alive
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 16
+//内容实体
+name=ueno&age=37   
+```
+响应报文的构成
+```
+//协议版本      状态码     状态码的原因短语
+HTTP/1.1        200         OK
+//响应首部字段
+Date: Tue,10 Jul 2012 06:50:15 GMT
+Content-Length: 362
+Content-Type: text/html
+//主体
+<html>
+...
+```
 
 
 
