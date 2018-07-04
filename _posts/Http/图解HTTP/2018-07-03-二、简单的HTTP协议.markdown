@@ -49,6 +49,28 @@ Host: hackr.jp
 
 ### **告知服务器意图的HTTP方法**
 
+#### GET
+`GET`方法用来请求访问已被URI识别的资源。
+#### POST
+`POST`方法用来传输实体的主体。
+#### PUT
+`PUT`传输文件。有安全问题。
+#### HEAD
+`HEAD`方法和GET方法一样，只是不返回报文的主体部分。用于确认URI的有效性及资源更新的日期等。
+#### DELETE
+`DELETE`方法用来删除文件，是与PUT相反的方法。有安全问题。
+#### OPTIONS
+`OPTIONS`方法用来查询针对请求URI指定的资源支持的方法。
+```
+//请求
+OPTIONS     *       HTTP/1.1
+Host: www.hackr.jp
+//响应
+HTTP/1.1    200     OK
+Allow: GET,POST,HEAD,OPTIONS
+```
+#### TRACE
+
 
 
 
