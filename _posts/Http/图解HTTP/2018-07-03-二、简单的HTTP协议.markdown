@@ -85,6 +85,7 @@ Host: proxy.hackr.jp
 HTTP/1.1    200     OK (之后进入网络隧道)
 ```
 
+![http_method]({{ site.baseurl }}/assets/images/Http/http_method.png)
 
 
 
