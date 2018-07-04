@@ -8,6 +8,10 @@ author: pepe
 description: 『 二、简单的HTTP协议 』
 ---
 
+特点：
+
+* HTTP是不保存状态的协议
+
 ### **请求和响应**
 请求报文的构成
 ```
@@ -34,6 +38,16 @@ Content-Type: text/html
 ...
 ```
 
+### **URI**
+```
+//URI为完整的请求URI
+GET     http://hackr.jp/index.html  HTTP/1.1
+//在首部字段Host中写明网络域名或IP地址
+GET     /index.html                 HTTP/1.1
+Host: hackr.jp
+```
+
+### **告知服务器意图的HTTP方法**
 
 
 
