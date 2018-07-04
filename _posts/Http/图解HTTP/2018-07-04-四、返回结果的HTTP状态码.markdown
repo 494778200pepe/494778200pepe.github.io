@@ -1,0 +1,80 @@
+---
+layout: post
+title:  "四、返回结果的HTTP状态码"
+date:   2018-07-04 18:35:00 +0800
+categories: Http
+tags: 图解HTTP
+author: pepe
+description: 『 四、返回结果的HTTP状态码 』
+---
+
+> 状态码的职责是当客户端向服务器端发送请求时，描述返回的请求结果。
+
+![http_code]({{ site.baseurl }}/assets/images/Http/http_code.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
