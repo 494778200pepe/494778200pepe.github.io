@@ -23,8 +23,8 @@ http://www.open-open.com/lib/view/open1452948374339.html
 Android使用OKHttp3实现下载(断点续传、显示进度) - CSDN博客
 https://blog.csdn.net/cfy137000/article/details/54838608
 
-
-
+wangchenyan/PonyMusic: Android online music player use okhttp&gson&material design
+https://github.com/wangchenyan/PonyMusic?utm_medium=email&utm_source=gank.io
 
 
 

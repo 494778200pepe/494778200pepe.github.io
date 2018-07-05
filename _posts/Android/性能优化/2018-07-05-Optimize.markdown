@@ -8,6 +8,22 @@ author: pepe
 description: 『 Optimize 』
 ---
 
+【知识必备】内存泄漏全解析，从此拒绝ANR，让OOM远离你的身边，跟内存泄漏say byebye - 南尘 - 博客园
+http://www.cnblogs.com/liushilin/p/5900089.html
+
+专题：Android 各类优化方案大全_51CTO.COM
+http://mobile.51cto.com/android-410883.htm
+
+Android UI性能优化 检测应用中的UI卡顿 - CSDN博客
+https://blog.csdn.net/lmj623565791/article/details/58626355
+
+Android性能优化系列之内存优化 - CSDN博客
+https://blog.csdn.net/u012124438/article/details/54647287
+
+
+
+
+
 
 
 
