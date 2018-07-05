@@ -18,11 +18,9 @@ description: 『 Modular 』
 
 [Android路由的实现 - CSDN博客](https://blog.csdn.net/Vicent_9920/article/details/71425357)
 
-Android插件化框架系列之类加载器 - 简书
-https://www.jianshu.com/p/57fc356b9093
+[Android插件化框架系列之类加载器 - 简书](https://www.jianshu.com/p/57fc356b9093)
 
-Android组件化方案 - CSDN博客
-https://blog.csdn.net/guiying712/article/details/55213884
+[Android组件化方案 - CSDN博客](https://blog.csdn.net/guiying712/article/details/55213884)
 
 
 
