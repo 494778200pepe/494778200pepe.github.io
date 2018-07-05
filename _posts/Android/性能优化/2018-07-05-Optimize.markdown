@@ -7,6 +7,27 @@ tags: Optimize
 author: pepe
 description: 『 Optimize 』
 ---
+Android性能优化系列之App启动优化
+https://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650822284&idx=1&sn=d6b30ab442f417cbd992e784945c7799&chksm=80b78212b7c00b049243a474933e7a3f356c8b6fca1e8d67a9fcf654cef095c0c28f6a51e31c&mpshare=1&scene=23&srcid=0310SZs3jXcTKXTB8KyOZ2Jc#rd
+
+Android性能优化之使用Lint
+https://mp.weixin.qq.com/s/qQ6-mVvsWyO9utmDLWHrzw
+
+
+Android性能优化系列之内存优化
+https://mp.weixin.qq.com/s/RV0NHClnpD9xMVLGdcUYDg
+
+
+Android性能优化-内存泄漏的8个Case
+https://mp.weixin.qq.com/s/zswNArUj8PqPXmVHMUUxuA
+
+
+Android 内存优化总结&实践
+https://mp.weixin.qq.com/s?__biz=MzA3NTYzODYzMg==&mid=2653578816&idx=1&sn=20b6160e92167dde676561f3a43d0860&chksm=84b3b447b3c43d51c8042b58fef7dcb2755bdb4ceffaf8244b1e88acc6231411e3e9a5f0368f&mpshare=1&scene=23&srcid=0327exBF0XMlQUmSDZAN8szc#rd
+
+Android自定义Lint实践 -
+https://tech.meituan.com/android_custom_lint.html
+
 
 【知识必备】内存泄漏全解析，从此拒绝ANR，让OOM远离你的身边，跟内存泄漏say byebye - 南尘 - 博客园
 http://www.cnblogs.com/liushilin/p/5900089.html
