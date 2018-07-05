@@ -12,7 +12,7 @@ description: 『 Modular 』
 
 [Android架构思考：模块化、多进程](https://mp.weixin.qq.com/s/mIogiDTYGDFISKU5kBXcFA)
 
-[组件化 & 模块化 & 插件化演进]https://mp.weixin.qq.com/s?__biz=MzI3MDE0NzYwNA==&mid=2651435454&idx=1&sn=ca5156b903967eeda7586ace818004c8&chksm=f12898c5c65f11d3857f627fc6057ce413ecf79bea2cdcdc6e47d99a48498c2d1798f6e19f3e&mpshare=1&scene=23&srcid=0516E1fPnXQD2RnHdTen3H5a#rd)
+[组件化 & 模块化 & 插件化演进](https://mp.weixin.qq.com/s?__biz=MzI3MDE0NzYwNA==&mid=2651435454&idx=1&sn=ca5156b903967eeda7586ace818004c8&chksm=f12898c5c65f11d3857f627fc6057ce413ecf79bea2cdcdc6e47d99a48498c2d1798f6e19f3e&mpshare=1&scene=23&srcid=0516E1fPnXQD2RnHdTen3H5a#rd)
 
 [插件化研究之dexmaker动态生成Activity - 简书](https://www.jianshu.com/p/7a9d52e73d05)
 
