@@ -1,0 +1,52 @@
+---
+layout: post
+title:  "OKHttp"
+date:   2018-07-05 13:34:00 +0800
+categories: Http
+tags: OKHttp
+author: pepe
+description: 『 OKHttp 』
+---
+
+你必须学会的okhttp——进阶篇 - CSDN博客
+https://blog.csdn.net/sw950729/article/details/54341106
+
+OKHttp源码解析 - 泡在网上的日子
+http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0326/2643.html
+
+jeasonlzy/okhttp-OkGo: OkGo - 3.0 震撼来袭，该库是基于 Http 协议，封装了 OkHttp 的网络请求框架，比 Retrofit 更简单易用，支持 RxJava，RxJava2，支持自定义缓存，支持批量断点下载管理和批量上传管理功能
+https://github.com/jeasonlzy/okhttp-OkGo
+
+OkHttpUtils - 封装了okhttp的网络框架 - OPEN 开发经验库
+http://www.open-open.com/lib/view/open1452948374339.html
+
+Android使用OKHttp3实现下载(断点续传、显示进度) - CSDN博客
+https://blog.csdn.net/cfy137000/article/details/54838608
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -17,3 +17,21 @@ description: 『 Modular 』
 [插件化研究之dexmaker动态生成Activity - 简书](https://www.jianshu.com/p/7a9d52e73d05)
 
 [Android路由的实现 - CSDN博客](https://blog.csdn.net/Vicent_9920/article/details/71425357)
+
+Android插件化框架系列之类加载器 - 简书
+https://www.jianshu.com/p/57fc356b9093
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
