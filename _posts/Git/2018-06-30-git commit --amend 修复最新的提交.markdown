@@ -14,6 +14,9 @@ description: 『 git commit --amend 修复最新的提交 』
 git add 笑声.txt
 git commit --amend              // 需要在原有commit信息基础上重新编辑
 git commit --amend --no-edit    // 直接按原有commit信息提交
+
+// 提交并填写提交信息
+git commit -m "commit message"
 ```
 
 
