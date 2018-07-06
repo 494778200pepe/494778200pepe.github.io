@@ -17,5 +17,42 @@ description: 『 SVN小技巧 』
 * 2、用鼠标右键选中原目录，拖动到目标目录
 * 3、释放鼠标右键的时候会弹出菜单，选中`SVN Move versioned item(s) here`,然后`commit`即可保留Log。
 
+### **Linux环境下svn**
+```
+// 安装svn
+sudo apt-get install subversion
+
+// checkout
+svn checkout https://172.16.1.24:24580/svn/AndroidDevelopment/wangpei/app/KL_ten_inch/FileService/ /mnt/disk2/px3/px3_pk/pack_update_img/kl/TenPurple/code/  --username wangpei  --password Wangpei
+svn checkout https://172.16.1.24:24580/svn/AndroidDevelopment/wangpei/app/KL_ten_inch/FileService/ /mnt/disk2/px3/px3_pk/pack_update_img/kl/TenPurple/code/  --username=wangpei  --password=Wangpei
+
+// update
+svn up --password=Wangpei
 
 
+```
+
+#### 问题一：`svn: invalid option character: s`
+```
+svn checkout https://172.16.1.24:24580/svn/AndroidDevelopment/wangpei/app/KL_ten_inch/FileService/ /mnt/disk2/px3/px3_pk/pack_update_img/kl/TenPurple/code/  --username wangpei  --password Wangpei
+```
+`checkout`的格式不正确，`--username`写成了`-username`。
+
+#### 问题一：`Can't check path '../TenPurple/code': Permission denied`
+
+权限缺失，进入上层目录,`chmod o+w code`。
+
+
+
+
+
+
+
+xshell中svn命令整理 - CSDN博客
+https://blog.csdn.net/dwf_android/article/details/70168998
+
+“Can’t open file ‘.svn/lock’: Permission denied”问题解决 | linux自动化运维_linux云运维_★lznmvp运维分享★
+http://www.linzhennan.cn/xnty/339.html
+
+Linux服务器svn远程代码同步_迹忆博客
+https://www.onmpw.com/tm/xwzj/opersys_142.html
