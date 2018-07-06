@@ -48,11 +48,8 @@ svn checkout https://172.16.1.24:24580/svn/AndroidDevelopment/wangpei/app/KL_ten
 
 
 
-xshell中svn命令整理 - CSDN博客
-https://blog.csdn.net/dwf_android/article/details/70168998
+[xshell中svn命令整理 - CSDN博客](https://blog.csdn.net/dwf_android/article/details/70168998)
 
-“Can’t open file ‘.svn/lock’: Permission denied”问题解决 | linux自动化运维_linux云运维_★lznmvp运维分享★
-http://www.linzhennan.cn/xnty/339.html
+[“Can’t open file ‘.svn/lock’: Permission denied”问题解决](http://www.linzhennan.cn/xnty/339.html)
 
-Linux服务器svn远程代码同步_迹忆博客
-https://www.onmpw.com/tm/xwzj/opersys_142.html
+[Linux服务器svn远程代码同步_迹忆博客](https://www.onmpw.com/tm/xwzj/opersys_142.html)
