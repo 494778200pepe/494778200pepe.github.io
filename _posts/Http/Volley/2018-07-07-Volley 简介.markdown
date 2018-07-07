@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "Volley 简介"
+date:   2018-07-07 14:31:00 +0800
+categories: Http
+tags: Volley
+author: pepe
+description: 『 Volley 简介 』
+---
+
+### **Volley特点**
+
+* 1、特别适合数据量小，通信频繁的网络操作。(`怎么判断的，又是怎么实现的？`)
+* 2、扩展性强。`Volley`中大多是基于接口的设计，可配置性强。
+* 3、一定程度符合`Http`规范，包括返回`ResponseCode(2XX,3XX,4XX,5XX)`的处理，请求头的处理，缓存机制的支持等。并支持重试和优先级定义。
+* 4、默认`Android2.3`及以上基于`HttpURLConnection，2.3`以下基于`HttpClient`实现。
+* 5、提供简便的图片加载工具。总之Volley就是很牛逼啦！
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
