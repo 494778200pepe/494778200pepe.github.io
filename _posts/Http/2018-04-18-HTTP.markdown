@@ -11,5 +11,29 @@ description: 『 HTTP 』
 
 [小哥哥,小姐姐,我有一份tcp、http面试指南你要吗？ - 掘金](https://juejin.im/post/5ad4094e6fb9a028d7011069)
 
+[HTTP协议详解 - 路，在脚下！ - 博客频道 - CSDN.NET](http://blog.csdn.net/chenzujie/article/details/8529674%7C)
+
+[HTTP协议详解 - MIN飞翔 - 博客园](http://www.cnblogs.com/EricaMIN1987_IT/p/3837436.html)
+
+[深入理解HTTP协议](http://www.360doc.com/content/10/0930/17/3668821_57590979.shtml)
+
+[HTTP请求方法大全 - 常用参考表对照表 - 脚本之家在线工具](http://tools.jb51.net/table/http_request_method)
+
+[Android中的Http通信-慕课网](http://www.imooc.com/learn/304)
+
+[HTTP协议详解-HTTP协议教程-软件测试-麦子学院](http://www.maiziedu.com/course/429/)
+
+[HTTP协议详解 - 續寫經典 - 博客频道 - CSDN.NET](http://blog.csdn.net/qy1387/article/details/8054378)
+
+[HTTP协议详解（真的很经典）-qizheguang-ChinaUnix博客](http://blog.chinaunix.net/uid-26284412-id-3221478.html)
+
+[从原理角度解析Android （Java） http 文件上传 - Hongyang - 博客频道 - CSDN.NET](http://blog.csdn.net/lmj623565791/article/details/23781773)
+
+|Apache HttpClient 4.5.2 API|[Overview (Apache HttpClient 4.5.2 API)](http://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/)
+
+[xUtils API 文档---概览](http://xutilsapi.oschina.mopaas.com/)
+
+[异步网络和图片框架koush/ion: Android Asynchronous Networking and Image Loading](https://github.com/koush/ion)
+
 
 

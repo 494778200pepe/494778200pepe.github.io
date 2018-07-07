@@ -14,7 +14,16 @@ description: 『 HotFix 』
 
 
 
+[Android 热修复，没你想的那么难](http://mp.weixin.qq.com/s?__biz=MzA4MjU5NTY0NA==&mid=2653418673&idx=1&sn=2c6aeaa32c03b2df72c122c923928527&scene=23&srcid=0510y4iPI137Z6DJEtr14UFY#rd)
 
+[AndFix从放弃到捡起](http://mp.weixin.qq.com/s?__biz=MzIxNDE1NjQ2Mw==&mid=2649872256&idx=1&sn=253973ed6b5539b0fbfffa3ae18bdae6&scene=23&srcid=0429euj6LKG0rczsVnfnO5KW#rd)
+[alibaba/AndFix: AndFix is a library that offer hot-fix for Android App.](https://github.com/alibaba/AndFix)
+
+[Android热更新方案Robust](http://tech.meituan.com/android_robust.html)
+
+[Android 热修复 Tinker接入及源码浅析](http://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650821993&idx=1&sn=550a90e30a398bbb652ecd65209b62e2&chksm=80b781f7b7c008e17d9f5a59542f46329d28cbcd2ec075d4c2d44784f789135166a4e1949303&mpshare=1&scene=23&srcid=0208fpIK8fe4X8UFqCSdAJOa#rd)
+
+[蘑菇街Android热修复探索之路](http://mp.weixin.qq.com/s/GuzbU1M1LY1VKmN7PyVbHQ)
 
 
 
