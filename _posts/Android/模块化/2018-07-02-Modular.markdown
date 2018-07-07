@@ -32,7 +32,7 @@ description: 『 Modular 』
 
 [360 Android 插件开发 DroidPlugin 代码分析 -随笔_Android_第七城市](http://www.th7.cn/Program/Android/201510/601898.shtml)
 
-
+[Android 【插件化】"偷梁换柱"的高手-VirtualApk源码解析 - CSDN博客](https://blog.csdn.net/qq_17250009/article/details/79913233)
 
 
 
