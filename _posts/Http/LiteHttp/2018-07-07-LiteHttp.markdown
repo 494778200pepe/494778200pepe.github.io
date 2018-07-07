@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "LiteHttp"
+date:   2018-07-07 11:39:00 +0800
+categories: Http
+tags: LiteHttp
+author: pepe
+description: 『 LiteHttp 』
+---
+
+[litesuits/android-lite-go: LiteGo is a Java-based asynchronous concurrency library. It has a smart executor, which can be freely set the maximum number of concurrent at same time , and the number of threads in waiting queue. It can also set waiting policies and overload strategies.](https://github.com/litesuits/android-lite-go)
+
+[LiteSuits](https://litesuits.com/?f=litego)
+[使用LiteHttp的另一种姿势 - 简书](http://www.jianshu.com/p/96448b09fe8f?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
