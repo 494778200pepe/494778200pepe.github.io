@@ -14,14 +14,11 @@ description: 『 Volley 』
 [Android 网络通信框架Volley简介(Google IO 2013) - Whatever is worth doing is worth doing well. - 博客频道 - CSDN.NET](http://blog.csdn.net/t12x3456/article/details/9221611)
 
 
-Google Volley框架源码走读 - OPEN 开发经验库
-http://www.open-open.com/lib/view/open1453265055792.html
+[Google Volley框架源码走读 - OPEN 开发经验库](http://www.open-open.com/lib/view/open1453265055792.html)
 
-Android：Volley的使用及其工具类的封装 - OPEN 开发经验库
-http://www.open-open.com/lib/view/open1451223702339.html
+[Android：Volley的使用及其工具类的封装 - OPEN 开发经验库](http://www.open-open.com/lib/view/open1451223702339.html)
 
-Volley完全解析之进阶最佳实践与二次封装 - OPEN 开发经验库
-http://www.open-open.com/lib/view/open1453549678948.html
+[Volley完全解析之进阶最佳实践与二次封装 - OPEN 开发经验库](http://www.open-open.com/lib/view/open1453549678948.html)
 
 
 
