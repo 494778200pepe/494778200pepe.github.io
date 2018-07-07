@@ -20,7 +20,7 @@ description: 『 OKHttp 』
 
 [wangchenyan/PonyMusic: Android online music player use okhttp&gson&material design](https://github.com/wangchenyan/PonyMusic?utm_medium=email&utm_source=gank.io)
 
-
+[Android开源框架源码分析：Okhttp - OPEN 开发经验库](http://www.open-open.com/lib/view/open1517362688550.html)
 
 
 

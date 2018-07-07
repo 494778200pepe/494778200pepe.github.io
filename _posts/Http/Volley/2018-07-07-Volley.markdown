@@ -14,6 +14,7 @@ description: 『 Volley 』
 
 [Android 网络通信框架Volley简介(Google IO 2013) - Whatever is worth doing is worth doing well. - 博客频道 - CSDN.NET](http://blog.csdn.net/t12x3456/article/details/9221611)
 
+[谷歌Volley网络框架分析。（三）消息队列 - CSDN博客](https://blog.csdn.net/wo6925371/article/details/17117779)
 
 [Google Volley框架源码走读 - OPEN 开发经验库](http://www.open-open.com/lib/view/open1453265055792.html)
 
@@ -25,6 +26,13 @@ description: 『 Volley 』
 
 [Android Volley完全解析(四)，带你从源码的角度理解Volley - CSDN博客](https://blog.csdn.net/guolin_blog/article/details/17656437)
 
+### BlockingQueue
+
+[Android 之BlockingQueue - CSDN博客](https://blog.csdn.net/itheimach/article/details/52108981)
+
+[Android中关于Volley的使用（五）从RequestQueue开始来深入认识Volley - 安卓吧 - 博客园](https://www.cnblogs.com/android100/p/Android-Volley5.html)
+
+[Android——Volley框架学习总结 - changel - 博客园](https://www.cnblogs.com/caichongyang/articles/4399790.html)
 
 ### Volley 设计模式
 
