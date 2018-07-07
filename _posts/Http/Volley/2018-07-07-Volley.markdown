@@ -7,9 +7,10 @@ tags: Volley
 author: pepe
 description: 『 Volley 』
 ---
-[Android Volley核心源码解析 - CSDN博客](https://blog.csdn.net/qq_17250009/article/details/50897747)
 
-[Android的Volley网络Get/Post请求包实例代码 - OPEN代码分享](http://www.open-open.com/code/view/1423815469357)
+### Volley 源码
+
+[Android Volley核心源码解析 - CSDN博客](https://blog.csdn.net/qq_17250009/article/details/50897747)
 
 [Android 网络通信框架Volley简介(Google IO 2013) - Whatever is worth doing is worth doing well. - 博客频道 - CSDN.NET](http://blog.csdn.net/t12x3456/article/details/9221611)
 
@@ -25,6 +26,17 @@ description: 『 Volley 』
 [Android Volley完全解析(四)，带你从源码的角度理解Volley - CSDN博客](https://blog.csdn.net/guolin_blog/article/details/17656437)
 
 
+### Volley 设计模式
+
+[通过Volley我们能学到什么?(1) — 工作原理与设计模式 - CSDN博客](https://blog.csdn.net/u010825228/article/details/50457595)
+
+[再看Volley源码-设计模式 - 简书](https://www.jianshu.com/p/d60f78430c72)
+
+[Volley中用到的设计模式 - CSDN博客](https://blog.csdn.net/kakaxi1o1/article/details/51592833)
+
+[“史诗级”的Volley源码您真的彻底弄懂了？ - CSDN博客](https://blog.csdn.net/zengqiang11111/article/details/75275871)
+
+[Volley源码分析——Volley的线程 - CSDN博客](https://blog.csdn.net/xiaogutou1/article/details/47088479)
 
 
 
