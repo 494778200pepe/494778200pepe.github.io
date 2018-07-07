@@ -29,7 +29,7 @@ description: 『 HTTP 』
 
 [从原理角度解析Android （Java） http 文件上传 - Hongyang - 博客频道 - CSDN.NET](http://blog.csdn.net/lmj623565791/article/details/23781773)
 
-|Apache HttpClient 4.5.2 API|[Overview (Apache HttpClient 4.5.2 API)](http://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/)
+[Overview (Apache HttpClient 4.5.2 API)](http://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/)
 
 [xUtils API 文档---概览](http://xutilsapi.oschina.mopaas.com/)
 
