@@ -32,6 +32,9 @@ description: 『 Optimize 』
 [Android性能优化系列之内存优化 - CSDN博客](https://blog.csdn.net/u012124438/article/details/54647287)
 
 
+[精神哥手把手教你如何智斗ANR - 腾讯Bugly的专栏 - CSDN博客](http://blog.csdn.net/tencent_bugly/article/details/46650675)
+
+[浅谈ANR如何分析解决ANR - 善感的人 - CSDN博客](http://blog.csdn.net/java2009cgh/article/details/6957009)
 
 
 

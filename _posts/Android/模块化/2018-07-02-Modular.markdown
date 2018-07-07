@@ -22,6 +22,16 @@ description: 『 Modular 』
 
 [Android组件化方案 - CSDN博客](https://blog.csdn.net/guiying712/article/details/55213884)
 
+### 插件化
+
+[［Android］Android插件化开发入门篇](http://www.360doc.com/content/16/0109/15/9200790_526629193.shtml)
+
+[Android插件化开发，初入殿堂 - 开源实验室](https://my.oschina.net/kymjs/blog/327232)
+
+[Android插件化开发 - 开发园地 - 博客频道 - CSDN.NET](http://blog.csdn.net/qq435757399/article/details/46521085)
+
+[360 Android 插件开发 DroidPlugin 代码分析 -随笔_Android_第七城市](http://www.th7.cn/Program/Android/201510/601898.shtml)
+
 
 
 
