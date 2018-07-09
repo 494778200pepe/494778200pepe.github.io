@@ -33,7 +33,27 @@ description: 『 OKHttp 』
 
 
 
+[使用---OKHttp使用简介 - 路，在脚下！ - 博客频道 - CSDN.NET](http://blog.csdn.net/chenzujie/article/details/46994073)
+[使用---OkHttp使用教程 - 泡在网上的日子](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0106/2275.html)
+[封装---Android 一个改善的okHttp封装库 - Hongyang - 博客频道 - CSDN.NET](http://blog.csdn.net/lmj623565791/article/details/49734867)
+[使用---OkHttp使用教程 - 夏皓 - 博客频道 - CSDN.NET](http://blog.csdn.net/xiahao86/article/details/44753513)
+[源码---OKHttp源码解析（一） - 路，在脚下！ - 博客频道 - CSDN.NET](http://blog.csdn.net/chenzujie/article/details/47061095)
 
+[笔记---okhttp笔记 - 简书](http://www.jianshu.com/p/a67d303c6f7a)
+[教程---retrofit+okhttp教程 - 简书](http://www.jianshu.com/p/b20cc6d31672)
+[解析---Android OkHttp完全解析 是时候来了解OkHttp了 - Hongyang - 博客频道 - CSDN.NET](http://blog.csdn.net/lmj623565791/article/details/47911083)
+[源码---OKHttp 源码解析 - 掘金](http://gold.xitu.io/entry/56dbc92a816dfa005a60c275?from=timeline&isappinstalled=1)
+[源码---OKHttp源码解析 - 泡在网上的日子](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0326/2643.html)
+[搜索页---泡在网上的日子](http://www.jcodecraeer.com/plus/search.php?kwtype=0&q=OkHttp)
+[搜索页---简书](http://www.jianshu.com/search?q=OkHttp&page=1&type=notes)
+
+
+OkHttp使用详解一 | SUNNY空间
+http://www.sunnyang.com/364.html
+拆轮子系列：拆 OkHttp
+http://mp.weixin.qq.com/s?__biz=MzA4MjU5NTY0NA==&mid=2653419018&idx=1&sn=932eec802048861e616a10fb8aca083b&scene=23&srcid=0714OYJVrQrpcOpJsox2XwuY#rd
+高效地配置OkHttp开发技术前线 | 开发技术前线
+http://www.devtf.cn/?p=1264
 
 
 

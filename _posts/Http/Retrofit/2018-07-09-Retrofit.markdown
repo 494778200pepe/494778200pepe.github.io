@@ -1,0 +1,68 @@
+---
+layout: post
+title:  "Retrofit"
+date:   2018-07-09 10:56:00 +0800
+categories: Http
+tags: Retrofit
+author: pepe
+description: 『 Retrofit 』
+---
+
+
+`Retrofit`是一个不错的网络请求库，用官方自己的介绍就是：
+
+> A type-safe REST client for Android and Java
+
+[GitHub 地址](https://github.com/square/retrofit)
+[官方文档---Retrofit](http://square.github.io/retrofit/)
+
+
+
+
+
+
+
+
+#参考文档
+
+[使用---DevWiki Blog](http://www.devwiki.net/)
+[深入浅出 Retrofit，这么牛逼的框架你们还不来看看？](http://mp.weixin.qq.com/s?__biz=MzA3NTYzODYzMg==&mid=2653577186&idx=1&sn=1a5f6369faeb22b4b68ea39f25020d28&scene=23&srcid=0602lyFlbss6ll2bMfyS0HBH#rd)
+
+
+[使用---Retrofit的使用 (1)，retrofit使用_Android教程 | 帮客之家](http://www.bkjia.com/Androidjc/1086836.html)
+[使用---快速Android开发系列网络篇之Retrofit - AngelDevil - 博客园](http://www.cnblogs.com/angeldevil/p/3757335.html)
+[使用---Retrofit 2.0：有史以来最大的改进 - 泡在网上的日子](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0915/3460.html)
+[使用---(译)Retrofit-入门 | Itxuye](http://itxuye.com/retrofit-getting-started-and-android-client.html?utm_source=tuicool&utm_medium=referral)
+
+[使用---【译】Retrofit 2 - 如何从服务器下载文件 - 简书](http://www.jianshu.com/p/92bb85fc07e8)
+[使用---网络服务库 Retrofit2 的使用方式 | Mystra](http://www.wangchenlong.org/2016/03/16/1602/use-retrofit-first/)
+
+
+[Demo---Android应用架构之Retrofit使用 - liuhongwei123888的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/liuhongwei123888/article/details/50375283)
+[分析---Retrofit分析-漂亮的解耦套路 - 简书](http://www.jianshu.com/p/45cb536be2f4?utm_campaign=maleskine&utm_content=note&utm_medium=reader_share&utm_source=weixin&from=timeline&isappinstalled=0)
+[分析---简略分析Android的Retrofit应用开发框架源码_Android_脚本之家](http://www.jb51.net/article/79732.htm)
+
+[源码---Retrofit2.0源码简要解析 - 简书](http://www.jianshu.com/p/69a3aff6bfac)
+[Retrofit+OKHttp 教你怎么持久化管理Cookie](http://m.blog.csdn.net/article/details?id=51345386)
+[Retrofit2和RxJava配合使用时的错误处理 - 简书](http://www.jianshu.com/p/086aeb9a4ee2?utm_campaign=hugo&utm_medium=reader_share&utm_content=note&utm_source=qq)
+[Retrofit 2.0 常用写法示例 - 邹迪飞 - 博客频道 - CSDN.NET](http://blog.csdn.net/zoudifei/article/details/50737546)
+[Retrofit2+RxJava+LoganSquare最佳实践 - 简书](http://www.jianshu.com/p/0d81ca9dc91f)
+[你真的会用Retrofit2吗?Retrofit2完全教程 - 简书](http://www.jianshu.com/p/308f3c54abdd)
+[网络请求–Retrofit2使用方法](https://mp.weixin.qq.com/s?__biz=MzA4NDM2MjAwNw==&mid=401697701&idx=1&sn=448b8606b016bfd2fa6a12bb963548b2&scene=1&srcid=0309YbdqCFlu7YgefevjB35z&key=710a5d99946419d90af29c75988e07a9474f3955d4668c6cc1f36b4603c090bb57bf4fe8a7cfefaf2711988524e98545&ascene=0&uin=MjI1NTE5NDA2Mw==)
+[Retrofit+RxJava实战日志 - 易凡的技术园地 - 博客频道 - CSDN.NET](http://blog.csdn.net/efan006/article/category/6074519)
+[快速Android开发系列网络篇之Retrofit - AngelDevil - 博客园](http://www.cnblogs.com/angeldevil/p/3757335.html)
+[Retrofit2 with LoganSquare封装 - 简书](http://www.jianshu.com/p/42eacc6d5188)
+[好用的网络请求库Retrofit2（入门及讲解） - biezhihua的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/biezhihua/article/details/49232289)
+[
+
+
+
+
+
+
+
+
+
+
+
+
