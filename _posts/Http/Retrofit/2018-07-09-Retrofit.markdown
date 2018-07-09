@@ -26,17 +26,17 @@ description: 『 Retrofit 』
 [深入浅出 Retrofit，这么牛逼的框架你们还不来看看？](http://mp.weixin.qq.com/s?__biz=MzA3NTYzODYzMg==&mid=2653577186&idx=1&sn=1a5f6369faeb22b4b68ea39f25020d28&scene=23&srcid=0602lyFlbss6ll2bMfyS0HBH#rd)
 
 
-[使用---Retrofit的使用 (1)，retrofit使用_Android教程 | 帮客之家](http://www.bkjia.com/Androidjc/1086836.html)
+[使用---Retrofit的使用 (1)，retrofit使用_Android教程 ](http://www.bkjia.com/Androidjc/1086836.html)
 
 [使用---快速Android开发系列网络篇之Retrofit - AngelDevil - 博客园](http://www.cnblogs.com/angeldevil/p/3757335.html)
 
 [使用---Retrofit 2.0：有史以来最大的改进 - 泡在网上的日子](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0915/3460.html)
 
-[使用---(译)Retrofit-入门 | Itxuye](http://itxuye.com/retrofit-getting-started-and-android-client.html?utm_source=tuicool&utm_medium=referral)
+[使用---(译)Retrofit-入门](http://itxuye.com/retrofit-getting-started-and-android-client.html?utm_source=tuicool&utm_medium=referral)
 
 [使用---【译】Retrofit 2 - 如何从服务器下载文件 - 简书](http://www.jianshu.com/p/92bb85fc07e8)
 
-[使用---网络服务库 Retrofit2 的使用方式 | Mystra](http://www.wangchenlong.org/2016/03/16/1602/use-retrofit-first/)
+[使用---网络服务库 Retrofit2 的使用方式 /www.wangchenlong.org/2016/03/16/1602/use-retrofit-first/)
 
 
 [Demo---Android应用架构之Retrofit使用 - liuhongwei123888的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/liuhongwei123888/article/details/50375283)
