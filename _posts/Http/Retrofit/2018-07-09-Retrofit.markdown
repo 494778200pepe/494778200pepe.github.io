@@ -36,7 +36,7 @@ description: 『 Retrofit 』
 
 [使用---【译】Retrofit 2 - 如何从服务器下载文件 - 简书](http://www.jianshu.com/p/92bb85fc07e8)
 
-[使用---网络服务库 Retrofit2 的使用方式 /www.wangchenlong.org/2016/03/16/1602/use-retrofit-first/)
+[使用---网络服务库 Retrofit2 的使用方式](http://www.wangchenlong.org/2016/03/16/1602/use-retrofit-first/)
 
 
 [Demo---Android应用架构之Retrofit使用 - liuhongwei123888的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/liuhongwei123888/article/details/50375283)
