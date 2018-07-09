@@ -53,3 +53,14 @@ Groovy Version: 2.4.8 JVM: 1.8.0_25 Vendor: Oracle Corporation OS: Windows 7
 [通过gradle实现自动切换测试环境和线上环境 - CSDN博客](https://blog.csdn.net/qifengdeqingchen/article/details/78032560)
 
 [Gradle for Android（二）全局设置、自定义 BuildConfig、混淆 - Android - 掘金](https://juejin.im/entry/56f93b3d2e958a005a2f792e)
+
+
+系列：
+
+[Gradle从入门到实战 - Groovy基础 - CSDN博客](https://blog.csdn.net/singwhatiwanna/article/details/76084580)
+
+[全面理解Gradle - 定义Task - CSDN博客](https://blog.csdn.net/singwhatiwanna/article/details/78898113)
+
+[一篇文章带你了解Gradle插件的所有创建方式](https://mp.weixin.qq.com/s/KCpl0CNgwMv0CgvbadNK6A)
+
+[Android Gradle Plugin 源码解析（上）](https://mp.weixin.qq.com/s/aqo6ueTUxEOdGx5tyzQrPQ)
