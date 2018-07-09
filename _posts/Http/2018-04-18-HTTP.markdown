@@ -44,9 +44,8 @@ description: 『 HTTP 』
 [图解 HTTP 的缓存机制](https://mp.weixin.qq.com/s/nh8mLtCne04UIsfj42SJew)
 
 
-HTTP协议详解 - 路，在脚下！ - 博客频道 - CSDN.NET
-http://blog.csdn.net/chenzujie/article/details/8529674
-HTTP请求方法大全 - 常用参考表对照表 - 脚本之家在线工具
-http://tools.jb51.net/table/http_request_method
-HTTP协议定义的八个标准方法(动作) - SecondJanuary - 博客频道 - CSDN.NET
-http://blog.csdn.net/secondjanuary/article/details/12095753
+[HTTP协议详解 - 路，在脚下！ - 博客频道 - CSDN.NET](http://blog.csdn.net/chenzujie/article/details/8529674)
+
+[HTTP请求方法大全 - 常用参考表对照表 - 脚本之家在线工具](http://tools.jb51.net/table/http_request_method)
+
+[HTTP协议定义的八个标准方法(动作) - SecondJanuary - 博客频道 - CSDN.NET](http://blog.csdn.net/secondjanuary/article/details/12095753)
