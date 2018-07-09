@@ -37,3 +37,8 @@ description: 『 HTTP 』
 
 
 
+[HTTP 传输编码增大了传输量，只为解决这一个问题](https://mp.weixin.qq.com/s/XDiExY9RsHnOCJGFe4sJ7Q)
+
+[HTTP 内容编码，也就这 2 点需要知道](https://mp.weixin.qq.com/s/4Si0mKwv2--cK5d8LnR0LQ)
+
+[图解 HTTP 的缓存机制](https://mp.weixin.qq.com/s/nh8mLtCne04UIsfj42SJew)
