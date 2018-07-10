@@ -18,7 +18,7 @@ description: 『 Volley 』
 
 [Android：Volley的使用及其工具类的封装-子匠_Zijor的博客](http://www.dengzhr.com/others/mobile/android/762)
 
-[Volley完全解析之进阶最佳实践与二次封装 | 江清清的技术专栏](http://www.lcode.org/volley%E5%AE%8C%E5%85%A8%E8%A7%A3%E6%9E%90%E4%B9%8B%E8%BF%9B%E9%98%B6%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E4%B8%8E%E4%BA%8C%E6%AC%A1%E5%B0%81%E8%A3%85/)
+[Volley完全解析之进阶最佳实践与二次封装](http://www.lcode.org/volley%E5%AE%8C%E5%85%A8%E8%A7%A3%E6%9E%90%E4%B9%8B%E8%BF%9B%E9%98%B6%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E4%B8%8E%E4%BA%8C%E6%AC%A1%E5%B0%81%E8%A3%85/)
 
 
 [网络框架 Volley 优缺点 - CSDN博客](https://blog.csdn.net/jiankeufo/article/details/54880364)
