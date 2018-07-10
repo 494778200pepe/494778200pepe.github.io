@@ -47,7 +47,6 @@ description: 『 Volley 』
 
 [Volley源码分析——Volley的线程 - CSDN博客](https://blog.csdn.net/xiaogutou1/article/details/47088479)
 
-[Android_开源框架_Volley(Google IO 2013)源代码及内部实现分析 - CSDN博客](https://blog.csdn.net/shiny_zeng/article/details/46316033)
 
 
 
