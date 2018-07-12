@@ -63,13 +63,12 @@ Message是容纳任意数据的容器。生产线程发送消息给 Handler，Ha
 
 [正规的Handler写法 - CSDN博客](http://blog.csdn.net/parcool/article/details/49154189)
 
-[探索 Android 大杀器——Handler](https://zhuanlan.zhihu.com/p/22904405)
-
-[Android消息机制Message消息池 - CSDN博客](http://blog.csdn.net/zlp1992/article/details/50295773)
-
 [看完这篇文章，你就了解了Android Handler的一切  20130816 - CSDN博客](http://blog.csdn.net/u011733020/article/details/49589863)
 
 [从源码看Android MessageQueue消息循环处理机制（epoll实现） - CSDN博客](http://blog.csdn.net/ashqal/article/details/32107099)
+
+[探索 Android 大杀器——Handler](https://zhuanlan.zhihu.com/p/22904405)
+
 
 [ActivityThread的main方法究竟做了什么？ - MeloDev的博客 - CSDN博客](http://blog.csdn.net/melodev/article/details/51959347)
 
