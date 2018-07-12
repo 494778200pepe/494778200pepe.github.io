@@ -81,8 +81,7 @@ Message是容纳任意数据的容器。生产线程发送消息给 Handler，Ha
 
 [Android消息处理机制(Handler、Looper、MessageQueue与Message) - AngelDevil - 博客园](http://www.cnblogs.com/angeldevil/p/3340644.html)
 
-Android 异步消息处理机制 让你深入理解 Looper、Handler、Message三者关系 - CSDN博客
-https://blog.csdn.net/lmj623565791/article/details/38377229
+[Android 异步消息处理机制 让你深入理解 Looper、Handler、Message三者关系 - CSDN博客[(https://blog.csdn.net/lmj623565791/article/details/38377229)
 
 [Android 异步消息处理机制（Handler 、 Looper 、MessageQueue）源码解析 - CSDN博客](https://www.aliyun.com/jiaocheng/64144.html)
 
