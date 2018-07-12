@@ -69,9 +69,6 @@ Message是容纳任意数据的容器。生产线程发送消息给 Handler，Ha
 
 [探索 Android 大杀器——Handler](https://zhuanlan.zhihu.com/p/22904405)
 
-
-[ActivityThread的main方法究竟做了什么？ - MeloDev的博客 - CSDN博客](http://blog.csdn.net/melodev/article/details/51959347)
-
 [Android消息传递之Handler消息机制 - 总李写代码 - 博客园](https://www.cnblogs.com/whoislcj/p/5590615.html)
 
 [Android消息处理机制(Handler、Looper、MessageQueue与Message) - AngelDevil - 博客园](http://www.cnblogs.com/angeldevil/p/3340644.html)
