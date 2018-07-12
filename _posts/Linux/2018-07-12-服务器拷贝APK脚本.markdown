@@ -1,0 +1,40 @@
+---
+layout: post
+title:  "服务器拷贝APK脚本"
+date:   2018-07-12 13:31:00 +0800
+categories: Linux
+tags: Linux
+author: pepe
+description: 『 服务器拷贝APK脚本 』
+---
+
+```
+#!/bin/bash
+
+apk_pack_dir="/mnt/disk2/px3/px3_pack/pack_update_img/kl/TenPurple/rootdir/app/test"
+
+function copyAPK()
+{
+    for element in `ls $1`
+    do
+        dir_or_file=$1"/"$element
+        if [ -d $dir_or_file ];
+        then
+            copyAPK $dir_or_file
+        else  
+            if [ "${dir_or_file##*.}"x = "apk"x ];then
+                cp $dir_or_file $apk_pack_dir
+            else 
+                echo $dir_or_file
+            fi
+        fi
+    done
+}
+
+src_apk_dir="/mnt/disk2/px3/hq_rkpx3/out/target/product/px3/system/app/kl/TenPurple"
+
+echo "copy start"
+copyAPK $src_apk_dir
+echo "copy over"
+```
+

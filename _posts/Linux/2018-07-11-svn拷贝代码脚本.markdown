@@ -1,0 +1,79 @@
+---
+layout: post
+title:  "svn拷贝代码脚本"
+date:   2018-07-11 15:24:00 +0800
+categories: Linux
+tags: Linux
+author: pepe
+description: 『 svn拷贝代码脚本 』
+---
+
+```
+#!/bin/bash
+
+# svn目录
+SVN_PATH="https://172.16.1.24:24580/svn/AndroidDevelopment/wangpei/app/KL_ten_inch/"
+# 服务器目录
+dst_catalog="/mnt/disk2/px3/hq_rkpx3/code/kl/TenPurple/"
+
+# 用户名
+user="*******"
+# 密码
+pswd="*********"
+
+function checkApp(){
+		echo $1 start checkout
+		
+		cd $dst_catalog
+		# 目标文件夹名
+		dst_name=$1
+		# 源文件目录
+		src_catalog=$SVN_PATH$dst_name
+		# 目标文件夹目录
+		dst_dir=$dst_catalog$dst_name
+		# 目标文件夹的版本目录(.svn)
+		svn_path=${dst_name}"/.svn"
+		
+		if [ -d $dst_name ];then
+		     if [ -d $svn_path ];then
+		        # svn文件夹存在
+		        echo "svn文件夹存在"
+		        cd $dst_name
+		        svn up --username=$user --password=$pswd
+		    else
+		        # svn文件夹不存在
+		        echo $1" svn文件夹不存在"
+		        svn checkout $src_catalog $dst_dir --username=$user --password=$pswd
+		    fi
+		else
+		    echo "文件夹不存在"
+		    mkdir $dst_dir
+		    svn checkout $src_catalog $dst_dir --username=$user --password=$pswd
+		fi
+		echo $1 end checkout
+}
+
+#SVN checkout代码
+list="HQ_CameraSystem HQ_AirConditioner HQ_AirService HQ_FloatMediaPlayer HQ_MediaService HQ_MusicPlayer HQ_MusicService HQ_NavigationUpdate HQ_VideoPlayer vitamio"  
+
+for appName in $list;  
+do 
+  checkApp $appName
+done 
+
+function mmmApp(){
+	echo  start mmm $1
+	mmm $dst_catalog$1"/src/main"
+	echo  end mmm $1
+}
+
+#App编译
+cd /mnt/disk2/px3/hq_rkpx3
+source build/envsetup.sh
+
+for appName in $list;  
+do 
+  mmmApp $appName
+done 
+```
+
