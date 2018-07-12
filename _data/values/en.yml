@@ -16,6 +16,7 @@ algorithm: Algorithm
 git: Git
 http: Http
 thoughts: Thoughts
+wechat: wechat
 other: Other
 thanks: " , Powered by"
 page: Page
