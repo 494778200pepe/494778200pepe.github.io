@@ -61,9 +61,11 @@ Message是容纳任意数据的容器。生产线程发送消息给 Handler，Ha
 
 参考：
 
-[正规的Handler写法 - CSDN博客](http://blog.csdn.net/parcool/article/details/49154189)
-
 [Handler、Message、MessageQueue、Looper调用过程源码浅析 - CSDN博客](https://blog.csdn.net/qq_17250009/article/details/50017237)
+
+其他：
+
+[正规的Handler写法 - CSDN博客](http://blog.csdn.net/parcool/article/details/49154189)
 
 [看完这篇文章，你就了解了Android Handler的一切  20130816 - CSDN博客](http://blog.csdn.net/u011733020/article/details/49589863)
 
