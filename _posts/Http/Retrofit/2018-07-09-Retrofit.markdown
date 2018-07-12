@@ -68,7 +68,7 @@ description: 『 Retrofit 』
 
 [好用的网络请求库Retrofit2（入门及讲解） - biezhihua的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/biezhihua/article/details/49232289)
 
-
+[解决Retrofit多BaseUrl及运行时动态改变BaseUrl(二) - 掘金](https://juejin.im/post/5b42aa98f265da0f82021350)
 
 
 
