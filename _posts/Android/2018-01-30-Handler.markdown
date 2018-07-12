@@ -63,8 +63,6 @@ Message是容纳任意数据的容器。生产线程发送消息给 Handler，Ha
 
 [正规的Handler写法 - CSDN博客](http://blog.csdn.net/parcool/article/details/49154189)
 
-[Handler基本使用（一） new Handler（）和new Handler（Handler.Callback）](http://blog.csdn.net/u011791526/article/details/53609599)
-
 [探索 Android 大杀器——Handler](https://zhuanlan.zhihu.com/p/22904405)
 
 [Android消息机制Message消息池 - CSDN博客](http://blog.csdn.net/zlp1992/article/details/50295773)
