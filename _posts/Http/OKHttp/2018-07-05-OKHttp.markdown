@@ -43,11 +43,6 @@ description: 『 OKHttp 』
 [Android开源框架源码分析：Okhttp - OPEN 开发经验库](http://www.open-open.com/lib/view/open1517362688550.html)
 
 
-
-
-
-[使用---OkHttp使用教程 - 夏皓 - 博客频道 - CSDN.NET](http://blog.csdn.net/xiahao86/article/details/44753513)
-
 [解析---Android OkHttp完全解析 是时候来了解OkHttp了 - Hongyang - 博客频道 - CSDN.NET](http://blog.csdn.net/lmj623565791/article/details/47911083)
 
 [源码---OKHttp源码解析 - 泡在网上的日子](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0326/2643.html)
