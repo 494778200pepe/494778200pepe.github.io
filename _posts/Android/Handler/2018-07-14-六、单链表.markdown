@@ -8,6 +8,51 @@ author: pepe
 description: 『 六、单链表 』
 ---
 
+> 单向链表的链表对象维护了一个 first 引用，该引用指向节点链表中的第一个节点对象，每个节点对象维护一个 next 引用，next引用指向下一个节点对象；（这里注意：是引用指向的是节点对象：节点对象包含存储的数据和next引用）
+
+![Handler3]({{ site.baseurl }}/assets/images/android/Handler/handler3.png)
+
+```
+public class LinkedListDemo1 { //表示整个链表对象
+
+    private Node first;        //链表对象的第一个引用
+    
+    public LinkedListDemo1(){
+        
+    }
+    
+    
+    public Node getFirst() {
+        return first;
+    }
+
+
+    public void setFirst(Node first) {
+        this.first = first;
+    }
+
+
+    class Node{              //节点对象
+        Item item;          //存储的数据对象
+        Node next;          //下一个节点对象的引用
+        
+        public Item getItem() {
+            return item;
+        }
+        public void setItem(Item item) {
+            this.item = item;
+        }
+        public Node getNext() {
+            return next;
+        }
+        public void setNext(Node next) {
+            this.next = next;
+        }
+        
+        
+    }
+}
+```
 
 链表数据结构图解 和 代码实现 - beppezhang - 博客园
 https://www.cnblogs.com/beppezhang/p/6564633.html
