@@ -295,8 +295,8 @@ if (msg != null && msg.target == null) {
 * 2、`Message`如果没有设置`callback`那么执行`Handler`的`callback`
 
 
-
-
+![Handler]({{ site.baseurl }}/assets/images/android/Handler/handler1.png)
+再看这张图应该很清晰了吧~
 
 
 参考：
@@ -305,7 +305,7 @@ if (msg != null && msg.target == null) {
 
 [看完这篇文章，你就了解了Android Handler的一切  20130816 - CSDN博客](http://blog.csdn.net/u011733020/article/details/49589863)
 
-
+[Handler消息源码流程分析（含手写笔记） - 简书](https://www.jianshu.com/p/6f25729ef62a)
 
 
 

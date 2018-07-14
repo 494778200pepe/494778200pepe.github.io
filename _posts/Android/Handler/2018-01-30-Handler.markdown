@@ -75,7 +75,7 @@ Message是容纳任意数据的容器。生产线程发送消息给 Handler，Ha
 
 [正规的Handler写法 - CSDN博客](http://blog.csdn.net/parcool/article/details/49154189)
 
-[Handler消息源码流程分析（含手写笔记） - 简书](https://www.jianshu.com/p/6f25729ef62a)
+
 
 [HandlerThread线程间通信 源码解析 - 简书](https://www.jianshu.com/p/69c826c8a87d)
 
