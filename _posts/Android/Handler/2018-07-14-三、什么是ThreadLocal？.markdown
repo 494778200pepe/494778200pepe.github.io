@@ -8,6 +8,8 @@ author: pepe
 description: 『 什么是ThreadLocal？ 』
 ---
 
+> 它是一个线程内部的数据存储类，通过它可以再指定的线程中存储数据，数据存储以后，只有在指定线程中可以获取到存储的数据，对于其它线程来说则无法获取到数据。对于`Handler`来说，它需要获取当前线程的`Looper`，很显然`Looper`的作用域就是线程并且不同线程具有不同的`Looper`，这个时候通过`ThreadLocal`就可以轻松实现`Looper`在线程中的存取。
+
 在前面的分析中，涉及到`ThreadLocal`的地方有：
 #### **Looper**
 ```
@@ -187,7 +189,7 @@ static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>();
 
 看到这里，相信你能明白`ThreadLocal`是干啥的了吧~
 
-> `Looper`在`prepare()`时，构建`Thread`的`ThreadLocalMap`，同时以`sThreadLocal`为`key`，保存`Looper`对象。在各自线程通过`Thread`对象，拿到各自的`ThreadLocalMap`。由于`ThreadLocal`是一个静态常量，被`Thread`持有，所以可以直接拿到，当作`key`去获取`Looper`对象。
+> `Looper`在`prepare()`时，构建`Thread`的`ThreadLocalMap`，同时以`sThreadLocal`为`key`，保存`Looper`对象。在各自线程通过`Thread`对象，拿到各自的`ThreadLocalMap`。由于`ThreadLocal`是一个静态常量，被`Thread`持有(因为<font color="#dd0000">`Looper`的作用域就是线程并且不同线程具有不同的`Looper`</font><br /> )，所以可以直接拿到，当作`key`去获取`Looper`对象。
 
 
 
