@@ -125,7 +125,7 @@ static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>();
 简要分析下：
 
 * 1、拿到当前线程`t`
-* 2、从`t`获取一个`ThreadLocalMap`
+* 2、从`t`获取当前线程的`ThreadLocalMap`
 * 3、以`ThreadLocal`(`Looper`的成员变量`sThreadLocal`)为`key`，获取`value`(也就是`Looper`对象了)
 * 4、如果`ThreadLocalMap`为空，那么初始化并返回一个空值
 
