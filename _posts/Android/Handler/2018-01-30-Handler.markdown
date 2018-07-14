@@ -63,7 +63,6 @@ Message是容纳任意数据的容器。生产线程发送消息给 Handler，Ha
 
 
 
-[Android的消息机制之ThreadLocal的工作原理 - CSDN博客](https://blog.csdn.net/singwhatiwanna/article/details/48350919)
 
 
 
