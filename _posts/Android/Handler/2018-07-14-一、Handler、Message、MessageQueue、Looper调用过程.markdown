@@ -171,12 +171,76 @@ private boolean enqueueMessage(MessageQueue queue, Message msg , long uptimeMill
      * null if the calling thread is not associated with a Looper.
      */
     public static Looper myLooper() {
+        // 从mThreadLocak中取出Looper
         return sThreadLocal .get();
     }
 ```
-可以看到，`loop()`里面也是一个死循环`for (;;)`，不断从`Message msg = queue.next()`中读取`Message`。同时，如果`MessageQueue`中没有消息，`queue.next()`阻塞，那么`loop()`也将阻塞。只有执行Loop.quit/quitSafely才会跳出循环。如果取到了`Message`，那么执行`msg.target.dispatchMessage( msg);`。
+可以看到，`loop()`里面也是一个死循环`for (;;)`，不断从`Message msg = queue.next()`中读取`Message`。同时，如果`MessageQueue`中没有消息，`queue.next()`阻塞，那么`loop()`也将阻塞。只有执行`Loop.quit/quitSafely`才会跳出循环。如果取到了`Message`，那么执行`msg.target.dispatchMessage( msg);`。
 
 #### 第二步，`Looper`是什么时候开始轮询`loop()`的？
+追根溯源，`Looper.loop()`方法是由`ActivityThread`的`Main()`方法去调用的，如下所示：
+```
+    public static void More ...main(String[] args) {
+        SamplingProfilerIntegration.start();
+ 
+        // CloseGuard defaults to true and can be quite spammy.  We
+        // disable it here, but selectively enable it later (via
+        // StrictMode) on debug builds, but using DropBox, not logs.
+        CloseGuard.setEnabled(false);
+ 
+        Environment.initForCurrentUser();
+ 
+        // Set the reporter for event logging in libcore
+        EventLogger.setReporter(new EventLoggingReporter());
+ 
+        Security.addProvider(new AndroidKeyStoreProvider());
+ 
+        // Make sure TrustedCertificateStore looks in the right place for CA certificates
+        final File configDir = Environment.getUserConfigDirectory(UserHandle.myUserId());
+        TrustedCertificateStore.setDefaultUserDirectory(configDir);
+ 
+        Process.setArgV0("<pre-initialized>");
+ 
+        Looper.prepareMainLooper();
+ 
+        ActivityThread thread = new ActivityThread();
+        thread.attach(false);
+ 
+        if (sMainThreadHandler == null) {
+            sMainThreadHandler = thread.getHandler();
+        }
+ 
+        if (false) {
+            Looper.myLooper().setMessageLogging(new
+                    LogPrinter(Log.DEBUG, "ActivityThread"));
+        }
+ 
+       Looper.loop();
+ 
+       throw new RuntimeException("Main thread loop unexpectedly exited");
+    }
+```
+可以看到，在`Looper.loop();`之前，先执行了`Looper.prepareMainLooper();`。
+```
+    public static void More ...prepareMainLooper() {
+        prepare(false);
+        synchronized (Looper.class) {
+            if (sMainLooper != null) {
+                throw new IllegalStateException("The main Looper has already been prepared.");
+            }
+            sMainLooper = myLooper();
+        }
+    }
+     
+    private static void More ...prepare(boolean quitAllowed) {
+        if (sThreadLocal.get() != null) {
+            throw new RuntimeException("Only one Looper may be created per thread");
+        }
+        // 将Looper存储在sThreadLocal中
+        sThreadLocal.set(new Looper(quitAllowed));
+    }
+```
+在这里出现了
 
 
 
