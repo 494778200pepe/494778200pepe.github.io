@@ -24,9 +24,8 @@ description: 『 Handler、Message、MessageQueue、Looper调用过程 』
 * `Handler` 收发消息工具
 * `ThreadLocal` (本地线程数据存储对象)
 
-### **`Handler`发送`Message`**
+### **1、`Handler`发送`Message`**
 
-发送消息：
 ```
 public final boolean sendMessage (Message msg )
 {
@@ -60,8 +59,9 @@ private boolean enqueueMessage(MessageQueue queue, Message msg , long uptimeMill
     return queue.enqueueMessage(msg, uptimeMillis);
 }
 ```
+可以看到，所有发送消息到最后都是`MessageQueue`将`Message`添加到队列中。
 
-
+### **2、`Looper`轮询取出`Message`**
 
 
 
