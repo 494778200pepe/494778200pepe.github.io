@@ -132,7 +132,53 @@ description: 『 Handler 线程切换的原理 』
 > 总结：那么现在可以回答问题了。`Looper`在主线程轮询(`next()`)，`Handler`在子线程(当然，也可以在主线程啦)发送消息(`enqueueMessage()`)，通过一个共享变量`MessageQueue`，来实现线程切换。
 
 ![Handler2]({{ site.baseurl }}/assets/images/android/Handler/handler2.png)
-    
+ 
+###  **共享变量`MessageQueue`的构造和初始化**
+#### 在**Looper**中构造
+```
+    private Looper(boolean quitAllowed) {
+        mQueue = new MessageQueue(quitAllowed);
+        mThread = Thread.currentThread();
+    }
+```
+
+#### 在**Handler**中初始化
+```
+    public Handler(Callback callback, boolean async) {
+        if (FIND_POTENTIAL_LEAKS) {
+            final Class<? extends Handler> klass = getClass();
+            if ((klass.isAnonymousClass() || klass.isMemberClass() || klass.isLocalClass()) &&
+                    (klass.getModifiers() & Modifier.STATIC) == 0) {
+                Log.w(TAG, "The following Handler class should be static or leaks might occur: " +
+                        klass.getCanonicalName());
+            }
+        }
+
+        mLooper = Looper.myLooper();
+        if (mLooper == null) {
+            throw new RuntimeException(
+                    "Can't create handler inside thread that has not called Looper.prepare()");
+        }
+        // 使用的是与Looper 同一个 MessageQueue
+        mQueue = mLooper.mQueue;
+        mCallback = callback;
+        mAsynchronous = async;
+    }
+```
+所以本质上，共享变量`MessageQueue`，其实是`Handler`能通过`Looper.myLooper()`拿到`Looper`对象。
+```
+    /**
+     * Return the Looper object associated with the current thread.  Returns
+     * null if the calling thread is not associated with a Looper.
+     */
+    public static Looper myLooper() {
+        // 从mThreadLocal中取出Looper
+        return sThreadLocal .get();
+    }
+```
+那么`ThreadLocal`又是什么东东呢？请听下回分解~[什么是ThreadLocal？](https://494778200pepe.github.io/android/2018/07/14/%E4%B8%89-%E4%BB%80%E4%B9%88%E6%98%AFThreadLocal.html)
+
+
 参考：
 
 [Handler线程切换实现原理 - CSDN博客](https://blog.csdn.net/qq_16188829/article/details/76922757)

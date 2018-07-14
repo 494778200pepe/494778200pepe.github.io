@@ -18,7 +18,7 @@ static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>();
      * null if the calling thread is not associated with a Looper.
      */
     public static Looper myLooper() {
-        // 从mThreadLocak中取出Looper
+        // 从mThreadLocal中取出Looper
         return sThreadLocal .get();
     }
 ```
@@ -64,9 +64,6 @@ static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>();
         mCallback = callback;
         mAsynchronous = async;
     }
-    
-    
-
 ```
 
 综上，使用`ThreadLocal`的地方有：
