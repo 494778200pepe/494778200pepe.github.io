@@ -61,7 +61,7 @@ Message是容纳任意数据的容器。生产线程发送消息给 Handler，Ha
 
 参考：
 
-[Handler、Message、MessageQueue、Looper调用过程源码浅析 - CSDN博客](https://blog.csdn.net/qq_17250009/article/details/50017237)
+
 
 [Android的消息机制之ThreadLocal的工作原理 - CSDN博客](https://blog.csdn.net/singwhatiwanna/article/details/48350919)
 
@@ -79,7 +79,7 @@ Message是容纳任意数据的容器。生产线程发送消息给 Handler，Ha
 
 [HandlerThread线程间通信 源码解析 - 简书](https://www.jianshu.com/p/69c826c8a87d)
 
-[看完这篇文章，你就了解了Android Handler的一切  20130816 - CSDN博客](http://blog.csdn.net/u011733020/article/details/49589863)
+
 
 [从源码看Android MessageQueue消息循环处理机制（epoll实现） - CSDN博客](http://blog.csdn.net/ashqal/article/details/32107099)
 
