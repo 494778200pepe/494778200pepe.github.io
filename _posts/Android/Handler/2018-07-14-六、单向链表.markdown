@@ -56,6 +56,7 @@ public class LinkedListDemo1 { //表示整个链表对象
 }
 ```
 
-链表数据结构图解 和 代码实现 - beppezhang - 博客园
-https://www.cnblogs.com/beppezhang/p/6564633.html
+参考：
+
+[链表数据结构图解 和 代码实现 - beppezhang - 博客园](https://www.cnblogs.com/beppezhang/p/6564633.html)
 
