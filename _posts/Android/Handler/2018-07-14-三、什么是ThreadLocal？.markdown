@@ -189,7 +189,7 @@ static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>();
 
 看到这里，相信你能明白`ThreadLocal`是干啥的了吧~
 
-> `Looper`在`prepare()`时，构建`Thread`的`ThreadLocalMap`，同时以`sThreadLocal`为`key`，保存`Looper`对象。在各自线程通过`Thread`对象，拿到各自的`ThreadLocalMap`。由于`ThreadLocal`是一个静态常量，被`Thread`持有(因为<font color="#dd0000">`Looper`的作用域就是线程并且不同线程具有不同的`Looper`</font><br /> )，所以可以直接拿到，当作`key`去获取`Looper`对象。
+> `Looper`在`prepare()`时，构建`Thread`的`ThreadLocalMap`，同时以`sThreadLocal`为`key`，保存`Looper`对象。在各自线程通过`Thread`对象，拿到各自的`ThreadLocalMap`。由于`ThreadLocal`是一个静态常量，被`Thread`持有(因为<font size="3" color="#dd0000">Looper的作用域就是线程并且不同线程具有不同的Looper</font><br /> )，所以可以直接拿到，当作`key`去获取`Looper`对象。
 
 参考：
 
