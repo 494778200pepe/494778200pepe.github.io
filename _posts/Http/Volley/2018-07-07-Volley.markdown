@@ -12,8 +12,7 @@ description: 『 Volley 』
 
 [Android Volley核心源码解析 - CSDN博客](https://blog.csdn.net/qq_17250009/article/details/50897747)
 
-Volley源码分析 - 简书
-https://www.jianshu.com/p/94195b7cf23e
+[Volley源码分析 - 简书](https://www.jianshu.com/p/94195b7cf23e)
 
 [Android 网络通信框架Volley简介(Google IO 2013) - Whatever is worth doing is worth doing well. - 博客频道 - CSDN.NET](http://blog.csdn.net/t12x3456/article/details/9221611)
 
