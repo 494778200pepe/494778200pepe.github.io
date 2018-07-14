@@ -8,29 +8,55 @@ author: pepe
 description: 『 Handler使用中的内存泄漏 』
 ---
 
+### **一、什么是内存泄露？**
+
+> Java使用有向图机制，通过GC自动检查内存中的对象（什么时候检查由虚拟机决定），如果GC发现一个或一组对象为不可到达状态，则将该对象从内存中回收。也就是说，一个对象不被任何引用所指向，则该对象会在被GC发现的时候被回收；另外，如果一组对象中只包含互相的引用，而没有来自它们外部的引用（例如有两个对象A和B互相持有引用，但没有任何外部对象持有指向A或B的引用），这仍然属于不可到达，同样会被GC回收。
+
+Android中使用Handler造成内存泄露的原因
+
+```
+private Handler handler = new Handler()
+ {
+      public void handleMessage(android.os.Message msg)
+　　　　 {
+            if (msg.what == 1) 
+　　　　　　　　{
+                noteBookAdapter.notifyDataSetChanged();
+             }
+        }
+ };
+```
+
+
+　　上面是一段简单的Handler的使用。当使用内部类（包括匿名类）来创建Handler的时候，Handler对象会隐式地持有一个外部类对象（通常是一个Activity）的引用（不然你怎么可能通过Handler来操作Activity中的View？）。而Handler通常会伴随着一个耗时的后台线程（例如从网络拉取图片）一起出现，这个后台线程在任务执行完毕（例如图片下载完毕）之后，通过消息机制通知Handler，然后Handler把图片更新到界面。然而，如果用户在网络请求过程中关闭了Activity，正常情况下，Activity不再被使用，它就有可能在GC检查时被回收掉，但由于这时线程尚未执行完，而该线程持有Handler的引用（不然它怎么发消息给Handler？），这个Handler又持有Activity的引用，就导致该Activity无法被回收（即内存泄露），直到网络请求结束（例如图片下载完毕）。另外，如果你执行了Handler的postDelayed()方法，该方法会将你的Handler装入一个Message，并把这条Message推到MessageQueue中，那么在你设定的delay到达之前，会有一条MessageQueue -> Message -> Handler -> Activity的链，导致你的Activity被持有引用而无法被回收。
+
+
+### **二、内存泄露的危害**
+
+
+* 内存泄露的危害就是会使虚拟机占用内存过高，导致OOM（内存溢出），程序出错。
+* 对于Android应用来说，就是你的用户打开一个Activity，使用完之后关闭它，内存泄露；又打开，又关闭，又泄露；几次之后，程序占用内存超过系统限制，FC。
+
+
 ```
 // Handler的正确写法
-import android.app.Activity;
-import android.os.Handler;
-import android.os.Message;
- 
-public abstract class MyWeakReferenceHandler<T extends Activity> extends Handler {
- 
-	private WeakReference<T> weakReferenceActivity = null;
- 
-	public MyWeakReferenceHandler(T t) {
-		this.weakReferenceActivity = new WeakReference<T>(t);
-	}
- 
-	public abstract void handleMessage(Message msg, T weakReferenceActivity);
- 
-	@Override
-	public void handleMessage(Message msg) {
-		// TODO Auto-generated method stub
-		super.handleMessage(msg);
-		handleMessage(msg, weakReferenceActivity.get());
-	}
+static class MyHandler extends Handler {
+    WeakReference<Activity > mActivityReference;
 
+    MyHandler(Activity activity) {
+        mActivityReference= new WeakReference<Activity>(activity);
+    }
+    
+    public abstract void handleMessage(Message msg);
+
+    @Override
+    public void handleMessage(Message msg) {
+        final Activity activity = mActivityReference.get();
+        if (activity != null) {
+            handleMessage(msg);
+        }
+    }
+}
 ```
 
 
