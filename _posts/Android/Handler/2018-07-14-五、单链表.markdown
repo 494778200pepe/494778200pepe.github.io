@@ -9,5 +9,6 @@ description: 『 五、单链表 』
 ---
 
 
-
+链表数据结构图解 和 代码实现 - beppezhang - 博客园
+https://www.cnblogs.com/beppezhang/p/6564633.html
 
