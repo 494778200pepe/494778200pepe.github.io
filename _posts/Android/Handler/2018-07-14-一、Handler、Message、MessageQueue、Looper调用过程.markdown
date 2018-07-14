@@ -9,7 +9,7 @@ description: 『 Handler、Message、MessageQueue、Looper调用过程 』
 ---
 
 <font color="#dd0000">浅红色文字：</font><br /> 
-```java
+```cpp,monokai
 //code
 codecode
 code
@@ -17,21 +17,27 @@ code
 code
 ```
 
-<table><tbody>
-    <tr bgcolor=#7FFFD4>
+<table bgcolor=#7FFFD4><tbody>
+    <tr>
         <th>方法说明</th><th>颜色名称</th><th>颜色</th>
     </tr>
-    <tr bgcolor=#7FFFD4>
+    <tr>
         <td><font color="Hotpink">此处实现方法利用 CSDN-markdown 内嵌 html 语言的优势</font></td><td><font color="Hotpink">Hotpink</font></td><td bgcolor="Hotpink">rgb(240, 248, 255)</td>
     </tr>
-    <tr bgcolor=#7FFFD4>
+    <tr>
         <td><font color="Pink">借助 table, tr, td 等表格标签的 bgcolor 属性实现背景色设置</font></td><td><font color="pink">AntiqueWhite</font></td><td bgcolor="Pink">rgb(255, 192, 203)</td>
     </tr>
 </table>
 
 
 
+```java
+//code
+codecode
+code
 
+code
+```
 
 
 <table><tbody>
