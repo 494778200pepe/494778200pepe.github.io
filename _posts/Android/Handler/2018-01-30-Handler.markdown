@@ -70,7 +70,7 @@ Message是容纳任意数据的容器。生产线程发送消息给 Handler，Ha
 
 其他：
 
-[正规的Handler写法 - CSDN博客](http://blog.csdn.net/parcool/article/details/49154189)
+
 
 
 
