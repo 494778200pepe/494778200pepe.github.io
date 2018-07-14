@@ -35,3 +35,16 @@ public abstract class MyWeakReferenceHandler<T extends Activity> extends Handler
 
 
 
+
+
+
+
+
+
+
+
+参考：
+
+[正规的Handler写法 - CSDN博客](http://blog.csdn.net/parcool/article/details/49154189)
+
+

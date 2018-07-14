@@ -307,7 +307,7 @@ if (msg != null && msg.target == null) {
 
 [Handler消息源码流程分析（含手写笔记） - 简书](https://www.jianshu.com/p/6f25729ef62a)
 
-
+[有关Handler机制的源码学习 - 简书](https://www.jianshu.com/p/b5eb6fb14c95)
 
 
 
