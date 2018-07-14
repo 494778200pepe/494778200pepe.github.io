@@ -27,7 +27,7 @@ code
     <tr>
         <td><font color="Pink">借助 table, tr, td 等表格标签的 bgcolor 属性实现背景色设置</font></td><td><font color="pink">AntiqueWhite</font></td><td bgcolor="Pink">rgb(255, 192, 203)</td>
     </tr>
-
+</tbody>
 
 
 ###  334534
