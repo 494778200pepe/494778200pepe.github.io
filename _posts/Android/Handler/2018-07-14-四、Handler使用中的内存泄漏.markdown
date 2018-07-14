@@ -38,26 +38,7 @@ private Handler handler = new Handler()
 * 对于Android应用来说，就是你的用户打开一个Activity，使用完之后关闭它，内存泄露；又打开，又关闭，又泄露；几次之后，程序占用内存超过系统限制，FC。
 
 
-```
-// Handler的正确写法
-static class MyHandler extends Handler {
-    WeakReference<Activity > mActivityReference;
 
-    MyHandler(Activity activity) {
-        mActivityReference= new WeakReference<Activity>(activity);
-    }
-    
-    public abstract void handleMessage(Message msg);
-
-    @Override
-    public void handleMessage(Message msg) {
-        final Activity activity = mActivityReference.get();
-        if (activity != null) {
-            handleMessage(msg);
-        }
-    }
-}
-```
 
 
 
@@ -71,6 +52,7 @@ static class MyHandler extends Handler {
 
 参考：
 
-[正规的Handler写法 - CSDN博客](http://blog.csdn.net/parcool/article/details/49154189)
+Android使用Handler造成内存泄露的分析及解决方法 - 温布利往事 - 博客园
+https://www.cnblogs.com/xujian2014/p/5025650.html
 
 
