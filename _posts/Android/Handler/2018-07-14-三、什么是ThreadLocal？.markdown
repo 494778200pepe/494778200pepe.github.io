@@ -156,7 +156,7 @@ static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>();
 ```
 每个`Thread`都持有一个`ThreadLocal.ThreadLocalMap`对象。
 
-> 结论：所有线程，共用一个`ThreadLocal.ThreadLocalMap`对象，同时`ThreadLocalMap`又以各个`Looper`的`sThreadLocal`为`key`，保存了各个`Thread`保存的`value`。
+> 结论：每个线程都有一个`ThreadLocal.ThreadLocalMap`对象，同时`ThreadLocalMap`又以`Looper`的`sThreadLocal`为`key`，保存了`Thread`保存的`value`。
 
 #### `Looper`与`Thread`
 ```
@@ -183,11 +183,11 @@ static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>();
         return sThreadLocal .get();
     }
 ```
-从上面可以看到每个`Thread`，只能调用一次`Looper.prepare()`。`Thread`持有的`Looper`对象保存在所有`Thread`共有的`ThreadLocalMap`中。
+从上面可以看到每个`Thread`，只能调用一次`Looper.prepare()`。`Thread`持有的`Looper`对象保存在所有`Thread`持有的`ThreadLocalMap`中。
 
 看到这里，相信你能明白`ThreadLocal`是干啥的了吧~
 
-> `Looper`在`prepare()`时，构建`ThreadLocalMap`，同时以`sThreadLocal`为`key`，保存`Looper`对象。`ThreadLocal`的`ThreadLocalMap`以各个`Looper`的`sThreadLocal`为`key`，保存了各个`Looper`对象。然后在各自线程通过`Thread`对象，拿到`ThreadLocalMap`。由于`ThreadLocal`是一个静态常量，被`Thread`持有，所以可以直接拿到，当作`key`去获取`Looper`对象。
+> `Looper`在`prepare()`时，构建`Thread`的`ThreadLocalMap`，同时以`sThreadLocal`为`key`，保存`Looper`对象。在各自线程通过`Thread`对象，拿到各自的`ThreadLocalMap`。由于`ThreadLocal`是一个静态常量，被`Thread`持有，所以可以直接拿到，当作`key`去获取`Looper`对象。
 
 
 
