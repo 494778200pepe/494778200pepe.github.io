@@ -10,8 +10,81 @@ description: 『 Handler、Message、MessageQueue、Looper调用过程 』
 
 ### 相关对象
 
-* `Looper` 消息轮训器
+* `Looper` 消息轮询器
 * `MessageQueue` 消息暂存队列(单链表结构)
 * `Message` 消息
 * `Handler` 收发消息工具
 * `ThreadLocal` (本地线程数据存储对象)
+
+### **Handler**
+
+> 从Handler说起吧，Handler的工作包括发送和接收消息，主要用于线程切换。
+
+发送消息：
+```
+public final boolean sendMessage (Message msg )
+{
+    return sendMessageDelayed(msg , 0);
+}
+ 
+public final boolean sendMessageDelayed (Message msg, long delayMillis )
+{
+    if (delayMillis < 0) {
+        delayMillis = 0;
+    }
+    return sendMessageAtTime(msg , SystemClock.uptimeMillis() + delayMillis);
+}
+ 
+public boolean sendMessageAtTime (Message msg , long uptimeMillis) {
+    MessageQueue queue = mQueue;
+    if (queue == null) {
+        RuntimeException e = new RuntimeException(
+                this + " sendMessageAtTime() called with no mQueue");
+        Log. w("Looper", e.getMessage(), e);
+        return false ;
+    }
+    return enqueueMessage(queue , msg , uptimeMillis);
+}
+ 
+private boolean enqueueMessage(MessageQueue queue, Message msg , long uptimeMillis)                        { 
+    msg.target = this;
+    if (mAsynchronous ) {
+        msg.setAsynchronous( true);
+    }
+    return queue.enqueueMessage(msg, uptimeMillis);
+}
+```
+> 在互相调用的过程中可以发现，最后返回了`queue.enqueueMessage(msg,uptimeMillis)`。这里的`enqueueMessage`方法的主要操作其实就是向`MessageQueue`中插入一条数据（注意：`MessageQueue`虽然翻译过来是消息队列，但是它的内部存储结构并不是真正的队列，而是采用单链表的数据结构来存储消息列表）。也就是说`Handler`发送消息的过程仅仅是向`MessageQueue`中插入了一条消息，`MessageQueue`的`next方法`就会返回这条消息给`Looper`，`Looper`收到消息后就开始处理了，最终消息由`Looper`交由`Handler`处理，即`Handler`的d`ispatchMessage`方法会被调用。这就是这四个类之间的调用逻辑。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
