@@ -33,7 +33,7 @@ code
 ###  334534
 
 
-<table>
+<table><font bgcolor="Hotpink">
 <tbody><font bgcolor="Hotpink">
     <tr>
         <th rowspan="3">我占了三行</th>
@@ -53,4 +53,5 @@ code
     </tr>
 </font>
 </tbody>
+</font>
 </table>
