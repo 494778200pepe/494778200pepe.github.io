@@ -53,11 +53,6 @@ description: 『 五、BlockingQueue(阻塞队列) 』
 
 [从源码看Android MessageQueue消息循环处理机制（epoll实现） - CSDN博客](http://blog.csdn.net/ashqal/article/details/32107099)
 
+[BlockingQueue深入解析－BlockingQueue看这一篇就够了 - 生活半篇记 - 博客园](https://www.cnblogs.com/WangHaiMing/p/8798709.html)
 
-
-
-
-
-
-BlockingQueue深入解析－BlockingQueue看这一篇就够了 - 生活半篇记 - 博客园
-https://www.cnblogs.com/WangHaiMing/p/8798709.html
+[BlockingQueue的功能和使用 - CSDN博客](https://blog.csdn.net/mrbcy/article/details/54802049)
