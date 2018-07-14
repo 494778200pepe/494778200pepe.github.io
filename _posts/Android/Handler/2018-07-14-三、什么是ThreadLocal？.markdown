@@ -141,7 +141,7 @@ static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>();
             createMap(t, value);
     }
 ```
-可以看到，是保存在`ThreadLocalMap`中的。
+可以看到，是保存在当前线程的`ThreadLocalMap`中的。
 
 #### `ThreadLocalMap`
 在`ThreadLocal`中：
