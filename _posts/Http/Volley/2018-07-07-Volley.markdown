@@ -14,8 +14,6 @@ description: 『 Volley 』
 
 [Volley源码分析 - 简书](https://www.jianshu.com/p/94195b7cf23e)
 
-[Android 网络通信框架Volley简介(Google IO 2013) - Whatever is worth doing is worth doing well. - 博客频道 - CSDN.NET](http://blog.csdn.net/t12x3456/article/details/9221611)
-
 [Google Volley使用之基础 - CSDN博客](https://blog.csdn.net/yanbober/article/details/45307015)
 
 [Android：Volley的使用及其工具类的封装-子匠_Zijor的博客](http://www.dengzhr.com/others/mobile/android/762)
