@@ -62,32 +62,33 @@ mainTh.start(); //开始做事
 
 还是上面这个功能，我们看伪代码。
 ```
-    protected void onCreate(Bundle savedInstanceState) {
-     mHThread = new HandlerThread( "mHThread") ;
-      mHThread .start();
-      mMainHandler = new Handler(){
-            @Override
-            public void handleMessage(Message msg) {
+protected void onCreate(Bundle savedInstanceState) {
+    mHThread = new HandlerThread( "mHThread") ;
+    mHThread .start();
+    mMainHandler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
             //这里收到的消息将会在主线程中执行
 
-          }
-        };
+        }
+    };
 
-        mHandler = new Handler(mHThread.getLooper()){
-            @Override
-            public void handleMessage(Message msg) {
+    mHandler = new Handler(mHThread.getLooper()){
+        @Override
+        public void handleMessage(Message msg) {
             //这里收到的消息将会在mHThread子线程中处理
                         ·····
             //我做完了，现在将消息通知回主线程
              mMainHandler.sendEmptyMessage(2) ;
-           }
-        };
+        }
+    };
       
-      //主线程做一些事情
+    //主线程做一些事情
         ········
-     //做完了调用mHandler通知子线程mHThread 
-       mHandler.sendEmptyMessage(1) ;
+    //做完了调用mHandler通知子线程mHThread 
+    mHandler.sendEmptyMessage(1) ;
 }
+
 ```
 是不是方便了很多。
 
