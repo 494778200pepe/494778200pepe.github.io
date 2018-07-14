@@ -129,9 +129,7 @@ description: 『 Handler 线程切换的原理 』
 
 原来确是如此，`enqueueMessage()`和`next()`都使用了`synchronized (this)`。
 
-> 总结：
-
-    那么现在可以回答问题了。`Looper`在主线程轮询(`next()`)，`Handler`在子线程(当然，也可以在主线程啦)发送消息(`enqueueMessage()`)，通过一个共享变量`MessageQueue`，来实现线程切换。
+> 总结：那么现在可以回答问题了。`Looper`在主线程轮询(`next()`)，`Handler`在子线程(当然，也可以在主线程啦)发送消息(`enqueueMessage()`)，通过一个共享变量`MessageQueue`，来实现线程切换。
 
 ![Handler2]({{ site.baseurl }}/assets/images/android/Handler/handler2.png)
     
