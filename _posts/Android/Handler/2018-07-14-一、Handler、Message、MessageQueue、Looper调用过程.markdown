@@ -295,7 +295,7 @@ if (msg != null && msg.target == null) {
 * 2、`Message`如果没有设置`callback`那么执行`Handler`的`callback`
 
 
-![Handler]({{ site.baseurl }}/assets/images/android/Handler/handler1.png)
+![Handler1]({{ site.baseurl }}/assets/images/android/Handler/handler1.png)
 再看这张图应该很清晰了吧~
 
 

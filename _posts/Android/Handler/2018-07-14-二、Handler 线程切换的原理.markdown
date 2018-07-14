@@ -8,6 +8,138 @@ author: pepe
 description: 『 Handler 线程切换的原理 』
 ---
 
+`Handler`的主要使用场景就用来切换线程。通常是，在子线程进行网络请求或下载图片，然后通知主线程来更新UI。那么这个线程切换的操作是如何做到的呢？
+
+### **子线程干了啥？**
+
+子线程完成了网络请求，通过`Handler`发送`Message`,`MessageQueue`将`Message`添加到单向链表中。
+
+### **主线程干了啥？**
+
+主线程，有一个`Looper`通过`loop()`在轮询，从`MessageQueue`中取出`Message`。
+
+### **两个线程操作同一个`MessageQueue`？**
+
+我们知道，多线程操作同一个对象，肯定是要加锁(同步)的。现在主线程和子线程共用一个`MessageQueue`，不会出问题吗？
+
+看源码：
+```
+    boolean enqueueMessage(Message msg, long when) {
+        if (msg.target == null) {
+            throw new IllegalArgumentException("Message must have a target.");
+        }
+        if (msg.isInUse()) {
+            throw new IllegalStateException(msg + " This message is already in use.");
+        }
+
+        synchronized (this) {
+            if (mQuitting) {
+                IllegalStateException e = new IllegalStateException(
+                        msg.target + " sending message to a Handler on a dead thread");
+                Log.w(TAG, e.getMessage(), e);
+                msg.recycle();
+                return false;
+            }
+
+            msg.markInUse();
+            msg.when = when;
+            Message p = mMessages;
+            boolean needWake;
+            if (p == null || when == 0 || when < p.when) {
+                // New head, wake up the event queue if blocked.
+                msg.next = p;
+                mMessages = msg;
+                needWake = mBlocked;
+            } else {
+                // Inserted within the middle of the queue.  Usually we don't have to wake
+                // up the event queue unless there is a barrier at the head of the queue
+                // and the message is the earliest asynchronous message in the queue.
+                needWake = mBlocked && p.target == null && msg.isAsynchronous();
+                Message prev;
+                for (; ; ) {
+                    prev = p;
+                    p = p.next;
+                    if (p == null || when < p.when) {
+                        break;
+                    }
+                    if (needWake && p.isAsynchronous()) {
+                        needWake = false;
+                    }
+                }
+                msg.next = p; // invariant: p == prev.next
+                prev.next = msg;
+            }
+
+            // We can assume mPtr != 0 because mQuitting is false.
+            if (needWake) {
+                nativeWake(mPtr);
+            }
+        }
+        return true;
+    }
+    
+    Message next () {
+        int pendingIdleHandlerCount = -1; // -1 only during first iteration
+        int nextPollTimeoutMillis = 0;
+        for (;;) {
+            if (nextPollTimeoutMillis != 0) {
+                Binder. flushPendingCommands();
+            }
+ 
+            // We can assume mPtr != 0 because the loop is obviously still running.
+            // The looper will not call this method after the loop quits.
+            nativePollOnce(mPtr, nextPollTimeoutMillis);
+ 
+            synchronized (this ) {
+                // Try to retrieve the next message.  Return if found.
+                final long now = SystemClock.uptimeMillis();
+                Message prevMsg = null;
+                Message msg = mMessages;
+                if (msg != null && msg.target == null) {
+                    // Stalled by a barrier.  Find the next asynchronous message in                                    -                   //the queue.
+                    do {
+                        prevMsg = msg;
+                        msg = msg.next;
+                    } while (msg != null && !msg.isAsynchronous());
+                }
+                if (msg != null) {
+                    if (now < msg .when) {
+                        // Next message is not ready.  Set a timeout to wake up when    -                       //it is ready.
+                        nextPollTimeoutMillis = (int) Math.min( msg.when - now,                                                                 -                       Integer.MAX_VALUE);
+                    } else {
+                        // Got a message.
+                        mBlocked = false;
+                        if (prevMsg != null) {
+                            prevMsg.next = msg.next;
+                        } else {
+                            mMessages = msg .next;
+                        }
+                        msg.next = null;
+                        if (false ) Log.v("MessageQueue", "Returning message: " +msg);
+                        msg.markInUse();
+                        return msg ;
+                    }
+                } else {
+                    // No more messages.
+                    nextPollTimeoutMillis = -1;
+                }
+                              ...
+    }
+```
+
+原来确是如此，`enqueueMessage()`和`next()`都使用了`synchronized (this)`。
+
+总结：
+
+    那么现在可以回答问题了。`Looper`在主线程轮询(`next()`)，`Handler`在子线程(当然，也可以在主线程啦)发送消息(`enqueueMessage()`)，通过一个共享变量`MessageQueue`，来实现线程切换。
+
+![Handler2]({{ site.baseurl }}/assets/images/android/Handler/handler2.png)
+    
+参考：
+
+[Handler线程切换实现原理 - CSDN博客](https://blog.csdn.net/qq_16188829/article/details/76922757)
+
+[Handler解析(一)：是如何实现线程之间的切换 - CSDN博客](https://blog.csdn.net/adobesolo/article/details/75195394)
 
 
 
