@@ -9,3 +9,10 @@ description: 『 Handler、Message、MessageQueue、Looper调用过程 』
 ---
 
 <font color="#dd0000">浅红色文字：</font><br /> 
+```cpp,monokai
+//code
+codecode
+code
+
+code
+```
