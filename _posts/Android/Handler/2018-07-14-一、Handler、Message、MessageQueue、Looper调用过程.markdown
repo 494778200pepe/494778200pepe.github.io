@@ -34,7 +34,7 @@ code
 
 
 
-<table><tbody>
+<table><tbody><font bgcolor="Hotpink">
     <tr>
         <th rowspan="3">我占了三行</th>
         <th>第一列</th>
@@ -51,4 +51,4 @@ code
         <td>第二列</td>
         <td>第三列</td>
     </tr>
-</table>  
+</font>
