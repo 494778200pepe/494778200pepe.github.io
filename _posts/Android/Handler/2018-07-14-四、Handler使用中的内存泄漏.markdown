@@ -112,8 +112,6 @@ public void onDestroy() {
 
 [Handler内存泄露原理及解决方法 - 简书](https://www.jianshu.com/p/f2f186e3dd3e)
 
-[Android使用Handler造成内存泄露的分析及解决方法 - 温布利往事 - 博客园](https://www.cnblogs.com/xujian2014/p/5025650.html)
-
 [Android App 内存泄露之Handler - CSDN博客](https://blog.csdn.net/zhuanglonghai/article/details/38233069)
 
 [square/leakcanary: A memory leak detection library for Android and Java.内存泄漏检测库](https://github.com/square/leakcanary)
