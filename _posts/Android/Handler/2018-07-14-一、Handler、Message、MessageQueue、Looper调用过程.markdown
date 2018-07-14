@@ -28,3 +28,27 @@ code
         <td><font color="Pink">借助 table, tr, td 等表格标签的 bgcolor 属性实现背景色设置</font></td><td><font color="pink">AntiqueWhite</font></td><td bgcolor="Pink">rgb(255, 192, 203)</td>
     </tr>
 </table>
+
+
+
+
+
+
+<table><tbody>
+    <tr>
+        <th rowspan="3">我占了三行</th>
+        <th>第一列</th>
+        <th>第二列</th>
+        <th>第三列</th>
+    </tr>
+    <tr>
+        <td>第一列</td>
+        <td>第二列</td>
+        <td>第三列</td>
+    </tr>
+    <tr>
+        <td>第一列</td>
+        <td>第二列</td>
+        <td>第三列</td>
+    </tr>
+</table>  
