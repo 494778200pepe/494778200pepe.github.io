@@ -1,14 +1,16 @@
 ---
 layout: post
-title:  "六、单链表"
+title:  "六、单向链表"
 date:   2018-07-14 11:00:00 +0800
 categories: Android
 tags: Handler
 author: pepe
-description: 『 六、单链表 』
+description: 『 单向链表 』
 ---
 
-> 单向链表的链表对象维护了一个 first 引用，该引用指向节点链表中的第一个节点对象，每个节点对象维护一个 next 引用，next引用指向下一个节点对象；（这里注意：是引用指向的是节点对象：节点对象包含存储的数据和next引用）
+`MessageQueue`中维护了一个单向链表。
+
+> 单向链表的链表对象维护了一个`first引用`，该引用指向节点链表中的第一个节点对象，每个节点对象维护一个`next引用`，`next引用`指向下一个节点对象；（这里注意：是引用指向的是节点对象：节点对象包含存储的数据和`next引用`）
 
 ![Handler3]({{ site.baseurl }}/assets/images/android/Handler/handler3.png)
 
