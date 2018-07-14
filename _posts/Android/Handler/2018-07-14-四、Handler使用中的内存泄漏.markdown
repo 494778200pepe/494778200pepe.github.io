@@ -116,4 +116,4 @@ public void onDestroy() {
 
 [Android App 内存泄露之Handler - CSDN博客](https://blog.csdn.net/zhuanglonghai/article/details/38233069)
 
-[square/leakcanary: A memory leak detection library for Android and Java.](https://github.com/square/leakcanary)
+[square/leakcanary: A memory leak detection library for Android and Java.内存泄漏检测库](https://github.com/square/leakcanary)
