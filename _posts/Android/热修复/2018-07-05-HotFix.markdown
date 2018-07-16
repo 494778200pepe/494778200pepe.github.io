@@ -26,8 +26,14 @@ description: 『 HotFix 』
 [蘑菇街Android热修复探索之路](http://mp.weixin.qq.com/s/GuzbU1M1LY1VKmN7PyVbHQ)
 
 
+Android热修复原理探索与实践 - 简书
+https://www.jianshu.com/p/8edd8cd83423
 
+Tinker源码解析系列（一）—Application代理机制 - 简书
+https://www.jianshu.com/p/3c1a015df4b3
 
+Tinker源码解析系列（二）—补丁合成与加载 - 简书
+https://www.jianshu.com/p/04528a26de9d
 
 
 
