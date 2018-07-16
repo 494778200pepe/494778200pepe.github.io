@@ -1,0 +1,35 @@
+---
+layout: post
+title:  "Android 系统签名"
+date:   2018-07-16 13:11:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 Android 系统签名 』
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+参考：
+
+[Apk 使用系统签名 - 简书](https://www.jianshu.com/p/63d699cffa1a)
+
+[给第三方apk进行系统签名的几种方式 - CSDN博客](https://blog.csdn.net/luzhenrong45/article/details/47733053)
+
+
