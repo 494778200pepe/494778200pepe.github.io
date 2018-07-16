@@ -16,7 +16,7 @@ baseurl: ''
 ## categories: "%b-%Y" APR-2018 中文年英文月
 date_format: 
   title: "%Y-%m-%d"
-  archive: "%Y-%m"
+  archive: "%Y-%m-%d"
   categories: "%Y-%m"
   tag: "%Y-%m-%d"
 # Language
