@@ -20,6 +20,9 @@ description: 『 OKHttp 』
 [封装---Android 一个改善的okHttp封装库 - Hongyang - 博客频道 - CSDN.NET](http://blog.csdn.net/lmj623565791/article/details/49734867)
 
 
+拆轮子系列：拆 OkHttp - Piasy的博客 | Piasy Blog
+https://blog.piasy.com/2016/07/11/Understand-OkHttp/
+
 其他：
 
 [OkHttp使用教程 - 泡在网上的日子](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0106/2275.html)

@@ -11,6 +11,12 @@ description: 『 Android Suppot 』
 Android进阶系列--Design Support Library使用详解（Snackbar,TextInputLayout,TabLayout,NavigationView...） - CSDN博客
 https://blog.csdn.net/sw5131899/article/details/53996800
 
+Android Design Support Library 的 代码实验——几行代码，让你的 APP 变得花俏 - CSDN博客
+https://blog.csdn.net/u010665691/article/details/46807509
+
+Android DiffUtil新工具类，让你的RecyclerView飞一会
+https://mp.weixin.qq.com/s/KFK3JJhASojyjMiwntdyYw
+
 RxJava & DiffUtil - 云在千峰
 http://blog.chengyunfeng.com/?p=1060
 
