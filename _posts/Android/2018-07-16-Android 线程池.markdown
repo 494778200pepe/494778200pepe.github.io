@@ -28,6 +28,12 @@ description: 『 线程池 』
 
 参考：
 
+[线程池原理（一）：基本框架 - CSDN博客](https://blog.csdn.net/luanmousheng?t=1)
+
+[Java中调度线程池ScheduledThreadPoolExecutor原理探究 - 简书](https://www.jianshu.com/p/b47f2df9e917)
+
+[深入理解Java线程池：ScheduledThreadPoolExecutor - 简书](https://www.jianshu.com/p/925dba9f5969)
+
 [Android 四种常见的线程池 - CSDN博客](https://blog.csdn.net/xiangzhihong8/article/details/52856327)
 
 [深入理解在Android中线程池的使用 - CSDN博客](https://blog.csdn.net/l540675759/article/details/62230562)
