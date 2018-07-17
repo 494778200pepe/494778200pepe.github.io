@@ -28,14 +28,17 @@ description: 『 线程池 』
 
 参考：
 
-[java/android线程池详解 - 夜の魅 - 博客园](https://www.cnblogs.com/yuhanghzsd/p/5611562.html)
-
 [Android 四种常见的线程池 - CSDN博客](https://blog.csdn.net/xiangzhihong8/article/details/52856327)
 
+[深入理解在Android中线程池的使用 - CSDN博客](https://blog.csdn.net/l540675759/article/details/62230562)
+
+[ThreadPoolExecutor解析-主要源码研究 - CSDN博客](https://blog.csdn.net/wenhuayuzhihui/article/details/51377174)
+
+[java/android线程池详解 - 夜の魅 - 博客园](https://www.cnblogs.com/yuhanghzsd/p/5611562.html)
 
 [Android 多线程 线程池原理 封装线程池 - CSDN博客](https://blog.csdn.net/xiangyunwan/article/details/72550948)
 
-[深入理解在Android中线程池的使用 - CSDN博客](https://blog.csdn.net/l540675759/article/details/62230562)
+
 
 
 
