@@ -44,7 +44,7 @@ description: 『 线程池 』
 
 [Android 多线程 线程池原理 封装线程池 - CSDN博客](https://blog.csdn.net/xiangyunwan/article/details/72550948)
 
-
+[Java线程池架构原理和源码解析(ThreadPoolExecutor) - CSDN博客](https://blog.csdn.net/xieyuooo/article/details/8718741)
 
 
 
