@@ -61,6 +61,8 @@ Message是容纳任意数据的容器。生产线程发送消息给 Handler，Ha
 
 参考：
 
+[Android源码研究——Handler机制 - 文集 - 简书](https://www.jianshu.com/nb/21173643)
+
 [Android Handler的使用方式和注意事项 - CSDN博客](https://blog.csdn.net/u010177022/article/details/63278070)
 
 其他：
