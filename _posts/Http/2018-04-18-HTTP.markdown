@@ -50,4 +50,7 @@ description: 『 HTTP 』
 
 [HTTP协议定义的八个标准方法(动作) - SecondJanuary - 博客频道 - CSDN.NET](http://blog.csdn.net/secondjanuary/article/details/12095753)
 
-HTTP 必知必会的那些HTTP 必知必会的那些](https://mp.weixin.qq.com/s/Fazx13maQfPJItfkOqk9FQ)
+[HTTP 必知必会的那些HTTP 必知必会的那些](https://mp.weixin.qq.com/s/Fazx13maQfPJItfkOqk9FQ)
+
+❲性能为先❳HTTPS, SPDY和 HTTP/2性能的简单对比
+https://mp.weixin.qq.com/s?__biz=MzA3NjYxOTA0MQ==&mid=404928584&idx=1&sn=a361ee84045614d7c0f2d31014423d21&scene=23&srcid=0308z2YOhRdzvtIPmSCSoELO#rd

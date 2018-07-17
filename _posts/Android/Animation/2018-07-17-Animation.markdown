@@ -17,9 +17,14 @@ http://android.jobbole.com/85120/
 Android转场动画的学习 - 简书
 https://www.jianshu.com/p/e63090e06c3e
 
+Android Transition Framework详解---超炫的动画框架 - 简书
+https://www.jianshu.com/p/e497123652b5?utm_source=gank.io&utm_medium=email
 
+开源整理：有趣的Android动画交互设计
+https://mp.weixin.qq.com/s/zjOWVVwZiDDrn9pwdgRXMw
 
-
+最美动画特效库，你们值得收藏
+https://mp.weixin.qq.com/s/W4zW2ovxa_a8bVcXVoaCNg
 
 
 
