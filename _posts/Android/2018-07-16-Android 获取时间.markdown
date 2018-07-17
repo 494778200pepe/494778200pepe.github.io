@@ -8,7 +8,17 @@ author: pepe
 description: 『 获取时间 』
 ---
 
+### **System.currentTimeMillis()**
 
+> `System.currentTimeMillis()`获取的是系统的时间，可以使用`SystemClock.setCurrentTimeMillis(long millis)`进行设置。如果使用`System.currentTimeMillis()`来获取当前时间进行计时，应该考虑监听`ACTION_TIME_TICK`, `ACTION_TIME_CHANGED `和`ACTION_TIMEZONE_CHANGED`这些广播`ACTION`，如果系统时间发生了改变，可以通过监听广播来获取。
+
+### **SystemClock.uptimeMillis()**
+
+> `SystemClock.uptimeMillis()`表示系统开机到当前的时间总数，单位是毫秒，但是，当系统进入深度睡眠（CPU休眠、屏幕休眠、设备等待外部输入）时间就会停止，但是不会受到时钟缩放、空闲或者其他节能机制的影响。
+
+### **SystemClock.elapsedRealtime()**
+
+> `SystemClock.elapsedRealtime()`和`SystemClock.elapsedRealtimeNanos()`表示系统开机到当前的时间总数。它包括了系统深度睡眠的时间。这个时钟是单调的，它保证一直计时，即使CPU处于省电模式，所以它是推荐使用的时间计时器。
 
 
 
