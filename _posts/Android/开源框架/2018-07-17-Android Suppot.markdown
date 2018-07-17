@@ -8,6 +8,9 @@ author: pepe
 description: 『 Android Suppot 』
 ---
 
+Android进阶系列--Design Support Library使用详解（Snackbar,TextInputLayout,TabLayout,NavigationView...） - CSDN博客
+https://blog.csdn.net/sw5131899/article/details/53996800
+
 RxJava & DiffUtil - 云在千峰
 http://blog.chengyunfeng.com/?p=1060
 
