@@ -58,4 +58,8 @@ file
 [root@localhost log]# echo $(dirname $var)
 /dir1/dir2
 ```
+### **配置环境变量**
 
+在` /etc/profile`中修改，需要系统权限`sudo`
+
+[Linux 之 /etc/profile、~/.bash_profile 等几个文件的执行过程 - CSDN博客](https://blog.csdn.net/ithomer/article/details/6322892)
