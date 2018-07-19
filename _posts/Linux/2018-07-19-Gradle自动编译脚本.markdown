@@ -62,7 +62,7 @@ chmod 777 gradlew
 ./gradlew clean
 ```
 ### **系统签名脚本`signApk_kl_ten.sh`**
-``
+```
 #!/bin/bash
 
 sign="/mnt/disk2/px3/px3_pack/code/systemSign/"
