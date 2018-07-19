@@ -122,7 +122,7 @@ codeCheckOut $svn_code_co_sh_dir
 
 
 src_apk_dir=$svn_code_co_sh_dir"apk"
-out_apk_dir="/mnt/disk2/px3/px3_pack/pack_update_img/kl/TenPurple/rootdir/app/test"
+out_apk_dir="/mnt/disk2/px3/px3_pack/pack_update_img/kl/TenPurple/rootdir/app"
 
 function copyAPK()
 {
@@ -140,5 +140,5 @@ function copyAPK()
 echo "APK copy start"
 copyAPK $src_apk_dir
 
-`echo "system"|sudo -S ./handle.sh
+echo "system"|sudo -S ./handle.sh
 ```
