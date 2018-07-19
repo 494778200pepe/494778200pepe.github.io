@@ -42,14 +42,20 @@ svn checkout https://172.16.1.24:24580/svn/AndroidDevelopment/wangpei/app/KL_ten
 
 权限缺失，进入上层目录,`chmod o+w code`。
 
-
-
-
-
-
-
 [xshell中svn命令整理 - CSDN博客](https://blog.csdn.net/dwf_android/article/details/70168998)
 
 [“Can’t open file ‘.svn/lock’: Permission denied”问题解决](http://www.linzhennan.cn/xnty/339.html)
 
 [Linux服务器svn远程代码同步_迹忆博客](https://www.onmpw.com/tm/xwzj/opersys_142.html)
+
+
+### **linux系统下一直提示是否保存密码**
+
+```
+~/.subversion/server文件下     
+store-passwords = yes
+store-plaintext-passwords = yes
+store-auth-creds = yes
+```
+
+[ubuntu下svn每次都要输入密码 - CSDN博客](https://blog.csdn.net/allen_zs/article/details/48207775)
