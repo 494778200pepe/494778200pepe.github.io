@@ -36,10 +36,10 @@ description: 『 Optimize 』
 
 [浅谈ANR如何分析解决ANR - 善感的人 - CSDN博客](http://blog.csdn.net/java2009cgh/article/details/6957009)
 
+[Android 性能优化最佳实践](https://mp.weixin.qq.com/s/SmW2ljasKSXC1zlwTLY-iQ)
 
 
-
-
+[知乎安卓客户端启动优化 - Retrofit 代理](https://zhuanlan.zhihu.com/p/40097338?utm_medium=social&utm_source=wechat_session)
 
 
 
