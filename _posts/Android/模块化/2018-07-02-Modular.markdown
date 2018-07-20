@@ -34,7 +34,7 @@ description: 『 Modular 』
 
 [Android 【插件化】"偷梁换柱"的高手-VirtualApk源码解析 - CSDN博客](https://blog.csdn.net/qq_17250009/article/details/79913233)
 
-
+[携程Android App插件化和动态加载实践 - Android - 掘金](https://juejin.im/entry/5639fe8360b259ca66b3e6ff)
 
 ### 系列
 

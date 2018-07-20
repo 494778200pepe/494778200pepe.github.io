@@ -38,10 +38,9 @@ description: 『 Optimize 』
 
 [Android 性能优化最佳实践](https://mp.weixin.qq.com/s/SmW2ljasKSXC1zlwTLY-iQ)
 
-
 [知乎安卓客户端启动优化 - Retrofit 代理](https://zhuanlan.zhihu.com/p/40097338?utm_medium=social&utm_source=wechat_session)
 
-
+[Android性能优化典范 - 第3季 - 胡凯](http://hukai.me/android-performance-patterns-season-3/)
 
 
 
