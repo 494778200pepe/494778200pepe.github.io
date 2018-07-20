@@ -21,14 +21,16 @@ APP
 [如何在一天之内完成一款具备 cool 属性的 Android 产品 - Android - 掘金](https://juejin.im/entry/56209b63ddb2dd000aa2269e/)
 
 GankMM -- 干货营
-maning0303/GankMM: （Material Design & MVP & Retrofit + OKHttp & RecyclerView ...）Gank.io Android客户端：每天一张美女图片，一个视频短片，若干Android，iOS等程序干货，周一到周五每天更新，数据全部由 干货集中营 提供。
-https://github.com/maning0303/GankMM
+[maning0303/GankMM: （Material Design & MVP & Retrofit + OKHttp & RecyclerView ...）Gank.io Android客户端：每天一张美女图片，一个视频短片，若干Android，iOS等程序干货，周一到周五每天更新，数据全部由 干货集中营 提供。](https://github.com/maning0303/GankMM)
 
 妹纸.gank.io
-妹纸.gank.io(me.drakeet.meizhi) - 2.6.2 - 应用 - 酷安网
-https://www.coolapk.com/apk/me.drakeet.meizhi
+[妹纸.gank.io(me.drakeet.meizhi) - 2.6.2 - 应用 - 酷安网](https://www.coolapk.com/apk/me.drakeet.meizhi)
 
 GankDaily
+[MVP 模式在 GankDaily 中的应用 - 咕咚的个人站点](http://gudong.name/advanced/2015/11/23/gank_mvp_introduce.html)
 
-满满的都是福利
-http://gank.io/download
+gank
+[满满的都是福利](http://gank.io/download)
+
+Gank.lu
+[Search · Gank.lu](https://github.com/search?utf8=%E2%9C%93&q=Gank.lu&type=)
