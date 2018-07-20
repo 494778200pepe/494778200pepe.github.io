@@ -3,7 +3,7 @@ layout: post
 title:  "MD"
 date:   2018-07-20 19:03:00 +0800
 categories: Android
-tags: Material Design
+tags: MD
 author: pepe
 description: 『 Material Design 』
 ---
