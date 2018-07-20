@@ -8,8 +8,9 @@ author: pepe
 description: 『 截图和录屏 』
 ---
 
+[有关Android截图与录屏功能的学习 - 简书](https://www.jianshu.com/p/d7eb518195fd)
 
-
+[weizongwei5/AndroidScreenShot_SysApi: 非常优雅的方案实现屏幕截图，利用android 5.0之后的录屏API实现截屏。](https://github.com/weizongwei5/AndroidScreenShot_SysApi)
 
 
 
