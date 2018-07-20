@@ -34,4 +34,6 @@ description: 『 Android 系统签名 』
 
 [给第三方apk进行系统签名的几种方式 - CSDN博客](https://blog.csdn.net/luzhenrong45/article/details/47733053)
 
+[Android Studio自动生成带系统签名的apk - CSDN博客](https://blog.csdn.net/cxq234843654/article/details/51557025)
 
+[根据android源码提供的系统签名文件制作keystore - CSDN博客](https://blog.csdn.net/sinat_21468979/article/details/78780655)
