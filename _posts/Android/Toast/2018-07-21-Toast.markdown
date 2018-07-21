@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "Toast"
+date:   2018-07-21 12:22:00 +0800
+categories: Android
+tags: Toast
+author: pepe
+description: 『 Toast 』
+---
+
+Android 高级自定义Toast及源码解析 - CSDN博客
+https://blog.csdn.net/qq_17250009/article/details/52753929
+
+Android：剖析源码，随心所欲控制Toast显示 - 码农叔叔 - 博客园
+http://www.cnblogs.com/net168/p/4058193.html#3701895
+
+Adroid中Toast自定义显示时间 - CSDN博客
+https://blog.csdn.net/harry_helei/article/details/51908598
+
+drakeet/ToastCompat: An Android library to HOOK and FIX Toast BadTokenException
+https://github.com/drakeet/ToastCompat
+
+[Muddz / StyleableToast：通过各种样式选项将标准Android吐司提升到新的水平的库。从代码或styles.xml中设置你的吐司样式]（https://github.com/Muddz/StyleableToast?utm_medium=email&utm_source=gank.io）
+
+
+
+
+

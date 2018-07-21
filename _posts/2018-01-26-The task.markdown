@@ -24,32 +24,36 @@ description: 『 我的2018任务 』
 
 ### 7月
 
+第一周(1-7)：
+第二周(8-14)：
+第三周(15-21)：
+第四周(22-28)：
+
+### 8月
+
+第一周(29-4)：
+第二周(5-11)：
+第三周(12-18)：
+第四周(19-25)：
+
+### 9月
+
+任务清单：
 * 1、买房
 * 2、数据结构算法
 * 3、嵌入式Linux开发
 * 4、学车
-
-### 8月
-
-* 1、买房
 * 2、Android
 * 3、Linux服务器
 * 4、Python
-
-### 9月
-
-* 1、买房
-* 2、Android
-* 3、学车
 * 4、Photoshop
-
-### Android
-
+* ClassLoader
+* Tomcat
 * JNI和NDK
 * 自定义控件
 * RxJava
-* Http
-    * Retrofit
+* OKHTTP
+* Retrofit
 * SVG动画
 * NineOldAndroid库
 * FFmepg
@@ -57,22 +61,23 @@ description: 『 我的2018任务 』
 * 开源框架
 * MD
 * 手里的Android书
-
-### Java
-* ClassLoader
-
-### 计算机基础
-
-### 服务器搭建
-* Tomcat
-
-### SQL
-
-
-
-
-
-
-
-
-
+* SQL
+* Handler
+* Toast
+* BlockingQueue
+* Volley
+* NDK
+* SurfaceView 游戏视频
+* 图案锁视频
+* 五子棋视频
+* Hash算法
+* ThreadLocal
+* C++
+* 自定义控件滑动冲突
+* 混淆
+* 截图和录屏
+* NestedScrolling
+* Android线程池
+* Dagger
+* Gradle学习
+* KeyBoard
