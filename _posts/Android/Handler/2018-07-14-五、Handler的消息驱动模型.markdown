@@ -38,32 +38,6 @@ https://494778200pepe.github.io/android/2018/07/14/%E4%B8%80-Handler-Message-Mes
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[Android消息处理机制(Handler、Looper、MessageQueue与Message) - AngelDevil - 博客园](http://www.cnblogs.com/angeldevil/p/3340644.html)
-
-[从源码看Android MessageQueue消息循环处理机制（epoll实现） - CSDN博客](http://blog.csdn.net/ashqal/article/details/32107099)
-
 [【从源码看Android】01从Looper说起 - CSDN博客](https://blog.csdn.net/ashqal/article/details/23177397)
 
 [【从源码看Android】02MessageQueue的epoll原型 - CSDN博客](https://blog.csdn.net/ashqal/article/details/31772697)
@@ -71,3 +45,7 @@ https://494778200pepe.github.io/android/2018/07/14/%E4%B8%80-Handler-Message-Mes
 [【从源码看Android】03Android MessageQueue消息循环处理机制（epoll实现） - CSDN博客](https://blog.csdn.net/ashqal/article/details/32107099)
 
 [Android Project Butter分析 - CSDN博客](https://blog.csdn.net/innost/article/details/8272867)
+
+[Android消息处理机制(Handler、Looper、MessageQueue与Message) - AngelDevil - 博客园](http://www.cnblogs.com/angeldevil/p/3340644.html)
+
+[从源码看Android MessageQueue消息循环处理机制（epoll实现） - CSDN博客](http://blog.csdn.net/ashqal/article/details/32107099)
