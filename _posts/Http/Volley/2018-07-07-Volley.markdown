@@ -39,6 +39,10 @@ description: 『 Volley 』
 
 [Android——Volley框架学习总结 - changel - 博客园](https://www.cnblogs.com/caichongyang/articles/4399790.html)
 
+[BlockingQueue深入解析－BlockingQueue看这一篇就够了 - 生活半篇记 - 博客园](https://www.cnblogs.com/WangHaiMing/p/8798709.html)
+
+[BlockingQueue的功能和使用 - CSDN博客](https://blog.csdn.net/mrbcy/article/details/54802049)
+
 ### Volley 设计模式
 
 [通过Volley我们能学到什么?(1) — 工作原理与设计模式 - CSDN博客](https://blog.csdn.net/u010825228/article/details/50457595)
