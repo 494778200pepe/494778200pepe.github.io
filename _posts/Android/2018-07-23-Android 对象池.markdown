@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Android 对象池"
+date:   2018-07-23 16:57:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 对象池 』
+---
+
+[android中使用对象池 ----- Pools - CSDN博客](https://blog.csdn.net/caiwenfeng_for_23/article/details/69808263)
+
+[Java对象池 - CSDN博客](https://blog.csdn.net/shimiso/article/details/9814917)
