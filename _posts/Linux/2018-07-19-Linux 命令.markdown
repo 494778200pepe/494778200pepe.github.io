@@ -8,6 +8,11 @@ author: pepe
 description: 『 Linux 命令 』
 ---
 
+### **查看历史命令**
+```
+history
+```
+
 ### **查找文件夹**
 ```
 //查找根目录下查找文件夹名称叫www.91cnm.com的目录地址

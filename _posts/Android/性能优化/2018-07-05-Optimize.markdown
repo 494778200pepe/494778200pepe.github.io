@@ -42,9 +42,11 @@ description: 『 Optimize 』
 
 [Android性能优化典范 - 第3季 - 胡凯](http://hukai.me/android-performance-patterns-season-3/)
 
+[记一次Activity的内存泄漏和分析过程 - 简书](https://www.jianshu.com/p/2823e17cf9b5)
 
+[Android内存优化总结【整理】 - 行走的思想 - 博客园](http://www.cnblogs.com/onelikeone/p/7112397.html）
 
-
+[Android 内存管理 &Memory Leak & OOM 分析 - 行走的思想 - 博客园](http://www.cnblogs.com/onelikeone/p/7112046.html）
 
 
 

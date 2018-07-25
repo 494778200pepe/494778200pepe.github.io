@@ -11,12 +11,23 @@ description: 『 Test 』
 
 
 
-必知必会 | Android 测试相关的方方面面都在这儿 - CSDN博客
-https://blog.csdn.net/lmj623565791/article/details/79623159
+[必知必会 | Android 测试相关的方方面面都在这儿 - CSDN博客](https://blog.csdn.net/lmj623565791/article/details/79623159)
 
-Android 程序员必须掌握的三种自动化测试方法 - 希尔瓦娜斯女神 - 博客园
-http://www.cnblogs.com/punkisnotdead/p/5103323.html
+[Android 程序员必须掌握的三种自动化测试方法 - 希尔瓦娜斯女神 - 博客园](http://www.cnblogs.com/punkisnotdead/p/5103323.html)
 
-Android单元测试(一)：JUnit框架的使用 - CSDN博客
-https://blog.csdn.net/qq_17766199/article/details/78243176
+[Android单元测试(一)：JUnit框架的使用 - CSDN博客](https://blog.csdn.net/qq_17766199/article/details/78243176)
+
+[Android 单元测试只看这一篇就够了](https://mp.weixin.qq.com/s/smSrrUWR9DBYXsusS6y_ig)
+
+
+
+
+
+
+
+
+
+
+
+
 
