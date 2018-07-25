@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "无线连接ADB调试Android设备"
-date:   2018-07-25 16:07:00 +0800
+date:   2018-07-25 16:27:00 +0800
 categories: Android
 tags: Android
 author: pepe
