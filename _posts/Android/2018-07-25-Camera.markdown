@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "Camera"
+date:   2018-07-25 16:07:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 Camera 』
+---
+
+[Android开发技巧——Camera拍照功能 - CSDN博客](https://blog.csdn.net/maosidiaoxian/article/details/50774501)
+
+[Android Camera2 拍照入门学习 - 简书](https://www.jianshu.com/p/7f766eb2f4e7)
+
+[android.hardware.camera2使用指南 - Android实战技巧 - 极客学院维基](http://wiki.jikexueyuan.com/project/android-actual-combat-skills/android-hardware-camera2-operating-guide.html)
+

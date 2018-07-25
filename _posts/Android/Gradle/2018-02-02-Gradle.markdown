@@ -28,6 +28,8 @@ Groovy Version: 2.4.8 JVM: 1.8.0_25 Vendor: Oracle Corporation OS: Windows 7
 
 参考：
 
+[专栏：Gradle 翻译 - CSDN博客](https://blog.csdn.net/column/details/gradle-translation.html?&page=4)
+
 [Gradle 庖丁解牛（构建源头源码浅析） - CSDN博客](https://blog.csdn.net/yanbober/article/details/60584621)
 
 [彻底弄明白Gradle相关配置](https://mp.weixin.qq.com/s/1UHcYOudViMhpUYeREZzGA)
