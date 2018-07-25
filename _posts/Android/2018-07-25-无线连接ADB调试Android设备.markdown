@@ -10,7 +10,7 @@ description: 『 无线连接ADB调试Android设备 』
 
 ### **查看设备IP**
 
-手机连接到电脑的时候，输入 adb shell ip -f inet addr show wlan0 即可看到手机的IP。
+手机连接到电脑的时候，输入`adb shell ip -f inet addr show wlan0`即可看到手机的IP。
 
 ![step1]({{ site.baseurl }}/assets/images/android/adb_step1.png)
 
