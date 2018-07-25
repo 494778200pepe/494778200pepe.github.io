@@ -36,7 +36,10 @@
   
 - url: "https://toutiao.io/"
   title: "开发者头条"    
-  
+ 
+- url: "http://androiddoc.qiniudn.com/guide/topics/ui/notifiers/toasts.html"
+  title: "Android开发者"    
+
 - url: "http://www.grepcode.com/"
   title: "Android 源码"   
   
