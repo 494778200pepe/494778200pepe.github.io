@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "查电脑IP"
+date:   2018-07-27 13:28:00 +0800
+categories: Other
+tags: other
+description: 『 查电脑IP 』
+---
+
+
+```
+ipconfig/all 
+```
+
+![ip]({{ site.baseurl }}/assets/images/Other/ip.png)
