@@ -1,0 +1,40 @@
+---
+layout: post
+title:  "AS看源码"
+date:   2018-07-28 14:08:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 AS看源码 』
+---
+
+### **第一步：下载源码**
+
+![step1]({{ site.baseurl }}/assets/images/android/source_code1.png)
+
+![step2]({{ site.baseurl }}/assets/images/android/source_code2.png)
+
+### **第二步：配置路径**
+
+系统盘C盘下，找到`C:/Users/用户名/.AndroidStudio3.0/config/options/jdk.table.xml`
+```
+    <sourcePath>
+        <root type="composite">
+            // 将此处的url改为你之前下载的源码所在路径
+            <root type="simple" url="file://C:/install/AS/SDK/sources/android-26" />
+        </root>
+    </sourcePath>
+```
+### **第三步：同步编译版本**
+
+将项目的编译版本改为和下载源码的版本一致。
+
+![step3]({{ site.baseurl }}/assets/images/android/source_code3.png)
+
+### **第四步：重启AS**
+
+重启之后，应该就可以查看类的源码了。
+
+参考：
+
+[ctrl键看android studio java源码 - CSDN博客](https://blog.csdn.net/u010527630/article/details/53669650)

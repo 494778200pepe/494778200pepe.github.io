@@ -36,6 +36,8 @@ description: 『 Modular 』
 
 [携程Android App插件化和动态加载实践 - Android - 掘金](https://juejin.im/entry/5639fe8360b259ca66b3e6ff)
 
+[安卓插件化几个模块学习 - CSDN博客](https://blog.csdn.net/u010527630/article/details/53913124)
+
 ### 系列
 
 [插件化开发系列之一---原理分析 - CSDN博客](https://blog.csdn.net/shouban1459/article/details/77232480)
