@@ -1,0 +1,40 @@
+---
+layout: post
+title:  "Android依赖管理与私服搭建"
+date:   2018-07-28 17:51:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 Android依赖管理与私服搭建 』
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+参考：
+
+[Android依赖管理与私服搭建 - CSDN博客](https://blog.csdn.net/zyw_java/article/details/60336030)
+
+[AndroidStudio使用进阶二：搭建自己的maven私服，并使用Gradle统一依赖管理 - CSDN博客](https://blog.csdn.net/JF_1994/article/details/51228560)
+
+[10分钟搭建属于自己的ngork服务器，实现内网穿透 - CSDN博客](https://blog.csdn.net/zyw_java/article/details/70341106)
+
+[一分钟实现内网穿透（ngrok服务器搭建） - CSDN博客](https://blog.csdn.net/zhangguo5/article/details/77848658?utm_source=5ibc.net&utm_medium=referral)
+
+
+
+
+
+
+
+
