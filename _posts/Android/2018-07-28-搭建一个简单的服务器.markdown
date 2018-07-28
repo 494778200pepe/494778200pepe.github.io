@@ -276,7 +276,7 @@ log: ServletDemo doGet: name=z: password=a
  
 ![step7]({{ site.baseurl }}/assets/images/android/easy_server/step7.png)
 
-
+`Android`测试时，将`url`设置为电脑的`ip`就可以进行测试了。
 
 参考：
 
