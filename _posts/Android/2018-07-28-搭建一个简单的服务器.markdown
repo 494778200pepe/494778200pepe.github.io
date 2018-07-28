@@ -121,7 +121,7 @@ description: 『 搭建一个简单的服务器 』
 ### **第二步：安装Tomcat 和 Eclipse**
 
 * Tomcat下载：[Tomcat Downloads](https://tomcat.apache.org/download-70.cgi)，我使用的版本是：apache-tomcat-7.0.57。 
-
+* Eclipse下载：
 
 参考：
 
