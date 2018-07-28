@@ -131,6 +131,7 @@ description: 『 搭建一个简单的服务器 』
 * 运行`Eclipse`
 * `File`->`New`->`Dynamic Web Project`，创建动态WebProject
 * 建立一个类，继承`HttpServlet`，实现`doGet()、doPost()`，代码如下：
+
 ```
 package servlet.study;
 
@@ -218,11 +219,13 @@ public class ServletDemo extends HttpServlet {
     }
 }
 ```
+
 * 此时很可能会报错，是因为没有导入`servlet`的jar包
 * 在`C:\install\other\tomcat\apache-tomcat-7.0.90\lib\`里面找到`servlet-api.jar`
 * `项目名–> 右键->Property–> 选择 ->Java Build Path–> 选择 ->Add External JARs–> 选择 ->把servlet-api.jar 的路径输入`
 * 在`WebTest`->`WebContent`->`WEB-INF`下，创建`web.xml`
 * 在`web.xml`中配置`servlet`和`servlet-mapping`：
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
@@ -248,6 +251,7 @@ public class ServletDemo extends HttpServlet {
   </servlet-mapping>
 </web-app>
 ```
+
 * `Run on Server`，出现`doGet`调用信息（是eclipse环境运行，执行了一次默认请求）
 ```
 log: ServletDemo doGet: url=http://localhost:8080/WebTest/api/login
