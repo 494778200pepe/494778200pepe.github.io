@@ -120,9 +120,10 @@ description: 『 搭建一个简单的服务器 』
 
 ### **第二步：安装Tomcat 和 Eclipse**
 
-* Tomcat下载：[Tomcat Downloads](https://tomcat.apache.org/download-70.cgi)，我使用的版本是：apache-tomcat-7.0.57。 
-* Eclipse下载：
-
+* Tomcat下载：[Tomcat Downloads](https://tomcat.apache.org/download-70.cgi)，我使用的版本是：`apache-tomcat-7.0.57`。 
+![step3]({{ site.baseurl }}/assets/images/android/easy_server3.png)
+* Eclipse下载：[Eclipse Downloads](http://www.eclipse.org/downloads/packages/release/Kepler/SR2)，我使用的版本是： `eclipse-jee-kepler-SR2-win32-x86_64.zip`。
+![step4]({{ site.baseurl }}/assets/images/android/easy_server4.png)
 参考：
 
 [搭建一个简单的服务器 - CSDN博客](https://blog.csdn.net/lintax/article/details/63686260)
