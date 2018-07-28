@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "搭建一个简单的服务器"
+date:   2018-07-28 14:28:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 搭建一个简单的服务器 』
+---
+
+
+
+参考：
+
+[搭建一个简单的服务器 - CSDN博客](https://blog.csdn.net/lintax/article/details/63686260)
