@@ -14,7 +14,7 @@ description: 『 搭建一个简单的服务器 』
 
 找到`控制面板` -> `启用或关闭Window功能` -> `勾选 Internet Infomation Service`
 
-![step1]({{ site.baseurl }}/assets/images/android/easy-server/step1.png)
+![step1]({{ site.baseurl }}/assets/images/android/easy_server/step1.png)
 
 开启IIS之后，就可以通过`http://localhost/`来访问电脑上的网页了。
 
@@ -110,7 +110,7 @@ description: 『 搭建一个简单的服务器 』
 
 默认打开的文件名有以下几个：
 
-![step2]({{ site.baseurl }}/assets/images/android/easy-server/step2.png)
+![step2]({{ site.baseurl }}/assets/images/android/easy_server/step2.png)
 
 进入该页面的方式为(以win10为例)：`控制面板`->`系统和安全`->`管理工具`->`Internet Information Services (IIS)管理器`->`网站`->`Default Web Site`->`默认文档`。
 
@@ -121,9 +121,9 @@ description: 『 搭建一个简单的服务器 』
 ### **第二步：安装Tomcat 和 Eclipse**
 
 * Tomcat下载：[Tomcat Downloads](https://tomcat.apache.org/download-70.cgi)，我使用的版本是：`apache-tomcat-7.0.90`。 
-![step3]({{ site.baseurl }}/assets/images/android/easy-server/step3.png)
+![step3]({{ site.baseurl }}/assets/images/android/easy_server/step3.png)
 * Eclipse下载：[Eclipse Downloads](http://www.eclipse.org/downloads/packages/release/Kepler/SR2)，我使用的版本是： `eclipse-jee-kepler-SR2-win32-x86_64.zip`。
-![step4]({{ site.baseurl }}/assets/images/android/easy-server/step4.png)
+![step4]({{ site.baseurl }}/assets/images/android/easy_server/step4.png)
 
 
 ### **第三步：创建web project工程**
@@ -253,13 +253,13 @@ public class ServletDemo extends HttpServlet {
 log: ServletDemo doGet: url=http://localhost:8080/WebTest/api/login
 log: ServletDemo doGet: name=null: password=null
 ```
-![step5]({{ site.baseurl }}/assets/images/android/easy-server/step5.png)
+![step5]({{ site.baseurl }}/assets/images/android/easy_server/step5.png)
 
 ### **第四步：测试**
 
 使用`Postman`进行`post`请求注册，提交两项：`name=z&password=a`
 
-![step6]({{ site.baseurl }}/assets/images/android/easy-server/step6.png)
+![step6]({{ site.baseurl }}/assets/images/android/easy_server/step6.png)
 
 
 参考：
