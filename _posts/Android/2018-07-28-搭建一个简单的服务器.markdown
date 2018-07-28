@@ -8,6 +8,13 @@ author: pepe
 description: 『 搭建一个简单的服务器 』
 ---
 
+### **第一步：启用IIS功能**
+
+`IIS`，全称`Internet Information Service`，即Internet信息服务，专用于微软操作系统平台。
+
+找到`控制面板` -> `启用或关闭Window功能` -> `勾选 Internet Infomation Service`
+
+![step1]({{ site.baseurl }}/assets/images/android/easy_server1.png)
 
 
 参考：
