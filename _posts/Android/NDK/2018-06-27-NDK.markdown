@@ -77,3 +77,5 @@ description: 『 NDK开发 』
 [JNI学习积累之一 ---- 常用函数大全 - CSDN博客](https://blog.csdn.net/qinjuning/article/details/7595104)
 
 [JNI 实战全面解析 - CSDN博客](https://blog.csdn.net/banketree/article/details/40535325)
+
+[Android NDK 开发之旅 - 专题 - 简书](https://www.jianshu.com/c/a25bf14495d7)
