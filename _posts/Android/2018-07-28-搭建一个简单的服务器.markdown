@@ -265,6 +265,18 @@ log: ServletDemo doGet: name=null: password=null
 
 ![step6]({{ site.baseurl }}/assets/images/android/easy_server/step6.png)
 
+再次在浏览器上发Get请求登录：`http://127.0.0.1:8080/WebTest/api/login?name=z&password=a `
+
+服务器端的log信息：
+```
+log: ServletDemo doGet: url=http://127.0.0.1:8080/WebTest/api/login
+log: ServletDemo doGet: name=z: password=a
+```
+由于第二次的`post`已经给用户名与密码赋值了，这次的访问，使用的是同样的用户名与密码，所以，这次的访问，返回是成功的结果：
+ 
+![step7]({{ site.baseurl }}/assets/images/android/easy_server/step7.png)
+
+
 
 参考：
 
