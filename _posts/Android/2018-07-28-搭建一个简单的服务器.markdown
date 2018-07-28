@@ -255,6 +255,12 @@ log: ServletDemo doGet: name=null: password=null
 ```
 ![step5]({{ site.baseurl }}/assets/images/android/easy-server/step5.png)
 
+### **第四步：测试**
+
+使用`Postman`进行`post`请求注册，提交两项：`name=z&password=a`
+
+![step6]({{ site.baseurl }}/assets/images/android/easy-server/step6.png)
+
 
 参考：
 
