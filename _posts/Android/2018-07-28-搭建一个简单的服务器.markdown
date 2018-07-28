@@ -114,8 +114,7 @@ description: 『 搭建一个简单的服务器 』
 
 进入该页面的方式为(以win10为例)：`控制面板`->`系统和安全`->`管理工具`->`Internet Information Services (IIS)管理器`->`网站`->`Default Web Site`->`默认文档`。
 
-Windows7下IIS7的安装及ASP配置方法 - CSDN博客
-https://blog.csdn.net/q107770540/article/details/5261653
+[Windows7下IIS7的安装及ASP配置方法 - CSDN博客](https://blog.csdn.net/q107770540/article/details/5261653)
 
 参考：
 
