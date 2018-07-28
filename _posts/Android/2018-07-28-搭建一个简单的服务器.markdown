@@ -116,6 +116,8 @@ description: 『 搭建一个简单的服务器 』
 
 [Windows7下IIS7的安装及ASP配置方法 - CSDN博客](https://blog.csdn.net/q107770540/article/details/5261653)
 
+这样，我们就搭建起来了一个简单的服务器。在局域网里其他的电脑上输入：`http://192.168.100.100`（这个ip是我的电脑的ip，根据需要修改） 就可以访问我们提供的页面了。如果转到公网上，全世界的人都可以访问到了。
+
 参考：
 
 [搭建一个简单的服务器 - CSDN博客](https://blog.csdn.net/lintax/article/details/63686260)
