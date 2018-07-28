@@ -16,6 +16,106 @@ description: 『 搭建一个简单的服务器 』
 
 ![step1]({{ site.baseurl }}/assets/images/android/easy_server1.png)
 
+开启IIS之后，就可以通过`http://localhost/`来访问电脑上的网页了。
+
+制作一部简单的`html`文件，比如：
+```
+<html>
+	<head><title>google一下，你就知道</title>  </head>
+<body> 
+	<a name="ttt"></a>
+	<!--这是游戏列表（注释）-->
+	<font size="20" color="#FFCC33">我是goole </font>
+	<hr/></br>我是壁虎
+	<hr/>
+	<dl>
+		<dt><font color="green">游戏名称</font></dt>
+		<dd>魔兽争霸<tdd>
+		<dd>星际争霸</dd>
+	</dl>
+	
+	<ol type="a">
+			<font color="red"><li>我是有序列表标签</li></font>
+			<li>我是有序列表标签</li>
+			<li>我是有序列表标签</li>
+	
+	</ol></br>
+	<font color="blue"><ul>
+			<li>我是无序列表标签</li>
+			<li>font加在body外面也可以</li>
+			<li>我是无序列表标签</li>
+	
+	</ul></font></br>
+	<table border="2"  bgcolor="green" bordercolor="red" cellSpacing="5" cellPadding="4px" width=300 height=10>
+		<tr><td width="40px" colspan="2" align="center" height="10px">个人信息</td></tr>
+		<tr><td width="20px">姓名</td><td width="20px">年龄</td></tr>
+		<tr><td rowspan="2">张三</td><td>18</td></tr>
+		<tr><td>20</td></tr>
+	</table>
+	<a href="http://www.baidu.com" target="_blank">打开百度</a>
+	</br>
+	<a href="E:\\1.png">打开本地图片</a>
+	</br>
+	<a href="index1.html">打开网页</a>
+	
+
+	</br>	
+	<!--<form action="http://www.baidu.com" method="post">-->
+	<form  method="get">
+	
+	<a href="#top">回到top</a>
+	</br><a href="#ttt">回到ttt的位置</a>
+	</br>
+	<!--文本框-->
+	<Input type="text" name="username" value="请输入账号"/></br>
+	<!--密码框-->
+	<Input type="password" name="password" /></br>
+	<!--复选框-->
+	<Input type="checkbox" name="xingqu" value="dushu"/>读书<Input type="checkbox" value="lvxing"/>旅行</br>
+	<!--单选框-->
+	<Input type="radio" name="n"/>男<Input type="radio" name="n"/>女
+	<!--选择框-->
+	<select name="学历">
+	<option value="小学">小学</option>
+	<option value="初中">初中</option>
+	<option value="高中">高中</option>
+	<option value="大学">大学</option>
+	</select></br>
+	<!--普通按钮-->
+	<button onclick="alert('你好')"/>haha</button></br>
+	<!--提交表单的信息至服务器,从form到form-->
+	<input type="submit" value="提交"/></br>
+	<!--重置按钮-->
+	<input type="reset" value="重置"/></br>
+	<!--多行文本输入-->
+	<textarea rows="5">你好</textarea></br>
+	<input type="hidden" name="teacher" value="壁虎"/>
+	</form>
+	</br>
+	<marquee dirction="right" onMouseOver="this.stop()" onMouseOut="this.start()">你好</marquee>
+
+	<hr/></br>
+	<!--image src="E:\\1.png-->
+	<!--title实现图面上面文字悬浮-->
+	<img src="E:\\1.png" title="I'm mourinho"/>
+	</br>
+	<a name="top"></a>
+	
+
+</bady>
+</html>
+```
+
+将文件放在默认的路径下（`C:\Inetpub\wwwroot`），文件名使用`index.htm`。
+
+默认打开的文件名有以下几个：
+
+![step2]({{ site.baseurl }}/assets/images/android/easy_server2.png)
+
+进入该页面的方式为(以win10为例)：`控制面板`->`系统和安全`->`管理工具`->`Internet Information Services (IIS)管理器`->`网站`->`Default Web Site`->`默认文档`。
+
+Windows7下IIS7的安装及ASP配置方法 - CSDN博客
+https://blog.csdn.net/q107770540/article/details/5261653
 
 参考：
 
