@@ -14,7 +14,7 @@ description: 『 搭建一个简单的服务器 』
 
 找到`控制面板` -> `启用或关闭Window功能` -> `勾选 Internet Infomation Service`
 
-![step1]({{ site.baseurl }}/assets/images/android/easy_server1.png)
+![step1]({{ site.baseurl }}/assets/images/android/easy-server/step1.png)
 
 开启IIS之后，就可以通过`http://localhost/`来访问电脑上的网页了。
 
@@ -110,7 +110,7 @@ description: 『 搭建一个简单的服务器 』
 
 默认打开的文件名有以下几个：
 
-![step2]({{ site.baseurl }}/assets/images/android/easy_server2.png)
+![step2]({{ site.baseurl }}/assets/images/android/easy-server/step2.png)
 
 进入该页面的方式为(以win10为例)：`控制面板`->`系统和安全`->`管理工具`->`Internet Information Services (IIS)管理器`->`网站`->`Default Web Site`->`默认文档`。
 
@@ -121,9 +121,141 @@ description: 『 搭建一个简单的服务器 』
 ### **第二步：安装Tomcat 和 Eclipse**
 
 * Tomcat下载：[Tomcat Downloads](https://tomcat.apache.org/download-70.cgi)，我使用的版本是：`apache-tomcat-7.0.90`。 
-![step3]({{ site.baseurl }}/assets/images/android/easy_server3.png)
+![step3]({{ site.baseurl }}/assets/images/android/easy-server/step3.png)
 * Eclipse下载：[Eclipse Downloads](http://www.eclipse.org/downloads/packages/release/Kepler/SR2)，我使用的版本是： `eclipse-jee-kepler-SR2-win32-x86_64.zip`。
-![step4]({{ site.baseurl }}/assets/images/android/easy_server4.png)
+![step4]({{ site.baseurl }}/assets/images/android/easy-server/step4.png)
+
+
+### **第三步：创建web project工程**
+
+* 运行`Eclipse`
+* `File`->`New`->`Dynamic Web Project`，创建动态WebProject
+* 建立一个类，继承`HttpServlet`，实现`doGet()、doPost()`，代码如下：
+```
+package servlet.study;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class ServletDemo
+ */
+public class ServletDemo extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    private String name = "";
+    private String password = "";
+    /**
+     * Default constructor. 
+     */
+    public ServletDemo() {
+        System.out.println("log: ServletDemo enter");
+    }
+
+    /**
+     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+     */
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        String url=request.getRequestURL().toString();
+        System.out.println("log: ServletDemo doGet: url="+url);
+
+        String strName = request.getParameter("name");
+        String strPassword = request.getParameter("password");
+        System.out.println("log: ServletDemo doGet: name="+strName+": password="+strPassword);      
+        boolean isPass = false;
+
+        if(url!=null && url.contains("login")){         
+            try{
+                if((strName!=null)&&(strPassword!=null)){
+                    if(name.contentEquals(strName) && password.contentEquals(strPassword) ){
+                        isPass = true;
+                    }
+                }
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+
+        //返回json
+        response.setContentType("text/json");
+        PrintWriter out = response.getWriter();
+        if(isPass){
+            out.println("{\"result\":\"success\"}");
+        } else {
+            out.println("{\"result\":\"input info is invalid\"}");
+        }           
+        out.flush();
+        out.close();                
+    }
+
+    /**
+     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+     */
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("log: ServletDemo doPost:");     
+        response.setContentType("text/json");
+        PrintWriter out = response.getWriter();        
+        String url=request.getRequestURL().toString();
+        System.out.println("log: ServletDemo doPost: url="+url);     
+
+        try{
+            name = request.getParameter("name");
+            password = request.getParameter("password");
+            System.out.println("log: ServletDemo doPost: name="+name+": password="+password);
+            if(url!=null && url.contains("register")){
+                out.println("{\"result\":\"success\"}");
+            } else {
+                out.println("{\"result\":\"fail\"}");
+            }
+        } catch (Exception e){          
+            out.println("{\"result\":\"fail\"}");
+        }
+    }
+}
+```
+* 此时很可能会报错，是因为没有导入`servlet`的jar包
+* 在`C:\install\other\tomcat\apache-tomcat-7.0.90\lib\`里面找到`servlet-api.jar`
+* `项目名–> 右键->Property–> 选择 ->Java Build Path–> 选择 ->Add External JARs–> 选择 ->把servlet-api.jar 的路径输入`
+* 在`WebTest`->`WebContent`->`WEB-INF`下，创建`web.xml`
+* 在`web.xml`中配置`servlet`和`servlet-mapping`：
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>WebTest</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description>my J2EE deom for servlet</description>
+    <display-name>disp ServletDemo</display-name>
+    <servlet-name>ServletDemo</servlet-name>
+    <servlet-class>servlet.study.ServletDemo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletDemo</servlet-name>
+    <url-pattern>/api/login</url-pattern>
+    <url-pattern>/api/register</url-pattern>
+  </servlet-mapping>
+</web-app>
+```
+* `Run on Server`，出现`doGet`调用信息（是eclipse环境运行，执行了一次默认请求）
+```
+log: ServletDemo doGet: url=http://localhost:8080/WebTest/api/login
+log: ServletDemo doGet: name=null: password=null
+```
+![step5]({{ site.baseurl }}/assets/images/android/easy-server/step5.png)
+
+
 参考：
 
 [搭建一个简单的服务器 - CSDN博客](https://blog.csdn.net/lintax/article/details/63686260)
