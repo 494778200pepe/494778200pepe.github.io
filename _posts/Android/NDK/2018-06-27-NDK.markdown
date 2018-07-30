@@ -62,11 +62,7 @@ description: 『 NDK开发 』
 
 [Android：JNI 与 NDK到底是什么？（含实例教学） - CSDN博客](https://blog.csdn.net/carson_ho/article/details/73250163)
 
-[使用VisualStudio高效开发调试AndroidNDK - CSDN博客](https://blog.csdn.net/asmcvc/article/details/78646826)
 
-[Windows下Android NDK开发的几种方法总结 - CSDN博客](https://blog.csdn.net/asmcvc/article/details/24457557)
-
-[使用 visual studio 调试android NDK 程序 - CSDN博客](https://blog.csdn.net/u012813451/article/details/61916333)
 
 [JNI/NDK开发指南（一）—— JNI开发流程及HelloWorld - CSDN博客](https://blog.csdn.net/xyang81/article/details/41777471)
 
@@ -79,3 +75,10 @@ description: 『 NDK开发 』
 [JNI 实战全面解析 - CSDN博客](https://blog.csdn.net/banketree/article/details/40535325)
 
 [Android NDK 开发之旅 - 专题 - 简书](https://www.jianshu.com/c/a25bf14495d7)
+
+AndroidStudio NDK , VisualStudio NDK - CSDN博客
+https://blog.csdn.net/chinabinlang/article/details/50676210
+
+[使用VisualStudio高效开发调试AndroidNDK - CSDN博客](https://blog.csdn.net/asmcvc/article/details/78646826)
+
+[使用 visual studio 调试android NDK 程序 - CSDN博客](https://blog.csdn.net/u012813451/article/details/61916333)
