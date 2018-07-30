@@ -36,7 +36,7 @@ Groovy Version: 2.4.8 JVM: 1.8.0_25 Vendor: Oracle Corporation OS: Windows 7
 
 [Gradle从入门到实战 - Groovy基础 - CSDN博客](https://blog.csdn.net/singwhatiwanna/article/details/76084580)
 
-[Kyleduo's blog!](https://blog.kyleduo.com/page/4/)
+[《Gradle for Android》笔记(1)](https://blog.kyleduo.com/2016/12/23/gradle-for-android-1-getting-started/)
 
 [Android Gradle 编译总结 - 简书](https://www.jianshu.com/p/798e14fdf85d)
 
