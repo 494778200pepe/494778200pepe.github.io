@@ -38,6 +38,8 @@ description: 『 Modular 』
 
 [安卓插件化几个模块学习 - CSDN博客](https://blog.csdn.net/u010527630/article/details/53913124)
 
+[Android 组件化最佳实践](https://mp.weixin.qq.com/s/ubihF5bDbofZfKTT-Ou2gw)
+
 ### 系列
 
 [插件化开发系列之一---原理分析 - CSDN博客](https://blog.csdn.net/shouban1459/article/details/77232480)
