@@ -19,6 +19,8 @@ description: 『 Proguard混淆 』
 
 参考：
 
+玉刚说
+https://mp.weixin.qq.com/s/sFPnK_nvNQOWRK3rd3XnZw
 
 [Android代码混淆与加固技术](https://www.imooc.com/learn/879)
 
