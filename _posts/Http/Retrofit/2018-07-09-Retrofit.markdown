@@ -73,10 +73,14 @@ https://blog.csdn.net/sk719887916/article/details/53613263
 
 [解决Retrofit多BaseUrl及运行时动态改变BaseUrl(二) - 掘金](https://juejin.im/post/5b42aa98f265da0f82021350)
 
+这是一份很详细的 Retrofit 2.0 使用教程（含实例讲解） - CSDN博客
+https://blog.csdn.net/carson_ho/article/details/73732076
 
+Android Retrofit2&OkHttp3添加统一的请求头Header - CSDN博客
+https://blog.csdn.net/jdsjlzx/article/details/51578231
 
-
-
+解决Retrofit多BaseUrl及运行时动态改变BaseUrl(二) - 掘金
+https://juejin.im/post/5b42aa98f265da0f82021350
 
 
 

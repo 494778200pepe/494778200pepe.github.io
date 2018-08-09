@@ -74,5 +74,8 @@ https://blog.csdn.net/verymrq/article/category/7679772
 
 [Gradle 版本下载](http://services.gradle.org/distributions/)
 
+AndroidStudio多渠道打包 - CSDN博客
+https://blog.csdn.net/zyw_java/article/details/61420290
+
 
 
