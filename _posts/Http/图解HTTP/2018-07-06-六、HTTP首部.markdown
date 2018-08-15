@@ -181,6 +181,27 @@ description: 『 六、HTTP首部 』
 
 > 在HTTP协议通信交互使用到的首部字段，不限于`RFC2616`中定义的47种首部字段。还有`Cookie`、`Set-Cookie`和`Content-Disposition`等在其他RFC中定义的首部字段，它们的使用频率也很高。这些非正式的首部字段统一归纳在`RFC4229 HTTP Header Field Registrations`中。
 
+### **逐跳首部(Hop-by-hop Header)**
+
+分在此类别的中的首部只对单词转发有效，会因为通过缓存或代理而不再转发。HTTP/1.1和之后的版本中，如果要使用`hop-by-hop`首部，需提供`Connection`首部字段。
+
+逐跳首部有以下几种：
+```
+Connection
+Keep-Alive
+Proxy-Authenticate
+Proxy-Authorization
+Trailer
+TE
+Transfer-Encoding
+Upgrade
+```
+
+### **端到端首部(End-to-end Header)**
+
+分在此类别中的首部会转发给请求/响应对应的最终接收目标，且必须保存在由缓存生成的响应中，另外规定它必须被转发。
+
+除逐跳首部之外的其他字段，均属于端对端首部。
 
 
 
