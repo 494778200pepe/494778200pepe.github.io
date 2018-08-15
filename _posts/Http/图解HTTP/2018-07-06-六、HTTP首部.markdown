@@ -14,10 +14,10 @@ description: 『 六、HTTP首部 』
         <th>首部字段名</th><th>说明</th>
     </tr>
     <tr>
-        <td>`Cache-Control`</td><td>控制缓存的行为</td>
+        <td>Cache-Control</td><td>控制缓存的行为</td>
     </tr>
     <tr>
-        <td>`Connection`</td><td>逐条首部、连接的管理</td>
+        <td>Connection</td><td>逐跳首部、连接的管理</td>
     </tr>
     <tr>
         <td>Date</td><td>创建报文的日期时间</td>
@@ -48,38 +48,131 @@ description: 『 六、HTTP首部 』
         <th>首部字段名</th><th>说明</th>
     </tr>
     <tr>
-        <td>`Cache-Control`</td><td>控制缓存的行为</td>
+        <td>Accept</td><td>用户代理可处理的媒体类型</td>
     </tr>
     <tr>
-        <td>`Connection`</td><td>逐条首部、连接的管理</td>
+        <td>Accept-Charset</td><td>优先的字符集</td>
     </tr>
     <tr>
-        <td>Date</td><td>创建报文的日期时间</td>
+        <td>Accept-Encoding</td><td>优先的内容编码</td>
     </tr>
     <tr>
-        <td>Pragma</td><td>报文指令</td>
+        <td>Accept-Language</td><td>优先的语言(自然语言)</td>
     </tr>
     <tr>
-        <td>Trailer</td><td>报文末端的首部一览</td>
+        <td>Authorization</td><td>Web认证信息</td>
     </tr>
     <tr>
-        <td>Transfer-Encoding</td><td>指定报文主体的传输编码方式</td>
+        <td>Expect</td><td>期待服务器的特定行为</td>
     </tr>
     <tr>
-        <td>Upgrade</td><td>升级为其他协议</td>
+        <td>From</td><td>用户的电子邮箱地址</td>
     </tr>
     <tr>
-        <td>Via</td><td>代理服务器的相关信息</td>
+        <td>Host</td><td>请求资源所在的服务器</td>
     </tr>
     <tr>
-        <td>Warning</td><td>错误通知</td>
+        <td>If-Match</td><td>比较实体标记(ETag)</td>
+    </tr>
+    <tr>
+        <td>If-Modified-Since</td><td>比较资源的更新时间</td>
+    </tr>
+    <tr>
+        <td>If-None-Match</td><td>比较实体标记(与If-Match相反)</td>
+    </tr>
+    <tr>
+        <td>If-Range</td><td>资源未更新时发送实体Byte的范围请求</td>
+    </tr>
+    <tr>
+        <td>If-Unmodified-Since</td><td>比较资源的更新时间(与If-Modified-Since相反)</td>
+    </tr>
+    <tr>
+        <td>Max-Forwards</td><td>最大传输逐跳数</td>
+    </tr>
+    <tr>
+        <td>FProxy-Authorizationrom</td><td>代理服务器要求客户端的认证信息</td>
+    </tr>
+    <tr>
+        <td>Range</td><td>实体的字节范围请求</td>
+    </tr>
+    <tr>
+        <td>Referer</td><td>对请求中URI的原始获取方</td>
+    </tr>
+    <tr>
+        <td>TE</td><td>传输编码优先级</td>
+    </tr>
+    <tr>
+        <td>User-Agent</td><td>HTTP客户端程序的信息</td>
     </tr>
 </table>
 
+### **响应首部字段**
+<table>
+    <tr>
+        <th>首部字段名</th><th>说明</th>
+    </tr>
+    <tr>
+        <td>Accept-Ranges</td><td>是否接受字节范围请求</td>
+    </tr>
+    <tr>
+        <td>Age</td><td>推算资源创建经过时间</td>
+    </tr>
+    <tr>
+        <td>ETag</td><td>资源的匹配信息</td>
+    </tr>
+    <tr>
+        <td>Location</td><td>令客户端重定向至指定URI</td>
+    </tr>
+    <tr>
+        <td>Proxy-Authenticate</td><td>代理服务器对客户端的认证信息</td>
+    </tr>
+    <tr>
+        <td>Retry-After</td><td>对再次发起请求的时机要求</td>
+    </tr>
+    <tr>
+        <td>Server</td><td>HTTP服务器的安装信息</td>
+    </tr>
+    <tr>
+        <td>Vary</td><td>代理服务器缓存的管理信息</td>
+    </tr>
+    <tr>
+        <td>WWW-Authenticate</td><td>服务器对客户端的认证信息</td>
+    </tr>
+</table>
 
-
-
-
+### **实体首部字段**
+<table>
+    <tr>
+        <th>首部字段名</th><th>说明</th>
+    </tr>
+    <tr>
+        <td>Allow</td><td>资源可支持的HTTP方法</td>
+    </tr>
+    <tr>
+        <td>Age</td><td>推算资源创建经过时间</td>
+    </tr>
+    <tr>
+        <td>ETag</td><td>资源的匹配信息</td>
+    </tr>
+    <tr>
+        <td>Location</td><td>令客户端重定向至指定URI</td>
+    </tr>
+    <tr>
+        <td>Proxy-Authenticate</td><td>代理服务器对客户端的认证信息</td>
+    </tr>
+    <tr>
+        <td>Retry-After</td><td>对再次发起请求的时机要求</td>
+    </tr>
+    <tr>
+        <td>Server</td><td>HTTP服务器的安装信息</td>
+    </tr>
+    <tr>
+        <td>Vary</td><td>代理服务器缓存的管理信息</td>
+    </tr>
+    <tr>
+        <td>WWW-Authenticate</td><td>服务器对客户端的认证信息</td>
+    </tr>
+</table>
 
 
 
