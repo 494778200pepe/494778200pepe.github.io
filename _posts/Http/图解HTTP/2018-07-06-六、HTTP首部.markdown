@@ -158,7 +158,7 @@ description: 『 六、HTTP首部 』
         <td>Location</td><td>令客户端重定向至指定URI</td>
     </tr>
     <tr>
-        <td>Proxy-Authenticate</td><td>代理服务器对客户端的认证信息</td>
+        <td>Proxy-Authenticate    </td><td>代理服务器对客户端的认证信息</td>
     </tr>
     <tr>
         <td>Retry-After</td><td>对再次发起请求的时机要求</td>
