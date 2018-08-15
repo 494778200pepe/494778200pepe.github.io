@@ -177,6 +177,9 @@ description: 『 六、HTTP首部 』
     </tr>
 </table>
 
+### **非HTTP/1.1首部字段**
+
+> 在HTTP协议通信交互使用到的首部字段，不限于`RFC2616`中定义的47种首部字段。还有`Cookie`、`Set-Cookie`和`Content-Disposition`等在其他RFC中定义的首部字段，它们的使用频率也很高。这些非正式的首部字段统一归纳在`RFC4229 HTTP Header Field Registrations`中。
 
 
 
