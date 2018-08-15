@@ -149,28 +149,31 @@ description: 『 六、HTTP首部 』
         <td>Allow</td><td>资源可支持的HTTP方法</td>
     </tr>
     <tr>
-        <td>Age</td><td>推算资源创建经过时间</td>
+        <td>Content-Encoding</td><td>实体主体适用的编码方式</td>
     </tr>
     <tr>
-        <td>ETag</td><td>资源的匹配信息</td>
+        <td>Content-Language</td><td>实体主体的自然语言</td>
     </tr>
     <tr>
-        <td>Location</td><td>令客户端重定向至指定URI</td>
+        <td>Content-Length</td><td>实体主体的大小(单位：字节)</td>
     </tr>
     <tr>
-        <td>Proxy-Authenticate    </td><td>代理服务器对客户端的认证信息</td>
+        <td>Content-Location</td><td>替代对应资源的URI</td>
     </tr>
     <tr>
-        <td>Retry-After</td><td>对再次发起请求的时机要求</td>
+        <td>Content-MD5</td><td>实体主体的报文摘要</td>
     </tr>
     <tr>
-        <td>Server</td><td>HTTP服务器的安装信息</td>
+        <td>Content-Range</td><td>实体主体的位置范围</td>
     </tr>
     <tr>
-        <td>Vary</td><td>代理服务器缓存的管理信息</td>
+        <td>Content-Type</td><td>实体主体的媒体类型</td>
     </tr>
     <tr>
-        <td>WWW-Authenticate    </td><td>服务器对客户端的认证信息</td>
+        <td>Expires</td><td>实体主体过期的日期时间</td>
+    </tr>
+    <tr>
+        <td>Last-Modified</td><td>资源的最后修改日期时间</td>
     </tr>
 </table>
 
