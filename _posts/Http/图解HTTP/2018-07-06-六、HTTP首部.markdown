@@ -42,8 +42,39 @@ description: 『 六、HTTP首部 』
     </tr>
 </table>
 
-
-
+### **请求首部字段**
+<table>
+    <tr>
+        <th>首部字段名</th><th>说明</th>
+    </tr>
+    <tr>
+        <td>`Cache-Control`</td><td>控制缓存的行为</td>
+    </tr>
+    <tr>
+        <td>`Connection`</td><td>逐条首部、连接的管理</td>
+    </tr>
+    <tr>
+        <td>Date</td><td>创建报文的日期时间</td>
+    </tr>
+    <tr>
+        <td>Pragma</td><td>报文指令</td>
+    </tr>
+    <tr>
+        <td>Trailer</td><td>报文末端的首部一览</td>
+    </tr>
+    <tr>
+        <td>Transfer-Encoding</td><td>指定报文主体的传输编码方式</td>
+    </tr>
+    <tr>
+        <td>Upgrade</td><td>升级为其他协议</td>
+    </tr>
+    <tr>
+        <td>Via</td><td>代理服务器的相关信息</td>
+    </tr>
+    <tr>
+        <td>Warning</td><td>错误通知</td>
+    </tr>
+</table>
 
 
 
