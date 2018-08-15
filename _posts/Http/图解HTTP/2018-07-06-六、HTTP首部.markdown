@@ -170,7 +170,7 @@ description: 『 六、HTTP首部 』
         <td>Vary</td><td>代理服务器缓存的管理信息</td>
     </tr>
     <tr>
-        <td>WWW-Authenticate</td><td>服务器对客户端的认证信息</td>
+        <td>WWW-Authenticate    </td><td>服务器对客户端的认证信息</td>
     </tr>
 </table>
 
