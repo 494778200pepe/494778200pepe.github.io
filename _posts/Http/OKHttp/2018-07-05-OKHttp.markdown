@@ -10,13 +10,16 @@ description: 『 OKHttp 』
 
 ### **组织调度，运作流程**
 
-[拆轮子系列：拆 OkHttp](http://mp.weixin.qq.com/s?__biz=MzA4MjU5NTY0NA==&mid=2653419018&idx=1&sn=932eec802048861e616a10fb8aca083b&scene=23&srcid=0714OYJVrQrpcOpJsox2XwuY#rd)
+[拆轮子系列：拆 OkHttp - Piasy的博客](https://blog.piasy.com/2016/07/11/Understand-OkHttp/)
+
+[Android三方库研究——OKHttp - 文集 - 简书](https://www.jianshu.com/nb/21173714)
 
 ### **使用介绍**
 
 [OkHttp使用详解一](http://www.sunnyang.com/364.html)
 
 ### **关键成员**
+
 
 
 ### **设计模式**
@@ -28,7 +31,6 @@ description: 『 OKHttp 』
 
 参考：
 
-[OKHttp源码解析(九):OKHTTP连接中三个"核心"RealConnection、Con... - 简书](https://www.jianshu.com/p/6166d28983a2)
 
 [使用---OkHttp使用教程 - 泡在网上的日子](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0106/2275.html)
 
@@ -39,8 +41,7 @@ description: 『 OKHttp 』
 [封装---Android 一个改善的okHttp封装库 - Hongyang - 博客频道 - CSDN.NET](http://blog.csdn.net/lmj623565791/article/details/49734867)
 
 
-拆轮子系列：拆 OkHttp - Piasy的博客 | Piasy Blog
-https://blog.piasy.com/2016/07/11/Understand-OkHttp/
+
 
 其他：
 
