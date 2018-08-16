@@ -20,6 +20,8 @@ description: 『 OKHttp 』
 
 [OkHttp使用教程 - 泡在网上的日子](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0106/2275.html)
 
+[使用---OKHttp使用简介 - 路，在脚下！ - 博客频道 - CSDN.NET](http://blog.csdn.net/chenzujie/article/details/46994073)
+
 ### **关键成员**
 
 
@@ -34,9 +36,7 @@ description: 『 OKHttp 』
 参考：
 
 
-[使用---OkHttp使用教程 - 泡在网上的日子](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0106/2275.html)
 
-[使用---OKHttp使用简介 - 路，在脚下！ - 博客频道 - CSDN.NET](http://blog.csdn.net/chenzujie/article/details/46994073)
 
 [源码---OKHttp源码解析（一） - 路，在脚下！ - 博客频道 - CSDN.NET](http://blog.csdn.net/chenzujie/article/details/47061095)
 
