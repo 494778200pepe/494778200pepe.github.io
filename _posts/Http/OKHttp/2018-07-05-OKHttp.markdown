@@ -18,6 +18,8 @@ description: 『 OKHttp 』
 
 [OkHttp使用详解一](http://www.sunnyang.com/364.html)
 
+[OkHttp使用教程 - 泡在网上的日子](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0106/2275.html)
+
 ### **关键成员**
 
 
@@ -45,7 +47,7 @@ description: 『 OKHttp 』
 
 其他：
 
-[OkHttp使用教程 - 泡在网上的日子](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0106/2275.html)
+
 
 [OKHttp源码解析 - 泡在网上的日子](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0326/2643.html)
 
