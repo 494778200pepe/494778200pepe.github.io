@@ -7,6 +7,21 @@ tags: OKHttp
 author: pepe
 description: 『 OKHttp 』
 ---
+
+### **组织调度，运作流程**
+
+[拆轮子系列：拆 OkHttp](http://mp.weixin.qq.com/s?__biz=MzA4MjU5NTY0NA==&mid=2653419018&idx=1&sn=932eec802048861e616a10fb8aca083b&scene=23&srcid=0714OYJVrQrpcOpJsox2XwuY#rd)
+
+### **关键成员**
+
+
+### **设计模式**
+
+
+### **细枝末节**
+
+
+
 参考：
 
 [OKHttp源码解析(九):OKHTTP连接中三个"核心"RealConnection、Con... - 简书](https://www.jianshu.com/p/6166d28983a2)
@@ -58,7 +73,7 @@ https://blog.piasy.com/2016/07/11/Understand-OkHttp/
 
 [OkHttp使用详解一](http://www.sunnyang.com/364.html)
 
-[拆轮子系列：拆 OkHttp](http://mp.weixin.qq.com/s?__biz=MzA4MjU5NTY0NA==&mid=2653419018&idx=1&sn=932eec802048861e616a10fb8aca083b&scene=23&srcid=0714OYJVrQrpcOpJsox2XwuY#rd)
+
 
 
 
