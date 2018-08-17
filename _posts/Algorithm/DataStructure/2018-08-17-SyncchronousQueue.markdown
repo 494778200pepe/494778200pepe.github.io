@@ -2,8 +2,8 @@
 layout: post
 title:  "SyncchronousQueue"
 date:   2018-08-17 16:53:00 +0800
-categories: Algorithm
-tags: Algorithm
+categories: Java
+tags: Java基础
 author: pepe
 description: 『 SyncchronousQueue 』
 ---
@@ -17,7 +17,8 @@ description: 『 SyncchronousQueue 』
 
 [Android线程池（十）SynchronousQueue - CSDN博客](https://blog.csdn.net/iromkoear/article/details/70142767)
 
-
+[Java多线程总结之线程安全队列Queue - CSDN博客](
+https://blog.csdn.net/madun/article/details/20313269)
 
 
 

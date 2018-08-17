@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "TransferQueue"
-date:   2018-08-16 17:56:00 +0800
-categories: Algorithm
-tags: Algorithm
+date:   2018-08-17 17:56:00 +0800
+categories: Java
+tags: Java基础
 author: pepe
 description: 『 TransferQueue 』
 ---

@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "AbstractQueuedSynchronizer"
-date:   2018-08-16 17:57:00 +0800
-categories: Algorithm
-tags: Algorithm
+date:   2018-08-17 17:57:00 +0800
+categories: Java
+tags: Java基础
 author: pepe
 description: 『 AbstractQueuedSynchronizer 』
 ---

@@ -2,8 +2,8 @@
 layout: post
 title:  "BlockingQueue"
 date:   2018-08-17 16:53:00 +0800
-categories: Algorithm
-tags: Algorithm
+categories: Java
+tags: Java基础
 author: pepe
 description: 『 BlockingQueue 』
 ---
