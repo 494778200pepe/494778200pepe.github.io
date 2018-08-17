@@ -43,12 +43,6 @@ description: 『 OKHttp 』
 
 其他：
 
-
-
-
-
-[OkHttp（基于源码的核心理解） - 简书](https://www.jianshu.com/p/89e5d5c6d77f)
-
 [你必须学会的okhttp——进阶篇 - CSDN博客](https://blog.csdn.net/sw950729/article/details/54341106)
 
 [okhttp源码解析 - CSDN博客](https://blog.csdn.net/json_it/article/details/78404010)
