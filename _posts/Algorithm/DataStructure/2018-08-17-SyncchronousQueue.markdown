@@ -51,9 +51,7 @@ description: 『 SyncchronousQueue 』
 
 [SynchronousQueue的使用 - CSDN博客](https://blog.csdn.net/zmx729618/article/details/52980158)
 
-
-[Java多线程总结之线程安全队列Queue - CSDN博客](
-https://blog.csdn.net/madun/article/details/20313269)
+[Android线程池（十）SynchronousQueue - CSDN博客](https://blog.csdn.net/iromkoear/article/details/70142767)
 
 
 
