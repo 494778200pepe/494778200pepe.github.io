@@ -26,6 +26,8 @@ description: 『 OKHttp 』
 
 ### **使用介绍**
 
+[解析---Android OkHttp完全解析 是时候来了解OkHttp了 - Hongyang - 博客频道 - CSDN.NET](http://blog.csdn.net/lmj623565791/article/details/47911083)
+
 [OkHttp使用详解一](http://www.sunnyang.com/364.html)
 
 [OkHttp使用教程 - 泡在网上的日子](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0106/2275.html)
@@ -52,13 +54,6 @@ description: 『 OKHttp 』
 [Android使用OKHttp3实现下载(断点续传、显示进度) - CSDN博客](https://blog.csdn.net/cfy137000/article/details/54838608)
 
 其他：
-
-
-
-
-[解析---Android OkHttp完全解析 是时候来了解OkHttp了 - Hongyang - 博客频道 - CSDN.NET](http://blog.csdn.net/lmj623565791/article/details/47911083)
-
-[源码---OKHttp源码解析 - 泡在网上的日子](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0326/2643.html)
 
 [搜索页---泡在网上的日子](http://www.jcodecraeer.com/plus/search.php?kwtype=0&q=OkHttp)
 
