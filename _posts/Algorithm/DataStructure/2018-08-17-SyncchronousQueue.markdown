@@ -8,3 +8,31 @@ author: pepe
 description: 『 SyncchronousQueue 』
 ---
 
+[SynchronousQueue (Java Platform SE 7 )](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/SynchronousQueue.html)
+
+[SynchronousQueue的使用 - CSDN博客](https://blog.csdn.net/zmx729618/article/details/52980158)
+
+
+[java并发之SynchronousQueue实现原理 - CSDN博客](https://blog.csdn.net/yanyan19880509/article/details/52562039)
+
+[Android线程池（十）SynchronousQueue - CSDN博客](https://blog.csdn.net/iromkoear/article/details/70142767)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
