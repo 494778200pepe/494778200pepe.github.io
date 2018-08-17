@@ -63,17 +63,11 @@ Google认为Web未来的发展方向必定是安全的网络连接，全部请�
 
 
 
-
-
-
-
-
-
 参考：
 
 [SPDY_百度百科](https://baike.baidu.com/item/SPDY)
 
-
+[SPDY协议 - 耳敏 - 博客园](http://www.cnblogs.com/keva/p/spdy-protocol.html)
 
 
 
