@@ -17,6 +17,7 @@ description: 『 SyncchronousQueue 』
 
 [Android线程池（十）SynchronousQueue - CSDN博客](https://blog.csdn.net/iromkoear/article/details/70142767)
 
+[【死磕Java并发】-----J.U.C之阻塞队列：SynchronousQueue - CSDN博客](https://blog.csdn.net/chenssy/article/details/77371992)
 
 
 
