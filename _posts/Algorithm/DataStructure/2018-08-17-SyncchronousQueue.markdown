@@ -8,7 +8,7 @@ author: pepe
 description: 『 SyncchronousQueue 』
 ---
 
-`SynchronousQueue`是这样一种阻塞队列，其中每个 put 必须等待一个 take，反之亦然。同步队列没有任何内部容量，甚至连一个队列的容量都没有。不能在同步队列上进行 peek，因为仅在试图要取得元素时，该元素才存在； 
+> `SynchronousQueue`是这样一种阻塞队列，其中每个 put 必须等待一个 take，反之亦然。同步队列没有任何内部容量，甚至连一个队列的容量都没有。不能在同步队列上进行 peek，因为仅在试图要取得元素时，该元素才存在； 
         
 除非另一个线程试图移除某个元素，否则也不能（使用任何方法）添加元素;也不能迭代队列，因为其中没有元素可用于迭代。队列的头是尝试添加到队列中的首个已排队线程元素； 如果没有已排队线程，则不添加元素并且头为 null。 
         
@@ -51,7 +51,6 @@ description: 『 SyncchronousQueue 』
 
 [SynchronousQueue的使用 - CSDN博客](https://blog.csdn.net/zmx729618/article/details/52980158)
 
-[Android线程池（十）SynchronousQueue - CSDN博客](https://blog.csdn.net/iromkoear/article/details/70142767)
 
 [Java多线程总结之线程安全队列Queue - CSDN博客](
 https://blog.csdn.net/madun/article/details/20313269)
