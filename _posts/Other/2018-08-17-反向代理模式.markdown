@@ -28,6 +28,9 @@ description: 『 反向代理模式 』
 
 参考：
 
-[设计模式（15）－Facade Pattern - 吕震宇 - 博客园](http://www.cnblogs.com/zhenyulu/articles/55992.html)
+[反向代理为何叫反向代理？ - 知乎](https://www.zhihu.com/question/24723688)
 
-[JAVA设计模式之门面模式（外观模式） - CSDN博客](https://blog.csdn.net/jason0539/article/details/22775311)
+
+
+
+
