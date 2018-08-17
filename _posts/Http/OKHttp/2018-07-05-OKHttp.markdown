@@ -53,9 +53,9 @@ description: 『 OKHttp 』
 
 [Android使用OKHttp3实现下载(断点续传、显示进度) - CSDN博客](https://blog.csdn.net/cfy137000/article/details/54838608)
 
+[OkHttp3简单的使用说明（Cookie管理） - 简书](https://www.jianshu.com/p/ef9282217d07)
 
-
-
+[干货，满满的干货——OkHttp3之Cookies管理及持久化 - CSDN博客](https://blog.csdn.net/u011150924/article/details/52780931)
 
 
 
