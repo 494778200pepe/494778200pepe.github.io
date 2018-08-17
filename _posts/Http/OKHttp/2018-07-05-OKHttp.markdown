@@ -22,6 +22,8 @@ description: 『 OKHttp 』
 
 [okhttp源码解析 - CSDN博客](https://blog.csdn.net/json_it/article/details/78404010)
 
+[Android开源框架源码分析：Okhttp - 切切歆语 - 博客园](https://www.cnblogs.com/zhangqie/p/8681308.html)
+
 ### **使用介绍**
 
 [OkHttp使用详解一](http://www.sunnyang.com/364.html)
@@ -52,13 +54,6 @@ description: 『 OKHttp 』
 其他：
 
 
-
-
-
-
-[wangchenyan/PonyMusic: Android online music player use okhttp&gson&material design](https://github.com/wangchenyan/PonyMusic?utm_medium=email&utm_source=gank.io)
-
-[Android开源框架源码分析：Okhttp - OPEN 开发经验库](http://www.open-open.com/lib/view/open1517362688550.html)
 
 
 [解析---Android OkHttp完全解析 是时候来了解OkHttp了 - Hongyang - 博客频道 - CSDN.NET](http://blog.csdn.net/lmj623565791/article/details/47911083)
