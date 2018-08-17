@@ -43,15 +43,12 @@ description: 『 OKHttp 』
 
 [你必须学会的okhttp——进阶篇 - CSDN博客](https://blog.csdn.net/sw950729/article/details/54341106)
 
+[jeasonlzy/okhttp-OkGo: OkGo - 3.0 震撼来袭，该库是基于 Http 协议，封装了 OkHttp 的网络请求框架，比 Retrofit 更简单易用，支持 RxJava，RxJava2，支持自定义缓存，支持批量断点下载管理和批量上传管理功能](https://github.com/jeasonlzy/okhttp-OkGo)
+
 
 
 其他：
 
-
-
-
-
-[jeasonlzy/okhttp-OkGo: OkGo - 3.0 震撼来袭，该库是基于 Http 协议，封装了 OkHttp 的网络请求框架，比 Retrofit 更简单易用，支持 RxJava，RxJava2，支持自定义缓存，支持批量断点下载管理和批量上传管理功能](https://github.com/jeasonlzy/okhttp-OkGo)
 
 [OkHttpUtils - 封装了okhttp的网络框架 - OPEN 开发经验库](http://www.open-open.com/lib/view/open1452948374339.html)
 
