@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "线程安全和不安全"
+title:  "java多线程“基础篇”01之基本概念"
 date:   2018-08-18 10:50:00 +0800
 categories: Java
-tags: Queue
+tags: Java多线程
 author: pepe
-description: 『 线程安全和不安全 』
+description: 『 基本概念 』
 ---
 
 ### **线程状态图**
