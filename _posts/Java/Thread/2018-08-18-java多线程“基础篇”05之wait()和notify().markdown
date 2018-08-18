@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "java多线程“基础篇”05之wait()和notify()"
-date:   2018-08-18 13:11:00 +0800
+date:   2018-08-18 13:45:00 +0800
 categories: Java
 tags: Java多线程
 author: pepe
