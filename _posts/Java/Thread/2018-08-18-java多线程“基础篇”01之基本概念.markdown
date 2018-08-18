@@ -8,10 +8,10 @@ author: pepe
 description: 『 基本概念 』
 ---
 
-### **线程状态图**
+## **线程状态图**
 ![thread01]({{ site.baseurl }}/assets/images/java/thread/thread01.png)
 
-### **说明**
+## **说明**
 
 线程共包括以下5种状态。
 
@@ -38,12 +38,55 @@ description: 『 基本概念 』
 * `synchronized`，是关键字；它区分为`synchronized代码块`和`synchronized方。s`ynchronized`的作用是让线程获取对象的同步锁。
 
 
+## **Thread.join()**
 
+> `join()`的作用是：“等待该线程终止”，这里需要理解的就是该线程是指的主线程等待子线程的终止。也就是在子线程调用了join()方法后面的代码，只有等到子线程结束了才能执行。
 
+在线程ThreadA中执行线程ThreadB.join()方法，那么线程ThreadA之后的代码，在线程ThreadB结束后才会执行。
 
+### **源码**
 
+在ThreadA的run方法里，执行了ThreadB.join();，进入看一下它的JDK源码：
+```
+public final void join() throws InterruptedException {
+    join(0L);
+}
+```
+然后进入join(0L)方法：
+```
+public final synchronized void join(long l)
+    throws InterruptedException
+{
+    long l1 = System.currentTimeMillis();
+    long l2 = 0L;
+    if(l < 0L)
+        throw new IllegalArgumentException("timeout value is negative");
+    if(l == 0L)
+        for(; isAlive(); wait(0L));
+    else
+        do
+        {
+            if(!isAlive())
+                break;
+            long l3 = l - l2;
+            if(l3 <= 0L)
+                break;
+            wait(l3);
+            l2 = System.currentTimeMillis() - l1;
+        } while(true);
+}
+```
 
+单纯从代码上看： 
 
+* 如果线程被生成了，但还未被起动，isAlive()将返回false，调用它的join()方法是没有作用的。将直接继续向下执行。 
+
+*  
+在ThreadA类中的run方法中，ThreadB.join()是判断ThreadB的active状态，如果ThreadB的isActive()方法返回false，在ThreadB.join(),这一点就不用阻塞了，可以继续向下进行了。从源码里看，wait方法中有参数，也就是不用唤醒谁，只是不再执行wait，向下继续执行而已。 
+
+* 在join()方法中，对于isAlive()和wait()方法的作用对象是个比较让人困惑的问题：
+
+isAlive()方法的签名是：public final native boolean isAlive()，也就是说isAlive()是判断当前线程的状态，也就是ThreadB的状态。
 
 
 
