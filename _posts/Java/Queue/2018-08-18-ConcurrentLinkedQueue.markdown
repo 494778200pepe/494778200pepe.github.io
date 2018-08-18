@@ -9,6 +9,9 @@ description: 『 ConcurrentLinkedQueue 』
 ---
 
 
+参考：
+
+[多线程基础总结十一--ConcurrentLinkedQueue - code dream - ITeye博客](http://yanxuxin.iteye.com/blog/586943)
 
 
 
