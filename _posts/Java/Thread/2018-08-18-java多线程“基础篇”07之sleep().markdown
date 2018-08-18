@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "java多线程“基础篇”07之sleep())"
+title:  "java多线程“基础篇”07之sleep()"
 date:   2018-08-18 14:53:00 +0800
 categories: Java
 tags: Java多线程
