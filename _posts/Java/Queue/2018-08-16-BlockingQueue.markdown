@@ -54,3 +54,5 @@ description: 『 BlockingQueue 』
 
 [Java阻塞队列详解 - 简书](https://www.jianshu.com/p/4028efdbfc35)
 
+[weifeng的博客 - 线程池](https://blog.csdn.net/iromkoear/article/category/6838190)
+
