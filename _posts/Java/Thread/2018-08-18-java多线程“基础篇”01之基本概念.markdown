@@ -1,0 +1,33 @@
+---
+layout: post
+title:  "线程安全和不安全"
+date:   2018-08-18 10:50:00 +0800
+categories: Java
+tags: Queue
+author: pepe
+description: 『 线程安全和不安全 』
+---
+
+### **线程状态图**
+![thread01]({{ site.baseurl }}/assets/images/java/thread/thread01.png)
+
+
+参考：
+
+[java 线程安全和不安全 - CSDN博客](https://blog.csdn.net/mccand1234/article/details/52013168)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
