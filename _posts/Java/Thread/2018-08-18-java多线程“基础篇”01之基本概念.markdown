@@ -100,7 +100,7 @@ notify 仅仅通知一个线程，并且我们不知道哪个线程会收到通�
 
 * sleep()睡眠时，保持对象锁，仍然占有该锁；
 
-* wait()睡眠时，释放对象锁。
+* wait()睡眠时，释放对象锁，进入等待状态。
 
 [Java Thread(线程)案例详解sleep和wait的区别 - DreamSea530 - 博客园](http://www.cnblogs.com/DreamSea/archive/2012/01/16/SleepAndWaitDifferent.html)
 
