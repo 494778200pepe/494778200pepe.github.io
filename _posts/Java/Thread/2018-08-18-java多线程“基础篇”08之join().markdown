@@ -1,0 +1,61 @@
+---
+layout: post
+title:  "java多线程“基础篇”08之join()"
+date:   2018-08-18 15:08:00 +0800
+categories: Java
+tags: Java多线程
+author: pepe
+description: 『 join() 』
+---
+
+## **Thread.join()**
+
+> `join()`的作用是：“等待该线程终止”，这里需要理解的就是该线程是指的主线程等待子线程的终止。也就是在子线程调用了join()方法后面的代码，只有等到子线程结束了才能执行。
+
+在线程ThreadA中执行线程ThreadB.join()方法，那么线程ThreadA之后的代码，在线程ThreadB结束后才会执行。
+
+### **源码**
+
+在ThreadA的run方法里，执行了ThreadB.join();，进入看一下它的JDK源码：
+```
+public final void join() throws InterruptedException {
+    join(0L);
+}
+```
+然后进入join(0L)方法：
+```
+public final synchronized void join(long l)
+    throws InterruptedException
+{
+    long l1 = System.currentTimeMillis();
+    long l2 = 0L;
+    if(l < 0L)
+        throw new IllegalArgumentException("timeout value is negative");
+    if(l == 0L)
+        for(; isAlive(); wait(0L));
+    else
+        do
+        {
+            if(!isAlive())
+                break;
+            long l3 = l - l2;
+            if(l3 <= 0L)
+                break;
+            wait(l3);
+            l2 = System.currentTimeMillis() - l1;
+        } while(true);
+}
+```
+
+单纯从代码上看： 
+
+* 如果线程被生成了，但还未被起动，isAlive()将返回false，调用它的join()方法是没有作用的。将直接继续向下执行。 
+
+问题：
+
+> 虽然s.join()被调用的地方是发生在“Father主线程”中，但是s.join()是通过“子线程s”去调用的join()。那么，join()方法中的isAlive()应该是判断“子线程s”是不是Alive状态；对应的wait(0)也应该是“让子线程s”等待才对。但如果是这样的话，s.join()的作用怎么可能是“让主线程等待，直到子线程s完成为止”呢，应该是让"子线程等待才对(因为调用子线程对象s的wait方法嘛)"？
+
+
+答案：wait()的作用是让“当前线程”等待，而这里的“当前线程”是指当前在CPU上运行的线程。所以，虽然是调用子线程的wait()方法，但是它是通过“主线程”去调用的；所以，休眠的是主线程，而不是“子线程”！
+
+
