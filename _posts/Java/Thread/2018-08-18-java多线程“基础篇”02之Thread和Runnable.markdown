@@ -17,7 +17,9 @@ description: 『 Thread和Runnable 』
 通常，建议通过“Runnable”实现多线程！
 
 
+参考：
 
+[多线程-局部变量和成员变量 - CSDN博客](https://blog.csdn.net/qianyiyiding/article/details/77864118)
 
 
 
