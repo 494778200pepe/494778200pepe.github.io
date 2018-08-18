@@ -3,7 +3,7 @@ layout: post
 title:  "TransferQueue"
 date:   2018-08-17 17:56:00 +0800
 categories: Java
-tags: Java基础
+tags: Queue
 author: pepe
 description: 『 TransferQueue 』
 ---
