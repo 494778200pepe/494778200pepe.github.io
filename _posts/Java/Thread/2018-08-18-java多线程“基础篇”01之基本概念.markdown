@@ -88,6 +88,26 @@ public final synchronized void join(long l)
 
 isAlive()方法的签名是：public final native boolean isAlive()，也就是说isAlive()是判断当前线程的状态，也就是ThreadB的状态。
 
+## **notify和notifyAll的区别**
+
+notify 仅仅通知一个线程，并且我们不知道哪个线程会收到通知(与优先级无关)，然而 notifyAll 会通知所有等待中的线程。
+
+等待线程被唤醒后，并不会立即执行，而是会进入锁定状态，因为唤醒线程还持有“该对象的同步锁”。必须等到唤醒线程释放了“对象的同步锁”之后，等待线程才能获取到“对象的同步锁”进而继续运行。
+
+[Java多线程之wait(),notify(),notifyAll() - CSDN博客](https://blog.csdn.net/oracle_microsoft/article/details/6863662)
+
+## **sleep和wait的区别**
+
+* sleep()睡眠时，保持对象锁，仍然占有该锁；
+
+* wait()睡眠时，释放对象锁。
+
+[Java Thread(线程)案例详解sleep和wait的区别 - DreamSea530 - 博客园](http://www.cnblogs.com/DreamSea/archive/2012/01/16/SleepAndWaitDifferent.html)
+
+
+
+
+
 
 
 
