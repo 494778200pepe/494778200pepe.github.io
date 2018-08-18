@@ -12,7 +12,7 @@ description: 『 SPDY 』
 
 > SPDY 是 Goole 开发的基于传输控制协议(TCP)的应用层协议。用以最小化网络延迟，提升网络速度，优化用户的网络使用体验。SPDY并不是一种用于替代HTTP的协议，而是对HTTP协议的增强。新协议的功能包括数据流的多路复用、请求优先级以及HTTP报头压缩。
 
-![http_code]({{ site.baseurl }}/assets/images/Http/OkHttp/SPDY.png)
+![spdy]({{ site.baseurl }}/assets/images/Http/OkHttp/SPDY.png)
 
 ## 为什么要重新建立一个SPDY？
 
