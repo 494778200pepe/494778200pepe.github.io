@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Lottie"
+date:   2018-08-18 18:34:00 +0800
+categories: Android
+tags: 开源框架
+author: pepe
+description: 『 RxAndroid 』
+---
+
+Lottie- 让Android动画实现更简单 - 简书
+https://www.jianshu.com/p/cae606f45c0b
+
+Android群英传
+https://mp.weixin.qq.com/s/BhhEgCcd-Qs0FeQDdb21rA
+
+
+
