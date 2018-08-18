@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "java多线程“基础篇”07之sleep())"
+date:   2018-08-18 14:53:00 +0800
+categories: Java
+tags: Java多线程
+author: pepe
+description: 『 yield() 』
+---
+
+> `sleep()`的作用是让当前线程休眠，即当前线程会从“运行状态”进入到“休眠(阻塞)状态”。sleep()会指定休眠时间，线程休眠的时间会大于/等于该休眠时间；在线程重新被唤醒时，它会由“阻塞状态”变成“就绪状态”，从而等待cpu的调度执行。
+
+
+## **sleep和wait的区别**
+
+* sleep()睡眠时，保持对象锁，仍然占有该锁；
+
+* wait()睡眠时，释放对象锁，进入等待状态。
+
+[Java Thread(线程)案例详解sleep和wait的区别 - DreamSea530 - 博客园](http://www.cnblogs.com/DreamSea/archive/2012/01/16/SleepAndWaitDifferent.html)
+
+
