@@ -49,6 +49,8 @@ description: 『 SyncchronousQueue 』
 
 [java并发之SynchronousQueue实现原理 - CSDN博客](https://blog.csdn.net/yanyan19880509/article/details/52562039)
 
+[【死磕Java并发】-----J.U.C之阻塞队列：SynchronousQueue - CSDN博客](https://blog.csdn.net/chenssy/article/details/77371992)
+
 [SynchronousQueue的使用 - CSDN博客](https://blog.csdn.net/zmx729618/article/details/52980158)
 
 [Android线程池（十）SynchronousQueue - CSDN博客](https://blog.csdn.net/iromkoear/article/details/70142767)

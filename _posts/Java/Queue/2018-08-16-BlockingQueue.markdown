@@ -52,4 +52,5 @@ description: 『 BlockingQueue 』
 
 [Java多线程总结之聊一聊Queue - I'm Sure - ITeye博客](http://hellosure.iteye.com/blog/1126541s)
 
+[Java阻塞队列详解 - 简书](https://www.jianshu.com/p/4028efdbfc35)
 
