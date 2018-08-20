@@ -22,6 +22,9 @@ description: 『 Modular 』
 
 [Android组件化方案 - CSDN博客](https://blog.csdn.net/guiying712/article/details/55213884)
 
+组件化开源项目
+https://mp.weixin.qq.com/s?__biz=MzIwMTAzMTMxMg==&mid=2649493065&idx=1&sn=7dc29ce299ece8cc64ea982c787f5cd3&chksm=8eec85b6b99b0ca0873418a06fd7d33a9cf9501ca25105f1ab01650eee485b36b21b102baae6&mpshare=1&scene=1&srcid=0815gIcuM4yOQ6N9cZz9cD0t&pass_ticket=APKMdTPWu4%2F9x6WNRD2zqG1ySvhmTio8MEMgvLVi7DJvvVYHdTMFJE69z7cN7ueG#rd
+
 ### 插件化
 
 [［Android］Android插件化开发入门篇](http://www.360doc.com/content/16/0109/15/9200790_526629193.shtml)

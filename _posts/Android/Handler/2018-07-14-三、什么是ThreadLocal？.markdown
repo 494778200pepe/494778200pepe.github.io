@@ -209,7 +209,8 @@ static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>();
 
 [Android的消息机制之ThreadLocal的工作原理 - CSDN博客](https://blog.csdn.net/singwhatiwanna/article/details/48350919)
 
-
+带你了解源码中的 ThreadLocal - 简书
+https://www.jianshu.com/p/4167d7ff5ec1
 
 
 

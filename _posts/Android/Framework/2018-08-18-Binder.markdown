@@ -1,0 +1,55 @@
+---
+layout: post
+title:  "Binder"
+date:   2018-08-18 18:36:00 +0800
+categories: Android
+tags: Framework
+author: pepe
+description: 『 Framework 』
+---
+
+关于Binder，作为应用开发者你需要知道的全部 - 简书
+https://www.jianshu.com/p/062a6e4f5cbe
+
+Android Binder设计与实现 - 设计篇
+https://blog.csdn.net/universus/article/details/6211589
+
+Binder学习指南
+http://weishu.me/2016/01/12/binder-index-for-newer/
+
+写给 Android 应用工程师的 Binder 原理剖析
+https://zhuanlan.zhihu.com/p/35519585
+
+Android Binder 分析系列——原理（上）
+https://mp.weixin.qq.com/s/vFqVd-o7_HxQ4OcsUQIk9w
+
+Android Binder 分析系列——原理（下）
+https://mp.weixin.qq.com/s/VCCRYjmvcfO3wM3d6x6I5g
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
