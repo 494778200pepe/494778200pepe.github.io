@@ -182,13 +182,15 @@ app:constraint_barrierAllowsGoneWidgets = "false" // Barrier不再关注Gone的V
 
 [Android新特性介绍，ConstraintLayout完全解析 - CSDN博客](https://blog.csdn.net/guolin_blog/article/details/53122387)
 
+[ConstraintLayout 用法全解析 - 简书](https://www.jianshu.com/p/502127a493fb)
+
 [解析ConstraintLayout的性能优势](https://mp.weixin.qq.com/s?__biz=MzAwODY4OTk2Mg==&mid=2652044589&idx=1&sn=36f09ada2b279b0c56fcd91085ebe93a&chksm=808d5d68b7fad47e4de2704b24e51fd57799d19f1f7b334aaa9bfa2671c34ca8cc6bcd493882&scene=21#wechat_redirect)
 
 [Android高性能布局之ConstraintLayout](https://mp.weixin.qq.com/s/aVkX88v-SUiFoh8UKPRTgQ)
 
 [代码实验室--带你一步步理解使用 ConstraintLayout - 简书](https://www.jianshu.com/p/793f76cf9fea)
 
-[ConstraintLayout 用法全解析 - 简书](https://www.jianshu.com/p/502127a493fb)
+
 
 
 
