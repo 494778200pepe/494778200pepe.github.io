@@ -8,32 +8,14 @@ author: pepe
 description: 『 HotFix 』
 ---
 
-[article/Tinker：技术的初心与坚持.md at master · WeMobileDev/article](https://github.com/WeMobileDev/article/blob/master/Tinker%EF%BC%9A%E6%8A%80%E6%9C%AF%E7%9A%84%E5%88%9D%E5%BF%83%E4%B8%8E%E5%9D%9A%E6%8C%81.md)
-
-[Android 热修复 Tinker 源码分析之DexDiff / DexPatch - CSDN博客](https://blog.csdn.net/lmj623565791/article/details/60874334)
-
-
 
 [Android 热修复，没你想的那么难](http://mp.weixin.qq.com/s?__biz=MzA4MjU5NTY0NA==&mid=2653418673&idx=1&sn=2c6aeaa32c03b2df72c122c923928527&scene=23&srcid=0510y4iPI137Z6DJEtr14UFY#rd)
 
-[AndFix从放弃到捡起](http://mp.weixin.qq.com/s?__biz=MzIxNDE1NjQ2Mw==&mid=2649872256&idx=1&sn=253973ed6b5539b0fbfffa3ae18bdae6&scene=23&srcid=0429euj6LKG0rczsVnfnO5KW#rd)
-[alibaba/AndFix: AndFix is a library that offer hot-fix for Android App.](https://github.com/alibaba/AndFix)
-
 [Android热更新方案Robust](http://tech.meituan.com/android_robust.html)
-
-[Android 热修复 Tinker接入及源码浅析](http://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650821993&idx=1&sn=550a90e30a398bbb652ecd65209b62e2&chksm=80b781f7b7c008e17d9f5a59542f46329d28cbcd2ec075d4c2d44784f789135166a4e1949303&mpshare=1&scene=23&srcid=0208fpIK8fe4X8UFqCSdAJOa#rd)
 
 [蘑菇街Android热修复探索之路](http://mp.weixin.qq.com/s/GuzbU1M1LY1VKmN7PyVbHQ)
 
-
-Android热修复原理探索与实践 - 简书
-https://www.jianshu.com/p/8edd8cd83423
-
-Tinker源码解析系列（一）—Application代理机制 - 简书
-https://www.jianshu.com/p/3c1a015df4b3
-
-Tinker源码解析系列（二）—补丁合成与加载 - 简书
-https://www.jianshu.com/p/04528a26de9d
+[Android热修复原理探索与实践 - 简书](https://www.jianshu.com/p/8edd8cd83423)
 
 
 
