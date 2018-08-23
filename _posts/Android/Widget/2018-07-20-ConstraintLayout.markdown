@@ -157,6 +157,7 @@ layout_goneMarginBottom = ""
 > Placeholder:占位布局。他自己本身不会绘制任何内容，但他可以通过设置app:content="id"，将id View的内容绘制到自己的位置上，而原id的 View就像gone了一样。
 
 > Barrier屏障，一个虚拟View。
+
 ```
 <android.support.constraint.Barrier
               android:id="@+id/barrier"
@@ -167,6 +168,7 @@ layout_goneMarginBottom = ""
 ```
 
 则Barrier始终位于text1,text2两个View最大宽度的右边
+
 ```
 app:constraint_barrierAllowsGoneWidgets = "false" // Barrier不再关注Gone的View
 ```
