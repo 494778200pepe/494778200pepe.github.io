@@ -10,6 +10,8 @@ description: 『 AndFix 』
 
 [AndFix从放弃到捡起](http://mp.weixin.qq.com/s?__biz=MzIxNDE1NjQ2Mw==&mid=2649872256&idx=1&sn=253973ed6b5539b0fbfffa3ae18bdae6&scene=23&srcid=0429euj6LKG0rczsVnfnO5KW#rd)
 
+[AlanCheen/AndFixDemo: a demo for AndFix （AndroidStudio）](https://github.com/AlanCheen/AndFixDemo)
+
 [alibaba/AndFix: AndFix is a library that offer hot-fix for Android App.](https://github.com/alibaba/AndFix)
 
 [Android热修复之阿里开源的热补丁_清屏网_在线知识学习平台](http://www.qingpingshan.com/rjbc/az/220718.html)
