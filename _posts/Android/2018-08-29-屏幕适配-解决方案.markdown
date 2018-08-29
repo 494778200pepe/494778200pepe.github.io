@@ -29,9 +29,13 @@ x2=(480/320)*2=3px
 
 > 这个方案有一个致命的缺陷，那就是需要精准命中才能适配，比如1920x1080的手机就一定要找到1920x1080的限定符，否则就只能用统一的默认的dimens文件了。而使用默认的尺寸的话，UI就很可能变形，简单说，就是容错机制很差。
 
+[Android 屏幕适配方案 - CSDN博客](https://blog.csdn.net/lmj623565791/article/details/45460089)
 
+### **方案一：UI适配框架**
 
+[百分比布局库(percent-support-lib)](https://blog.csdn.net/lmj623565791/article/details/46695347)
 
+[Android AutoLayout全新的适配方式 ](https://blog.csdn.net/lmj623565791/article/details/49990941)
 
 
 
