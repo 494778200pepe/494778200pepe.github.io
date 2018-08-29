@@ -1,0 +1,98 @@
+---
+layout: post
+title:  "屏幕适配"
+date:   2018-08-29 16:56:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 屏幕适配 』
+---
+
+* ① drawable-ldpi ：低分辨率（用的少了，一般不再用）
+* ② drawable-mdpi：中分辨率
+* ③ drawable-hdpi：高分辨率
+* ④ drawable-xdpi：较高分辨率
+* ⑤ drawable-xxdpi：超级高分辨率
+* ⑥ drawable-xxxhpi：顶级分辨率
+
+### 获取屏幕参数
+
+* 像素 - px：
+
+    。 一个小黑点就是像素。
+* 尺寸：
+    
+    。 屏幕的对角线的长度。
+
+    * 分辨率：
+
+    。 整个屏幕一共有多少个点，也就是像素。
+
+* 像素密度 - dpi：
+
+    。 1. 每英寸中的像素数。
+    
+    。 2. 假如设备分辨率为320*240，屏幕长2英寸宽1.5英寸，dpi=320/2 = 240/1.5 =160。
+    
+    。 3. 对应于DisplayMetrics类中属性densityDpi的值。
+    
+* 密度 - density：
+
+    。 1. 每平方英寸中的像素数。
+    
+    。 2. density = dpi / 160 。
+    
+    。 3. 对应于DisplayMetrics类中属性density的值 。
+    
+    。 4. 可用于px与px与dip的互相转换 ：dp = px / density 。
+    
+* 设备独立像素 - dip - dp：
+
+    。 - 不同设备有不同的显示效果，不依赖像素。
+    。 - dp = px / density
+    。 - dp = px / (dpi / 160) 
+    。 - dpi（像素密度）为160 的设备上1dp = 1px。
+    
+* 放大像素 - sp：
+
+    。 用于字体显示。
+
+### **dp转px、px转dp**
+```
+public class Dp2Px {
+    public static int dp2px(Context context, int dp) {
+        return (int) (dp * context.getResources().getDisplayMetrics().density + 0.5);
+    }
+
+    public static int px2dp(Context context, int px) {
+        return (int) (px / context.getResources().getDisplayMetrics().density + 0.5);
+    }
+}
+说明：0.5 是为了避免损失精度。
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+参考：
+
+[看完不会Android屏幕适配我跪搓板 - 简书](https://www.jianshu.com/p/5678f23faed3)
+
+[Android 目前最稳定和高效的UI适配方案 - 简书](https://www.jianshu.com/p/a4b8e4c5d9b0)
+
+[一种极低成本的Android屏幕适配方式](https://mp.weixin.qq.com/s?__biz=MzI1MzYzMjE0MQ==&mid=2247484502&idx=2&sn=a60ea223de4171dd2022bc2c71e09351&scene=21#wechat_redirect)
+
+

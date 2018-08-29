@@ -43,6 +43,10 @@ https://mp.weixin.qq.com/s?__biz=MzIwMTAzMTMxMg==&mid=2649493065&idx=1&sn=7dc29c
 
 [Android 组件化最佳实践](https://mp.weixin.qq.com/s/ubihF5bDbofZfKTT-Ou2gw)
 
+[WMRouter：美团外卖Android开源路由框架](https://tech.meituan.com/meituan_waimai_android_open_source_routing_framework.html)
+
+[Android插件化原理之Activity插件化](https://mp.weixin.qq.com/s/tk0Cju0XEO8r0QtkFkLsBg)
+
 ### 系列
 
 [插件化开发系列之一---原理分析 - CSDN博客](https://blog.csdn.net/shouban1459/article/details/77232480)
