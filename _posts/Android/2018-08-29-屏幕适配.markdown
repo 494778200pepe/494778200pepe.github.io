@@ -113,7 +113,9 @@ int dp = Dp2Px.px2dp(this, 1);
 04-30 23:29:15.606 2484-2484/com.example.testscreen E/MainActivity: px：2
 04-30 23:29:15.606 2484-2484/com.example.testscreen E/MainActivity: dp：1
 ```
-
+### **屏幕尺寸、分辨率、像素密度三者关系**
+![fit1]({{ site.baseurl }}/assets/images/android/Screen Fit1.png)
+![fit2]({{ site.baseurl }}/assets/images/android/Screen Fit2.png)
 
 ### **dp转px、px转dp**
 ```
