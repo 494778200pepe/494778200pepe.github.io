@@ -15,7 +15,7 @@ description: 『 屏幕适配 』
 * ⑤ drawable-xxdpi：超级高分辨率
 * ⑥ drawable-xxxhpi：顶级分辨率
 
-### 获取屏幕参数
+### **获取屏幕参数**
 
 * 像素 - px：
 
@@ -111,7 +111,7 @@ int dp = Dp2Px.px2dp(this, 1);
 04-30 23:29:15.606 2484-2484/com.example.testscreen E/MainActivity: density: 2.0
 04-30 23:29:15.606 2484-2484/com.example.testscreen E/MainActivity: densityDpi: 320
 04-30 23:29:15.606 2484-2484/com.example.testscreen E/MainActivity: px：2
-04-30 23:29:15.606 2484-2484/com.example.testscreen E/MainActivity: dp：1
+04-30 23:29:15.606 2484-2484/com.example.testscreen E/MainActivity: dp：1(此处应该是0.5)
 ```
 ### **屏幕尺寸、分辨率、像素密度三者关系**
 ![fit1]({{ site.baseurl }}/assets/images/android/Screen Fit1.png)
