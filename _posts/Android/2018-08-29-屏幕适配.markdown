@@ -88,6 +88,31 @@ description: 『 屏幕适配 』
     。 分辨率：1080 * 1920 
     。 关系：dp = px / 3
 
+### **测试**
+```
+//以1280*720为基准：
+//获取手机屏幕的宽和高
+int widthPixels = getResources().getDisplayMetrics().widthPixels;
+int heightPixels = getResources().getDisplayMetrics().heightPixels;
+//density
+float density = getResources().getDisplayMetrics().density;
+//dpi
+int densityDpi = getResources().getDisplayMetrics().densityDpi;
+//1dp = 多少px
+int px = Dp2Px.dp2px(this, 1);
+//1px  = 多少dp
+int dp = Dp2Px.px2dp(this, 1);
+```
+
+
+```
+04-30 23:29:15.606 2484-2484/com.example.testscreen E/MainActivity: widthPixels: 720
+04-30 23:29:15.606 2484-2484/com.example.testscreen E/MainActivity: heightPixels: 1280
+04-30 23:29:15.606 2484-2484/com.example.testscreen E/MainActivity: density: 2.0
+04-30 23:29:15.606 2484-2484/com.example.testscreen E/MainActivity: densityDpi: 320
+04-30 23:29:15.606 2484-2484/com.example.testscreen E/MainActivity: px：2
+04-30 23:29:15.606 2484-2484/com.example.testscreen E/MainActivity: dp：1
+```
 
 
 ### **dp转px、px转dp**
