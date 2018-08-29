@@ -1,0 +1,57 @@
+---
+layout: post
+title:  "屏幕适配-解决方案"
+date:   2018-08-29 21:43:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 屏幕适配-解决方案 』
+---
+
+### **方案一：宽高限定符适配**
+
+为了高效的实现UI开发，出现了新的适配方案，我把它称作宽高限定符适配。简单说，就是穷举市面上所有的Android手机的宽高像素值：
+
+![fit3]({{ site.baseurl }}/assets/images/android/Screen Fit3.png)
+
+设定一个基准的分辨率，其他分辨率都根据这个基准分辨率来计算，在不同的尺寸文件夹内部，根据该尺寸编写对应的dimens文件。
+
+比如以480x320为基准分辨率
+
+* 宽度为320，将任何分辨率的宽度整分为320份，取值为x1-x320
+* 高度为480，将任何分辨率的高度整分为480份，取值为y1-y480
+
+那么对于800*480的分辨率的dimens文件来说，
+
+x1=(480/320)*1=1.5px
+
+x2=(480/320)*2=3px
+
+> 这个方案有一个致命的缺陷，那就是需要精准命中才能适配，比如1920x1080的手机就一定要找到1920x1080的限定符，否则就只能用统一的默认的dimens文件了。而使用默认的尺寸的话，UI就很可能变形，简单说，就是容错机制很差。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+参考：
+
+[看完不会Android屏幕适配我跪搓板 - 简书](https://www.jianshu.com/p/5678f23faed3)
+
+[Android 目前最稳定和高效的UI适配方案 - 简书](https://www.jianshu.com/p/a4b8e4c5d9b0)
+
+[一种极低成本的Android屏幕适配方式](https://mp.weixin.qq.com/s?__biz=MzI1MzYzMjE0MQ==&mid=2247484502&idx=2&sn=a60ea223de4171dd2022bc2c71e09351&scene=21#wechat_redirect)
+
+
