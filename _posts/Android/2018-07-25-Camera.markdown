@@ -15,3 +15,9 @@ description: 『 Camera 』
 [android.hardware.camera2使用指南 - Android实战技巧 - 极客学院维基](http://wiki.jikexueyuan.com/project/android-actual-combat-skills/android-hardware-camera2-operating-guide.html)
 
 [调用Android 7.0系统摄像头的正确姿势](https://mp.weixin.qq.com/s/QV0FXZ5DYGndDI84kQx0Zg)
+
+android中Camera.PreviewCallback的调用的三个方式 - CSDN博客
+https://blog.csdn.net/sq1018/article/details/34900975
+
+Android Camera的预览回调接口PreviewCallback使用 - CSDN博客
+https://blog.csdn.net/lb377463323/article/details/53338045
