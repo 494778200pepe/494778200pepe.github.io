@@ -8,7 +8,7 @@ author: pepe
 description: 『 Dagger 』
 ---
 
-
+[Annotation - CSDN博客](https://blog.csdn.net/qq_20198405/article/details/54892007)
 
 [我们为什么要把Dagger2,MVP以及Rxjava引入项目中?](https://mp.weixin.qq.com/s/ij07k3AAQUJTbYfb4B8KdA)
 
