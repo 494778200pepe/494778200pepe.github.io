@@ -10,15 +10,13 @@ description: 『 Dagger 』
 
 [Annotation - CSDN博客](https://blog.csdn.net/qq_20198405/article/details/54892007)
 
-[我们为什么要把Dagger2,MVP以及Rxjava引入项目中?](https://mp.weixin.qq.com/s/ij07k3AAQUJTbYfb4B8KdA)
+[Dagger2新版注解及源码解析 - 简书](https://www.jianshu.com/p/67fb36a3e43b)
 
+[Dagger2 - CSDN博客](https://blog.csdn.net/qq_20198405/article/details/51382068)
+
+[我们为什么要把Dagger2,MVP以及Rxjava引入项目中?](https://mp.weixin.qq.com/s/ij07k3AAQUJTbYfb4B8KdA)
 
 [从Dagger2基础到Google官方架构MVP+Dagger2架构详解 - CSDN博客](https://blog.csdn.net/u014315849/article/details/51566388)
 
 [Dagger2.1不是Dagger2 - 简书](https://www.jianshu.com/p/77f47bd2409e)
 
-
-[Dagger2新版注解及源码解析 - 简书](https://www.jianshu.com/p/67fb36a3e43b)
-
-
-[Dagger2 - CSDN博客](https://blog.csdn.net/qq_20198405/article/details/51382068)
