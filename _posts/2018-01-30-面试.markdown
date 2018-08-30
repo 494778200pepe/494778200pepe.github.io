@@ -32,6 +32,18 @@ description: 『 面试指南 』
 https://mp.weixin.qq.com/s/fgKs5yBBVUrb0F40L_wXhQ
 
 
+学习资料整理
+
+Snailclimb/Java-Guide: A core knowledge that most Java programmers need to master
+https://github.com/Snailclimb/Java-Guide
+
+crossoverJie/JCSprout: 👨‍🎓 Java Core Sprout : basic, concurrent, algorithm
+https://github.com/crossoverJie/JCSprout
+
+JsonChao/Awesome-Android-Interview: A awesome android expert interview questions and answers（continuous updating ...）
+https://github.com/JsonChao/Awesome-Android-Interview
+
+
 
 
 

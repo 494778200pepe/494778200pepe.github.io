@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "X2C"
+date:   2018-08-30 23:09:00 +0800
+categories: Android
+tags: 开源框架
+author: pepe
+description: 『 X2C 』
+---
+
+【掌阅出品】android 提升布局加载速度200%（X2C） - 简书
+https://www.jianshu.com/p/c1b9ce20ceb3
+
+
+
