@@ -28,7 +28,10 @@ description: 『 面试指南 』
 
 [2018年Android面试题含答案--适合中高级（下） - 家磷 - 博客园](https://www.cnblogs.com/huangjialin/p/8657696.html)
 
-终端研发部
+分享一份非常强势的Android面试题
+https://mp.weixin.qq.com/s/WVBJqqF6HGGJyzI1hc4fPg
+
+2018年Android面试题含答案--适合中高级（下）
 https://mp.weixin.qq.com/s/fgKs5yBBVUrb0F40L_wXhQ
 
 
