@@ -20,7 +20,244 @@ description: 『 双向链表 』
 
 * 双链表中的元素访问需要通过顺序访问，即要通过遍历的方式来寻找元素。
 
+### **实现**
 
+```
+// 节点
+public class Node<T> {
+ 
+	public T getData() {
+		return data;
+	}
+ 
+	public void setData(T data) {
+		this.data = data;
+	}
+    
+    public Node getPre() {
+		return pre;
+	}
+ 
+	public void setPre(Node pre) {
+		this.pre = pre;
+	}
+ 
+	public Node getNext() {
+		return next;
+	}
+ 
+	public void setNext(Node next) {
+		this.next = next;
+	}
+ 
+	//存储数据
+	private T data;
+    //上一个节点
+	private Node<T> pre;
+	//下一个节点
+	private Node<T> next;
+	
+	//定义构造方法
+	public Node(T data, Node<T> pre, Node<T> next) {
+        this.data = data;
+        this.pre = pre;
+        this.next = next;
+    }
+	
+	public Node(){
+		
+	}
+}
+```
+
+```
+//实现双向链表
+public class DoublyLinkedList<T> {
+    //双向链表的头
+    private Node head;
+    
+    //双向链表的尾
+    private Node tail;
+    
+    //双向链表的size
+    private int size;
+    
+    //默认的构造函数
+    MyDoublyLinkedList() {
+        this.head = null;
+        this.tail = null;
+    }
+    
+    //以指定元素作为头的双向链表
+    MyDoublyLinkedList(T data) {
+        this.head = new Node(null, data, null);
+        this.tail = head;
+        this.size++;
+    }
+    
+    //向双向链表中插入数据,尾部插入法
+    public void add(T data) {
+        Node node = new Node(null, data, null);
+        if(null == this.head) {
+            this.head = this.tail = node;
+            this.size++;
+        }else {
+            this.tail.next = node;
+            node.preview = this.tail;
+            this.tail = node;
+            this.size++;
+        }
+    }
+    
+    //向双向链表的指定位置插入数据
+    public void insert(T data, int index) {
+        Node node = getNodeByIndex(index);
+        Node newNode = new Node(null, data, null);
+        Node preview = node.preview;
+        
+        //判断当前插入的位置是不是head
+        if(null == preview) {
+            newNode.next = this.head;
+            this.head.preview = newNode;
+            this.size++;
+        }else {
+            preview.next = newNode;
+            newNode.preview = preview;
+            newNode.next = node;
+            node.preview = newNode;
+            this.size++;
+        }
+    }
+    
+    //根据index获取data
+    public T get(int index) {
+        return getNodeByIndex(index).data;
+    }
+    
+    //根据传入的data获取index
+    public int getIndex(T data) {
+            Node current = this.head;
+            //从tail开始寻找该节点
+            for(int i = 0; i < this.size && null != current; i++, current = current.next) {
+                if(data.equals(current.data)) {
+                    return i;
+                }
+            }
+            return -1;
+    }
+    
+    //从链表的尾部删除元素
+    
+    public T remove() {
+        Node node = this.tail.preview;
+        Node tail = this.tail;
+        node.next = null;
+        this.size--;
+        return tail.data;
+    }
+    
+    //根据索引index删除元素
+    public T delete(int index) {
+        Node node = getNodeByIndex(index);
+        Node preview = node.preview;
+        Node next = node.next;
+        
+        //说明要删除head
+        if(null == preview) {
+            T data = this.head.data;
+            this.head = this.head.next;
+            this.size--;
+            return data;
+        }
+        
+        //说明要删除tail
+        if(null == next) {
+            T data = this.tail.data;
+            this.tail = this.tail.preview;
+            this.tail.next = null;
+            this.size--;
+            return data;
+        }
+        preview.next = next;
+        next.preview = preview;
+        this.size--;
+        return node.data;
+    }
+    
+    //判断当前的双向链表是否为空
+    public boolean isEmpty() {
+        return this.size == 0;
+    }
+    
+    //获取当前双向链表的size
+    public int size() {
+        return this.size;
+    }
+    
+    //清空双向链表
+    public void clear() {
+        this.head = null;
+        this.tail = null;
+        this.size = 0;
+    }
+    
+    @Override
+    public String toString() {
+        if(null == this.head) {
+            return "[]";
+        }
+        
+        StringBuilder sb = new StringBuilder("[");
+        //循环遍历
+        for(Node current = head; current != null; current = current.next) {
+            sb.append(current.data.toString()).append(",");
+        }
+        return sb.deleteCharAt(sb.lastIndexOf(",")).append("]").toString();
+    }
+    
+    //根据index获取Node
+    private Node getNodeByIndex(int index) {
+        if(index < 0 || index >= this.size) {
+            try{
+                throw new Exception("参数index：" + index + "异常!");
+            }catch(Exception e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+        if(null == this.head) {
+            try{
+                throw new Exception("双向链表为空!");
+            }catch(Exception e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+        
+        //判断从head寻找Node还是从tail寻找index对应的节点
+        if(index > this.size / 2) {
+            Node current = this.tail;
+            //从tail开始寻找该节点
+            for(int i = this.size - 1; i >= (this.size / 2 + 1) && null != current; i--, current = current.preview) {
+                if(index == i) {
+                    return current;
+                }
+            }
+            return null;
+            
+        }else {
+            Node current = this.head;
+            //从head寻找该节点
+            for(int i = 0; i <= this.size / 2 && null != current; i++, current = current.next) {
+                if(index == i) {
+                    return current;
+                }
+            }
+            return null;
+        }
+    }
+}
+```
 
 
 
@@ -28,7 +265,9 @@ description: 『 双向链表 』
 
 [看图轻松理解数据结构与算法系列(双向链表) - 掘金](https://juejin.im/post/5b5d1a9af265da0f47352f14)
 
-[单向链表的Java实现，以及相关函数。 - CSDN博客](https://blog.csdn.net/daguairen/article/details/52738510)
+[双向链表-java实现 - cai.zhiming的日志 - 网易博客](http://ahcaizhiming.blog.163.com/blog/static/13676545220148216355600/)
+
+
 
 
 
