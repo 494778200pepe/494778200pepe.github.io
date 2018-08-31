@@ -250,7 +250,9 @@ public class SingleLinkImpl {
 }
 ```
 
+参考：
 
+[单向链表的Java实现，以及相关函数。 - CSDN博客](https://blog.csdn.net/daguairen/article/details/52738510)
 
 
 
