@@ -11,6 +11,8 @@ description: 『 单向链表 』
 
 > 单向链表属于链表的一种，也叫单链表，单向即是说它的链接方向是单向的，它由若干个节点组成，每个节点都包含下一个节点的指针。
 
+![SingleLinkedList]({{ site.baseurl }}/assets/images/Algorithm/DataStructure/SingleLinkedList.png)
+
 ### **单链表特点**
 
 * 创建单链表时无需指定链表的长度，这个比起数组结构更加有优势，而数组纵使实现成动态数组也是需要指定一个更大的数组长度，而且要把原来的数组元素一个个复制到新数组中。
@@ -251,6 +253,8 @@ public class SingleLinkImpl {
 ```
 
 参考：
+
+[看图轻松理解数据结构与算法系列(单向链表) - 掘金](https://juejin.im/post/5b5914b26fb9a04fda4e1fef)
 
 [单向链表的Java实现，以及相关函数。 - CSDN博客](https://blog.csdn.net/daguairen/article/details/52738510)
 
