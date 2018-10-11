@@ -8,7 +8,7 @@ author: pepe
 description: 『 Success 』
 ---
 
-* 1、顺利上完Hencoder plus 第一堂课，回顾了HTTP的基础知识，学习了很多知识点：http请求的过程，幂等，post与put的区别，REST等。
+* 1、顺利上完<font color="Hotpink">「Hencoder plus 」</font>第一堂课，回顾了HTTP的基础知识，学习了很多知识点：http请求的过程，幂等，post与put的区别，REST等。
 
 * 2、顺利完成了收音机的基本功能开发。
 
