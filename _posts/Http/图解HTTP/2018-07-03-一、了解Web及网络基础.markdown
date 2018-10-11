@@ -61,6 +61,12 @@ TCP/IP协议族按层次分别分为以下：应用层、传输层、网络层�
 * URL：http://hackr.jp/
 
 
+参考：
+
+[域名访问是如何找到正确的DNS并访问主机IP的？ - 知乎](https://www.zhihu.com/question/35105226)
+
+
+
 
 
 
