@@ -8,10 +8,13 @@ author: pepe
 description: 『 ADB命令 』
 ---
 
+# 获取系统版本`adb shell getprop ro.build.version.release`
 
+# 获取系统api版本：`adb shell getprop ro.build.version.sdk`
 
+# back按键：`adb shell input keyevent 4` 
 
-
+# 获得手机里面某个apk的应用信息、版本信息：`adb shell dumpsys package com.sy.a268`
 
 
 
