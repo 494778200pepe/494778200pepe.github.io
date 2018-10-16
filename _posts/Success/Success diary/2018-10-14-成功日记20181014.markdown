@@ -8,4 +8,4 @@ author: pepe
 description: 『 Success 』
 ---
 
-* 1、顺利上完了晚上的课程。
+* 1、顺利上完<font color="Hotpink">「Hencoder plus 」</font>第三堂课。
