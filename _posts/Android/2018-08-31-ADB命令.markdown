@@ -16,7 +16,16 @@ description: 『 ADB命令 』
 
 * 获得手机里面某个apk的应用信息、版本信息：`adb shell dumpsys package com.sy.a268`
 
-
+* adb shell dumpsys window displays |head -n 3
+    
+输出类似如下信息：
+```   
+WINDOW MANAGER DISPLAY CONTENTS (dumpsys window displays)
+  Display: mDisplayId=0
+      init=1080x1920 440dpi cur=1080x1920 app=1080x1920 rng=1080x1025-1920x1865
+    
+1080x1920 就是屏幕分辨率。
+```
 
 
 

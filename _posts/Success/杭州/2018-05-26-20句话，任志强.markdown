@@ -2,7 +2,7 @@
 layout: post
 title:  "20句话，任志强"
 date:   2018-05-26 16:49:00 +0800
-categories: Thoughts
+categories: Success
 tags: 杭州
 author: pepe
 description: 『 20句话，任志强把当下楼市问题说清了！ 』

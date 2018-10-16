@@ -15,7 +15,7 @@ frontend: Frontend
 algorithm: Algorithm
 git: Git
 http: Http
-thoughts: Thoughts
+success: Success
 wechat: wechat
 other: Other
 thanks: " , Powered by"

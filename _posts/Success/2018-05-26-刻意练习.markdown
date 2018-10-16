@@ -2,7 +2,7 @@
 layout: post
 title:  "刻意练习"
 date:   2018-05-26 17:39:00 +0800
-categories: Thoughts
+categories: Success
 tags: 学习
 author: pepe
 description: 『 刻意练习 』

@@ -2,7 +2,7 @@
 layout: post
 title:  "写在06012"
 date:   2018-06-12 08:49:00 +0800
-categories: Thoughts
+categories: Success
 tags: Thoughts
 author: pepe
 description: 『 工作感想 』

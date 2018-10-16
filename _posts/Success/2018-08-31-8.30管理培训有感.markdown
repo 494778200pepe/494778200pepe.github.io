@@ -2,7 +2,7 @@
 layout: post
 title:  "8.30管理培训有感"
 date:   2018-08-30 09:11:00 +0800
-categories: Thoughts
+categories: Success
 tags: Thoughts
 author: pepe
 description: 『 8.30管理培训有感 』
