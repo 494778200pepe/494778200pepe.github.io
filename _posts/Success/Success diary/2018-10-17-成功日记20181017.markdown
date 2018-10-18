@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "成功日记20181017"
+date:   2018-10-17 23:00:00 +0800
+categories: Success
+tags: Success
+author: pepe
+description: 『 Success 』
+---
+
+* 1、顺利上完<font color="Hotpink">「Hencoder plus 」</font>第四堂课。
+
+* 2、完成电影续播功能的开发，并修复bug。
