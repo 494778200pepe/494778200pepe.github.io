@@ -133,3 +133,5 @@ Hash是编码吗？
 Hash是加密吗？
 
 > 不是。Hash是单向过程，无法进行逆向回复操作，因此Hash不属于加密。(记住，MD5不是加密！)图片2M，hash值只有2k。
+
+![2_2]({{ site.baseurl }}/assets/images/Hencoder/hencoder2_2.png)
