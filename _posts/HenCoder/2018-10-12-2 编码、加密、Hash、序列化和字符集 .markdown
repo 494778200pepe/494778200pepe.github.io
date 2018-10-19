@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "2 编码、加密、Hash、序列化和字符集"
+date:   2018-10-12 09:15:00 +0800
+categories: HenCoder
+tags: HenCoder plus
+author: pepe
+description: 『 编码、加密、Hash、序列化和字符集 』
+---
+
+加密：木棒、替换
+
+对称加密：DES(秘钥太短，已经弃用)、AES
+
+最有算法：只能在可能的范围内，穷举
+
+破解：拿到一个秘钥，对密文进行还原，如能还原成原文，那么破解成功。
+

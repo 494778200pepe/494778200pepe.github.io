@@ -18,6 +18,7 @@ http: Http
 success: Success
 wechat: wechat
 other: Other
+hencoder: HenCoder
 thanks: " , Powered by"
 page: Page
 newer_post: Newer Post
