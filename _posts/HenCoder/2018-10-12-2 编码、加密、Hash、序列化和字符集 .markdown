@@ -3,7 +3,7 @@ layout: post
 title:  "2 编码、加密、Hash、序列化和字符集"
 date:   2018-10-12 09:15:00 +0800
 categories: HenCoder
-tags: HenCoder plus
+tags: HenCoder_plus
 author: pepe
 description: 『 编码、加密、Hash、序列化和字符集 』
 ---
