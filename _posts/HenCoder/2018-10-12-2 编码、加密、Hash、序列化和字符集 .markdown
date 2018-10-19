@@ -122,7 +122,14 @@ Base58：删除了 0(数字0)和大写0(o、O)，大写I(i、I)和小写l(l、L)
 
 * 经典算法：MD5、SHA1、SHA256等
 
-* 实际用途：数据完整性验证、快速查找(hashCode()和equals())
+* 实际用途：数据完整性验证、快速查找(hashCode()和equals())、隐私保护(对密码进行hash(),再MD5，不保存原文)
 
 > 为什么重写了equals()，就一定要重写hashCode()吗?Object的默认equals()方法是比较内存地址。所以你重写了equals()方法，是本来不同的两个对象，变得相同了。hashCode()，我们知道是求散列值，也就是摘要了。说说HashMap，如果我们重写了equals()的对象作为value，那么无影响。如果是作为key呢？HashMap是如何区分两个key呢？在插入时，使用对象的hashCode()作为key保存对象。在查询时，首先会比较hashCode()，如果相等继续比较equals()。而我们的本意，重写equals()的目的，就是让两个不同的Object，可以认定为是同一个Object。现在，两个你认为是相同的Object，在分别插入到HashMap时，两个对象都会保存，因为hashCode()不同嘛。在插入一个之后，想要通过另一个来获取value，也会找不到。所以如果你重写了equals()，那么最好也重写一下hashCode()。这样，在使用该对象作为HashMap的key时，就不会出现意想不到的情况了。
 
+Hash是编码吗？
+
+> 不是。Hash是单向过程，往往是不可逆的，无法进行逆向恢复操作，因此Hash不属于编码。
+
+Hash是加密吗？
+
+> 不是。Hash是单向过程，无法进行逆向回复操作，因此Hash不属于加密。(记住，MD5不是加密！)
