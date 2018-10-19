@@ -71,7 +71,7 @@ description: 『 编码、加密、Hash、序列化和字符集 』
 
 ### 加密 + 签名
 
-![2_1]({{ site.baseurl }}/assets/images/android/Hencoder/hencoder2_1.png)
+![2_1]({{ site.baseurl }}/assets/images/Hencoder/hencoder2_1.png)
 
 
 
