@@ -21,7 +21,7 @@ HTTP中确认授权(或登录)的两种方式
 
 * Transport Layer 传输层：TCP、UDP  (拆包，解决数据重传、分块，有的需要确认，有的不需要确认)
 
-* Internet Layer ⽹网络层：IP  (寻址、路由，传就好了)
+* Internet Layer 网络层：IP  (寻址、路由，传就好了)
 
 * Link Layer 数据链路路层：以太网、Wi-Fi 
 
@@ -58,7 +58,7 @@ HTTP中确认授权(或登录)的两种方式
 * 1. (TCP)Client Hello (客户端能接受的TLS版本(1.0、2.0等等)、Cipher Suite(对称加密算法(多个)，非对称加密算法(多个)，Hash算法(多个))，还有一个客户端随机数)
 * 2. (TCP)Server Hello (服务端能选择的TLS版本(1.0)、Cipher Suite(对称加密算法，非对称加密算法，Hash算法，三个算法打包一起选择)，还有一个服务端随机数)
 * 3. (TCP)服务器证书 信任建立 (附加：服务器的地址，证书公钥，证书签名以及证书机构的公钥和其他信息)
-* 4. Pre-master Secret (用服务器证书公钥，非对称机密，得到一个Pre-master Secret，发送给服务端)
+* 4. Pre-master Secret (用服务器证书公钥，非对称机密，得到一个Pre-master Secret，发送给服务端)[两个随机数，再加上Pre-master Secret得到一个Master Secret]
 * 5. 客户端通知：将使用加密通信 
 * 6. 客户端发送：Finished 
 * 7. 服务器通知：将使用加密通信 
