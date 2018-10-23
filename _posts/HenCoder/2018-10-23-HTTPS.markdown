@@ -46,6 +46,9 @@ description: 『 HTTPS 』
 
 [关于HTTPS一篇文章就够了 - chiclaim - CSDN博客](https://blog.csdn.net/johnny901114/article/details/54754921?utm_source=blogxgwz3)
 
+HTTPS 原理浅析及其在 Android 中的使用 - 腾讯Bugly的专栏 - CSDN博客
+https://blog.csdn.net/tencent_bugly/article/details/72626127
+
 HTTPS为什么安全 &分析 HTTPS 连接建立全过程 - 腾讯WeTest
 https://wetest.qq.com/lab/view/110.html
 
