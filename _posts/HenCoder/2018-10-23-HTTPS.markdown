@@ -52,27 +52,45 @@ description: 『 HTTPS 』
 
 * 4、Server hello(服务端随机数ramdom_S，服务端选择的密文族Cipher Suites[密钥交换(非对称加密)算法-对称加密算法-哈希算法])
 
-* 5、Certificate(服务端证书)
+* 5、Server Certificate(服务端证书)
 
-* 6、Server Hello Done，服务端告知客户端，发送信息结束
+* 6、Server Key Exchange Generation，服务端创建密钥对
 
-* 7、客户端验证证书
+* 7、Server Key Exchange，服务端向客户端发送公钥
 
-* 8、
+* 8、Server Hello Done，服务端告知客户端，发送信息结束
+
+* 9、客户端验证证书
+
+* 10、Client Key Exchange Generation，客服端端创建密钥对
+
+* 11、Client Key Exchange，客服端向服务端发送公钥
+
+* 12、Client Encryption Keys Calculation，客服端计算得到 Master key = Fuc(random_C, random_S, pre-Master key)，作为对称加密的秘钥
+
+* 13、Client Change Cipher Spec，客服端通知服务端，表示随后的信息都将用双方商定的加密方法和密钥发送。
+
+* 14、Client Handshake Finished，客户端握手结束通知，表示客户端的握手阶段已经结束。这一项同时也是前面发送的所有内容的hash值，用来供服务器校验。
+
+* 15、客服端用「服务端公钥」加密传输一个pre-master key 给服务端
+
+* 16、Server Encryption Keys Calculation，客服端计算得到 Master key = Fuc(random_C, random_S, pre-Master key)，作为对称加密的秘钥
+
+* 17、Server Change Cipher Spec，服务端通知客户端，表示随后的信息都将用双方商定的加密方法和密钥发送。
+
+* 18、Server Handshake Finished，服务器握手结束通知，表示服务器的握手阶段已经结束。这一项同时也是前面发送的所有内容的hash值，用来供客户端校验。
 
 
 引用：
 
 [关于HTTPS一篇文章就够了 - chiclaim - CSDN博客](https://blog.csdn.net/johnny901114/article/details/54754921?utm_source=blogxgwz3)
 
-HTTPS为什么安全 &分析 HTTPS 连接建立全过程 - 腾讯WeTest
-https://wetest.qq.com/lab/view/110.html
+[HTTPS为什么安全 &分析 HTTPS 连接建立全过程 - 腾讯WeTest](https://wetest.qq.com/lab/view/110.html)
 
-SSL/TLS协议运行机制的概述 - 阮一峰的网络日志
-http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html
+[SSL/TLS协议运行机制的概述 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html)
 
-HTTPS 原理浅析及其在 Android 中的使用 - 腾讯Bugly的专栏 - CSDN博客
-https://blog.csdn.net/tencent_bugly/article/details/72626127
+[The Illustrated TLS Connection: Every Byte Explained](https://tls.ulfheim.net/)
 
-SSL协议详解_知识库_博客园
-https://kb.cnblogs.com/page/162080/
+[HTTPS 原理浅析及其在 Android 中的使用 - 腾讯Bugly的专栏 - CSDN博客](https://blog.csdn.net/tencent_bugly/article/details/72626127)
+
+[SSL协议详解_知识库_博客园](https://kb.cnblogs.com/page/162080/)
