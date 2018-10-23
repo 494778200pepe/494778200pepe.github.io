@@ -48,11 +48,11 @@ description: 『 HTTPS 』
 
 * 2、建立连接(客户端与小区，服务端的网关、代理、隧道等)
 
-* 3、Client hello(客户端随机数random_C，客户端支持的密文族Cipher Suites[密钥交换(非对称加密)算法-对称加密算法-哈希算法])
+* 3、Client hello(客户端随机数random_C，客户端支持的TSL版本(1.0,2.0)和密文族Cipher Suites[密钥交换(非对称加密)算法-对称加密算法-哈希算法])
 
-* 4、Server hello(服务端随机数ramdom_S，服务端选择的密文族Cipher Suites[密钥交换(非对称加密)算法-对称加密算法-哈希算法])
+* 4、Server hello(服务端随机数ramdom_S，服务端选择的TSL版本(2.0)和密文族Cipher Suites[密钥交换(非对称加密)算法-对称加密算法-哈希算法])
 
-* 5、Server Certificate(服务端证书)
+* 5、Server Certificate(服务端证书(包含签名，及证书机构的相关信息)，核心是服务端的(证书)公钥，以及服务器地址)
 
 * 6、Server Key Exchange Generation，服务端创建密钥对
 
@@ -60,7 +60,7 @@ description: 『 HTTPS 』
 
 * 8、Server Hello Done，服务端告知客户端，发送信息结束
 
-* 9、客户端验证证书
+* 9、Server certificate validation，客户端验证证书
 
 * 10、Client Key Exchange Generation，客服端端创建密钥对
 
