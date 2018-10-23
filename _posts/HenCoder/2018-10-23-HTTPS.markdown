@@ -45,3 +45,9 @@ description: 『 HTTPS 』
 引用：
 
 [关于HTTPS一篇文章就够了 - chiclaim - CSDN博客](https://blog.csdn.net/johnny901114/article/details/54754921?utm_source=blogxgwz3)
+
+HTTPS为什么安全 &分析 HTTPS 连接建立全过程 - 腾讯WeTest
+https://wetest.qq.com/lab/view/110.html
+
+SSL协议详解_知识库_博客园
+https://kb.cnblogs.com/page/162080/
