@@ -64,7 +64,7 @@ description: 『 HTTPS 』
 
 * 10、Client Encryption Keys Calculation，客服端计算得到 Master key = Fuc(random_C, random_S, pre-Master key)，作为对称加密的秘钥
 
-* 11、Server Encryption Keys Calculation，客服端计算得到 Master key = Fuc(random_C, random_S, pre-Master key)，作为对称加密的秘钥
+* 11、Server Encryption Keys Calculation，服务端计算得到 Master key = Fuc(random_C, random_S, pre-Master key)，作为对称加密的秘钥
 
 * Master key = 客户端加密秘钥，服务端加密秘钥，客户端MAC Secret，服务端MAC Secret[用于对消息制作加盐版的Hash，相当于签名]
 
