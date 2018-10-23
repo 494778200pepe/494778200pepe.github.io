@@ -63,3 +63,8 @@ HTTP中确认授权(或登录)的两种方式
 * 6. 客户端发送：Finished 
 * 7. 服务器通知：将使用加密通信 
 * 8. 服务器发送：Finished 
+
+
+参考：
+
+[TCP的三次握手与四次挥手（详解+动图） - qzcsu的博客 - CSDN博客](https://blog.csdn.net/qzcsu/article/details/72861891)
