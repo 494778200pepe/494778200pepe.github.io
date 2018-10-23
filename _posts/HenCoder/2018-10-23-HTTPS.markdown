@@ -52,7 +52,7 @@ description: 『 HTTPS 』
 
 * 4、Server hello(服务端随机数ramdom_S，服务端选择的TSL版本(2.0)和密文族Cipher Suites[密钥交换(非对称加密)算法-对称加密算法-哈希算法])
 
-* 5、Server Certificate(服务端证书(包含签名，及证书机构的相关信息)，核心是服务端的(证书)公钥，以及服务器地址)
+* 5、Server Certificate(服务端证书(包含签名，及证书机构的相关信息)，核心是服务端的(证书)公钥，以及服务器地址、主机信息[可以防止连接到了错误的网站]等)
 
 * 6、Server Hello Done，服务端告知客户端，发送信息结束
 
