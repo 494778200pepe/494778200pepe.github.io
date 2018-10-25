@@ -77,6 +77,10 @@ WINDOW MANAGER DISPLAY CONTENTS (dumpsys window displays)
 
 [mzlogin/awesome-adb: ADB Usage Complete / ADB 用法大全](https://github.com/mzlogin/awesome-adb)
 
+[adb命令模拟按键事件 KeyCode - 北极的冰箱 - CSDN博客](https://blog.csdn.net/jlminghui/article/details/39268419)
+
+[adb - 随笔分类 - 山重水复疑无路 - 博客园](https://www.cnblogs.com/jiablogs/category/1195912.html)
+
 
 
 

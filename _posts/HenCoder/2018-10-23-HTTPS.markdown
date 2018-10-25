@@ -98,3 +98,5 @@ description: 『 HTTPS 』
 [HTTPS 原理浅析及其在 Android 中的使用 - 腾讯Bugly的专栏 - CSDN博客](https://blog.csdn.net/tencent_bugly/article/details/72626127)
 
 [SSL协议详解_知识库_博客园](https://kb.cnblogs.com/page/162080/)
+
+[myhencoder/addon-2-数字证书的颁发_验证过程.md at master · chinalwb/myhencoder](https://github.com/chinalwb/myhencoder/blob/master/notes/lesson03/addon-2-%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6%E7%9A%84%E9%A2%81%E5%8F%91_%E9%AA%8C%E8%AF%81%E8%BF%87%E7%A8%8B.md)

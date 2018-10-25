@@ -17,7 +17,7 @@ description: 『 收音机开发 』
 
 [Android FM模块学习之四源码解析（一） - 若然的专栏 - CSDN博客](https://blog.csdn.net/tfslovexizi/article/details/41516149)
 
-
+[Android8.0 FmRadio源码分析之录音篇 - 此男子淡漠 - CSDN博客](https://blog.csdn.net/w1070216393/article/details/80510297#￧ﾕﾌ￩ﾝﾢ￧ﾮﾡ￧ﾐﾆ-fmrecordactivity)
 
 
 
