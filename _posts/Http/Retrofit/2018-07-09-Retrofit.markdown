@@ -22,11 +22,12 @@ description: 『 Retrofit 』
 
 ### 参考文档
 
-是时候客观评价Retrofit了，Retrofit这几点你必须明白！ - CSDN博客
-https://blog.csdn.net/sk719887916/article/details/53613263
+[是时候客观评价Retrofit了，Retrofit这几点你必须明白！ - CSDN博客](https://blog.csdn.net/sk719887916/article/details/53613263)
 
 [使用---DevWiki Blog](http://www.devwiki.net/)
+
 [深入浅出 Retrofit，这么牛逼的框架你们还不来看看？](http://mp.weixin.qq.com/s?__biz=MzA3NTYzODYzMg==&mid=2653577186&idx=1&sn=1a5f6369faeb22b4b68ea39f25020d28&scene=23&srcid=0602lyFlbss6ll2bMfyS0HBH#rd)
+
 
 
 [使用---Retrofit的使用 (1)，retrofit使用_Android教程 ](http://www.bkjia.com/Androidjc/1086836.html)
