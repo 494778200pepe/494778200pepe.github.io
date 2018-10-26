@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "2 编码、加密、Hash、序列化和字符集"
+title:  "3 编码、加密、Hash、序列化和字符集"
 date:   2018-10-12 09:15:00 +0800
 categories: HenCoder
 tags: HenCoder_plus
