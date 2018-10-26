@@ -40,6 +40,20 @@ canvas.drawText("abab", -rect.left, 200, paint);
 
 ### **多行文字绘制**
 
+#### StaticLayout
+
+
+#### 两行之间baseline的距离
+```
+paint.getFontSpacing();
+```
+
+
+#### 多行文字配合图片的绘制
+```
+paint.breakText();
+```
+
 
 
 
