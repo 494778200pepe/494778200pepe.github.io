@@ -18,7 +18,6 @@ float offset = (rect.ascent + rect.descent)/2;
 canvas.drawText("abab",getWidth()/2,getHeight()/2 - offset,paint);
 ```
 
-
 #### 包含文字上下空白，避免文字变化时抖动
 ```
 Paint.FontMetrics fontMetrics = new Paint.FontMetrics();
@@ -32,7 +31,6 @@ canvas.drawText("abab",getWidth()/2,getHeight()/2 - offset,paint);
 paint.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"Quicksand-Regual.ttf"));
 ```
 
-
 ### **去除文字左边空白**
 ```
 Rect rect  = new Rect();
@@ -40,6 +38,7 @@ paint.getTextBounds("abab",0,"abab".length(),rect);
 canvas.drawText("abab", -rect.left, 200, paint);
 ```
 
+### **多行文字绘制**
 
 
 
