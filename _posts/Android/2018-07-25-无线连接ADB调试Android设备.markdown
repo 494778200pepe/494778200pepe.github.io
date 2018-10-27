@@ -28,4 +28,4 @@ description: 『 无线连接ADB调试Android设备 』
 
 参考：
 
-[无线连接ADB调试Android设备 | Kyleduo's blog!](https://blog.kyleduo.com/2016/11/11/adb-via-wifi/)
+[无线连接ADB调试Android设备 Kyleduo's blog!](https://blog.kyleduo.com/2016/11/11/adb-via-wifi/)
