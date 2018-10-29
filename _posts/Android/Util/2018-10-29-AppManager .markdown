@@ -105,6 +105,10 @@ public class AppManager {
 
 ```
 
+参考：
+
+[Android 全局Dialog的实现方式 - 犀利的小牛 - CSDN博客](https://blog.csdn.net/a1533588867/article/details/54631843?utm_source=blogxgwz0)
+
 
 
 
