@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "OKHttp学习二：AOP 面向切面编程"
+title:  "OkHttp学习二：AOP 面向切面编程"
 date:   2018-07-05 16:04:00 +0800
 categories: Http
-tags: OKHttp
+tags: OkHttp
 author: pepe
 description: 『 AOP 面向切面编程 』
 ---

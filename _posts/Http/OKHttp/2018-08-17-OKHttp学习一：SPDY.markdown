@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "OKHttp学习一：SPDY"
+title:  "OkHttp学习一：SPDY"
 date:   2018-07-05 13:34:00 +0800
 categories: Http
-tags: OKHttp
+tags: OkHttp
 author: pepe
 description: 『 SPDY 』
 ---
