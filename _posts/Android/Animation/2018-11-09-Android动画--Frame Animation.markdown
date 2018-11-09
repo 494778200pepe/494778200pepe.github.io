@@ -30,9 +30,12 @@ description: 『 Frame Animation 』
 
 ### **开始动画：方式一**
 ```
-image.setBackgroundResource(R.drawable.frameanim);  //将动画资源文件设置为ImageView的背景
-AnimationDrawable anim = (AnimationDrawable) image.getBackground(); //获取ImageView背景,此时已被编译成AnimationDrawable
-anim.start();   //开始动画
+//将动画资源文件设置为ImageView的背景
+image.setBackgroundResource(R.drawable.frameanim);  
+//获取ImageView背景,此时已被编译成AnimationDrawable
+AnimationDrawable anim = (AnimationDrawable) image.getBackground(); 
+//开始动画
+anim.start();   
 ```
 
 注意：开始动画的执行不能放在`onCreate()`中，因为那时候窗口`Window`对象还没有完全初始化，`AnimationDrawable`不能完全追加到窗口`Window`对象中，那么该怎么办呢？我们需要把这段代码放在`onWindowFocusChanged()`中，当`Activity`展示给用户时，`onWindowFocusChanged()`就会被调用，我们正是在这个时候实现我们的动画效果。
@@ -66,7 +69,8 @@ anim.start();   //开始动画
 ### **停止动画**
 ```
 AnimationDrawable anim = (AnimationDrawable) image.getBackground();
-if (anim.isRunning()) {	//如果正在运行,就停止
+if (anim.isRunning()) {	
+    //如果正在运行,就停止
 	anim.stop();
 }
 ```
