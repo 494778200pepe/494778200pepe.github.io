@@ -36,7 +36,7 @@ image.startAnimation(aa3);
 ```
 
 ### **Java构造**
-`
+```
 TranslateAnimation aa1 = new TranslateAnimation(0,0,1,0.5f,0,0,1,0.5f);
 aa1.setDuration(3000);
 image.startAnimation(aa1);
