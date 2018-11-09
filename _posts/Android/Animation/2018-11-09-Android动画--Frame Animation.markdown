@@ -80,8 +80,10 @@ if (anim.isRunning()) {
 `animation-list`还有两个自定义属性：
 ```
 android:visible 参数为布尔值，设置AnimationDrawable的可见性，true可见，false不可见，xml中定义的visible属性无用，因为根本没有解析。
-android:variablePadding 表示是否支持可变的Padding。false表示使用所有帧中最大的Padding，true表示使用当前帧的padding。
+android:variablePadding 表示是否支持可变的Padding。false表示使用所有帧中最大的Padding，true表示使用当前帧的padding。这个是布尔型，false表示各个状态的大小（size）各自不同，true表中所有的状态大小相同（以最大的为 准）。默认为false。
 ```
+
+[VariablePadding - Xamarin](https://developer.xamarin.com/api/field/Android.Resource+Attribute.VariablePadding/)
 
 
 参考：
