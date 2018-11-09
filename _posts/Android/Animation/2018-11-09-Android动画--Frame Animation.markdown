@@ -12,7 +12,7 @@ description: 『 Frame Animation 』
 
 下面来介绍Frame Animation
 
-### **xml文件编写**
+### **xml实现**
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android"
@@ -49,7 +49,7 @@ image.setBackgroundDrawable(frameAnim);
 frameAnim.start();
 ```
 
-### **开始动画：方式三**
+### **Java构造**
 ```
 //完全编码实现的动画效果
 AnimationDrawable anim = new AnimationDrawable();
