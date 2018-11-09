@@ -40,7 +40,7 @@ image.startAnimation(aa3);
 ```
 
 ### **Java构造**
-``
+```
 // 缩放起点X轴坐标，可以是数值、百分数、百分数p 三种样式，比如 50、50%、50%p.
 // 当为数值时，mPivotXType = ABSOLUTE = 0,表示在当前View的左上角，即原点处加上50px，做为起始缩放点,整数；
 // 如果是50%，mPivotXType = RELATIVE_TO_SELF = 1,表示在当前控件的左上角加上自己宽度的50%做为起始点,浮点数；

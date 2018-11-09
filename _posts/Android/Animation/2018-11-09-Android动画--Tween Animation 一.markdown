@@ -38,7 +38,7 @@ image.startAnimation(aa1);
 ```
 
 ### **Java构造**
-``
+```
 AlphaAnimation aa0 = new AlphaAnimation(0, 1);
 aa0.setDuration(3000);
 image.startAnimation(aa0);
