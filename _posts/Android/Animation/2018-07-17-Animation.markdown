@@ -8,9 +8,6 @@ author: pepe
 description: 『 Animation 』
 ---
 
-[Android Animation运行原理详解 - 简书](https://www.jianshu.com/p/fcd9c7e9937e)
-
-[Android Animation动画原理源码分析 - 在路上-codingAndlearning - CSDN博客](https://blog.csdn.net/u010019468/article/details/73469410)
 
 [Android自定义View播放Gif动画 - 简书](https://www.jianshu.com/p/e7743271c5d4)
 
