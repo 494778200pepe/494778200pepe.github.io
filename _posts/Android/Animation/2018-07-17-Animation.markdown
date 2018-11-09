@@ -14,6 +14,15 @@ https://www.jianshu.com/p/fcd9c7e9937e
 Android Animation动画原理源码分析 - 在路上-codingAndlearning - CSDN博客
 https://blog.csdn.net/u010019468/article/details/73469410
 
+Android自定义View播放Gif动画 - 简书
+https://www.jianshu.com/p/e7743271c5d4
+
+十分钟搞定酷炫动画，Android自定义 View 入门 - 简书
+https://www.jianshu.com/p/138ad32540ce
+
+Android仿简书动态searchview搜索栏效果_Android_脚本之家
+https://www.jb51.net/article/116797.htm
+
 [LayoutTransiton实现简单的录制按钮](https://mp.weixin.qq.com/s/qE2szJOCWansrDnWy3nefQ)
 
 [两步实现类似格瓦拉的转场动画 - 安卓 - 伯乐在线](http://android.jobbole.com/85120/)
