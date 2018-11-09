@@ -25,6 +25,7 @@ description: 『 Frame Animation 』
     <item android:drawable="@mipmap/flower6" android:duration="500"/>
 </animation-list>
 
+<!--xml文件放在drawable或者anim下面均可-->
 <!--Android:onshot如果定义为true的话，此动画只会执行一次，如果为false则一直循环。-->
 ```
 
