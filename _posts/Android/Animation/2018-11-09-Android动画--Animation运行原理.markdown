@@ -449,6 +449,7 @@ description: 『 Animation运行原理 』
 
             // do this last because it fires off messages to start doing things
             try {
+                // 原来竟然是root？ViewRootImpl。
                 root.setView(view, wparams, panelParentView);
             } catch (RuntimeException e) {
                 // BadTokenException or InvalidDisplayException, clean up.
@@ -459,7 +460,10 @@ description: 『 Animation运行原理 』
             }
         }
     }
-    
+```
+### **终于找到boss了 - ViewRootImpl**
+```    
+    // ViewRootImpl
     public void setView(View view, WindowManager.LayoutParams attrs, View panelParentView) {
         synchronized (this) {
             if (mView == null) {
@@ -645,6 +649,7 @@ description: 『 Animation运行原理 』
                             Looper.myLooper());
                 }
 
+                // ViewRootImpl 才tm是 DecorView 的parent
                 view.assignParent(this);
                 mAddedTouchMode = (res & WindowManagerGlobal.ADD_FLAG_IN_TOUCH_MODE) != 0;
                 mAppVisible = (res & WindowManagerGlobal.ADD_FLAG_APP_VISIBLE) != 0;
@@ -676,7 +681,37 @@ description: 『 Animation运行原理 』
             }
         }
     }
+    
+    public ViewParent invalidateChildInParent(int[] location, Rect dirty) {
+        checkThread();
+        if (DEBUG_DRAW) Log.v(mTag, "Invalidate child: " + dirty);
 
+        if (dirty == null) {
+            invalidate();
+            return null;
+        } else if (dirty.isEmpty() && !mIsAnimating) {
+            return null;
+        }
+
+        if (mCurScrollY != 0 || mTranslator != null) {
+            mTempRect.set(dirty);
+            dirty = mTempRect;
+            if (mCurScrollY != 0) {
+                dirty.offset(0, -mCurScrollY);
+            }
+            if (mTranslator != null) {
+                mTranslator.translateRectInAppWindowToScreen(dirty);
+            }
+            if (mAttachInfo.mScalingRequired) {
+                dirty.inset(-1, -1);
+            }
+        }
+
+        invalidateRectOnScreen(dirty);
+
+        // 看到没，返回null，终于和上面的对上了
+        return null;
+    }
 ```
 
 
