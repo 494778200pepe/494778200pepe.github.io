@@ -97,6 +97,9 @@ public class DecelerateAccelerateInterpolator implements TimeInterpolator{ 
 } 
 ```
 
+参考：
+
+[自定义Interpolator - xiangzhihong8的专栏 - CSDN博客](https://blog.csdn.net/xiangzhihong8/article/details/49820241)
 
 
 
