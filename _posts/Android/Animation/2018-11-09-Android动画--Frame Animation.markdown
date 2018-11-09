@@ -71,7 +71,17 @@ if (anim.isRunning()) {	//如果正在运行,就停止
 }
 ```
 
+### 其他
+
+`animation-list`还有两个自定义属性：
+```
+android:visible 参数为布尔值，设置AnimationDrawable的可见性，true可见，false不可见，xml中定义的visible属性无用，因为根本没有解析。
+android:variablePadding 表示是否支持可变的Padding。false表示使用所有帧中最大的Padding，true表示使用当前帧的padding。
+```
+
 
 参考：
 
 [详解Android动画之Frame Animation - LiuHe - CSDN博客](https://blog.csdn.net/liuhe688/article/details/6657776)
+
+[Android动画总结系列（1）——帧动画 - u013478336的专栏 - CSDN博客](https://blog.csdn.net/u013478336/article/details/52137385)
