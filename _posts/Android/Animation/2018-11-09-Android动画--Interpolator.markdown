@@ -47,7 +47,7 @@ description: 『 Interpolator 』
 向前甩一定值后再回到原来位置
 
 
-
+[Android Animations Tutorial 5: More on Interpolators | Cogito Learning](http://cogitolearning.co.uk/2013/10/android-animations-tutorial-5-more-on-interpolators/)
 
 
 
