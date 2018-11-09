@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Android动画--Tween Animation 四"
+title:  "Android动画--Tween Animation translate"
 date:   2018-11-09 11:38:00 +0800
 categories: Android
 tags: Animation

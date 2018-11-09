@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Android动画--Tween Animation 一"
+title:  "Android动画--Tween Animation alpha"
 date:   2018-11-09 10:08:00 +0800
 categories: Android
 tags: Animation

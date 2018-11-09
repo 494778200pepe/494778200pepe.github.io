@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Android动画--Tween Animation 二"
+title:  "Android动画--Tween Animation scale"
 date:   2018-11-09 11:30:00 +0800
 categories: Android
 tags: Animation
