@@ -80,6 +80,7 @@ description: 『 Animation运行原理 』
 
 ### **3、parent标记刷新**
 ```
+    // ViewGroup
     public final void invalidateChild(View child, final Rect dirty) {
         final AttachInfo attachInfo = mAttachInfo;
         if (attachInfo != null && attachInfo.mHardwareAccelerated) {
@@ -186,7 +187,84 @@ description: 『 Animation运行原理 』
             } while (parent != null);
         }
     }
+    
+    public ViewParent invalidateChildInParent(final int[] location, final Rect dirty) {
+        if ((mPrivateFlags & (PFLAG_DRAWN | PFLAG_DRAWING_CACHE_VALID)) != 0) {
+            // either DRAWN, or DRAWING_CACHE_VALID
+            if ((mGroupFlags & (FLAG_OPTIMIZE_INVALIDATE | FLAG_ANIMATION_DONE))
+                    != FLAG_OPTIMIZE_INVALIDATE) {
+                dirty.offset(location[CHILD_LEFT_INDEX] - mScrollX,
+                        location[CHILD_TOP_INDEX] - mScrollY);
+                if ((mGroupFlags & FLAG_CLIP_CHILDREN) == 0) {
+                    dirty.union(0, 0, mRight - mLeft, mBottom - mTop);
+                }
+
+                final int left = mLeft;
+                final int top = mTop;
+
+                if ((mGroupFlags & FLAG_CLIP_CHILDREN) == FLAG_CLIP_CHILDREN) {
+                    if (!dirty.intersect(0, 0, mRight - left, mBottom - top)) {
+                        dirty.setEmpty();
+                    }
+                }
+
+                location[CHILD_LEFT_INDEX] = left;
+                location[CHILD_TOP_INDEX] = top;
+            } else {
+
+                if ((mGroupFlags & FLAG_CLIP_CHILDREN) == FLAG_CLIP_CHILDREN) {
+                    dirty.set(0, 0, mRight - mLeft, mBottom - mTop);
+                } else {
+                    // in case the dirty rect extends outside the bounds of this container
+                    dirty.union(0, 0, mRight - mLeft, mBottom - mTop);
+                }
+                location[CHILD_LEFT_INDEX] = mLeft;
+                location[CHILD_TOP_INDEX] = mTop;
+
+                mPrivateFlags &= ~PFLAG_DRAWN;
+            }
+            mPrivateFlags &= ~PFLAG_DRAWING_CACHE_VALID;
+            if (mLayerType != LAYER_TYPE_NONE) {
+                mPrivateFlags |= PFLAG_INVALIDATED;
+            }
+
+            return mParent;
+        }
+
+        return null;
+    }
 ```
+### **4、DocerView的parent**
+
+应用启动以及`View`显示加载过程，从中可以知道在`AMS`通知`PerformResumeActivity`命令时开始显示界面，会调用`activity`的`makeVisible()`，该函数添加了`mDecor(DecorView)`。
+```
+    public void setVisible(boolean visible) {
+        if (mVisibleFromClient != visible) {
+            mVisibleFromClient = visible;
+            if (mVisibleFromServer) {
+                if (visible) makeVisible();
+                else mDecor.setVisibility(View.INVISIBLE);
+            }
+        }
+    }
+
+    void makeVisible() {
+        if (!mWindowAdded) {
+            ViewManager wm = getWindowManager();
+            wm.addView(mDecor, getWindow().getAttributes());
+            mWindowAdded = true;
+        }
+        mDecor.setVisibility(View.VISIBLE);
+    }
+    
+    public WindowManager getWindowManager() {
+        return mWindowManager;
+    }
+
+```
+
+### **5、ViewManager是DecorView的parent吗？**
+
 
 
 
