@@ -876,7 +876,7 @@ description: 『 Animation运行原理 』
     }
 ```
 
-### **11、ViewGroup.dispatchDraw() **
+### **11、ViewGroup.dispatchDraw()**
 ```
     // ViewGroup
     protected void dispatchDraw(Canvas canvas) {
