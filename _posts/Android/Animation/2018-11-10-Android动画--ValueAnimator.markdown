@@ -7,6 +7,7 @@ tags: Animation
 author: pepe
 description: 『 ValueAnimator 』
 ---
+> `ValueAnimator`是`ObjectAnimator`的父类，使用方法差不多，不过功能更强大，更灵活，并且不受`Object`自身约束。
 
 ### **简单使用**
 ```

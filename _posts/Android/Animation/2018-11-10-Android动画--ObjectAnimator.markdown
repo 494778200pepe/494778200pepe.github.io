@@ -8,6 +8,8 @@ author: pepe
 description: 『 ObjectAnimator 』
 ---
 
+> `ObjectAnimator`,受`Object`自身约束,需要对象有相关的属性，才会有效。如果相应的属性不存在，则必须添加`ValueAnimator.AnimatorUpdateListener`,来手动执行相关的效果。
+
 ### **简单实用**
 ```
 // ofFloat()方法的第一个参数表示动画操作的对象（可以是任意对象），
