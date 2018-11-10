@@ -8,7 +8,7 @@ author: pepe
 description: 『 Interpolator 』
 ---
 
-> Interpolator:差值器，通俗来说就是速度曲线。
+> `Interpolator`:差值器，通俗来说就是速度曲线。比如设置动画执行的时间3000ms，在这3000ms，`fraction`从0变为1，那么`Interpolator`就是控制`fraction`的变化曲线的。
 
 ### **AccelerateDecelerateInterpolator**
 

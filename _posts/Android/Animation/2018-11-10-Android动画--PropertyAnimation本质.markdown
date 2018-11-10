@@ -104,7 +104,7 @@ description: 『 PropertyAnimation本质 』
         // mValues could be null if this is being constructed piecemeal. Just record the
         // propertyName to be used later when setValues() is called if so.
         if (mValues != null) {
-            // 每个 mValuesMap 只保存一个 PropertyValuesHolder，将之前的 key 替换掉
+            // 将第一个的 key 替换掉
             PropertyValuesHolder valuesHolder = mValues[0];
             String oldName = valuesHolder.getPropertyName();
             valuesHolder.setPropertyName(propertyName);
