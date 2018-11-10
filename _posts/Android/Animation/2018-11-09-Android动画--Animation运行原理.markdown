@@ -13,7 +13,7 @@ description: 『 Animation运行原理 』
     // AlphaAnimationAct
     AlphaAnimation aa0 = new AlphaAnimation(0, 1);
     aa0.setDuration(3000);
-    this.startAnimation(aa0);
+    imageView.startAnimation(aa0);
 ```
 
 ### **2、view标记刷新**
@@ -315,6 +315,7 @@ description: 『 Animation运行原理 』
         if (mParent != null) {
             mWindow.setContainer(mParent.getWindow());
         }
+        // WindowManager 在这里赋值
         mWindowManager = mWindow.getWindowManager();
         mCurrentConfig = config;
 
@@ -649,7 +650,7 @@ description: 『 Animation运行原理 』
                             Looper.myLooper());
                 }
 
-                // ViewRootImpl 才tm是 DecorView 的parent
+                // 真相在这里，ViewRootImpl 才tm是 DecorView 的parent
                 view.assignParent(this);
                 mAddedTouchMode = (res & WindowManagerGlobal.ADD_FLAG_IN_TOUCH_MODE) != 0;
                 mAppVisible = (res & WindowManagerGlobal.ADD_FLAG_APP_VISIBLE) != 0;
@@ -818,6 +819,7 @@ description: 『 Animation运行原理 』
         mIsDrawing = true;
         Trace.traceBegin(Trace.TRACE_TAG_VIEW, "draw");
         try {
+            // 开始 draw 了
             draw(fullRedrawNeeded);
         } finally {
             mIsDrawing = false;
@@ -1038,7 +1040,7 @@ description: 『 Animation运行原理 』
         Transformation transformToApply = null;
         boolean concatMatrix = false;
         final boolean scalingRequired = mAttachInfo != null && mAttachInfo.mScalingRequired;
-        // 获取ziView的动画，在View.startAnimation是就开始赋值了。
+        // 获取子View的动画，在View.startAnimation时就开始赋值了。
         final Animation a = getAnimation();
         if (a != null) {
             // applyLegacyAnimation 将 Animation 的  matrix 保存在 parent 的 Transformation 里面
@@ -1358,7 +1360,7 @@ description: 『 Animation运行原理 』
     }
 ```
 
-### **Animation对Matrix的保存**
+### **13、Animation对Matrix的保存**
 ```
     // Animation
     public boolean getTransformation(long currentTime, Transformation outTransformation,
