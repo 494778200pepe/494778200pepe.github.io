@@ -8,6 +8,7 @@ author: pepe
 description: 『 Animation 』
 ---
 
+[AnimationDemo](https://github.com/494778200pepe/AnimationDemo)
 
 [Android自定义View播放Gif动画 - 简书](https://www.jianshu.com/p/e7743271c5d4)
 
