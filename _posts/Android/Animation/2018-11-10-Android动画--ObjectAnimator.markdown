@@ -100,6 +100,17 @@ ObjectAnimator.ofFloat(image, "translationX", 0, 350, 0).setDuration(2500).start
                 anim12.pause();
                 anim12.resume();
                 anim12.reverse();
+                anim12.addPauseListener(new Animator.AnimatorPauseListener() {
+                    @Override
+                    public void onAnimationPause(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationResume(Animator animation) {
+
+                    }
+                });
 ```                
                 
 
