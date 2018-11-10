@@ -8,7 +8,7 @@ author: pepe
 description: 『 Animator 』
 ---
 
-> `Android12`之后，推出了`Animator`，如何使用？与`PropertyAnimator`有何关系和区别呢？
+> `Android 12`之后，推出了`Animator`，如何使用？与`PropertyAnimator`有何关系和区别呢？
 
 ### **简单使用**
 ```
