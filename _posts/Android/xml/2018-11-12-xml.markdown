@@ -9,7 +9,6 @@ description: 『 xml 』
 ---
 
 
-[8.2.1 Bitmap(位图)全解析 Part 1](http://www.runoob.com/w3cnote/android-tutorial-bitmap1.html)
 
 
 
