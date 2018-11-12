@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "shape"
-date:   2018-04-21 16:15:11 +0800
+title:  "ShapeDrawable"
+date:   2018-11-12 23:44:00 +0800
 categories: Android
-tags: Android样式的开发
+tags: xml
 author: pepe
-description: 『 Shape 』
+description: 『 ShapeDrawable 』
 ---
+
 ### **shape**
 
 先来看语法：
@@ -164,6 +165,7 @@ view.setBackgroundDrawable(drawable);
 参考：
 
 [Android样式的开发:shape篇](http://keeganlee.me/post/android/20150830)
+
 
 
 

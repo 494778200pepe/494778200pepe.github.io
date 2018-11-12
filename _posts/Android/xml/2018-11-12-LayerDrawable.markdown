@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "layer-list"
-date:   2018-04-23 13:49:00 +0800
+title:  "LayerDrawable"
+date:   2018-11-12 23:46:00 +0800
 categories: Android
-tags: Android样式的开发
+tags: xml
 author: pepe
-description: 『 layer-list 』
+description: 『 LayerDrawable 』
 ---
 
 [android里面layer-list中的inset和clip到底有什么作用 - CSDN博客](https://blog.csdn.net/candyguy242/article/details/44176503)
@@ -135,6 +135,7 @@ description: 『 layer-list 』
 [Android开发：shape和selector和layer-list的（详细说明） - CSDN博客](https://blog.csdn.net/brokge/article/details/9713041)
 
 [Android样式的开发:layer-list篇](http://keeganlee.me/post/android/20150909)
+
 
 
 
