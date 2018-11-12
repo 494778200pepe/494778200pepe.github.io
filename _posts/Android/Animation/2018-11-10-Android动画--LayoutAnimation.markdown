@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Android动画--LayoutTransition"
+title:  "Android动画--LayoutAnimation"
 date:   2018-11-12 14:10:00 +0800
 categories: Android
 tags: Animation
 author: pepe
-description: 『 LayoutTransition 』
+description: 『 LayoutAnimation 』
 ---
 
 > LayoutAnimation虽能实现ViewGroup的进入动画，但只能在创建时有效。在创建后，再往里添加控件就不会再有动画。在API 11后，又添加了两个能实现在创建后添加控件仍能应用动画的方法，分别是android:animateLayoutChanges属性和LayoutTransition类。
