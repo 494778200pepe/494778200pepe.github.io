@@ -82,3 +82,8 @@ description: 『 三角函数 』
 
 根据弧度，得到角度。
 
+
+参考：
+
+[Android之三角函数 - 简书](https://www.jianshu.com/p/aaa69772e7c4)
+
