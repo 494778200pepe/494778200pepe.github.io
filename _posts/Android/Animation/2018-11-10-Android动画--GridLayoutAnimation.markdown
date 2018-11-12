@@ -61,7 +61,7 @@ description: 『 GridLayoutAnimation 』
 
 ### **gridLayoutAnimation各字段意义**
 
-* rowDelay:每一行动画开始的延迟。与LayoutAnimation一样，可以取百分数，也可以取浮点数。取值意义为，当前android:animation所指动画时长的倍数。 
+* `rowDelay`:每一行动画开始的延迟。与`LayoutAnimation`一样，可以取百分数，也可以取浮点数。取值意义为，当前`android:animation`所指动画时长的倍数。 
 
 * `columnDelay`：每一列动画开始的延迟。取值类型及意义与rowDelay相同。 
 
@@ -70,8 +70,11 @@ description: 『 GridLayoutAnimation 』
 * `direction`：`gridview`动画方向。 取值有四个：
 
  . `left_to_right`：列，从左向右开始动画 
+ 
  . `right_to_left` ：列，从右向左开始动画 
+ 
  . `top_to_bottom`：行，从上向下开始动画 
+ 
  . `bottom_to_top`：行，从下向上开始动画 
 
  这四个值之间可以通过“|”连接，从而可以取多个值。很显然left_to_right和right_to_left是互斥的，top_to_bottom和bottom_to_top是互斥的。如果不指定 direction字段，默认值为left_to_right | top_to_bottom；即从上往下，从左往右。 
