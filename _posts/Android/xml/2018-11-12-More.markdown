@@ -8,8 +8,90 @@ author: pepe
 description: 『 More 』
 ---
 
+### **Bool**
+```
+// res/values/filename.xml
+// In Java: R.bool.bool_name
+// In XML: @[package:]bool/bool_name
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool
+        name="bool_name"
+        >[true | false]</bool>
+</resources>
+```
+
+```
+Resources res = getResources();
+boolean screenIsSmall = res.getBoolean(R.bool.screen_small);
 
 
+<ImageView
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:src="@drawable/logo"
+    android:adjustViewBounds="@bool/adjust_view_bounds" />
+```
 
+### **Color**
+
+```
+// res/values/colors.xml
+// In Java: R.color.color_name
+// In XML: @[package:]color/color_name
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color
+        name="color_name"
+        >hex_color</color>
+</resources>
+```
+
+```
+Resources res = getResources();
+int color = res.getColor(R.color.opaque_red);
+
+<TextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textColor="@color/translucent_red"
+    android:text="Hello"/>
+```
+### **Dimension**
+
+```
+// res/values/filename.xml
+// In Java: R.dimen.dimension_name
+// In XML: @[package:]dimen/dimension_name
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen
+        name="dimension_name"
+        >dimension</dimen>
+</resources>
+```
+
+```
+Resources res = getResources();
+float fontSize = res.getDimension(R.dimen.font_size);
+
+<TextView
+    android:layout_height="@dimen/textview_height"
+    android:layout_width="@dimen/textview_width"
+    android:textSize="@dimen/font_size"/>
+```
+
+### **ID**
+
+
+### **Bool**
+### **Bool**
+
+### **Bool**
+
+### **Bool**
 
 
