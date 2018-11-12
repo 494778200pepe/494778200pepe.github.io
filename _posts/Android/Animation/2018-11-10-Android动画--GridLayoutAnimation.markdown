@@ -77,7 +77,7 @@ description: 『 GridLayoutAnimation 』
  
  . `bottom_to_top`：行，从下向上开始动画 
 
- 这四个值之间可以通过“|”连接，从而可以取多个值。很显然left_to_right和right_to_left是互斥的，top_to_bottom和bottom_to_top是互斥的。如果不指定 direction字段，默认值为left_to_right | top_to_bottom；即从上往下，从左往右。 
+ 这四个值之间可以通过“\|”连接，从而可以取多个值。很显然`left_to_right`和`right_to_left`是互斥的，`top_to_bottom`和`bottom_to_top`是互斥的。如果不指定`direction`字段，默认值为`left_to_right | top_to_bottom`；即从上往下，从左往右。 
 
 *  `animation`: gridview内部元素所使用的动画。
 
