@@ -1,0 +1,47 @@
+---
+layout: post
+title:  "Drawable"
+date:   2018-11-12 15:55:00 +0800
+categories: Android
+tags: Drawable
+author: pepe
+description: 『 Drawable 』
+---
+
+Android中给我们提供了多达13种的 Drawable:
+
+* ColorDrawable
+
+* NiniPatchDrawable
+
+* ShapeDrawable
+
+* GradientDrawable
+
+* BitmapDrawable
+
+* InsetDrawable
+
+* ClipDrawable
+
+* RotateDrawable
+
+* AnimationDrawable
+
+* LayerDrawable
+
+* LevelListDrawable
+
+* StateListDrawable
+
+* TransitionDrawable
+
+
+[8.1.1 Android中的13种Drawable小结 Part 1](http://www.runoob.com/w3cnote/android-tutorial-drawable1.html)
+
+
+[8.2.1 Bitmap(位图)全解析 Part 1](http://www.runoob.com/w3cnote/android-tutorial-bitmap1.html)
+
+
+
+

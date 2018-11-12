@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "xml"
+date:   2018-11-12 15:56:00 +0800
+categories: Android
+tags: xml
+author: pepe
+description: 『 xml 』
+---
+
+
+[8.2.1 Bitmap(位图)全解析 Part 1](http://www.runoob.com/w3cnote/android-tutorial-bitmap1.html)
+
+
+
+
