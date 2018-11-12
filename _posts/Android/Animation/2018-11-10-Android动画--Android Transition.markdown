@@ -1,13 +1,20 @@
 ---
 layout: post
 title:  "Android动画--Transition"
-date:   2018-11-12 15:06:00 +0800
+date:   2018-11-12 14:28:00 +0800
 categories: Android
 tags: Animation
 author: pepe
 description: 『 Transition 』
 ---
 
+`Android Transition Framwork`主要用来做三件事：
+
+* 1、`Activity`间的转场动画；
+
+* 2、不同`Activity`或`Fragment`间元素共享，让交互更连贯；
+
+* 3、同一个`Activity`之间一些`View`的变换动画。
 
 
 
