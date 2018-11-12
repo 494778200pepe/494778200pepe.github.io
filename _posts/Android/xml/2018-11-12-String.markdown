@@ -1,15 +1,31 @@
 ---
 layout: post
 title:  "String"
-date:   2018-11-12 22:17:00 +0800
+date:   2018-11-12 22:52:00 +0800
 categories: Android
 tags: xml
 author: pepe
 description: 『 String 』
 ---
 
+### **String Array**
 
+```
+// res/values/filename.xml
+// 在 Java 中：R.array.string_array_name
 
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array
+        name="string_array_name">
+        <item>text_string</item>
+    </string-array>
+</resources>
+```
 
+```
+Resources res = getResources();
+String[] planets = res.getStringArray(R.array.planets_array);
+```
 
 
