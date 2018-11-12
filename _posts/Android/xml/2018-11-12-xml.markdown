@@ -8,7 +8,7 @@ author: pepe
 description: 『 xml 』
 ---
 
-
+[Resource types overview](https://developer.android.google.cn/guide/topics/resources/available-resources)
 
 
 
