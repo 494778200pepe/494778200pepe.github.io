@@ -10,7 +10,7 @@ description: 『 More 』
 
 ### **Bool**
 ```
-// res/values/filename.xml
+// res/values/bools.xml
 // In Java: R.bool.bool_name
 // In XML: @[package:]bool/bool_name
 
@@ -62,7 +62,7 @@ int color = res.getColor(R.color.opaque_red);
 ### **Dimension**
 
 ```
-// res/values/filename.xml
+// res/values/dimens.xml
 // In Java: R.dimen.dimension_name
 // In XML: @[package:]dimen/dimension_name
 
@@ -86,12 +86,76 @@ float fontSize = res.getDimension(R.dimen.font_size);
 
 ### **ID**
 
+```
+// res/values/ids.xml
+// In Java: R.id.name
+// In XML: @[package:]id/name
 
-### **Bool**
-### **Bool**
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item
+        type="id"
+        name="id_name" />
+</resources>
+```
 
-### **Bool**
+### **Integer**
 
-### **Bool**
+```
+// res/values/integers.xml
+// In Java: R.integer.integer_name
+// In XML: @[package:]integer/integer_name
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer
+        name="integer_name"
+        >integer</integer>
+</resources>
+```
+
+```
+Resources res = getResources();
+int maxSpeed = res.getInteger(R.integer.max_speed);
+```
+
+### **Integer array**
+
+```
+// res/values/integers.xml
+// In Java: R.array.integer_array_name
+// In XML: @[package:]array.integer_array_name
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array
+        name="integer_array_name">
+        <item
+            >integer</item>
+    </integer-array>
+</resources>
+```
+
+```
+Resources res = getResources();
+int[] bits = res.getIntArray(R.array.bits);
+```
+### **Typed array**
+
+```
+// res/values/arrays.xml
+// In Java: R.array.array_name
+// In XML: @[package:]array.array_name
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array
+        name="integer_array_name">
+        <item>resource</item>
+    </array>
+</resources>
+```
+
+
 
 
