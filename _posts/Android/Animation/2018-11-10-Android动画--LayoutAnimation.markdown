@@ -8,6 +8,8 @@ author: pepe
 description: 『 LayoutAnimation 』
 ---
 
+> 普通`viewGroup`添加进入统一动画的`LayoutAnimation`，在API 1中就有。
+
 ### **简单使用**
 ```
 // 动画文件 layout_alpha.xml
@@ -58,9 +60,22 @@ description: 『 LayoutAnimation 』
 
 * `animation`：指定每个item入场所要应用的动画。仅能指定`res/aim`文件夹下的`animation`定义的动画，不可使用animator动画。
 
+### **java实现**
+```
+Animation animation= AnimationUtils.loadAnimation(this,R.anim.slide_in_left);   
+//得到一个LayoutAnimationController对象；
+LayoutAnimationController controller = new LayoutAnimationController(animation);   //设置控件显示的顺序；
+controller.setOrder(LayoutAnimationController.ORDER_REVERSE);  
+//设置控件显示间隔时间；
+controller.setDelay(0.3f);   
+//为ListView设置LayoutAnimationController属性；
+mListView.setLayoutAnimation(controller);
+mListView.startLayoutAnimation();
+```
 
+参考：
 
-
+[自定义控件三部曲之动画篇(十一)——layoutAnimation与gridLayoutAnimation - 启舰 - CSDN博客](https://blog.csdn.net/harvic880925/article/details/50785786)
 
 
 
