@@ -91,7 +91,7 @@ String text = String.format(res.getString(R.string.welcome_messages), username, 
   <string name="welcome_messages">Hello, %1$s! You have &lt;b>%2$d new messages&lt;/b>.</string>
 </resources>
 ```
-在这个带格式的字符串中，添加了 <b> 元素。请注意，开括号使用 &lt; 表示法进行了 HTML 转义。
+在这个带格式的字符串中，添加了`<b>`元素。请注意，开括号使用`lt;`表示法进行了`HTML`转义。
 
  * 2、然后照常设置字符串格式，但还要调用 fromHtml(String) 以将 HTML 文本转换成带样式文本：
  
