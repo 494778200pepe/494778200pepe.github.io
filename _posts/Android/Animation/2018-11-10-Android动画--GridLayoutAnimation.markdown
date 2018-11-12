@@ -65,7 +65,7 @@ description: 『 GridLayoutAnimation 』
 
 * `columnDelay`：每一列动画开始的延迟。取值类型及意义与rowDelay相同。 
 
-* `directionPriority`：方向优先级。取值为row,collumn,none，意义分别为：行优先，列优先，和无优先级（同时进行）;具体意义，后面会细讲 
+* `directionPriority`：方向优先级。取值为`row`,`collumn`,`none`，意义分别为：行优先，列优先，和无优先级（同时进行）;具体意义，后面会细讲 
 
 * `direction`：`gridview`动画方向。 取值有四个：
 
@@ -77,23 +77,17 @@ description: 『 GridLayoutAnimation 』
  这四个值之间可以通过“|”连接，从而可以取多个值。很显然left_to_right和right_to_left是互斥的，top_to_bottom和bottom_to_top是互斥的。如果不指定 direction字段，默认值为left_to_right | top_to_bottom；即从上往下，从左往右。 
 
 *  `animation`: gridview内部元素所使用的动画。
---------------------- 
-作者：启舰 
-来源：CSDN 
-原文：https://blog.csdn.net/harvic880925/article/details/50785786 
-版权声明：本文为博主原创文章，转载请附上博文链接！
 
 ### **java实现**
 ```
-Animation animation= AnimationUtils.loadAnimation(this,R.anim.slide_in_left);   
-//得到一个LayoutAnimationController对象；
-LayoutAnimationController controller = new LayoutAnimationController(animation);   //设置控件显示的顺序；
-controller.setOrder(LayoutAnimationController.ORDER_REVERSE);  
-//设置控件显示间隔时间；
-controller.setDelay(0.3f);   
-//为ListView设置LayoutAnimationController属性；
-mListView.setLayoutAnimation(controller);
-mListView.startLayoutAnimation();
+        Animation animation = AnimationUtils.loadAnimation(MyActivity.this,R.anim.slide_in_left);
+        GridLayoutAnimationController controller = new GridLayoutAnimationController(animation);
+        controller.setColumnDelay(0.75f);
+        controller.setRowDelay(0.5f);
+        controller.setDirection(GridLayoutAnimationController.DIRECTION_BOTTOM_TO_TOP|GridLayoutAnimationController.DIRECTION_LEFT_TO_RIGHT);
+        controller.setDirectionPriority(GridLayoutAnimationController.PRIORITY_NONE);
+        grid.setLayoutAnimation(controller);
+        grid.startLayoutAnimation();
 ```
 
 参考：
