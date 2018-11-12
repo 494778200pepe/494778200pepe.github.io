@@ -14,13 +14,14 @@ description: 『 LayoutAnimation 』
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android"
     android:interpolator="@android:anim/accelerate_interpolator"
-    android:shareInterpolator="true"
-    >
+    android:shareInterpolator="true">
+    <translate
+        android:fromXDelta="-50%p"
+        android:toXDelta="0" />
     <alpha
-        android:fromAlpha="0"
-        android:toAlpha="1"
         android:duration="3000"
-        />
+        android:fromAlpha="0"
+        android:toAlpha="1" />
 </set>
 
 // Layout动画文件 layoutanim.xml
@@ -47,9 +48,15 @@ description: 『 LayoutAnimation 』
 </LinearLayout>
 ```          
 
+> 最重要的一点：`android:layoutAnimation`只在`viewGroup`创建的时候，才会对其中的`item`添加动画。在创建成功以后，再向其中添加item将不会再有动画。
 
+### **layoutAnimation各字段意义**
 
+*   `delay:指每个Item的动画开始延时`，取值是`android:animation`所指定动画时长的倍数，取值类型可以是float类型，也可以是百分数，默认是`0.5`;比如我们这里指定的动画是`@anim/slide_in_left`，而在`slide_in_left.xml`中指定`android:duration=”1000”`，即单次动画的时长是1000毫秒，而我们在这里的指定`android:delay=”1”`，即一个Item的动画会在上一个item动画完成后延时单次动画时长的一倍时间开始，即延时1000毫秒后开始。
 
+* `animationOrder`:指`viewGroup`中的控件动画开始顺序，取值有`normal(正序)`、`reverse(倒序)`、`random(随机)`
+
+* `animation`：指定每个item入场所要应用的动画。仅能指定`res/aim`文件夹下的`animation`定义的动画，不可使用animator动画。
 
 
 
