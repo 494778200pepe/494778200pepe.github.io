@@ -95,6 +95,10 @@ ObjectAnimator.ofFloat(image, "translationX", 0, 350, 0).setDuration(2500).start
                 anim14.start();
 ```
 
+### **xml实现**
+
+`<objectAnimator />:对应ObjectAnimator`
+
 ### **其他**
 ```
                 anim12.pause();

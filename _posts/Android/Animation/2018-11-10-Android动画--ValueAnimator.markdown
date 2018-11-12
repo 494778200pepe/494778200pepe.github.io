@@ -23,7 +23,9 @@ description: 『 ValueAnimator 』
                 });
 ```
 
+### **xml实现**
 
+`<animator />:对应ValueAnimator`
 
 
 

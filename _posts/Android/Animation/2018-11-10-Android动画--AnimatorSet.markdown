@@ -21,8 +21,9 @@ description: 『 AnimatorSet 』
                 
 
 
+### **xml实现**
 
-
+`<set />:对应AnimatorSet`
 
 
 
