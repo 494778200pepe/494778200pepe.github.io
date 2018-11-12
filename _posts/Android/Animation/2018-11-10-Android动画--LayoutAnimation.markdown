@@ -1,81 +1,85 @@
 ---
 layout: post
-title:  "Android动画--LayoutAnimation"
-date:   2018-11-12 13:36:00 +0800
+title:  "Android动画--LayoutTransition"
+date:   2018-11-12 14:10:00 +0800
 categories: Android
 tags: Animation
 author: pepe
-description: 『 LayoutAnimation 』
+description: 『 LayoutTransition 』
 ---
 
-> 普通`viewGroup`添加进入统一动画的`LayoutAnimation`，在API 1中就有。
+> LayoutAnimation虽能实现ViewGroup的进入动画，但只能在创建时有效。在创建后，再往里添加控件就不会再有动画。在API 11后，又添加了两个能实现在创建后添加控件仍能应用动画的方法，分别是android:animateLayoutChanges属性和LayoutTransition类。
 
-### **简单使用**
+### **android:animateLayoutChanges属性**
+
+> 在API 11之后，Android为了支持`ViewGroup`类控件，在添加和移除其中控件时自动添加动画，为我们提供了一个非常简单的属性：`android:animateLayoutChanges=[true/false]`,所有派生自`ViewGroup`的控件都具有此属性，只要在`XML`中添加上这个属性，就能实现添加/删除其中控件时，带有默认动画了。 
+
+默认的进入动画就是向下部控件下移，然后新添控件透明度从0到1显示出来。默认的退出动画是控件透明度从1变到0消失，下部控件上移。
+
+### **LayoutTransaction**
+
+> 上面虽然在ViewGroup类控件XML中仅添加一行`android:animateLayoutChanges=[true]`即可实现内部控件添加删除时都加上动画效果。但却只能使用默认动画效果，而无法自定义动画。 
+为了能让我们自定义动画，谷歌在API 11时，同时为我们引入了一个类`LayoutTransaction`。 
+
 ```
-// 动画文件 layout_alpha.xml
-<?xml version="1.0" encoding="utf-8"?>
-<set xmlns:android="http://schemas.android.com/apk/res/android"
-    android:interpolator="@android:anim/accelerate_interpolator"
-    android:shareInterpolator="true">
-    <translate
-        android:fromXDelta="-50%p"
-        android:toXDelta="0" />
-    <alpha
-        android:duration="3000"
-        android:fromAlpha="0"
-        android:toAlpha="1" />
-</set>
+LayoutTransaction mTransitioner = new LayoutTransition();
 
-// Layout动画文件 layoutanim.xml
-<?xml version="1.0" encoding="utf-8"?>
-<layoutAnimation
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:delay="0.5"
-    android:animationOrder="normal"
-    android:animation="@anim/layout_alpha"
-    />
-   
-// Layout文件 act_layout_anim.xml   
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/id_container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:animateLayoutChanges="true"
-    android:layoutAnimation="@anim/layoutanim">
+//入场动画:view在这个容器中消失时触发的动画
+ObjectAnimator animIn = ObjectAnimator.ofFloat(null, "rotationY", 0f, 360f,0f);
+mTransitioner.setAnimator(LayoutTransition.APPEARING, animIn);
+ 
+//出场动画:view显示时的动画
+ObjectAnimator animOut = ObjectAnimator.ofFloat(null, "rotation", 0f, 90f, 0f);
+mTransitioner.setAnimator(LayoutTransition.DISAPPEARING, animOut);
+ 
+PropertyValuesHolder pvhLeft = PropertyValuesHolder.ofInt("left",0,100,0);
+PropertyValuesHolder pvhTop = PropertyValuesHolder.ofInt("top",1,1);
+Animator changeAppearAnimator
+            = ObjectAnimator.ofPropertyValuesHolder(layoutTransitionGroup, pvhLeft,pvhBottom,pvhTop,pvhRight);
+mTransitioner.setAnimator(LayoutTransition.CHANGE_APPEARING,changeAppearAnimator);
+ 
+layoutTransitionGroup.setLayoutTransition(mTransitioner);
 
-    ...
 
-</LinearLayout>
-```          
-
-> 最重要的一点：`android:layoutAnimation`只在`viewGroup`创建的时候，才会对其中的`item`添加动画。在创建成功以后，再向其中添加item将不会再有动画。
-
-### **layoutAnimation各字段意义**
-
-*   `delay:指每个Item的动画开始延时`，取值是`android:animation`所指定动画时长的倍数，取值类型可以是float类型，也可以是百分数，默认是`0.5`;比如我们这里指定的动画是`@anim/slide_in_left`，而在`slide_in_left.xml`中指定`android:duration=”1000”`，即单次动画的时长是1000毫秒，而我们在这里的指定`android:delay=”1”`，即一个Item的动画会在上一个item动画完成后延时单次动画时长的一倍时间开始，即延时1000毫秒后开始。
-
-* `animationOrder`:指`viewGroup`中的控件动画开始顺序，取值有`normal(正序)`、`reverse(倒序)`、`random(随机)`
-
-* `animation`：指定每个item入场所要应用的动画。仅能指定`res/aim`文件夹下的`animation`定义的动画，不可使用animator动画。
-
-### **java实现**
+//    LayoutTransition.APPEARING 当一个View在ViewGroup中出现时，对此View设置的动画
+//    LayoutTransition.CHANGE_APPEARING 当一个View在ViewGroup中出现时，对此View对其他View位置造成影响，对其他View设置的动画
+//    LayoutTransition.DISAPPEARING  当一个View在ViewGroup中消失时，对此View设置的动画
+//    LayoutTransition.CHANGE_DISAPPEARING 当一个View在ViewGroup中消失时，对此View对其他View位置造成影响，对其他View设置的动画
+//    LayoutTransition.CHANGE 不是由于View出现或消失造成对其他View位置造成影响，然后对其他View设置的动画。
+//    注意动画到底设置在谁身上，此View还是其他View。
 ```
-Animation animation= AnimationUtils.loadAnimation(this,R.anim.slide_in_left);   
-//得到一个LayoutAnimationController对象；
-LayoutAnimationController controller = new LayoutAnimationController(animation);   //设置控件显示的顺序；
-controller.setOrder(LayoutAnimationController.ORDER_REVERSE);  
-//设置控件显示间隔时间；
-controller.setDelay(0.3f);   
-//为ListView设置LayoutAnimationController属性；
-mListView.setLayoutAnimation(controller);
-mListView.startLayoutAnimation();
+
+注意事项： 
+
+* 1、`LayoutTransition.CHANGE_APPEARING`和`LayoutTransition.CHANGE_DISAPPEARING`必须使用`PropertyValuesHolder`所构造的动画才会有效果，不然无效！也就是说使用`ObjectAnimator`构造的动画，在这里是不会有效果的！ 
+
+* 2、在构造`PropertyValuesHolder`动画时，`”left”`、`”top”`属性的变动是必写的。如果不需要变动，则直接写为：
 ```
+PropertyValuesHolder pvhLeft = PropertyValuesHolder.ofInt("left",0,0);
+PropertyValuesHolder pvhTop = PropertyValuesHolder.ofInt("top",0,0);
+```
+
+* 3、在构造`PropertyValuesHolder`时，所使用的`ofInt`,`ofFloat`中的参数值，第一个值和最后一个值必须相同，不然此属性所对应的的动画将被放弃，在此属性值上将不会有效果；
+```
+PropertyValuesHolder pvhLeft = PropertyValuesHolder.ofInt("left",0,100,0);
+```
+
+比如，这里`ofInt(“left”,0,100,0)`第一个值和最后一个值都是0，所以这里会有效果的，如果我们改为`ofInt(“left”,0,100);`那么由于首尾值不一致，则将被视为无效参数，将不会有效果！ 
+
+* 4、在构造`PropertyValuesHolder`时，所使用的`ofInt`,`ofFloat`中，如果所有参数值都相同，也将不会有动画效果。 
+比如：
+```
+PropertyValuesHolder pvhLeft = PropertyValuesHolder.ofInt("left",100,100);
+```
+
+
+
+
 
 参考：
 
-[自定义控件三部曲之动画篇(十一)——layoutAnimation与gridLayoutAnimation - 启舰 - CSDN博客](https://blog.csdn.net/harvic880925/article/details/50785786)
+[自定义控件三部曲之动画篇(十二)——animateLayoutChanges与LayoutTransition - 启舰 - CSDN博客](https://blog.csdn.net/harvic880925/article/details/50985596)
+
 
 
 
