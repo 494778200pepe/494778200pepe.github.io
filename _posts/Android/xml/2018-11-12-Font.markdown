@@ -8,8 +8,31 @@ author: pepe
 description: 『 Font 』
 ---
 
+### **Bundled font**
 
+```
+// res/font/filename.ttf (.ttf, .ttc, .otf, or .xml)
+// In XML: @[package:]font/font_name
 
+<?xml version="1.0" encoding="utf-8"?>
+<font-family>
+  <font
+    android:font="@[package:]font/font_to_include"
+    android:fontStyle=["normal" | "italic"]
+    android:fontWeight="weight_value" />
+</font-family>
+```
 
+### **Downloadable font**
 
+```
+// res/font/filename.xml The filename is used as the resource ID.
+// In XML:@[package:]font/font_name
 
+<?xml version="1.0" encoding="utf-8"?>
+<font-family
+    android:fontProviderAuthority="authority"
+    android:fontProviderPackage="package"
+    android:fontProviderQuery="query"
+    android:fontProviderCerts="@[package:]array/array_resource" />
+```
