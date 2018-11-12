@@ -28,4 +28,104 @@ Resources res = getResources();
 String[] planets = res.getStringArray(R.array.planets_array);
 ```
 
+### **Quantity Strings (Plurals)**
+
+### **格式和样式设置**
+
+#### **转义撇号和引号**
+
+如果字符串中包含撇号 (')，您必须用反斜杠 (\') 将其转义，或为字符串加上双引号 ("")。 例如，以下是一些有效和无效的字符串：
+```
+<string name="good_example">This\'ll work</string>
+<string name="good_example_2">"This'll also work"</string>
+<string name="bad_example">This doesn't work</string>
+    <!-- Causes a compile error -->
+```
+
+如果字符串中包含双引号，您必须将其转义（使用 \"）。 为字符串加上单引号不起作用。
+
+```
+<string name="good_example">This is a \"good string\".</string>
+<string name="bad_example">This is a "bad string".</string>
+    <!-- Quotes are stripped; displays as: This is a bad string. -->
+<string name="bad_example_2">'This is another "bad string".'</string>
+    <!-- Causes a compile error -->
+```    
+
+### **设置字符串格式**
+
+如果您需要使用`String.format(String, Object...)`设置字符串格式，可以通过在字符串资源中加入格式参数来实现。 例如，对于以下资源：
+```
+<string name="welcome_messages">Hello, %1$s! You have %2$d new messages.</string>
+```
+在本例中，格式字符串有两个参数：%1$s 是一个字符串，而 %2$d 是一个十进制数字。 您可以像下面这样使用应用中的参数设置字符串格式：
+```
+Resources res = getResources();
+String text = String.format(res.getString(R.string.welcome_messages), username, mailCount);
+```
+
+### **使用 HTML 标记设置样式**
+
+您可以使用 HTML 标记为字符串添加样式设置。例如：
+```
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome">Welcome to <b>Android</b>!</string>
+</resources>
+```
+支持的 HTML 元素包括：
+
+* <b> 表示粗体文本。
+
+* <i> 表示斜体文本。
+
+* <u> 表示 下划线 文本。
+
+有时，您可能想让自己创建的带样式文本资源同时也用作格式字符串。 正常情况下，这是行不通的，因为`String.format(String, Object...)`方法会去除字符串中的所有样式信息。 
+这个问题的解决方法是编写带转义实体的`HTML`标记，在完成格式设置后，这些实体可通过`fromHtml(String)`恢复。 例如：
+
+* 1、将您带样式的文本资源存储为 HTML 转义字符串：
+   
+```
+<resources>
+  <string name="welcome_messages">Hello, %1$s! You have &lt;b>%2$d new messages&lt;/b>.</string>
+</resources>
+```
+在这个带格式的字符串中，添加了 <b> 元素。请注意，开括号使用 &lt; 表示法进行了 HTML 转义。
+
+ * 2、然后照常设置字符串格式，但还要调用 fromHtml(String) 以将 HTML 文本转换成带样式文本：
+ 
+```
+Resources res = getResources();
+String text = String.format(res.getString(R.string.welcome_messages), username, mailCount);
+CharSequence styledText = Html.fromHtml(text);
+```
+
+由于`fromHtml(String)`方法将设置所有`HTML`实体的格式，因此务必要使用`htmlEncode(String)`对您用于带格式文本的字符串中任何可能的`HTML`字符进行转义。 
+例如，如果您向`String.format()`传递的字符串参数可能包含“<”或“&”之类的字符，则必须在设置格式前进行转义，这样在通过`fromHtml(String)`传递带格式字符串时，字符就能以原始形式显示出来。 例如：
+
+```
+String escapedUsername = TextUtil.htmlEncode(username);
+
+Resources res = getResources();
+String text = String.format(res.getString(R.string.welcome_messages), escapedUsername, mailCount);
+CharSequence styledText = Html.fromHtml(text);
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
