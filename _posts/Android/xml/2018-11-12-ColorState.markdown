@@ -11,7 +11,7 @@ description: 『 ColorState 』
 ### **selector**
 
 ```
-// res/color/filename.xml
+// res/color/button_text.xml
 // In Java: R.color.filename
 // In XML: @[package:]color/filename
 

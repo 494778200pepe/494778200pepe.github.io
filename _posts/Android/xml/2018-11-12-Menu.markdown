@@ -10,7 +10,7 @@ description: 『 Menu 』
 
 ### **Menu**
 ```
-// res/menu/filename.xml
+// res/menu/example_menu.xml
 // In Java: R.menu.filename
 // In XML: @[package:]menu.filename
 

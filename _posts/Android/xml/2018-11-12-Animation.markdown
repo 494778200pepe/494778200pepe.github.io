@@ -10,7 +10,7 @@ description: 『 Animation 』
 
 ### **Property Animation**
 ```
-// res/animator/filename.xml
+// res/animator/property_animator.xml
 // In Java: R.animator.filename
 // In XML: @[package:]animator/filename
 
@@ -55,7 +55,7 @@ set.start();
 
 #### **Tween animation**
 ```
-// res/anim/filename.xml
+// res/anim/hyperspace_jump.xml
 // In Java: R.anim.filename
 // In XML: @[package:]anim/filename
 
@@ -96,7 +96,7 @@ image.startAnimation(hyperspaceJump);
 ```
 #### **Frame animation**
 ```
-// res/drawable/filename.xml
+// res/drawable/rocket.xml
 // In Java: R.drawable.filename
 // In XML: @[package:]drawable.filename
 

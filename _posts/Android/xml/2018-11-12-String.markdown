@@ -11,7 +11,7 @@ description: 『 String 』
 ### **String Array**
 
 ```
-// res/values/filename.xml
+// res/values/strings.xml
 // 在 Java 中：R.array.string_array_name
 
 <?xml version="1.0" encoding="utf-8"?>
