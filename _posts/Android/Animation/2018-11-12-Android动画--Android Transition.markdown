@@ -26,7 +26,9 @@ description: 『 Transition 』
 
 [Android 过渡(Transition)动画解析之基础篇 - 简书](https://www.jianshu.com/p/b72718bade45)
 
+[深入理解Android L新特性之 页面内容&共享元素过渡动画 - 简书](https://www.jianshu.com/p/50f62d9e60e1)
 
+[Android过渡(Transition)动画解析之源码篇 - 简书](https://www.jianshu.com/p/692284dc3646)
 
 
 
