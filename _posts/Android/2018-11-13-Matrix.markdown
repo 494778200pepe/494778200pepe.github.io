@@ -29,12 +29,59 @@ description: 『 Matrix 』
     
 ![matrix4]({{ site.baseurl }}/assets/images/android/matrix4.png)
 
+### **Canvas中的Matrix应用**
 
-把 Matrix 应用到 Canvas 有两个方法：`Canvas.setMatrix(matrix)`和`Canvas.concat(matrix)`。
+把`Matrix`应用到`Canvas`有两个方法：`Canvas.setMatrix(matrix)`和`Canvas.concat(matrix)`。
 
 * `Canvas.setMatrix(matrix)`：用`Matrix`直接替换`Canvas`当前的变换矩阵，即抛弃`Canvas`当前的变换，改用`Matrix`的变换（注：根据下面评论里以及我在微信公众号中收到的反馈，不同的系统中`setMatrix(matrix)` 的行为可能不一致，所以还是尽量用`concat(matrix)`吧）；
 
 * `Canvas.concat(matrix)`：用``Canvas`当前的变换矩阵和`Matrix`相乘，即基于`Canvas`当前的变换，叠加上`Matrix`中的变换。
+
+### **preXXX**
+
+不会重置Matrix，相当于当前操作矩阵(A)左乘参数矩阵(B)，即AB。例：
+```
+    // [1.0, 0.0, 0.0]
+    // [0.0, 1.0, 0.0]
+    // [0.0, 0.0, 1.0]
+    Matrix matrix = new Matrix();
+    
+    // [1.0, 0.0, 0.0]    [2.0, 3.0, 4.0]
+    // [0.0, 1.0, 0.0] -> [2.0, 0.0, 0.0]
+    // [0.0, 0.0, 1.0]    [1.0, 1.0, 1.0]
+    matrix.setValues(new float[]{2.0f,3.0f, 4.0f,
+                                 2.0f,0.0f, 0.0f,
+                                 1.0f,1.0f,1.0f});
+    
+    // [2.0, 3.0, 4.0]           [2.0, 0.0, 0.0]   [4.0, 6.0, 4.0]
+    // [2.0, 0.0, 0.0](matrix) * [0.0, 2.0, 0.0] = [4.0, 0.0, 0.0](matrix)
+    // [1.0, 1.0, 1.0]           [0.0, 0.0, 1.0]   [2.0, 2.0, 1.0]
+    matrix.preScale(2,2);
+```
+
+### **postXXX**
+
+不会重置Matrix，相当于当前操作矩阵(A)右乘参数矩阵(B)，即BA，例：
+```
+    // [1.0, 0.0, 0.0]
+    // [0.0, 1.0, 0.0]
+    // [0.0, 0.0, 1.0]
+    Matrix matrix = new Matrix();
+    
+    // [1.0, 0.0, 0.0]    [2.0, 3.0, 4.0]
+    // [0.0, 1.0, 0.0] -> [2.0, 0.0, 0.0]
+    // [0.0, 0.0, 1.0]    [1.0, 1.0, 1.0]
+    matrix.setValues(new float[]{2.0f,3.0f, 4.0f,
+                                 2.0f,0.0f, 0.0f,
+                                 1.0f,1.0f,1.0f});
+    
+    // [2.0, 0.0, 0.0]   [2.0, 3.0, 4.0]            [4.0, 6.0, 8.0]
+    // [0.0, 2.0, 0.0] * [2.0, 0.0, 0.0] (matrix) = [4.0, 0.0, 0.0](matrix)
+    // [0.0, 0.0, 1.0]   [1.0, 1.0, 1.0]            [1.0, 1.0, 1.0]
+    matrix.postScale(2,2);
+```
+
+
 
 [Android Matrix 方法详解（另类） - 简书](https://www.jianshu.com/p/6cd77d511510)
 
