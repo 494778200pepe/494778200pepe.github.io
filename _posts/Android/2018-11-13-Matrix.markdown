@@ -29,6 +29,13 @@ description: 『 Matrix 』
     
 ![matrix4]({{ site.baseurl }}/assets/images/android/matrix4.png)
 
+
+把 Matrix 应用到 Canvas 有两个方法：`Canvas.setMatrix(matrix)`和`Canvas.concat(matrix)`。
+
+* `Canvas.setMatrix(matrix)`：用`Matrix`直接替换`Canvas`当前的变换矩阵，即抛弃`Canvas`当前的变换，改用`Matrix`的变换（注：根据下面评论里以及我在微信公众号中收到的反馈，不同的系统中`setMatrix(matrix)` 的行为可能不一致，所以还是尽量用`concat(matrix)`吧）；
+
+* `Canvas.concat(matrix)`：用``Canvas`当前的变换矩阵和`Matrix`相乘，即基于`Canvas`当前的变换，叠加上`Matrix`中的变换。
+
 [Android Matrix 方法详解（另类） - 简书](https://www.jianshu.com/p/6cd77d511510)
 
 [理解矩阵乘法 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2015/09/matrix-multiplication.html)
