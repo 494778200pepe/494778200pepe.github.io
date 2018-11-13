@@ -9,20 +9,15 @@ description: 『 Matrix 』
 ---
 
 
-Android Matrix 方法详解（另类） - 简书
-https://www.jianshu.com/p/6cd77d511510
+[Android Matrix 方法详解（另类） - 简书](https://www.jianshu.com/p/6cd77d511510)
 
-理解矩阵乘法 - 阮一峰的网络日志
-http://www.ruanyifeng.com/blog/2015/09/matrix-multiplication.html
+[理解矩阵乘法 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2015/09/matrix-multiplication.html)
 
-8.3.18 Canvas API详解(Part 3)Matrix和drawBitmapMesh | 菜鸟教程
-http://www.runoob.com/w3cnote/android-tutorial-canvas-api3.html
+[8.3.18 Canvas API详解(Part 3)Matrix和drawBitmapMesh](http://www.runoob.com/w3cnote/android-tutorial-canvas-api3.html)
 
-android matrix 最全方法详解与进阶（完整篇） - 文涛的专栏 - CSDN博客
-https://blog.csdn.net/cquwentao/article/details/51445269
+[android matrix 最全方法详解与进阶（完整篇） - 文涛的专栏 - CSDN博客](https://blog.csdn.net/cquwentao/article/details/51445269)
 
-Android Matrix - Qiengo - 博客园
-http://www.cnblogs.com/qiengo/archive/2012/06/30/2570874.html#Matrix_theory
+[Android Matrix - Qiengo - 博客园](http://www.cnblogs.com/qiengo/archive/2012/06/30/2570874.html#Matrix_theory)
 
 
 
