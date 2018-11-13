@@ -86,6 +86,9 @@ description: 『 三角函数 』
 ### **Math.toRadians(double angdeg)**
 
 根据角度，得到弧度，既然得到正弦余弦值，乘以半径，即可得到想要的坐标了。
+```
+canvas.translate((float) Math.cos(Math.toRadians(currAngel + angles[i] / 2)) * length, (float) Math.sin(Math.toRadians(currAngel + angles[i] / 2)) * length);
+```
 
 ### **Math.toDegrees(Math.PI/2)**
 
