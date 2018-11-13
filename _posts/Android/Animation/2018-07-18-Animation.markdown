@@ -61,3 +61,17 @@ https://yanlu.me/animate-all-the-things-transitions-in-android/
 [Music Icons - 6,435 free vector icons](http://www.flaticon.com/categories/music)
 
 [8000个已分类好的扁平化图标(PNG/SVG/WEBFONT)](http://www.shejidaren.com/8000-flat-icons.html)
+
+
+开源项目：
+
+gifview  使用git图来展示动画
+
+z56402344/AnimTextView----AnimTextView
+https://github.com/z56402344/AnimTextView..........................
+z56402344/BaseAnimation: BaseAnimation network Android animation set, custom controls, nearly 200 kinds of source code！ BaseAnimation, if a new version is updated automatically to remind everyone, I hope everyone will contribute their animated XML files or other source, together to create this open source app！----动画集合
+https://github.com/z56402344/BaseAnimation
+Rano1/Interactive-animation: Collect android animation----动画集合
+https://github.com/Rano1/Interactive-animation
+lypeer/GoogleClock: The core of it is SVG .
+https://github.com/lypeer/GoogleClock
