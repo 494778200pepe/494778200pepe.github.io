@@ -51,7 +51,7 @@ public final int getScrollY() {
 ### **`View.getMeasuredWidth()`和`View.getWidth()`的区别**：
 * ①`View.getMeasuredWidth()`:获得的值是`setMeasuredDimension`方法设置的值，它的值在`measure()`运行后就会确定
 * ②`View.getWidth()`:获得是是`layout()`中传递的四个参数中的`mRight - mLeft`，它的值在`layot()`后确定
-* ③一般情况下，在`onLayout()`中使用`getMeasuredWidth()`,在除`onLayout()`之外的地方使用g`etWidth()`。
+* ③一般情况下，在`onLayout()`中使用`getMeasuredWidth()`,在除`onLayout()`之外的地方使用`getWidth()`。
 
 ### **view相对于自身 - 偏移**
 * `View.getTranslationX()`:计算的是该『View控件』在X轴的偏移量。初始值为0，向左偏移值为负，向右偏移值为正。 可以通过执行属性动画来使偏移。
@@ -89,4 +89,6 @@ public void setY(float y) {
 [Android开发之getX，getRawX,getWidth,getTranslationX等的区别 - dmk877的专栏 - CSDN博客](http://blog.csdn.net/dmk877/article/details/51550031)
 
 [Android开发之getMeasuredWidth和getWidth区别从源码分析 - CSDN博客](http://blog.csdn.net/dmk877/article/details/49734869)
+
+[android位置参数left、translationX、x、mScrollX - zhangweiocp的专栏 - CSDN博客](https://blog.csdn.net/zhangweiocp/article/details/51889712)
 
