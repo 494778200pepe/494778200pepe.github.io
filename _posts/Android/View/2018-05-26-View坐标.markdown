@@ -92,3 +92,5 @@ public void setY(float y) {
 
 [android位置参数left、translationX、x、mScrollX - zhangweiocp的专栏 - CSDN博客](https://blog.csdn.net/zhangweiocp/article/details/51889712)
 
+[图解Android View的scrollTo(),scrollBy(),getScrollX(), getScrollY() - bigconvience的专栏 - CSDN博客](https://blog.csdn.net/bigconvience/article/details/26697645)
+
