@@ -8,6 +8,25 @@ author: pepe
 description: 『 Matrix 』
 ---
 
+> Matrix:矩阵。
+
+### **加法**
+
+![matrix1]({{ site.baseurl }}/assets/images/android/matrix1.png)
+
+### **矩阵乘以一个常数**
+
+![matrix2]({{ site.baseurl }}/assets/images/android/matrix2.png)
+
+### **矩阵乘以矩阵**
+![matrix3]({{ site.baseurl }}/assets/images/android/matrix3.png)
+
+```
+    2   1       1   2       2*1+1*1=3   2*2+1*0=4
+  (      ) *  (      )  = (                      )
+    4   3       1   0       4*1+3*1=7   4*2+3*0=8
+```   
+    
 
 [Android Matrix 方法详解（另类） - 简书](https://www.jianshu.com/p/6cd77d511510)
 
