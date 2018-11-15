@@ -166,6 +166,7 @@ view.setBackgroundDrawable(drawable);
 
 [Android样式的开发:shape篇](http://keeganlee.me/post/android/20150830)
 
+[Android XML shape 标签使用详解（apk瘦身，减少内存好帮手） - popfisher - 博客园](https://www.cnblogs.com/popfisher/p/6238119.html)
 
 
 
