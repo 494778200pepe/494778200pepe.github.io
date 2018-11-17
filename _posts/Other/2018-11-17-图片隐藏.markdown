@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "图片隐藏"
+date:   2018-11-17 10:07:00 +0800
+categories: Android
+tags: other
+author: pepe
+description: 『 图片隐藏 』
+---
+
+```
+// cmd 到当前目录
+copy/b 纯洁的图片.jpg+秘密.zip 纯洁的图片.jpg
+// 注意：一定要以zip的格式压缩，压缩时可以设置密码
+```
+
+
+[老司机已发车，把小电影藏到图片里的独门秘笈快来get！](https://baijiahao.baidu.com/s?id=1562818987618808&wfr=spider&for=pc)
