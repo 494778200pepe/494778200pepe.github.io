@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "成功日记20181112"
+date:   2018-11-12 23:00:00 +0800
+categories: Success
+tags: Success
+author: pepe
+description: 『 Success 』
+---
+
+* 1、完成了属性动画的总结。
