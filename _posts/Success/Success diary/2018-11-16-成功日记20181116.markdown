@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "成功日记20181116"
+date:   2018-11-16 23:00:00 +0800
+categories: Success
+tags: Success
+author: pepe
+description: 『 Success 』
+---
+
+* 1、使用`Path`的`clipRect`，完成了风扇风速调节的控件开发。
+
+* 2、使用`SweepGradient`完成了渐变的温度显示控件的开发。

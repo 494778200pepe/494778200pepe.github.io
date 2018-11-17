@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "成功日记20181115"
+date:   2018-11-15 23:00:00 +0800
+categories: Success
+tags: Success
+author: pepe
+description: 『 Success 』
+---
+
+* 1、使用`shape`，配合`ImageView`的`android:scaleType="center"`完成了非居中渐变背景的绘制。
+
+* 2、使用`layer-list`完成了渐变边框的绘制。
