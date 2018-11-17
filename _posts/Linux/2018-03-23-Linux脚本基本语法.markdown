@@ -12,6 +12,9 @@ description: 『 Linux脚本基本语法 』
 ```
 scp
 // scp -r [本地文件夹] [[user@]host1:]file1  [[user@]host2:]file2
+
+scp -r root@172.16.1.236:/mnt/disk2/px2/pack_update_img/beiben/package_new  /px2/pack_update_img/beiben/package_new
+
 rsync
 ```
 
