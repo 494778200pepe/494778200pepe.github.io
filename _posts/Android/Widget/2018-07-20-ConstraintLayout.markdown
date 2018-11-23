@@ -191,6 +191,8 @@ app:constraint_barrierAllowsGoneWidgets = "false" // Barrier不再关注Gone的V
 
 [代码实验室--带你一步步理解使用 ConstraintLayout - 简书](https://www.jianshu.com/p/793f76cf9fea)
 
+[ConstraintLayout 终极秘籍（上） - 云在千峰](http://blog.chengyunfeng.com/?p=1030)
+
 
 
 
