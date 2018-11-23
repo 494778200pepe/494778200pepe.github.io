@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "布局文件无法预览"
+date:   2018-11-23 10:48:00 +0800
+categories: Android
+tags: BUG
+author: pepe
+description: 『 布局文件无法预览 』
+---
+
+### **1、无法选择SDK和虚拟设备**
+
+`Tool -> Android -> SDK Manager`，选择合适的SDK版本即可。
+
+
+
+### **2、layout文件不自动预览**
+
+在`layout`文件夹，新建一个`activity_main_drawer.xml`的文件，即可实现预览。
+
+[如何解决AndroidStudio3.1中的IDE错误? - 问答 - 云+社区 - 腾讯云](https://cloud.tencent.com/developer/ask/144332)
+
