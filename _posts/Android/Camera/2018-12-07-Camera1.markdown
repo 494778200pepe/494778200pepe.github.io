@@ -8,3 +8,28 @@ author: pepe
 description: 『 Camera1 』
 ---
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+参考：
+
+[Android 微信小视频录制功能的实现 - 简书](https://www.jianshu.com/p/6f84739ab85f)
+
+[利用FFmpeg玩转Android视频录制与压缩（一） - 剑西 - CSDN博客](https://blog.csdn.net/mabeijianxi/article/details/63335722)
+
+[利用FFmpeg玩转Android视频录制与压缩（二） - 剑西 - CSDN博客](https://blog.csdn.net/mabeijianxi/article/details/72983362)
