@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "Camera"
+date:   2018-12-07 14:58:00 +0800
+categories: Android
+tags: Camera
+author: pepe
+description: 『 Camera 』
+---
+
+> 在Android5.0(21)之前，对摄像头的控制使用`android.hardware.Camera`。Android 5.0(21)对拍照API进行了全新的设计，新增了全新设计的`Camera v2 API`。
+
+### **Camera三项功能**
+
+* 1、实时预览
+* 2、拍照
+* 3、录像(包括小视频)
+* 4、集成人脸识别、图像分析
+* 5、AR、VR，暂时还不清楚
