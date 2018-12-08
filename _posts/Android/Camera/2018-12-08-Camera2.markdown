@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "Camera2"
+date:   2018-12-08 13:50:00 +0800
+categories: Android
+tags: Camera
+author: pepe
+description: 『 Camera2 』
+---
+
+
+
+参考：
+
+[Android Camera2 使用总结 - 简书](https://www.jianshu.com/p/73fed068a795)
+
+[android.hardware.camera2 使用指南 - Android 实战技巧 - 极客学院Wiki](http://wiki.jikexueyuan.com/project/android-actual-combat-skills/android-hardware-camera2-operating-guide.html)
+
+[android.hardware.camera2  |  Android Developers](https://developer.android.google.cn/reference/android/hardware/camera2/package-summary)
+
+[Android基础总结： Camera2详解之一 API学习 - sjy0118的博客 - CSDN博客](https://blog.csdn.net/sjy0118/article/details/78748941)
+
+[Android进阶——你所知道的Camera2和你所不知道的Camera2完全解析 - 最美不过，心中有梦，身旁有你！ - CSDN博客](https://blog.csdn.net/CrazyMo_/article/details/78182243?locationNum=7&fps=1)
+
+[android-Camera2Video/AutoFitTextureView.java at master · googlesamples/android-Camera2Video](https://github.com/googlesamples/android-Camera2Video/blob/master/Application/src/main/java/com/example/android/camera2video/AutoFitTextureView.java)
+
+[android-Camera2Basic/Camera2BasicFragment.java at master · googlesamples/android-Camera2Basic](https://github.com/googlesamples/android-Camera2Basic/blob/master/Application/src/main/java/com/example/android/camera2basic/Camera2BasicFragment.java)
+
+[googlesamples/android-Camera2Raw](https://github.com/googlesamples/android-Camera2Raw)
+
+[pinguo-yuyidong/Camera2: Android L Camera2 Demo](https://github.com/pinguo-yuyidong/Camera2)
