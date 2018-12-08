@@ -16,7 +16,7 @@ description: 『 Camera2 』
 
 [android.hardware.camera2 使用指南 - Android 实战技巧 - 极客学院Wiki](http://wiki.jikexueyuan.com/project/android-actual-combat-skills/android-hardware-camera2-operating-guide.html)
 
-[android.hardware.camera2  |  Android Developers](https://developer.android.google.cn/reference/android/hardware/camera2/package-summary)
+[android.hardware.camera2  -  Android Developers](https://developer.android.google.cn/reference/android/hardware/camera2/package-summary)
 
 [Android基础总结： Camera2详解之一 API学习 - sjy0118的博客 - CSDN博客](https://blog.csdn.net/sjy0118/article/details/78748941)
 

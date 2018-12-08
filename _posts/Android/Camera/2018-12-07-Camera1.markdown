@@ -34,4 +34,4 @@ description: 『 Camera1 』
 
 [利用FFmpeg玩转Android视频录制与压缩（二） - 剑西 - CSDN博客](https://blog.csdn.net/mabeijianxi/article/details/72983362)
 
-[Camera  |  Android Developers](https://developer.android.google.cn/reference/android/hardware/Camera)
+[Camera -  Android Developers](https://developer.android.google.cn/reference/android/hardware/Camera)
