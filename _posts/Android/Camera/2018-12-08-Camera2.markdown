@@ -139,7 +139,7 @@ mCameraDevice.createCaptureSession(surfaces, new CameraCaptureSession.StateCallb
 mPreviewBuilder = mCameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_RECORD);
 ```
 
-#### **常量：用于创建CaptureReques**
+#### **常量：用于创建CaptureRequest**
 
 * TEMPLATE_MANUAL：	一个用于直接应用控制捕获参数的基本模板。
 * TEMPLATE_PREVIEW：	创建一个适合于相机预览窗口的请求。
