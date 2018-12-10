@@ -183,6 +183,25 @@ mPreviewSession.setRepeatingRequest(mPreviewBuilder.build(), "@CaptureCallback",
 
 ### **5`CameraCaptureSession`**
 
+> 系统向摄像头发送`Capture`请求，而摄像头会返回`CameraMetadata`，这一切都是在由对应的`CameraDevice`创建的`CameraCaptureSession`会话完成，当程序需要预览、拍照、再次预览时，都需要先通过会话。
+
+* CameraCaptureSession一旦被创建，直到对应的CameraDevice关闭才会死掉.
+
+* 虽然CameraCaptureSession会话用于从摄像头中捕获图像，但是只有同一个会话才能再次从同一摄像头中捕获图像。
+
+* 创建会话是一项耗时的异步操作，可能需要几百毫秒，因为它需要配置相机设备的内部管道并分配内存缓冲区以将图像发送到所需的目标，因而createCaptureSession和createReprocessableCaptureSession会将随时可用的CameraCaptureSession发送到提供的监听器的onConfigured回调中。如果无法完成配置，则触发onConfigureFailed回调，并且会话将不会变为活动状态。
+
+* 如果摄像头设备创建了一个新的会话，那么上一个会话是被关闭的，并且会回调与其关联的onClosed，如果不处理好，当会话关闭之后再次调用会话的对应方法那么所有方法将会跑出IllegalStateException异常。关闭的会话清除任何重复的请求（和调用了stopRepeating()方法类似），但是在新创建的会话接管并重新配置摄像机设备之前，关闭的会话仍然会正常完成所有正在进行的捕获请求。
+
+
+#### **功能**
+
+* 1、管理CameraCaptureSession.StateCallback状态回调，用于接收有关CameraCaptureSession状态的更新的回调对象，主要回调方法有两个当CameraDevice 完成配置，对应的会话开始处理捕获请求时触发onConfigured(CameraCaptureSession session)方法，反之配置失败时候触发onConfigureFailed(CameraCaptureSession session)方法。
+
+* 2、管理CameraCaptureSession.CaptureCallback捕获回调，用于接收捕获请求状态的回调，当请求触发捕获已启动时；捕获完成时；在捕获图像时发生错误的情况下；都会触发该回调对应的方法。
+
+
+
 ### **6`CaptureResult`**
 
 > `CaptureRequest`描述是从图像传感器捕获单个图像的结果的子集的对象。（`CaptureResults are produced by a CameraDevice after processing a CaptureRequest`）当`CaptureRequest`被处理之后由`CameraDevice`生成。
