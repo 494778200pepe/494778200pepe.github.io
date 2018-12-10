@@ -69,7 +69,7 @@ mCameraManager.openCamera(cameraId, mStateCallback, "@Handler");
 
 > `CameraDevice`是`Camera2`中抽象出来的一个对象，直接与系统硬件摄像头相联系。因为不可能所有的摄像头都会支持高级功能（即摄像头功能可被分为`limit`和`full`两个级别），当摄像头处于`limited`级别时候，此时`Camera2`和早期的`Camera`功能差不多，除此之外在`Camera2`架构中，`CameraDevice`还承担其他两项重要任务：
 
-* 可以通过`CameraDevice.StateCallback`监听摄像头(`CameraDevice`)的状态（主要包括`onOpened、onClosed(非抽象方法)、onDisconnected、onErro`四种状态）
+* 可以通过`CameraDevice.StateCallback`监听摄像头(`CameraDevice`)的状态（主要包括`onOpened、onClosed(非抽象方法)、onDisconnected、onErro`四种状态）,`StateCallback `是在`CameraManager.openCamera()`时传入的回调。
 
 ```
 private CameraDevice.StateCallback mStateCallback = new CameraDevice.StateCallback() {
