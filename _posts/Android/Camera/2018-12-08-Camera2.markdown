@@ -200,6 +200,7 @@ mPreviewSession.setRepeatingRequest(mPreviewBuilder.build(), "@CaptureCallback",
 
 * 2、管理CameraCaptureSession.CaptureCallback捕获回调，用于接收捕获请求状态的回调，当请求触发捕获已启动时；捕获完成时；在捕获图像时发生错误的情况下；都会触发该回调对应的方法。
 
+* 3、通过调用方法capture(CaptureRequest request, CameraCaptureSession.CaptureCallback listener, Handler handler)提交捕获图像请求（Submit a request for an image to be captured by the camera device.）即拍照
 
 
 ### **6`CaptureResult`**
