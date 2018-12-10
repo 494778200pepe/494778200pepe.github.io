@@ -16,9 +16,40 @@ description: 『 Camera2 』
 
 * 1、`getCameraIdList()`:获取可用摄像头列表
 
+```
+private void getCameraId() {
+        mCameraManager = (CameraManager) mContext.getSystemService(Context.CAMERA_SERVICE);
+        try {
+            //获取可用摄像头列表
+            for (String cameraId : mCameraManager.getCameraIdList()) {
+                //获取相机的相关参数
+                CameraCharacteristics characteristics = mCameraManager.getCameraCharacteristics(cameraId);
+                Integer facing = characteristics.get(CameraCharacteristics.LENS_FACING);
+                if (facing != null) {
+                    if (facing == CameraCharacteristics.LENS_FACING_FRONT) {
+                        // 后置摄像头的id
+                        cameraBackId = String.valueOf(facing);
+                    } else if (facing == CameraCharacteristics.LENS_FACING_BACK) {
+                        // 前置摄像头的id
+                        cameraFrontId = String.valueOf(facing);
+                    }
+                }
+            }
+        } catch (CameraAccessException e) {
+            e.printStackTrace();
+        } catch (NullPointerException e) {
+            //不支持Camera2API
+        }
+    }
+```
+
 * 2、`getCameraCharacteristics(String cameraId)`:获取摄像头的详细参数和支持的功能
 
 * 3、`openCamera(String cameraId, CameraDevice.StateCallback callback, Handler handler)`打开指定Id的摄像头
+
+```
+mCameraManager.openCamera(cameraId, mStateCallback, null);
+```
 
 ### **2`CameraCharacteristics`**
 
