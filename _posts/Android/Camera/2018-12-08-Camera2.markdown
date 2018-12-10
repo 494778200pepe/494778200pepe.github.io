@@ -12,8 +12,6 @@ description: 『 Camera2 』
 
 > 用于管理系统摄像头。
 
-通过`getCameraIdList()`方法获取Android设备的摄像头列表
-
 `CameraManager manager = (CameraManager)context.getSystemService(Context.CAMERA_SERVICE);`
 
 * 1、`getCameraIdList()`:获取可用摄像头列表
