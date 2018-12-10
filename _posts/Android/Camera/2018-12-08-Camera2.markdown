@@ -202,6 +202,11 @@ mPreviewSession.setRepeatingRequest(mPreviewBuilder.build(), "@CaptureCallback",
 
 * 3、通过调用方法capture(CaptureRequest request, CameraCaptureSession.CaptureCallback listener, Handler handler)提交捕获图像请求（Submit a request for an image to be captured by the camera device.）即拍照
 
+* 4、通过调用方法setRepeatingRequest(CaptureRequest request, CameraCaptureSession.CaptureCallback listener, Handler handler)请求不断重复捕获图像，即实现预览
+
+* 5、通过方法调用stopRepeating()实现停止捕获图像，即停止预览。
+
+
 
 ### **6`CaptureResult`**
 
