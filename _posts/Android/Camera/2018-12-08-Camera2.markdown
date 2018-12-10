@@ -139,6 +139,25 @@ mCameraDevice.createCaptureSession(surfaces, new CameraCaptureSession.StateCallb
 mPreviewBuilder = mCameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_RECORD);
 ```
 
+#### **常量：用于创建CaptureReques**
+
+* TEMPLATE_MANUAL：	一个用于直接应用控制捕获参数的基本模板。
+* TEMPLATE_PREVIEW：	创建一个适合于相机预览窗口的请求。
+* TEMPLATE_RECORD：	创建一个适合于视频录制的请求。
+* TEMPLATE_STILL_CAPTURE：	创建一个适合于静态图像捕获的请求。
+* TEMPLATE_ZERO_SHUTTER_LAG：	创建一个适用于零快门延迟的请求。
+* TEMPLATE_VIDEO_SNAPSHOT：	在录制视频时创建一个适合静态图像捕捉的请求。
+
+#### **方法说明**
+
+* `close()`：返回void,尽可能快地关闭与这个相机设备的连接。
+* `createCaptureRequest(int templateType)`：返回`CaptureRequest.Builder`,创建一个`CaptureRequest.Builder`用于新捕获请求的，初始化为目标用例的模板。
+* `createCaptureSession(List Surface outputs, CameraCaptureSession.StateCallback callback, Handler handler)`：返回void,	通过向相机设备提供`Surfaces`的目标输出集，创建一个新的相机捕捉会话。
+* `createCaptureSessionByOutputConfigurations(List OutputConfiguration outputConfigurations, CameraCaptureSession.StateCallback callback, Handler handler)`：返回void,	通过为相机设备提供表面的目标输出集和相应的表面配置来创建一个新的相机捕捉会话。
+* `createConstrainedHighSpeedCaptureSession(List Surface outputs, CameraCaptureSession.StateCallback callback, Handler handler)`：返回void,	创建一个新的受限的高速捕捉会话。
+* `getId()`：返回String,	获取相机设备的ID，string类型
+
+
 ### **4`CameraRequest`和`CameraRequest.Builder`**
 
 > `CameraRequest`代表了一次捕获请求，而`CameraRequest.Builder`用于描述捕获图片的各种参数设置，包含捕获硬件（传感器，镜头，闪存），对焦模式、曝光模式，处理流水线，控制算法和输出缓冲区的配置。，然后传递到对应的会话中进行设置，`CameraRequest.Builder`则负责生成`CameraRequest`对象。当程序调用`setRepeatingRequest()`方法进行预览时，或调用capture()方法进行拍照时，都需要传入`CameraRequest`参数。`CameraRequest`可以通过`CameraRequest.Builder`来进行初始化，通过调用`createCaptureRequest`来获得。
