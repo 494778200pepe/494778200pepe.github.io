@@ -74,8 +74,10 @@ mCameraManager.openCamera(cameraId, mStateCallback, "@Handler");
 ```
 private CameraDevice.StateCallback mStateCallback = new CameraDevice.StateCallback() {
 
+
         @Override
         public void onOpened(@NonNull CameraDevice cameraDevice) {
+            // 当相机完成打开操作后，这个方法就被调用
             Log.d("pepe", "StateCallback    onOpened");
             mCameraDevice = cameraDevice;
             startPreview();
@@ -87,6 +89,7 @@ private CameraDevice.StateCallback mStateCallback = new CameraDevice.StateCallba
 
         @Override
         public void onDisconnected(@NonNull CameraDevice cameraDevice) {
+            // 当相机设备不再可用时，这个方法就被调用
             Log.d("pepe", "StateCallback    onDisconnected");
             mCameraOpenCloseLock.release();
             cameraDevice.close();
@@ -96,10 +99,22 @@ private CameraDevice.StateCallback mStateCallback = new CameraDevice.StateCallba
         @Override
         public void onError(@NonNull CameraDevice cameraDevice, int error) {
             Log.d("pepe", "StateCallback    onError");
+            // 当相机设备遇到严重错误时，这种方法就被调用了，错误见下面的说明
+            // ERROR_CAMERA_DEVICE	由CameraDevice.StateCallback的onError(CameraDevice, int)报告的错误代码，表明相机设备遇到了一个致命错误
+            //	ERROR_CAMERA_DISABLED	由CameraDevice.StateCallback的onError(CameraDevice, int)报告的错误代码，这表明由于设备的政策，相机设备无法打开。
+            //	ERROR_CAMERA_IN_USE	由onError(CameraDevice, int)报告的错误代码，表明摄像机设备已经在使用中了
+            //	ERROR_CAMERA_SERVICE	由onError(CameraDevice, int)报告的错误代码，表明摄像机服务遇到了一个致命错误。
+            //	ERROR_MAX_CAMERAS_IN_USE	由onError(CameraDevice, int)报告的错误代码，表明相机设备无法打开，因为有太多其他的开放相机设备。
+
             mCameraOpenCloseLock.release();
             cameraDevice.close();
             mCameraDevice = null;
             finish();
+        }
+
+        @Override
+        public void onClosed(CameraDevice camera){
+            // 当一个相机设备CameraDevice的close()方法时，这个方法就被调用
         }
     };
 ```
@@ -178,6 +193,7 @@ mPreviewSession.setRepeatingRequest(mPreviewBuilder.build(), "@CaptureCallback",
 
 [Android进阶——你所知道的Camera2和你所不知道的Camera2完全解析 - 最美不过，心中有梦，身旁有你！ - CSDN博客](https://blog.csdn.net/CrazyMo_/article/details/78182243?locationNum=7&fps=1)
 
+[Android基础总结： Camera2详解之一 API学习 - sjy0118的博客 - CSDN博客](https://blog.csdn.net/sjy0118/article/details/78748941)
 
 
 
@@ -188,8 +204,6 @@ mPreviewSession.setRepeatingRequest(mPreviewBuilder.build(), "@CaptureCallback",
 [android.hardware.camera2 使用指南 - Android 实战技巧 - 极客学院Wiki](http://wiki.jikexueyuan.com/project/android-actual-combat-skills/android-hardware-camera2-operating-guide.html)
 
 [android.hardware.camera2  -  Android Developers](https://developer.android.google.cn/reference/android/hardware/camera2/package-summary)
-
-[Android基础总结： Camera2详解之一 API学习 - sjy0118的博客 - CSDN博客](https://blog.csdn.net/sjy0118/article/details/78748941)
 
 [android-Camera2Video/AutoFitTextureView.java at master · googlesamples/android-Camera2Video](https://github.com/googlesamples/android-Camera2Video/blob/master/Application/src/main/java/com/example/android/camera2video/AutoFitTextureView.java)
 
