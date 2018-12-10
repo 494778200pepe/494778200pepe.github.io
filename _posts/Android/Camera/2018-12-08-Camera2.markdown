@@ -20,26 +20,25 @@ description: 『 Camera2 』
 
 * 3、`openCamera(String cameraId, CameraDevice.StateCallback callback, Handler handler)`打开指定Id的摄像头
 
-### **2`CameraDevice`**
+### **2`CameraCharacteristics`**
+
+> 描述`Cameradevice`属性的对象，可以使用`CameraManager`通过`getCameraCharacteristics（String cameraId）`进行查询。
+
+### **3`CameraDevice`**
 
 > `CameraDevice`是`Camera2`中抽象出来的一个对象，直接与系统硬件摄像头相联系。因为不可能所有的摄像头都会支持高级功能（即摄像头功能可被分为`limit`和`full`两个级别），当摄像头处于`limited`级别时候，此时`Camera2`和早期的`Camera`功能差不多，除此之外在`Camera2`架构中，`CameraDevice`还承担其他两项重要任务：
 
 * 可以通过`CameraDevice.StateCallback`监听摄像头(`CameraDevice`)的状态（主要包括`onOpened、onClosed(非抽象方法)、onDisconnected、onErro`四种状态）
 
-* 管理`CameraCaptureSession`，-通过方法`createCaptureSession(List outputs, CameraCaptureSession.StateCallback callback, Handler handler)`方法和`createReprocessableCaptureSession(InputConfiguration inputConfig, List outputs, CameraCaptureSession.StateCallback callback, Handler handler)`方法创建会话 （其中第三个参数： `The handler on which the callback should be invoked, or null to use the current thread’s looper.`），通常会在`CameraDevice.StateCallback`中调用对应方法创建预览会话。
+* 创建`CameraCaptureSession`，-通过方法`createCaptureSession(List outputs, CameraCaptureSession.StateCallback callback, Handler handler)`方法和`createReprocessableCaptureSession(InputConfiguration inputConfig, List outputs, CameraCaptureSession.StateCallback callback, Handler handler)`方法创建会话 （其中第三个参数： `The handler on which the callback should be invoked, or null to use the current thread’s looper.`），通常会在`CameraDevice.StateCallback`中调用对应方法创建预览会话。
 
-* 管理`CaptureRequest`，主要包括通过`createCaptureRequest（int templateType）`创建捕获请求，在需要预览、拍照、再次预览的时候都需要通过创建请求来完成。
+* 创建`CaptureRequest`，主要包括通过`createCaptureRequest（int templateType）`创建捕获请求，在需要预览、拍照、再次预览的时候都需要通过创建请求来完成。
 
-### **3`CameraCaptureSession`**
-
-
-### **4`CameraCharacteristics`**
-
-> 描述`Cameradevice`属性的对象，可以使用`CameraManager`通过`getCameraCharacteristics（String cameraId）`进行查询。
-
-### **5`CameraRequest`和`CameraRequest.Builder`**
+### **4`CameraRequest`和`CameraRequest.Builder`**
 
 > `CameraRequest`代表了一次捕获请求，而`CameraRequest.Builder`用于描述捕获图片的各种参数设置，包含捕获硬件（传感器，镜头，闪存），对焦模式、曝光模式，处理流水线，控制算法和输出缓冲区的配置。，然后传递到对应的会话中进行设置，`CameraRequest.Builder`则负责生成`CameraRequest`对象。当程序调用`setRepeatingRequest()`方法进行预览时，或调用capture()方法进行拍照时，都需要传入`CameraRequest`参数。`CameraRequest`可以通过`CameraRequest.Builder`来进行初始化，通过调用`createCaptureRequest`来获得。
+
+### **5`CameraCaptureSession`**
 
 ### **6`CaptureResult`**
 
