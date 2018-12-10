@@ -8,6 +8,16 @@ author: pepe
 description: 『 Camera2 』
 ---
 
+android5.0之后支持的API，主要功能都在`android.hardware.camera2`中。相关的类有： 
+
+* 1：`CameraManager`(以及两个回调 `AvailabilityCallback`和`TorchCallback`) 
+* 2：`CameraDevice`(以及回调`StateCallback`) 
+* 3：`CameraCaptureSession`(以及两个回调：`CaptureCallback`和`StateCallback`) 
+* 4：`CaptureRequest`(以及`CaptureRequest.Builder`类)+`CaptureResult+TotalCaptureResult`+`CameraCharacteristics`，这四个类都继承了基类`CameraMetadata` 
+* 5：接收数据类`android.media.ImageReader`
+* 6：`xml`布局类：`TextureView` (google demo推荐)或`SurfaceView`
+
+
 ### **1`CameraManager`**
 
 > 用于管理系统摄像头。
@@ -148,6 +158,11 @@ mPreviewSession.setRepeatingRequest(mPreviewBuilder.build(), "@CaptureCallback",
 参考：
 
 [Android进阶——你所知道的Camera2和你所不知道的Camera2完全解析 - 最美不过，心中有梦，身旁有你！ - CSDN博客](https://blog.csdn.net/CrazyMo_/article/details/78182243?locationNum=7&fps=1)
+
+
+
+
+
 
 [Android Camera2 使用总结 - 简书](https://www.jianshu.com/p/73fed068a795)
 
