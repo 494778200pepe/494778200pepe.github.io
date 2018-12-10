@@ -48,7 +48,7 @@ private void getCameraId() {
 * 3、`openCamera(String cameraId, CameraDevice.StateCallback callback, Handler handler)`打开指定Id的摄像头
 
 ```
-mCameraManager.openCamera(cameraId, mStateCallback, null);
+mCameraManager.openCamera(cameraId, mStateCallback, "@Handler");
 ```
 
 ### **2`CameraCharacteristics`**
@@ -132,6 +132,10 @@ mPreviewBuilder = mCameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_RECOR
 ### **4`CameraRequest`和`CameraRequest.Builder`**
 
 > `CameraRequest`代表了一次捕获请求，而`CameraRequest.Builder`用于描述捕获图片的各种参数设置，包含捕获硬件（传感器，镜头，闪存），对焦模式、曝光模式，处理流水线，控制算法和输出缓冲区的配置。，然后传递到对应的会话中进行设置，`CameraRequest.Builder`则负责生成`CameraRequest`对象。当程序调用`setRepeatingRequest()`方法进行预览时，或调用capture()方法进行拍照时，都需要传入`CameraRequest`参数。`CameraRequest`可以通过`CameraRequest.Builder`来进行初始化，通过调用`createCaptureRequest`来获得。
+
+```
+mPreviewSession.setRepeatingRequest(mPreviewBuilder.build(), "@CaptureCallback", mBackgroundHandler);
+```
 
 ### **5`CameraCaptureSession`**
 
