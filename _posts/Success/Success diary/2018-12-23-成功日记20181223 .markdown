@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "成功日记20181223"
+date:   2018-12-23 23:00:00 +0800
+categories: Success
+tags: Success
+author: pepe
+description: 『 Success 』
+---
+
+* 1、正式签订了购房合同。

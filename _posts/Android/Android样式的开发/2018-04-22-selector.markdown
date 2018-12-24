@@ -177,7 +177,20 @@ Button还可以实现更复杂的效果，例如渐变
 
 [Android样式的开发:selector篇](http://keeganlee.me/post/android/20150905)
 
+Android Layer_list 实现倒三角效果 - Z·Pan - CSDN博客
+https://blog.csdn.net/zp0119/article/details/79409649
 
+使用layer-list实现特殊的效果 - 天长地久-无为 - 博客园
+http://www.cnblogs.com/jianglijs/p/9441074.html
+
+Android利用layer-list实现ProgressBar顺时针及逆时针旋转 - 简书
+https://www.jianshu.com/p/1b051b90837d
+
+Drawable子类之——LayerDrawable （图层叠加） - 简书
+https://www.jianshu.com/p/f1de437f4b3d
+
+ShapeDrawable资源的制作与使用 - swt369的博客 - CSDN博客
+https://blog.csdn.net/swt369/article/details/77411210
 
 
 
