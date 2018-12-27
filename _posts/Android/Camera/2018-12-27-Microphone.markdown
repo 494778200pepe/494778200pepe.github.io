@@ -24,3 +24,5 @@ description: 『 Microphone 』
 [Android 实时获取麦克风输入音量的代码 - 穿拖鞋写程序 - CSDN博客](https://blog.csdn.net/paulluo0739/article/details/7192056)
 
 [Android--音频开发--信号从麦克风到扬声器的处理流程 - 一条骆驼的博客 - CSDN博客](https://blog.csdn.net/qq_38325620/article/details/76409302)
+
+[Android实现录音方法（仿微信语音、麦克风录音、发送语音、解决5.0以上BUG）_Android_脚本之家](https://www.jb51.net/article/138094.htm)
