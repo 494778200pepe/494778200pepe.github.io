@@ -36,6 +36,18 @@ Android中给我们提供了多达13种的 Drawable:
 
 * `TransitionDrawable`
 
+```
+//            可行方案1
+//            XmlResourceParser closeCoverXml = getResources().getXml(R.xml.close_cover);
+//            try {
+//                Drawable close_cover = Drawable.createFromXml(mContext.getResources(), closeCoverXml);
+//                iv_close_cover.setImageDrawable(close_cover);
+//            } catch (XmlPullParserException e) {
+//                e.printStackTrace();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+```
 
 
 [8.2.1 Bitmap(位图)全解析 Part 1](http://www.runoob.com/w3cnote/android-tutorial-bitmap1.html)
