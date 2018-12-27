@@ -26,3 +26,5 @@ description: 『 Microphone 』
 [Android--音频开发--信号从麦克风到扬声器的处理流程 - 一条骆驼的博客 - CSDN博客](https://blog.csdn.net/qq_38325620/article/details/76409302)
 
 [Android实现录音方法（仿微信语音、麦克风录音、发送语音、解决5.0以上BUG）_Android_脚本之家](https://www.jb51.net/article/138094.htm)
+
+[用ClipDrawable实现音频录制麦克风讲话效果 - 简书](https://www.jianshu.com/p/06eca50ddda4)
