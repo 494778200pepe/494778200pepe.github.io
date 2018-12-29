@@ -15,6 +15,7 @@ frontend: Frontend
 algorithm: Algorithm
 git: Git
 http: Http
+kotlin: Kotlin
 success: Success
 wechat: wechat
 other: Other

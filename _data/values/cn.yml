@@ -15,6 +15,7 @@ frontend: 前端
 algorithm: 算法
 git: Git
 http: Http
+kotlin: Kotlin
 success: 成功
 wechat: wechat
 other: Other
