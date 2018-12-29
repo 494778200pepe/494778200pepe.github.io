@@ -9,17 +9,12 @@ description: 『 Kotlin 』
 ---
 
 
-Kotlin 语言中文站
-https://www.kotlincn.net/
+[Kotlin 语言中文站](https://www.kotlincn.net/)
 
-编写 Kotlin 代码文档 - Kotlin 语言中文站
-http://www.kotlincn.net/docs/reference/kotlin-doc.html
+[编写 Kotlin 代码文档 - Kotlin 语言中文站](http://www.kotlincn.net/docs/reference/kotlin-doc.html)
 
-Kotlin 教程 | 菜鸟教程
-http://www.runoob.com/kotlin/kotlin-tutorial.html
+[Kotlin 教程 - 菜鸟教程](http://www.runoob.com/kotlin/kotlin-tutorial.html)
 
-Kotlin官方文档 - 专题 - 简书
-https://www.jianshu.com/c/8705dd6e1342
+[Kotlin官方文档 - 专题 - 简书](https://www.jianshu.com/c/8705dd6e1342)
 
-Kotlin - 标签 - figozhg - 博客园
-https://www.cnblogs.com/figozhg/tag/Kotlin/default.html?page=3
+[Kotlin - 标签 - figozhg - 博客园](https://www.cnblogs.com/figozhg/tag/Kotlin/default.html?page=3)
