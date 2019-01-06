@@ -33,6 +33,9 @@ description: 『 Proguard混淆 』
 
 [Android 反编译利器，jadx 的高级技巧](https://mp.weixin.qq.com/s/8ayLeGavaYfMxqLoTxFIlQ)
 
-[Android 高级混淆和代码保护技术 · Drakeet 的个人博客](http://drakeet.me/android-advanced-proguard-and-security/)
+[Android 高级混淆和代码保护技术 · Drakeet 的个人博客](https://blog.csdn.net/hqiangtai/article/details/76037244)
 
 [美团Android资源混淆保护实践 - 安卓 - 伯乐在线](http://android.jobbole.com/81915/)
+
+android 防破解, 代码混淆，代码保护 - 晕菜一员 - 博客园
+https://www.cnblogs.com/CharlesGrant/p/7544311.html
