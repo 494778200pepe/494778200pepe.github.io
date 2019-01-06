@@ -19,6 +19,9 @@ description: 『 Proguard混淆 』
 
 参考：
 
+Android混淆你该知道的事
+https://mp.weixin.qq.com/s/-q-BqCG6PdJVpdEs6HntmQ
+
 玉刚说
 https://mp.weixin.qq.com/s/sFPnK_nvNQOWRK3rd3XnZw
 
