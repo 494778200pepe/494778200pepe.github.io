@@ -1,0 +1,65 @@
+---
+layout: post
+title:  "OkHttp学习三：基本流程和学习目标"
+date:   2019-01-06 11:06:00 +0800
+categories: Http
+tags: OkHttp
+author: pepe
+description: 『 基本流程和学习目标 』
+---
+
+![okhttp1]({{ site.baseurl }}/assets/images/Http/OkHttp/okhttp1.png)
+
+### **学习目标**
+
+* 1、get请求
+* 2、post请求
+* 3、上传图片/文件
+* 4、批量上传图片/文件
+* 5、断点下载
+* 6、断点续传
+* 7、更新数据库
+* 8、下载进度
+* 9、Json
+* 10、session保持
+* 11、取消请求
+* 12、根据tag(Activity)取消请求
+* 13、设置证书
+* 14、超时处理
+* 15、cookie管理
+* 16、支持callback自定义泛型
+
+
+参考：
+
+[拆轮子系列：拆 OkHttp - Piasy的博客](https://blog.piasy.com/2016/07/11/Understand-OkHttp/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
