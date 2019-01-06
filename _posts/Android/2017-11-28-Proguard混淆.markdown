@@ -19,11 +19,9 @@ description: 『 Proguard混淆 』
 
 参考：
 
-Android混淆你该知道的事
-https://mp.weixin.qq.com/s/-q-BqCG6PdJVpdEs6HntmQ
+[Android混淆你该知道的事](https://mp.weixin.qq.com/s/-q-BqCG6PdJVpdEs6HntmQ)
 
-玉刚说
-https://mp.weixin.qq.com/s/sFPnK_nvNQOWRK3rd3XnZw
+[Android 开发应该掌握的 Proguard 技巧](https://mp.weixin.qq.com/s/sFPnK_nvNQOWRK3rd3XnZw)
 
 [Android代码混淆与加固技术](https://www.imooc.com/learn/879)
 
