@@ -15,8 +15,26 @@ description: 『 Proguard混淆 』
     3、R文件混淆会导致引用错误
    
    
-   
+> Proguard，翻译过来是“护卫兵” 。包含四个功能：
 
+* 压缩(Shrink):检测和删除没有使用的类，字段，方法和特性
+
+* 优化(Optimize):分析和优化Java字节码
+
+* 混淆(Obfuscate):使用简短的无意义的名称，对类、字段和方法进行重命名
+
+* 预检(Preveirfy):用来对Java class进行预验证(预验证主要是针对JME开发来说的，Android中没有预验证过程，默认是关闭)
+   
+```
+buildTypes {
+    release {
+        // minifyEnabled 为true是开启Proguard的功能，false是关闭
+        minifyEnabled true
+        proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+}
+```
+    
 参考：
 
 [Android混淆你该知道的事](https://mp.weixin.qq.com/s/-q-BqCG6PdJVpdEs6HntmQ)
