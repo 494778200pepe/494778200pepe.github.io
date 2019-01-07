@@ -14,6 +14,8 @@ description: 『 Proguard混淆 』
     2、四大组件由于在Android Manifest.xml 里面注册了，防止系统找不到
     3、R文件混淆会导致引用错误
  
+[ProGuard manual](https://www.guardsquare.com/en/products/proguard/manual/usage)
+ 
 ### **Proguard介绍** 
    
 > Proguard，翻译过来是“护卫兵” 。包含四个功能：
@@ -64,7 +66,7 @@ buildTypes {
 
 参考：
 
-[Android混淆你该知道的事](https://mp.weixin.qq.com/s/-q-BqCG6PdJVpdEs6HntmQ)
+[Android混淆你该知道的事](https://www.jianshu.com/p/60e82aafcfd0)
 
 [Android 开发应该掌握的 Proguard 技巧](https://mp.weixin.qq.com/s/sFPnK_nvNQOWRK3rd3XnZw)
 
@@ -74,8 +76,6 @@ buildTypes {
 
 [美团Android资源混淆保护实践](https://tech.meituan.com/mt-android-resource-obfuscation.html)
 
-[5步搞定android混淆](https://mp.weixin.qq.com/s?__biz=MzI3MDE0NzYwNA==&mid=2651433815&idx=1&sn=89a6f5329d93187b99320a55d16d4670&scene=1&srcid=0915lDylCJr0594xKg4dvVGS#rd)
-
 [Android 反编译利器，jadx 的高级技巧](https://mp.weixin.qq.com/s/8ayLeGavaYfMxqLoTxFIlQ)
 
 [Android 高级混淆和代码保护技术 · Drakeet 的个人博客](https://blog.csdn.net/hqiangtai/article/details/76037244)
@@ -84,3 +84,6 @@ buildTypes {
 
 android 防破解, 代码混淆，代码保护 - 晕菜一员 - 博客园
 https://www.cnblogs.com/CharlesGrant/p/7544311.html
+
+关于Android代码混淆的详细讲解 - 码农教程
+http://www.manongjc.com/article/1598.html
