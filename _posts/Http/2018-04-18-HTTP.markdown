@@ -7,11 +7,6 @@ tags: Http
 author: pepe
 description: 『 HTTP 』
 ---
-| hh1  |43434|43343434|
-| ---- | ---- | ---- |
-|hh1|hh324243243231|hh1|
-|32|hh1|3424343434343|
-|hh1|43423|hh1|
 
 
 [小哥哥,小姐姐,我有一份tcp、http面试指南你要吗？ - 掘金](https://juejin.im/post/5ad4094e6fb9a028d7011069)
