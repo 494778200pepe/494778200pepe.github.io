@@ -20,7 +20,7 @@ description: 『 cmd乱码 问题解决 』
 // 437      MS-DOS 美国英语
  ```
  
- ### 第二种：永久性修改
+### 第二种：永久性修改
  
 * 1. win+R 输入`regedit`进入注册表 
 * 2. 找到 `HKEY_CURRENT_USER\Console\%SystemRoot%_system32_cmd.exe` 如果 该项下已存在`CodePage`项，则把值改为十进制”936”；如果不存在，在该项下新建一个 DWORD（32位值），命名为“CodePage”，值设为“65001” 
