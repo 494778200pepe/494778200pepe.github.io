@@ -1,0 +1,44 @@
+---
+layout: post
+title:  "cmd乱码"
+date:   2019-04-09 09:17:00 +0800
+categories: Android
+tags: other
+author: pepe
+description: 『 cmd乱码 问题解决 』
+---
+
+### 第一种：临时性修改
+ cmd窗口之中：
+ ```
+ chcp 936
+ 
+// 代码页   描述
+// 65001    UTF-8代码页
+// 950      繁体中文
+// 936      简体中文默认的GBK
+// 437      MS-DOS 美国英语
+ ```
+ 
+ ### 第二种：永久性修改
+ 
+* 1. win+R 输入`regedit`进入注册表 
+* 2. 找到 `HKEY_CURRENT_USER\Console\%SystemRoot%_system32_cmd.exe` 如果 该项下已存在`CodePage`项，则把值改为十进制”936”；如果不存在，在该项下新建一个 DWORD（32位值），命名为“CodePage”，值设为“65001” 
+* 3. 重启cmd后生效 
+* 4. 对于`Power shell`修改同样，只需在第2步修改 
+    `%SystemRoot%_system32_WindowsPowerShell_v1.0_powershell.exe` 下的项。
+    
+ 
+修改过程中，遇到一个问题，按`第二种`修改之后，无效。重启也是无效。
+然后在注册表中搜索`65001`，发现`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor`里面有一个`Autorun`的文件包含`65001`。`Autorun`顾名思义，就是自动执行。里面的内容是：
+
+```
+@chcp 65001>nul
+```
+
+原来是这样啊！把`65001`改成`936`。
+
+至此，问题解决。
+
+ 
+ 
