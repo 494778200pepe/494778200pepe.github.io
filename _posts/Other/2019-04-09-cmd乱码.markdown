@@ -40,5 +40,7 @@ description: 『 cmd乱码 问题解决 』
 
 至此，问题解决。
 
- 
+参考：
+
+[windows 控制台cmd乱码（及永久修改编码）的解决办法 - Roninwz的博客 - CSDN博客](https://blog.csdn.net/qq_35038153/article/details/78430359 )
  
