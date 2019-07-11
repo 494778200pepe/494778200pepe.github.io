@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "多标签tab滑动切换"
+date:   2019-07-08 17:26:00 +0800
+categories: Android
+tags: Widget
+author: pepe
+description: 『 多标签tab滑动切换 』
+---
+
+[Android多标签tab滑动切换 - 自定义View快速实现高度定制封装 - solocoder的博客 - CSDN博客](
+https://blog.csdn.net/solocoder/article/details/83685999)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

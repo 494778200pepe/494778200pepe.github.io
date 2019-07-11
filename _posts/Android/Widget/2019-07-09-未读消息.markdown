@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "未读消息"
+date:   2019-07-09 10:06:00 +0800
+categories: Android
+tags: Widget
+author: pepe
+description: 『 未读消息 』
+---
+
+[crazyqiang/BadgeView: 适配所有View](
+https://github.com/crazyqiang/BadgeView)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
