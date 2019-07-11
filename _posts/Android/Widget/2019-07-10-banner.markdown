@@ -1,0 +1,42 @@
+---
+layout: post
+title:  "banner"
+date:   2019-07-10 11:26:00 +0800
+categories: Android
+tags: Widget
+author: pepe
+description: 『 banner 』
+---
+
+[android 图片/视频混合轮播控件banner - lakebobo的博客 - CSDN博客](
+https://blog.csdn.net/lakebobo/article/details/90410092)
+
+[chuanqiLjp/PlayTheme: 一个支持图片、视频混合播放的banner](
+https://github.com/chuanqiLjp/PlayTheme)
+
+[lakehubo/HBanner](
+https://github.com/lakehubo/HBanner)
+
+[DawenZeng/BannerImageAndVideo: 图片和视频左右滑动切换混播，添加导航点，视频添加静音](
+https://github.com/DawenZeng/BannerImageAndVideo)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
