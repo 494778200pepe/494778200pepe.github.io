@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "封装ConstraintLayout实现不等字数两端对齐"
+title:  "封装 ConstraintLayout 实现不等字数两端对齐"
 date:   2019-07-16 16:09:00 +0800
 categories: Android
 tags: CustomWidget
 author: pepe
-description: 『 封装ConstraintLayout实现不等字数两端对齐 』
+description: 『 封装 ConstraintLayout 实现不等字数两端对齐 』
 ---
 
 > 原理：利用 `ConstraintLayout` 内部，子元素的 `ChainStyle` 属性，动态添加 `TextView` 到 `ConstraintLayout` 里面。
