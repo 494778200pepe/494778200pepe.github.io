@@ -119,8 +119,7 @@ overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             android:toDegrees="-180"
             android:pivotX="50%"
             android:pivotY="50%"
-            android:duration="200"
-            />
+            android:duration="200"/>
 </set>
 
 ```
@@ -132,8 +131,7 @@ overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
            android:toDegrees="180"
             android:pivotX="50%"
             android:pivotY="50%"
-            android:duration="200"
-            />
+            android:duration="200"/>
 </set>
 ```
 
