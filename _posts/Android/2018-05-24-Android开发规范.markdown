@@ -41,7 +41,68 @@ com
 
 类名都以 `UpperCamelCase` 风格编写。
 
-* Activity 类	Activity 为后缀标识	欢迎页面类 WelcomeActivity
+<table width="600" border="2" cellspacing="0" cellpadding="0">
+    <tr>
+        <td>类</td>
+        <td>描述</td>
+        <td>例如</td>
+    </tr>
+    <tr>
+        <td>`Activity` 类</td>
+        <td>`Activity` 为后缀标识</td>
+        <td>`Activity` 欢迎页面类 `WelcomeActivity`</td>
+    </tr>
+   <tr>
+        <td>`Adapter` 类</td>
+        <td>`Adapter` 为后缀标识</td>
+        <td>新闻详情适配器 `NewsDetailAdapter`</td>
+    </tr>
+   <tr>
+        <td>解析类</td>
+        <td>`Parser` 为后缀标识</td>
+        <td>首页解析类 `HomePosterParser`</td>
+    </tr> 
+    <tr>
+        <td>工具方法类</td>
+        <td>`Utils` 或 `Manager` 为后缀标识</td>
+        <td>线程池管理类：`ThreadPoolManager`日志工具类：`LogUtils`（`Logger` 也可）打印工具类：`PrinterUtils`</td>
+    </tr>
+    <tr>
+        <td>数据库类</td>
+        <td>以 `DBHelper` 后缀标识</td>
+        <td>新闻数据库：`NewsDBHelper`</td>
+    </tr>
+    <tr>
+        <td>`Service` 类</td>
+        <td>以 `Service` 为后缀标识</td>
+        <td>时间服务 `TimeService`</td>
+    </tr>
+    <tr>
+        <td>`BroadcastReceiver` 类</td>
+        <td>以 `Receiver` 为后缀标识</td>
+        <td>推送接收 `JPushReceiver`</td>
+    </tr>
+    <tr>
+        <td>`ContentProvider` 类</td>
+        <td>以 `Provider` 为后缀标识</td>
+        <td>`ShareProvider`</td>
+    </tr>
+    <tr>
+        <td>自定义的共享基础类</td>
+        <td>以 `Base` 开头</td>
+        <td>`BaseActivity`, `BaseFragment`</td>
+    </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
 
 
 
