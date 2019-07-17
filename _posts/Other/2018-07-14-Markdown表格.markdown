@@ -58,7 +58,7 @@ code
 
 
 ###  33422222222222
-<table border="8">
+<table width="400" border="3" cellspacing="0" cellpadding="0">
     <tr>
         <td>ID</td>
         <td>NAME</td>
