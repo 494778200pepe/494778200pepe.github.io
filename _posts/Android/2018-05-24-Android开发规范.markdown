@@ -42,6 +42,7 @@ com
 类名都以 `UpperCamelCase` 风格编写。
 
 <table width="800" border="2" cellspacing="0" cellpadding="2">
+<tbody>
     <tr>
         <td>类</td>
         <td>描述</td>
@@ -92,6 +93,7 @@ com
         <td>以 <font color="Pink">Base<font color="Pink">开头</td>
         <td><font color="Pink">BaseActivity</font>, <font color="Pink">BaseFragment</font></td>
     </tr>
+</tbody>
 </table>
 
 测试类的命名以它要测试的类的名称开始，以 Test 结束。例如：`HashTest` 或 `HashIntegrationTest`。
@@ -105,11 +107,12 @@ com
 方法名都以 `lowerCamelCase` 风格编写。
 
 <table width="800" border="2" cellspacing="0" cellpadding="2">
+<tbody> 
     <tr>
         <td>方法</td>
         <td>说明</td>
     </tr>
-   <tr>
+    <tr>
         <td><font color="Pink">initXX()</font> </td>
         <td>初始化相关方法，使用 init 为前缀标识，如初始化布局 <font color="Pink">initView()</font></td>
     </tr>
@@ -157,6 +160,7 @@ com
         <td><font color="Pink">drawXX()</font></td>
         <td>绘制数据或效果相关的，使用 draw 前缀标识</td>
     </tr>
+</tbody>
 </table>
 
 
