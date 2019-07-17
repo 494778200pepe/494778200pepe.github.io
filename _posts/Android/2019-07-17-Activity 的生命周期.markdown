@@ -44,13 +44,13 @@ description: 『 Activity 生命周期 』
 
 ### **几种情况**
 
-* AActivity 打开 BActivity，A.onPause() -> B.onCreate() -> B.onStart() -> B.onResume() -> A.onStop()
+* AActivity 打开 BActivity，`A.onPause() -> B.onCreate() -> B.onStart() -> B.onResume() -> A.onStop()`
 
-* CActivity 打开 CActivity，CActivity 的启动模式为 singleTop，C.onPause() -> C.onNewIntent() -> C.onResume()
+* CActivity 打开 CActivity ，CActivity 的启动模式为 `singleTop` ，`C.onPause() -> C.onNewIntent() -> C.onResume()`
 
-* 灭屏时,onPause()和onStop()会依次被调用
+* 灭屏时, `onPause()` 和 `onStop()` 会依次被调用
 
-* 屏亮时,onRestart()，onStart()，onResume()会依次被调用
+* 屏亮时, `onRestart()` ， `onStart()` ， `onResume()` 会依次被调用
 
 ### **Activity异常生命周期**
 
