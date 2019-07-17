@@ -12,8 +12,8 @@ description: 『 CoordinatorLayout 』
 
 [android CoordinatorLayout使用 - CSDN博客](https://blog.csdn.net/xyz_lmn/article/details/48055919)
 
-
-
+CoordinatorLayout使用详解: 打造折叠悬浮效果 - jxf_access的专栏 - CSDN博客
+https://blog.csdn.net/jxf_access/article/details/79564669
 
 
 
