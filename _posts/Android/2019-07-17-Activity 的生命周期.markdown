@@ -46,7 +46,9 @@ description: 『 Activity 生命周期 』
 
 * AActivity 打开 BActivity，`A.onPause() -> B.onCreate() -> B.onStart() -> B.onResume() -> A.onStop()`
 
-* CActivity 打开 CActivity ，CActivity 的启动模式为 `singleTop` ，`C.onPause() -> C.onNewIntent() -> C.onResume()`
+* CActivity 打开 CActivity，CActivity 的启动模式为 `singleTop` ，`C.onPause() -> C.onNewIntent() -> C.onResume()`
+
+* A -> B -> C -> B，B 为 singleTask,`B.onNewIntent() -> B.onResume() -> C.onDestory()`
 
 * 灭屏时, `onPause()` 和 `onStop()` 会依次被调用
 
