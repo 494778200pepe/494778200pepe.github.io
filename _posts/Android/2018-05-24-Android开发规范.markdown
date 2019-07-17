@@ -41,7 +41,7 @@ com
 
 类名都以 `UpperCamelCase` 风格编写。
 
-<table width="800" border="2" cellspacing="0" cellpadding="0">
+<table width="800" border="2" cellspacing="0" cellpadding="2">
     <tr>
         <td>类</td>
         <td>描述</td>
