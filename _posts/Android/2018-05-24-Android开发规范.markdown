@@ -39,6 +39,9 @@ com
 
 ### **类名**
 
+类名都以 `UpperCamelCase` 风格编写。
+
+* Activity 类	Activity 为后缀标识	欢迎页面类 WelcomeActivity
 
 
 
