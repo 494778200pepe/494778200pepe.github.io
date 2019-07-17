@@ -94,6 +94,10 @@ com
     </tr>
 </table>
 
+测试类的命名以它要测试的类的名称开始，以 Test 结束。例如：`HashTest` 或 `HashIntegrationTest`。
+接口（interface）：命名规则与类一样采用大驼峰命名法，多以 able 或 ible 结尾，如 `interface Runnable`、`interface Accessible`。
+
+> 注意：如果项目采用 `MVP`，所有 `Model`、`View、Presenter` 的接口都以 I 为前缀，不加后缀，其他的接口采用上述命名规则。
 
 
 
