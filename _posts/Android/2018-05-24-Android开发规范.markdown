@@ -8,6 +8,49 @@ author: pepe
 description: 『 Android开发规范 』
 ---
 
+### **包的划分**
+
+> 推荐采用 PBF（按功能分包 Package By Feature）。
+
+```
+com
+└── domain
+    └── app
+        ├── App.java 定义 Application 类
+        ├── Config.java 定义配置数据（常量）
+        ├── base 基础组件
+        ├── custom_view 自定义视图
+        ├── data 数据处理
+        │   ├── DataManager.java 数据管理器，
+        │   ├── local 来源于本地的数据，比如 SP，Database，File
+        │   ├── model 定义 model（数据结构以及 getter/setter、compareTo、equals 等等，不含复杂操作）
+        │   └── remote 来源于远端的数据
+        ├── feature 功能
+        │   ├── feature0 功能 0
+        │   │   ├── feature0Activity.java
+        │   │   ├── feature0Fragment.java
+        │   │   ├── xxAdapter.java
+        │   │   └── ... 其他 class
+        │   └── ...其他功能
+        ├── injection 依赖注入
+        ├── util 工具类
+        └── widget 小部件
+```
+
+### **类名**
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 [Android 开发规范](https://www.jianshu.com/p/45c1675bec69)
 
