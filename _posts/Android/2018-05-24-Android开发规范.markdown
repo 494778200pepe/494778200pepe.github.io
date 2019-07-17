@@ -49,48 +49,48 @@ com
     </tr>
     <tr>
         <td><font color="Pink">Activity</font> 类</td>
-        <td>`Activity` 为后缀标识</td>
-        <td>`Activity` 欢迎页面类 `WelcomeActivity`</td>
+        <td><font color="Pink">Activity</font> 为后缀标识</td>
+        <td><font color="Pink">Activity</font> 欢迎页面类 <font color="Pink">WelcomeActivity</font></td>
     </tr>
    <tr>
-        <td>`Adapter` 类</td>
-        <td>`Adapter` 为后缀标识</td>
-        <td>新闻详情适配器 `NewsDetailAdapter`</td>
+        <td><font color="Pink">Adapter</font> 类</td>
+        <td><font color="Pink">Adapter</font> 为后缀标识</td>
+        <td>新闻详情适配器 <font color="Pink">NewsDetailAdapter</font></td>
     </tr>
    <tr>
         <td>解析类</td>
-        <td>`Parser` 为后缀标识</td>
-        <td>首页解析类 `HomePosterParser`</td>
+        <td><font color="Pink">Parser</font> 为后缀标识</td>
+        <td>首页解析类 <font color="Pink">HomePosterParser</font></td>
     </tr> 
     <tr>
         <td>工具方法类</td>
-        <td>`Utils` 或 `Manager` 为后缀标识</td>
-        <td>线程池管理类：`ThreadPoolManager`日志工具类：`LogUtils`（`Logger` 也可）打印工具类：`PrinterUtils`</td>
+        <td><font color="Pink">Utils</font> 或 <font color="Pink">Manager</font> 为后缀标识</td>
+        <td>线程池管理类：<font color="Pink">ThreadPoolManager</font>日志工具类：<font color="Pink">LogUtils</font>（<font color="Pink">Logger</font> 也可）打印工具类：<font color="Pink">PrinterUtils</font></td>
     </tr>
     <tr>
         <td>数据库类</td>
-        <td>以 `DBHelper` 后缀标识</td>
-        <td>新闻数据库：`NewsDBHelper`</td>
+        <td>以 <font color="Pink">DBHelper</font> 后缀标识</td>
+        <td>新闻数据库：<font color="Pink">NewsDBHelper</font></td>
     </tr>
     <tr>
-        <td>`Service` 类</td>
-        <td>以 `Service` 为后缀标识</td>
-        <td>时间服务 `TimeService`</td>
+        <td><font color="Pink">Service</font> 类</td>
+        <td>以 <font color="Pink">Service</font> 为后缀标识</td>
+        <td>时间服务 <font color="Pink">TimeService</font></td>
     </tr>
     <tr>
-        <td>`BroadcastReceiver` 类</td>
-        <td>以 `Receiver` 为后缀标识</td>
-        <td>推送接收 `JPushReceiver`</td>
+        <td><font color="Pink">BroadcastReceiver</font> 类</td>
+        <td>以 <font color="Pink">Receiver</font> 为后缀标识</td>
+        <td>推送接收 <font color="Pink">JPushReceiver</font></td>
     </tr>
     <tr>
-        <td>`ContentProvider` 类</td>
-        <td>以 `Provider` 为后缀标识</td>
-        <td>`ShareProvider`</td>
+        <td><font color="Pink">ContentProvider</font> 类</td>
+        <td>以 <font color="Pink">Provider</font> 为后缀标识</td>
+        <td><font color="Pink">ShareProvider</font></td>
     </tr>
     <tr>
         <td>自定义的共享基础类</td>
-        <td>以 `Base` 开头</td>
-        <td>`BaseActivity`, `BaseFragment`</td>
+        <td>以 <font color="Pink">Base</font> 开头</td>
+        <td><font color="Pink">BaseActivity</font>, <font color="Pink">BaseFragment</font></td>
     </tr>
 </table>
 
