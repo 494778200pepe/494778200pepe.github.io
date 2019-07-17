@@ -103,4 +103,4 @@ description: 『 Activity 生命周期 』
 
 [Android 面试（二）：如何理解 Activity 的生命周期 - 简书](https://www.jianshu.com/p/5c32bf28b653)
 
-[屏幕旋转时 Activity 的生命周期 —— 测试与结论 - 银色子弹 - 博客园https://www.cnblogs.com/theo/archive/2017/02/22/6428331.html)
+[屏幕旋转时 Activity 的生命周期 —— 测试与结论 - 银色子弹 - 博客园](https://www.cnblogs.com/theo/archive/2017/02/22/6428331.html)
