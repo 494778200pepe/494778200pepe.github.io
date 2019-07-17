@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "SharedPreferences"
-date:   2018-07-16 13:19:00 +0800
+date:   2019-07-16 13:19:00 +0800
 categories: Android
 tags: Android
 author: pepe
@@ -44,5 +44,6 @@ description: 『 SharedPreferences 』
 
 [SharedPreference.Editor的apply和commit方法异同 - jake9602的专栏 - CSDN博客](https://blog.csdn.net/jake9602/article/details/18414841)
 
-
+每日一问：谈谈 SharedPreferences 的 apply() 和 commit() - 简书
+https://www.jianshu.com/p/4025d02a8380
 
