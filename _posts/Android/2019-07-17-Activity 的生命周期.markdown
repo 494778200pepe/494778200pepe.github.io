@@ -42,6 +42,16 @@ description: 『 Activity 生命周期 』
 
 * `onDestroy` :此时Activity正在被销毁，也是生命周期最后一个执行的方法，一般我们可以在此方法中做一些回收工作和最终的资源释放。 
 
+### **几种情况**
+
+* AActivity 打开 BActivity，A.onPause() -> B.onCreate() -> B.onStart() -> B.onResume() -> A.onStop()
+
+* CActivity 打开 CActivity，CActivity 的启动模式为 singleTop，C.onPause() -> C.onNewIntent() -> C.onResume()
+
+
+
+
+
 屏幕旋转
 
 从Log中我们可以看出当我们正常启动Activity时，onCreate，onStart，onResume方法都会依次被回调，而如果我们此时把竖屏的Activity人为的调整为横屏，我们可以发现onPause，onSaveInstanceState，onStop，onDestroy，onCreate，onStart，onRestoreInstanceState，onResume依次被调用，单从调用的方法我们就可以知道，Activity先被销毁后再重新创建。
@@ -75,10 +85,8 @@ onRestoreInstanceState和onCreate方法都可以进行数据恢复，那到底�
 
 参考：
 
-Android之Activity生命周期浅析 - Tomes.V.White - CSDN博客
-https://blog.csdn.net/qq_35559358/article/details/79715222
+[Android之Activity生命周期浅析 - Tomes.V.White - CSDN博客](https://blog.csdn.net/qq_35559358/article/details/79715222)
 
 [Android 面试（二）：如何理解 Activity 的生命周期 - 简书](https://www.jianshu.com/p/5c32bf28b653)
 
-屏幕旋转时 Activity 的生命周期 —— 测试与结论 - 银色子弹 - 博客园
-https://www.cnblogs.com/theo/archive/2017/02/22/6428331.html
+[屏幕旋转时 Activity 的生命周期 —— 测试与结论 - 银色子弹 - 博客园https://www.cnblogs.com/theo/archive/2017/02/22/6428331.html)
