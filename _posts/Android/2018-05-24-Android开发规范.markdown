@@ -9,3 +9,5 @@ description: 『 Android开发规范 』
 ---
 
 [Android 你应该注意的开发规范](https://mp.weixin.qq.com/s/Xn7fM4zsNrvpDW8xW2m_hQ)
+
+[Blankj/AndroidStandardDevelop: :star2: Best practices in Android develop(final).](https://github.com/Blankj/AndroidStandardDevelop)
