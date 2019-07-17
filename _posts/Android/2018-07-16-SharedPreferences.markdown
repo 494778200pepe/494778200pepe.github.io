@@ -34,5 +34,15 @@ description: 『 SharedPreferences 』
 
 [Android应用Preference相关及源码浅析(Preference组件家族篇) - CSDN博客](https://blog.csdn.net/yanbober/article/details/47954653)
 
+[MMKV 组件现在开源了](https://mp.weixin.qq.com/s/4MHgs4qpLt7krpmIp9rgRg)
+
+[SharedPreferences多进程共享数据爬坑之旅 - 简书](https://www.jianshu.com/p/e8913d42181b)
+
+[取代SharedPreferences的多进程解决方案 - 圣骑士wind - 博客园](https://www.cnblogs.com/mengdd/p/5849201.html)
+
+[SharedPreferences 的commit和apply分析 - 碎格子 - CSDN博客](https://blog.csdn.net/u010198148/article/details/51706483)
+
+[SharedPreference.Editor的apply和commit方法异同 - jake9602的专栏 - CSDN博客](https://blog.csdn.net/jake9602/article/details/18414841)
+
 
 
