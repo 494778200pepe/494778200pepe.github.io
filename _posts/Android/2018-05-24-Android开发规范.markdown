@@ -48,7 +48,7 @@ com
         <td>例如</td>
     </tr>
     <tr>
-        <td><font color="#C7254E" bgcolor="#F9F2F4>Activity</font> 类</td>
+        <td><font color="C7254E" bgcolor="F9F2F4>Activity</font> 类</td>
         <td><font color="Pink">Activity</font> 为后缀标识</td>
         <td><font color="Pink">Activity</font> 欢迎页面类 <font color="Pink">WelcomeActivity</font></td>
     </tr>
