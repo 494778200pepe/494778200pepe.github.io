@@ -87,3 +87,6 @@ https://www.cnblogs.com/CharlesGrant/p/7544311.html
 
 关于Android代码混淆的详细讲解 - 码农教程
 http://www.manongjc.com/article/1598.html
+
+一篇文章带你领略Android混淆的魅力
+https://mp.weixin.qq.com/s/Rr0atgupgoeHOEV3-20WqQ
