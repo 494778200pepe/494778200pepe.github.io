@@ -695,11 +695,60 @@ android {
 </table>
 
 ### **布局资源文件（layout/）**
+命名规则：`类型_模块名`、`类型{_模块名}_逻辑名称`。
+说明：`{}` 中的内容为可选。
+例如：
 
+<table width="700" border="2" cellspacing="5" cellpadding="2">
+<tbody> 
+    <tr>
+        <td>名称</td>
+        <td>说明</td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">activity_main.xml</font></td>
+        <td>主窗体 <font color="Hotpink">类型_模块名</font></td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">activity_main_head.xml</font></td>
+        <td>主窗体头部 <font color="Hotpink">类型_模块名_逻辑名称</font></td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">fragment_music.xml</font></td>
+        <td>音乐片段 <font color="Hotpink">类型_模块名</font></td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">fragment_music_player.xml</font></td>
+        <td>音乐片段的播放器<font color="Hotpink">类型_模块名_逻辑名称</font></td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">dialog_loading.xml</font></td>
+        <td>加载对话框<font color="Hotpink">类型_逻辑名称</font></td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">ppw_info.xml</font></td>
+        <td>信息弹窗（PopupWindow）<font color="Hotpink">类型_逻辑名称</font></td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">item_main_song.xml</font></td>
+        <td>主页歌曲列表项<font color="Hotpink">类型_模块名_逻辑名称</font></td>
+    </tr>
+</tbody>
+</table>
 
 ### **菜单资源文件（menu/）**
 
+菜单相关的资源文件应放在该目录下。
+
+命名规则：`{模块名_}逻辑名称`
+
+说明：`{}` 中的内容为可选。
+
+例如：`main_drawer.xml`、`navigation.xml`。
+
 ### **values 资源文件（values/）**
+
+> `values/` 资源文件下的文件都以 `s` 结尾，如 `attrs.xml`、`colors.xml`、`dimens.xml`，起作用的不是文件名称，而是 `<resources>` 标签下的各种标签，比如 `<style>` 决定样式，`<color>` 决定颜色，所以，可以把一个大的 xml 文件分割成多个小的文件，比如可以有多个 `style` 文件，如 `styles.xml`、`styles_home.xml`、`styles_item_details.xml`、`styles_forms.xml`。
 
 #### **colors.xml**
 
