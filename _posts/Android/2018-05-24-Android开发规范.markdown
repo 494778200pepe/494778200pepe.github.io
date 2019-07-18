@@ -165,16 +165,31 @@ com
 </tbody>
 </table>
 
+### **常量名**
 
+常量名命名模式为 `CONSTANT_CASE`，全部字母大写，用下划线分隔单词。
 
+### **非常量字段名**
 
+> 非常量字段名以 `lowerCamelCase` 风格的基础上改造为如下风格：基本结构为 `scope{Type0}VariableName{Type1}`、`type0VariableName{Type1}`、`variableName{Type1}`。
 
+#### **scope（范围）**
 
+* 非公有，非静态字段命名以 m 开头。
+* 静态字段命名以 s 开头。
+* 其他字段以小写字母开头。
 
+例如：
 
-
-
-
+```
+public class MyClass {
+    public int publicField;
+    private static MyClass sSingleton;
+    int mPackagePrivate;
+    private int mPrivate;
+    protected int mProtected;
+}
+```
 
 
 
