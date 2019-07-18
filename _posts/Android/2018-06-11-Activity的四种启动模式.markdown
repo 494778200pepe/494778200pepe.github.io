@@ -67,6 +67,9 @@ TaskAffinity可以翻译为"任务相关性"。
 * 8、此时按Home键，再次进入AppB，这时并不是启动了B的`MainAcitivy`，而是`Activity B`。
 * 9、可以理解为：`Activity B`创建时，只能运行在AppA的任务栈中，但`Activity B`本来应该是运行在AppB的任务栈中。
 * 10、当AppB启动后，会创建自己的任务栈，这时系统发现`Activity B`原本想要的任务栈已经被创建了，就把`Activity B`从AppA的任务栈转过来。
+* 11.默认情况下，Activity的任务栈与启动它的Activity的任务栈是一样的，如果想要单独的给某个Activity指定单独的任务栈，这就需要设置TaskAffinity属性以及设置启动模式为singleTask，或者在代码中设置为FLAG_ACTIVITY_NEW_TASK。
+
+
 
 ### **设置启动模式**
 
@@ -98,5 +101,7 @@ TaskAffinity可以翻译为"任务相关性"。
 
 [Android 面试（一）：说说 Activity 的四种启动模式 - 简书](https://www.jianshu.com/p/b60d8097e519)
 
+[Android taskAffinity和allowTaskReparenting属性详解 - 简书](https://www.jianshu.com/p/ad21c4aa7558)
 
+[allowTaskReparenting属性 - 被代码淹没的小伙子的博客 - CSDN博客](https://blog.csdn.net/sdfdzx/article/details/70288476)
 
