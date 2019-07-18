@@ -860,12 +860,6 @@ android {
 
 
 
-#### **id 命名**
-
-命名规则：`view缩写{_模块名}_逻辑名`，例如： `btn_main_search`、`btn_back`。
-
-如果在项目中有用黄油刀的话，使用 AS 的插件：ButterKnife Zelezny，可以非常方便帮助你生成注解；没用黄油刀的话可以使用 Android Code Generator 插件。
-
 
 
 
