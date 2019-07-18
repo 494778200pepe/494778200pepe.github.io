@@ -881,9 +881,11 @@ android {
 ```
 或许你需要为按钮控件做同样的事情，不要停止在那里，将一组相关的和重复 `android:xxxx` 的属性放到一个通用的 `<style>` 中。
 
+#### **id 命名**
 
+命名规则：`view缩写{_模块名}_逻辑名`，例如： `btn_main_search`、`btn_back`。
 
-
+如果在项目中有用黄油刀的话，使用 AS 的插件：ButterKnife Zelezny，可以非常方便帮助你生成注解；没用黄油刀的话可以使用 Android Code Generator 插件。
 
 
 
