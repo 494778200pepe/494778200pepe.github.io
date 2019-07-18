@@ -197,6 +197,8 @@ app:constraint_barrierAllowsGoneWidgets = "false" // Barrier不再关注Gone的V
 动态图解&实例 ConstraintLayout Chain - 简书
 https://www.jianshu.com/p/beb9f7157209
 
+可能是你最需要的ConstraintLayout示例集锦 - 掘金
+https://juejin.im/post/5d1899d2e51d45554877a626?utm_date=0701&utm_source=wb&utm_type=article
 
 
 
