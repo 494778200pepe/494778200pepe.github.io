@@ -68,6 +68,10 @@ description: 『 include、ViewStub、merge 』
 
 * 2、`findViewById` 的问题，注意 `ViewStub` 中是否设置了 `inflatedId`，如果设置了则需要通过 `inflatedId` 来查找目标布局的根元素。
 
+* 3、`ViewStub` 对象只可以 `Inflate` 一次，之后 `ViewStub` 对象会被置为空。
+
+* 4、`ViewStub` 不支持 `merge` 标签，意味着你不能引入包含 `merge` 标签的布局到 `ViewStub` 中。
+
 ### **3、Merge**
 
 > Merge 标签本质上是一个 `Activity`，里面有一个 `LinearLayout` 对象。
