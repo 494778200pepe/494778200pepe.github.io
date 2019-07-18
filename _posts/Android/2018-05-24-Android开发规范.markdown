@@ -912,7 +912,6 @@ android {
 
 [Android 开发规范](https://www.jianshu.com/p/45c1675bec69)
 
-[Android Studio 下对资源进行分包 - Blankj's Blog](
-https://blankj.com/2016/09/21/android-studio-classify-src-package/)
+[Android Studio 下对资源进行分包 - Blankj's Blog](https://blankj.com/2016/09/21/android-studio-classify-src-package/)
 
 [Blankj/AndroidStandardDevelop: :star2: Best practices in Android develop(final).](https://github.com/Blankj/AndroidStandardDevelop)
