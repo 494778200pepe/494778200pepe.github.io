@@ -694,14 +694,22 @@ android {
 </tbody>
 </table>
 
+### **布局资源文件（layout/）**
 
 
+### **菜单资源文件（menu/）**
 
+### **values 资源文件（values/）**
 
+#### **colors.xml**
 
+#### **dimens.xml**
 
+#### **strings.xml**
 
+#### **styles.xml**
 
+#### **id 命名**
 
 
 
