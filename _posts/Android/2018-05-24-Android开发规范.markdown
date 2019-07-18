@@ -821,7 +821,7 @@ android {
 
 <string> 的 name 命名使用下划线命名法，采用以下规则：{模块名_}逻辑名称，这样方便同一个界面的所有 string 都放到一起，方便查找。
 
-<table width="5500" border="2" cellspacing="5" cellpadding="2">
+<table width="550" border="2" cellspacing="5" cellpadding="2">
 <tbody> 
     <tr>
         <td>名称</td>
