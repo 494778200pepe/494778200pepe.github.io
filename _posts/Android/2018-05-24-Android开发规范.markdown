@@ -406,7 +406,40 @@ Android SDK 中的很多类都用到了键值对函数，比如SharedPreferences
 </table>
 
 说明：虽然 `Fragment.getArguments()` 得到的也是 `Bundle` ，但因为这是 `Bundle` 的常用用法，所以特意为此定义一个不同的前缀。
+例如：
+```
+// 注意：字段的值与名称相同以避免重复问题
+static final String PREF_EMAIL = "PREF_EMAIL";
+static final String BUNDLE_AGE = "BUNDLE_AGE";
+static final String ARGUMENT_USER_ID = "ARGUMENT_USER_ID";
 
+// 与意图相关的项使用完整的包名作为值的前缀
+static final String EXTRA_SURNAME = "com.myapp.extras.EXTRA_SURNAME";
+static final String ACTION_OPEN_USER = "com.myapp.action.ACTION_OPEN_USER";
+```
+
+### **Activities 和 Fragments 的传参**
+当 `Activity` 或 `Fragment` 启动需要传递参数时，那么它需要提供一个 `public static` 的函数来帮助启动或创建它。
+这方面，AS 已帮你写好了相关的 Live Templates，启动相关 `Activity` 的只需要在其内部输入 `starter` 即可生成它的启动器，如下所示：
+```
+public static void start(Context context, User user) {
+      Intent starter = new Intent(context, MainActivity.class);
+      starter.putParcelableExtra(EXTRA_USER, user);
+      context.startActivity(starter);
+}
+```
+同理，启动相关 Fragment 在其内部输入 newInstance 即可，如下所示：
+```
+public static MainFragment newInstance(User user) {
+      Bundle args = new Bundle();
+      args.putParcelable(ARGUMENT_USER, user);
+      MainFragment fragment = new MainFragment();
+      fragment.setArguments(args);
+      return fragment;
+}
+```
+
+> 注意：这些函数需要放在 onCreate() 之前的类的顶部；如果我们使用了这种方式，那么 extras 和 arguments 的键应该是 private 的，因为它们不再需要暴露给其他类来使用。
 
 
 
