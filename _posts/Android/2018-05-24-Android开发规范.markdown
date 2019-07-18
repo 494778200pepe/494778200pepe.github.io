@@ -173,7 +173,7 @@ com
 
 > 非常量字段名以 `lowerCamelCase` 风格的基础上改造为如下风格：基本结构为 `scope{Type0}VariableName{Type1}`、`type0VariableName{Type1}`、`variableName{Type1}`。
 
-#### **scope（范围）**
+#### **1、scope（范围）**
 
 * 非公有，非静态字段命名以 m 开头。
 * 静态字段命名以 s 开头。
@@ -191,13 +191,13 @@ public class MyClass {
 }
 ```
 
-#### **Type0（控件类型）**
+#### **2、Type0（控件类型）**
 
 例如：`mIvAvatar`、`rvBooks`、`flContainer`。
 
 UI 控件缩写表
 
-<table width="500" border="2" cellspacing="0" cellpadding="2">
+<table width="400" border="2" cellspacing="0" cellpadding="2">
 <tbody> 
     <tr>
         <td>名称</td>
@@ -286,6 +286,42 @@ UI 控件缩写表
 </tbody>
 </table>
 
+#### **3、VariableName（变量名）**
+
+变量名中可能会出现量词，我们需要创建统一的量词，它们更容易理解，也更容易搜索。
+例如：mFirstBook、mPreBook、curBook。
+
+
+<table width="500" border="2" cellspacing="0" cellpadding="2">
+<tbody> 
+    <tr>
+        <td>量词列表</td>
+        <td>量词后缀说明</td>
+    </tr>
+    <tr>
+        <td>First</td>
+        <td>一组变量中的第一个</td>
+    </tr>
+    <tr>
+        <td>Last</td>
+        <td>一组变量中的最后一个</td>
+    </tr>
+    <tr>
+        <td>Next</td>
+        <td>一组变量中的下一个</td>
+    </tr>
+    <tr>
+        <td>Pre</td>
+        <td>一组变量中的上一个</td>
+    </tr>
+    <tr>
+        <td>Cur</td>
+        <td>一组变量中的当前变量</td>
+    </tr>
+</tbody>
+</table>
+
+#### **4、Type1（数据类型）**
 
 
 
