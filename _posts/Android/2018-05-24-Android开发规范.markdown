@@ -549,8 +549,150 @@ android {
 </tbody>
 </table>
 
+### **颜色资源文件（color/）**
 
+专门存放颜色相关的资源文件。
 
+命名规则：`类型_逻辑名称`。
+
+例如：`sel_btn_font.xml`。
+
+颜色资源也可以放于 `res/drawable/` 目录，引用时则用 `@drawable` 来引用，但不推荐这么做，最好还是把两者分开。
+
+### **图片资源文件（drawable/ 和 mipmap/）**
+
+`res/drawable/` 目录下放的是位图文件（.png、.9.png、.jpg、.gif）或编译为可绘制对象资源子类型的 XML 文件，而 `res/mipmap/` 目录下放的是不同密度的启动图标，所以 `res/mipmap/` 只用于存放启动图标，其余图片资源文件都应该放到 `res/drawable/` 目录下。
+命名规则：`类型{_模块名}_逻辑名称`、`类型{_模块名}_颜色`。
+说明：`{}` 中的内容为可选；`类型` 可以是`可绘制对象资源类型`，也可以是控件类型；最后可加后缀 `_small` 表示小图，`_big` 表示大图。
+例如：
+
+<table width="500" border="2" cellspacing="5" cellpadding="2">
+<tbody> 
+    <tr>
+        <td>名称</td>
+        <td>说明</td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">btn_main_about.png</font></td>
+        <td>主页关于按键 <font color="Hotpink">类型_模块名_逻辑名称</font></td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">btn_back.png</font></td>
+        <td>返回按键 <font color="Hotpink">类型_逻辑名称</font></td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">divider_maket_white.png</font></td>
+        <td>商城白色分割线 <font color="Hotpink">类型_模块名_颜色</font></td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">ic_edit.png</font></td>
+        <td>Intent 编辑图标 <font color="Hotpink">类型_逻辑名称</font></td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">bg_main.png</font></td>
+        <td>主页背景 <font color="Hotpink">类型_逻辑名称</font></td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">btn_red.png</font></td>
+        <td>红色按键 <font color="Hotpink">类型_颜色</font></td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">btn_red_big.png</font></td>
+        <td>红色大按键 <font color="Hotpink">类型_颜色</font></td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">ic_head_small.png</font></td>
+        <td>小头像图标 <font color="Hotpink">类型_逻辑名称</font></td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">bg_input.png</font></td>
+        <td>输入框背景 <font color="Hotpink">类型_逻辑名称</font></td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">divider_white.png</font></td>
+        <td>白色分割线 <font color="Hotpink">类型_颜色</font></td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">bg_main_head.png</font></td>
+        <td>主页头部背景 <font color="Hotpink">类型_模块名_逻辑名称</font></td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">def_search_cell.png</font></td>
+        <td>搜索页面默认单元图片 <font color="Hotpink">类型_模块名_逻辑名称</font></td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">ic_more_help.png</font></td>
+        <td>更多帮助图标 <font color="Hotpink">类型_逻辑名称</font></td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">divider_list_line.png</font></td>
+        <td>列表分割线 <font color="Hotpink">类型_逻辑名称</font></td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">sel_search_ok.xml</font></td>
+        <td>搜索界面确认选择器 <font color="Hotpink">类型_模块名_逻辑名称</font></td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">shape_music_ring.xml</font></td>
+        <td>音乐界面环形形状 <font color="Hotpink">类型_模块名_逻辑名称</font></td>
+    </tr>
+</tbody>
+</table>
+
+如果有多种形态，如按钮选择器：`sel_btn_xx.xml`，采用如下命名：
+
+<table width="500" border="2" cellspacing="5" cellpadding="2">
+<tbody> 
+    <tr>
+        <td>名称</td>
+        <td>说明</td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">sel_btn_xx</font></td>
+        <td>作用在<font color="Hotpink">btn_xx</font>上的<font color="Hotpink">selector</font></td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">btn_xx_normal</font></td>
+        <td>默认状态效果</td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">btn_xx_pressed</font></td>
+        <td><font color="Hotpink">state_pressed</font>点击效果</td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">btn_xx_focused</font></td>
+        <td><font color="Hotpink">state_focused</font>聚焦效果</td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">btn_xx_disabled</font></td>
+        <td><font color="Hotpink">state_enabled</font>不可用效果</td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">btn_xx_checked</font></td>
+        <td><font color="Hotpink">state_checked</font>选中效果</td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">btn_xx_selected</font></td>
+        <td><font color="Hotpink">state_selected</font>选中效果</td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">btn_xx_hovered</font></td>
+        <td><font color="Hotpink">state_hovered</font>悬停效果</td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">btn_xx_checkable</font></td>
+        <td><font color="Hotpink">state_checkable</font>可选效果</td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">btn_xx_activated</font></td>
+        <td><font color="Hotpink">state_activated</font>激活效果</td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">btn_xx_window_focused</font></td>
+        <td><font color="Hotpink">state_window_focused</font>窗口聚焦效果</td>
+    </tr>
+</tbody>
+</table>
 
 
 
