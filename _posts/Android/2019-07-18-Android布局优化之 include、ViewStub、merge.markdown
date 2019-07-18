@@ -36,6 +36,9 @@ description: 『 include、ViewStub、merge 』
 
 </ListView>  
 
+
+// 使用方式
+
         // 方式1，获取ViewStub,  
         ViewStub listStub = (ViewStub) findViewById(R.id.stub_import);  
         
