@@ -68,6 +68,10 @@ description: 『 include、ViewStub、merge 』
 
 * 2、`findViewById` 的问题，注意 `ViewStub` 中是否设置了 `inflatedId`，如果设置了则需要通过 `inflatedId` 来查找目标布局的根元素。
 
+### **3、Merge**
+
+> Merge 标签本质上是一个 `Activity`，里面有一个 `LinearLayout` 对象。
+
 参考：
 
 [Android布局优化之ViewStub、include、merge使用与源码分析 - Mr.Simple的专栏 - CSDN博客](https://blog.csdn.net/bboyfeiyu/article/details/45869393)
