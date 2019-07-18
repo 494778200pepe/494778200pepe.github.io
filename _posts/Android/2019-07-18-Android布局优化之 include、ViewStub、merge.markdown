@@ -72,6 +72,29 @@ description: 『 include、ViewStub、merge 』
 
 > Merge 标签本质上是一个 `Activity`，里面有一个 `LinearLayout` 对象。
 
+```
+<merge xmlns:android="http://schemas.android.com/apk/res/android">  
+
+    <ImageView    
+        android:layout_width="fill_parent"   
+        android:layout_height="fill_parent"   
+
+        android:scaleType="center"  
+        android:src="@drawable/golden_gate" />  
+
+    <TextView  
+        android:layout_width="wrap_content"   
+        android:layout_height="wrap_content"   
+        android:layout_marginBottom="20dip"  
+        android:layout_gravity="center_horizontal|bottom"  
+        android:padding="12dip"  
+        android:background="#AA000000"  
+        android:textColor="#ffffffff"  
+        android:text="Golden Gate" />  
+
+</merge> 
+```
+
 参考：
 
 [Android布局优化之ViewStub、include、merge使用与源码分析 - Mr.Simple的专栏 - CSDN博客](https://blog.csdn.net/bboyfeiyu/article/details/45869393)
