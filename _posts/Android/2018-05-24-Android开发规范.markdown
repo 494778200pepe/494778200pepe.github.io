@@ -191,28 +191,100 @@ public class MyClass {
 }
 ```
 
+#### **Type0（控件类型）**
 
+例如：`mIvAvatar`、`rvBooks`、`flContainer`。
 
+UI 控件缩写表
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<table width="500" border="2" cellspacing="0" cellpadding="2">
+<tbody> 
+    <tr>
+        <td>名称</td>
+        <td>缩写</td>
+    </tr>
+    <tr>
+        <td>Button</td>
+        <td>btn</td>
+    </tr>
+    <tr>
+        <td>CheckBox</td>
+        <td>cb</td>
+    </tr>
+    <tr>
+        <td>EditText</td>
+        <td>et</td>
+    </tr>
+    <tr>
+        <td>FrameLayout</td>
+        <td>fl</td>
+    </tr>
+    <tr>
+        <td>GridView</td>
+        <td>gv</td>
+    </tr>
+    <tr>
+        <td>ImageButton</td>
+        <td>ib</td>
+    </tr>
+    <tr>
+        <td>ImageView</td>
+        <td>iv</td>
+    </tr>
+    <tr>
+        <td>LinearLayout</td>
+        <td>ll</td>
+    </tr>
+    <tr>
+        <td>ListView</td>
+        <td>lv</td>
+    </tr>
+    <tr>
+        <td>ProgressBar</td>
+        <td>pb</td>
+    </tr>
+    <tr>
+        <td>RadioButtion</td>
+        <td>rb</td>
+    </tr>
+    <tr>
+        <td>RecyclerView</td>
+        <td>rv</td>
+    </tr>
+    <tr>
+        <td>RelativeLayout</td>
+        <td>rl</td>
+    </tr>
+    <tr>
+        <td>ScrollView</td>
+        <td>sv</td>
+    </tr>
+    <tr>
+        <td>SeekBar</td>
+        <td>sb</td>
+    </tr>
+    <tr>
+        <td>Spinner</td>
+        <td>spn</td>
+    </tr>
+    <tr>
+        <td>TextView</td>
+        <td>tv</td>
+    </tr>
+    <tr>
+        <td>ToggleButton</td>
+        <td>tb</td>
+    </tr>
+    <tr>
+        <td>VideoView</td>
+        <td>vv</td>
+    </tr>
+    <tr>
+        <td>WebView</td>
+        <td>wv</td>
+    </tr>
+</tbody>
+</table>
 
 
 
