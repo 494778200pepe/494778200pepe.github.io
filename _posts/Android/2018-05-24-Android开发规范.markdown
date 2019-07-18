@@ -441,7 +441,45 @@ public static MainFragment newInstance(User user) {
 
 > 注意：这些函数需要放在 onCreate() 之前的类的顶部；如果我们使用了这种方式，那么 extras 和 arguments 的键应该是 private 的，因为它们不再需要暴露给其他类来使用。
 
+### **换行策略**
+```
+// 赋值操作符的换行，放在后面
+int longName =
+        anotherVeryLongVariable + anEvenLongerOne - thisRidiculousLongOne + theFinalOne;
+// 其他操作符的换行，放在前面
+int longName = anotherVeryLongVariable + anEvenLongerOne - thisRidiculousLongOne
+        + theFinalOne;
+        
+// 函数链的换行
+Picasso.with(context)
+        .load("https://blankj.com/images/avatar.jpg")
+        .into(ivAvatar);
 
+// 多参数的换行
+loadPicture(context,
+        "https://blankj.com/images/avatar.jpg",
+        ivAvatar,
+        "Avatar of the user",
+        clickListener);
+
+// RxJava 链式的换行
+// RxJava 的每个操作符都需要换新行，并且把换行符插入在 . 之前。
+public Observable<Location> syncLocations() {
+    return mDatabaseHelper.getAllLocations()
+            .concatMap(new Func1<Location, Observable<? extends Location>>() {
+                @Override
+                 public Observable<? extends Location> call(Location location) {
+                     return mRetrofitService.getLocation(location.id);
+                 }
+            })
+            .retry(new Func2<Integer, Throwable, Boolean>() {
+                 @Override
+                 public Boolean call(Integer numRetries, Throwable throwable) {
+                     return throwable instanceof RetrofitError;
+                 }
+            });
+}        
+```
 
 
 
@@ -466,5 +504,8 @@ public static MainFragment newInstance(User user) {
 参考：
 
 [Android 开发规范](https://www.jianshu.com/p/45c1675bec69)
+
+[Android Studio 下对资源进行分包 - Blankj's Blog](
+https://blankj.com/2016/09/21/android-studio-classify-src-package/)
 
 [Blankj/AndroidStandardDevelop: :star2: Best practices in Android develop(final).](https://github.com/Blankj/AndroidStandardDevelop)
