@@ -323,6 +323,24 @@ UI 控件缩写表
 
 #### **4、Type1（数据类型）**
 
+对于表示集合或者数组的非常量字段名，我们可以添加后缀来增强字段的可读性，比如：
+集合添加如下后缀：List、Map、Set。
+数组添加如下后缀：Arr。
+例如：`mIvAvatarList`、`userArr`、`firstNameSet`。
+
+> 注意：如果数据类型不确定的话，比如表示的是很多书，那么使用其复数形式来表示也可，例如 `mBooks`。
+
+### **参数名，局部变量名，临时变量**
+
+* 参数名：`lowerCamelCase`
+
+* 局部变量名：`lowerCamelCase`
+
+* 临时变量：临时变量通常被取名为 `i`、`j`、`k`、`m` 和 `n`，它们一般用于整型；`c`、`d`、`e`，它们一般用于字符型。 如：`for (int i = 0; i < len; i++)`。
+
+
+
+
 
 
 [Android 开发规范](https://www.jianshu.com/p/45c1675bec69)
