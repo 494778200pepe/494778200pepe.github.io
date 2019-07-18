@@ -129,7 +129,9 @@ description: 『 include、ViewStub、merge 』
 
 [Android布局优化之ViewStub、include、merge使用与源码分析 - Mr.Simple的专栏 - CSDN博客](https://blog.csdn.net/bboyfeiyu/article/details/45869393)
 
+[Android优化篇 ViewStub按需加载布局 - 简书](https://www.jianshu.com/p/48a2fbf75954)
 
+[Android布局优化之标签include,viewstub,merge - 萨达哈鲁的博客 - CSDN博客](https://blog.csdn.net/import_sadaharu/article/details/81324058)
 
 
 
