@@ -566,7 +566,7 @@ android {
 说明：`{}` 中的内容为可选；`类型` 可以是`可绘制对象资源类型`，也可以是控件类型；最后可加后缀 `_small` 表示小图，`_big` 表示大图。
 例如：
 
-<table width="500" border="2" cellspacing="5" cellpadding="2">
+<table width="700" border="2" cellspacing="5" cellpadding="2">
 <tbody> 
     <tr>
         <td>名称</td>
