@@ -61,9 +61,13 @@ description: 『 include、ViewStub、merge 』
         } else {  
             // ViewStub已经加载  
         }  
-
-
 ```
+注意：
+
+* 1、判断是否已经加载过， 如果通过 `setVisibility` 来加载，那么通过判断可见性即可；如果通过 `inflate()` 来加载是不可以通过判断可见性来处理的，而需要使用方式2来进行判断。
+
+* 2、`findViewById` 的问题，注意 `ViewStub` 中是否设置了 `inflatedId`，如果设置了则需要通过 `inflatedId` 来查找目标布局的根元素。
+
 参考：
 
 [Android布局优化之ViewStub、include、merge使用与源码分析 - Mr.Simple的专栏 - CSDN博客](https://blog.csdn.net/bboyfeiyu/article/details/45869393)
