@@ -36,36 +36,36 @@ description: 『 include、ViewStub、merge 』
 
 </ListView>  
 
-// --------------------------------------------------------------------------------------------  
+
 
 // 使用方式
 
-        // 方式1，获取ViewStub,  
-        ViewStub listStub = (ViewStub) findViewById(R.id.stub_import);  
+    ViewStub viewStub2;
+    TextView tv2;
         
-        // 加载评论列表布局  
-        listStub.setVisibility(View.VISIBLE);  
-        
-        // 获取到评论ListView，注意这里是通过ViewStub的inflatedId来获取  
-        ListView commLv = findViewById(R.id.stub_comm_lv);  
-        
-        if ( listStub.getVisibility() == View.VISIBLE ) {  
-            // 已经加载, 否则还没有加载  
-        }  
+    @Override
+    public void onClick(View v) {
+        if(tv2 == null){
+            viewStub2 = findViewById(R.id.stub_import);
+            // 方式一：
+            tv2 = (TextView) viewStub2.inflate();
+            
+            // 方式二：
+            viewStub2.setVisibility(View.VISIBLE);
+            // 在 setVisibility 的时候，就已经 inflate 了
+            tv2 = findViewById(R.id.stub_comm_lv);
+            
+        }else{
+            if (tv2.getVisibility() == View.VISIBLE) {
+                tv2.setVisibility(View.GONE);
+            }else{
+                tv2.setVisibility(View.VISIBLE);
+            }
+        }
+    }
 
-// --------------------------------------------------------------------------------------------       
-        
-        // 方式二  
-        ViewStub listStub2 = (ViewStub) findViewById(R.id.stub_import) ; 
-        
-        // 成员变量commLv2为空则代表未加载  
-        if ( commLv2 == null ) {  
-            // 加载评论列表布局, 并且获取评论ListView,inflate函数直接返回ListView对象  
-          commLv2 = (ListView)listStub2.inflate();  
-        } else {  
-            // ViewStub已经加载  
-        }  
-        
+// --------------------------------------------------------------------------------------------  
+       
         // 建议使用
         private View networkErrorView;
 
@@ -90,11 +90,11 @@ description: 『 include、ViewStub、merge 』
 ```
 注意：
 
-* 1、判断是否已经加载过， 如果通过 `setVisibility` 来加载，那么通过判断可见性即可；如果通过 `inflate()` 来加载是不可以通过判断可见性来处理的，而需要使用方式2来进行判断。
+* 1、判断是否已经加载过， 如果通过 `setVisibility` 来加载，那么通过判断可见性即可；如果通过 `inflate()` 来加载是不可以通过判断可见性来处理的，而需要使用 判空 来进行判断。
 
 * 2、`findViewById` 的问题，注意 `ViewStub` 中是否设置了 `inflatedId`，如果设置了则需要通过 `inflatedId` 来查找目标布局的根元素。
 
-* 3、`ViewStub` 对象只可以 `Inflate` 一次，之后 `ViewStub` 对象会被置为空。
+* 3、`ViewStub` 对象只可以 `Inflate` 一次，之后 `ViewStub` 对象会被 `parent` 移出，再次 `inflate` 会报错。
 
 * 4、`ViewStub` 不支持 `merge` 标签，意味着你不能引入包含 `merge` 标签的布局到 `ViewStub` 中。
 
