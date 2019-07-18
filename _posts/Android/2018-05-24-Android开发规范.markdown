@@ -338,10 +338,66 @@ UI 控件缩写表
 
 * 临时变量：临时变量通常被取名为 `i`、`j`、`k`、`m` 和 `n`，它们一般用于整型；`c`、`d`、`e`，它们一般用于字符型。 如：`for (int i = 0; i < len; i++)`。
 
+#### **类成员的顺序**
+
+这并没有唯一的正确解决方案，但如果都使用一致的顺序将会提高代码的可读性，推荐使用如下排序：
+
+* 1、常量
+* 2、字段
+* 3、构造函数
+* 4、重写函数和回调
+* 5、公有函数
+* 6、私有函数
+* 7、内部类或接口
+
+如果类继承于 Android 组件（例如 `Activity` 或 `Fragment`），那么把重写函数按照他们的生命周期进行排序是一个非常好的习惯，例如，`Activity` 实现了 `onCreate()`、`onDestroy()`、`onPause()`、`onResume()`，它的正确排序如下所示：
+```
+public class MainActivity extends Activity {
+    //Order matches Activity lifecycle
+    @Override
+    public void onCreate() {}
+
+    @Override
+    public void onResume() {}
+
+    @Override
+    public void onPause() {}
+
+    @Override
+    public void onDestroy() {}
+}
+```
+
+#### **函数参数的排序**
+在 Android 开发过程中，`Context` 在函数参数中是再常见不过的了，我们最好把 `Context` 作为其第一个参数。
+正相反，我们把回调接口应该作为其最后一个参数。
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+参考：
 
 [Android 开发规范](https://www.jianshu.com/p/45c1675bec69)
 
