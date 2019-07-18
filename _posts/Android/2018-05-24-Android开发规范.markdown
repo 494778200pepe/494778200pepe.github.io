@@ -37,6 +37,7 @@ com
         └── widget 小部件
 ```
 
+## **命名规范**
 ### **类名**
 
 类名都以 `UpperCamelCase` 风格编写。
@@ -337,6 +338,7 @@ UI 控件缩写表
 
 * 临时变量：临时变量通常被取名为 `i`、`j`、`k`、`m` 和 `n`，它们一般用于整型；`c`、`d`、`e`，它们一般用于字符型。 如：`for (int i = 0; i < len; i++)`。
 
+## **代码样式规范**
 ### **类成员的顺序**
 
 这并没有唯一的正确解决方案，但如果都使用一致的顺序将会提高代码的可读性，推荐使用如下排序：
@@ -480,6 +482,88 @@ public Observable<Location> syncLocations() {
             });
 }        
 ```
+
+## **资源文件规范**
+### **资源文件分包**
+```
+android {
+    ...
+    sourceSets {
+        main {
+            res.srcDirs('src/main/res', 'src/main/res_core', 'src/main/res_sub')
+        }
+    }
+}
+```
+### **动画资源文件（anim/ 和 animator/）**
+
+安卓主要包含属性动画和视图动画，其视图动画包括补间动画和逐帧动画。属性动画文件需要放在 `res/animator/` 目录下，视图动画文件需放在 `res/anim/` 目录下。
+命名规则：`{模块名_}逻辑名称`。
+说明：`{}` 中的内容为可选，`逻辑名称` 可由多个单词加下划线组成。
+例如：`refresh_progress.xml`、`market_cart_add.xml`、`market_cart_remove.xml`。
+如果是普通的补间动画或者属性动画，可采用：`动画类型_方向` 的命名方式。
+例如：
+
+<table width="500" border="2" cellspacing="5" cellpadding="2">
+<tbody> 
+    <tr>
+        <td>名称</td>
+        <td>说明</td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">fade_in</font></td>
+        <td>淡入</td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">fade_out</font></td>
+        <td>淡出</td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">push_down_in</font></td>
+        <td>从下方推入</td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">push_down_out</font></td>
+        <td>Intent 从下方推出</td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">push_left</font></td>
+        <td>推向左方</td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">slide_in_from_top</font></td>
+        <td>从头部滑动进入</td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">zoom_enter</font></td>
+        <td>变形进入</td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">slide_in</font></td>
+        <td>滑动进入</td>
+    </tr>
+    <tr>
+        <td><font color="Hotpink">shrink_to_middle</font></td>
+        <td>中间缩小</td>
+    </tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
