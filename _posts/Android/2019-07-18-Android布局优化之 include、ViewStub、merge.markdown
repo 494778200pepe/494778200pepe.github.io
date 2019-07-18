@@ -55,7 +55,7 @@ description: 『 include、ViewStub、merge 』
 
 // --------------------------------------------------------------------------------------------       
         
-        / 方式二  
+        // 方式二  
         ViewStub listStub2 = (ViewStub) findViewById(R.id.stub_import) ; 
         
         // 成员变量commLv2为空则代表未加载  
@@ -65,6 +65,28 @@ description: 『 include、ViewStub、merge 』
         } else {  
             // ViewStub已经加载  
         }  
+        
+        // 建议使用
+        private View networkErrorView;
+
+        private void showNetError() {
+            // not repeated infalte
+            if (networkErrorView != null) {
+                networkErrorView.setVisibility(View.VISIBLE);
+                return;
+            }
+
+            ViewStub stub = (ViewStub)findViewById(R.id.network_error_layout);
+            networkErrorView = stub.inflate();
+            Button networkSetting = (Button)networkErrorView.findViewById(R.id.network_setting);
+            Button refresh = (Button)findViewById(R.id.network_refresh);
+        }
+
+        private void showNormal() {
+            if (networkErrorView != null) {
+                networkErrorView.setVisibility(View.GONE);
+            }
+        }
 ```
 注意：
 
