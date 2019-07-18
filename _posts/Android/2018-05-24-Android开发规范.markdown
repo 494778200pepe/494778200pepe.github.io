@@ -752,7 +752,70 @@ android {
 
 #### **colors.xml**
 
+`<color>` 的 `name` 命名使用下划线命名法，在你的 `colors.xml` 文件中应该只是映射颜色的名称一个 ARGB 值，而没有其它的。不要使用它为不同的按钮来定义 ARGB 值。
+例如，不要像下面这样做：
+```
+  <resources>
+      <color name="button_foreground">#FFFFFF</color>
+      <color name="button_background">#2A91BD</color>
+      <color name="comment_background_inactive">#5F5F5F</color>
+      <color name="comment_background_active">#939393</color>
+      <color name="comment_foreground">#FFFFFF</color>
+      <color name="comment_foreground_important">#FF9D2F</color>
+      ...
+      <color name="comment_shadow">#323232</color>
+```
+使用这种格式，会非常容易重复定义 ARGB 值，而且如果应用要改变基色的话会非常困难。同时，这些定义是跟一些环境关联起来的，如 `button` 或者 `comment`，应该放到一个按钮风格中，而不是在 `colors.xml` 文件中。
+相反，应该这样做：
+```
+  <resources>
+
+      <!-- grayscale -->
+      <color name="white"     >#FFFFFF</color>
+      <color name="gray_light">#DBDBDB</color>
+      <color name="gray"      >#939393</color>
+      <color name="gray_dark" >#5F5F5F</color>
+      <color name="black"     >#323232</color>
+
+      <!-- basic colors -->
+      <color name="green">#27D34D</color>
+      <color name="blue">#2A91BD</color>
+      <color name="orange">#FF9D2F</color>
+      <color name="red">#FF432F</color>
+
+  </resources>
+```
+向应用设计者那里要这个调色板，名称不需要跟 `"green"`、`"blue"` 等等相同。`"brand_primary"`、`"brand_secondary"`、`"brand_negative" `这样的名字也是完全可以接受的。像这样规范的颜色很容易修改或重构，会使应用一共使用了多少种不同的颜色变得非常清晰。通常一个具有审美价值的 UI 来说，减少使用颜色的种类是非常重要的。
+
+> 注意：如果某些颜色和主题有关，那就单独写一个 `colors_theme.xml`。
+
 #### **dimens.xml**
+
+像对待 `colors.xml` 一样对待 `dimens.xml` 文件，与定义颜色调色板一样，你同时也应该定义一个空隙间隔和字体大小的“调色板”。 一个好的例子，如下所示：
+```
+<resources>
+
+    <!-- font sizes -->
+    <dimen name="font_22">22sp</dimen>
+    <dimen name="font_18">18sp</dimen>
+    <dimen name="font_15">15sp</dimen>
+    <dimen name="font_12">12sp</dimen>
+
+    <!-- typical spacing between two views -->
+    <dimen name="spacing_40">40dp</dimen>
+    <dimen name="spacing_24">24dp</dimen>
+    <dimen name="spacing_14">14dp</dimen>
+    <dimen name="spacing_10">10dp</dimen>
+    <dimen name="spacing_4">4dp</dimen>
+
+    <!-- typical sizes of views -->
+    <dimen name="button_height_60">60dp</dimen>
+    <dimen name="button_height_40">40dp</dimen>
+    <dimen name="button_height_32">32dp</dimen>
+
+</resources>
+```
+布局时在写 `margins` 和 `paddings` 时，你应该使用 `spacing_xx` 尺寸格式来布局，而不是像对待 `string` 字符串一样直接写值，像这样规范的尺寸很容易修改或重构，会使应用所有用到的尺寸一目了然。 这样写会非常有感觉，会使组织和改变风格或布局非常容易。
 
 #### **strings.xml**
 
