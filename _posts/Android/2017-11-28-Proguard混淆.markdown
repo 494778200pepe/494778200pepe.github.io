@@ -74,7 +74,7 @@ buildTypes {
 
 [混淆的另一重境界](https://mp.weixin.qq.com/s/rpDFA-h5t2RA9Dih3gVqVA)
 
-[美团Android资源混淆保护实践](https://tech.meituan.com/mt-android-resource-obfuscation.html)
+[美团Android资源混淆保护实践 - 美团技术团队](https://tech.meituan.com/2015/09/30/mt-android-resource-obfuscation.html)
 
 [Android 反编译利器，jadx 的高级技巧](https://mp.weixin.qq.com/s/8ayLeGavaYfMxqLoTxFIlQ)
 
