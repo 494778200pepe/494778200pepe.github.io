@@ -8,22 +8,6 @@ author: pepe
 description: 『 Gradle学习 』
 ---
 
-### **Groovy安装**
-
-##### (1)下载地址
-
-[The Apache Groovy programming language - Download](http://www.groovy-lang.org/download.html)
-
-##### (2)设置环境变量
-```
-GROOVY_HOME=E:\developer\groovy-2.4.8
-PATH=$PATH;%GROOVY_HOME%\bin
-```
-#### (3)在cmd命令中运行
-```
-> groovy -v
-Groovy Version: 2.4.8 JVM: 1.8.0_25 Vendor: Oracle Corporation OS: Windows 7
-```
 
 
 

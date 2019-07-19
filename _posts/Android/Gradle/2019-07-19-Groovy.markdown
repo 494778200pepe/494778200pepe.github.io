@@ -1,0 +1,189 @@
+---
+layout: post
+title:  "Groovy"
+date:   2019-07-19 15:45:00 +0800
+categories: Android
+tags: Gradle
+author: pepe
+description: 『 Groovy 』
+---
+
+### **Groovy安装**
+
+##### (1)下载地址
+
+[The Apache Groovy programming language - Download](http://www.groovy-lang.org/download.html)
+
+##### (2)设置环境变量
+```
+GROOVY_HOME=E:\developer\groovy-2.4.8
+PATH=$PATH;%GROOVY_HOME%\bin
+```
+#### (3)在cmd命令中运行
+```
+> groovy -v
+Groovy Version: 2.4.8 JVM: 1.8.0_25 Vendor: Oracle Corporation OS: Windows 7
+```
+
+### **基础语法**
+```
+// 定义变量 
+// Groovy使用def来声明变量，声明变量可以不加类型，运行的时候可以自动推断出变量类型，并且声明语句可以不加分号结尾
+def  i1 = 10
+def  str1 = "hello groovy"
+def  d1 = 1.25
+
+println '------------------------------------------------------------------'
+// 定义函数
+// Groovy中函数返回值可以是无类型的
+//定义函数
+def showName1(){
+    println  "wang lei 1" //最后一行执行结果默认作为函数返回值，可以不加return
+}
+showName1()
+
+// 如果我们指定了函数的返回值类型，那么可以不加def关键字
+// 定义函数
+String showName2(){
+    "println wang lei 2" //最后一行执行结果默认作为函数返回值
+}
+println showName2()
+
+println '------------------------------------------------------------------'
+// 字符串
+// Groovy中字符串分为三种，我们一个个来看
+
+// 单引号字符串，单引号字符串不会对$进行转义，原样输出
+def i2 = 10
+def str2 = 'i am $i2 yuan'//单引号不会转义
+println str2 //输出  i am $i2 yuan
+
+// 双引号字符串，双引号字符串会对$号进行转义
+def i3 = 10
+def str3 = "i am $i3 yuan"//双引号会转义
+println str3 //输出  i am 10 yuan
+
+// 三引号字符串，三引号字符串支持换行，原样输出
+// 三个引号原样输出
+def str4 = '''
+    public static void main(){
+        println "miss you"
+    }
+'''
+println str4
+
+
+println '------------------------------------------------------------------'
+// 数据类型
+// 数据类型，int，double等Java中的基本数据类型，在Groovy中对应的是它们的包装数据类型。比如int对应为Integer。
+def x1 = 23
+println x1.getClass().getCanonicalName()//java.lang.Integer
+
+def f1 = true
+println f1.getClass().getCanonicalName()//java.lang.Boolean
+
+println '------------------------------------------------------------------'
+// 增强的List,Map,Range容器类
+
+println '==> List'
+def myList = [5,'werw',true]//看到了吧，可以放任意数据，就是那么任性
+myList.add(34)
+//myList.add(12,55)//这样会报角标越界异常
+myList[6] = true
+println myList.size()
+//遍历
+myList.each{
+    println "item: $it"
+}
+myList.eachWithIndex {
+    it, i5 -> // `it` is the current element,`i5` is the index
+    println "$i5: $it"
+}
+println myList.getClass().getCanonicalName()
+
+println '==> map'
+//println 'Map类'
+def map = ['key1':true,name:"str1",3:"str3",4:"str4"]
+println map.name // 相当于 map.get('name')
+println map.get(4)
+map.age = 14 //加入 age:14 数据项
+println map.age //输出14
+println map.getClass().getCanonicalName()
+//遍历
+map.each{
+    key,value -> 
+       println key +"--"+ value
+    }
+
+map.each{
+    it -> 
+       println "$it.key ::: $it.value"
+    }
+// `entry` is a map entry, `i6` the index in the map
+map.eachWithIndex { entry, i6 ->
+    println "$i6 - Name: $entry.key Age: $entry.value"
+}
+
+// Key, value and i7 as the index in the map
+map.eachWithIndex { key, value, i7 ->
+    println "$i7 - Name: $key Age: $value"
+}
+
+println map.containsKey('key1')  //判断map中是否包含给定的key
+println map.containsValue(1)  //判断map中是否包含给定的value
+//返回所有
+println map.findAll{
+    entry ->
+         entry.value instanceof String//value是String类型的
+}
+//返回第一个符合要求的
+println map.find{
+    entry ->
+        entry.key instanceof Integer && entry.key > 1
+} //返回符合条件一个entry
+
+//清空
+map.clear()
+
+println map.size()
+
+println '==> Range'
+def Range1 = 1..10//包括10
+println Range1.contains(10)
+println Range1.from +"__"+Range1.to
+def Range2 = 1..<10//不包括10
+println Range2.contains(10)
+println Range2.from +"__"+Range2.to
+
+//遍历
+for (j in 1..10) {
+    println "for ${j}"
+}
+
+(1..10).each { k ->
+    println "each ${k}"
+}
+def years = 23
+def interestRate
+switch (years) {
+    case 1..10: interestRate = 0.076; break;
+    case 11..25: interestRate = 0.052; break;
+    default: interestRate = 0.037;
+}
+println interestRate//0.052
+```
+
+
+
+
+
+参考：
+
+[Gradle入门到实战(一) — 全面了解Gradle](https://mp.weixin.qq.com/s?__biz=Mzg2NzAwMjY4MQ==&mid=2247483789&idx=1&sn=4b3bb2ab721c8ed7e05f1e8b2e0fbf70&chksm=ce4371dbf934f8cd7c484e8c5356d299bbd5d7790ee11bb0da9725068fa8e4b895f87379949f&token=655420148&lang=zh_CN#rd)
+
+[The Apache Groovy programming language - The Groovy Development Kit](http://www.groovy-lang.org/groovy-dev-kit.html)
+
+[The Apache Groovy programming language - Groovy Development Kit](http://www.groovy-lang.org/api.html)
+
+
+
