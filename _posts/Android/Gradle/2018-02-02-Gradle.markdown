@@ -16,8 +16,6 @@ description: 『 Gradle学习 』
 
 参考：
 
-[Gradle入门到实战(一) — 全面了解Gradle](https://mp.weixin.qq.com/s?__biz=Mzg2NzAwMjY4MQ==&mid=2247483789&idx=1&sn=4b3bb2ab721c8ed7e05f1e8b2e0fbf70&chksm=ce4371dbf934f8cd7c484e8c5356d299bbd5d7790ee11bb0da9725068fa8e4b895f87379949f&token=655420148&lang=zh_CN#rd)
-
 [Gradle Plugin Reference](https://docs.gradle.org/current/userguide/plugin_reference.html)
 
 [gradle超详细解析 - 简书](https://www.jianshu.com/p/822e44a5ea97)
@@ -60,8 +58,11 @@ description: 『 Gradle学习 』
 
 [Gradle 版本下载](http://services.gradle.org/distributions/)
 
-AndroidStudio多渠道打包 - CSDN博客
-https://blog.csdn.net/zyw_java/article/details/61420290
+[AndroidStudio多渠道打包 - CSDN博客](https://blog.csdn.net/zyw_java/article/details/61420290)
 
+[将Library上传到Jcenter - 简书](https://www.jianshu.com/p/0ba8960f80a9)
 
+[手把手教你发布自己的开源库到 Jcenter](https://mp.weixin.qq.com/s?__biz=MzIwMTAzMTMxMg==&mid=2649492998&idx=1&sn=015de305fa8cb125caf25d072165f6e8&chksm=8eec85f9b99b0cef30052e7333129ee1ffbba1600ebe5529b05c7d67a7690438ae7180acc804&scene=21#wechat_redirect)
+
+[Gradle 使用技巧(一) - 简书](https://www.jianshu.com/p/3cc11a93dfa2)
 

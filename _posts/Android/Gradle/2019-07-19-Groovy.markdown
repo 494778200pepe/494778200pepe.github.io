@@ -403,5 +403,5 @@ wanglei
 
 [The Apache Groovy programming language - Groovy Development Kit](http://www.groovy-lang.org/api.html)
 
-
+[Gradle从入门到实战 - Groovy基础_ADC-Android API Android SDK Android Studio](https://www.android-doc.com/androidstudio/2017/0725/933.html](
 
