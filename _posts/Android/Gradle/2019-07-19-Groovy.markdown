@@ -264,9 +264,10 @@ fun 1, {
 ```
 关于闭包，刚接触肯定不习惯，自己一定要花时间慢慢体会，闭包在Gradle中大量使用，后面讲Gradle的时候会大量接触闭包的概念。
 
-#### **文件操作**
 
-##### 读文件
+
+#### **读文件**
+
 读文件有三种操作：
 
 * 一次读取一
@@ -297,6 +298,102 @@ src.withInputStream{
         //操作。。。。
 }
 ```
+
+#### **写文件**
+
+```
+//写数据
+def des = new File("C:\\Users\\wanglei55\\Desktop\\Groovy\\out.txt")
+des.withOutputStream{ 
+    os->
+        os.leftShift(bytes)//左移在这里可以起到写入数据的作用
+}
+
+// 我们也可以逐行写入数据：
+
+des.withWriter('utf-8') { writer ->
+    writer.writeLine 'i'
+    writer.writeLine 'am'
+    writer.writeLine 'wanglei'
+}
+
+// 我们也可以这样写入数据：
+des << '''i love groovy'''
+```
+
+#### **XML解析**
+
+在我电脑有xml文档，内容如下：
+```
+<response version-api="2.0">
+    <value>
+        <persons>
+            <person id = "1">
+                <name>zhangsan</name>
+                <age>12</age>
+            </person>
+            <person id = "2">
+                <name>lisi</name>
+                <age>23</age>
+            </person>
+        </persons>
+    </value>
+</response>
+```
+
+Groovy 解析 xml 文档同样非常简单，我们可以像操作对象一样操作 xml：
+```
+// xml解析
+def xmlFile = new File("C:\\Users\\wanglei55\\Desktop\\Groovy\\test.xml")
+def parse = new XmlSlurper()
+def result =parse.parse(xmlFile)
+
+def p0 = result.value.persons.person[0]
+println p0['@id']
+println p0.name
+println p0.age
+```
+很简单，没什么要特别说明的，这里稍微记一下，后面写插件的时候会解析安卓的AndroidManifest.xml文件
+
+#### **Json**
+直接看代码吧，很简单：
+```
+// Person类
+class Person{
+    def first
+    def last
+}
+
+def p = new Person(first: 'wanglei',last: '456')
+// 转换对象为json数据
+def jsonOutput = new JsonOutput()
+def json = jsonOutput.toJson(p)
+println(json)
+// 格式化输出
+println(jsonOutput.prettyPrint(json))
+
+// 解析json
+def slurper = new JsonSlurper()
+Person person = slurper.parseText(json)
+println person.first
+println person.last
+```
+打印输出如下：
+```
+{"first":"wanglei","last":"456"}
+{
+    "first": "wanglei",
+    "last": "456"
+}
+wanglei
+456
+```
+
+
+
+
+
+
 
 参考：
 
