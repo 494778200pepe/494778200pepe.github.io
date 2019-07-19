@@ -43,8 +43,6 @@ description: 『 Gradle学习 』
 
 [Gradle for Android 第二篇( Build.gradle入门 ) - OPEN 开发经验库](http://www.open-open.com/lib/view/open1452003831198.html)
 
-[Android studio gradle配置 - 习惯_搬砖](https://my.oschina.net/u/1471093/blog/341990)
-
 [android studio gradle使用说明 - avalon451990](https://my.oschina.net/u/1186928/blog/744302)
 
 [通过gradle实现自动切换测试环境和线上环境 - CSDN博客](https://blog.csdn.net/qifengdeqingchen/article/details/78032560)
