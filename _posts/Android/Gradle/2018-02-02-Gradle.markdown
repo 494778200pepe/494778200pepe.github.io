@@ -16,9 +16,11 @@ description: 『 Gradle学习 』
 
 参考：
 
-[Gradle Plugin Reference](https://docs.gradle.org/current/userguide/plugin_reference.html)
-
 [gradle超详细解析 - 简书](https://www.jianshu.com/p/822e44a5ea97)
+
+[支持资源文件替换的多渠道打包插件（四） - verymrq的博客 - CSDN博客](https://blog.csdn.net/verymrq/article/details/80564048)
+
+[Gradle Plugin Reference](https://docs.gradle.org/current/userguide/plugin_reference.html)
 
 [verymrq的博客 - CSDN博客](https://blog.csdn.net/verymrq/article/category/7679772)
 
