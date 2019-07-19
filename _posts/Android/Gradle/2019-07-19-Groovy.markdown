@@ -26,33 +26,36 @@ Groovy Version: 2.4.8 JVM: 1.8.0_25 Vendor: Oracle Corporation OS: Windows 7
 ```
 
 ### **基础语法**
+
+#### **定义变量 **
 ```
-// 定义变量 
 // Groovy使用def来声明变量，声明变量可以不加类型，运行的时候可以自动推断出变量类型，并且声明语句可以不加分号结尾
 def  i1 = 10
 def  str1 = "hello groovy"
 def  d1 = 1.25
+```
 
-println '------------------------------------------------------------------'
-// 定义函数
+#### **定义函数 **
+
+```
 // Groovy中函数返回值可以是无类型的
-//定义函数
 def showName1(){
     println  "wang lei 1" //最后一行执行结果默认作为函数返回值，可以不加return
 }
 showName1()
 
 // 如果我们指定了函数的返回值类型，那么可以不加def关键字
-// 定义函数
 String showName2(){
     "println wang lei 2" //最后一行执行结果默认作为函数返回值
 }
 println showName2()
+```
 
-println '------------------------------------------------------------------'
-// 字符串
-// Groovy中字符串分为三种，我们一个个来看
+#### **字符串 **
 
+Groovy 中字符串分为三种，我们一个个来看
+
+```
 // 单引号字符串，单引号字符串不会对$进行转义，原样输出
 def i2 = 10
 def str2 = 'i am $i2 yuan'//单引号不会转义
@@ -71,20 +74,22 @@ def str4 = '''
     }
 '''
 println str4
+```
 
 
-println '------------------------------------------------------------------'
-// 数据类型
+#### **数据类型 **
+```
 // 数据类型，int，double等Java中的基本数据类型，在Groovy中对应的是它们的包装数据类型。比如int对应为Integer。
 def x1 = 23
 println x1.getClass().getCanonicalName()//java.lang.Integer
 
 def f1 = true
 println f1.getClass().getCanonicalName()//java.lang.Boolean
+```
 
-println '------------------------------------------------------------------'
-// 增强的List,Map,Range容器类
+#### **List **
 
+```
 println '==> List'
 def myList = [5,'werw',true]//看到了吧，可以放任意数据，就是那么任性
 myList.add(34)
@@ -100,7 +105,11 @@ myList.eachWithIndex {
     println "$i5: $it"
 }
 println myList.getClass().getCanonicalName()
+```
 
+#### **map **
+
+```
 println '==> map'
 //println 'Map类'
 def map = ['key1':true,name:"str1",3:"str3",4:"str4"]
@@ -146,7 +155,11 @@ println map.find{
 map.clear()
 
 println map.size()
+```
 
+#### **Range **
+
+```
 println '==> Range'
 def Range1 = 1..10//包括10
 println Range1.contains(10)
