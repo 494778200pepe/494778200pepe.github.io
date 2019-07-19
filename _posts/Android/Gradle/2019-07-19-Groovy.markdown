@@ -187,9 +187,116 @@ switch (years) {
 println interestRate//0.052
 ```
 
+#### **闭包**
 
+> 闭包Closure一开始接触的时候真是有点蒙圈的感觉，这是什么玩意，Kotlin中也有这玩意，接触多了也就慢慢习惯了，其实就是一段可执行的代码，我们可以像定义变量一样定义可执行的代码。
 
+##### 定义闭包
 
+闭包一般定义如下：
+```
+def xxx = {         // xxx 闭包名
+    paramters ->    // paramters 参数名
+        code
+}
+```
+比如，我们定义一下闭包：
+```
+def mClosure = {
+    p1,p2 ->
+         println p1 +"..."+p2
+}
+```
+p1,p2也可以指定数据类型，如下：
+```
+//闭包定义
+// ->前是参数定义， 后面是代码
+def mClosure = {
+    String p1, int p2 ->
+         println p1 +"..."+p2
+}
+```
+##### 调用闭包
+
+调用上述定义的闭包：
+```
+//调用 均可以
+mClosure("qwewe",100)
+mClosure.call("qwewe",100)
+```
+看到这里有C经验的是不是瞬间想到函数指针了，连调用都非常像。
+定义闭包我们也可以不指定参数，如不指定则默认包含一个名为 `it` 的参数：
+```
+def hello = { "Hello, $it!" }
+println hello("groovy")//Hello, groovy!
+```
+##### 闭包作为方法参数
+
+注意一点，在 `Groovy` 中，当函数的最后一个参数是闭包或者只有一个闭包参数，可以省略调用时的圆括号。比如：
+```
+def fun(Closure closure){
+    println "fun1"
+    closure()
+}
+//调用方法
+fun({
+    println "closure"
+})
+//可以不写()直接调用
+fun{
+    println "closure"
+}
+```
+或者如下：
+```
+def fun(int a , Closure closure){
+    println "fun1 $a"
+    closure()
+}
+//调用方法
+fun(1, {
+    println "closure"
+})
+//可以不写()直接调用，这就有点奇葩了
+fun 1, {
+    println "closure"
+}
+```
+关于闭包，刚接触肯定不习惯，自己一定要花时间慢慢体会，闭包在Gradle中大量使用，后面讲Gradle的时候会大量接触闭包的概念。
+
+#### **文件操作**
+
+##### 读文件
+读文件有三种操作：
+
+* 一次读取一
+* 读取全部返回字节数据
+* 数据流的形式读取
+
+```
+// 一次读取一行：
+
+def src = new File("C:\\Users\\wanglei55\\Desktop\\Groovy\\in.txt")
+// 每次读取一行
+src.eachLine{
+    //it就是每一行数据
+    it ->
+        println it
+}
+// 读取全部返回字节数据：
+
+// 一次读取全部：字节数组
+def bytes = src.getBytes()
+def str = new String(bytes)
+println "str::"+str
+// 数据流的形式读取：
+
+// 返回流，不用主动关闭
+src.withInputStream{
+    inStream ->
+        //操作。。。。
+}
+```
 
 参考：
 
