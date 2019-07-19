@@ -20,7 +20,14 @@ http://jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0327/2650.html
 Glide使用简介及流程分析 - 简书
 https://www.jianshu.com/p/7125feef0ddf
 
+Glide 源码学习,了解 Glide 图片加载原理 - 简书
+https://www.jianshu.com/p/9d8aeaa5a329
 
+Glide4.0集成及使用注意事项 - 简书
+https://www.jianshu.com/p/f1f17f816d1d
+
+Glide v4 : 下载和设置
+https://muyangmin.github.io/glide-docs-cn/doc/download-setup.html#proguard
 
 换肤
 潇风寒月 - CSDN博客
