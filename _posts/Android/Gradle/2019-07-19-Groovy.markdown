@@ -405,4 +405,4 @@ wanglei
 
 [Gradle从入门到实战 - Groovy基础_ADC-Android API Android SDK Android Studio](https://www.android-doc.com/androidstudio/2017/0725/933.html](
 
-[Groovy 使用完全解析 - 赵彦军 - CSDN博客](https://blog.csdn.net/zhaoyanjun6/article/details/70313790/#groovy-￯﾿ﾥ￯ﾾﾮ￯ﾾﾹ￯﾿ﾥ￯ﾾﾙ￯ﾾﾨ)
+[Groovy 使用完全解析 - CSDN博客](https://blog.csdn.net/zhaoyanjun6/article/details/70313790/#groovy-￥ﾮﾹ￥ﾙﾨ)

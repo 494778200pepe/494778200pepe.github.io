@@ -49,8 +49,6 @@ description: 『 Gradle学习 』
 
 [通过gradle实现自动切换测试环境和线上环境 - CSDN博客](https://blog.csdn.net/qifengdeqingchen/article/details/78032560)
 
-[Groovy 使用完全解析 - CSDN博客](https://blog.csdn.net/zhaoyanjun6/article/details/70313790/#groovy-￥ﾮﾹ￥ﾙﾨ)
-
 [一篇文章带你了解Gradle插件的所有创建方式](https://mp.weixin.qq.com/s/KCpl0CNgwMv0CgvbadNK6A)
 
 [Android Gradle Plugin 源码解析（上）](https://mp.weixin.qq.com/s/aqo6ueTUxEOdGx5tyzQrPQ)
