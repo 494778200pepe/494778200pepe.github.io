@@ -117,9 +117,48 @@ buildTypes {
 
 #### `allowobfuscation`
 与前几个类似，修饰 `-keep`,只参与混淆阶段，但是不参与压缩和优化阶段。
-类的匹配
+
+### **类的匹配**
+
+Class Specification是指一个类和类成员的模板。它一般跟在各种-keep配置或者assumenosideeffects配置之后，只有匹配到的类和类成员会受到影响。
+Class Specification的形式与java的类的形式很像，只是而外加了几个通配符。如果想要清晰的看它的形式，最好看例子。但这里还是给出了通用的模型：
+```
+[@annotationtype] [[!]public|final|abstract|@ ...] [!]interface|class|enum classname
+    [extends|implements [@annotationtype] classname]
+[{
+    [@annotationtype] [[!]public|private|protected|static|volatile|transient ...] <fields> |
+                                                                      (fieldtype fieldname);
+    [@annotationtype] [[!]public|private|protected|static|synchronized|native|abstract|strictfp ...] <methods> |
+                                                                                           <init>(argumenttype,...) |
+                                                                                           classname(argumenttype,...) |
+                                                                                           (returntype methodname(argumenttype,...));
+    [@annotationtype] [[!]public|private|protected|static ... ] *;
+    ...
+}]
+```
+> 
+* []代表可选可不选；
+
+* ···代表还有更多选项可以配置；
+
+* |分隔的部分代表多选一；
+
+* ()括起来的部分代表是一个整体，不能分割。
 
 
+
+class 关键字可以匹配class类或interface类,但是interface关键字只能匹配interface类，enum关键字只能匹配enum类。在interface或enum关键字前加一个!，可以表示非这种类型的类。
+
+classname 必须写全名，比如java.lang.String。内部类用$间隔，例如，java.lang.Thread$State。类名可以用含有下面这些通配符的正则表达式匹配：
+
+? 匹配类名中的一个字符，不包括文件分隔符。例如，mypackage.Test?可以匹配mypackage.Test1,mypackage.Test2，但不能匹配mypackage.Test12。
+* 匹配类名中的0到多个字符但不包括文件分隔符。例如，mypackage.*Test*可以匹配到mypackage.Test和mypackage.YourTestApplication但是不能匹配mypackage.mysubpackage.MyTest。一种常用的写法mypackage.*就是匹配mypackage下的所有子文件。
+** 可以匹配类名中的所有字符，可能包含多个分隔符。例如，**.Test就是匹配所有目录下的Test类，mypackage.**就是匹配mypackage及其子目录下的所有类。
+
+
+extend与implements 关键字是用来限制类的范围的。他们目前是等价的，用来匹配某些类的子类。需要注意的是，这个指定的类并不包括在匹配结果中，如果想要该类也被匹配到，就需要额外声明一项配置。
+@ 符号匹配那些注解标志的类或类成员，它的通配符形式与classname的形式一样。
+成员变量和成员方法的匹配形式与java非常像，只是方法的参数不带参数名。此外，他们还可以使用通配符：
 
 
 
