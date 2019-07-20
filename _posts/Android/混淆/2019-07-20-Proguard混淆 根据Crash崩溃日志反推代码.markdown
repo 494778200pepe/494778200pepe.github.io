@@ -60,7 +60,7 @@ ProGuard 提供了命令行和 GUI 工具来还原混淆后的代码。
 4) 点击 “ReTrace!” 按钮
 ```
 
-#### retrace.bat 为命令行工具， 
+#### `retrace.bat` 为命令行工具， 
 
 把 「mapping 文件」和 「要还原的堆栈信息保存在 stacktrace 文件」中，
 
