@@ -120,8 +120,10 @@ buildTypes {
 
 ### **类的匹配**
 
-Class Specification是指一个类和类成员的模板。它一般跟在各种-keep配置或者assumenosideeffects配置之后，只有匹配到的类和类成员会受到影响。
-Class Specification的形式与java的类的形式很像，只是而外加了几个通配符。如果想要清晰的看它的形式，最好看例子。但这里还是给出了通用的模型：
+`Class Specification` 是指一个类和类成员的模板。它一般跟在各种 `-keep` 配置或者 `assumenosideeffects` 配置之后，只有匹配到的类和类成员会受到影响。
+
+`Class Specification` 的形式与 java 的类的形式很像，只是而外加了几个通配符。如果想要清晰的看它的形式，最好看例子。但这里还是给出了通用的模型：
+
 ```
 [@annotationtype] [[!]public|final|abstract|@ ...] [!]interface|class|enum classname
     [extends|implements [@annotationtype] classname]
