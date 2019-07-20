@@ -68,12 +68,32 @@ buildTypes {
 
 * 用来对 Java class 进行预验证（预验证主要是针对 JME 开发来说的，Android 中没有预验证过程，默认是关闭）
 
+### **keep配置**
 
-
-
-
-
-
+<table width="800" border="2" cellspacing="0" cellpadding="2">
+<tbody>
+    <tr>
+        <td>保留</td>
+        <td>防止被移除或者被重命名</td>
+        <td>防止被重命名</td>
+    </tr>
+    <tr>
+        <td>类和类成员</td>
+        <td><font color="Hotpink">-keep</font></td>
+        <td><font color="Hotpink">-keepnames</font></font></td>
+    </tr>
+    <tr>
+        <td>仅类成员</td>
+        <td><font color="Hotpink">-keepmembers</font></td>
+        <td><font color="Hotpink">-keepmembernames</font></font></td>
+    </tr>
+    <tr>
+        <td>如果拥有某成员，保留类和类成员</td>
+        <td><font color="Hotpink">-keepclasseswithmembers</font></td>
+        <td><font color="Hotpink">-keepclasseswithmembernames</font></font></td>
+    </tr>
+</tbody>
+</table>
 
 
 
