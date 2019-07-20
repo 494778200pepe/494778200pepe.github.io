@@ -80,17 +80,17 @@ buildTypes {
     <tr>
         <td>类和类成员</td>
         <td><font color="Hotpink">-keep</font></td>
-        <td><font color="Hotpink">-keepnames</font></font></td>
+        <td><font color="Hotpink">-keepnames</font></td>
     </tr>
     <tr>
         <td>仅类成员</td>
         <td><font color="Hotpink">-keepmembers</font></td>
-        <td><font color="Hotpink">-keepmembernames</font></font></td>
+        <td><font color="Hotpink">-keepmembernames</font></td>
     </tr>
     <tr>
         <td>如果拥有某成员，保留类和类成员</td>
         <td><font color="Hotpink">-keepclasseswithmembers</font></td>
-        <td><font color="Hotpink">-keepclasseswithmembernames</font></font></td>
+        <td><font color="Hotpink">-keepclasseswithmembernames</font></td>
     </tr>
 </tbody>
 </table>
