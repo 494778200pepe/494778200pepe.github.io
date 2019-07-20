@@ -172,7 +172,7 @@ buildTypes {
 > * `*` 匹配0到多个字符
 
 > 类型可以包含一下通配符:
-> * `%` 匹配java中的初始类型(int, boolean, long, float,double等)
+> * `%` 匹配 java 中的初始类型(`int`,`boolean`,`long`,`float`,`double`等)
 > * `?` 匹配类名中的单个字符
 > * `*` 匹配类名中的多个字符，不包括包分隔符
 > * `**` 匹配类名中的多个字符，包括包分隔符
