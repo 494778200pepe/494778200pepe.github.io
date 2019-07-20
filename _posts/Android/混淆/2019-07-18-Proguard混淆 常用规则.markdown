@@ -73,50 +73,6 @@ description: 『 常用规则 』
 -dontwarn android.test.**
 -dontwarn android.support.test.**
 -dontwarn org.junit.**
-
-#okhttp
--dontwarn com.squareup.okhttp.**
--dontwarn com.squareup.okhttp3.**
--keep class com.squareup.okhttp3.** { *;}
--dontwarn okio.**
-#okhttp
-
-#retroift
--dontwarn retrofit2.**
--dontwarn retrofit.**
--keep class retrofit2.** { *; }
--keep class retrofit.** { *; }
--keepattributes Signature
--keepattributes Exceptions
-#retroift
-
-## gson[version 2.8.0]
--keep class sun.misc.Unsafe { *; }
--keep class com.google.gson.stream.** { *; }
--keep class com.google.gson.examples.android.model.** { *; }
--keep class * implements com.google.gson.TypeAdapterFactory
--keep class * implements com.google.gson.JsonSerializer
--keep class * implements com.google.gson.JsonDeserializer
-## gson
-
-##Glide
--dontwarn com.bumptech.glide.**
--keep class com.bumptech.glide.**{*;}
--keep public class * implements com.bumptech.glide.module.GlideModule
--keep public class * extends com.bumptech.glide.AppGlideModule
--keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
-  **[] $VALUES;
-  public *;
-}
-# 从glide4.0开始，GifDrawable没有提供getDecoder()方法，
-# 需要通过反射获取gifDecoder字段值，所以需要保持GifFrameLoader和GifState类不被混淆
--keep class com.bumptech.glide.load.resource.gif.GifDrawable$GifState{*;}
--keep class com.bumptech.glide.load.resource.gif.GifFrameLoader {*;}
-##Glide
-
-##universal-image-loader
--keep class com.nostra13.universalimageloader.** {*;}
--dontwarn com.nostra13.universalimageloader.**
 ```
 
 ### **1. 实体类需要保留**
@@ -180,8 +136,42 @@ description: 『 常用规则 』
 -keep class com.dev.example.**{ *; }
 ```
 
-
-
+### **6. 常见的自定义的配置**
+1.保留某个特定的类
+```
+#保留Test类
+-keep public class com.dev.example.Test { *; }
+```
+2.保留某个类的子类
+```
+#保留继承了AbstractClass的子类
+-keep class * extends com.dev.example.AbstractClass{*;}
+```
+3.保留接口的实现类
+```
+#保留实现了Callable接口的类
+-keep class * implements Callable{*;}
+```
+4.保留类的特定部分
+保留TaskRepository类的所有构造方法，变量和普通方法。
+```
+-keep class com.dev.example.TaskRepository{
+ <init>;     //匹配所有构造器
+ <fields>;   //匹配所有域
+ <methods>;  //匹配所有方法
+}
+```
+还可以保留的更具体一点，如下所示
+```
+-keepclassmembers com.dev.example.TaskRepository{
+ // 保留该类的修饰符是public且有一个参数(类型是String)的构造方法
+ public <init>(java.lang.String);
+ // 保留该类的所有修饰符是public且返回类型void的方法
+ public void *(**); 
+ // 保留该类的具体某一个方法                 
+ public String getUserName();       
+}
+```
 
 
 
