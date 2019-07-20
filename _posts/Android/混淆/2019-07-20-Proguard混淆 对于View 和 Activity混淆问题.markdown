@@ -28,9 +28,12 @@ description: 『 对于View 和 Activity混淆问题 』
 
 [android 防破解, 代码混淆，代码保护 - 晕菜一员 - 博客园](https://www.cnblogs.com/CharlesGrant/p/7544311.html)
 
-[混淆的另一重境界](https://mp.weixin.qq.com/s/rpDFA-h5t2RA9Dih3gVqVA)
+[饿了么全面混淆插件 Mess - 安卓巴士Android开发者门户](http://www.10tiao.com/html/597/201808/2651943416/1.html)
 
 [Mess](https://github.com/eleme/Mess)
 
 [ButterMess](https://github.com/peacepassion/ButterMess)
 
+[Android Gradle 打包流程 - shouniezhe的专栏 - CSDN博客](https://blog.csdn.net/shouniezhe/article/details/95162422)
+
+[关于Android混淆的开源框架Mess的学习与分析 - 加油，罗老师 - CSDN博客](https://blog.csdn.net/qq_35770354/article/details/82799049)

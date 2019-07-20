@@ -17,7 +17,8 @@ description: 『 其他方案 』
 
 [安装包立减1M--微信Android资源混淆打包工具](https://mp.weixin.qq.com/s?__biz=MzAwNDY1ODY2OQ==&mid=208135658&idx=1&sn=ac9bd6b4927e9e82f9fa14e396183a8f#rd)
 
-
+Android安全攻防战，反编译与混淆技术完全解析（下） - 郭霖的专栏 - CSDN博客
+https://blog.csdn.net/guolin_blog/article/details/50451259
 
 
 

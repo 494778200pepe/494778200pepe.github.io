@@ -34,6 +34,9 @@ https://www.cnblogs.com/zhchoutai/p/8643725.html
 Android Studio 配置多渠道一键打包，自动签名 - 简书
 https://www.jianshu.com/p/104c8b5157de
 
+android studio打包以及gradle配置构建 - 披萨大叔的博客 - CSDN博客
+https://blog.csdn.net/qq_27258799/article/details/77259129
+
 
 
 
