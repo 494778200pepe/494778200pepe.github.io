@@ -1,0 +1,46 @@
+---
+layout: post
+title:  "Gradle 多渠道打包"
+date:   2019-07-20 11:25:00 +0800
+categories: Android
+tags: Gradle
+author: pepe
+description: 『 多渠道打包 』
+---
+
+
+参考：
+
+[Android使用美团多渠道打包方案详解，速度不是一般的快_慕课手记](http://www.imooc.com/article/252169)
+
+Android多渠道打包方案的实践与优化 - 依旧00的专栏 - CSDN博客
+https://blog.csdn.net/zhong1113/article/details/54094770
+
+Android studio 3.0：多渠道打包 - 简书
+https://www.jianshu.com/p/d67eaa31f6d6
+
+Android的多渠道打包|SquirrelNote - 简书
+https://www.jianshu.com/p/bfdee92ab355
+
+Android多渠道打包相关介绍 - 简书
+https://www.jianshu.com/p/96575eba4337
+
+Android多渠道打包总结 - u010622801的博客 - CSDN博客
+https://blog.csdn.net/u010622801/article/details/80592877
+
+Android 新一代多渠道打包神器 - zhchoutai - 博客园
+https://www.cnblogs.com/zhchoutai/p/8643725.html
+
+Android Studio 配置多渠道一键打包，自动签名 - 简书
+https://www.jianshu.com/p/104c8b5157de
+
+
+
+
+
+
+
+
+
+
+
