@@ -8,11 +8,20 @@ author: pepe
 description: 『 对于View 和 Activity混淆问题 』
 ---
 
-对于View 和 Activity混淆问题：
+> 对于 `View` 和 `Activity` 混淆问题：饿了么 的团队提供了一个鲜为人知的 `gradle` 插件 用来无伤混淆 `Activity` 和 `View`，这个项目叫 [Mess](https://github.com/eleme/Mess)
 
-饿了么 的团队提供了一个鲜为人知的 gradle 插件 用来无伤混淆 Activity 和 View，这个项目叫 Mess：https://github.com/eleme/Mess
+具体内容各位可以稍后自行去阅读其文档和教程，链接最后都还会附于末尾。简单来说，Mess 弥补了 `Proguard` 不能检索 `XML` 文件的缺点，帮 Proguard 完成了 `Activity` 和 `View` 的改名及 mapping。
 
-具体内容各位可以稍后自行去阅读其文档和教程，链接最后都还会附于末尾。简单来说，Mess 弥补了 Proguard 不能检索 XML 文件的缺点，帮 Proguard 完成了 Activity 和 View 的改名及 mapping。
+
+
+
+
+
+
+
+
+
+
 
 
 参考：
