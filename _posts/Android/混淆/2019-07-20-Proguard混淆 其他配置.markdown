@@ -1,0 +1,56 @@
+---
+layout: post
+title:  "Proguard混淆 其他配置"
+date:   2019-07-20 10:40:00 +0800
+categories: Android
+tags: 混淆
+author: pepe
+description: 『 其他配置 』
+---
+
+### **代码压缩配置**
+
+**-dontshrink** 声明不压缩输入文件。默认情况下，除了 `-keep` 相关配置指定的类，所有其它没有被引用到的类都会被删除。每次 `optimizate` 操作之后，也会执行一次压缩操作，因为每次 `optimizate` 操作可能删除一部分不再需要的类。
+
+**-printusage [filename]** 声明 打印出那些被删除的元素。这个列表可能打印到标准输出流或者一个文件中。仅在 `shrink` 阶段有效。
+
+**whyareyoukeeping class_specification** 声明 打印为什么一个类或类的成员变量被保护。这对检查一个输出文件中的类的结果有帮助。
+
+### **代码优化配置**
+
+**-dontoptimize** 声明不优化输入文件。默认情况下，优化选项是开启的，并且所有的优化都是在字节码层进行的。
+
+**-optimizations optimization_filter** 更加细粒度地声明优化开启或者关闭。只在 `optimize` 这一阶段有效。这个选项的使用难度较高。
+
+**-optimizationpasses n** 指定执行几次优化，默认情况下，只执行一次优化。执行多次优化可以提高优化的效果，但是，如果执行过一次优化之后没有效果，就会停止优化，剩下的设置次数不再执行。这个选项只在 `optimizate` 阶段有效
+
+**assumenosideeffects class_specification** 指定一些方法被删除也没有影响（尽管这些方法可能有返回值），在 `optimize` 阶段，如果确定这些方法的返回值没有使用，那么就会删除这些方法的调用。proguard 会自动的分析你的代码，但不会分析处理类库中的代码。例如，可以指定 `System.currentTimeMillis()`,这样在 `optimize` 阶段就会删除所有的它的调用。还可以用它来删除打印 Log 的调用。这条配置选项只在 `optimizate` 阶段有用。
+例子:
+```
+# 删除代码中Log相关的代码
+-assumenosideeffects class android.util.Log {
+    public static boolean isLoggable(java.lang.String, int);
+    public static int v(...);
+    public static int i(...);
+    public static int w(...);
+    public static int d(...);
+    public static int e(...);
+}
+```
+
+> 使用这条配置有点危险，如果删除了一些预料之外的代码，很容易就会导致代码崩溃。所以，**谨慎使用**。
+
+**-allowaccessmodification **这项配置是设置是否允许改变作用域的。使用这项配置之后可以提高优化的效果。但是，如果你的代码是一个库的话，最好不要配置这个选项，因为它可能会导致一些 ·private· 变量被改成 ·public·。
+
+**-mergeinterfacesaggressively** 指定一些接口可能被合并，即使一些子类没有同时实现两个接口的方法。这种情况在 java 源码中是不允许存在的，但是在 java 字节码中是允许存在的。它的作用是通过合并接口减少类的数量，从而达到减少输出文件体积的效果。仅在 `optimize` 阶段有效。
+
+> 这项配置对于一些虚拟机的65535方法数限制是有一定效果的。
+
+
+
+参考：
+
+[Android Proguard(混淆)](https://www.jianshu.com/p/60e82aafcfd0)
+
+[ProGuard 最全混淆规则说明 - 简书](https://www.jianshu.com/p/b471db6a01af)
+
