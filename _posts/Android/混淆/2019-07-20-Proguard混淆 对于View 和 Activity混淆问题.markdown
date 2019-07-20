@@ -52,5 +52,4 @@ app\build\intermediates\proguard-rules\release\aapt_rules.txt
 
 [关于Android混淆的开源框架Mess的学习与分析 - 加油，罗老师 - CSDN博客](https://blog.csdn.net/qq_35770354/article/details/82799049)
 
-混淆遇到无法找到文件aapt_rules.txt - dazhang357的博客 - CSDN博客
-https://blog.csdn.net/dazhang357/article/details/73467574
+[混淆遇到无法找到文件aapt_rules.txt - dazhang357的博客 - CSDN博客](https://blog.csdn.net/dazhang357/article/details/73467574)
