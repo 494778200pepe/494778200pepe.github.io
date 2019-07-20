@@ -205,10 +205,6 @@ buildTypes {
 
 [ProGuard 最全混淆规则说明 - 简书](https://www.jianshu.com/p/b471db6a01af)
 
-[Android 开发应该掌握的 Proguard 技巧](https://mp.weixin.qq.com/s/sFPnK_nvNQOWRK3rd3XnZw)
-
-[android 防破解, 代码混淆，代码保护 - 晕菜一员 - 博客园](https://www.cnblogs.com/CharlesGrant/p/7544311.html)
-
 [关于Android代码混淆的详细讲解 - 码农教程](http://www.manongjc.com/article/1598.html)
 
 
@@ -227,11 +223,9 @@ buildTypes {
 
 [安装包立减1M--微信Android资源混淆打包工具](https://mp.weixin.qq.com/s?__biz=MzAwNDY1ODY2OQ==&mid=208135658&idx=1&sn=ac9bd6b4927e9e82f9fa14e396183a8f#rd)
 
-[Mess](https://github.com/eleme/Mess)
 
-[AndResGuard](https://github.com/shwenzhang/AndResGuard/blob/master/README.zh-cn.md)
 
-[ButterMess](https://github.com/peacepassion/ButterMess)
+
 
 
 [Android代码混淆与加固技术](https://www.imooc.com/learn/879)

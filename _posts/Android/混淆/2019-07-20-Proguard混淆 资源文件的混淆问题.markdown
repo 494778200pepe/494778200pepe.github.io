@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "Proguard混淆 资源文件的混淆问题"
+date:   2019-07-20 10:56:00 +0800
+categories: Android
+tags: 混淆
+author: pepe
+description: 『 资源文件的混淆问题 』
+---
+
+资源文件的混淆问题：
+
+Proguard 完全不会管我们的资源文件，因此如果资源文件名没有做保护的话，很容易被顺藤摸瓜找到关联的 Java 代码，对此，微信团队提供了一个好用的资源混淆工具，它不仅能帮你全面混淆资源文件，还能帮你缩减资源文件的整体体积，工具叫 AndResGuard，开源地址：https://github.com/shwenzhang/AndResGuard
+
+
+参考：
+
+[android 防破解, 代码混淆，代码保护 - 晕菜一员 - 博客园](https://www.cnblogs.com/CharlesGrant/p/7544311.html)
+
+[AndResGuard](https://github.com/shwenzhang/AndResGuard/blob/master/README.zh-cn.md)
