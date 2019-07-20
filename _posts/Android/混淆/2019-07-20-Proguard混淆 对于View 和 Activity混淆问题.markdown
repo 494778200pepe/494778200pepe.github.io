@@ -19,6 +19,9 @@ description: 『 对于View 和 Activity混淆问题 』
 
 [android 防破解, 代码混淆，代码保护 - 晕菜一员 - 博客园](https://www.cnblogs.com/CharlesGrant/p/7544311.html)
 
+[混淆的另一重境界](https://mp.weixin.qq.com/s/rpDFA-h5t2RA9Dih3gVqVA)
+
 [Mess](https://github.com/eleme/Mess)
 
 [ButterMess](https://github.com/peacepassion/ButterMess)
+

@@ -12,3 +12,4 @@ description: 『 配置字典 』
 
 参考：
 
+[Android 字符串及字典混淆开源实现](https://mp.weixin.qq.com/s/SRv1Oar87w1iKuDXS4oaew?)
