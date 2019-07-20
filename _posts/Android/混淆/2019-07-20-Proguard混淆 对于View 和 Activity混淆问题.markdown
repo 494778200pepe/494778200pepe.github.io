@@ -13,8 +13,10 @@ description: 『 对于View 和 Activity混淆问题 』
 具体内容各位可以稍后自行去阅读其文档和教程，链接最后都还会附于末尾。简单来说，Mess 弥补了 `Proguard` 不能检索 `XML` 文件的缺点，帮 Proguard 完成了 `Activity` 和 `View` 的改名及 mapping。
 
 
-
-
+```
+// aapt_rules.txt 文件位置
+app\build\intermediates\proguard-rules\release\aapt_rules.txt
+```
 
 最后科普一下build菜单下的这些功能的区别：
 
