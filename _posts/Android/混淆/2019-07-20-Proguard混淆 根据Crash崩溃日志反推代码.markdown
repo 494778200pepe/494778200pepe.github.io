@@ -12,11 +12,11 @@ description: 『 根据Crash崩溃日志反推代码 』
 
 * `dump.txt`:描述.apk文件中所有原始类文件间的内部结构
 
-* `mapping.txt`:列出了原始的类，方法和字段名与混淆后代码间的映射。这个文件很重要，当你从release版本中收到一个bug报告时，可以用它来翻译被混淆的代码。
+* `mapping.txt`:列出了原始的类，方法和字段名与混淆后代码间的映射。这个文件很重要，当你从 release 版本中收到一个 bug 报告时，可以用它来翻译被混淆的代码。
 
 * `seeds.txt`:列出了未被混淆的类和成员
 
-* `usage.txt`:列出了从.apk中删除的代码
+* `usage.txt`:列出了从 .apk 中删除的代码
 
 ### **如何还原 ProGuard 混淆后的代码**
 
@@ -34,7 +34,7 @@ at net.simplyadvanced.ltediscovery.av.onReceive(Unknown Source)
 ```
 还好 ProGuard 本身提供了一个还原工具。 
 
-要使用还原工具之前，你需要**保存每次发布应用混淆后的 proguard/mapping.txt 文件**。
+要使用还原工具之前，你需要 **保存每次发布应用混淆后的 proguard/mapping.txt 文件**。
 
 在每次用 ProGuard 发布应用的时候， 都会在项目目录下的 proguard 目录中创建新的 mapping 文件。
 
