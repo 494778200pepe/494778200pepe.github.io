@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "Proguard混淆规则（常用）"
+title:  "Proguard混淆 常用规则"
 date:   2019-07-18 18:23:00 +0800
 categories: Android
 tags: 混淆
 author: pepe
-description: 『 Proguard混淆规则（常用） 』
+description: 『 常用规则 』
 ---
 
 
-玉刚说
+Android 开发应该掌握的 Proguard 技巧
 https://mp.weixin.qq.com/s/sFPnK_nvNQOWRK3rd3XnZw
 
 android 防破解, 代码混淆，代码保护 - 晕菜一员 - 博客园
@@ -17,4 +17,6 @@ https://www.cnblogs.com/CharlesGrant/p/7544311.html
  
 混淆规则(常用) - 简书
 https://www.jianshu.com/p/b1fede1a7edf
+
+[关于Android代码混淆的详细讲解 - 码农教程](http://www.manongjc.com/article/1598.html)
 
