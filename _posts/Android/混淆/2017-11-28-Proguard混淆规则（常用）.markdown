@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Proguard混淆规则（常用）"
-date:   2017-11-28 18:23:00 +0800
+date:   2019-07-18 18:23:00 +0800
 categories: Android
-tags: Android
+tags: 混淆
 author: pepe
 description: 『 Proguard混淆规则（常用） 』
 ---

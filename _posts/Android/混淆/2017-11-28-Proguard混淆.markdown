@@ -3,7 +3,7 @@ layout: post
 title:  "Proguard混淆"
 date:   2017-11-28 17:23:00 +0800
 categories: Android
-tags: Android
+tags: 混淆
 author: pepe
 description: 『 Proguard混淆 』
 ---
@@ -204,7 +204,9 @@ buildTypes {
 
 参考：
 
-[Android混淆你该知道的事](https://www.jianshu.com/p/60e82aafcfd0)
+[Android Proguard(混淆)](https://www.jianshu.com/p/60e82aafcfd0)
+
+[ProGuard 最全混淆规则说明 - 简书](https://www.jianshu.com/p/b471db6a01af)
 
 [Android 开发应该掌握的 Proguard 技巧](https://mp.weixin.qq.com/s/sFPnK_nvNQOWRK3rd3XnZw)
 
