@@ -24,3 +24,5 @@ APK 在经过代码混淆处理后，包名、类名、成员名被转化为无�
 [Android 字符串及字典混淆开源实现](https://mp.weixin.qq.com/s/SRv1Oar87w1iKuDXS4oaew?)
 
 [一篇文章带你领略Android混淆的魅力](https://www.jianshu.com/p/2fab1510eef8)
+
+[使用第三方crunch工具做java混淆字典, - 简书](https://www.jianshu.com/p/791768f1f77c)
