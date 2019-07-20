@@ -8,7 +8,16 @@ author: pepe
 description: 『 配置字典 』
 ---
 
+APK 在经过代码混淆处理后，包名、类名、成员名被转化为无意义、难以理解的名称，增加反编译的成本。Android ProGuard 为我们提供了默认的"混淆字典"，即将元素名称转为英文小写字母的形式。那么，我们可以定义自己的混淆字典吗？卖个关子，我们先来看一张效果图：
 
+![Dictionary2]({{ site.baseurl }}/assets/images/android/Proguard/Dictionary1.png)
+
+这个波操作是不是有点"出类拔萃"了？哈哈，就不卖关子了，其实很简单，只要生成一套自己的 txt 格式的混淆字典，然后在混淆规则 Proguard-rules.pro 中应用一下即可：
+
+[](https://www.guardsquare.com/en/products/proguard/manual/usage)
+![Dictionary2]({{ site.baseurl }}/assets/images/android/Proguard/Dictionary2.png)
+
+> 本文中使用的混淆字典可以在此处查看并下载：[proguard_tradition.txt](https://github.com/Moosphan/SelfAssetRepository/blob/master/github/files/proguard-tradition.txt)
 
 参考：
 
