@@ -95,6 +95,29 @@ buildTypes {
 </tbody>
 </table>
 
+### **Keep配置的修饰符**
+
+#### includedescriptorclasses
+它是用来声明描述目标成员的元素也应当被保护。它在**保护 native **方法时特别有效。因为它可以同时保证参数类型，返回类型不被混淆。保证最终的方法签名保持一致。
+例子：
+```
+-keepclasseswithmembernames,includedescriptorclasses class * {
+    native <methods>;
+}
+```
+
+`-keepclasseswithmembernames` 是保护符合条件的含有 `native` 方法的类。附加的 `includedescriptorclasses` 是保证参数和返回类型的类同样不被混淆。这样就可以做到这些类的方法签名与调试时完全一致。
+
+#### allowshrinking
+修饰 `-keep`, 声明一个元素可以被移除，即使它已经声明了被保护。意味着它有可能在压缩阶段被删除，但是它又是必须的入口，所以它有可能不参与优化和混淆阶段。
+（这里我也看不太懂，压缩阶段不是依赖 keep 声明的入口节点吗？）
+
+#### allowoptimization
+修饰 `-keep`, 声明一个元素可以被优化，即使它已经声明被保护。这意味着该元素参与优化阶段，但是不参与压缩和混淆阶段。特殊用途的时候使用。
+
+#### allowobfuscation
+与前几个类似，修饰 `-keep`,只参与混淆阶段，但是不参与压缩和优化阶段。
+类的匹配
 
 
 
