@@ -53,6 +53,48 @@ description: 『 第三方依赖库混淆 』
 ##universal-image-loader
 -keep class com.nostra13.universalimageloader.** {*;}
 -dontwarn com.nostra13.universalimageloader.**
+
+## -------------------------------------------------------------------
+## retrofit2[version 2.1.0]
+-dontnote retrofit2.Platform-dontnote retrofit2.Platform$IOS$MainThreadExecutor
+-dontwarn retrofit2.Platform$Java8-dontwarn retrofit2.**
+-keep class retrofit2.** { *; }
+## retrofit2
+
+## rx[version_rx_java 1.1.8,version_rx_android 1.2.1]
+-dontwarn sun.misc.**
+-keepclassmembers class rx.internal.util.unsafe.*ArrayQueue*Field* {long producerIndex;long consumerIndex;}
+-keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueProducerNodeRef {rx.internal.util.atomic.LinkedQueueNode producerNode;}
+-keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueConsumerNodeRef {rx.internal.util.atomic.LinkedQueueNode consumerNode;}
+## rx
+
+## glide[version 3.7.0]
+-keep public class * implements com.bumptech.glide.module.GlideModule
+-keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {  **[] $VALUES;  public *;}
+## glide
+
+## okhttp3[version_logging-interceptor 3.3.1]
+-dontwarn com.squareup.okhttp3.**
+-keep class com.squareup.okhttp3.** { *;}
+-dontwarn okio.**
+## okhttp3
+
+## butterknife[version 8.2.1]
+-keep class butterknife.*
+-keep class butterknife.** { *; }
+-dontwarn butterknife.internal.**
+-keepclasseswithmembernames class * { @butterknife.* <methods>; }
+-keepclasseswithmembernames class * { @butterknife.* <fields>; }
+-keep class **$$ViewBinder { *; }
+## butterknife
+
+## gson[version 2.8.0]
+-keep class sun.misc.Unsafe { *; }
+-keep class com.google.gson.stream.** { *; }
+-keep class com.google.gson.examples.android.model.** { *; }
+-keep class * implements com.google.gson.TypeAdapterFactory
+-keep class * implements com.google.gson.JsonSerializer-keep class * implements com.google.gson.JsonDeserializer
+## gson
 ```
 
 参考：
