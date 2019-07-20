@@ -1,0 +1,63 @@
+---
+layout: post
+title:  "Proguard混淆 第三方依赖库混淆"
+date:   2019-07-19 18:23:00 +0800
+categories: Android
+tags: 混淆
+author: pepe
+description: 『 第三方依赖库混淆 』
+---
+
+
+```
+#okhttp
+-dontwarn com.squareup.okhttp.**
+-dontwarn com.squareup.okhttp3.**
+-keep class com.squareup.okhttp3.** { *;}
+-dontwarn okio.**
+#okhttp
+
+#retroift
+-dontwarn retrofit2.**
+-dontwarn retrofit.**
+-keep class retrofit2.** { *; }
+-keep class retrofit.** { *; }
+-keepattributes Signature
+-keepattributes Exceptions
+#retroift
+
+## gson[version 2.8.0]
+-keep class sun.misc.Unsafe { *; }
+-keep class com.google.gson.stream.** { *; }
+-keep class com.google.gson.examples.android.model.** { *; }
+-keep class * implements com.google.gson.TypeAdapterFactory
+-keep class * implements com.google.gson.JsonSerializer
+-keep class * implements com.google.gson.JsonDeserializer
+## gson
+
+##Glide
+-dontwarn com.bumptech.glide.**
+-keep class com.bumptech.glide.**{*;}
+-keep public class * implements com.bumptech.glide.module.GlideModule
+-keep public class * extends com.bumptech.glide.AppGlideModule
+-keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
+  **[] $VALUES;
+  public *;
+}
+# 从glide4.0开始，GifDrawable没有提供getDecoder()方法，
+# 需要通过反射获取gifDecoder字段值，所以需要保持GifFrameLoader和GifState类不被混淆
+-keep class com.bumptech.glide.load.resource.gif.GifDrawable$GifState{*;}
+-keep class com.bumptech.glide.load.resource.gif.GifFrameLoader {*;}
+##Glide
+
+##universal-image-loader
+-keep class com.nostra13.universalimageloader.** {*;}
+-dontwarn com.nostra13.universalimageloader.**
+```
+
+参考：
+
+[Android 开发应该掌握的 Proguard 技巧](https://mp.weixin.qq.com/s/sFPnK_nvNQOWRK3rd3XnZw)
+
+
+
