@@ -8,6 +8,23 @@ author: pepe
 description: 『 常用规则 』
 ---
 
+* 1、继承至Android组件（Activity, Service...）的类。
+* 2、自定义控件，继承至View的类（被xml文件引用到的，名字已经固定了的）
+* 3、enum  枚举
+* 4、实现了 android.os.Parcelable 接口的
+* 5、Android R文件
+* 6、数据库驱动...
+* 7、Android support 包等
+* 8、Android 的注释不能混淆
+```
+-keepattributes *Annotation*
+```
+* 9、对于NDK开发 本地的native方法不能被混淆
+```
+-keepclasseswithmembernames class * { native <methods>; }
+```
+
+
 ### **通用配置**
 ```
 #代码混淆压缩比，在0~7之间，默认为5，一般不做修改
