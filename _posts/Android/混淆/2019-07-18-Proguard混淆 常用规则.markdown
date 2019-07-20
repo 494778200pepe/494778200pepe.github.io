@@ -8,6 +8,7 @@ author: pepe
 description: 『 常用规则 』
 ---
 
+### **通用配置**
 ```
 #代码混淆压缩比，在0~7之间，默认为5，一般不做修改( 表示proguard对你的代码进行迭代优化的次数 )
 -optimizationpasses 5
@@ -116,8 +117,108 @@ description: 『 常用规则 』
 ##universal-image-loader
 -keep class com.nostra13.universalimageloader.** {*;}
 -dontwarn com.nostra13.universalimageloader.**
-
 ```
+
+### **1. 实体类需要保留**
+我们需要保留实体类的get和set方法(反射会用到)，boolean类型的get方法是isXXX，不要忘记保留。
+```
+ -keep public class com.dev.example.entity.** {
+    public void set*(***);
+    public *** get*();
+    public *** is*();
+  }
+```
+如果所有的实体类在一个包下的话，上面的配置只用写一遍就可以了。可是实际中我们更多的是以业务来划分包名的，于是我们还可以这样配置(实体类的类名一定要含有"Model")
+```
+-keep public class **.*Model*.** {
+    public void set*(***);
+    public *** get*();
+    public *** is*();
+}
+```
+### **2. 对内部类的处理**
+如果项目中使用了内部类，要对其进行保留。
+
+1. **保留写在某个类里面的所有内部类。**下面表示写在类A里面的内部类都会被保留($符号是用来分割内部类与其母体的标志），什么意思呢，比如类A里面有一个内部类B,而B里面也有个内部类C，这时，B和C都会被保留，以此类推，对多重嵌套的情况，都会被保留(当然我们写代码也不会写出这么深层级的内部类出来)，这里的内部类包含静态内部类，非静态内部类，不包含匿名内部类，如果是匿名内部类，只会保留其方法和成员变量（其继承的类或实现的接口的名字会被混淆），另外如果对应的类被保留，在该类里面定义的接口也会被保留，{*;}匹配该类里面的所有部分。
+```
+-keep class com.dev.example.A$* { *; }
+```
+2. **保留写在某个内部类里面所有的内部类。**这话听着有点绕口，举个例子，类A里面有个内部类B，下面表示写在类B里面的内部类都会被保留。此时，类B像上面第一点所举得类A一样，有点递归意思在里面。还有就是此时类B的名字不会被混淆，但里面的方法和成员变量会被混淆，如果其它地方没有对类B的方法和成员变量进行保留的话。
+```
+-keep class com.dev.example.A$B$* { *; }
+```
+
+### **3. 对webView进行处理**
+```
+-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+    public *;
+}
+-keepclassmembers class * extends android.webkit.webViewClient {
+    public void *(android.webkit.WebView, java.lang.String, android.graphics.Bitmap);
+    public boolean *(android.webkit.WebView, java.lang.String);
+}
+-keepclassmembers class * extends android.webkit.webViewClient {
+    public void *(android.webkit.webView, jav.lang.String);
+}
+```
+### **4. 保留js调用的原生方法**
+如果我们的app中涉及到和h5交互，需要保留js调用的原生方法。
+```
+# Keep JavascriptInterface
+-keepclassmembers class ** {
+    @android.webkit.JavascriptInterface public *;
+}
+```
+### **5. 对含有反射类的处理**
+有时候项目中有些类不是实体类，但仍然用到反射功能,如Class.forName("xxx")，这是我们需要保留的。比如这些类在com.dev.example包下，可以通过下面的配置进行保留。
+```
+-keep class com.dev.example.* { *; }
+```
+另外上面只是保留了该包下的类，如果该包下还有子包，则子包的类仍然会被混淆，
+如果想保留该包下子包的类，我们可以如下配置（**能匹配本包和所含子包，其中子包也可以含有子包）
+```
+-keep class com.dev.example.**{ *; }
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 参考：
 
