@@ -19,6 +19,13 @@ APK 在经过代码混淆处理后，包名、类名、成员名被转化为无�
 
 > 本文中使用的混淆字典可以在此处查看并下载：[proguard_tradition.txt](https://github.com/Moosphan/SelfAssetRepository/blob/master/github/files/proguard-tradition.txt)
 
+```
+# 自定义混淆字典配置
+-obfuscationdictionary ../proguard-tradition.txt
+-packageobfuscationdictionary ../proguard-tradition.txt
+-classobfuscationdictionary ../proguard-tradition.txt
+```
+
 参考：
 
 [Android 字符串及字典混淆开源实现](https://mp.weixin.qq.com/s/SRv1Oar87w1iKuDXS4oaew?)
