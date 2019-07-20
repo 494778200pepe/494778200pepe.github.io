@@ -204,9 +204,3 @@ buildTypes {
 [Android Proguard(混淆)](https://www.jianshu.com/p/60e82aafcfd0)
 
 [ProGuard 最全混淆规则说明 - 简书](https://www.jianshu.com/p/b471db6a01af)
-
-[一篇文章带你领略Android混淆的魅力](https://www.jianshu.com/p/2fab1510eef8)
-
-[Android代码混淆与加固技术](https://www.imooc.com/learn/879)
-
-[Android 反编译利器，jadx 的高级技巧](https://mp.weixin.qq.com/s/8ayLeGavaYfMxqLoTxFIlQ)
