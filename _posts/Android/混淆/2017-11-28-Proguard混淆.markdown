@@ -8,15 +8,9 @@ author: pepe
 description: 『 Proguard混淆 』
 ---
 
-混淆为什么要保留类名或方法名？
-    
-    1、让C/C++程序可以通过 jni 使用对应的 java 方法
-    2、四大组件由于在Android Manifest.xml 里面注册了，防止系统找不到
-    3、R文件混淆会导致引用错误
- 
-[ProGuard manual](https://www.guardsquare.com/en/products/proguard/manual/usage)
- 
 ### **Proguard介绍** 
+
+[ProGuard manual](https://www.guardsquare.com/en/products/proguard/manual/usage)
    
 > Proguard，翻译过来是“护卫兵” 。包含四个功能：
 
@@ -50,7 +44,7 @@ buildTypes {
 
 #### **Optimize** 
 
-* 1、分析和优化Java字节码
+* 1、分析和优化 Java字 节码
 
 * 2、针对那些非 `Entry Points` 的类和方法会被设置成 `private`，`static` 或 `final`，没有使用到的参数会被移除，有些方法可能会被标记为内联的
 
@@ -58,7 +52,7 @@ buildTypes {
 
 * 1、使用简短的无意义的名称，对类，字段和方法进行重命名
 
-* 2、对非EntryPoint的类和类的成员进行重命名，也就是用其它无意义的名称代替
+* 2、对非 Entry Point 的类和类的成员进行重命名，也就是用其它无意义的名称代替
 
 * 3、为什么需要保留一些类和类的成员(方法和变量)不被重命名呢 ?
 
