@@ -17,7 +17,8 @@ description: 『 常用规则 』
 * 2、自定义控件，继承至View的类（被xml文件引用到的，名字已经固定了的）
 
     xml 可能会有相应的引用。
-* 注解不能混淆
+    
+* 3、注解不能混淆
     
     注解在Android平台中使用的越来越多,常用的有ButterKnife和Otto.很多场景下注解被用作在运行时反射确定一些元素的特征.
 
@@ -25,7 +26,7 @@ description: 『 常用规则 』
     ```
     -keepattributes *Annotation*
     ```
-* 3、enum  枚举
+* 4、enum  枚举
 
     [枚举为什么不能混淆](https://494778200pepe.github.io/android/2019/07/21/Proguard%E6%B7%B7%E6%B7%86-%E6%9E%9A%E4%B8%BE%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E6%B7%B7%E6%B7%86.html)
     
