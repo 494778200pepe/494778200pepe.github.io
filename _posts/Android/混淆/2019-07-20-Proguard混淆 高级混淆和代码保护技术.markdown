@@ -8,6 +8,68 @@ author: pepe
 description: 『 高级混淆和代码保护技术 』
 ---
 
+> 默认文件拷贝到你的项目目录之下，删掉 getDefaultProguardFile('proguard-android.txt')，再引入现存于你目录之下的原默认文件
+
+```
+release { 
+    debuggable false        // 什么意思 
+    minifyEnabled true      // 什么意思 
+    zipAlignEnabled true    // 什么意思 
+    shrinkResources true    // 什么意思 
+    signingConfig signingConfigs.release 
+    proguardFile 'proguard-common.pro' 
+    proguardFile 'proguard-rules.pro' 
+    proguardFile 'proguard-rules-google-ads.pro'} 
+```
+
+#### **-repackageclasses**
+
+`-repackageclasses ` 这条规则配置特别强大，它可以把你的代码以及所使用到的各种第三方库代码统统移动到同一个包下，可能有人知道这条配置，但仅仅知道它还不能发挥它最大的作用，默认情况下，你只要在 rules 文件中写上 `-repackageclasses` 这一行代码就可以了，它会把上述的代码文件都移动到根包目录下，即在 / 包之下，这样当有人反编译了你的 APK，将会在根包之下看到 成千上万 的类文件并列着，除此之外，由于我们有时不得不 keep 一些类文件，于是你应用的包名层次仍然会存在，有一些没被完全混淆的类将继续存留在你的包名之下，这些类文件就相对得不到很好的保护。于是我要介绍一个小技巧，就是 `-repackageclasses` 后跟上一个你应用的包名，如：
+```
+-repackageclasses com.drakeet.purewriter.debug
+```
+这么做以后，最终 Proguard 会将包括第三方库的所有类文件都移动到你的包名之下，所谓藏叶于林，这时候那些你未能完全混淆的类也可以藏身在这类文件大海之中，而且这些类文件名都会被混淆成 abcd 字母组合的名字。
+
+需要注意的是，`-repackageclasses + 你的包名` 这种做法存在混淆 bug，而默认 `-repackageclasses` 不加包名不会出现 bug，所以初次使用此法需要进行测试，否则请退而求其次，关于这个 bug 的具体内容不多说，很赘述。
+
+> 可以使用 `consumerProguardFiles` 为一个 library 或 SDK 项目配置混淆文件，这样当某个 app 引用了你这个库，无需再配置相关混淆内容，该 app 就会自动从 `consumerProguardFiles` 配置的文件中读取需要进行的 keep 动作，这对于库开发者是很有用的一个功能。
+
+
+### **安全**
+
+* **一，不要硬编码写入字符串值，即使你不得不这么做，也至少应该另起一个类，**比如叫做 `HardStrings`，用于静态存放这些硬编码的字符串。这样反编译者只能搜索到你这个常量类，而较难以搜索到这些字符串常量被哪里引用。
+
+* **二，在 release 混淆过程中删除 Log 代码，使用 `-assumenosideeffects` 这个配置项可以帮我们在编译成 APK 之前把日志代码全部删掉，**这么做不仅有助于提升性能，而且日志代码往往会保留很多我们的意图和许多可被反编译的字符串：
+
+```
+-assumenosideeffects class android.util.Log { 
+    public static boolean isLoggable(java.lang.String, int); 
+    public static int d(...); 
+    public static int w(...); 
+    public static int v(...); 
+    public static int i(...); 
+} 
+```
+
+* **三，对于你不得不留下的一些硬编码和日志内容，可以采用编码形式替换，**如 你可以规定 "4001" 代表某种错误，而不是在你的代码里写入这个错误的具体描述字符串。这么做的话，你需要有个地方记下这些编码映射的内容，关于此有个技巧：你可以再创建一个常量类，其内容是一堆静态字符串对象，针对上面那个例子，你可以把真正的错误信息作为一个字符串变量的名字，而把它的值写成一个编码，如下：
+```
+public static final String SHOULD_REGISTER_FIRST_ERROR = "ssrrffe"; 
+```
+这样当你在看没混淆的代码引用这个静态变量，你能够一目了然它的意思。而反编译者看到的则是：
+```
+public static final String abc = "ssrrffe"; 
+```
+命名看不懂，值也看不懂。
+
+* **四，把 AppKey 之类特别敏感的字符串内容藏在 native so 文件中。**
+
+
+
+
+
+
+
+
 
 参考：
 
