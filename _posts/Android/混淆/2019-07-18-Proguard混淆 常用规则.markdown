@@ -31,13 +31,13 @@ description: 『 常用规则 』
 #代码混淆压缩比，在0~7之间，默认为5，一般不做修改
 -optimizationpasses 5
 
-#把混淆类中的方法名也混淆了
+#方法同名混淆后亦同名，方法不同名混淆后亦不同名。不使用该选项时，类成员可被映射到相同的名称。因此该选项会增加些许输出文件的大小。只有开启混淆时可用。
 -useuniqueclassmembernames
 
 #优化时允许访问并修改有修饰符的类和类的成员
 -allowaccessmodification
 
-# 不跳过非公共的库的类成员
+# 不忽略包可见的库类成员（字段和方法）
 -dontskipnonpubliclibraryclassmembers
 
 # 指定混淆时采用的算法，后面的参数是一个过滤器
@@ -46,7 +46,7 @@ description: 『 常用规则 』
 
 # 包含有类名->混淆后类名的映射关系
 # 然后使用printmapping指定映射文件的名称
--printmapping priguardMapping.txt
+-printmapping ../priguardMapping.txt
 
 #重命名抛出异常时的文件名称为"SourceFile"
 -renamesourcefileattribute SourceFile
@@ -82,7 +82,7 @@ description: 『 常用规则 』
 }
 
 # 保留 json 中用到的 JavaBean
--keep public class **.bean.** {
+-keep public class **.*bean*.** {
    *;
 }
 
