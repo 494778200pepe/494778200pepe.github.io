@@ -17,6 +17,26 @@ proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pr
 proguard-android.txt 这个文件的位置在：`${sdk.dir}/tools/proguard/proguard-android.txt`。
 
 这个默认文件中帮我们声明了许多混淆规则内容，下面来读一下：
+
+* 1、注解不能混淆
+    
+    注解在Android平台中使用的越来越多,常用的有ButterKnife和Otto.很多场景下注解被用作在运行时反射确定一些元素的特征.
+
+* 2、保留所有的本地native方法不被混淆
+
+* 3、保持自定义View的get和set相关方法
+
+* 4、保留Activity中的方法参数是View及其子类的方法，从而我们在 layout 里面编写 onClick 就不会影响
+
+* 5、enum  枚举
+
+    [枚举为什么不能混淆](https://494778200pepe.github.io/android/2019/07/21/Proguard%E6%B7%B7%E6%B7%86-%E6%9E%9A%E4%B8%BE%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E6%B7%B7%E6%B7%86.html)
+
+* 6、保留Parcelable序列化的类不能被混淆
+
+* 7、对R文件下的所有类及其方法，都不能被混淆
+
+  
 ```
 # This is a configuration file for ProGuard.
 # http://proguard.sourceforge.net/index.html#manual/usage.html
@@ -76,8 +96,8 @@ proguard-android.txt 这个文件的位置在：`${sdk.dir}/tools/proguard/progu
 #}
 
 # We want to keep methods in Activity that could be used in the XML attribute onClick
-# 保留Activity中的方法参数是View及其子类的方法，
-# 从而我们在layout里面编写onClick就不会影响
+# 保留 Activity 中的方法参数是 View 及其子类的方法，
+# 从而我们在 layout 里面编写 onClic k就不会影响
 -keepclassmembers class * extends android.app.Activity {
    public void *(android.view.View);
 }
