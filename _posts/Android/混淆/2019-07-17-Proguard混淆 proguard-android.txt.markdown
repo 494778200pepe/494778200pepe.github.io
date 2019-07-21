@@ -20,7 +20,7 @@ proguard-android.txt 这个文件的位置在：`${sdk.dir}/tools/proguard/progu
 
 * 1、注解不能混淆
     
-    注解在Android平台中使用的越来越多,常用的有ButterKnife和Otto.很多场景下注解被用作在运行时反射确定一些元素的特征.
+    注解在 Android 平台中使用的越来越多,常用的有 ButterKnife 和 Otto .很多场景下注解被用作在运行时反射确定一些元素的特征.
 
 * 2、保留所有的本地native方法不被混淆
 
