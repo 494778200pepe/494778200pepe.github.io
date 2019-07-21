@@ -127,3 +127,4 @@ proguard-android.txt 这个文件的位置在：`${sdk.dir}/tools/proguard/progu
 
 [Android 高级混淆和代码保护技术 · Drakeet 的个人博客](https://blog.csdn.net/hqiangtai/article/details/76037244)
 
+[写给 Android 开发者的混淆使用手册 - DiyCode](https://www.diycode.cc/topics/380)
