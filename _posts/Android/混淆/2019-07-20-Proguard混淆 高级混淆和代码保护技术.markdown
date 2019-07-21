@@ -13,9 +13,10 @@ description: 『 高级混淆和代码保护技术 』
 ```
 release { 
     debuggable false        // 什么意思 
-    minifyEnabled true      // 什么意思 
-    zipAlignEnabled true    // 什么意思 
-    shrinkResources true    // 什么意思 
+    minifyEnabled true      // 开启混淆
+    zipAlignEnabled true    // Zipalign优化
+    shrinkResources true    // 移除无用的resource文件
+    jniDebuggable true
     signingConfig signingConfigs.release 
     proguardFile 'proguard-common.pro' 
     proguardFile 'proguard-rules.pro' 

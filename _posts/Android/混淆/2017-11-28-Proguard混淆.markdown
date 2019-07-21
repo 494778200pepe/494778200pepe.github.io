@@ -20,13 +20,13 @@ description: 『 Proguard混淆 』
    
 > Proguard，翻译过来是“护卫兵” 。包含四个功能：
 
-* 压缩(Shrink):检测和删除没有使用的类，字段，方法和特性
+* 压缩(`Shrink`):检测和删除没有使用的类，字段，方法和特性
 
-* 优化(Optimize):分析和优化Java字节码
+* 优化(`Optimize`):分析和优化 Java 字节码
 
-* 混淆(Obfuscate):使用简短的无意义的名称，对类、字段和方法进行重命名
+* 混淆(`Obfuscate`):使用简短的无意义的名称，对类、字段和方法进行重命名
 
-* 预检(Preveirfy):用来对Java class进行预验证(预验证主要是针对JME开发来说的，Android中没有预验证过程，默认是关闭)
+* 预检(`Preveirfy`):用来对 Java class 进行预验证(预验证主要是针对JME开发来说的，Android 中没有预验证过程，默认是关闭)
    
 ```
 buildTypes {
