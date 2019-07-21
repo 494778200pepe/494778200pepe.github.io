@@ -9,7 +9,13 @@ description: 『 常用规则 』
 ---
 
 * 1、继承至Android组件（Activity, Service...）的类。
+    
+    Activity,Service 会在 AndroidManifest.xml,里面做配置，通过全类名反射找到对应的 Activity 。
+    
 * 2、自定义控件，继承至View的类（被xml文件引用到的，名字已经固定了的）
+
+    xml 可能会有相应的引用。
+
 * 3、enum  枚举
 * 4、实现了 android.os.Parcelable 接口的
 * 5、Android R文件
@@ -23,7 +29,16 @@ description: 『 常用规则 』
 ```
 -keepclasseswithmembernames class * { native <methods>; }
 ```
+* 10、反射中使用的元素
+* 11、GSON的序列化与反序列化
 
+    反序列化创建对象本质还是利用反射,会根据 json 字符串的 key 作为属性名称,value 则对应属性值.
+
+* jni调用的java方法
+* java的native方法
+* js调用java的方法
+* 第三方库不建议混淆
+* 其他和反射相关的一些情况
 
 ### **通用配置**
 ```
@@ -39,15 +54,28 @@ description: 『 常用规则 』
 # 避免混淆内部类、泛型、匿名类
 -keepattributes InnerClasses,Signature,EnclosingMethod
 
+# 不做预检验,preverify是proguard的四个步骤之一
+# Android不需要preverify,去掉这一步可以加快混淆速度
+-dontpreverify
+
+# 指定不去忽略非公共的库的类
+# 默认跳过，有些情况下编写的代码与类库中的类在同一个包下，并且持有包中内容的引用，此时就需要加入此条声明
+-dontskipnonpubliclibraryclasses
 # 不跳过非公共的库的类成员
 -dontskipnonpubliclibraryclassmembers
 # 指定混淆时采用的算法，后面的参数是一个过滤器
 # 这个过滤器是谷歌推荐的算法，一般不改变
 -optimizations !code/simplification/artithmetic,!field/*,!class/merging/*
 
+# 混淆时不使用大小写混合，混淆后的类名为小写
+# windows下的同学还是加入这个选项吧(windows大小写不敏感)
+-dontusemixedcaseclassnames
+
+# 有了verbose这句话，混淆后就会生成映射文件
 # 包含有类名->混淆后类名的映射关系
 # 然后使用printmapping指定映射文件的名称
-#-printmapping priguardMapping.txt
+-verbose
+-printmapping priguardMapping.txt
 
 #重命名抛出异常时的文件名称为"SourceFile"
 -renamesourcefileattribute SourceFile
@@ -55,16 +83,24 @@ description: 『 常用规则 』
 #抛出异常时保留代码行号
 -keepattributes SourceFile,LineNumberTable
 
-# 自定义混淆字典配置
--obfuscationdictionary ../proguard-tradition.txt
--packageobfuscationdictionary ../proguard-tradition.txt
--classobfuscationdictionary ../proguard-tradition.txt
-
+# 保护代码中的Annotation不被混淆
+-keepattributes *Annotation*
 # 异常
 -keepattributes Exceptions
+# 避免混淆泛型
+-keepattributes Signature
 # 反射
 -keepattributes EnclosingMethod
+# 枚举类不能被混淆
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
 
+# 保留所有的本地native方法不被混淆
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
 
 # 保留Serializable 序列化的类不被混淆
 -keepclassmembers class * implements java.io.Serializable {
@@ -74,6 +110,11 @@ description: 『 常用规则 』
     private void readObject(java.io.ObjectInputStream);
     java.lang.Object writeReplace();
     java.lang.Object readResolve();
+}
+
+# 保留Parcelable序列化的类不能被混淆
+-keep class * implements android.os.Parcelable{
+    public static final android.os.Parcelable$Creator *;
 }
 
 #保留我们使用的四大组件，自定义的Application等等这些类不被混淆
@@ -97,12 +138,15 @@ description: 『 常用规则 』
 # 如果有引用android-support-v4.jar包，可以添加下面这行
 -keep public class com.null.test.ui.fragment.** {*;}
 
-#Fragment不需要在AndroidManifest.xml中注册，需要额外保护下
--keep public class * extends android.support.v4.app.Fragment
--keep public class * extends android.app.Fragment
+# 保留Activity中的方法参数是view的方法，
+# 从而我们在layout里面编写onClick就不会影响
+-keepclassmembers class * extends android.app.Activity {
+    public void * (android.view.View);
+}
 
--keep public class **.bean.** {
-   *;
+# 对R文件下的所有类及其方法，都不能被混淆
+-keepclassmembers class **.R$* {
+    *;
 }
 
 # 对于带有回调函数onXXEvent的，不能混淆
@@ -110,26 +154,24 @@ description: 『 常用规则 』
     void *(**On*Event);
 }
 
+#保留我们自定义控件（继承自View）不被混淆
+-keep public class * extends android.view.View{
+    *** get*();
+    void set*(***);
+    public <init>(android.content.Context);
+    public <init>(android.content.Context, android.util.AttributeSet);
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+
+#Fragment不需要在AndroidManifest.xml中注册，需要额外保护下
+-keep public class * extends android.app.Fragment
+
 # 保持测试相关的代码
 -dontnote junit.framework.**
 -dontnote junit.runner.**
 -dontwarn android.test.**
 -dontwarn android.support.test.**
 -dontwarn org.junit.**
-
-# webview
--keepclassmembers class * extends android.webkit.WebViewClient {
-    public void *(android.webkit.WebView, java.lang.String, android.graphics.Bitmap);
-    public boolean *(android.webkit.WebView, java.lang.String);
-}
--keepclassmembers class * extends android.webkit.WebViewClient {
-    public void *(android.webkit.WebView, java.lang.String);
-}
-
-# JavaScript
--keepclassmembers class com.null.test.MainActivity$JSInterfacel {
-     <methods>;
-}
 ```
 
 ### **1. 实体类需要保留**
