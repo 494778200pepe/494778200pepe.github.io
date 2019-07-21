@@ -17,7 +17,7 @@ description: 『 常用规则 』
 * 2、自定义控件，继承至View的类（被xml文件引用到的，名字已经固定了的）
 
     xml 可能会有相应的引用。
-    
+  
 * 3、注解不能混淆
     
     注解在Android平台中使用的越来越多,常用的有ButterKnife和Otto.很多场景下注解被用作在运行时反射确定一些元素的特征.
@@ -34,25 +34,20 @@ description: 『 常用规则 』
 
     反序列化创建对象本质还是利用反射,会根据 json 字符串的 key 作为属性名称,value 则对应属性值.
     [为什么 GSON的序列化与反序列化 使用到的J avaBean 不能混淆](https://494778200pepe.github.io/android/2019/07/21/Proguard混淆-GSON的序列化与反序列化.html)
-    
-* 4、实现了 android.os.Parcelable 接口的
-* 5、Android R文件
+
 * 6、数据库驱动...
 * 7、Android support 包等
 * 8、Android 的注释不能混淆
 ```
 -keepattributes *Annotation*
 ```
-* 9、对于NDK开发 本地的native方法不能被混淆
-```
--keepclasseswithmembernames class * { native <methods>; }
-```
+
 * 10、反射中使用的元素
 
 * jni调用的java方法
-* java的native方法
+
 * js调用java的方法
-* 第三方库不建议混淆
+
 * 其他和反射相关的一些情况
 
 ### **通用配置**
