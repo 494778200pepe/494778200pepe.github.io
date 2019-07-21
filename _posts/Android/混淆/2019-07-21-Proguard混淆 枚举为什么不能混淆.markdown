@@ -1,0 +1,120 @@
+---
+layout: post
+title:  "Proguard混淆 枚举为什么不能混淆"
+date:   2019-07-21 11:31:00 +0800
+categories: Android
+tags: 混淆
+author: pepe
+description: 『 枚举为什么不能混淆 』
+---
+
+枚举是Java 5 中引入的一个很便利的特性,可以很好的替代之前的常量形式.
+
+枚举使用起来很简单,如下
+```
+public enum Day {
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+    SATURDAY,
+    SUNDAY
+}
+```
+这里我们这样使用枚举
+```
+Day day = Day.valueOf("monday");
+Log.i(LOGTAG, "testEnum day=" + day);
+```
+运行上面的的代码,通常情况下是没有问题的,是否说明枚举就可以混淆呢?
+
+其实不是.
+
+为什么没有问题呢,因为在 Android 的默认 「Proguard配置」 文件 『proguard-android.txt』中，已经处理了枚举相关的keep操作.
+```
+# For enumeration classes, see http://proguard.sourceforge.net/manual/examples.html#enumerations
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+```
+如果我们手动去掉这条keep配置,再次运行,一个这样的异常会从天而降.
+```
+E AndroidRuntime: Process: com.example.admin.proguardsample, PID: 17246
+E AndroidRuntime: java.lang.AssertionError: impossible
+E AndroidRuntime:  at java.lang.Enum$1.create(Enum.java:45)
+E AndroidRuntime:  at java.lang.Enum$1.create(Enum.java:36)
+E AndroidRuntime:  at libcore.util.BasicLruCache.get(BasicLruCache.java:54)
+E AndroidRuntime:  at java.lang.Enum.getSharedConstants(Enum.java:211)
+E AndroidRuntime:  at java.lang.Enum.valueOf(Enum.java:191)
+E AndroidRuntime:  at com.example.admin.proguardsample.a.a(Unknown Source)
+E AndroidRuntime:  at com.example.admin.proguardsample.MainActivity.j(Unknown Source)
+E AndroidRuntime:  at com.example.admin.proguardsample.MainActivity.onCreate(Unknown Source)
+E AndroidRuntime:  at android.app.Activity.performCreate(Activity.java:6237)
+E AndroidRuntime:  at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1107)
+E AndroidRuntime:  at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2369)
+E AndroidRuntime:  at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2476)
+E AndroidRuntime:  at android.app.ActivityThread.-wrap11(ActivityThread.java)
+E AndroidRuntime:  at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1344)
+E AndroidRuntime:  at android.os.Handler.dispatchMessage(Handler.java:102)
+E AndroidRuntime:  at android.os.Looper.loop(Looper.java:148)
+E AndroidRuntime:  at android.app.ActivityThread.main(ActivityThread.java:5417)
+E AndroidRuntime:  at java.lang.reflect.Method.invoke(Native Method)
+E AndroidRuntime:  at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726)
+E AndroidRuntime:  at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)
+E AndroidRuntime: Caused by: java.lang.NoSuchMethodException: values []
+E AndroidRuntime:  at java.lang.Class.getMethod(Class.java:624)
+E AndroidRuntime:  at java.lang.Class.getDeclaredMethod(Class.java:586)
+E AndroidRuntime:  at java.lang.Enum$1.create(Enum.java:41)
+E AndroidRuntime:  ... 19 more
+```
+好玩的事情来了,我们看一看为什么会抛出这个异常
+
+1.首先,一个枚举类会生成一个对应的类文件,这里是Day.class. 这里类里面包含什么呢,看一下反编译的结果
+```
+➜  proguardsample javap  Day
+Warning: Binary file Day contains com.example.admin.proguardsample.Day
+Compiled from "Day.java"
+public final class com.example.admin.proguardsample.Day extends java.lang.Enum<com.example.admin.proguardsample.Day> {
+  public static final com.example.admin.proguardsample.Day MONDAY;
+  public static final com.example.admin.proguardsample.Day TUESDAY;
+  public static final com.example.admin.proguardsample.Day WEDNESDAY;
+  public static final com.example.admin.proguardsample.Day THURSDAY;
+  public static final com.example.admin.proguardsample.Day FRIDAY;
+  public static final com.example.admin.proguardsample.Day SATURDAY;
+  public static final com.example.admin.proguardsample.Day SUNDAY;
+  public static com.example.admin.proguardsample.Day[] values();
+  public static com.example.admin.proguardsample.Day valueOf(java.lang.String);
+  static {};
+}
+```
+
+* 枚举实际是创建了一个继承自java.lang.Enum的类
+* java代码中的枚举类型最后转换成类中的static final属性
+* 多出了两个方法,values()和valueOf().
+* values方法返回定义的枚举类型的数组集合,即从MONDAY到SUNDAY这7个类型.
+
+2.找寻崩溃轨迹 其中Day.valueOf(String)内部会调用Enum.valueOf(Class,String)方法
+```
+public static com.example.admin.proguardsample.Day valueOf(java.lang.String);
+    Code:
+       0: ldc           #4                  // class com/example/admin/proguardsample/Day
+       2: aload_0
+       3: invokestatic  #5                  // Method java/lang/Enum.valueOf:(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+       6: checkcast     #4                  // class com/example/admin/proguardsample/Day
+       9: areturn
+```
+
+而Enum的valueOf方法会间接调用Day.values()方法,具体步骤是
+
+* Enum.value调用Class.enumConstantDirectory方法获取String到枚举的映射
+* Class.enumConstantDirectory方法调用Class.getEnumConstantsShared获取当前的枚举类型
+* Class.getEnumConstantsShared方法使用反射调用values来获取枚举类型的集合.
+
+混淆之后,`values` 被重新命名,所以会发生 `NoSuchMethodException`.
+
+参考：
+
+[关于Android代码混淆的详细讲解 - 码农教程](http://www.manongjc.com/article/1598.html)
+
