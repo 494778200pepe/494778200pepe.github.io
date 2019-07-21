@@ -87,13 +87,6 @@ proguard-android.txt 这个文件的位置在：`${sdk.dir}/tools/proguard/progu
    void set*(***);
    *** get*();
 }
-#-keep public class * extends android.view.View{
-#    *** get*();
-#    void set*(***);
-#    public <init>(android.content.Context);
-#    public <init>(android.content.Context, android.util.AttributeSet);
-#    public <init>(android.content.Context, android.util.AttributeSet, int);
-#}
 
 # We want to keep methods in Activity that could be used in the XML attribute onClick
 # 保留 Activity 中的方法参数是 View 及其子类的方法，
