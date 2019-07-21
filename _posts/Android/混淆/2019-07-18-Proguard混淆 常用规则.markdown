@@ -41,30 +41,14 @@ description: 『 常用规则 』
 #优化时允许访问并修改有修饰符的类和类的成员
 -allowaccessmodification
 
-# 避免混淆内部类、泛型、匿名类
--keepattributes InnerClasses,Signature,EnclosingMethod
-
-# 不做预检验,preverify是proguard的四个步骤之一
-# Android不需要preverify,去掉这一步可以加快混淆速度
--dontpreverify
-
-# 指定不去忽略非公共的库的类
-# 默认跳过，有些情况下编写的代码与类库中的类在同一个包下，并且持有包中内容的引用，此时就需要加入此条声明
--dontskipnonpubliclibraryclasses
 # 不跳过非公共的库的类成员
 -dontskipnonpubliclibraryclassmembers
 # 指定混淆时采用的算法，后面的参数是一个过滤器
 # 这个过滤器是谷歌推荐的算法，一般不改变
 -optimizations !code/simplification/artithmetic,!field/*,!class/merging/*
 
-# 混淆时不使用大小写混合，混淆后的类名为小写
-# windows下的同学还是加入这个选项吧(windows大小写不敏感)
--dontusemixedcaseclassnames
-
-# 有了verbose这句话，混淆后就会生成映射文件
 # 包含有类名->混淆后类名的映射关系
 # 然后使用printmapping指定映射文件的名称
--verbose
 -printmapping priguardMapping.txt
 
 #重命名抛出异常时的文件名称为"SourceFile"
@@ -73,10 +57,16 @@ description: 『 常用规则 』
 #抛出异常时保留代码行号
 -keepattributes SourceFile,LineNumberTable
 
+# 自定义混淆字典配置
+-obfuscationdictionary ../proguard-tradition.txt
+-packageobfuscationdictionary ../proguard-tradition.txt
+-classobfuscationdictionary ../proguard-tradition.txt
+
+# 避免混淆内部类、泛型、匿名类
+-keepattributes InnerClasses,Signature,EnclosingMethod
+
 # 异常
 -keepattributes Exceptions
-# 避免混淆泛型
--keepattributes Signature
 # 反射
 -keepattributes EnclosingMethod
 
@@ -91,11 +81,6 @@ description: 『 常用规则 』
     java.lang.Object readResolve();
 }
 
-# 保留Parcelable序列化的类不能被混淆
--keep class * implements android.os.Parcelable{
-    public static final android.os.Parcelable$Creator *;
-}
-
 #保留我们使用的四大组件，自定义的Application等等这些类不被混淆
 #因为这些子类都有可能被外部调用
 -keep public class * extends android.app.Activity
@@ -107,6 +92,10 @@ description: 『 常用规则 』
 -keep public class * extends android.preference.Preference
 -keep public class com.android.vending.licensing.ILicensingService
 
+#Fragment不需要在AndroidManifest.xml中注册，需要额外保护下
+-keep public class * extends android.support.v4.app.Fragment
+-keep public class * extends android.app.Fragment
+
 #保留support下的所有类及其内部类
 -keep class android.support.** {*;}
 # 保留继承的support类
@@ -117,15 +106,9 @@ description: 『 常用规则 』
 # 如果有引用android-support-v4.jar包，可以添加下面这行
 -keep public class com.null.test.ui.fragment.** {*;}
 
-# 保留Activity中的方法参数是view的方法，
-# 从而我们在layout里面编写onClick就不会影响
--keepclassmembers class * extends android.app.Activity {
-    public void * (android.view.View);
-}
-
-# 对R文件下的所有类及其方法，都不能被混淆
--keepclassmembers class **.R$* {
-    *;
+# 保留 json 中用到的 JavaBean
+-keep public class **.bean.** {
+   *;
 }
 
 # 对于带有回调函数onXXEvent的，不能混淆
@@ -133,24 +116,27 @@ description: 『 常用规则 』
     void *(**On*Event);
 }
 
-#保留我们自定义控件（继承自View）不被混淆
--keep public class * extends android.view.View{
-    *** get*();
-    void set*(***);
-    public <init>(android.content.Context);
-    public <init>(android.content.Context, android.util.AttributeSet);
-    public <init>(android.content.Context, android.util.AttributeSet, int);
-}
-
-#Fragment不需要在AndroidManifest.xml中注册，需要额外保护下
--keep public class * extends android.app.Fragment
-
 # 保持测试相关的代码
 -dontnote junit.framework.**
 -dontnote junit.runner.**
 -dontwarn android.test.**
 -dontwarn android.support.test.**
 -dontwarn org.junit.**
+
+# webview
+-keepclassmembers class * extends android.webkit.WebViewClient {
+    public void *(android.webkit.WebView, java.lang.String, android.graphics.Bitmap);
+    public boolean *(android.webkit.WebView, java.lang.String);
+}
+-keepclassmembers class * extends android.webkit.WebViewClient {
+    public void *(android.webkit.WebView, java.lang.String);
+}
+
+# JavaScript
+-keepclassmembers class com.null.test.MainActivity$JSInterfacel {
+     <methods>;
+}
+
 ```
 
 ### **1. 实体类需要保留**
