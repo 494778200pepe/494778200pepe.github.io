@@ -8,14 +8,23 @@ author: pepe
 description: 『 常用规则 』
 ---
 
-* 1、继承至Android组件（Activity, Service...）的类。
+* 1、四大组件不建议混淆
     
-    Activity,Service 会在 AndroidManifest.xml,里面做配置，通过全类名反射找到对应的 Activity 。
+    。四大组件声明必须在 manifest 中注册,如果混淆后类名更改,而混淆后的类名没有在 manifest 注册,是不符合 Android 组件注册机制的.
+
+    。外部程序可能使用组件的字符串类名,如果类名混淆,可能导致出现异常
     
 * 2、自定义控件，继承至View的类（被xml文件引用到的，名字已经固定了的）
 
     xml 可能会有相应的引用。
+* 注解不能混淆
+    
+    注解在Android平台中使用的越来越多,常用的有ButterKnife和Otto.很多场景下注解被用作在运行时反射确定一些元素的特征.
 
+    为了保证注解正常工作,我们不应该对注解进行混淆.Android工程默认的混淆配置已经包含了下面保留注解的配置
+    ```
+    -keepattributes *Annotation*
+    ```
 * 3、enum  枚举
 * 4、实现了 android.os.Parcelable 接口的
 * 5、Android R文件
