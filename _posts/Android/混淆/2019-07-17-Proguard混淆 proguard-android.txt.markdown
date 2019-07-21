@@ -12,12 +12,11 @@ description: 『 proguard-android.txt 』
 ```
 proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro' 
 ```
-这一行代码很多人不了解。它的意思是，指定了两个 Proguard rules 文件，一个是通过getDefaultProguardFile() 方法获得官方自带的混淆规则文件路径，另一个是与当前 gradle 相同目录下的 proguard-rules.pro 文件路径。
+这一行代码很多人不了解。它的意思是，指定了两个 Proguard rules 文件，一个是通过 `getDefaultProguardFile()` 方法获得官方自带的混淆规则文件路径，另一个是与当前 gradle 相同目录下的 `proguard-rules.pro` 文件路径。
 
 proguard-android.txt 这个文件的位置在：`${sdk.dir}/tools/proguard/proguard-android.txt`。
-这个默认文件中帮我们声明了许多混淆规则内容，包括：keep 所有继承自 View 的类，keep 所有继承自 Activity 的类，keep 所有 JavascriptInterface、native 方法声明，以及 keep 一些注解了@Keep 的内容。
 
-下面来读一下：
+这个默认文件中帮我们声明了许多混淆规则内容，下面来读一下：
 ```
 # This is a configuration file for ProGuard.
 # http://proguard.sourceforge.net/index.html#manual/usage.html
