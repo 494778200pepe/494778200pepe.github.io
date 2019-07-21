@@ -13,20 +13,16 @@ description: 『 常用规则 』
     。四大组件声明必须在 manifest 中注册,如果混淆后类名更改,而混淆后的类名没有在 manifest 注册,是不符合 Android 组件注册机制的.
 
     。这些子类都有可能被外部程序调用,如果类名混淆,可能导致出现异常
-    
-* 2、自定义控件，继承至View的类（被xml文件引用到的，名字已经固定了的）
-
-    xml 可能会有相应的引用。
   
-* 3、GSON的序列化与反序列化
+* 2、GSON的序列化与反序列化
 
     反序列化创建对象本质还是利用反射,会根据 json 字符串的 key 作为属性名称,value 则对应属性值.
     [为什么 GSON的序列化与反序列化 使用到的J avaBean 不能混淆](https://494778200pepe.github.io/android/2019/07/21/Proguard混淆-GSON的序列化与反序列化.html)
 
-* 6、数据库驱动...
-* 7、Android support 包等
+* 3、保持测试相关的代码
+* 4、Android support 包等
 
-* 10、反射中使用的元素
+* 5、反射中使用的元素
 
 
 
@@ -43,6 +39,7 @@ description: 『 常用规则 』
 
 # 不跳过非公共的库的类成员
 -dontskipnonpubliclibraryclassmembers
+
 # 指定混淆时采用的算法，后面的参数是一个过滤器
 # 这个过滤器是谷歌推荐的算法，一般不改变
 -optimizations !code/simplification/artithmetic,!field/*,!class/merging/*
@@ -62,13 +59,16 @@ description: 『 常用规则 』
 -packageobfuscationdictionary ../proguard-tradition.txt
 -classobfuscationdictionary ../proguard-tradition.txt
 
-# 避免混淆内部类、泛型、匿名类
--keepattributes InnerClasses,Signature,EnclosingMethod
-
-# 异常
--keepattributes Exceptions
-# 反射
--keepattributes EnclosingMethod
+#保留我们使用的四大组件，自定义的Application等等这些类不被混淆
+#因为这些子类都有可能被外部调用
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Appliction
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.backup.BackupAgentHelper
+-keep public class * extends android.preference.Preference
+-keep public class com.android.vending.licensing.ILicensingService
 
 
 # 保留Serializable 序列化的类不被混淆
@@ -81,16 +81,16 @@ description: 『 常用规则 』
     java.lang.Object readResolve();
 }
 
-#保留我们使用的四大组件，自定义的Application等等这些类不被混淆
-#因为这些子类都有可能被外部调用
--keep public class * extends android.app.Activity
--keep public class * extends android.app.Appliction
--keep public class * extends android.app.Service
--keep public class * extends android.content.BroadcastReceiver
--keep public class * extends android.content.ContentProvider
--keep public class * extends android.app.backup.BackupAgentHelper
--keep public class * extends android.preference.Preference
--keep public class com.android.vending.licensing.ILicensingService
+# 保留 json 中用到的 JavaBean
+-keep public class **.bean.** {
+   *;
+}
+
+# 避免混淆内部类、泛型、匿名类
+-keepattributes InnerClasses,Signature,EnclosingMethod
+
+# 异常
+-keepattributes Exceptions
 
 #Fragment不需要在AndroidManifest.xml中注册，需要额外保护下
 -keep public class * extends android.support.v4.app.Fragment
@@ -98,6 +98,7 @@ description: 『 常用规则 』
 
 #保留support下的所有类及其内部类
 -keep class android.support.** {*;}
+
 # 保留继承的support类
 -keep public class * extends android.support.v4.**
 -keep public class * extends android.support.v7.**
@@ -105,11 +106,6 @@ description: 『 常用规则 』
 
 # 如果有引用android-support-v4.jar包，可以添加下面这行
 -keep public class com.null.test.ui.fragment.** {*;}
-
-# 保留 json 中用到的 JavaBean
--keep public class **.bean.** {
-   *;
-}
 
 # 对于带有回调函数onXXEvent的，不能混淆
 -keepclassmembers class * {
@@ -124,6 +120,9 @@ description: 『 常用规则 』
 -dontwarn org.junit.**
 
 # webview
+-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+    public *;
+}
 -keepclassmembers class * extends android.webkit.WebViewClient {
     public void *(android.webkit.WebView, java.lang.String, android.graphics.Bitmap);
     public boolean *(android.webkit.WebView, java.lang.String);
@@ -136,7 +135,6 @@ description: 『 常用规则 』
 -keepclassmembers class com.null.test.MainActivity$JSInterfacel {
      <methods>;
 }
-
 ```
 
 ### **1. 实体类需要保留**
