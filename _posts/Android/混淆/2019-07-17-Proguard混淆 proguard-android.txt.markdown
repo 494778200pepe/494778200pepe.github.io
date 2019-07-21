@@ -32,12 +32,13 @@ proguard-android.txt 这个文件的位置在：`${sdk.dir}/tools/proguard/progu
 # 默认跳过，有些情况下编写的代码与类库中的类在同一个包下，并且持有包中内容的引用，此时就需要加入此条声明
 -dontskipnonpubliclibraryclasses
 # 有了verbose这句话，混淆后就会生成映射文件
+# 混淆时记录日志
 -verbose
 
 # Optimization is turned off by default. Dex does not like code run
 # through the ProGuard optimize and preverify steps (and performs some
 # of these optimizations on its own).
-# 不做优化,optimize是proguard的四个步骤之一
+#不优化输入的类文件
 -dontoptimize
 # 不做预检验,preverify是proguard的四个步骤之一
 # Android不需要preverify,去掉这一步可以加快混淆速度
@@ -61,7 +62,7 @@ proguard-android.txt 这个文件的位置在：`${sdk.dir}/tools/proguard/progu
 
 # keep setters in Views so that animations can still work.
 # see http://proguard.sourceforge.net/manual/examples.html#beans
-#保留我们自定义控件（继承自View）不被混淆
+# 保持自定义View的get和set相关方法
 -keepclassmembers public class * extends android.view.View {
    void set*(***);
    *** get*();
@@ -75,7 +76,7 @@ proguard-android.txt 这个文件的位置在：`${sdk.dir}/tools/proguard/progu
 #}
 
 # We want to keep methods in Activity that could be used in the XML attribute onClick
-# 保留Activity中的方法参数是view的方法，
+# 保留Activity中的方法参数是View及其子类的方法，
 # 从而我们在layout里面编写onClick就不会影响
 -keepclassmembers class * extends android.app.Activity {
    public void *(android.view.View);
