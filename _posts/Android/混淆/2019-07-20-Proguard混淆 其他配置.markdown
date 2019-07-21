@@ -40,7 +40,7 @@ description: 『 其他配置 』
 
 > 使用这条配置有点危险，如果删除了一些预料之外的代码，很容易就会导致代码崩溃。所以，**谨慎使用**。
 
-**-allowaccessmodification **这项配置是设置是否允许改变作用域的。使用这项配置之后可以提高优化的效果。但是，如果你的代码是一个库的话，最好不要配置这个选项，因为它可能会导致一些 ·private· 变量被改成 ·public·。
+**-allowaccessmodification**这项配置是设置是否允许改变作用域的。使用这项配置之后可以提高优化的效果。但是，如果你的代码是一个库的话，最好不要配置这个选项，因为它可能会导致一些 ·private· 变量被改成 ·public·。
 
 **-mergeinterfacesaggressively** 指定一些接口可能被合并，即使一些子类没有同时实现两个接口的方法。这种情况在 java 源码中是不允许存在的，但是在 java 字节码中是允许存在的。它的作用是通过合并接口减少类的数量，从而达到减少输出文件体积的效果。仅在 `optimize` 阶段有效。
 
@@ -62,4 +62,6 @@ dontwarn是一个和keep可以说是形影不离,尤其是处理引入的library
 [Android Proguard(混淆)](https://www.jianshu.com/p/60e82aafcfd0)
 
 [ProGuard 最全混淆规则说明 - 简书](https://www.jianshu.com/p/b471db6a01af)
+
+[混淆必知必会 - 简书](https://www.jianshu.com/p/2f8a2c1e2a11)
 
