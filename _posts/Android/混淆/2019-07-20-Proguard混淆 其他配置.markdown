@@ -47,6 +47,16 @@ description: 『 其他配置 』
 > 这项配置对于一些虚拟机的65535方法数限制是有一定效果的。
 
 
+### **-dontwarn**
+dontwarn是一个和keep可以说是形影不离,尤其是处理引入的library时.
+
+引入的library可能存在一些无法找到的引用和其他问题,在build时可能会发出警告,如果我们不进行处理,通常会导致build中止.因此为了保证build继续,我们需要使用dontwarn处理这些我们无法解决的library的警告.
+
+比如关闭Twitter sdk的警告,我们可以这样做
+
+-dontwarn com.twitter.sdk.**
+其他混淆相关的介绍,都可以通过访问官方文档获取.
+
 参考：
 
 [Android Proguard(混淆)](https://www.jianshu.com/p/60e82aafcfd0)
