@@ -28,8 +28,9 @@ Log.i(LOGTAG, "testGson serializedText=" + serializedText);
 开启混淆之后的日志输出结果
 ```
 I/MainActivity: testGson serializedText={"a":"Apple","b":2}
-属性名已经改变了,变成了没有意思的名称,对我们后续的某些处理是很麻烦的.
 ```
+属性名已经改变了,变成了没有意思的名称,对我们后续的某些处理是很麻烦的.
+
 反序列化的代码
 ```
 Gson gson = new Gson();

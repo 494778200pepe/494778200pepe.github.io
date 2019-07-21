@@ -46,6 +46,7 @@ description: 『 常用规则 』
 * 11、GSON的序列化与反序列化
 
     反序列化创建对象本质还是利用反射,会根据 json 字符串的 key 作为属性名称,value 则对应属性值.
+    [为什么 GSON的序列化与反序列化 使用到的J avaBean 不能混淆](https://494778200pepe.github.io/android/2019/07/21/Proguard混淆-GSON的序列化与反序列化.html)
 
 * jni调用的java方法
 * java的native方法
