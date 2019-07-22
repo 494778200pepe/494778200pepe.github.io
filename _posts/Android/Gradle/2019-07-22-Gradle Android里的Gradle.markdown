@@ -39,9 +39,56 @@ task clean(type: Delete) {
 
 Settings 与 Project 在 Gradle 中都有对应的类，也就是说只有 Gradle 这个框架定义的我们才能用，至于 Settings 与 Project 都定义了什么我们只能查看其官方文档啊。
 
+### **Settings对象**
+
+比如Settings类中定义了include方法： 
+
+![gradle1]({{ site.baseurl }}/assets/images/android/Gradle/gradle1.png)
+
+include方法api说明为：
+
+![gradle2]({{ site.baseurl }}/assets/images/android/Gradle/gradle2.png)
+
+看到了吧，我们每一个配置都是调用对应对象的方法。
+
+我还发现Settings类中定义了如下方法：
+
+![gradle3]({{ site.baseurl }}/assets/images/android/Gradle/gradle3.png)
+
+那我们在setting.gradle文件里面写上如下代码试一下：
+![gradle4]({{ site.baseurl }}/assets/images/android/Gradle/gradle4.png)
+
+```
+include ':app', ':library1', ':library2'
+
+def pro = findProject(':app')
+println '----------------------------'
+println pro.getPath()
+println '----------------------------'
+```
+然后执行gradle assembleDebug命令编译我们的项目输出如下：
 
 
 
+输出了app这个project的信息。
+
+
+
+### **Project对象**
+
+
+
+
+
+
+
+
+
+
+
+
+
+### **Gradle对象**
 
 
 
