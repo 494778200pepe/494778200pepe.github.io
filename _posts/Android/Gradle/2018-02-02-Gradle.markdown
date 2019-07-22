@@ -16,6 +16,8 @@ description: 『 Gradle学习 』
 
 参考：
 
+[Gradle入门到实战(一) — 全面了解Gradle](https://mp.weixin.qq.com/s?__biz=Mzg2NzAwMjY4MQ==&mid=2247483789&idx=1&sn=4b3bb2ab721c8ed7e05f1e8b2e0fbf70&chksm=ce4371dbf934f8cd7c484e8c5356d299bbd5d7790ee11bb0da9725068fa8e4b895f87379949f&token=655420148&lang=zh_CN#rd)
+
 [gradle超详细解析 - 简书](https://www.jianshu.com/p/822e44a5ea97)
 
 [verymrq的博客 - CSDN博客](https://blog.csdn.net/verymrq/article/category/7679772)
