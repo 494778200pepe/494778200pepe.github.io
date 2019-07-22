@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Groovy"
+title:  "Gradle Groovy"
 date:   2019-07-19 15:45:00 +0800
 categories: Android
 tags: Gradle
