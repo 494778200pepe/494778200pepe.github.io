@@ -14,14 +14,14 @@ Gradle执行分为三个过程：
 初始化阶段只要为每个module创建project实例。这个阶段settings.gradle文件会被解析执行。
 
 ### **Configration** 
-这个阶段解析每个模块的build.gradle文件，这个阶段完成后整个项目的tasks执行顺序也就确定了并且task准备就绪处于待执行状态，整个tasks任务会构成一个有向无环图。
+这个阶段解析每个模块的 `build.gradle` 文件，这个阶段完成后整个项目的 tasks 执行顺序也就确定了并且 task 准备就绪处于待执行状态，整个 tasks 任务会构成一个有向无环图。
 
 ### **执行任务** 
 这阶段就是按照顺序执行具体任务了。
 
-在每个阶段我们可以通过gradle对象添加回调监听。
+在每个阶段我们可以通过 gradle 对象添加回调监听。
 
-我们在settings.gradle文件与每个module的build.gradle文件添加如下信息：
+我们在 `settings.gradle` 文件与每个 module 的 `build.gradle` 文件添加如下信息：
 
 #### **settings.gradle：**
 
@@ -33,7 +33,7 @@ println "settings end"
 
 #### **根目录的build.gradle:**
 
-通过gradle对象添加了一些回调监听
+通过 gradle 对象添加了一些回调监听
 ```
 。。。。。。。。
 afterEvaluate{
@@ -110,12 +110,12 @@ afterEvaluate{
 
 println "library2 end"
 ```
-接下来我们执行gradle assembleDebug命令，打印如下信息：
+接下来我们执行 `gradle assembleDebug` 命令，打印如下信息：
 
 
-![gradle2]({{ site.baseurl }}/assets/images/android/Gradle/gradle2.png)
+![gradle10]({{ site.baseurl }}/assets/images/android/Gradle/gradle10.png)
 
-以上就是Gradle构建工程的大体过程，在这个过程我们可以加入各种回调监听。
+以上就是 Gradle 构建工程的大体过程，在这个过程我们可以加入各种回调监听。
 
 
 
