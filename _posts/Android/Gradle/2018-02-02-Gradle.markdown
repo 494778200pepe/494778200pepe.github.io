@@ -9,9 +9,9 @@ description: 『 Gradle学习 』
 ---
 
 
+Groovy 是一门 jvm 语言，最终编译成 class 文件然后在 jvm 上执行，Java 语言的特性 Groovy 都支持，我们`可以混写 Java 和 Groovy，就是在同一文件中可以混写`， 注意，这里与 Java 和 Kotlin 可不一样，`Java和Kotlin是可以互相调用，而不能在同一文件混写。`
 
-
-
+Groovy 的优势是什么呢？Groovy 增强了 Java 的很多功能。比如解析 xml 文件，文件读写等，Groovy 只需要几行代码就能搞定，而如果用 Java 则需要几十行代码，简单说就是使用 Groovy 实现某些功能比 Java 要少些很多代码。
 
 
 参考：
