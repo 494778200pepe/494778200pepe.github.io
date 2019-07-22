@@ -39,7 +39,7 @@ task clean(type: Delete) {
 
 Settings 与 Project 在 Gradle 中都有对应的类，也就是说只有 Gradle 这个框架定义的我们才能用，至于 Settings 与 Project 都定义了什么我们只能查看其官方文档啊。
 
-### **Settings对象**
+### **[Settings对象](https://docs.gradle.org/current/javadoc/org/gradle/api/initialization/Settings.html#include-java.lang.String...-)**
 
 比如Settings类中定义了include方法： 
 
@@ -71,39 +71,78 @@ println '----------------------------'
 
 输出了app这个project的信息。
 
-
-
 ### **Project对象**
 
+每个build.gradle文件都会被翻译为对应的Project对象，build.gradle文件最重要的作用就是：
 
+* 引入插件并配置相应信息
 
+* 添加依赖信息
 
+引入插件重要的就是引入插件中包含的tasks，至于插件与tasks后面会详细讲到。
 
+那怎么引入插件呢？
 
+Project定义了apply函数供我们调用：
 
+![gradle5]({{ site.baseurl }}/assets/images/android/Gradle/gradle5.png)
 
+平时我们看到的如下：
 
+```
+apply plugin: 'com.android.library'
+```
 
+最终都是调用那个的上面apply方法。
 
+在Project类中有个很重要的方法，如下：
 
+![gradle6]({{ site.baseurl }}/assets/images/android/Gradle/gradle6.png)
+
+这个方法在配置完当前project后立刻调用，并且传给我们project参数，我们调用试试，在根build.gradle中添加如下代码：
+
+```
+afterEvaluate{
+
+    project ->
+        println "root module -----> $project.name"
+}
+```
+app module的build.gradle添加如下代码：
+```
+afterEvaluate{
+
+    project ->
+        println "app module -----> $project.name"
+}
+```
+同样，执行assemble debug命令，打印如下：
+
+![gradle7]({{ site.baseurl }}/assets/images/android/Gradle/gradle7.png)
+
+输出了相应的信息，上面的都不难，我只是想告诉大家Gradle有它自己的规则，怎么配置，配置什么都在文档中有对应规定，我们配置xxx.gradle都有对应的类，最终都翻译成对应对象，有问题查阅相关文档即可。
 
 ### **Gradle对象**
 
+在我们执行gradle相关命令的时候，Gradle框架会为我们创建一个gradle对象，并且整个工程只有这一个gradle对象，这个对象不像上面两个一样有对应文件，这个对象一般不需要我们配置什么，主要用于给我们提供一些工程信息，具体有哪些信息呢？查看文档中Gradle类包含以下信息：
 
+![gradle8]({{ site.baseurl }}/assets/images/android/Gradle/gradle8.png)
 
+我们可以打印一些信息看看，在根build.gradle中添加如下代码：
 
+```
+println "homeDir = $gradle.gradleHomeDir"
+println "UserHomeDir = $gradle.gradleUserHomeDir"
+println "gradleVersion = $gradle.gradleVersion"
+```
 
+执行gradle assembleDebug命令打印如下信息：
 
+![gradle9]({{ site.baseurl }}/assets/images/android/Gradle/gradle9.png)
 
+gradle对象最重要的就是在构建工程的时候加入各种回调，通过加入回调我们可以监听工程构建的各个时期，这部分后面会讲到。
 
-
-
-
-
-
-
-
-
+好了，到这里Gradle主要的三个类就基本介绍完了，至于每个类定义了什么属性，方法等等还需要自己去看看文档。
 
 
 参考：
