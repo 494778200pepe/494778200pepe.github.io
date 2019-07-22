@@ -122,7 +122,7 @@ afterEvaluate{
 
 输出了相应的信息，上面的都不难，我只是想告诉大家Gradle有它自己的规则，怎么配置，配置什么都在文档中有对应规定，我们配置xxx.gradle都有对应的类，最终都翻译成对应对象，有问题查阅相关文档即可。
 
-### **Gradle对象**
+### **[Gradle对象](https://docs.gradle.org/current/javadoc/org/gradle/api/invocation/Gradle.html)**
 
 在我们执行gradle相关命令的时候，Gradle框架会为我们创建一个gradle对象，并且整个工程只有这一个gradle对象，这个对象不像上面两个一样有对应文件，这个对象一般不需要我们配置什么，主要用于给我们提供一些工程信息，具体有哪些信息呢？查看文档中Gradle类包含以下信息：
 
