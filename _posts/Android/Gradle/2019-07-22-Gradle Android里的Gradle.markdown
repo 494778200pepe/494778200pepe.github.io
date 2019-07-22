@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Gradle Android里的Gradle"
-date:   2019-07-20 11:25:00 +0800
+date:   2019-07-22 10:06:00 +0800
 categories: Android
 tags: Gradle
 author: pepe
