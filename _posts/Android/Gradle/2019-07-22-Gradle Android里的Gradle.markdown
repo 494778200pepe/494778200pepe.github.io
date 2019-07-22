@@ -56,7 +56,6 @@ include方法api说明为：
 ![gradle3]({{ site.baseurl }}/assets/images/android/Gradle/gradle3.png)
 
 那我们在setting.gradle文件里面写上如下代码试一下：
-![gradle4]({{ site.baseurl }}/assets/images/android/Gradle/gradle4.png)
 
 ```
 include ':app', ':library1', ':library2'
@@ -68,7 +67,7 @@ println '----------------------------'
 ```
 然后执行gradle assembleDebug命令编译我们的项目输出如下：
 
-
+![gradle4]({{ site.baseurl }}/assets/images/android/Gradle/gradle4.png)
 
 输出了app这个project的信息。
 
