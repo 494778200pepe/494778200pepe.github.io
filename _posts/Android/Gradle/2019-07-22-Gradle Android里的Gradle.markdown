@@ -39,7 +39,7 @@ task clean(type: Delete) {
 
 Settings 与 Project 在 Gradle 中都有对应的类，也就是说只有 Gradle 这个框架定义的我们才能用，至于 Settings 与 Project 都定义了什么我们只能查看其官方文档啊。
 
-### **[Settings对象](https://docs.gradle.org/current/javadoc/org/gradle/api/initialization/Settings.html#include-java.lang.String...-)**
+### **[Settings对象](https://docs.gradle.org/current/javadoc/org/gradle/api/initialization/Settings.html)**
 
 比如Settings类中定义了include方法： 
 
@@ -71,7 +71,7 @@ println '----------------------------'
 
 输出了app这个project的信息。
 
-### **Project对象**
+### **[Project对象](https://docs.gradle.org/current/javadoc/org/gradle/api/Project.html)**
 
 每个build.gradle文件都会被翻译为对应的Project对象，build.gradle文件最重要的作用就是：
 
