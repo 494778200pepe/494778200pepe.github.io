@@ -26,6 +26,7 @@ Android插件DSL参考:http://google.github.io/android-gradle-dsl/current/index.
 
 [verymrq的博客 - CSDN博客](https://blog.csdn.net/verymrq/article/category/7679772)
 
+[任玉刚Gradle - CSDN博客](https://blog.csdn.net/singwhatiwanna/article/category/1860361)
 
 [Gradle Plugin Reference](https://docs.gradle.org/current/userguide/plugin_reference.html)
 
