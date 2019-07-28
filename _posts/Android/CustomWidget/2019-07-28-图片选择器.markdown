@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "图片选择器"
+date:   2019-07-28 19:40:00 +0800
+categories: Android
+tags: CustomWidget
+author: pepe
+description: 『 图片选择器 』
+---
+
+
+
+参考：
+
+Android 实现拍照和调用相册取多张图片，以下只展示两张图片 - nayinianbieli的博客 - CSDN博客
+https://blog.csdn.net/qq_36416136/article/details/71552681
+
+Github最火开源项目-Android多张图片选择 - 简书
+https://www.jianshu.com/p/942bf1aa9618
+
