@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "屏幕适配 - 头条方案"
+date:   2019-07-28 19:55:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 头条方案 』
+---
+
+
+
+
+
+
+参考：
+
+一种极低成本的Android屏幕适配方式
+https://mp.weixin.qq.com/s/d9QCoBP6kV9VSWvVldVVwA
+
+Android屏幕适配框架-(今日头条终极适配方案) - 简书
+https://www.jianshu.com/p/cd373f529bea
+
+今日头条屏幕适配方案 - wang_yong_hui_1234的博客 - CSDN博客
+https://blog.csdn.net/wang_yong_hui_1234/article/details/82113714
+
+[Android]今日头条的屏幕适配方案，简单又粗暴！ - qq_35195386的博客 - CSDN博客
+https://blog.csdn.net/qq_35195386/article/details/80801597
