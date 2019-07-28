@@ -1,0 +1,41 @@
+---
+layout: post
+title:  "截屏"
+date:   2019-07-28 19:48:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 截屏 』
+---
+
+　　
+
+参考：
+
+
+Android 截屏监听（截图分享功能实现） - 简书
+https://www.jianshu.com/p/d7aba5a03b0f
+
+Android--截屏（支持Android7.1.1，无需root） - 超宇的博客 - CSDN博客
+https://blog.csdn.net/chaoyu168/article/details/80898936
+
+Android三种方式截取任意界面屏幕 - 徐福记456 - CSDN博客
+https://blog.csdn.net/u011686167/article/details/83829635
+
+Android实现屏幕截图并保存截图到指定文件_Android_脚本之家
+https://www.jb51.net/article/149573.htm
+
+Android 截取手机屏幕两种实现方案解析 - zhchoutai - 博客园
+https://www.cnblogs.com/zhchoutai/p/7360021.html
+
+
+
+
+
+
+
+
+
+
+
+

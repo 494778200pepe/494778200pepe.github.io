@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "小视频"
+date:   2019-07-28 19:51:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 小视频 』
+---
+
+　　
+
+参考：
+
+利用FFmpeg玩转Android视频录制与压缩 - 郭霖 - CSDN博客
+https://blog.csdn.net/c10WTiybQ1Ye3/article/details/78098486
+
+Android 仿微信录制短视频（不使用 FFmpeg） - Junerver的博客 - CSDN博客
+https://blog.csdn.net/u011133887/article/details/83654724
+
+Android使用MediaRecorder和Camera实现视频录制及播放功能整理 - 我是紫色紫色的专栏 - CSDN博客
+https://blog.csdn.net/woshizisezise/article/details/51878566
+
+junerver/VideoRecorder: Android 仿微信短视频录制
+https://github.com/junerver/VideoRecorder
+
+
+
+
+
+
+
+
+
+
+
+
+
