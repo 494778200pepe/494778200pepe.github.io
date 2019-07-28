@@ -132,3 +132,6 @@ public void put(int key, E value)
 [SparseArray - Android SDK](http://www.android-doc.com/reference/android/util/SparseArray.html)
 
 [GC: SparseArray - android.util.SparseArray (.java) - GrepCode Class Source](http://www.grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/5.1.1_r1/android/util/SparseArray.java?av=f)
+
+面试必备：SparseArray源码解析 - 简书
+https://www.jianshu.com/p/25ccfe46faf5
