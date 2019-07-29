@@ -8,8 +8,7 @@ author: pepe
 description: 『 RxJava系列一 』
 ---
 
-RxJava开发精要8 - 与REST无缝结合-RxJava和Retrofit - CSDN博客
-https://blog.csdn.net/bboyfeiyu/article/details/50512464
+[RxJava开发精要8 - 与REST无缝结合-RxJava和Retrofit - CSDN博客](https://blog.csdn.net/bboyfeiyu/article/details/50512464)
 
 [专栏：RxJava详解 - CSDN博客](https://blog.csdn.net/column/details/20176.html)
 
