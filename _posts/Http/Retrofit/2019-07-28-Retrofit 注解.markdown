@@ -8,6 +8,21 @@ author: pepe
 description: 『 注解 』
 ---
 
+Retrofit 共22个注解，根据功能大概分为三类：
+
+请求方法类
+标记类
+参数类
+请求方法类
+序号	名称
+1	GET
+2	POST
+3	PUT
+4	DELETE
+5	PATCH
+6	HEAD
+7	OPTIONS
+8	HTTP
 
 
 
@@ -17,7 +32,6 @@ description: 『 注解 』
 [Retrofit 2.0 注解篇 - 简书](https://www.jianshu.com/p/bf884248cb37)
 
 [Retrofit各个注解的含义及作用 - 简书](https://www.jianshu.com/p/8e1b76b8939d)
-
 
 
 
