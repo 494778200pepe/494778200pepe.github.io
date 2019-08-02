@@ -14,7 +14,7 @@ Android 里面，涉及到 Gradle 的有三个文件：`setting.gradle`、`(Proj
 
 * 2、[这三个文件是怎么运转起来的？也就是工作时序。](https://494778200pepe.github.io/android/2019/07/22/Gradle-%E5%B7%A5%E4%BD%9C%E6%97%B6%E5%BA%8F.html)
 
-* 3、gradle 文件里面用的 Groovy 语言，当然也是要学习的。
+* 3、[gradle 文件里面用的 Groovy 语言，当然也是要学习的。](https://494778200pepe.github.io/android/2019/07/19/Gradle-Groovy.html)
 
 * 4、原理、原理、原理。
 
