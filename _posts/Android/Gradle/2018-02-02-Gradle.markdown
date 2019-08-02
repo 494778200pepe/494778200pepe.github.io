@@ -10,9 +10,9 @@ description: 『 Gradle学习 』
 
 Android 里面，涉及到 Gradle 的有三个文件：`setting.gradle`、`(Project 的)build.gradle`、`(module 的)build.gradle`，那么该怎么学习 Gradle 呢？
 
-* 1、这三个文件究竟是啥？
+* 1、[这三个文件究竟是啥？](https://494778200pepe.github.io/android/2019/08/02/Gradle-%E4%B8%89%E4%B8%AA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.html)
 
-* 2、这三个文件是怎么运转起来的？也就是工作时序。
+* 2、[这三个文件是怎么运转起来的？也就是工作时序。](https://494778200pepe.github.io/android/2019/07/22/Gradle-%E5%B7%A5%E4%BD%9C%E6%97%B6%E5%BA%8F.html)
 
 * 3、gradle 文件里面用的 Groovy 语言，当然也是要学习的。
 
