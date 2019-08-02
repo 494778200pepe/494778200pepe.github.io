@@ -42,4 +42,7 @@ description: 『 com.android.application 』
     }
 ```
 
+Android Gradle Plugin源码分析 - 简书
+https://www.jianshu.com/p/11f030b2034f
+
 [LibraryExtension](http://google.github.io/android-gradle-dsl/current/com.android.build.gradle.LibraryExtension.html)
