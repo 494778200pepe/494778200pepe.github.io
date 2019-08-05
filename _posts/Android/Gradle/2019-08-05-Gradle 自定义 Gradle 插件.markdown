@@ -47,10 +47,118 @@ app:showConfig
 
 * 3、在独立的项目下
 
+#### **在gradle脚本文件中** 
 
+直接在gradle脚本中编写这个方式是最为简单的。打开app.gradle文件，在其中编写一个类实现Plugin接口。
+```
+//app.gradle
+class CustomPluginInBuildGradle implements Plugin<Project> {
+    @Override
+    void apply(Project target) {
+        target.task('showCustomPluginInBuildGradle',group: 'myGroup'){
+            doLast {
+                println("task in CustomPluginInBuildGradle")
+                println("task's group is $group")
+            }
+        }
+    }
+}
 
+// 然后通过插件类名引用它
+apply plugin: CustomPluginInBuildGradle
+```
+执行插件中定义的task
+```
+C:\c_project\MyApplication\app>gradle showCustomPluginInBuildGradle
+task in CustomPluginInBuildGradle
+task's group is myGroup
+```
 
+#### **在buildSrc目录下** 
 
+* 1、创建一个Module，选择Java Library项目，项目名称必须是 buildSrc，否则插件不被识别
+
+* 2、构建目录 buildSrc/src/main/groovy 本路径android studio会自动识别为 groovy类。 
+
+* 3、在 main 目录中再构建 resources/META-INF/gradle-plugins，这个目录是groovy项目的资源文件目录。 
+
+* 4、buildSrc 中的 build.gradle的定义，引入groovy插件，并依赖 gradleApi()、localGroovy()。
+
+```
+//  buildSrc/build.gradle
+apply plugin: 'groovy'
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+}
+```
+
+* 5、代码实现
+    
+    。新建 groovy 文件 `MyPlugin.groovy`,代码如下
+```
+package com.pepe.plugin
+
+import org.gradle.api.Plugin
+import org.gradle.api.Project
+
+class MyPlugin implements Plugin<Project> {
+
+    @Override
+    void apply(Project project) {
+        System.out.println("========================")
+        System.out.println("这是个插件!")
+        System.out.println("========================")
+
+        //增加闭包名称，闭包为customPlugin，是 CustomPluginTestExtension类型，因此CustomPluginTestExtension类型中的JaveBean类型的属性可以任意设置
+        project.extensions.add("personInfo", PersonInfo)  //personInfo用于build.gradle中添加配置块
+        project.task("showPersonInfo", group: 'mygroup').doLast {
+            if (project.personInfo == null) return
+            println("姓名：" + project.personInfo.name)
+            println("年龄：" + project.personInfo.age)
+            println("地址：" + project.personInfo.address)
+        }
+        project.extensions.add("bookInfo", BookInfo)
+        project.task("showBookInfo", dependsOn: "showPersonInfo", group: 'mygroup').doLast {
+            //注意，showBookInfo依赖showPersonInfo，dependsOn:"showPersonInfo"
+            def book = project.extensions.findByType(BookInfo)
+            println("喜欢的书籍：" + book.name + ", " + book.id + ", " + book.price + '元' + '，' + book.address + "," + book.isbn);
+        }
+
+        project.task('showStandAlonePlugin', group: 'mygroup') {
+            doLast {
+                println('task in StandAlonePlugin')
+            }
+        }
+    }
+}
+```
+    。PersonInfo类
+```
+package  com.pepe.plugin
+
+class PersonInfo {
+    def name = "init";
+    def age = "init";
+    def address = "init";
+}
+```
+    。BookInfo类
+```
+package  com.pepe.plugin
+
+class BookInfo {
+    def name = "《红楼们》";
+    def isbn = "SW.SH.CN.I.20181227";
+    def address = "北京市海淀区西北旺";
+    def price = 25.9f
+    def id = 'BS1001029'
+}
+```
+    。配置 `myplugin.properties`
+```
+implementation-class=com.ncf.plg.CustomPluginTest
+```
 
 
 
