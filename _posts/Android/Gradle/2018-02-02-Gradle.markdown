@@ -16,7 +16,7 @@ Android 里面，涉及到 Gradle 的有三个文件：`setting.gradle`、`(Proj
 
 * 3、gradle 文件里面用的 [Groovy 语言，当然也是要学习的。](https://494778200pepe.github.io/android/2019/07/19/Gradle-Groovy.html)
 
-* 4、在 module 的 build.gradle 文件中，第一行 `apply plugin: 'com.android.application'`，那么这个 [com.android.application 又是什么呢？](https://494778200pepe.github.io/android/2019/08/02/Gradle-com.android.application.html)
+* 4、在 module 的 build.gradle 文件中，第一行 `apply plugin: 'com.android.application'`，那么这个 [com.android.application 是干什么的呢？](https://494778200pepe.github.io/android/2019/08/02/Gradle-AppExtension.html)
 
 * 5、原理、原理、原理。
 

@@ -28,12 +28,12 @@ android {
     }
 }
 ```
-这里的 android  是从哪里来的呢？我们在 Project 的 API 里面，是没有看到 android() 这个方法的。
+这里的 `android{}` 是从哪里来的呢？我们在 `Project` 的 API 里面，是没有看到 `android()` 这个方法的。
 这就要从 `apply plugin: 'com.android.application'` 说起。
 这一句的意思是依赖安卓插件。
 
 
-跟踪 apply 方法，其实是进入到 AppPlugin 的 `apply` 的方法，我们可以看到内部实现是直接调用父类B asePlugin 的 `apply` 方法
+跟踪 `apply` 方法，其实是进入到 `AppPlugin` 的 `apply` 的方法，我们可以看到内部实现是直接调用父类 `BasePlugin` 的 `apply` 方法
 ```
 protected void apply(@NonNull Project project) {
         checkPluginVersion();
@@ -90,7 +90,7 @@ protected void apply(@NonNull Project project) {
         ...
     }
 ```
-而 createExtension 是一个抽象方法，我们到 AppPlugin 里面看实现：
+而 `createExtension()` 是一个抽象方法，我们到 AppPlugin 里面看实现：
 ```
  @NonNull
     @Override
@@ -117,11 +117,12 @@ protected void apply(@NonNull Project project) {
                         extraModelInfo);
     }
 ```
-至此，我们是就知道 build.gradle 里面的 android 为什么可以用了。
+至此，我们是就知道 build.gradle 里面的 `android{}` 为什么可以用了。
 
 [AppExtension](http://google.github.io/android-gradle-dsl/current/com.android.build.gradle.AppExtension.html)
 
 `apply plugin:  'com.android.library'` 对应的是 `LibraryExtension`。
+
 [LibraryExtension](http://google.github.io/android-gradle-dsl/current/com.android.build.gradle.LibraryExtension.html)
 
 参考：
