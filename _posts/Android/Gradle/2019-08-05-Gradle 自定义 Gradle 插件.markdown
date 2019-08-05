@@ -76,6 +76,8 @@ task's group is myGroup
 
 #### **在buildSrc目录下** 
 
+![gradle1]({{ site.baseurl }}/assets/images/android/Gradle/gradle插件1.png)
+
 * 1、创建一个Module，选择Java Library项目，项目名称必须是 buildSrc，否则插件不被识别
 
 * 2、构建目录 buildSrc/src/main/groovy 本路径android studio会自动识别为 groovy类。 
