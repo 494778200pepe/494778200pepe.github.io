@@ -96,6 +96,7 @@ dependencies {
 * 5、代码实现
     
     。新建 groovy 文件 `MyPlugin.groovy`,代码如下
+    
 ```
 package com.pepe.plugin
 
@@ -133,7 +134,9 @@ class MyPlugin implements Plugin<Project> {
     }
 }
 ```
+    
     。PersonInfo类
+    
 ```
 package  com.pepe.plugin
 
@@ -143,7 +146,9 @@ class PersonInfo {
     def address = "init";
 }
 ```
+    
     。BookInfo类
+    
 ```
 package  com.pepe.plugin
 
@@ -155,12 +160,34 @@ class BookInfo {
     def id = 'BS1001029'
 }
 ```
+    
     。配置 `myplugin.properties`
+    
 ```
 implementation-class=com.ncf.plg.CustomPluginTest
 ```
 
+> 注意：注意这里引用的方式可以是通过类名引用，也可以通过给插件映射一个id，然后通过id引用。
 
+通过类名引用插件的需要使用全限定名，也就是需要带上包名，或者可以先导入这个插件类，如下
+```
+apply plugin: com.pepe.plugin.MyPlugin
+或者
+import com.pepe.plugin.MyPlugin
+apply plugin: MyPlugin
+```
+通过简单的id的方式，我们可以隐藏类名等细节，使的引用更加容易。映射方式很简单，在buildSrc目录下创建 `resources/META-INF/gradle-plugins/xxx.properties`,这里的 `xxx`也就是所映射的 id，这里我们假设取名 `myplugin`。具体结构可参考上文 buildSrc 目录结构。
+
+`myplugin.properties` 文件中配置该 id 所对应的 plugin 实现类
+
+```
+implementation-class=com.pepe.plugin.pepe
+```
+此时就可以通过id来引用对于的插件了
+```
+//app.gradle
+apply plugin: 'myplugin'
+```
 
 
 
