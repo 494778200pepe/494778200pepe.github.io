@@ -129,9 +129,8 @@ protected void apply(@NonNull Project project) {
 
 [Android Gradle Plugin源码分析 - 简书](https://www.jianshu.com/p/11f030b2034f)
 
+[Android Gradle Plugin 源码解析（上）-云栖社区-阿里云](https://yq.aliyun.com/articles/687852)
 
-[Android Gradle Plugin 源码解析（上）](https://mp.weixin.qq.com/s/aqo6ueTUxEOdGx5tyzQrPQ)
-
-
+[Android Gradle Plugin 源码解析（下）-云栖社区-阿里云](https://yq.aliyun.com/articles/687851)
 
 
