@@ -191,6 +191,7 @@ implementation-class=com.pepe.plugin.pepe
 apply plugin: 'myplugin'
 ```
 
+#### **在独立工程下**
 
 
 参考：
@@ -198,8 +199,6 @@ apply plugin: 'myplugin'
 [一篇文章带你了解Gradle插件的所有创建方式](https://www.jianshu.com/p/5b99e3af4d6b)
 
 [Gradle 实现自定义插件 - 小雨伞漂流记 - OSCHINA](https://my.oschina.net/ososchina/blog/2994131)
-
-[android自定义gradle插件之当前项目使用-android,ios,h5-51CTO博客](https://blog.51cto.com/xuguohongai/2147597)
 
 [Gradle新建插件buildSrc - 小妖666个人笔记 - CSDN博客](https://blog.csdn.net/weixin_38883338/article/details/90727880)
 
