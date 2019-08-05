@@ -14,3 +14,20 @@ zxing
 ZBar开发详解 - 采男孩的小蘑菇 - 博客园
 https://www.cnblogs.com/flyinggod/p/8707883.html
 
+
+媲美微信的二维码识别库 - 简书
+https://www.jianshu.com/p/e2866af44236
+
+
+
+
+
+
+
+
+
+
+
+
+
+

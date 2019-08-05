@@ -37,7 +37,8 @@ https://www.jianshu.com/p/104c8b5157de
 android studio打包以及gradle配置构建 - 披萨大叔的博客 - CSDN博客
 https://blog.csdn.net/qq_27258799/article/details/77259129
 
-
+多渠道打包方案，其实很有玄机
+https://mp.weixin.qq.com/s/n5GohIZMYwe1K75Ui19yiQ
 
 
 
