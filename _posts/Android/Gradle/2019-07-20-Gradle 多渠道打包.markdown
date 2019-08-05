@@ -40,6 +40,11 @@ https://blog.csdn.net/qq_27258799/article/details/77259129
 多渠道打包方案，其实很有玄机
 https://mp.weixin.qq.com/s/n5GohIZMYwe1K75Ui19yiQ
 
+[AndroidStudio多渠道打包 - CSDN博客](https://blog.csdn.net/zyw_java/article/details/61420290)
+
+Android 利用Gradle实现差异化构建 - 简书
+https://www.jianshu.com/p/80e1f4a80d06
+
 
 
 

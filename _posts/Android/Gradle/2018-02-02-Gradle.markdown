@@ -61,26 +61,19 @@ Android插件DSL参考:http://google.github.io/android-gradle-dsl/current/index.
 
 [寄Android开发Gradle你需要知道的知识 - 简书](https://www.jianshu.com/p/8b8a550246bd)
 
-
-
-
-[Android 利用Gradle实现差异化构建 - 简书](https://www.jianshu.com/p/80e1f4a80d06)
-
-[build.gradle配置参数详解 - CSDN博客](http://blog.csdn.net/baidu_31093133/article/details/51860637)
-
-[Gradle for Android 第二篇( Build.gradle入门 ) - OPEN 开发经验库](http://www.open-open.com/lib/view/open1452003831198.html)
-
-[android studio gradle使用说明 - avalon451990](https://my.oschina.net/u/1186928/blog/744302)
-
 [通过gradle实现自动切换测试环境和线上环境 - CSDN博客](https://blog.csdn.net/qifengdeqingchen/article/details/78032560)
-
-[一篇文章带你了解Gradle插件的所有创建方式](https://mp.weixin.qq.com/s/KCpl0CNgwMv0CgvbadNK6A)
-
-[Android Gradle Plugin 源码解析（上）](https://mp.weixin.qq.com/s/aqo6ueTUxEOdGx5tyzQrPQ)
 
 [Gradle 版本下载](http://services.gradle.org/distributions/)
 
-[AndroidStudio多渠道打包 - CSDN博客](https://blog.csdn.net/zyw_java/article/details/61420290)
+说明：
+
+[build.gradle配置参数详解 - CSDN博客](http://blog.csdn.net/baidu_31093133/article/details/51860637)
+
+[android studio gradle使用说明 - avalon451990](https://my.oschina.net/u/1186928/blog/744302)
+
+[Gradle for Android 第二篇( Build.gradle入门 ) - OPEN 开发经验库](http://www.open-open.com/lib/view/open1452003831198.html)
+
+。。。
 
 [将Library上传到Jcenter - 简书](https://www.jianshu.com/p/0ba8960f80a9)
 
