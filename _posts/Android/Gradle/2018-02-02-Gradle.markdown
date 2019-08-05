@@ -20,7 +20,7 @@ Android 里面，涉及到 Gradle 的有三个文件：`setting.gradle`、`(Proj
 
 * 5、什么是 task，以及自定义 task。 
 
-* 6、原理、原理、原理。
+* 6、自定义 Gradle 插件。
 
 * 7、多渠道打包。
 
