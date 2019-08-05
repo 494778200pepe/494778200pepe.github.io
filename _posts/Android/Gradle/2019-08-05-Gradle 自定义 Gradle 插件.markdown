@@ -8,6 +8,45 @@ author: pepe
 description: 『 自定义 Gradle 插件 』
 ---
 
+Gradle中插件可以分为两类：脚本插件和对象插件。
+
+### **脚本插件**
+
+> 脚本插件就是一个普通的 gradle 构建脚本，通过在一个 `config.gradle` 脚本中定义一系列的 `task`，另一个构建脚本 `app.gradle` 通过 `apply from:'config.gradle' `即可引用这个脚本插件。
+
+首先在项目根目录下新建一个 config.gradle 文件，在该文件中定义所需的 task。
+```
+//config.gradle
+project.task("showConfig") {
+     doLast {
+        println("$project.name:showConfig")
+    }
+}
+```
+然后在需要引用的 module 的构建脚本中引用 `config.gradle`,例如在 `app.gradle` 中,由于 `config.gradle` 建立在根目录下，与 app 这个模块平级，所以需要注意路径问题 `../config.gradle`。
+```
+//app.gradle
+apply from: '../config.gradle'
+```
+就是这么简单，此时运行 gradle 构建即可执行 showConfig 这个 task，
+```
+C:\c_project\MyApplication\app>gradle showConfig
+> Task :app:showConfig
+app:showConfig
+```
+
+### **对象插件**
+
+> 对象插件是指实现了 `org.gradle.api.Plugin` 接口的类。Plugin 接口需要实现 `void apply(T target)` 这个方法。该方法中的泛型指的是此 Plugin 可以应用到的对象，而我们通常是将其应用到 Project 对象上。
+
+编写对象插件主要有三种方式：
+
+* 1、直接在gradle脚本文件中
+
+* 2、在buildSrc目录下
+
+* 3、在独立的项目下
+
 
 
 
@@ -19,7 +58,7 @@ description: 『 自定义 Gradle 插件 』
 
 参考：
 
-[一篇文章带你了解Gradle插件的所有创建方式](https://mp.weixin.qq.com/s/KCpl0CNgwMv0CgvbadNK6A)
+[一篇文章带你了解Gradle插件的所有创建方式](https://www.jianshu.com/p/5b99e3af4d6b)
 
 [Gradle 实现自定义插件 - 小雨伞漂流记 - OSCHINA](https://my.oschina.net/ososchina/blog/2994131)
 
