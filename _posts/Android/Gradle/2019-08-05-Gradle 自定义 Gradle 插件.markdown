@@ -31,5 +31,7 @@ description: 『 自定义 Gradle 插件 』
 
 [Gradle自定义插件以及发布方法 - 简书](https://www.jianshu.com/p/d1d7fd48ff0b)
 
+gradle插件上传Jcenter与自建Maven私服 - pf_1308108803的博客 - CSDN博客
+https://blog.csdn.net/pf_1308108803/article/details/78119591
 
  [Gradle入门到实战(一) — 全面了解Gradle](https://mp.weixin.qq.com/s?__biz=Mzg2NzAwMjY4MQ==&mid=2247483789&idx=1&sn=4b3bb2ab721c8ed7e05f1e8b2e0fbf70&chksm=ce4371dbf934f8cd7c484e8c5356d299bbd5d7790ee11bb0da9725068fa8e4b895f87379949f&token=655420148&lang=zh_CN#rd)
