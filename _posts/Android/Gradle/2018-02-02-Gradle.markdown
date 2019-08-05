@@ -18,13 +18,14 @@ Android 里面，涉及到 Gradle 的有三个文件：`setting.gradle`、`(Proj
 
 * 4、在 module 的 build.gradle 文件中，第一行 `apply plugin: 'com.android.application'`，那么这个 [com.android.application 是干什么的呢？](https://494778200pepe.github.io/android/2019/08/02/Gradle-AppExtension.html)
 
-* 5、什么是 task，以及自定义 task。 
+* 5、什么是 task，以及[自定义 task](https://494778200pepe.github.io/android/2019/08/05/Gradle-自定义-task.html)。 
 
-* 6、自定义 Gradle 插件。
+* 6、增量构建。
 
-* 7、多渠道打包。
+* 7、自定义 Gradle 插件。
 
-* 8、自定义 Gradle 插件。
+* 8、多渠道打包。
+
 
 
 
