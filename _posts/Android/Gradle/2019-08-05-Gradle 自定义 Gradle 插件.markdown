@@ -193,6 +193,112 @@ apply plugin: 'myplugin'
 
 #### **在独立工程下**
 
+![gradle2]({{ site.baseurl }}/assets/images/android/Gradle/gradle插件2.png)
+
+在 buildSrc 下创建的 plugin 只能在该工程下的多个模块之间复用代码。如果想要在多个项目之间复用这个插件，我们就需要在一个单独的工程中编写插件，将编译后的 jar 包上传 maven 仓库。
+
+* 1、1.在build.gradle中添加uploadArchives 块
+
+```
+apply plugin:'groovy'  //必须
+apply plugin: 'maven'  //要想发布到Maven，此插件必须使用
+
+group='com.pepe.plugin'
+version='3.0.0'
+
+dependencies {
+    implementation gradleApi() //必须
+    implementation localGroovy() //必须
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+repositories {
+    mavenCentral() //必须
+}
+
+// 这里增加了Maven的支持和 uploadArchives 这样一个Task，这个 Task 的作用就是将该 Module 部署到本地的 public 目录下。
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri('../public'))  //注意相对路径，在主项目目录下
+            //提交到远程服务器：
+            // repository(url: "http://www.xxx.com/repos") {
+            //    authentication(userName: "admin", password: "admin")
+            // }
+            //本地的Maven地址设置为D:/repos
+//            repository(url: uri('D:/repos'))
+        }
+    }
+}
+```
+
+* 2、在终端中执行 gradle uploadArchives 指令，将插件部署到 public 目录下
+
+    。当插件部署到本地后，就可以在主项目中引用插件了。当插件正式发布后，可以把插件像其它module一样发布到中央库，这样就可以像使用中央库的库项目一样来使用插件了。
+
+* 3、引用插件
+
+    。在 buildSrc 中，系统自动帮开发者自定义的插件提供了引用支持，但自定义 Module 的插件中，开发者就需要自己来添加自定义插件的引用支持。在**主项目**的 build.gradle 文件中，添加如下所示的脚本：
+
+```
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        maven {
+            url uri('public')
+        }
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.2'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.1'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+
+        // classpath指定的路径，就是类似compile引用的方式：classpath '[groupId]:[artifactId]:[version]' 
+
+        classpath 'com.pepe.plugin:MyGradlePlugin:3.0.0'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+```
+配置完毕后，就可以在app项目中使用自定义的插件了
+
+在app的build.gradle引入
+```
+//app.gradle
+apply plugin: 'mygradleplugin'
+```
+
+* 4、
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 参考：
 
