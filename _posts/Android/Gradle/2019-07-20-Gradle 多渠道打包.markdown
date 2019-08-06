@@ -11,7 +11,7 @@ description: 『 多渠道打包 』
 
 参考：
 
-[Android使用美团多渠道打包方案详解，速度不是一般的快_慕课手记](http://www.imooc.com/article/252169)
+[Android使用美团多渠道打包方案详解，速度不是一般的快](http://www.apkbus.com/blog-705730-61455.html)
 
 [Android多渠道打包方案的实践与优化 - 依旧00的专栏 - CSDN博客](https://blog.csdn.net/zhong1113/article/details/54094770)
 
