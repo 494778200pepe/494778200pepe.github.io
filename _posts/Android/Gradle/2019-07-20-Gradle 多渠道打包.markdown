@@ -17,7 +17,7 @@ description: 『 多渠道打包 』
 
 [Android studio 3.0：多渠道打包 - 简书](https://www.jianshu.com/p/d67eaa31f6d6)
 
-[Android的多渠道打包|SquirrelNote - 简书](https://www.jianshu.com/p/bfdee92ab355)
+[Android的多渠道打包 SquirrelNote - 简书](https://www.jianshu.com/p/bfdee92ab355)
 
 [Android多渠道打包相关介绍 - 简书](https://www.jianshu.com/p/96575eba4337)
 
