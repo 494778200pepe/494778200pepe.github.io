@@ -74,7 +74,5 @@ Android插件DSL参考:http://google.github.io/android-gradle-dsl/current/index.
 
 [Gradle for Android 第二篇( Build.gradle入门 ) - OPEN 开发经验库](http://www.open-open.com/lib/view/open1452003831198.html)
 
-。。。
-
 [Gradle 使用技巧(一) - 简书](https://www.jianshu.com/p/3cc11a93dfa2)
 
