@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Gradle 增量构建"
+date:   2019-08-06 09:37:00 +0800
+categories: Android
+tags: Gradle
+author: pepe
+description: 『 增量构建 』
+---
+
+
+
+参考：
+
+
+Gradle学习(十五)——增量构建 - 独自登高楼 望断天涯路 - CSDN博客
+https://blog.csdn.net/lastsweetop/article/details/79025517
+
+
+
+
+
+ 
