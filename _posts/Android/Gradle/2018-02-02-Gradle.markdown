@@ -28,6 +28,8 @@ Android 里面，涉及到 Gradle 的有三个文件：`setting.gradle`、`(Proj
 
 * 9、多渠道打包。
 
+* 10、[Android动态编译技术:Plugin Transform Javassist操作Class文件](https://blog.csdn.net/yulong0809/article/details/77752098)
+
 
 
 
