@@ -30,7 +30,7 @@ Android 里面，涉及到 Gradle 的有三个文件：`setting.gradle`、`(Proj
 
 * 10、[Android动态编译技术:Plugin Transform Javassist操作Class文件](https://494778200pepe.github.io/android/2019/08/06/Gradle-动态编译.html)
 
-
+* 11、debug 调试
 
 
 Android 源码系列之自定义Gradle Plugin，优雅的解决第三方Jar包中的bug - llew2011的专栏 - CSDN博客
