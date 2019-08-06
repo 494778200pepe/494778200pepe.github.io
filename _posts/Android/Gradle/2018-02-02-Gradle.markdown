@@ -24,7 +24,9 @@ Android 里面，涉及到 Gradle 的有三个文件：`setting.gradle`、`(Proj
 
 * 7、[自定义 Gradle 插件](https://494778200pepe.github.io/android/2019/08/05/Gradle-自定义-Gradle-插件.html)。
 
-* 8、多渠道打包。
+* 8、gradle插件上传Jcenter与自建Maven私服
+
+* 9、多渠道打包。
 
 
 
