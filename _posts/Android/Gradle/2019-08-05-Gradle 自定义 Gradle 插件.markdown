@@ -283,19 +283,48 @@ task clean(type: Delete) {
 apply plugin: 'mygradleplugin'
 ```
 
-* 4、
+引入插件之后，执行如下命令可以一遍更新插件，一边实时预览效果
 
+```
+gradle uploadArchives && gradle showPersonInfo1
+```
 
+* 4、获取android的配置参数
 
+对于插件开发，很多时候需要依赖其他插件，比如android插件开发，为了开发某些功能，我们需要不可避免的获取android gradle的配置参数和api，因此我们需要添加相应的依赖库到 MyGradlePlugin 插件的 build.gradle 中
 
+```
+dependencies {
+    implementation gradleApi() //必须
+    implementation localGroovy() //必须
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.tools.build:gradle:3.4.2'
+}
+```
+插件类apply中，使用如下方式获取
 
+```
+project.task('showStandAlonePlugin1', group: 'mygroup') {
+            doLast {
+                println('task in StandAlonePlugin1')
 
-
-
-
-
-
-
+                def android = project.extensions.getByType(com.android.build.gradle.AppExtension)
+                android.applicationVariants.all{variant ->
+                    println '::::>>> '+variant.buildType.name
+                    println "applicationId: "+android.defaultConfig.applicationId
+                }
+            }
+        }
+```
+执行结果如下：
+```
+> Task :app:showStandAlonePlugin1
+task in StandAlonePlugin1
+::::>>> debug
+applicationId: com.a1one.myapplication
+::::>>> release
+applicationId: com.a1one.myapplication
+```
 
 
 
