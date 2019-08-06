@@ -36,8 +36,6 @@ https://blog.csdn.net/llew2011/article/details/78548660
 
 
 
-
-
 Gradle学习主要参考文档如下：
 
 Gradle API:https://docs.gradle.org/current/javadoc/org/gradle/api/package-summary.html
@@ -77,10 +75,6 @@ Android插件DSL参考:http://google.github.io/android-gradle-dsl/current/index.
 [Gradle for Android 第二篇( Build.gradle入门 ) - OPEN 开发经验库](http://www.open-open.com/lib/view/open1452003831198.html)
 
 。。。
-
-[将Library上传到Jcenter - 简书](https://www.jianshu.com/p/0ba8960f80a9)
-
-[手把手教你发布自己的开源库到 Jcenter](https://mp.weixin.qq.com/s?__biz=MzIwMTAzMTMxMg==&mid=2649492998&idx=1&sn=015de305fa8cb125caf25d072165f6e8&chksm=8eec85f9b99b0cef30052e7333129ee1ffbba1600ebe5529b05c7d67a7690438ae7180acc804&scene=21#wechat_redirect)
 
 [Gradle 使用技巧(一) - 简书](https://www.jianshu.com/p/3cc11a93dfa2)
 
