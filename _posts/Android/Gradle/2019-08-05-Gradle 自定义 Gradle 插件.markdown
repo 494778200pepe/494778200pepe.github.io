@@ -339,7 +339,3 @@ applicationId: com.a1one.myapplication
 
 [Gradle自定义插件以及发布方法 - 简书](https://www.jianshu.com/p/d1d7fd48ff0b)
 
-
-
-gradle插件上传Jcenter与自建Maven私服 - pf_1308108803的博客 - CSDN博客
-https://blog.csdn.net/pf_1308108803/article/details/78119591
