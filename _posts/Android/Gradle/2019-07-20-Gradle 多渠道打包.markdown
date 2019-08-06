@@ -13,37 +13,27 @@ description: 『 多渠道打包 』
 
 [Android使用美团多渠道打包方案详解，速度不是一般的快_慕课手记](http://www.imooc.com/article/252169)
 
-Android多渠道打包方案的实践与优化 - 依旧00的专栏 - CSDN博客
-https://blog.csdn.net/zhong1113/article/details/54094770
+[Android多渠道打包方案的实践与优化 - 依旧00的专栏 - CSDN博客](https://blog.csdn.net/zhong1113/article/details/54094770)
 
-Android studio 3.0：多渠道打包 - 简书
-https://www.jianshu.com/p/d67eaa31f6d6
+[Android studio 3.0：多渠道打包 - 简书](https://www.jianshu.com/p/d67eaa31f6d6)
 
-Android的多渠道打包|SquirrelNote - 简书
-https://www.jianshu.com/p/bfdee92ab355
+[Android的多渠道打包|SquirrelNote - 简书](https://www.jianshu.com/p/bfdee92ab355)
 
-Android多渠道打包相关介绍 - 简书
-https://www.jianshu.com/p/96575eba4337
+[Android多渠道打包相关介绍 - 简书](https://www.jianshu.com/p/96575eba4337)
 
-Android多渠道打包总结 - u010622801的博客 - CSDN博客
-https://blog.csdn.net/u010622801/article/details/80592877
+[Android多渠道打包总结 - u010622801的博客 - CSDN博客](https://blog.csdn.net/u010622801/article/details/80592877)
 
-Android 新一代多渠道打包神器 - zhchoutai - 博客园
-https://www.cnblogs.com/zhchoutai/p/8643725.html
+[Android 新一代多渠道打包神器 - zhchoutai - 博客园](https://www.cnblogs.com/zhchoutai/p/8643725.html)
 
-Android Studio 配置多渠道一键打包，自动签名 - 简书
-https://www.jianshu.com/p/104c8b5157de
+[Android Studio 配置多渠道一键打包，自动签名 - 简书](https://www.jianshu.com/p/104c8b5157de)
 
-android studio打包以及gradle配置构建 - 披萨大叔的博客 - CSDN博客
-https://blog.csdn.net/qq_27258799/article/details/77259129
+[android studio打包以及gradle配置构建 - 披萨大叔的博客 - CSDN博客](https://blog.csdn.net/qq_27258799/article/details/77259129)
 
-多渠道打包方案，其实很有玄机
-https://mp.weixin.qq.com/s/n5GohIZMYwe1K75Ui19yiQ
+[多渠道打包方案，其实很有玄机](https://mp.weixin.qq.com/s/n5GohIZMYwe1K75Ui19yiQ)
 
 [AndroidStudio多渠道打包 - CSDN博客](https://blog.csdn.net/zyw_java/article/details/61420290)
 
-Android 利用Gradle实现差异化构建 - 简书
-https://www.jianshu.com/p/80e1f4a80d06
+[Android 利用Gradle实现差异化构建 - 简书](https://www.jianshu.com/p/80e1f4a80d06)
 
 
 
