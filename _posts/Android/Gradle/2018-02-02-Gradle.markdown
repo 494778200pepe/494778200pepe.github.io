@@ -18,17 +18,17 @@ Android 里面，涉及到 Gradle 的有三个文件：`setting.gradle`、`(Proj
 
 * 4、在 module 的 build.gradle 文件中，第一行 `apply plugin: 'com.android.application'`，那么这个 [com.android.application 是干什么的呢？](https://494778200pepe.github.io/android/2019/08/02/Gradle-AppExtension.html)
 
-* 5、什么是 task，以及[自定义 task](https://494778200pepe.github.io/android/2019/08/05/Gradle-自定义-task.html)。 
+* 5、什么是 task，以及[自定义 task](https://494778200pepe.github.io/android/2019/08/05/Gradle-自定义-task.html)
 
-* 6、增量构建。
+* 6、[增量构建](https://494778200pepe.github.io/android/2019/08/06/Gradle-增量构建.html)
 
-* 7、[自定义 Gradle 插件](https://494778200pepe.github.io/android/2019/08/05/Gradle-自定义-Gradle-插件.html)。
+* 7、[自定义 Gradle 插件](https://494778200pepe.github.io/android/2019/08/05/Gradle-自定义-Gradle-插件.html)
 
 * 8、[gradle 插件上传 Jcenter 与自建 Maven 私服](https://494778200pepe.github.io/android/2019/08/06/Gradle-%E6%8F%92%E4%BB%B6%E4%B8%8A%E4%BC%A0Jcenter%E4%B8%8E%E8%87%AA%E5%BB%BAMaven%E7%A7%81%E6%9C%8D.html)
 
-* 9、多渠道打包。
+* 9、[多渠道打包](https://494778200pepe.github.io/android/2019/07/20/Gradle-多渠道打包.html)
 
-* 10、[Android动态编译技术:Plugin Transform Javassist操作Class文件](https://blog.csdn.net/yulong0809/article/details/77752098)
+* 10、[Android动态编译技术:Plugin Transform Javassist操作Class文件](https://494778200pepe.github.io/android/2019/08/06/Gradle-动态编译.html)
 
 
 
