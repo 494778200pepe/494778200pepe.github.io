@@ -68,6 +68,9 @@ Android插件DSL参考:http://google.github.io/android-gradle-dsl/current/index.
 
 [Gradle 版本下载](http://services.gradle.org/distributions/)
 
+Gradle入门到实战(二) — ImageOptimization安卓图片转换压缩插件
+https://mp.weixin.qq.com/s/ZAy4Im8apu9aAWugDW9VOQ
+
 说明：
 
 [build.gradle配置参数详解 - CSDN博客](http://blog.csdn.net/baidu_31093133/article/details/51860637)
@@ -77,4 +80,7 @@ Android插件DSL参考:http://google.github.io/android-gradle-dsl/current/index.
 [Gradle for Android 第二篇( Build.gradle入门 ) - OPEN 开发经验库](http://www.open-open.com/lib/view/open1452003831198.html)
 
 [Gradle 使用技巧(一) - 简书](https://www.jianshu.com/p/3cc11a93dfa2)
+
+完整的build.gradle（包含多渠道，混淆，debug, release, apk命名规则） - csdnwr的博客 - CSDN博客
+https://blog.csdn.net/csdnwr/article/details/82259121
 
