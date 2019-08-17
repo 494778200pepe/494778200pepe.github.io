@@ -8,4 +8,64 @@ author: pepe
 description: 『 AOP面向切面编程 』
 ---
 
+> 定义：把某一方面的一些功能提取出来与一批对象进行隔离，提取之后我们就可以对某个单方面的功能进行编程。
 
+说明：把众多方法中的所有共有代码全部抽取出来，放置到某个地方集中管理，然后在具体运行时，再有容器动态织入这些公有代码的话，最起码可以解决两个问题：
+
+* 1、Android 程序员在编写具体的业务逻辑处理方法时，只需关心核心的业务逻辑处理，既提高了工作效率，又使代码更简洁优雅。
+
+* 2、在日后的维护中由于业务逻辑代码和公有代码分开存放，而且共有代码是集中存放的，因此使维护工作变得简单轻松。
+
+面向切面编程 AOP 技术就是为解决这个问题而诞生的，切面就是横切面，代表的是一个普遍存在的共有功能，例如，日志切面、权限切面及事务切面等。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+参考：
+
+[AOP面向切面编程 - 淘宝京东网络处理 - 简书](https://www.jianshu.com/p/890dd0b77ded)
+
+[关于android中使用AspectJ - 简书](https://www.jianshu.com/p/f577aec99e17)
+
+[AOP之AspectJ在Android中的应用 - xinzhou201的专栏 - CSDN博客](https://blog.csdn.net/xinzhou201/article/details/81566653)
+
+[AspectJ 在 Android 中的使用 - yxhuang2008的专栏 - CSDN博客](https://blog.csdn.net/yxhuang2008/article/details/94193201)
+
+在Android中使用AspectJ进行切面编程的简易步骤 - 简书
+https://www.jianshu.com/p/9c338702d6a6
