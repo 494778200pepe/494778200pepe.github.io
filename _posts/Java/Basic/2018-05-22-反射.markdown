@@ -12,9 +12,9 @@ description: 『 反射 』
 
 
 
-java反射详解 - Rollen Holt - 博客园
-https://www.cnblogs.com/rollenholt/archive/2011/09/02/2163758.html
+参考：
 
+[java反射详解 - Rollen Holt - 博客园](https://www.cnblogs.com/rollenholt/archive/2011/09/02/2163758.html)
 
 [Java：一步步带你深入了解神秘的Java反射机制 - CSDN博客](https://blog.csdn.net/carson_ho/article/details/80921333)
 
