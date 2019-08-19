@@ -94,8 +94,7 @@ description: 『 AOP面向切面编程 』
 
 [AOP面向切面编程 - 淘宝京东网络处理 - 简书](https://www.jianshu.com/p/890dd0b77ded)
 
-AOP：APT,AspectJ,Javassist/Asm - 简书
-https://www.jianshu.com/p/44d39585fc20
+[AOP：APT,AspectJ,Javassist/Asm - 简书](https://www.jianshu.com/p/44d39585fc20)
 
 [安卓AOP三剑客:APT,AspectJ,Javassist - 简书](https://www.jianshu.com/p/dca3e2c8608a)
 
