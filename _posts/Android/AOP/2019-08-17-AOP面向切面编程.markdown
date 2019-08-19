@@ -21,7 +21,40 @@ description: 『 AOP面向切面编程 』
 
 
 
+### **Android AOP主流框架**
 
+<table width="800" border="3" cellspacing="0" cellpadding="0">
+    <tr>
+        <td>名称</td>
+        <td>描述</td>
+    </tr>
+    <tr>
+        <td>Xposed</td>
+        <td>ROOT社区著名开源项目，需要root权限（运行时）</td>
+    </tr>
+    <tr>
+        <td>Dexposed</td>
+        <td>阿里AOP框架，改造Xposed，只支持Android2.3 - 4.4（运行时）</td>
+    </tr>
+    <tr>
+        <td>APT</td>
+        <td>注解处理器，通过注解生成源代码，代表框架：DataBinding,Dagger2, ButterKnife, EventBus3 、DBFlow、AndroidAnnotation</td>
+    </tr>   
+    <tr>
+        <td>AspectJ</td>
+        <td>AspectJ定义了AOP语法，所以它有一个专门的编译器用来生成遵守Java字节编码规范的Class文件，在编译期注入代码。代表框架：Hugo(Jake Wharton)</td>
+    </tr>  
+    <tr>
+        <td>Javassist、ASM</td>
+        <td>执行字节码操作的库。它可以在一个已经编译好的类中添加新的方法，或者是修改已有的方法，可以绕过编译，直接操作字节码，从而实现代码注入。代表框架：热修复框架HotFix 、InstantRun</td>
+    </tr>      
+</table>
+	
+	
+	
+	
+	
+	
 
 
 
