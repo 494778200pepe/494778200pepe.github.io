@@ -52,6 +52,13 @@ description: 『 AOP面向切面编程 』
 	
 	
 ![AOP]({{ site.baseurl }}/assets/images/android/AOP/AOP.png)	
+
+* Aspectj 是对 AOP 的实践，代表是 hugo，在编译期生成代码，主要用来处理跟主业务流程没太多关系的分支判断检测、统计等功能，非注入
+
+* APT 是注解处理器，专门处理注解的，主要是注入，跟主业务联系起来，代表用 Databinding，Dragger2（依赖、注入），ButterKnife，EventBus3
+
+
+
 	
 	
 	
@@ -93,6 +100,8 @@ description: 『 AOP面向切面编程 』
 参考：
 
 [AOP面向切面编程 - 淘宝京东网络处理 - 简书](https://www.jianshu.com/p/890dd0b77ded)
+
+[Aspectj，APT - 简书](https://www.jianshu.com/p/e83a5df4573b)
 
 [AOP：APT,AspectJ,Javassist/Asm - 简书](https://www.jianshu.com/p/44d39585fc20)
 
