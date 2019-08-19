@@ -7,3 +7,78 @@ tags: 设计模式
 author: pepe
 description: 『 单例设计模式一 』
 ---
+
+* 1、双重判空，syncnized
+
+```
+public class SingletonDemo5 {
+        private volatile static SingletonDemo5 SingletonDemo5;
+ 
+        private SingletonDemo5() {
+        }
+ 
+        public static SingletonDemo5 newInstance() {
+            if (SingletonDemo5 == null) {
+                synchronized (SingletonDemo5.class) {
+                    if (SingletonDemo5 == null) {
+                        SingletonDemo5 = new SingletonDemo5();
+                    }
+                }
+            }
+            return SingletonDemo5;
+        }
+    }
+```
+
+* 2、枚举
+
+```
+public enum SingletonDemo4 {
+     
+    //枚举元素本身就是单例
+    INSTANCE;
+     
+    //添加自己需要的操作
+    public void singletonOperation(){     
+    }
+}
+```
+
+* 3、静态内部类
+
+```
+public class SingletonDemo3 {
+     
+    private static class SingletonClassInstance{
+        private static final SingletonDemo3 instance=new SingletonDemo3();
+    }
+     
+    private SingletonDemo3(){}
+     
+    public static SingletonDemo3 getInstance(){
+        return SingletonClassInstance.instance;
+    }
+     
+}
+```
+
+* 4、静态对象
+* 5、
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
