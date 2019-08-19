@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "AspectJ"
+date:   2019-08-19 14:45:00 +0800
+categories: Android
+tags: AOP
+author: pepe
+description: 『 AspectJ 』
+---
+
+
+
+
+参考：
+
+[AOP面向切面编程 - 淘宝京东网络处理 - 简书](https://www.jianshu.com/p/890dd0b77ded)
+
+[关于android中使用AspectJ - 简书](https://www.jianshu.com/p/f577aec99e17)
+
+[AOP之AspectJ在Android中的应用 - xinzhou201的专栏 - CSDN博客](https://blog.csdn.net/xinzhou201/article/details/81566653)
+
+[AspectJ 在 Android 中的使用 - yxhuang2008的专栏 - CSDN博客](https://blog.csdn.net/yxhuang2008/article/details/94193201)
+
+[在Android中使用AspectJ进行切面编程的简易步骤 - 简书](https://www.jianshu.com/p/9c338702d6a6)
+
+[Android ASM自动埋点方案实践 - 简书](https://www.jianshu.com/p/9039a3e46dbc)
