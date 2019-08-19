@@ -16,6 +16,22 @@ description: 『 注解 』
 
 
 
+* ElementType.CLASS：类，接口或对象，注解类也包括在内。
+* ElementType.ANNOTATION_CLASS：只有注解类。
+* ElementType.TYPE_PARAMETER：Generic type parameter (unsupported yet)通用类型参数（还不支持）。
+* ElementType.PROPERTY：属性。
+* ElementType.FIELD：字段，包括属性的支持字段。
+* ElementType.LOCAL_VARIABLE：局部变量。
+* ElementType.VALUE_PARAMETER：函数或构造函数的值参数。
+* ElementType.CONSTRUCTOR：仅构造函数（主函数或者第二函数）。
+* ElementType.FUNCTION：方法（不包括构造函数）。
+* ElementType.PROPERTY_GETTER：只有属性的 getter。
+* ElementType.PROPERTY_SETTER：只有属性的 setter。
+* ElementType.TYPE：类型使用。
+* ElementType.EXPRESSION：任何表达式。
+* ElementType.FILE：文件。
+* ElementType.TYPEALIAS：@SinceKotlin("1.1") 类型别名，Kotlin1.1已可用。
+
 
 
 Java基础---注解 - qq_20198405的博客 - CSDN博客
