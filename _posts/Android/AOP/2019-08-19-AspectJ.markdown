@@ -17,19 +17,15 @@ description: 『 AspectJ 』
 
 [AspectJ 在 Android 中的使用 - yxhuang2008的专栏 - CSDN博客](https://blog.csdn.net/yxhuang2008/article/details/94193201)
 
-[AOP之AspectJ在Android中的应用 - xinzhou201的专栏 - CSDN博客](https://blog.csdn.net/xinzhou201/article/details/81566653)
-
 [关于android中使用AspectJ - 简书](https://www.jianshu.com/p/f577aec99e17)
 
 [AspectJ 在 Android 中的使用 - yxhuang2008的专栏 - CSDN博客](https://blog.csdn.net/yxhuang2008/article/details/94193201)
 
 [在Android中使用AspectJ进行切面编程的简易步骤 - 简书](https://www.jianshu.com/p/9c338702d6a6)
 
-
-
 [Android 全埋点解决方案之 AspectJ](https://www.sensorsdata.cn/blog/20181206-8/)
 
-
+[AOP之AspectJ在Android中的应用 - xinzhou201的专栏 - CSDN博客](https://blog.csdn.net/xinzhou201/article/details/81566653)
 
 
 
