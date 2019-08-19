@@ -51,7 +51,7 @@ description: 『 AOP面向切面编程 』
 </table>
 	
 	
-	
+![AOP]({{ site.baseurl }}/assets/images/android/AOP/AOP.png)	
 	
 	
 	
