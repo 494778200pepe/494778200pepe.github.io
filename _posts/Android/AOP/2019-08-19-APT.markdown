@@ -33,8 +33,7 @@ description: 『 APT 』
 
 参考：
 
-【Android】APT - 简书
-https://www.jianshu.com/p/7af58e8e3e18
+[APT - 简书](https://www.jianshu.com/p/7af58e8e3e18)
 
 
 
