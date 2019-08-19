@@ -197,5 +197,6 @@ https://494778200pepe.github.io/android/2018/07/14/%E4%B8%80-Handler-Message-Mes
 
 [Handler解析(一)：是如何实现线程之间的切换 - CSDN博客](https://blog.csdn.net/adobesolo/article/details/75195394)
 
-
+Android 子线程创建handler - u013092755的博客 - CSDN博客
+https://blog.csdn.net/u013092755/article/details/78888247
 
