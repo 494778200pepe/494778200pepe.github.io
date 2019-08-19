@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "工厂设计模式"
+date:   2018-08-19 23:51:00 +0800
+categories: Java
+tags: 设计模式
+author: pepe
+description: 『 工厂设计模式 』
+---

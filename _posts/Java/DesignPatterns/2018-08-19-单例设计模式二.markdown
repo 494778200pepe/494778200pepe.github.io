@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "单例设计模式二"
+date:   2018-08-19 23:44:00 +0800
+categories: Java
+tags: 设计模式
+author: pepe
+description: 『 单例设计模式二 』
+---

@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Builder设计模式"
+date:   2018-08-19 23:50:00 +0800
+categories: Java
+tags: 设计模式
+author: pepe
+description: 『 Builder设计模式 』
+---
