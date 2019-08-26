@@ -31,9 +31,6 @@ https://www.cnblogs.com/dolphin0520/p/3920373.html
 Java并发编程：线程间协作的两种方式：wait、notify、notifyAll和Condition - Matrix海子 - 博客园
 https://www.cnblogs.com/dolphin0520/p/3920385.html
 
-Java并发编程：深入剖析ThreadLocal - Matrix海子 - 博客园
-https://www.cnblogs.com/dolphin0520/p/3920407.html
-
 Java并发编程：进程和线程之由来 - Matrix海子 - 博客园
 https://www.cnblogs.com/dolphin0520/p/3910667.html
 

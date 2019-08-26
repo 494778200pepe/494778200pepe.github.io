@@ -214,7 +214,11 @@ http://www.heqiangfly.com/2016/11/16/java-basic-threadlocal/
 
 [带你了解源码中的 ThreadLocal - 简书](https://www.jianshu.com/p/4167d7ff5ec1)
 
+ThreadLocalMap里弱引用 - vicoqi的博客 - CSDN博客
+https://blog.csdn.net/vicoqi/article/details/79743112
 
+Java并发编程：深入剖析ThreadLocal - Matrix海子 - 博客园
+https://www.cnblogs.com/dolphin0520/p/3920407.html
 
 
 
