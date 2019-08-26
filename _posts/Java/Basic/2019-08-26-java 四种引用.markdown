@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "java 四种引用"
+date:   2019-08-26 14:51:00 +0800
+categories: Java
+tags: Java基础
+author: pepe
+description: 『 四大引用 』
+---
+
+Java里提供了四种引用：
+
+*强引用StrongReference：这种引用的对象不会被GC回收，在堆里存活时间最久；
+
+* 弱引用WeakReference：在GC时一旦遇到WeakReference，无论堆内存空间是否足够都会进行回收，不过考虑到GC线程优先级很低，所以WeakReference能存活较长时间；（附：当WeakReference对象被回收后，它自身可被放入一个ReferenceQueue里，LeakCanary里便应用了这个特性来检测Activity是否已被回收）
+
+* 软引用SoftReference：当堆内存不足时，会对SoftReference进行回收，它存活的时间一般长于WeakReference。（附：SoftReference是在第三次内存分配失败时进行回收。流程：第一次分配失败->GC->第二次分配失败->扩容->第三次仍分配失败->清理SoftReference）
+
+* 虚引用PhantomReference：等于没有引用，随时随地都会被回收
+
+
+参考：
+
+[面向对象六大基本原则 - 网络引擎切换 - 简书](https://www.jianshu.com/p/e1d9ddc86c7d)
+
+
