@@ -1,0 +1,156 @@
+---
+layout: post
+title:  "单例设计模式一"
+date:   2018-08-19 23:43:00 +0800
+categories: Java
+tags: 设计模式
+author: pepe
+description: 『 单例设计模式一 』
+---
+
+单例的必要条件：
+
+* 1、构造函数私有，防止在外部 new 对象
+
+* 2、内部必须提供一个静态的方法，让外部调用
+
+### **双重判空**
+
+```
+public class Singleton1 {
+        private volatile static Singleton1 instance;
+ 
+        private Singleton1() {
+        }
+ 
+        public static Singleton1 newInstance() {
+            if (instance == null) {
+                synchronized (Singleton1.class) {
+                    if (instance == null) {
+                        instance = new Singleton1();
+                    }
+                }
+            }
+            return instance;
+        }
+    }
+```
+
+volatile 关键字：
+
+* 1、防止重排序
+* 2、线程可见性 - 某一个线程改了公用对象（变量），短时间内另一个线程可能是不可见的，因为每一个线程都有自己的缓存区（线程工作区）
+
+### **静态内部类（比较常用）**
+
+```
+public class Singleton2 {
+    private Singleton2() {
+    }
+
+    public static Singleton2 getInstance(){
+        return SingletonHolder.mInstance;
+    }
+
+    public static class SingletonHolder{
+        // 加上 volatile 的用处是什么？
+        private static volatile Singleton2 mInstance = new Singleton2();
+    }
+}
+
+```
+
+### **枚举**
+
+```
+public enum  Singleton3 {
+
+    //枚举元素本身就是单例
+    INSTANCE;
+
+    User loggedUser;
+    AuthUser authUser;
+    Locale systemDefaultLocal;
+
+    //添加自己需要的操作
+    public User getLoggedUser() {
+        return loggedUser;
+    }
+
+    public void setLoggedUser(User loggedUser) {
+        this.loggedUser = loggedUser;
+    }
+
+    public AuthUser getAuthUser() {
+        return authUser;
+    }
+
+    public void setAuthUser(AuthUser authUser) {
+        this.authUser = authUser;
+    }
+
+    @Nullable public String getAccessToken() {
+        return authUser == null ? null : authUser.getAccessToken();
+    }
+
+    public Locale getSystemDefaultLocal() {
+        if(systemDefaultLocal == null){
+            systemDefaultLocal = Locale.getDefault();
+        }
+        return systemDefaultLocal;
+    }
+
+}
+```
+
+### **容器管理 系统的服务就是用的这种**
+
+```
+public class Singleton4 {
+    private static Map<String,Object> mSingleMap = new HashMap<>();
+
+    static {
+        mSingleMap.put("activity_manager",new Singleton4());
+    }
+
+    private Singleton4() {
+
+    }
+
+    public static Object getService(String serviceName){
+        return mSingleMap.get(serviceName);
+    }
+}
+```
+
+### **静态对象**
+
+```
+public class Singleton5 {
+    private static Singleton5 mInstance;
+
+    static {
+        mInstance = new Singleton5();
+    }
+
+    private Singleton5() {
+
+    }
+
+    public static Singleton5 getInstance(){
+        return mInstance;
+    }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+

@@ -74,6 +74,24 @@ Message是容纳任意数据的容器。生产线程发送消息给 Handler，Ha
 【Android源码系列】消息机制:Handler源码解析 - verymrq的博客 - CSDN博客
 https://blog.csdn.net/verymrq/article/details/78681901
 
+Handler与Thread的关系 | ErQi
+http://erqi.github.io/2016/08/31/handler%E5%92%8CThread%E7%9A%84%E5%85%B3%E7%B3%BB/
+
+Android 异步消息处理机制 让你深入理解 Looper、Handler、Message三者关系 - Hongyang - CSDN博客
+https://blog.csdn.net/lmj623565791/article/details/38377229
+
+Android 为什么主线程的looper 一直循环不会ANR - 简书
+https://www.jianshu.com/p/a848b5ab96ce
+
+Android的Handler机制详解3_Looper.looper()不会卡死主线程 - 十一月Siy - CSDN博客
+https://blog.csdn.net/baidu_34012226/article/details/80469036
+
+Android中为什么主线程不会因为Looper.loop()里的死循环卡死？ - nbalichaoq的专栏 - CSDN博客
+https://blog.csdn.net/nbalichaoq/article/details/51967753
+
+Android中为什么主线程不会因为Looper.loop()的死循环卡死？ - 简书
+https://www.jianshu.com/p/733b1cc9b457
+
 
 
 
