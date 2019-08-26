@@ -9,10 +9,45 @@ description: 『 线程池 』
 ---
 
 
+拒绝任务：拒绝任务是指当线程池里面的线程数量达到 maximumPoolSize 且 workQueue 队列已满的情况下被尝试添加进来的任务。
 
+handler：线程池对拒绝任务的处理策略。在 ThreadPoolExecutor 里面定义了 4 种 handler 策略，分别是
+
+* 1. CallerRunsPolicy ：这个策略重试添加当前的任务，他会自动重复调用 execute() 方法，直到成功。
+
+* 2. AbortPolicy ：对拒绝任务抛弃处理，并且抛出异常。
+
+* 3. DiscardPolicy ：对拒绝任务直接无声抛弃，没有异常信息。
+
+* 4. DiscardOldestPolicy ：对拒绝任务不抛弃，而是抛弃队列里面等待最久的一个线程，然后把拒绝任务加到队列。
 
 
 [深入理解Java之线程池 - zings - 博客园](https://www.cnblogs.com/exe19/p/5359885.html)
+
+
+Java并发编程：volatile关键字解析 - Matrix海子 - 博客园
+https://www.cnblogs.com/dolphin0520/p/3920373.html
+
+Java并发编程：线程间协作的两种方式：wait、notify、notifyAll和Condition - Matrix海子 - 博客园
+https://www.cnblogs.com/dolphin0520/p/3920385.html
+
+Java并发编程：深入剖析ThreadLocal - Matrix海子 - 博客园
+https://www.cnblogs.com/dolphin0520/p/3920407.html
+
+Java并发编程：进程和线程之由来 - Matrix海子 - 博客园
+https://www.cnblogs.com/dolphin0520/p/3910667.html
+
+浅谈Java中的深拷贝和浅拷贝（转载） - Matrix海子 - 博客园
+https://www.cnblogs.com/dolphin0520/p/3700693.html
+
+深入理解Java的接口和抽象类 - Matrix海子 - 博客园
+https://www.cnblogs.com/dolphin0520/p/3811437.html
+
+Java 如何有效地避免OOM：善于利用软引用和弱引用 - Matrix海子 - 博客园
+https://www.cnblogs.com/dolphin0520/p/3784171.html
+
+LRU Cache - Matrix海子 - 博客园
+https://www.cnblogs.com/dolphin0520/p/3741519.html
 
 
 
