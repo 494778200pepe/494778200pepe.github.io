@@ -1,0 +1,80 @@
+---
+layout: post
+title:  "启动优化_测量"
+date:   2019-08-26 22:06:00 +0800
+categories: Android
+tags: Optimize
+author: pepe
+description: 『 启动优化_启动时间测量 』
+---
+
+App startup time
+
+* 冷启动
+
+    耗时最多，作为衡量标准
+
+* 热启动
+
+    从后台到前台
+
+* 温启动
+
+    较快，只是重走 Activity 的声明周期
+
+### **相关任务**
+
+冷启动之前
+
+* 启动 App
+* 加载空白 Window
+* 创建进程
+
+随后任务
+
+* 创建 Application
+* 启动主线程
+* 创建 MainActivity
+
+* 加载布局
+* 布置屏幕
+* 首帧绘制
+
+### **优化方向**
+
+Application 和 Activity 的生命周期
+
+### **启动时间测量方式**
+
+#### **adb 命令**
+
+```
+adb shell am  start -W packagename/首屏Activity
+
+ThisTime：1654       // 最后一个 Activity 启动耗时
+TotalTime：1654      // 所有 Activity 启动耗时(包含 SplashActivity 的启动时间)
+WaitTime：1673       // AMS 启动 Activity 的总耗时
+```
+
+> 线上使用方便，不能带到线上；非严谨、精确时间。
+
+#### **手动打点**
+
+* 误区：onWindowFocusChanged 只是首帧时间
+* 正解：真实数据展示，Feed第一条展示
+
+    。 RecyclerView 里面，在 Adapter 的 OnBindViewHolder 中
+    。 使用 holder.linearLayout.getViewTreeObserver().addOnPreDrawListener()，来添加回调
+
+> 精确，可带到线上，推荐使用；避开误区，采用 Feed 第一条展示；addOnDrawListener 要求 API 16。
+
+
+
+
+
+
+
+
+
+
+
