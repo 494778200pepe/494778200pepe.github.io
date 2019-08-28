@@ -16,6 +16,15 @@ description: 『 vLayout 』
 
 [Vlayout使用详细介绍 - 简书](https://www.jianshu.com/p/363ed30a5d53)
 
+Android开源库V - Layout：淘宝、天猫都在用的UI框架，赶紧用起来吧！ - 简书
+https://www.jianshu.com/p/6b658c8802d1
+
+Android Tangram模型：连淘宝、天猫都在用的UI框架模型你一定要懂 - 简书
+https://www.jianshu.com/p/b339c2d2d500
+
+VLayoutDemo【VLayout的简单使用demo（基于V1.2.8版本）】 - HaiyuKing - 博客园
+https://www.cnblogs.com/whycxb/p/9748752.html
+
 [yangchong211/LifeHelper: 组件化综合案例，包含微信新闻，头条视频，美女图片，百度音乐，干活集中营，玩Android，豆瓣读书电影，知乎日报等等模块。架构模式：组件化+MVP+Rx+Retrofit+Desgin+Dagger2+阿里VLayout+腾讯X5+腾讯bugly。安装阿里编码规约插件，不断修正不合理代码和最大程度去除黄色警告！！！融合开发中需要的各种小案例！](https://github.com/yangchong211/LifeHelper)
 
 
