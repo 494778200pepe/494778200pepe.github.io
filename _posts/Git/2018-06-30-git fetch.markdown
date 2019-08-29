@@ -14,5 +14,8 @@ git fetch --all //只是下载代码到本地，不进行合并操作
 git reset --hard origin/master  //把HEAD指向最新下载的版本
 ```
 
+详解git pull和git fetch的区别： - weixin_41975655的博客 - CSDN博客
+https://blog.csdn.net/weixin_41975655/article/details/82887273
+
 
 

@@ -18,6 +18,13 @@ Your branch is up-to-date with 'origin/master'.
 Your branch is ahead of 'origin/master' by 2 commit.
 ```
 
+```
+// 初始化
+git init
+// 自己要与origin master建立连接（下划线为远程仓库链接）
+git remote add origin git@github.com:XXXX/nothing2.git
+```
+
 
 
 
