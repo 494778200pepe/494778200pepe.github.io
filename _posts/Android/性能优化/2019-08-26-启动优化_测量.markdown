@@ -60,6 +60,8 @@ WaitTime：1673       // AMS 启动 Activity 的总耗时
 
 #### **手动打点**
 
+
+* 起始点：`Application` 的 `attachBaseContext(Context base)` 方法中。
 * 误区：onWindowFocusChanged 只是首帧时间
 * 正解：真实数据展示，Feed第一条展示
 
