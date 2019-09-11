@@ -10,8 +10,16 @@ description: 『 启动优化_方法耗时 』
 
 ### **常规方式**
 
+* long startTime = System.currentTimeMillis();
+* long cost = System.currentTimeMillis() - startTime;
+* 或者 SystemClock.currentThreadTimeMillis();
+* 侵入性强
+* 工作量大
 
 ### **AOP**
+
+* 无侵入性
+* 修改方便
 
 
 
