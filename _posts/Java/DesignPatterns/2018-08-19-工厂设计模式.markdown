@@ -7,3 +7,33 @@ tags: 设计模式
 author: pepe
 description: 『 工厂设计模式 』
 ---
+
+使用场景：
+
+* 很多对象有共性，并且后期可能存在多样性
+* 不想暴露创建细节，创建过程较复杂
+* 工厂就是用来生成对象的，把对象的实例化和初始化封装起来
+* BitmapFactory、XmlPullParserFactory、LayoutInflateFactory
+
+
+参考:
+
+Java开发之设计模式总结：工厂模式
+https://baijiahao.baidu.com/s?id=1625606999883136508&wfr=spider&for=pc
+
+Java反射+简单工厂模式总结 - dashuai的博客 - 博客园
+https://www.cnblogs.com/kubixuesheng/p/10344427.html
+
+JAVA设计模式之工厂模式 - 我的小叮当 - 博客园
+https://www.cnblogs.com/zuotongbin/p/11070691.html
+
+
+
+
+
+
+
+
+
+
+

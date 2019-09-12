@@ -7,3 +7,366 @@ tags: 设计模式
 author: pepe
 description: 『 Builder设计模式 』
 ---
+
+Builder模式有几个好处：
+ 
+* 1. Builder的setter函数可以包含安全检查，可以确保构建过程的安全，有效。 
+* 2. Builder的setter函数是具名函数，有意义，相对于构造函数的一长串函数列表，更容易阅读维护。 
+* 3. 可以利用单个Builder对象构建多个对象，Builder的参数可以在创建对象的时候利用setter函数进行调整
+
+当然Builder模式也有缺点： 
+
+* 1. 更多的代码，需要Builder这样的内部类 
+* 2. 增加了类创建的运行时开销 
+
+但是当一个类参数很多的时候，Builder模式带来的好处要远胜于其缺点。
+
+
+使用 Builder 设计模式，开发自定义 Dialog
+
+### **方式一**
+```
+public class CustomTipDialog {
+    private AlertDialog mDialog;
+    private Context context;
+    private String message;
+    private String positiveButtonText;
+    private View mView;
+    private DialogInterface.OnClickListener positiveButtonClickListener;
+    private int dialogWindowAnim;
+    private int gravity ;
+
+    private CustomTipDialog(Builder builder) {
+        this.context = builder.context;
+        this.message = builder.message;
+        this.positiveButtonText = builder.positiveButtonText;
+        this. positiveButtonClickListener = builder.positiveButtonClickListener;
+        this. dialogWindowAnim = builder.dialogWindowAnim;
+        this. gravity = builder.gravity;
+    }
+
+    public static class Builder {
+        private Context context;
+        private String message;
+        private String positiveButtonText;
+        private DialogInterface.OnClickListener positiveButtonClickListener;
+        private int dialogWindowAnim;
+        private int gravity = Gravity.LEFT;
+
+        public Builder(Context context) {
+            this.context = context;
+        }
+
+        public CustomTipDialog.Builder setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+
+        public CustomTipDialog.Builder setMessage(int message) {
+            this.message = (String) context.getText(message);
+            return this;
+        }
+
+        public CustomTipDialog.Builder setPositiveButton(int positiveButtonText, DialogInterface.OnClickListener listener) {
+            this.positiveButtonText = (String) context.getText(positiveButtonText);
+            this.positiveButtonClickListener = listener;
+            return this;
+        }
+
+        public CustomTipDialog.Builder setWindowAnim(@StyleRes int dialogWindowAnim) {
+            this.dialogWindowAnim = dialogWindowAnim;
+            return this;
+        }
+
+        public CustomTipDialog.Builder setPositiveButton(String positiveButtonText, DialogInterface.OnClickListener listener) {
+            this.positiveButtonText = positiveButtonText;
+            this.positiveButtonClickListener = listener;
+            return this;
+        }
+
+        public CustomTipDialog.Builder setGravity(int gravity) {
+            this. gravity = gravity;
+            return this;
+        }
+
+        public CustomTipDialog build() {
+            CustomTipDialog dialog = new CustomTipDialog(this);
+            return dialog;
+        }
+
+    }
+
+    private CustomTipDialog create(){
+        mDialog = new AlertDialog.Builder(context).create();
+        mView = LayoutInflater.from(context).inflate(R.layout.layout_dialog_not_member, null);
+        if (positiveButtonText != null) {
+            ((Button) mView.findViewById(R.id.btn_buy_member)).setText(positiveButtonText);
+        }
+        if (positiveButtonClickListener != null) {
+            mView.findViewById(R.id.btn_buy_member)
+                    .setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            dismiss();
+                            positiveButtonClickListener.onClick(mDialog, DialogInterface.BUTTON_POSITIVE);
+                        }
+                    });
+        }
+        mView.findViewById(R.id.btn_close)
+                .setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mDialog.dismiss();
+                    }
+                });
+
+        TextView tv_message = mView.findViewById(R.id.tv_message);
+        tv_message.setGravity(gravity);
+
+        mDialog.setCanceledOnTouchOutside(true);
+        if (message != null) {
+            tv_message.setText(message);
+        }
+        return this;
+    }
+
+    public void show() {
+        try {
+            if (mDialog == null){
+                create();
+            }
+            if (!mDialog.isShowing()) {
+                mDialog.show();
+                mDialog.setContentView(mView);
+                Window window = mDialog.getWindow();
+                //设置Dialog从窗体底部弹出
+                window.setGravity(Gravity.CENTER);
+                window.getDecorView().setPadding(0, 0, 0, 0);
+                window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                WindowManager.LayoutParams lp = window.getAttributes();
+                //设置宽
+                lp.width = DensityUtils.dip2px(290);
+                //设置高
+                lp.height = DensityUtils.dip2px(198);
+                window.setAttributes(lp);
+                // 可以自行添加动画
+                if(dialogWindowAnim != 0){
+                    window.setWindowAnimations(dialogWindowAnim);
+                }
+                window.clearFlags(WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
+            }
+        } catch (Exception e) {
+            Log.d("pepe", "msg:" + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    public void dismiss() {
+        if (mDialog != null) {
+            mDialog.dismiss();
+        }
+    }
+}
+
+// 使用
+    new CustomTipDialog.Builder(getContext())
+            .setMessage("你还没有登录")
+                    .setGravity(Gravity.CENTER_HORIZONTAL)
+                    .setWindowAnim(R.style.dialogWindowAnim)
+                    .setPositiveButton("登录", new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            JumpUtil.overlay(getContext(), LoginActivity.class);
+        }
+    })
+```
+
+### **方式二**
+```
+public class CustomDialog extends Dialog {
+
+    private String message;
+    private String positiveButtonText;
+    private DialogInterface.OnClickListener positiveButtonClickListener;
+    private int dialogWindowAnim;
+    private int gravity;
+
+    private Button btn_buy_member;
+    private ImageView btn_close;
+    private TextView tv_message;
+
+    public CustomDialog(@NonNull Context context) {
+        super(context);
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        LogUtil.d("onCreate CustomDialog");
+        setContentView(R.layout.layout_dialog_not_member);
+        btn_buy_member = findViewById(R.id.btn_buy_member);
+        btn_close = findViewById(R.id.btn_close);
+        tv_message = findViewById(R.id.tv_message);
+        setCanceledOnTouchOutside(true);
+        if (positiveButtonText != null) {
+            this.btn_buy_member.setText(this.positiveButtonText);
+        }
+        if (positiveButtonClickListener != null) {
+            btn_buy_member.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dismiss();
+                    positiveButtonClickListener.onClick(CustomDialog.this, DialogInterface.BUTTON_POSITIVE);
+                }
+            });
+        }
+        btn_close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dismiss();
+            }
+        });
+        tv_message.setGravity(gravity);
+        if (message != null) {
+            tv_message.setText(message);
+        }
+    }
+
+    /**
+     * 调用完Builder类的create()方法后显示该对话框的方法
+     */
+    @Override
+    public void show() {
+        LogUtil.d("show CustomDialog");
+        super.show();
+        Window window = getWindow();
+        //设置Dialog从窗体底部弹出
+        window.setGravity(Gravity.CENTER);
+        window.getDecorView().setPadding(0, 0, 0, 0);
+        window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        WindowManager.LayoutParams lp = window.getAttributes();
+        //设置宽
+        lp.width = DensityUtils.dip2px(290);
+        //设置高
+        lp.height = DensityUtils.dip2px(198);
+        window.setAttributes(lp);
+        // 可以自行添加动画
+        if (dialogWindowAnim != 0) {
+            window.setWindowAnimations(dialogWindowAnim);
+        }
+        window.clearFlags(WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
+    }
+
+    public static class Builder {
+
+        private CustomDialog mDialog;
+        private Context context;
+
+        public Builder(Context context) {
+            mDialog = new CustomDialog(context);
+            this.context = context;
+        }
+
+        public Builder setMessage(String message) {
+            mDialog.message = message;
+            return this;
+        }
+
+        public Builder setMessage(int message) {
+            mDialog.message = (String) context.getText(message);
+            return this;
+        }
+
+        public Builder setPositiveButton(int positiveButtonText, DialogInterface.OnClickListener listener) {
+            mDialog.positiveButtonText = (String) context.getText(positiveButtonText);
+            mDialog.positiveButtonClickListener = listener;
+            return this;
+        }
+
+        public Builder setWindowAnim(@StyleRes int dialogWindowAnim) {
+            mDialog.dialogWindowAnim = dialogWindowAnim;
+            return this;
+        }
+
+        public Builder setPositiveButton(String positiveButtonText, DialogInterface.OnClickListener listener) {
+            mDialog.positiveButtonText = positiveButtonText;
+            mDialog.positiveButtonClickListener = listener;
+            return this;
+        }
+
+        public Builder setGravity(int gravity) {
+            mDialog.gravity = gravity;
+            return this;
+        }
+
+        public CustomDialog create() {
+            return mDialog;
+        }
+    }
+}
+// 使用
+        new CustomDialog.Builder(getContext())
+                .setMessage("你还没有登录")
+                .setGravity(Gravity.CENTER_HORIZONTAL)
+                .setWindowAnim(R.style.dialogWindowAnim)
+                .setPositiveButton("登录", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        JumpUtil.overlay(getContext(), LoginActivity.class);
+                    }
+                }).create().show();
+```
+
+相关 layout 文件
+```
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="290dp"
+    android:layout_height="198dp"
+    android:background="@drawable/shape_dialog_not_member_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:padding="13dp"
+        android:src="@mipmap/icon_close"
+        android:background="@null"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="46dp"
+        android:text="你还不是299会员，无法使用评论功能"
+        android:textColor="@color/color333"
+       android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_buy_member"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_40"
+        android:layout_marginLeft="74dp"
+        android:layout_marginRight="74dp"
+        android:layout_marginBottom="33dp"
+        android:background="@drawable/apply_ensure_bg"
+        android:text="购买成为会员"
+        android:textColor="@android:color/white"
+       android:textSize="@dimen/font_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
+```
