@@ -8,9 +8,7 @@ author: pepe
 description: 『 启动优化_异步优化 』
 ---
 
-### **优化小技巧**
-
-* Theme 切换：感觉上的快
+### **Theme 切换：感觉上的快**
 
 启动加速之主题切换
 
@@ -98,11 +96,19 @@ public class MainActivity extends AppCompatActivity {
 * 直接显示应用主界面。这样的毒瘤应用包括：微信、微信读书、UC 浏览器、支付宝、工商银行、米家等
 
 
+### **利用线程池，做异步初始化**
+
+* 情况1：如果有一部分代码并不满足异步需求(只能在主线程中执行)，比如在异步线程中创建了 Handler，由于找不到 MessageQueue，就会报错，可以添加 Looper.getMainLooper()。
+* 但是，如果有些代码必须在主线程中执行，那么只能放弃异步优化方案。
+* 情况2：如果某些初始化的操作，必须在 Application 中初始化完成(因为跳转到 SplashActivity 时就会用到)，可以使用 CountDownLatch。
 
 
+异步优化注意：
 
-
-
+* 不符合异步要求：1可以考虑修改代码，是满足异步要求；2、放弃异步优化。
+* 需要在某阶段完成：采用 CountDownLatch 来做。
+* 区分 CPU 密集型和 IO 密集型任务
+ 
 
 
 参考：
