@@ -103,7 +103,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+参考：
 
+[Android性能优化(一)启动优化 - Android格调小窝 - CSDN博客](https://blog.csdn.net/qq_34895720/article/details/97127762)
 
 
 
