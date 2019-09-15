@@ -1,0 +1,92 @@
+---
+layout: post
+title:  "启动优化_其他方案"
+date:   2019-09-15 13:49:00 +0800
+categories: Android
+tags: Optimize
+author: pepe
+description: 『 启动优化_其他方案 』
+---
+
+优化总方针：
+
+* 异步、延迟、懒加载
+
+* 技术、业务相结合
+
+注意事项：
+
+* wall time 与 cpu time
+	
+	。 cpu time 才是优化方向
+	。 按照 systrace 及 cpu time 跑满 cpu
+
+* 监控的完善
+
+	。 线上监控多阶段时间(App、Activity、生命周期间隔时间)
+	。 处理聚合看趋势
+	
+* 收敛启动代码修改权限
+
+	。 结合 Ci 修改启动代码需要 Review 或通知
+
+
+其他方案
+
+* 1、提前加载 SharedPreferences
+
+	。 Multidex 之前加载，利用此阶段 CPU
+	。 覆写 getApplicationContext() 返回 this
+
+* 2、启动阶段不启动子进程
+
+	。 子进程会共享 CPU 资源，导致主进程 CPU 紧张
+	。 注意启动顺序：App onCreate 之前是 ContentProvider
+	
+* 3、类加载优化：提前异步类加载
+
+	。 Class.forName() 只加载类本身及其静态变量的引用类
+	。 new 类实例 可以额外加载类成员变量的引用类
+	
+* 4、启动阶段抑制 GC，native hook
+
+* 5、CPU 锁频
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
