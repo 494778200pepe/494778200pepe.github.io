@@ -1,0 +1,45 @@
+---
+layout: post
+title:  "内存优化_内存泄漏解决"
+date:   2019-09-15 17:34:00 +0800
+categories: Android
+tags: Optimize
+author: pepe
+description: 『 内存优化_内存泄漏解决 』
+---
+
+内存泄漏
+
+* 定义：内存中存在已经没有用的对象(但却不能回收，导致内存不足，进而频繁GC)
+* 表现：内存抖动、可用内存逐渐变少
+* 危害：内存不足、GC频繁、OOM
+
+Memory Analyzer
+
+* https://www.eclipse.org/mat/downloads.php
+* 转换：hprof-conv 原文件路径 转换后文件路径
+
+解决：
+
+* 使用 Memory Profiler 初步观察
+* 使用 Memory Analyzer 结合代码确认
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
