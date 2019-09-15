@@ -1,0 +1,85 @@
+---
+layout: post
+title:  "内存优化_工具介绍"
+date:   2019-09-15 14:43:00 +0800
+categories: Android
+tags: Optimize
+author: pepe
+description: 『 内存优化_工具介绍 』
+---
+
+内存问题：
+
+* 内存抖动：锯齿状、GC导致卡顿
+* 内存泄漏：可用内存减少、频繁GC
+* 内存溢出：OOM、程序异常
+
+工具选择：
+
+* Memory Profiler
+
+	。 实时图标展示应用内存使用量
+	。 识别内存泄漏、抖动等
+	。 提供捕获堆转储、强制GC以及跟踪内存分配的能力
+	
+	。 方便直观
+	。 线下平时使用
+
+
+* Memory Analyzer
+
+	。 强大的 Java Heap 分析工具，查找内存泄漏及内存占用
+	。 生成整体报告、分析问题等
+	。 线下深入使用
+
+* LeakCanary
+
+	。 自动内存泄漏检测
+	。 https://github.com/square/leakcanary
+	。 线下集成
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
