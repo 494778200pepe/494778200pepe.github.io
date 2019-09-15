@@ -13,7 +13,9 @@ description: 『 启动优化_异步优化 』
 * Theme 切换：感觉上的快
 
 启动加速之主题切换
+
 应用启动页白屏(StartingWindow)优化
+
 StartingWindow 的处理方式：
 
 #### 1.使用系统默认的 StartingWindow ： 
