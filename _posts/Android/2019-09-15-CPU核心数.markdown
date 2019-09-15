@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "CPU核心数"
+date:   2019-09-15 10:40:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 CPU核心数 』
+---
+
+在 AsyncTask 的源码中；
+```
+private static final int CPU_COUNT = Runtime.getRuntime().availableProcessors();
+
+private static final int CORE_POOL_SIZE = Math.max(2, Math.min(CPU_COUNT - 1, 4));
+```
+通过 CPU 核心数，来确定核心线程池的数量大小。
+
+
+
+
+
+
+
+
+
+
+
+
