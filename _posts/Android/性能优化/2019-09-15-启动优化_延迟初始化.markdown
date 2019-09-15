@@ -1,0 +1,64 @@
+---
+layout: post
+title:  "启动优化_延迟初始化"
+date:   2019-09-15 11:49:00 +0800
+categories: Android
+tags: Optimize
+author: pepe
+description: 『 启动优化_延迟初始化 』
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

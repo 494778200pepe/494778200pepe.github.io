@@ -115,7 +115,9 @@ public class MainActivity extends AppCompatActivity {
 
 [Android性能优化(一)启动优化 - Android格调小窝 - CSDN博客](https://blog.csdn.net/qq_34895720/article/details/97127762)
 
+[倒计时器：CountDownLatch - 简书](https://www.jianshu.com/p/f17692e9114f)
 
+[Java并发之CountDownLatch、Semaphore和CyclicBarrier - 简书](https://www.jianshu.com/p/bb5105303d85)
 
 
 
