@@ -8,14 +8,58 @@ author: pepe
 description: 『 启动优化_延迟初始化 』
 ---
 
+### **常规方案**
+
+* 1、Handler.postDelay()
+
+常规初始化痛点
+
+* 时机不便控制
+* 导致 Feed 卡顿
+
+
+### **更优方案**
+
+> 核心思想：对延迟任务进行分批初始化
+
+* 利用 IdleHandler 特性，空闲执行
+* 执行时机明确
+* 缓解 Feed 卡顿
+
+```
+public class DelayInitDispatcher {
+
+    private Queue<Task> mDelayTasks = new LinkedList<>();
+
+    private MessageQueue.IdleHandler mIdleHandler = new MessageQueue.IdleHandler() {
+        @Override
+        public boolean queueIdle() {
+            if(mDelayTasks.size()>0){
+                Task task = mDelayTasks.poll();
+                new DispatchRunnable(task).run();
+            }
+            return !mDelayTasks.isEmpty();
+        }
+    };
+
+    public DelayInitDispatcher addTask(Task task){
+        mDelayTasks.add(task);
+        return this;
+    }
+
+    public void start(){
+        Looper.myQueue().addIdleHandler(mIdleHandler);
+    }
+
+}
+```
 
 
 
+参考：
 
-
-
-
-
+Anchors/README-zh.md at master · YummyLau/Anchors
+https://github.com/YummyLau/Anchors/blob/master/README-zh.md
 
 
 
