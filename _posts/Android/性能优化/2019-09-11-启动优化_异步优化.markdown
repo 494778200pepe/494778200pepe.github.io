@@ -12,7 +12,88 @@ description: 『 启动优化_异步优化 』
 
 * Theme 切换：感觉上的快
 
+启动加速之主题切换
+应用启动页白屏(StartingWindow)优化
+StartingWindow 的处理方式：
 
+#### 1.使用系统默认的 StartingWindow ： 
+
+* 用户点了应用图标启动应用，马上弹出系统默认的 StartingWindow（就是做动画的那个 Window） 
+* 等应用加载好第一帧之后，StartingWindow 消失，显示应用第一帧，无缝衔接，体验还不错
+* 这也是通常大部分 Android 应用的场景；比如大部分 Android 系统的自带应用，即刻、汽车之家等
+
+#### 2.自己定制简单的 StartingWindow ： 
+
+* 用户点了应用图标启动应用，弹出应用自己定制的StartingWindow
+* 等应用加载好第一帧之后，定制的 StartingWindow 消失，显示应用主界面
+* 由于 StartingWindow 是自己定制的，启动的时候 Decode Bitmap 或者 Inflate 自定义 Layout 会有一定的耗时
+* 但是总的来说与系统默认的差别不大，用户体验优；这样的应用包括淘宝、京东、微博、今日头条、美团等
+
+在styles.xml文件中添加以下代码
+```
+    <!-- 应用启动页(StartingWindow)的theme -->
+    <style name="AppTheme.StartingWindowTheme" parent="AppTheme">
+        <!-- 可以设置成纯颜色（设置一个和Activity UI相似的背景） -->
+        <!--<item name="android:windowBackground">@color/startingwindow_bgcolor</item>-->
+         <!--也可以设置成一张图片 -->
+        <item name="android:windowBackground">@drawable/startingwindow_bg</item>
+    </style>
+```
+
+在colors.xml文件中添加以下代码【根据实际情况来添加，如果使用纯颜色作为启动页白屏的背景的话，则需要添加】
+
+```
+    <!-- 应用启动页(StartingWindow)的theme的背景色 -->
+    <color name="startingwindow_bgcolor">#00bfff</color>
+```
+
+在AndroidManifest.xml中给首页activity（第一个页面，一般是欢迎界面）设置自定义的theme
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.why.project.androidstartingwindowdemo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--将首页的them设置成自定义的样式-->
+        <activity android:name=".MainActivity"
+                  android:theme="@style/AppTheme.StartingWindowTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+```
+
+在Activity中恢复原有的style样式【否则的话，当activity的布局文件设置背景色为透明的时候，就会发现窗口的背景还是那张图片】
+
+```
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setTheme(R.style.AppTheme);//恢复原有的样式
+        setContentView(R.layout.activity_main);
+    }
+}
+```
+
+#### 3.把 StartingWindow 禁掉或者设置透明 ： 
+
+* 用户点了应用图标启动应用，由于 StartingWindow 被禁掉或者被设置透明
+* 所以会出现点击图标后，除了图标黑一下之外没有任何响应，过个 1-N 秒（取决于应用第一帧的加载速度）
+* 直接显示应用主界面。这样的毒瘤应用包括：微信、微信读书、UC 浏览器、支付宝、工商银行、米家等
 
 
 
