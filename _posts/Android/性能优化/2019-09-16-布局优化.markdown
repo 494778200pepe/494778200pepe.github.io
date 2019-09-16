@@ -1,0 +1,69 @@
+---
+layout: post
+title:  "布局优化"
+date:   2019-09-16 15:42:00 +0800
+categories: Android
+tags: Optimize
+author: pepe
+description: 『 布局优化 』
+---
+
+### **绘制原理**
+
+* CPU 负责计算显示内容
+* GPU 负责栅格化(UI元素会知道屏幕上)
+* 16ms 发出 VSync 信号触发 UI 渲染(渲染代码需要在16ms之内完成)
+* 大多数的 Android 设备屏幕刷新频率：60Hz 
+
+### **优化工具**
+
+* Systrace
+
+	。 关注 Frames
+	。 正常：绿色原点，丢帧：黄色或红色
+	。 Alerts栏：自动分析和标注异形性能的条目
+
+* Layout Inspector
+
+	。 AndroidStudio 自带工具
+	。 查看视图层次结构
+
+* Choreographer
+
+	。 获取 FPS，线上使用，具备实时性
+	。 API16 之后
+	。 Choreographer.getInstance().postFrameCallback(this);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
