@@ -18,6 +18,10 @@ LayoutInflater.Factory
 * LayoutInflater 创建 View 的一个 Hook
 * 定制创建 View 的过程：全局替换自定义 TextView 等
 
+Factory 和 Factory2
+
+* Factory2 继承于 Factory
+* 多了一个参数：parent
 
 
 

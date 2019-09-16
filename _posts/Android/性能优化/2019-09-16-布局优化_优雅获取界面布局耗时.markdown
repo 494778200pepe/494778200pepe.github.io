@@ -8,17 +8,21 @@ author: pepe
 description: 『 优雅获取界面布局耗时 』
 ---
 
+### **常规方式**
 
+* 背景：获取每个界面加载耗时
+* 实现：覆写方法、手动埋点
 
+### **AOP/ArtHook**
 
+* 切 Activity 的 setContentView
 
+	。 @Around("execution(* android.app.Activity.setContentView(..))")
 
+### **获取任一控件耗时**
 
-
-
-
-
-
+* 低侵入性
+* LayoutInflater.Factory
 
 
 

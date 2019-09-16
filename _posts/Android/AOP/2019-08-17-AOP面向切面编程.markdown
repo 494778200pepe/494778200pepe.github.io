@@ -89,3 +89,6 @@ description: 『 AOP面向切面编程 』
 
 深入理解Android之AOP - Innost的专栏 - CSDN博客
 https://blog.csdn.net/innost/article/details/49387395
+
+Aspectj中call与execution区别，织入代码位置不同 - 吟啸徐行 - CSDN博客
+https://blog.csdn.net/Dax1n/article/details/81944975
