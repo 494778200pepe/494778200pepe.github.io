@@ -3,7 +3,7 @@ layout: post
 title:  "布局优化_优雅获取界面布局耗时"
 date:   2019-09-16 16:41:00 +0800
 categories: Android
-tags: Optimize
+tags: 性能优化
 author: pepe
 description: 『 优雅获取界面布局耗时 』
 ---

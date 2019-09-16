@@ -3,7 +3,7 @@ layout: post
 title:  "内存优化_线上内存监控方案"
 date:   2019-09-16 13:46:00 +0800
 categories: Android
-tags: Optimize
+tags: 性能优化
 author: pepe
 description: 『 内存优化_线上内存监控方案 』
 ---

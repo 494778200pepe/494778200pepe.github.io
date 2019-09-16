@@ -3,7 +3,7 @@ layout: post
 title:  "内存优化_内存管理机制"
 date:   2019-09-15 15:03:00 +0800
 categories: Android
-tags: Optimize
+tags: 性能优化
 author: pepe
 description: 『 内存优化_内存管理机制 』
 ---

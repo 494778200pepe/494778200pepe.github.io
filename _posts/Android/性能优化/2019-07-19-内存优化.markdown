@@ -3,7 +3,7 @@ layout: post
 title:  "内存优化"
 date:   2019-07-19 11:44:00 +0800
 categories: Android
-tags: Optimize
+tags: 性能优化
 author: pepe
 description: 『 内存优化 』
 ---

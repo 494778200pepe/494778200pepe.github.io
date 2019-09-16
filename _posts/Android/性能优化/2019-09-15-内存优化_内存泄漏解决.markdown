@@ -3,7 +3,7 @@ layout: post
 title:  "内存优化_内存泄漏解决"
 date:   2019-09-15 17:34:00 +0800
 categories: Android
-tags: Optimize
+tags: 性能优化
 author: pepe
 description: 『 内存优化_内存泄漏解决 』
 ---

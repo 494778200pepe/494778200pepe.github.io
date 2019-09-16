@@ -3,7 +3,7 @@ layout: post
 title:  "启动优化_方法耗时"
 date:   2019-09-11 17:31:00 +0800
 categories: Android
-tags: Optimize
+tags: 性能优化
 author: pepe
 description: 『 启动优化_方法耗时 』
 ---
