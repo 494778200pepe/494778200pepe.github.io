@@ -8,6 +8,9 @@ author: pepe
 description: 『 HotFix 』
 ---
 
+Android热修复技术原理详解（最新最全版本）
+https://www.bbsmax.com/A/Vx5MvjBLdN/
+
 [Android热更新实现原理 - CSDN博客](https://blog.csdn.net/lzyzsd/article/details/49843581)
 
 [jjlanbupt - 简书](https://www.jianshu.com/u/d4c81f4599d6)
