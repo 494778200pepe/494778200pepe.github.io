@@ -1,0 +1,48 @@
+---
+layout: post
+title:  "内存优化_ARTHook优雅检测不合理图片"
+date:   2019-09-16 11:21:00 +0800
+categories: Android
+tags: Optimize
+author: pepe
+description: 『 内存优化_ARTHook优雅检测不合理图片 』
+---
+
+### **Bitmap内存模型**
+
+* API10 之前 Bitmap 自身在 Dalvik Heap 中，像素在 Native(好处：不占用 Java 层内存；坏处：Bitmap已经回收，但 Native 中回收时机不确定)
+* API10 之后，像素也被放在 Dalvik Heap 中
+* API26 之后，像素在 Native 中
+* 获取 Bitmap 占用内存
+
+	。 getByteCount
+	。 宽*高*一像素占用内存(如果是在 res 目录，还需要乘以一个压缩比率)
+
+
+### **常规方式**
+
+* 背景：图片对内存优化至关重要、图片宽高大于控件宽高
+* 实现：继承 ImageView，覆写实现计算大小
+* 侵入性强、不通用
+
+### **ARTHook实战**
+
+* 挂钩，将额外的代码钩住原有方法，修改执行逻辑
+
+	。 运行时插桩
+	。 性能分析
+	
+* Epic 是一个虚拟机层面、以 Java Method 为粒度的运行时 Hook 框架
+	
+	。 支持 Android 4.0-9.0
+	。 https://github.com/tiann/epic
+ 
+
+
+
+
+
+
+
+
+
