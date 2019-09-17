@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "微信底部导航栏动画"
+date:   2019-09-17 09:20:00 +0800
+categories: Android
+tags: CustomWidget
+author: pepe
+description: 『 微信底部导航栏动画 』
+---
+
+
+
+参考：
+
+高仿微信底部导航栏动画 - 掘金
+https://juejin.im/post/5d5365876fb9a06b130f1aa6
