@@ -20,7 +20,8 @@ description: 『 Activity、View、Window 之间的关系 』
 
 [Android 面试（八）：说说 Activity、View、Window 之间的关系吧 - 简书](https://www.jianshu.com/p/d7853c4aba9c)
 
-
+Activity、View、Window的理解一篇文章就够了 - 简书
+https://www.jianshu.com/p/5297e307a688?from=message&isappinstalled=0
 
 
 
