@@ -3,7 +3,7 @@ layout: post
 title:  "RecyclerView"
 date:   2018-06-06 19:13:00 +0800
 categories: Android
-tags: Widget
+tags: RecyclerView
 author: pepe
 description: 『 RecycleView 』
 ---

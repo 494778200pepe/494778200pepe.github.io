@@ -2,6 +2,7 @@
 - title: "自定义View" 
 - title: "自定义ViewGroup" 
 - title: "Widget"  
+- title: "RecyclerView"  
 - title: "MD"  
 - title: "AOP" 
 - title: "RxJava" 
