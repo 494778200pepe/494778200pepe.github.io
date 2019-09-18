@@ -23,6 +23,9 @@ https://blog.csdn.net/yechaoa/article/details/70919827
 Android 开源照相和图片选择框架PictureSelector - Crystal_xing的专栏 - CSDN博客
 https://blog.csdn.net/Crystal_xing/article/details/87794286
 
+[OpenSource] Android 图片、视频选择库 PVSelector - leobert.lan的博客 - CSDN博客
+https://blog.csdn.net/a774057695/article/details/77533120
+
 
 
 

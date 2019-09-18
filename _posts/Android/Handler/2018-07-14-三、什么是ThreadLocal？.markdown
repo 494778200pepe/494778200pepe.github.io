@@ -220,6 +220,11 @@ https://blog.csdn.net/vicoqi/article/details/79743112
 Java并发编程：深入剖析ThreadLocal - Matrix海子 - 博客园
 https://www.cnblogs.com/dolphin0520/p/3920407.html
 
+Java中的堆和栈的区别 - 技术小黑屋
+https://droidyue.com/blog/2014/12/07/differences-between-stack-and-heap-in-java/
+
+理解Java中的ThreadLocal - 技术小黑屋
+https://droidyue.com/blog/2016/03/13/learning-threadlocal-in-java/
 
 
 
