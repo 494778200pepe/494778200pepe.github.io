@@ -8,8 +8,7 @@ author: pepe
 description: 『 多标签tab滑动切换 』
 ---
 
-[Android多标签tab滑动切换 - 自定义View快速实现高度定制封装 - solocoder的博客 - CSDN博客](
-https://blog.csdn.net/solocoder/article/details/83685999)
+[Android多标签tab滑动切换 - 自定义View快速实现高度定制封装 - solocoder的博客 - CSDN博客](https://blog.csdn.net/solocoder/article/details/83685999)
 
 
 
