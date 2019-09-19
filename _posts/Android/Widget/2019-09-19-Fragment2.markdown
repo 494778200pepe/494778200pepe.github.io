@@ -95,19 +95,19 @@ public class SingleListActivity extends SingleFragmentActivity {
   如果你是用于ViewPager展示数量特别多的条目时，那么建议使用FragmentStatePagerAdapter。
 
 
-
+### **Fragment间的数据传递**
 
 
 参考：
 
 [Android Fragment 你应该知道的一切 - Hongyang - CSDN博客](https://blog.csdn.net/lmj623565791/article/details/42628537)
 
-[FragmentActivity的简单使用 - 王丰蛋哥 - 博客园](https://www.cnblogs.com/wangfengdange/p/4918323.html)
 
-[Android--Fragment你应该明白的一些疑难点](https://mp.weixin.qq.com/s/EYSGI0iX0etNLlKItM7HLw)
+[Fragment全解析系列（一）：那些年踩过的坑 - 简书](https://www.jianshu.com/p/d9143a92ad94)
 
-Fragment全解析系列（一）：那些年踩过的坑 - 简书
-https://www.jianshu.com/p/d9143a92ad94
-Fragment全解析系列（二）：正确的使用姿势 - 简书
-https://www.jianshu.com/p/fd71d65f0ec6
+[Fragment全解析系列（二）：正确的使用姿势 - 简书](https://www.jianshu.com/p/fd71d65f0ec6)
+
+[Fragment之我的解决方案：Fragmentation - 简书](https://www.jianshu.com/p/38f7994faa6b)
+
+[YoKeyword/Fragmentation: A powerful library that manage Fragment for Android!](https://github.com/YoKeyword/Fragmentation)
 

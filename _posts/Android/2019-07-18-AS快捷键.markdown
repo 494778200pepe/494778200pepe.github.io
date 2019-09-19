@@ -216,7 +216,8 @@ description: 『 快捷键 』
 
 [Android Studio实用快捷键汇总 - monkey1992 - 博客园](https://www.`cnblogs.`com/1992monkey/p/5902135.`html)
 
-
+你不一定知道的Android Studio中强大的快捷代码块 - KuangHusing的博客 - CSDN博客
+https://blog.csdn.net/kuanghusing/article/details/53037970
 
 
 
