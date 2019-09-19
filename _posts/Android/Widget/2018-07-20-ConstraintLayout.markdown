@@ -79,7 +79,7 @@ app:layout_constraintVertical_weight
 
 #### **spread_inside**
 
-![constraintLayout]({{ site.baseurl }}/assets/images/android/Widget/constraintLayout.png)
+![constraintLayout]({{ site.baseurl }}/assets/images/android/widget/constraintLayout.png)
 
 
 ### **bias**
