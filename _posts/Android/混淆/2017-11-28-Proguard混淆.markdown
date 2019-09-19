@@ -202,3 +202,6 @@ buildTypes {
 [写给 Android 开发者的混淆使用手册 - DiyCode](https://www.diycode.cc/topics/380)
 
 [Android混淆从入门到精通 - 简书](https://www.jianshu.com/p/7436a1a32891)
+
+美团Android资源混淆保护的具体实践 - 区长的专栏 - CSDN博客
+https://blog.csdn.net/sbsujjbcy/article/details/49002729

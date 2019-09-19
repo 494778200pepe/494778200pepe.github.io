@@ -26,7 +26,11 @@ https://blog.csdn.net/Crystal_xing/article/details/87794286
 [OpenSource] Android 图片、视频选择库 PVSelector - leobert.lan的博客 - CSDN博客
 https://blog.csdn.net/a774057695/article/details/77533120
 
+从0开始实现一款类似微信、B站的图片浏览组件
+https://mp.weixin.qq.com/s/driuTF2zZdqJzvE7UAzRpA
 
+yechaoa/PictureSelectorDemo: Android 选择图片、上传图片之PictureSelector
+https://github.com/yechaoa/PictureSelectorDemo
 
 
 

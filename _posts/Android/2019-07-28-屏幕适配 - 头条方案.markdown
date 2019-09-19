@@ -29,3 +29,6 @@ https://blog.csdn.net/qq_35195386/article/details/80801597
 
 Android 屏幕适配终结者 - 简书
 https://www.jianshu.com/p/7da141e682c7
+
+Android 屏幕适配之bug 刘海屏、水滴屏 - 简书
+https://www.jianshu.com/p/aeafa7499c1c
