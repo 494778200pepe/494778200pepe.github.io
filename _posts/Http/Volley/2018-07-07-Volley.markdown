@@ -13,6 +13,8 @@ description: 『 Volley 』
 
 [Google Volley使用之基础 - CSDN博客](https://blog.csdn.net/yanbober/article/details/45307015)
 
+也谈Volley的二次封装 - amurocrash的专栏 - CSDN博客
+https://blog.csdn.net/amurocrash/article/details/44256495
 
 ### Volley 源码
 

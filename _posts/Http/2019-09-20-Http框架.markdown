@@ -1,0 +1,102 @@
+---
+layout: post
+title:  "HTTP框架"
+date:   2019-09-20 10:01:00 +0800
+categories: Http
+tags: Http
+author: pepe
+description: 『 HTTP框架 』
+---
+
+第一步：
+
+搞清楚一个网络框架，需要支持哪些功能
+
+第二步：
+
+使用 Retrofit + OkHttp + RxJava  实现一个网络框架
+
+第三步：
+
+实现可切换网络引擎
+
+### **Http 功能**
+
+* 支持http协议get、post、put、delete
+* 异步请求
+* 请求错误统一处理
+* 支持多文件上传
+* 预处理服务器返回的数据 converter（Json、Xml）
+* 上传/下载 进度更新
+* 取消请求
+* 可扩展需求：
+* timeout重试机制
+* 多任务队列
+* 关联activity
+* 缓存刷新机制
+* 请求方式：强制网络、先缓存后网络、先网络后缓存、仅缓存
+* 缓存设置：内存缓存、数据库缓存、文件缓存(DiskLruCache)、SP缓存
+
+### **网络框架实现**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+教你写Http框架（一） - amurocrash的专栏 - CSDN博客
+https://blog.csdn.net/amurocrash/article/details/50683775
+
+教你写Http框架（二）——三个例子带你深入理解AsyncTask - amurocrash的专栏 - CSDN博客
+https://blog.csdn.net/amurocrash/article/details/50876229
+
+教你写Http框架（三） - amurocrash的专栏 - CSDN博客
+https://blog.csdn.net/amurocrash/article/details/78605892
+
+【 分类 】- Android框架开发 - yingx0202的专栏 - CSDN博客
+https://blog.csdn.net/yingx0202/article/category/6135606
+
+自己动手写HTTP框架：异步任务篇 - 红涛在反思的blog - CSDN博客
+https://blog.csdn.net/a910626/article/details/51729842
+
+ZzHttp,一个简洁的Http框架 - 周卓的博客 - CSDN博客
+https://blog.csdn.net/qq244570672/article/details/52384781
+
+
+
+
+
+

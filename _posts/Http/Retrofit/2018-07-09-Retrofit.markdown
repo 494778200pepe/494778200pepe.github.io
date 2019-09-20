@@ -104,7 +104,8 @@ http://www.cnblogs.com/yangy608/archive/2011/07/23/2114900.html
 
 [解决Retrofit多BaseUrl及运行时动态改变BaseUrl(二) - 掘金](https://juejin.im/post/5b42aa98f265da0f82021350)
 
-
+Retrofit 动态管理和修改 BaseUrl，从未如此简单
+https://mp.weixin.qq.com/s/Hy9wflrtIJjo9F-w0tGZuQ
 
 
 
