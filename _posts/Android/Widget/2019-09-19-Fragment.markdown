@@ -8,6 +8,8 @@ author: pepe
 description: 『 Fragement 』
 ---
 
+![fragment_activity_lifecycle]({{ site.baseurl }}/assets/images/android/widget/fragment_activity_lifecycle.png)
+
 ### **Fragment的生命周期**
 
 Fragment必须是依存与Activity而存在的，因此Activity的生命周期会直接影响到Fragment的生命周期。官网这张图很好的说明了两者生命周期的关系：

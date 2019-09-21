@@ -23,6 +23,7 @@ description: 『 HTTP框架 』
 ### **Http 功能**
 
 * 支持http协议get、post、put、delete
+* cookie
 * 异步请求
 * 请求错误统一处理
 * 支持多文件上传

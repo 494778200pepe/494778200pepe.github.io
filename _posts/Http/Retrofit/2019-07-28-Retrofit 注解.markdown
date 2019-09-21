@@ -33,6 +33,7 @@ Retrofit 共22个注解，根据功能大概分为三类：
 
 [Retrofit各个注解的含义及作用 - 简书](https://www.jianshu.com/p/8e1b76b8939d)
 
+[轻松搞定Retrofit不同网络请求方式的请求参数配置，Retrofit常用注解的使用 - 简书](https://www.jianshu.com/p/bca05b853c8c)
 
 
 
