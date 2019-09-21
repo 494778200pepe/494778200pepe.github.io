@@ -8,10 +8,79 @@ author: pepe
 description: 『 Cookie 』
 ---
 
+### **服务器发送cookie给客户端**
+
+从服务器端，发送cookie给客户端，是对应的Set-Cookie。包括了对应的cookie的名称，值，以及各个属性。例如：
+
+```
+Set-Cookie: lu=Rg3vHJZnehYLjVg7qi3bZjzg; Expires=Tue, 15 Jan 2013 21:47:38 GMT; Path=/; Domain=.169it.com; HttpOnly
+
+Set-Cookie: made_write_conn=1295214458; Path=/; Domain=.169it.com
+
+Set-Cookie: reg_fb_gate=deleted; Expires=Thu, 01 Jan 1970 00:00:01 GMT; Path=/; Domain=.169it.com; HttpOnly
+```
+
+### **从客户端把cookie发送到服务器**
+
+从客户端发送cookie给服务器的时候，是不发送cookie的各个属性的，而只是发送对应的名称和值。例如：
+
+```
+GET /spec.html HTTP/1.1  
+
+Host: www.example.org  
+
+Cookie: name=value; name2=value2  
+
+Accept: */*  
+```
+
+### **cookie的属性**
+
+#### Domain
+
+* `Domain`属性指定浏览器发出 HTTP 请求时，哪些域名要附带这个 Cookie。
+* 如果没有指定该属性，浏览器会默认将其设为当前 URL 的一级域名，比如`www.example.com`会设为`.example.com`，
+* 而且以后如果访问`.example.com`的任何子域名，HTTP 请求也会带上这个 Cookie。
+* 如果服务器在`Set-Cookie`字段指定的域名，不属于当前域名，浏览器会拒绝这个 Cookie。
+
+#### Path
+
+* `Path`属性指定浏览器发出 HTTP 请求时，哪些路径要附带这个 Cookie。
+* 只要浏览器发现，`Path`属性是 HTTP 请求路径的开头一部分，就会在头信息里面带上这个 Cookie。
+* 比如，`PATH`属性是`/`，那么请求`/docs`路径也会包含该 Cookie。
+* 当然，前提是域名必须一致。
+* path属性的默认值是发送Set-Cookie消息头所对应的URL中的path部分。
+
+
+#### Expire time/Max-age
+
+* Expires属性指定一个具体的到期时间，到了指定时间以后，浏览器就不再保留这个 Cookie。
+* 它的值是 UTC 格式。可以通过设置它的expires属性为一个过去的日期来删除这个cookie。
+* UTC时间格式(2018-01-22T09:12:43.083Z)
+
+* Max-Age属性指定从现在开始 Cookie 存在的秒数，比如60 * 60 * 24 * 365（即一年）。
+* 过了这个时间以后，浏览器就不再保留这个 Cookie。
+
+* 如果同时指定了Expires和Max-Age，那么Max-Age的值将优先生效。
+
+* 如果Set-Cookie字段没有指定Expires或Max-Age属性，那么这个 Cookie 就是 Session Cookie，
+* 即它只在本次对话存在，一旦用户关闭浏览器，浏览器就不会再保留这个 Cookie。
+
+#### secure
+
+* `Secure`属性指定浏览器只有在加密协议 HTTPS 下，才能将这个 Cookie 发送到服务器，
+* 以确保cookie在从客户端传递到Server的过程中始终加密的。
+* 该属性只是一个开关，不需要指定值。如果通信是 HTTPS 协议，该开关自动打开。
+
+#### httponly
+
+* httponly：表示此cookie必须用于http或https传输。
+* 这意味着，浏览器脚本，比如javascript中，是不允许访问操作此cookie的。主要是Document.cookie属性、XMLHttpRequest对象和 Request API 都拿不到该属性。
+
+
+参考：
 
 [Http协议中Cookie详细介绍 - yangan - 博客园](https://www.cnblogs.com/yanganok/p/5322411.html)
-
-UTC时间格式(2018-01-22T09:12:43.083Z)格式化方法
 
 [Cookie介绍及在Android中的使用总结超详细，看这一篇就够了 - Kelaker的博客 - CSDN博客](https://blog.csdn.net/Kelaker/article/details/82751287)
 
