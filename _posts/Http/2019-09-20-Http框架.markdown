@@ -95,8 +95,18 @@ https://blog.csdn.net/a910626/article/details/51729842
 ZzHttp,一个简洁的Http框架 - 周卓的博客 - CSDN博客
 https://blog.csdn.net/qq244570672/article/details/52384781
 
+实现Android主流网络框架封装，可无缝侵入切换框架 - 简书
+https://www.jianshu.com/p/449b733c7938
 
 
+AweiLoveAndroid/HttpRequestProcessor: 网络请求隔离框架简单封装，有两种实现方式：一种是代理模式实现的，一种是工厂模式实现的。
+https://github.com/AweiLoveAndroid/HttpRequestProcessor
+
+JsonChao/Awesome-WanAndroid: 致力于打造一款极致体验的 http://www.wanandroid.com/ 客户端，知识和美是可以并存的哦QAQn(*≧▽≦*)n
+https://github.com/JsonChao/Awesome-WanAndroid
+
+hongyangAndroid/okhttputils: [停止维护]okhttp的辅助类
+https://github.com/hongyangAndroid/okhttputils
 
 
 
