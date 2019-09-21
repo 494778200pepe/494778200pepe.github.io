@@ -54,16 +54,16 @@ Accept: */*
 
 #### Expire time/Max-age
 
-* Expires属性指定一个具体的到期时间，到了指定时间以后，浏览器就不再保留这个 Cookie。
-* 它的值是 UTC 格式。可以通过设置它的expires属性为一个过去的日期来删除这个cookie。
+* `Expires`属性指定一个具体的到期时间，到了指定时间以后，浏览器就不再保留这个 Cookie。
+* 它的值是 UTC 格式。可以通过设置它的`expires`属性为一个过去的日期来删除这个cookie。
 * UTC时间格式(2018-01-22T09:12:43.083Z)
 
-* Max-Age属性指定从现在开始 Cookie 存在的秒数，比如60 * 60 * 24 * 365（即一年）。
+* `Max-Age`属性指定从现在开始 Cookie 存在的秒数，比如`60 * 60 * 24 * 365`（即一年）。
 * 过了这个时间以后，浏览器就不再保留这个 Cookie。
 
-* 如果同时指定了Expires和Max-Age，那么Max-Age的值将优先生效。
+* 如果同时指定了`Expires`和`Max-Age`，那么`Max-Age`的值将优先生效。
 
-* 如果Set-Cookie字段没有指定Expires或Max-Age属性，那么这个 Cookie 就是 Session Cookie，
+* 如果`Set-Cookie`字段没有指定`Expires`或`Max-Age`属性，那么这个 Cookie 就是 Session Cookie，
 * 即它只在本次对话存在，一旦用户关闭浏览器，浏览器就不会再保留这个 Cookie。
 
 #### secure
