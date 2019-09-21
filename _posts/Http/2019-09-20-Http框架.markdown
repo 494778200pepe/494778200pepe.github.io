@@ -108,5 +108,7 @@ https://github.com/JsonChao/Awesome-WanAndroid
 hongyangAndroid/okhttputils: [停止维护]okhttp的辅助类
 https://github.com/hongyangAndroid/okhttputils
 
+xchengDroid/retrofit-helper: Retrofit、dynamic baseUrl、Lifecycle for Activity and Fragment 、优雅的管理Http请求
+https://github.com/xchengDroid/retrofit-helper
 
 

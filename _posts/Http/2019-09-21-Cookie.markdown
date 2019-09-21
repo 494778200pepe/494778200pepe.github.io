@@ -8,20 +8,15 @@ author: pepe
 description: 『 Cookie 』
 ---
 
-Android 关于Https中Cookie的使用（PersistentCookieJar） - 有点中二的码农 - CSDN博客
-https://blog.csdn.net/pengguichu/article/details/73339329
+[Android 关于Https中Cookie的使用（PersistentCookieJar） - 有点中二的码农 - CSDN博客](https://blog.csdn.net/pengguichu/article/details/73339329)
 
-Cookie介绍及在Android中的使用总结超详细，看这一篇就够了 - Kelaker的博客 - CSDN博客
-https://blog.csdn.net/Kelaker/article/details/82751287
+[Cookie介绍及在Android中的使用总结超详细，看这一篇就够了 - Kelaker的博客 - CSDN博客](https://blog.csdn.net/Kelaker/article/details/82751287)
 
-理解Cookie和Session机制 - Andrew.Zhou - 博客园
-https://www.cnblogs.com/andy-zhou/p/5360107.html
+[理解Cookie和Session机制 - Andrew.Zhou - 博客园](https://www.cnblogs.com/andy-zhou/p/5360107.html)
 
-OkHttp3实现Cookies持续化管理 - 简书
-https://www.jianshu.com/p/41b4cbe1dbec
+[OkHttp3实现Cookies持续化管理 - 简书](https://www.jianshu.com/p/41b4cbe1dbec)
 
-Android PersistentCookieJar基本使用 - 简书
-https://www.jianshu.com/p/2d25585ac4bb
+[Android PersistentCookieJar基本使用 - 简书](https://www.jianshu.com/p/2d25585ac4bb)
 
 
 
