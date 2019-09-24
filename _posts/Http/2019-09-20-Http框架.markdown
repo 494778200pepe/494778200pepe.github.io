@@ -29,7 +29,7 @@ description: 『 HTTP框架 』
 * 针对各种网络错误的处理(完成-)
 * 针对300、400、500错误码的处理(完成-)
 * 请求错误统一处理(完成)
-* 支持多文件上传
+* 支持多文件上传(完成)
 * 预处理服务器返回的数据 converter（Json、Xml）(完成)
 * 上传/下载 进度更新
 * 取消请求(完成)
@@ -41,6 +41,9 @@ description: 『 HTTP框架 』
 * 请求方式：强制网络、先缓存后网络、先网络后缓存、仅缓存
 * 缓存设置：内存缓存、数据库缓存、文件缓存(DiskLruCache)、SP缓存
 * CompositeDisposable 怎么管理，单独用管理类，还是在presenter里面管理(在订阅发生之后，才添加)
+* ssl
+* 支持统一加解密，且可对单个请求设置是否加解密
+* 支持添加公共参数/头部，且可对单个请求设置是否添加公共参数/头部
 
 ### **网络框架实现**
 
@@ -115,5 +118,29 @@ https://github.com/hongyangAndroid/okhttputils
 
 xchengDroid/retrofit-helper: Retrofit、dynamic baseUrl、Lifecycle for Activity and Fragment 、优雅的管理Http请求
 https://github.com/xchengDroid/retrofit-helper
+
+
+
+first
+
+lygttpod/RxHttpUtils: Rxjava+Retrofit封装，便捷使用
+https://github.com/lygttpod/RxHttpUtils
+
+two
+
+
+
+
+HttpRequestProcessor
+AiYaGirl
+Kalle
+NoHttp
+okhttp-OkGo
+okhttputils
+RxjavaRetrofitDemo-master
+XSnow
+liujingxing/RxHttp
+
+
 
 
