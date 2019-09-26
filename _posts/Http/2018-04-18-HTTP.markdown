@@ -54,3 +54,29 @@ description: 『 HTTP 』
 
 ❲性能为先❳HTTPS, SPDY和 HTTP/2性能的简单对比
 https://mp.weixin.qq.com/s?__biz=MzA3NjYxOTA0MQ==&mid=404928584&idx=1&sn=a361ee84045614d7c0f2d31014423d21&scene=23&srcid=0308z2YOhRdzvtIPmSCSoELO#rd
+
+
+
+
+关于HTTP协议，一篇就够了 - ranyonsue - 博客园
+https://www.cnblogs.com/ranyonsue/p/5984001.html
+
+当你输入一个网址，实际会发生什么 - ranyonsue - 博客园
+https://www.cnblogs.com/ranyonsue/p/8874558.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
