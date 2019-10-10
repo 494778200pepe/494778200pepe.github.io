@@ -1,0 +1,41 @@
+---
+layout: post
+title:  "Fragement 懒加载"
+date:   2019-09-19 14:55:00 +0800
+categories: Android
+tags: Widget
+author: pepe
+description: 『 懒加载 』
+---
+
+### **setUservisibleHint()**
+
+* 1.setUserVisibleHint(boolean isVisibleToUser)的方法就很重要，根据方法名来看当前页面是否可见，
+	里面的boolean值就是判断当前页面是否可见的变量，所以大家可以isVisibleToUser来判断当前页面的状态，
+	isVisibleToUser =true的时候代表当前页面可见，false 就是不可见，所以大家可以参考一下这个状态
+
+* 2.提醒:setUserVisibleHint(boolean isVisibleToUser) 实在Fragment OnCreateView()方法之前调用的
+
+```
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (isVisibleToUser) {
+            isVisible = true;
+            onVisible();
+        } else {
+            isVisible = false;
+            onInvisible();
+        }
+    }
+```
+
+
+参考：
+
+Fragment懒加载实现，BaseFragment封装 - 简书
+https://www.jianshu.com/p/4eb74c9d5766
+
+Android 懒加载简单介绍 - Jason_Jan - 博客园
+https://www.cnblogs.com/Jason-Jan/p/8018500.html
+

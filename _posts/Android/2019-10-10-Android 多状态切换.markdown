@@ -1,0 +1,43 @@
+---
+layout: post
+title:  "Android 多状态切换"
+date:   2019-10-10 17:16:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 多状态切换 』
+---
+
+
+
+
+
+
+
+
+
+
+
+
+pengMaster/MultipleLayout: 最简单的状态切换布局
+https://github.com/pengMaster/MultipleLayout
+
+android多状态布局 - Iturbo - CSDN博客
+https://blog.csdn.net/worst_hacker/article/details/82793099
+
+Android 自定义多状态切换布局，一句代码执行状态切换，自带状态缓存和恢复 - 简书
+https://www.jianshu.com/p/c61a8b1af340
+
+Android 多状态布局 - qq_35654614的博客 - CSDN博客
+https://blog.csdn.net/qq_35654614/article/details/81335006
+
+Syehunter/MaterialPageStateLayout: PageStateLayout could let you show [Loading][Empty][Error][Succeed][Requesting] state in Activity, Fragment, ViewGroup as you want.
+https://github.com/Syehunter/MaterialPageStateLayout
+
+
+
+
+
+
+
+
