@@ -1,0 +1,46 @@
+---
+layout: post
+title:  "Https"
+date:   2019-10-10 09:11:00 +0800
+categories: Http
+tags: Http
+author: pepe
+description: 『 Https 』
+---
+
+
+参考：
+
+深入理解https工作原理
+https://mp.weixin.qq.com/s/G-mw8oJHWgcSOAV8Vp6bPw
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

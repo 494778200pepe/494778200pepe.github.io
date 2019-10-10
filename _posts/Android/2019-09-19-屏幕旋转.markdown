@@ -63,6 +63,8 @@ setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);         �
 * c)谷歌的官方不建议使用ProgressDialog，这里我们会使用官方推荐的DialogFragment来创建我的加载框，如果你不了解：请看 Android 官方推荐 : DialogFragment 创建对话框。
 	这样，其实给我们带来一个很大的问题，DialogFragment说白了是Fragment，和当前的Activity的生命周期会发生绑定，我们旋转屏幕会造成Activity的销毁，当然也会对DialogFragment造成影响。
 
+参考：
+
 [Android 屏幕旋转 处理 AsyncTask 和 ProgressDialog 的最佳方案 - Hongyang - CSDN博客](https://blog.csdn.net/lmj623565791/article/details/37936275)
 
 

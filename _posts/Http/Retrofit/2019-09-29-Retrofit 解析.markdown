@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "Retrofit 解析"
+date:   2019-09-29 15:05:00 +0800
+categories: Http
+tags: Retrofit
+author: pepe
+description: 『 解析 』
+---
+
+
+
+[死磕Android_Retrofit 原理解析 - 掘金](https://juejin.im/post/5d3be67c6fb9a07ee85c71c0)
+
+
+
+
+
+

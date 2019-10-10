@@ -126,7 +126,8 @@ https://github.com/hongyangAndroid/okhttputils
 xchengDroid/retrofit-helper: Retrofit、dynamic baseUrl、Lifecycle for Activity and Fragment 、优雅的管理Http请求
 https://github.com/xchengDroid/retrofit-helper
 
-
+RxJava2和Retrofit封装的RetrofitClient2终于来了！ - Tamic （大白） - CSDN博客
+https://blog.csdn.net/sk719887916/article/details/75223423
 
 first
 

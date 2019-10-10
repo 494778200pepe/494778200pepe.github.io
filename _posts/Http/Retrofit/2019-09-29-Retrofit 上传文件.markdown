@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "Retrofit 上传文件"
+date:   2019-09-29 15:10:00 +0800
+categories: Http
+tags: Retrofit
+author: pepe
+description: 『 上传文件 』
+---
+
+
+
+Retrofit2 使用@Multipart上传文件 - 唐诺 - CSDN博客
+https://blog.csdn.net/zhijiandedaima/article/details/84587291
+
+
+
+
+
+
