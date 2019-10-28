@@ -137,7 +137,7 @@ description: 『 Theme 』
 
 文件路径：..\Sdk\platforms\android-28\data\res\values\themes.xml
 
-![theme]({{ site.baseurl }}/assets/images/android/theme.png)
+![theme]({{ site.baseurl }}/assets/images/android/theme/theme.png)
 
 ```
 <style name="Theme">
