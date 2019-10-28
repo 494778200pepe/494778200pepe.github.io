@@ -8,6 +8,568 @@ author: pepe
 description: 『 Theme 』
 ---
 
+### **常用属性**
+```
+<style name="AppThemeDemo" parent="Theme.AppCompat.Light.DarkActionBar">
+
+    <!-- 应用的主要色调,actionBar默认使用该颜色，Toolbar导航栏的底色 -->
+    <item name="colorPrimary">@color/white</item>
+    <!-- 应用的主要暗色调,statusBarColor 默认使用该颜色 -->
+    <item name="colorPrimaryDark">@color/white</item>
+    <!-- 一般控件的选中效果默认采用该颜色,如 CheckBox,RadioButton,SwitchCompat，ProcessBar等-->
+    <item name="colorAccent">@color/colorAccent</item>
+
+    <!-- 状态栏、顶部导航栏 相关-->
+    <!-- status bar color -->
+    <item name="android:statusBarColor">#00000000</item>
+    <!-- activity 是否能在status bar 底部绘制 -->
+    <item name="android:windowOverscan">true</item>
+    <!-- 让status bar透明，相当于statusBarColor=transparent + windowOverscan=true -->
+    <item name="android:windowTranslucentStatus">true</item>
+    <!-- 改变status bar 文字颜色， true黑色， false白色，API23可用-->
+    <item name="android:windowLightStatusBar">true</item>
+    <!-- 全屏显示，隐藏状态栏、导航栏、底部导航栏 -->
+    <item name="android:windowFullscreen">true</item>
+    <!-- hide title bar -->
+    <item name="windowNoTitle">true</item>
+    <!-- 底部虚拟导航栏颜色 -->
+    <item name="android:navigationBarColor">#E91E63</item>
+    <!-- 让底部导航栏变半透明灰色，覆盖在Activity之上（默认false，activity会居于底部导航栏顶部），如果设为true，navigationBarColor 失效 -->
+    <item name="android:windowTranslucentNavigation">true</item>
+
+    <!-- WindowBackground，可以设置@drawable，颜色引用（@color），不能设置颜色值（#fffffff），
+    Window区域说明：Window涵盖整个屏幕显示区域，包括StatusBar的区域。当windowOverscan=false时，window的区域比Activity多出StatusBar，当windowOverscan=true时，window区域与Activity相同-->
+    <item name="android:windowBackground">@drawable/ic_launcher_background</item>
+    <!--<item name="android:windowBackground">@color/light_purple</item>-->
+
+    <!-- 控件相关 -->
+    <!-- button 文字是否全部大写（系统默认开）-->
+    <item name="android:textAllCaps">false</item>
+
+    <!-- 默认 Button,TextView的文字颜色 -->
+    <item name="android:textColor">#B0C4DE</item>
+    <!-- 默认 EditView 输入框字体的颜色 -->
+    <item name="android:editTextColor">#E6E6FA</item>
+    <!-- RadioButton checkbox等控件的文字 -->
+    <item name="android:textColorPrimaryDisableOnly">#1C71A9</item>
+    <!-- 应用的主要文字颜色,actionBar的标题文字默认使用该颜色 -->
+    <item name="android:textColorPrimary">#FFFFFF</item>
+    <!-- 辅助的文字颜色，一般比textColorPrimary的颜色弱一点，用于一些弱化的表示 -->
+    <item name="android:textColorSecondary">#C1C1C1</item>
+    <!-- 控件选中时的颜色,默认使用colorAccent -->
+    <item name="android:colorControlActivated">#FF7F50</item>
+    <!-- 控件按压时的色调-->
+    <item name="android:colorControlHighlight">#FF00FF</item>
+    <!-- CheckBox,RadioButton,SwitchCompat等默认状态的颜色 -->
+    <item name="android:colorControlNormal">#FFD700</item>
+    <!-- 默认按钮的背景颜色 -->
+    <item name="android:colorButtonNormal">#1C71A9</item>
+
+    <!-- 【无效】 在theme中设置Activity的属性无效， 请到AndroidManifest中Activity标签下设置 -->
+    <item name="android:launchMode">singleTop</item>
+    <item name="android:screenOrientation">landscape</item>
+
+</style>
+```
+
+### **Theme继承关系**
+```
+<style name="Theme.AppCompat" parent="Base.Theme.AppCompat"/>
+<style name="Base.Theme.AppCompat" parent="Base.V21.Theme.AppCompat"/>
+<style name="Base.V21.Theme.AppCompat" parent="Base.V7.Theme.AppCompat">
+<style name="Base.V7.Theme.AppCompat" parent="Platform.AppCompat">
+<style name="Platform.AppCompat" parent="Platform.V21.AppCompat"/>
+<style name="Platform.V21.AppCompat" parent="android:Theme.Material.NoActionBar">
+<style name="Theme.Material.NoActionBar">
+<style name="Theme.Material">
+<style name="Theme">
+```
+
+### **Base.V21.Theme.AppCompat**
+
+```
+<style name="Base.V21.Theme.AppCompat" parent="Base.V7.Theme.AppCompat">
+    <!-- Action Bar styling attributes -->
+    <item name="actionBarSize">?android:attr/actionBarSize</item>
+    <item name="actionBarDivider">?android:attr/actionBarDivider</item>
+    <item name="actionBarItemBackground">@drawable/abc_action_bar_item_background_material</item>
+    <item name="actionButtonStyle">?android:attr/actionButtonStyle</item>
+    <item name="actionModeBackground">?android:attr/actionModeBackground</item>
+    <item name="actionModeCloseDrawable">?android:attr/actionModeCloseDrawable</item>
+    <item name="actionOverflowButtonStyle">?android:attr/actionOverflowButtonStyle</item>
+    <item name="homeAsUpIndicator">?android:attr/homeAsUpIndicator</item>
+
+    <!-- For PopupMenu -->
+    <item name="listPreferredItemHeightSmall">?android:attr/listPreferredItemHeightSmall</item>
+    <item name="textAppearanceLargePopupMenu">?android:attr/textAppearanceLargePopupMenu</item>
+    <item name="textAppearanceSmallPopupMenu">?android:attr/textAppearanceSmallPopupMenu</item>
+
+    <!-- General view attributes -->
+    <item name="selectableItemBackground">?android:attr/selectableItemBackground</item>
+    <item name="selectableItemBackgroundBorderless">?android:attr/selectableItemBackgroundBorderless</item>
+    <item name="borderlessButtonStyle">?android:borderlessButtonStyle</item>
+    <item name="dividerHorizontal">?android:attr/dividerHorizontal</item>
+    <item name="dividerVertical">?android:attr/dividerVertical</item>
+    <item name="editTextBackground">@drawable/abc_edit_text_material</item>
+    <item name="editTextColor">?android:attr/editTextColor</item>
+    <item name="listChoiceBackgroundIndicator">?android:attr/listChoiceBackgroundIndicator</item>
+
+    <!-- Copy the platform default styles for the AppCompat widgets -->
+    <item name="buttonStyle">?android:attr/buttonStyle</item>
+    <item name="buttonStyleSmall">?android:attr/buttonStyleSmall</item>
+    <item name="checkboxStyle">?android:attr/checkboxStyle</item>
+    <item name="checkedTextViewStyle">?android:attr/checkedTextViewStyle</item>
+    <item name="radioButtonStyle">?android:attr/radioButtonStyle</item>
+    <item name="ratingBarStyle">?android:attr/ratingBarStyle</item>
+    <item name="spinnerStyle">?android:attr/spinnerStyle</item>
+
+    <!-- Copy our color theme attributes to the framework -->
+    <item name="android:colorPrimary">?attr/colorPrimary</item>
+    <item name="android:colorPrimaryDark">?attr/colorPrimaryDark</item>
+    <item name="android:colorAccent">?attr/colorAccent</item>
+    <item name="android:colorControlNormal">?attr/colorControlNormal</item>
+    <item name="android:colorControlActivated">?attr/colorControlActivated</item>
+    <item name="android:colorControlHighlight">?attr/colorControlHighlight</item>
+    <item name="android:colorButtonNormal">?attr/colorButtonNormal</item>
+</style>
+```
+### **Theme**
+
+文件路径：..\Sdk\platforms\android-28\data\res\values\themes.xml
+
+![theme]({{ site.baseurl }}/assets/images/android/theme.png)
+
+```
+<style name="Theme">
+    <item name="isLightTheme">false</item>
+
+    <item name="colorForeground">@color/bright_foreground_dark</item>
+    <item name="colorForegroundInverse">@color/bright_foreground_dark_inverse</item>
+    <item name="colorBackground">@color/background_dark</item>
+    <item name="colorBackgroundFloating">?attr/colorBackground</item>
+    <item name="colorBackgroundCacheHint">?attr/colorBackground</item>
+    <item name="disabledAlpha">0.5</item>
+    <item name="primaryContentAlpha">@dimen/primary_content_alpha_material_dark</item>
+    <item name="secondaryContentAlpha">@dimen/secondary_content_alpha_material_dark</item>
+    <item name="backgroundDimAmount">0.6</item>
+    <item name="colorError">@color/red</item>
+
+    <!-- Text styles -->
+    <item name="textAppearance">@style/TextAppearance</item>
+    <item name="textAppearanceInverse">@style/TextAppearance.Inverse</item>
+
+    <item name="textColorPrimary">@color/primary_text_dark</item>
+    <item name="textColorPrimaryInverse">@color/primary_text_light</item>
+    <item name="textColorPrimaryActivated">@color/primary_text_dark</item>
+    <item name="textColorPrimaryDisableOnly">@color/primary_text_dark_disable_only</item>
+    <item name="textColorPrimaryInverseDisableOnly">@color/primary_text_light_disable_only</item>
+    <item name="textColorPrimaryInverseNoDisable">@color/primary_text_light_nodisable</item>
+    <item name="textColorPrimaryNoDisable">@color/primary_text_dark_nodisable</item>
+    <item name="textColorSecondary">@color/secondary_text_dark</item>
+    <item name="textColorSecondaryInverse">@color/secondary_text_light</item>
+    <item name="textColorSecondaryActivated">@color/secondary_text_dark</item>
+    <item name="textColorSecondaryNoDisable">@color/secondary_text_dark_nodisable</item>
+    <item name="textColorSecondaryInverseNoDisable">@color/secondary_text_light_nodisable</item>
+    <item name="textColorTertiary">@color/tertiary_text_dark</item>
+    <item name="textColorTertiaryInverse">@color/tertiary_text_light</item>
+    <item name="textColorHint">@color/hint_foreground_dark</item>
+    <item name="textColorHintInverse">@color/hint_foreground_light</item>
+    <item name="textColorHighlight">@color/highlighted_text_dark</item>
+    <item name="textColorHighlightInverse">@color/highlighted_text_light</item>
+    <item name="textColorLink">@color/link_text_dark</item>
+    <item name="textColorLinkInverse">@color/link_text_light</item>
+    <item name="textColorSearchUrl">@color/search_url_text</item>
+    <item name="textColorAlertDialogListItem">@color/primary_text_light_disable_only</item>
+
+    <item name="textAppearanceLarge">@style/TextAppearance.Large</item>
+    <item name="textAppearanceMedium">@style/TextAppearance.Medium</item>
+    <item name="textAppearanceSmall">@style/TextAppearance.Small</item>
+    <item name="textAppearanceLargeInverse">@style/TextAppearance.Large.Inverse</item>
+    <item name="textAppearanceMediumInverse">@style/TextAppearance.Medium.Inverse</item>
+    <item name="textAppearanceSmallInverse">@style/TextAppearance.Small.Inverse</item>
+    <item name="textAppearanceSearchResultTitle">@style/TextAppearance.SearchResult.Title</item>
+    <item name="textAppearanceSearchResultSubtitle">@style/TextAppearance.SearchResult.Subtitle</item>
+
+    <item name="textAppearanceEasyCorrectSuggestion">@style/TextAppearance.EasyCorrectSuggestion</item>
+    <item name="textAppearanceMisspelledSuggestion">@style/TextAppearance.MisspelledSuggestion</item>
+    <item name="textAppearanceAutoCorrectionSuggestion">@style/TextAppearance.AutoCorrectionSuggestion</item>
+
+    <item name="textAppearanceButton">@style/TextAppearance.Widget.Button</item>
+
+    <item name="editTextColor">@color/primary_text_light</item>
+    <item name="editTextBackground">@drawable/edit_text</item>
+
+    <item name="candidatesTextStyleSpans">@string/candidates_style</item>
+
+    <item name="textCheckMark">@drawable/indicator_check_mark_dark</item>
+    <item name="textCheckMarkInverse">@drawable/indicator_check_mark_light</item>
+
+    <item name="textAppearanceLargePopupMenu">@style/TextAppearance.Widget.PopupMenu.Large</item>
+    <item name="textAppearanceSmallPopupMenu">@style/TextAppearance.Widget.PopupMenu.Small</item>
+
+    <!-- Button styles -->
+    <item name="buttonStyle">@style/Widget.Button</item>
+
+    <item name="buttonStyleSmall">@style/Widget.Button.Small</item>
+    <item name="buttonStyleInset">@style/Widget.Button.Inset</item>
+
+    <item name="buttonStyleToggle">@style/Widget.Button.Toggle</item>
+    <item name="buttonCornerRadius">0dp</item>
+
+    <item name="switchStyle">@style/Widget.CompoundButton.Switch</item>
+    <item name="mediaRouteButtonStyle">@style/Widget.DeviceDefault.MediaRouteButton</item>
+
+    <item name="selectableItemBackground">@drawable/item_background</item>
+    <item name="selectableItemBackgroundBorderless">?attr/selectableItemBackground</item>
+    <item name="borderlessButtonStyle">?attr/buttonStyle</item>
+    <item name="homeAsUpIndicator">@drawable/ic_ab_back_holo_dark</item>
+
+    <!-- List attributes -->
+    <item name="listPreferredItemHeight">64dip</item>
+    <item name="listPreferredItemHeightSmall">?attr/listPreferredItemHeight</item>
+    <item name="listPreferredItemHeightLarge">?attr/listPreferredItemHeight</item>
+    <item name="dropdownListPreferredItemHeight">?attr/listPreferredItemHeight</item>
+    <item name="textAppearanceListItem">?attr/textAppearanceLarge</item>
+    <item name="textAppearanceListItemSmall">?attr/textAppearanceLarge</item>
+    <item name="textAppearanceListItemSecondary">?attr/textAppearanceSmall</item>
+    <item name="listPreferredItemPaddingLeft">6dip</item>
+    <item name="listPreferredItemPaddingRight">6dip</item>
+    <item name="listPreferredItemPaddingStart">6dip</item>
+    <item name="listPreferredItemPaddingEnd">6dip</item>
+
+    <!-- @hide -->
+    <item name="searchResultListItemHeight">58dip</item>
+    <item name="listDivider">@drawable/divider_horizontal_dark</item>
+    <item name="listSeparatorTextViewStyle">@style/Widget.TextView.ListSeparator</item>
+
+    <item name="listChoiceIndicatorSingle">@drawable/btn_radio</item>
+    <item name="listChoiceIndicatorMultiple">@drawable/btn_check</item>
+
+    <item name="listChoiceBackgroundIndicator">@drawable/list_selector_background</item>
+    <item name="activatedBackgroundIndicator">@drawable/activated_background</item>
+
+    <item name="listDividerAlertDialog">@drawable/divider_horizontal_bright</item>
+
+    <item name="expandableListPreferredItemPaddingLeft">40dip</item>
+    <item name="expandableListPreferredChildPaddingLeft">?attr/expandableListPreferredItemPaddingLeft</item>
+
+    <item name="expandableListPreferredItemIndicatorLeft">3dip</item>
+    <item name="expandableListPreferredItemIndicatorRight">0dip</item>
+    <item name="expandableListPreferredChildIndicatorLeft">?attr/expandableListPreferredItemIndicatorLeft</item>
+    <item name="expandableListPreferredChildIndicatorRight">?attr/expandableListPreferredItemIndicatorRight</item>
+    <item name="findOnPageNextDrawable">@drawable/ic_find_next_holo_dark</item>
+    <item name="findOnPagePreviousDrawable">@drawable/ic_find_previous_holo_dark</item>
+
+    <!-- Gallery attributes -->
+    <item name="galleryItemBackground">@drawable/gallery_item_background</item>
+
+    <!-- Window attributes -->
+    <item name="windowBackground">@drawable/screen_background_selector_dark</item>
+    <item name="windowBackgroundFallback">?attr/colorBackground</item>
+    <item name="windowClipToOutline">false</item>
+    <item name="windowFrame">@null</item>
+    <item name="windowNoTitle">false</item>
+    <item name="windowFullscreen">false</item>
+    <item name="windowOverscan">false</item>
+    <item name="windowIsFloating">false</item>
+    <item name="windowContentOverlay">@null</item>
+    <item name="windowShowWallpaper">false</item>
+    <item name="windowTitleStyle">@style/WindowTitle</item>
+    <item name="windowTitleSize">25dip</item>
+    <item name="windowTitleBackgroundStyle">@style/WindowTitleBackground</item>
+    <item name="windowAnimationStyle">@style/Animation.Activity</item>
+    <item name="windowSoftInputMode">stateUnspecified|adjustUnspecified</item>
+    <item name="windowActionBar">false</item>
+    <item name="windowActionModeOverlay">false</item>
+    <item name="windowCloseOnTouchOutside">false</item>
+    <item name="windowTranslucentStatus">false</item>
+    <item name="windowTranslucentNavigation">false</item>
+    <item name="windowDrawsSystemBarBackgrounds">false</item>
+    <item name="statusBarColor">@color/black</item>
+    <item name="navigationBarColor">@color/black</item>
+    <item name="windowActionBarFullscreenDecorLayout">@layout/screen_action_bar</item>
+    <item name="windowContentTransitions">false</item>
+    <item name="windowActivityTransitions">false</item>
+
+    <!-- Define these here; ContextThemeWrappers around themes that define them should
+         always clear these values. -->
+    <item name="windowFixedWidthMajor">0dp</item>
+    <item name="windowFixedWidthMinor">0dp</item>
+    <item name="windowFixedHeightMajor">0dp</item>
+    <item name="windowFixedHeightMinor">0dp</item>
+
+    <!-- Dialog attributes -->
+    <item name="dialogTheme">@style/Theme.Dialog</item>
+    <item name="dialogTitleIconsDecorLayout">@layout/dialog_title_icons</item>
+    <item name="dialogCustomTitleDecorLayout">@layout/dialog_custom_title</item>
+    <item name="dialogTitleDecorLayout">@layout/dialog_title</item>
+    <item name="dialogPreferredPadding">@dimen/dialog_padding</item>
+    <item name="dialogCornerRadius">0dp</item>
+
+    <!-- AlertDialog attributes -->
+    <item name="alertDialogTheme">@style/Theme.Dialog.Alert</item>
+    <item name="alertDialogStyle">@style/AlertDialog</item>
+    <item name="alertDialogCenterButtons">true</item>
+    <item name="alertDialogIcon">@drawable/ic_dialog_alert</item>
+
+    <!-- Presentation attributes (introduced after API level 10 so does not
+         have a special old-style theme. -->
+    <item name="presentationTheme">@style/Theme.DeviceDefault.Dialog.Presentation</item>
+
+    <!-- Toast attributes -->
+    <item name="toastFrameBackground">@drawable/toast_frame</item>
+
+    <!-- Panel attributes -->
+    <item name="panelBackground">@drawable/menu_background</item>
+    <item name="panelFullBackground">@drawable/menu_background_fill_parent_width</item>
+    <!-- These three attributes do not seems to be used by the framework. Declared public though -->
+    <item name="panelColorBackground">#000</item>
+    <item name="panelColorForeground">?attr/textColorPrimary</item>
+    <item name="panelTextAppearance">?attr/textAppearance</item>
+
+    <item name="panelMenuIsCompact">false</item>
+    <item name="panelMenuListWidth">296dip</item>
+
+    <!-- Scrollbar attributes -->
+    <item name="scrollbarFadeDuration">250</item>
+    <item name="scrollbarDefaultDelayBeforeFade">300</item>
+    <item name="scrollbarSize">10dip</item>
+    <item name="scrollbarThumbHorizontal">@drawable/scrollbar_handle_horizontal</item>
+    <item name="scrollbarThumbVertical">@drawable/scrollbar_handle_vertical</item>
+    <item name="scrollbarTrackHorizontal">@null</item>
+    <item name="scrollbarTrackVertical">@null</item>
+
+    <!-- Text selection handle attributes -->
+    <item name="textSelectHandleLeft">@drawable/text_select_handle_left_material</item>
+    <item name="textSelectHandleRight">@drawable/text_select_handle_right_material</item>
+    <item name="textSelectHandle">@drawable/text_select_handle_middle_material</item>
+    <item name="textSelectHandleWindowStyle">@style/Widget.TextSelectHandle</item>
+    <item name="textEditPasteWindowLayout">@layout/text_edit_paste_window</item>
+    <item name="textEditNoPasteWindowLayout">@layout/text_edit_no_paste_window</item>
+    <item name="textEditSidePasteWindowLayout">@layout/text_edit_side_paste_window</item>
+    <item name="textEditSideNoPasteWindowLayout">@layout/text_edit_side_no_paste_window</item>
+    <item name="textCursorDrawable">@null</item>
+
+    <!-- Widget styles -->
+    <item name="absListViewStyle">@style/Widget.AbsListView</item>
+    <item name="autoCompleteTextViewStyle">@style/Widget.AutoCompleteTextView</item>
+    <item name="checkboxStyle">@style/Widget.CompoundButton.CheckBox</item>
+    <item name="checkedTextViewStyle">@style/Widget.CheckedTextView</item>
+    <item name="dropDownListViewStyle">@style/Widget.ListView.DropDown</item>
+    <item name="editTextStyle">@style/Widget.EditText</item>
+    <item name="expandableListViewStyle">@style/Widget.ExpandableListView</item>
+    <item name="expandableListViewWhiteStyle">@style/Widget.ExpandableListView.White</item>
+    <item name="fastScrollStyle">@style/Widget.FastScroll</item>
+    <item name="galleryStyle">@style/Widget.Gallery</item>
+    <item name="gestureOverlayViewStyle">@style/Widget.GestureOverlayView</item>
+    <item name="gridViewStyle">@style/Widget.GridView</item>
+    <item name="imageButtonStyle">@style/Widget.ImageButton</item>
+    <item name="imageWellStyle">@style/Widget.ImageWell</item>
+    <item name="listViewStyle">@style/Widget.ListView</item>
+    <item name="listViewWhiteStyle">@style/Widget.ListView.White</item>
+    <item name="popupWindowStyle">@style/Widget.PopupWindow</item>
+    <item name="progressBarStyle">@style/Widget.ProgressBar</item>
+    <item name="progressBarStyleHorizontal">@style/Widget.ProgressBar.Horizontal</item>
+    <item name="progressBarStyleSmall">@style/Widget.ProgressBar.Small</item>
+    <item name="progressBarStyleSmallTitle">@style/Widget.ProgressBar.Small.Title</item>
+    <item name="progressBarStyleLarge">@style/Widget.ProgressBar.Large</item>
+    <item name="progressBarStyleInverse">@style/Widget.ProgressBar.Inverse</item>
+    <item name="progressBarStyleSmallInverse">@style/Widget.ProgressBar.Small.Inverse</item>
+    <item name="progressBarStyleLargeInverse">@style/Widget.ProgressBar.Large.Inverse</item>
+    <item name="seekBarStyle">@style/Widget.SeekBar</item>
+    <item name="ratingBarStyle">@style/Widget.RatingBar</item>
+    <item name="ratingBarStyleIndicator">@style/Widget.RatingBar.Indicator</item>
+    <item name="ratingBarStyleSmall">@style/Widget.RatingBar.Small</item>
+    <item name="radioButtonStyle">@style/Widget.CompoundButton.RadioButton</item>
+    <item name="scrollViewStyle">@style/Widget.ScrollView</item>
+    <item name="horizontalScrollViewStyle">@style/Widget.HorizontalScrollView</item>
+    <item name="spinnerStyle">@style/Widget.Spinner</item>
+    <item name="dropDownSpinnerStyle">@style/Widget.Spinner.DropDown</item>
+    <item name="starStyle">@style/Widget.CompoundButton.Star</item>
+    <item name="tabWidgetStyle">@style/Widget.TabWidget</item>
+    <item name="textViewStyle">@style/Widget.TextView</item>
+    <item name="errorMessageBackground">@drawable/popup_inline_error</item>
+    <item name="errorMessageAboveBackground">@drawable/popup_inline_error_above</item>
+    <item name="webTextViewStyle">@style/Widget.WebTextView</item>
+    <item name="webViewStyle">@style/Widget.WebView</item>
+    <item name="dropDownItemStyle">@style/Widget.DropDownItem</item>
+    <item name="spinnerDropDownItemStyle">@style/Widget.DropDownItem.Spinner</item>
+    <item name="spinnerItemStyle">@style/Widget.TextView.SpinnerItem</item>
+    <item name="dropDownHintAppearance">@style/TextAppearance.Widget.DropDownHint</item>
+    <item name="keyboardViewStyle">@style/Widget.KeyboardView</item>
+    <item name="quickContactBadgeOverlay">@drawable/quickcontact_badge_overlay_dark</item>
+    <item name="quickContactBadgeStyleWindowSmall">@style/Widget.QuickContactBadge.WindowSmall</item>
+    <item name="quickContactBadgeStyleWindowMedium">@style/Widget.QuickContactBadge.WindowMedium</item>
+    <item name="quickContactBadgeStyleWindowLarge">@style/Widget.QuickContactBadge.WindowLarge</item>
+    <item name="quickContactBadgeStyleSmallWindowSmall">@style/Widget.QuickContactBadgeSmall.WindowSmall</item>
+    <item name="quickContactBadgeStyleSmallWindowMedium">@style/Widget.QuickContactBadgeSmall.WindowMedium</item>
+    <item name="quickContactBadgeStyleSmallWindowLarge">@style/Widget.QuickContactBadgeSmall.WindowLarge</item>
+    <item name="listPopupWindowStyle">@style/Widget.ListPopupWindow</item>
+    <item name="popupMenuStyle">@style/Widget.PopupMenu</item>
+    <item name="activityChooserViewStyle">@style/Widget.ActivityChooserView</item>
+    <item name="fragmentBreadCrumbsStyle">@style/Widget.FragmentBreadCrumbs</item>
+    <item name="contextPopupMenuStyle">?attr/popupMenuStyle</item>
+
+    <!-- Preference styles -->
+    <item name="preferenceScreenStyle">@style/Preference.PreferenceScreen</item>
+    <item name="preferenceActivityStyle">@style/PreferenceActivity</item>
+    <item name="preferenceFragmentStyle">@style/PreferenceFragment</item>
+    <item name="preferenceCategoryStyle">@style/Preference.Category</item>
+    <item name="preferenceStyle">@style/Preference</item>
+    <item name="preferenceInformationStyle">@style/Preference.Information</item>
+    <item name="checkBoxPreferenceStyle">@style/Preference.CheckBoxPreference</item>
+    <item name="switchPreferenceStyle">@style/Preference.SwitchPreference</item>
+    <item name="seekBarPreferenceStyle">@style/Preference.SeekBarPreference</item>
+    <item name="yesNoPreferenceStyle">@style/Preference.DialogPreference.YesNoPreference</item>
+    <item name="dialogPreferenceStyle">@style/Preference.DialogPreference</item>
+    <item name="seekBarDialogPreferenceStyle">@style/Preference.DialogPreference.SeekBarPreference</item>
+    <item name="editTextPreferenceStyle">@style/Preference.DialogPreference.EditTextPreference</item>
+    <item name="ringtonePreferenceStyle">@style/Preference.RingtonePreference</item>
+    <item name="preferenceLayoutChild">@layout/preference_child</item>
+    <item name="preferencePanelStyle">@style/PreferencePanel</item>
+    <item name="preferenceHeaderPanelStyle">@style/PreferenceHeaderPanel</item>
+    <item name="preferenceListStyle">@style/PreferenceHeaderList</item>
+    <item name="preferenceFragmentListStyle">@style/PreferenceFragmentList</item>
+    <item name="preferenceFragmentPaddingSide">@dimen/preference_fragment_padding_side</item>
+    <item name="detailsElementBackground">@drawable/panel_bg_holo_dark</item>
+
+    <!-- Search widget styles -->
+    <item name="searchWidgetCorpusItemBackground">@color/search_widget_corpus_item_background</item>
+
+    <!-- Action bar styles -->
+    <item name="actionDropDownStyle">@style/Widget.Spinner.DropDown</item>
+    <item name="actionButtonStyle">@style/Widget.ActionButton</item>
+    <item name="actionOverflowButtonStyle">@style/Widget.ActionButton.Overflow</item>
+    <item name="actionOverflowMenuStyle">?attr/popupMenuStyle</item>
+    <item name="actionModeBackground">@drawable/cab_background_top_holo_dark</item>
+    <item name="actionModeSplitBackground">@null</item>
+    <item name="actionModeCloseDrawable">@drawable/ic_menu_close_clear_cancel</item>
+    <item name="actionModeCutDrawable">@drawable/ic_menu_cut_holo_dark</item>
+    <item name="actionModeCopyDrawable">@drawable/ic_menu_copy_holo_dark</item>
+    <item name="actionModePasteDrawable">@drawable/ic_menu_paste_holo_dark</item>
+    <item name="actionModeSelectAllDrawable">@drawable/ic_menu_selectall_holo_dark</item>
+    <item name="actionModeShareDrawable">@drawable/ic_menu_share_holo_dark</item>
+    <item name="actionModeFindDrawable">@drawable/ic_menu_find_holo_dark</item>
+    <item name="actionModeWebSearchDrawable">@drawable/ic_menu_search</item>
+    <item name="actionBarTabStyle">@style/Widget.ActionBar.TabView</item>
+    <item name="actionBarTabBarStyle">@style/Widget.ActionBar.TabBar</item>
+    <item name="actionBarTabTextStyle">@style/Widget.ActionBar.TabText</item>
+    <item name="actionModeStyle">@style/Widget.ActionMode</item>
+    <item name="actionModeCloseButtonStyle">@style/Widget.ActionButton.CloseMode</item>
+    <item name="actionBarStyle">@style/Widget.ActionBar</item>
+    <item name="actionBarSplitStyle">?attr/actionBarStyle</item>
+    <item name="actionBarSize">@dimen/action_bar_default_height</item>
+    <item name="actionModePopupWindowStyle">?attr/popupWindowStyle</item>
+    <item name="actionMenuTextAppearance">@style/TextAppearance.Holo.Widget.ActionBar.Menu</item>
+    <item name="actionMenuTextColor">?attr/textColorPrimary</item>
+    <item name="actionBarWidgetTheme">@null</item>
+    <item name="actionBarPopupTheme">@null</item>
+    <item name="actionBarTheme">@null</item>
+    <item name="actionBarDivider">?attr/dividerVertical</item>
+    <item name="actionBarItemBackground">?attr/selectableItemBackground</item>
+
+    <item name="toolbarStyle">@style/Widget.Toolbar</item>
+
+    <item name="dividerVertical">@drawable/divider_vertical_dark</item>
+    <item name="dividerHorizontal">@drawable/divider_vertical_dark</item>
+    <item name="buttonBarStyle">@style/ButtonBar</item>
+    <item name="buttonBarButtonStyle">?attr/buttonStyle</item>
+    <item name="buttonBarPositiveButtonStyle">?attr/buttonBarButtonStyle</item>
+    <item name="buttonBarNegativeButtonStyle">?attr/buttonBarButtonStyle</item>
+    <item name="buttonBarNeutralButtonStyle">?attr/buttonBarButtonStyle</item>
+    <item name="segmentedButtonStyle">@style/SegmentedButton</item>
+    <item name="fingerprintAuthDrawable">@drawable/ic_fingerprint</item>
+
+    <!-- Floating toolbar styles -->
+    <item name="floatingToolbarCloseDrawable">@drawable/ic_ab_back_material_dark</item>
+    <item name="floatingToolbarForegroundColor">@color/foreground_material_dark</item>
+    <item name="floatingToolbarItemBackgroundBorderlessDrawable">@drawable/item_background_borderless_material_dark</item>
+    <item name="floatingToolbarItemBackgroundDrawable">@drawable/item_background_material_dark</item>
+    <item name="floatingToolbarOpenDrawable">@drawable/ic_menu_moreoverflow_material_dark</item>
+    <item name="floatingToolbarPopupBackgroundDrawable">@drawable/floating_popup_background_dark</item>
+    <item name="floatingToolbarDividerColor">@color/floating_popup_divider_dark</item>
+
+    <!-- SearchView attributes -->
+    <item name="searchViewStyle">@style/Widget.Holo.SearchView</item>
+    <item name="searchDialogTheme">@style/Theme.SearchBar</item>
+
+    <!-- PreferenceFrameLayout attributes -->
+    <item name="preferenceFrameLayoutStyle">@style/Widget.PreferenceFrameLayout</item>
+
+    <!-- NumberPicker style-->
+    <item name="numberPickerStyle">@style/Widget.NumberPicker</item>
+
+    <!-- CalendarView style-->
+    <item name="calendarViewStyle">@style/Widget.CalendarView</item>
+
+    <!-- TimePicker style -->
+    <item name="timePickerStyle">@style/Widget.TimePicker</item>
+
+    <!-- TimePicker dialog theme -->
+    <item name="timePickerDialogTheme">?attr/alertDialogTheme</item>
+
+    <!-- DatePicker style -->
+    <item name="datePickerStyle">@style/Widget.DatePicker</item>
+
+    <!-- DatePicker dialog theme -->
+    <item name="datePickerDialogTheme">?attr/alertDialogTheme</item>
+
+    <item name="fastScrollThumbDrawable">@drawable/scrollbar_handle_accelerated_anim2</item>
+    <item name="fastScrollTrackDrawable">@null</item>
+    <item name="fastScrollPreviewBackgroundRight">@drawable/menu_submenu_background</item>
+    <item name="fastScrollPreviewBackgroundLeft">@drawable/menu_submenu_background</item>
+    <item name="fastScrollOverlayPosition">floating</item>
+    <item name="fastScrollTextColor">@color/primary_text_dark</item>
+
+
+    <item name="colorPressedHighlight">@color/legacy_pressed_highlight</item>
+    <item name="colorLongPressedHighlight">@color/legacy_long_pressed_highlight</item>
+    <item name="colorFocusedHighlight">@color/legacy_selected_highlight</item>
+    <item name="colorMultiSelectHighlight">@color/legacy_selected_highlight</item>
+    <item name="colorActivatedHighlight">@color/legacy_selected_highlight</item>
+
+    <item name="colorPrimaryDark">@color/legacy_primary_dark</item>
+    <item name="colorPrimary">@color/legacy_primary</item>
+    <item name="colorSecondary">?attr/colorPrimary</item>
+    <item name="colorControlActivated">@color/legacy_control_activated</item>
+    <item name="colorControlNormal">@color/legacy_control_normal</item>
+    <item name="colorControlHighlight">@color/legacy_button_pressed</item>
+    <item name="colorButtonNormal">@color/legacy_button_normal</item>
+    <item name="colorEdgeEffect">?attr/colorPrimary</item>
+
+    <!-- Accessibility focused drawable -->
+    <item name="accessibilityFocusedDrawable">@drawable/view_accessibility_focused</item>
+
+    <!-- Autofilled highlight drawable -->
+    <item name="autofilledHighlight">@drawable/autofilled_highlight</item>
+
+    <!-- Lighting and shadow properties -->
+    <item name="lightY">@dimen/light_y</item>
+    <item name="lightZ">@dimen/light_z</item>
+    <item name="lightRadius">@dimen/light_radius</item>
+    <item name="ambientShadowAlpha">@dimen/ambient_shadow_alpha</item>
+    <item name="spotShadowAlpha">@dimen/spot_shadow_alpha</item>
+
+    <!-- Tooltip popup properties -->
+    <item name="tooltipFrameBackground">@drawable/tooltip_frame</item>
+    <item name="tooltipForegroundColor">@color/bright_foreground_light</item>
+    <item name="tooltipBackgroundColor">@color/tooltip_background_light</item>
+
+    <!-- Autofill: max width/height of the dataset picker as a fraction of screen size -->
+    <item name="autofillDatasetPickerMaxWidth">@dimen/autofill_dataset_picker_max_width</item>
+    <item name="autofillDatasetPickerMaxHeight">@dimen/autofill_dataset_picker_max_height</item>
+
+    <!-- Autofill: max height of custom save subtitle as a fraction of screen size -->
+    <item name="autofillSaveCustomSubtitleMaxHeight">@dimen/autofill_save_custom_subtitle_max_height</item>
+</style>
+```
+
+参考:
+
+[Android Theme 属性详解 - 简书](https://www.jianshu.com/p/06a3bbb7ce79)
+
+[Android style，theme介绍及其源码解析 - zengxianzi的博客 - CSDN博客](https://blog.csdn.net/zengxianzi/article/details/70185955)
+
 [Android开发之Theme、Style探索及源码浅析 - CSDN博客](https://blog.csdn.net/yanbober/article/details/51015630)
 
 [R.style - Android SDK | Android开发者](http://androiddoc.qiniudn.com/reference/android/R.style.html)
