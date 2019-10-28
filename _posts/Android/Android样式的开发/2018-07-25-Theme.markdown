@@ -572,5 +572,5 @@ description: 『 Theme 』
 
 [Android开发之Theme、Style探索及源码浅析 - CSDN博客](https://blog.csdn.net/yanbober/article/details/51015630)
 
-[R.style - Android SDK | Android开发者](http://androiddoc.qiniudn.com/reference/android/R.style.html)
+[R.style - Android SDK](http://androiddoc.qiniudn.com/reference/android/R.style.html)
 
