@@ -53,7 +53,7 @@ description: 『 StatusBar 』
 
 [ImmersionBar android 4.4 以上沉浸式状态栏和沉浸式导航栏管理，一句代码轻松实现，以及对 bar 的其 @codeKK Android开源站](https://p.codekk.com/detail/Android/gyf-dev/ImmersionBar)
 
-
+[从0到1优雅实现沉浸式状态栏 - Android 大强哥的博客 - CSDN博客](https://blog.csdn.net/u013541140/article/details/100065336)
 
 
 
