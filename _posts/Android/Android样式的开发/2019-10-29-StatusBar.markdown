@@ -52,7 +52,8 @@ https://blog.csdn.net/coderder/article/details/78294777
 沉浸式状态栏ImmersionBar，很简单 - weixin_38775077的博客 - CSDN博客
 https://blog.csdn.net/weixin_38775077/article/details/80981379
 
-
+Android关于沉浸式状态栏总结 - 掘金
+https://juejin.im/post/5989ded56fb9a03c3b6c8bde
 
 
 

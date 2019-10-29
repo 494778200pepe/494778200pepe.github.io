@@ -8,19 +8,76 @@ author: pepe
 description: 『 ToolBar 』
 ---
 
+> Toolbar 继承的是ViewGroup,用来替代原来的ActionBar
+
+![toolbar1]({{ site.baseurl }}/assets/images/android/theme/toolbar1.png)
+
+> 一个Toolbar 从左到右包括了 一个navigation button、一个logo、一个title和subtitle、一个或多个自定义的View和一个 action menu 这5部分
+
+![toolbar2]({{ site.baseurl }}/assets/images/android/theme/toolbar2.png)
+
+### **基本属性设置**
+
+#### **在布局文件中设置**
+```
+app:navigationIcon 设置navigation button
+app:logo 设置logo 图标
+app:title 设置标题
+app:titleTextColor 设置标题文字颜色
+app:subtitle 设置副标题
+app:subtitleTextColor 设置副标题文字颜色
+app:popupTheme  Reference to a theme that should be used to               inflate popups shown by widgets in the toolbar.
+app:titleTextAppearance 设置title text 相关属性，如：字体,颜色，大小等等
+app:subtitleTextAppearance 设置subtitletext相关属性，如：字体,颜色，大小等等
+app:logoDescription logo 描述
+android:background Toolbar 背景
+android:theme 主题
+```
+
+#### **在Java中设置**
+```
+        mToolbar = findViewById(R.id.toolbar);
+        mMenuView = findViewById(R.id.toolbar_action_menu);
+        mToolbar.setTitle("John");
+        mToolbar.setNavigationIcon(R.drawable.ic_menu);
+        mToolbar.setNavigationOnClickListener(this::OnBackClick);
+        mToolbar.setSubtitle("Sub");
+//         设置溢出菜单的图标
+//        mToolbar.setOverflowIcon(ContextCompat.getDrawable(getApplicationContext(),R.drawable.menu));
+        mToolbar.inflateMenu(R.menu.toolbar_menu);
+        mToolbar.setOnMenuItemClickListener(menuItem -> {
+
+            //利用colorFilter动态更改图标颜色
+//            menuItem.getIcon().setColorFilter(Color.parseColor("#223344"),PorterDuff.Mode.MULTIPLY);
+
+            switch (menuItem.getItemId()){
+                case R.id.toolbar_call:
+                    Toast.makeText(MainActivity.this,"toolbar_call",Toast.LENGTH_SHORT).show();
+                    break;
+                case R.id.toolbar_delete:
+                    Toast.makeText(MainActivity.this,"toolbar_delete",Toast.LENGTH_SHORT).show();
+                    break;
+                case R.id.toolbar_mail:
+                    Toast.makeText(MainActivity.this,"toolbar_mail",Toast.LENGTH_SHORT).show();
+                    break;
+            }
+            return true;
+        });
+```
+
+> 亦可以通过setSupportActionbar，再调用getSupportActionBar，当成actionBar使用。若没有调用 setSupportActionbar，则onCreateOptionsMenu不会回调。
 
 
+### **使用注意**
 
+* 1、更改Android “AppTheme”，指定为Theme.AppCompat.Light.NoActionBar
 
-
-
-
-
-
-
-
-
-
+* 2、标题居中，在Toolbar里面放置一个TextView控件作为居中的标题来使用，再将Toolbar的Title隐藏起来即可实现Toolbar标题居中的效果
+	
+	。若有使用setSupportActionBar()，则调用getSupportActionBar().setDisplayShowTitleEnabled(false);隐藏标题；
+	。若没设置，只要toolbar不设置title即可
+	
+* 3、可集成 ActionMenuView( android.support.v7.widget.ActionMenuView )
 
 
 
@@ -43,16 +100,15 @@ description: 『 ToolBar 』
 
 参考:
 
+[Toolbar使用总结 - 掘金](https://juejin.im/post/5cba919851882532350bb1a7)
+
 [android：ToolBar详解（手把手教程） - 泡在网上的日子](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2014/1118/2006.html)
 
+[ToolBar使用详解（一）——项目配置 - 小黑屋 - CSDN博客](https://blog.csdn.net/qq284565035/article/details/47086439)
 
-[[Android]ToolBar使用详解（一）——项目配置 - 小黑屋 - CSDN博客](https://blog.csdn.net/qq284565035/article/details/47086439)
+[Android5.0 之 Toolbar 详解 - Android - 掘金](https://juejin.im/entry/58d37e9ab123db3f6b5c695e)
 
-Android5.0 之 Toolbar 详解 - Android - 掘金
-https://juejin.im/entry/58d37e9ab123db3f6b5c695e
-
-Android基础知识之 Toolbar 的使用 | Magicer
-http://blog.magicer.xyz/2016/10/toolbar-basic/
+[Android基础知识之 Toolbar 的使用](http://blog.magicer.xyz/2016/10/toolbar-basic/)
 
 
 
