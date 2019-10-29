@@ -72,6 +72,22 @@ android:theme 主题
 
 * 1、更改Android “AppTheme”，指定为Theme.AppCompat.Light.NoActionBar
 
+```
+// 隐藏 ActionBar
+<resources>
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="AppTheme.Base">
+  </style>
+  
+  <style name="AppTheme.Base" parent="Theme.AppCompat">
+    <item name="windowActionBar">false</item>
+    <del><item name="android:windowNoTitle">true</item></del>
+    <!-- 使用 API Level 22 編譯的話，要拿掉前綴字 -->
+    <item name="windowNoTitle">true</item>
+  </style>
+</resources>
+```
+
 * 2、标题居中，在Toolbar里面放置一个TextView控件作为居中的标题来使用，再将Toolbar的Title隐藏起来即可实现Toolbar标题居中的效果
 	
 	。若有使用setSupportActionBar()，则调用getSupportActionBar().setDisplayShowTitleEnabled(false);隐藏标题；
@@ -82,31 +98,13 @@ android:theme 主题
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 参考:
+
+[Android5.0 之 Toolbar 详解 - Android - 掘金](https://juejin.im/entry/58d37e9ab123db3f6b5c695e)
 
 [Toolbar使用总结 - 掘金](https://juejin.im/post/5cba919851882532350bb1a7)
 
 [android：ToolBar详解（手把手教程） - 泡在网上的日子](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2014/1118/2006.html)
-
-[ToolBar使用详解（一）——项目配置 - 小黑屋 - CSDN博客](https://blog.csdn.net/qq284565035/article/details/47086439)
-
-[Android5.0 之 Toolbar 详解 - Android - 掘金](https://juejin.im/entry/58d37e9ab123db3f6b5c695e)
 
 [Android基础知识之 Toolbar 的使用](http://blog.magicer.xyz/2016/10/toolbar-basic/)
 
