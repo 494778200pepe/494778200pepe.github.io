@@ -3,7 +3,7 @@ layout: post
 title:  "屏幕适配"
 date:   2018-08-29 16:56:00 +0800
 categories: Android
-tags: Android
+tags: 适配
 author: pepe
 description: 『 屏幕适配 』
 ---

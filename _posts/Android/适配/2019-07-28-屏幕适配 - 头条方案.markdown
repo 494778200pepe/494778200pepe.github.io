@@ -3,7 +3,7 @@ layout: post
 title:  "屏幕适配 - 头条方案"
 date:   2019-07-28 19:55:00 +0800
 categories: Android
-tags: Android
+tags: 适配
 author: pepe
 description: 『 头条方案 』
 ---
@@ -29,6 +29,3 @@ https://blog.csdn.net/qq_35195386/article/details/80801597
 
 Android 屏幕适配终结者 - 简书
 https://www.jianshu.com/p/7da141e682c7
-
-Android 屏幕适配之bug 刘海屏、水滴屏 - 简书
-https://www.jianshu.com/p/aeafa7499c1c

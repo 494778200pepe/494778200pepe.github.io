@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "刘海屏适配"
+date:   2019-10-29 16:50:00 +0800
+categories: Android
+tags: 适配
+author: pepe
+description: 『 刘海屏适配 』
+---
+
+
+
+
+
+
+参考：
+
+Android 刘海屏适配全攻略 - 简书
+https://www.jianshu.com/p/561f7241153b/
+
+Android刘海屏、水滴屏全面屏适配方案 - 简书
+https://www.jianshu.com/p/2b8db60ba8df
+
+Android 屏幕适配之bug 刘海屏、水滴屏 - 简书
+https://www.jianshu.com/p/aeafa7499c1c
