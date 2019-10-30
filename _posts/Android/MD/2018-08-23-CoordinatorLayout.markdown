@@ -23,9 +23,11 @@ description: 『 CoordinatorLayout 』
 
 
 
+Android 优化交互 —— CoordinatorLayout 与 Behavior - Gemini @ SegmentFault - SegmentFault 思否
+https://segmentfault.com/a/1190000005024216?utm_source=Weibo
 
-
-
+通过来模仿稀土掘金个人页面的布局来学习使用CoordinatorLayout - 简书
+https://www.jianshu.com/p/ca6fddbd0e1f
 
 [CoordinatorLayout+Behavior讲解 - mffandxx的博客 - CSDN博客](https://blog.csdn.net/mffandxx/article/details/69223021)
 
