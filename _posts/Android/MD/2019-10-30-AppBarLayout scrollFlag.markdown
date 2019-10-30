@@ -44,6 +44,7 @@ Child View 伴随着scrollingView的滚动事件而滚出或滚进屏幕:
 * 当 ScrollView 将要向上滚动的时候， 优先将 AppBarLayout的childView 滚出屏幕，然后 ScrollView 才开始滚动；
 
 ![scrollFlag1](https://media.giphy.com/media/LPfZ3lwXBHFXkgFcfw/giphy.gif)
+
 ![scrollFlag1]({{ site.baseurl }}/assets/images/android/md/scrollFlag1.png)
 
 ### **scroll|enterAlways**
@@ -57,6 +58,8 @@ enterAlways决定向下滚动时Scrolling View和Child View之间的滚动优先
 * 当ScrollView将要向下滚动的时候，优先滚动的是AppBarLayout中的childView，当childView完全滚动进入屏幕的时候，才开始滚动 ScrollView；
 
 * 当ScrollView将要向上滚动的时候， 优先将AppBarLayout的childView滚出屏幕，然后ScrollView才开始滚动；
+
+![scrollFlag2](https://media.giphy.com/media/iIFc0atoVyA1pLJUSp/giphy.gif)
 
 ![scrollFlag2]({{ site.baseurl }}/assets/images/android/md/scrollFlag2.png)
 
@@ -80,6 +83,8 @@ Child View先向下滚动最小高度值，
 
 这里小结一下:使用上面三种组合，当ScrollView要向上滚动的时候没有任何区别；区别只是在于scrollview要向下滚动的时候；
 
+![scrollFlag3](https://media.giphy.com/media/KbM3AhYnxQyzNvZQBE/giphy.gif)
+![scrollFlag4](https://media.giphy.com/media/Rhjxns5Da1cM9EeFix/giphy.gif)
 
 ![scrollFlag3]({{ site.baseurl }}/assets/images/android/md/scrollFlag3.png)
 ![scrollFlag4]({{ site.baseurl }}/assets/images/android/md/scrollFlag4.png)
@@ -100,8 +105,12 @@ Child View向上滚动退出直至最小高度，
 
 * 当Scrollview将要向上滚动的时候，优先将AppBarLayout中的childView滚动至最小高度，然后scrollview才开始滚动。
 
+![scrollFlag5](https://media.giphy.com/media/JPbTLJQYfWiD3lI4cy/giphy.gif)
+![scrollFlag6](https://media.giphy.com/media/h7jgd0dH8PJQDYp5ii/giphy.gif)
+
 ![scrollFlag5]({{ site.baseurl }}/assets/images/android/md/scrollFlag5.png)
 ![scrollFlag6]({{ site.baseurl }}/assets/images/android/md/scrollFlag6.png)
+
 ### **scroll|snap**
 snap简单理解，就是Child View滚动比例的一个吸附效果。
 
@@ -114,6 +123,8 @@ snap简单理解，就是Child View滚动比例的一个吸附效果。
 snap 可以和上面任意一个组合使用，使用它可以确保childView不会滑动停止在中间的状态，
 
 当我们松开手指的时候，要么完全显示，要么完全隐藏;
+
+![scrollFlag7](https://media.giphy.com/media/dXiNs2q5sbtluy5fWh/giphy.gif)
 
 ![scrollFlag7]({{ site.baseurl }}/assets/images/android/md/scrollFlag7.png)
 
