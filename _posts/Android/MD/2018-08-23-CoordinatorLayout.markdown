@@ -3,7 +3,7 @@ layout: post
 title:  "CoordinatorLayout"
 date:   2018-08-23 09:44:00 +0800
 categories: Android
-tags: Widget
+tags: MD
 author: pepe
 description: 『 CoordinatorLayout 』
 ---
