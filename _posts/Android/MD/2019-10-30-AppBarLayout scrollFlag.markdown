@@ -135,6 +135,7 @@ snap 可以和上面任意一个组合使用，使用它可以确保childView不
 
 [Android 详细分析AppBarLayout的五种ScrollFlags - 简书](https://www.jianshu.com/p/7caa5f4f49bd)
 
+[Gif上传网站](https://giphy.com)
 
 
 
