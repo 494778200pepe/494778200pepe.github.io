@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "CoordinatorLayout"
-date:   2018-08-23 09:44:00 +0800
+title:  "AppBarLayout scrollFlag"
+date:   2019-10-30 16:46:00 +0800
 categories: Android
 tags: MD
 author: pepe
-description: 『 CoordinatorLayout 』
+description: 『 AppBarLayout scrollFlag 』
 ---
 
 
@@ -43,6 +43,8 @@ Child View 伴随着scrollingView的滚动事件而滚出或滚进屏幕:
 
 * 当 ScrollView 将要向上滚动的时候， 优先将 AppBarLayout的childView 滚出屏幕，然后 ScrollView 才开始滚动；
 
+![scrollFlag1]({{ site.baseurl }}/assets/images/android/md/scrollFlag1.png)
+
 ### **scroll|enterAlways**
 
 使用enterAlways，必须要带上scroll,否则没有效果，同样使用后面哪一个都要有scroll;使用要两个一块使用；
@@ -54,6 +56,8 @@ enterAlways决定向下滚动时Scrolling View和Child View之间的滚动优先
 * 当ScrollView将要向下滚动的时候，优先滚动的是AppBarLayout中的childView，当childView完全滚动进入屏幕的时候，才开始滚动 ScrollView；
 
 * 当ScrollView将要向上滚动的时候， 优先将AppBarLayout的childView滚出屏幕，然后ScrollView才开始滚动；
+
+![scrollFlag2]({{ site.baseurl }}/assets/images/android/md/scrollFlag2.png)
 
 ### **scroll|enterAlways|enterAlwaysCollapsed**
 
@@ -75,6 +79,9 @@ Child View先向下滚动最小高度值，
 
 这里小结一下:使用上面三种组合，当ScrollView要向上滚动的时候没有任何区别；区别只是在于scrollview要向下滚动的时候；
 
+![scrollFlag3]({{ site.baseurl }}/assets/images/android/md/scrollFlag3.png)
+![scrollFlag4]({{ site.baseurl }}/assets/images/android/md/scrollFlag4.png)
+
 ### **scroll|exitUntilCollapsed**
 要是exitUntilCollapsed就得这样用才有效果；
 
@@ -91,6 +98,8 @@ Child View向上滚动退出直至最小高度，
 
 * 当Scrollview将要向上滚动的时候，优先将AppBarLayout中的childView滚动至最小高度，然后scrollview才开始滚动。
 
+![scrollFlag5]({{ site.baseurl }}/assets/images/android/md/scrollFlag5.png)
+![scrollFlag6]({{ site.baseurl }}/assets/images/android/md/scrollFlag6.png)
 ### **scroll|snap**
 snap简单理解，就是Child View滚动比例的一个吸附效果。
 
@@ -104,41 +113,16 @@ snap 可以和上面任意一个组合使用，使用它可以确保childView不
 
 当我们松开手指的时候，要么完全显示，要么完全隐藏;
 
+![scrollFlag7]({{ site.baseurl }}/assets/images/android/md/scrollFlag7.png)
 
 
 参考：
 
-AppBarLayout中的五种ScrollFlags使用方式汇总 - Android开发积累 - CSDN博客
-https://blog.csdn.net/eyishion/article/details/80282204
+[AppBarLayout中的五种ScrollFlags使用方式汇总 - Android开发积累 - CSDN博客](https://blog.csdn.net/eyishion/article/details/80282204)
 
-Android 详细分析AppBarLayout的五种ScrollFlags - 简书
-https://www.jianshu.com/p/7caa5f4f49bd
+[Android 详细分析AppBarLayout的五种ScrollFlags - 简书](https://www.jianshu.com/p/7caa5f4f49bd)
 
-Android 优化交互 —— CoordinatorLayout 与 Behavior - Gemini @ SegmentFault - SegmentFault 思否
-https://segmentfault.com/a/1190000005024216?utm_source=Weibo
 
-通过来模仿稀土掘金个人页面的布局来学习使用CoordinatorLayout - 简书
-https://www.jianshu.com/p/ca6fddbd0e1f
-
-[CoordinatorLayout+Behavior讲解 - mffandxx的博客 - CSDN博客](https://blog.csdn.net/mffandxx/article/details/69223021)
-
-[Android CoordinatorLayout和Behavior解析 - 忆_析风的博客 - CSDN博客](https://blog.csdn.net/dqh147258/article/details/81266442#android-coordinatorlayout￥ﾒﾌbehavior￨ﾧﾣ￦ﾞﾐ)
-
-[coordinatorlayout和behavior解析 - 野生程序员 - CSDN博客](https://blog.csdn.net/fanxudonggreat/article/details/78271954)
-
-[aterialDesign--(10)CoordinatorLayout和 Behavior 的源码分析及使用 - 简书](https://www.jianshu.com/p/5f11a78fd07b)
-
-[Android CoordinatorLayout 自定义Behavior 高仿美团商家详情界面 实现页面内容复杂联动效果 - bfbx5173的专栏 - CSDN博客](https://blog.csdn.net/bfbx5173/article/details/80624322)
-
-[CoordinatorLayout使用详解: 打造折叠悬浮效果 - jxf_access的专栏 - CSDN博客](https://blog.csdn.net/jxf_access/article/details/79564669)
-
-[CoordinatorLayout与滚动的处理](https://mp.weixin.qq.com/s/Y-rifNyzot_5WEUeUGLcXQ)
-
-[android CoordinatorLayout使用 - CSDN博客](https://blog.csdn.net/xyz_lmn/article/details/48055919)
-
-[使用 CoordinatorLayout + 自定义 Behavior 实现卡片堆叠效果 - ganfanzhou的博客 - CSDN博客](https://blog.csdn.net/ganfanzhou/article/details/86563907)
-
-[Material Design系列 - 自定义Behavior实现伸缩标题栏 - 简书](https://www.jianshu.com/p/7534b87958ce)
 
 
 
