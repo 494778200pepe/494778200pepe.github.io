@@ -43,6 +43,7 @@ Child View 伴随着scrollingView的滚动事件而滚出或滚进屏幕:
 
 * 当 ScrollView 将要向上滚动的时候， 优先将 AppBarLayout的childView 滚出屏幕，然后 ScrollView 才开始滚动；
 
+![scrollFlag1](https://media.giphy.com/media/LPfZ3lwXBHFXkgFcfw/giphy.gif)
 ![scrollFlag1]({{ site.baseurl }}/assets/images/android/md/scrollFlag1.png)
 
 ### **scroll|enterAlways**
@@ -78,6 +79,7 @@ Child View先向下滚动最小高度值，
 * 当ScrollView将要向上滚动的时候， 优先将AppBarLayout的childView滚出屏幕，然后ScrollView才开始滚动；
 
 这里小结一下:使用上面三种组合，当ScrollView要向上滚动的时候没有任何区别；区别只是在于scrollview要向下滚动的时候；
+
 
 ![scrollFlag3]({{ site.baseurl }}/assets/images/android/md/scrollFlag3.png)
 ![scrollFlag4]({{ site.baseurl }}/assets/images/android/md/scrollFlag4.png)
