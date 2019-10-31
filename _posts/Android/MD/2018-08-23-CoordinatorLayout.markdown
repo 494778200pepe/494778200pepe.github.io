@@ -8,19 +8,34 @@ author: pepe
 description: 『 CoordinatorLayout 』
 ---
 
+### **CoordinatorLayout。**
+
+CoordinatorLayout被誉为超级FrameLayout。主要是实现两个功能：
+
+* 作为顶层布局 
+
+* CoordinatorLayout功能强大，主要是依靠一个Behavior对象。CoordinatorLayout自己并不控制View，所有的控制权都在Behavior。
 
 
+『Material Design 入门学习笔记』CollapsingToolbarLayout 与 AppBarLayout（附 demo） - 掘金
+https://juejin.im/post/58f73f318d6d810057cb5264
 
 
 
 参考：
 
 
+CoordinatorLayout的使用如此简单
+https://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=2653057730&idx=1&sn=c0dd9981a180d37efeccf43ce775e56c&scene=21#wechat_redirect
+
 Android 优化交互 —— CoordinatorLayout 与 Behavior - Gemini @ SegmentFault - SegmentFault 思否
 https://segmentfault.com/a/1190000005024216?utm_source=Weibo
 
 通过来模仿稀土掘金个人页面的布局来学习使用CoordinatorLayout - 简书
 https://www.jianshu.com/p/ca6fddbd0e1f
+
+最能解决你的痛点问题，也是你最需要的，尽在Material Design 系列这篇
+https://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=2653057738&idx=1&sn=f0b212bfe3343b8f707f32bfefbbda0b#wechat_redirect
 
 [CoordinatorLayout+Behavior讲解 - mffandxx的博客 - CSDN博客](https://blog.csdn.net/mffandxx/article/details/69223021)
 

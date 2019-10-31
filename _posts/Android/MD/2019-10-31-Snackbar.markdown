@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "FloatingActionButton"
-date:   2019-10-30 17:25:00 +0800
+title:  "Snackbar"
+date:   2019-10-31 09:35:00 +0800
 categories: Android
 tags: MD
 author: pepe
-description: 『 FloatingActionButton 』
+description: 『 Snackbar 』
 ---
+
 
 
 Android Material Design系列之FloatingActionButton和Snackbar
@@ -31,15 +32,10 @@ https://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=2653057631&idx=1&sn=445e98
 
 
 
-
-
-
-
 参考：
 
 
-CollapsingToolbarLayout的简单使用 - 简书
-https://www.jianshu.com/p/ece196cfeda4
+
 
 
 
