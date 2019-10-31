@@ -7,27 +7,9 @@ tags: MD
 author: pepe
 description: 『 Snackbar 』
 ---
+Snackbar提供了一个介于Toast和AlertDialog之间轻量级控件，它可以很方便的提供消息的提示和动作反馈。
 
-
-
-Android Material Design系列之FloatingActionButton和Snackbar
-https://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=2653057631&idx=1&sn=445e98c146a44c06bef683cd5f56f454&scene=21#wechat_redirect
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+它的使用方式也是非常的简单，跟Toast差不多，代码如下：
 
 
 
@@ -35,6 +17,13 @@ https://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=2653057631&idx=1&sn=445e98
 参考：
 
 
+[Android中Snackbar的使用方法及小技巧_Android_脚本之家](https://www.jb51.net/article/137503.htm)
+
+[android design包下的Snackbar第一个参数使用技巧 - qiang_xi的专栏 - CSDN博客](https://blog.csdn.net/qiang_xi/article/details/52449398)
+
+[Android Material Design系列之FloatingActionButton和Snackbar](https://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=2653057631&idx=1&sn=445e98c146a44c06bef683cd5f56f454&scene=21#wechat_redirect)
+
+[Snackbar的简单使用 - 简书](https://www.jianshu.com/p/cb747d1f204f)
 
 
 
