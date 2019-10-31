@@ -19,15 +19,15 @@ android:clickable="true"
 android:foreground="?attr/selectableItemBackground"
 ```
 
-* app:cardBackgroundColor这是设置背景颜色
+* app:cardBackgroundColor 设置背景颜色(无法使用android:background设置背景)
 
-* app:cardMaxElevation这是设置z轴的最大高度值
+* app:cardMaxElevation 设置z轴的最大高度值
 
-* app:cardUseCompatPadding是否使用CompatPadding
+* app:cardUseCompatPadding 是否使用CompatPadding
 
-* app:cardPreventCornerOverlap是否使用PreventCornerOverlap
+* app:cardPreventCornerOverlap 是否使用PreventCornerOverlap
 
-* app:contentPadding 设置内容的padding
+* app:contentPadding 设置内容的padding（由于padding已被用作阴影效果，因此，你无法使用android:padding为 CardView 增加一个内边距，而是应当通过配置XML方式：CardView_contentPaddingXXX或者代码调用setContentPadding(int,int,int,int)进行设置。）
 
 * app:contentPaddingLeft 设置内容的左padding
 
