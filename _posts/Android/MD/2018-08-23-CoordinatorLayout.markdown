@@ -24,9 +24,11 @@ https://juejin.im/post/58f73f318d6d810057cb5264
 
 参考：
 
+[CoordinatorLayout的使用如此简单 - huachao1001的专栏 - CSDN博客](https://blog.csdn.net/huachao1001/article/details/51554608)
 
-CoordinatorLayout的使用如此简单
-https://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=2653057730&idx=1&sn=c0dd9981a180d37efeccf43ce775e56c&scene=21#wechat_redirect
+[Material Design系列教程（4） - CoordinatorLayout - 简书](https://www.jianshu.com/p/be21a824e469)
+
+
 
 Android 优化交互 —— CoordinatorLayout 与 Behavior - Gemini @ SegmentFault - SegmentFault 思否
 https://segmentfault.com/a/1190000005024216?utm_source=Weibo
