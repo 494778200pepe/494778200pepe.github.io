@@ -133,6 +133,9 @@ snap 可以和上面任意一个组合使用，使用它可以确保childView不
 
 参考：
 
+玩转AppBarLayout，更酷炫的顶部栏 - huachao1001的专栏 - CSDN博客
+https://blog.csdn.net/huachao1001/article/details/51558835
+
 [AppBarLayout中的五种ScrollFlags使用方式汇总 - Android开发积累 - CSDN博客](https://blog.csdn.net/eyishion/article/details/80282204)
 
 [Android 详细分析AppBarLayout的五种ScrollFlags - 简书](https://www.jianshu.com/p/7caa5f4f49bd)

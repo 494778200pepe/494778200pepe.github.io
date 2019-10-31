@@ -49,6 +49,8 @@ description: 『 Toolbar 』
 
 参考：
 
+Android开发：最详细的 Toolbar 开发实践总结 - 简书
+https://www.jianshu.com/p/79604c3ddcae
 
 Material Design系列教程（1） - Toolbar - 简书
 https://www.jianshu.com/p/fdedf09c6619
