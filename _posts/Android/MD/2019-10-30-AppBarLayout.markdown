@@ -26,7 +26,32 @@ AppBarLayout继承自LinearLayout，布局方向为垂直方向。但是它内�
 
 当它滚动的时候，AppBarLayout会回调触发内部设置了 app:layout_scrollFlags=""的控件的滚动行为	
 ```
-AppBarLayout可以为控件设置5中scrollFlag行为：`scroll`, `enterAlways`, `enterAlwaysCollapsed`, `exitUntilCollapsed`, `snap`
+
+> 其主要功能是可以让其子View可以响应对位于与 AppBarLayout 同一层级的某个可滚动View（可理解为 ScrollView）的滚动事件
+（也就是说，当与 AppBarLayout 同一层级的某个可滚动View发生滚动时，
+你可以定制让 AppBarLayout 的子View响应这些滚动事件（比如让子View发生滚动，或者保持不动等等）。
+
+AppBarLayout 如何与兄弟节点（ScrollView）进行绑定，进而接收到其滚动事件：
+让我们再拆分一下这个逻辑，其实就是 AppBarLayout 要与同一层级的ScrollView进行交互。
+
+* CoordinatorLayout 的作用就是提供子View之间的交互。
+
+* 因此，通过使用 CoordinatorLayout 包裹 AppBarLayout 和 ScrollView，并提供适当的 Behavior，就可以完成这两者的交互了。
+
+* 而这个 Behavior 就是 AppBarLayout.ScrollingViewBehavior，
+
+* 我们可以直接为ScrollView绑定这个 AppBarLayout.ScrollingViewBehavior
+
+* （绑定的方法可以通过配置xml文件：app:layout_behavior="@string/appbar_scrolling_view_behavior"，
+
+* 这个 Google 为我们提供的appbar_scrolling_view_behavior,
+
+* 其实就是 AppBarLayout.ScrollingViewBehavior 的类名：android.support.design.widget.AppBarLayout$ScrollingViewBehavior），
+
+* 这样，AppBarLayout 就能接收到ScrollView的滚动事件了。
+
+
+AppBarLayout可以为控件设置5种scrollFlag行为：`scroll`, `enterAlways`, `enterAlwaysCollapsed`, `exitUntilCollapsed`, `snap`
 当然这5中行为并不是单独使用，有的需要相互结合才会有效果。
 
 ### **scroll**
@@ -133,8 +158,7 @@ snap 可以和上面任意一个组合使用，使用它可以确保childView不
 
 参考：
 
-玩转AppBarLayout，更酷炫的顶部栏 - huachao1001的专栏 - CSDN博客
-https://blog.csdn.net/huachao1001/article/details/51558835
+[Material Design系列教程（6） - AppBarLayout - 简书](https://www.jianshu.com/p/5e48fb725e3f)
 
 [AppBarLayout中的五种ScrollFlags使用方式汇总 - Android开发积累 - CSDN博客](https://blog.csdn.net/eyishion/article/details/80282204)
 
