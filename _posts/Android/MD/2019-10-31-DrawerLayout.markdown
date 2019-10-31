@@ -35,29 +35,11 @@ description: 『 DrawerLayout 』
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 参考：
 
+[Material Design系列教程（9） - DrawLayout - 简书](https://www.jianshu.com/p/2f05e71769ad)
 
-Material Design系列教程（9） - DrawLayout - 简书
-https://www.jianshu.com/p/2f05e71769ad
-
-
-Android Material Design系列之Navigation Drawer
-https://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=2653057604&idx=1&sn=76f119252836e20c263d17d08b452b67&scene=21#wechat_redirect
+[Android Material Design系列之Navigation Drawer](https://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=2653057604&idx=1&sn=76f119252836e20c263d17d08b452b67&scene=21#wechat_redirect)
 
 
 
