@@ -18,7 +18,7 @@ description: 『 FloatingActionButton 』
 
 * app:fabSize="normal"：FAB 的大小，有两种赋值分别是 “mini” 和 “normal”，对应的大小分别为 56dp 和 40dp,默认是“normal”.
 
-* app:elevation="50dp"：阴影的高度，elevation是Android 5.0中引入的新属性，设置该属性使控件有一个阴影，感觉该控件像是“浮”起来一样，这样达到3D效果。对应的方法：setCompatElevation(float)
+* app:elevation="6dp"：阴影的高度，elevation是Android 5.0中引入的新属性，设置该属性使控件有一个阴影，感觉该控件像是“浮”起来一样，这样达到3D效果。对应的方法：setCompatElevation(float)
 
 * app:backgroundTint="#31bfcf"：设置 FAB 的背景颜色，不设置，默认使用theme中colorAccent的颜色。这里需要注意的是，backgroundTint这个属性的值是一个 ColorStateList 类型，如果你误用一个 colors 文件中定义的一个颜色值，在点击时将无法产生涟漪（ripple）交互效果。
 
@@ -60,14 +60,11 @@ android:layout_margin="20dp"
 
 参考：
 
-Material Design系列教程（2） - FloatingActionButton - 简书
-https://www.jianshu.com/p/f2f210ad4f70
+[Material Design系列教程（2） - FloatingActionButton - 简书](https://www.jianshu.com/p/f2f210ad4f70)
 
-Android Material Design系列之FloatingActionButton和Snackbar
-https://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=2653057631&idx=1&sn=445e98c146a44c06bef683cd5f56f454&scene=21#wechat_redirect
+[Android Material Design系列之FloatingActionButton和Snackbar](https://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=2653057631&idx=1&sn=445e98c146a44c06bef683cd5f56f454&scene=21#wechat_redirect)
 
-FloatingActionButton属性、用法，以及解析并解决sdk25以上只隐藏不显示的问题 - GSQ_Cat - CSDN博客
-https://blog.csdn.net/chen_xi_hao/article/details/74347023
+[FloatingActionButton属性、用法，以及解析并解决sdk25以上只隐藏不显示的问题 - GSQ_Cat - CSDN博客](https://blog.csdn.net/chen_xi_hao/article/details/74347023)
 
 
 

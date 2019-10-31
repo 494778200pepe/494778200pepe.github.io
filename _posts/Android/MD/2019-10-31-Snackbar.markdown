@@ -12,10 +12,11 @@ Snackbar提供了一个介于Toast和AlertDialog之间轻量级控件，它可�
 它的使用方式也是非常的简单，跟Toast差不多，代码如下：
 
 
-
+Snackbar 还支持滑出删除，需要在布局文件中使用CoordinatorLayout作为根布局:
 
 参考：
 
+[Material Design系列教程（3） - Snackbar - 简书](https://www.jianshu.com/p/3581d94535c4)
 
 [Android中Snackbar的使用方法及小技巧_Android_脚本之家](https://www.jb51.net/article/137503.htm)
 
