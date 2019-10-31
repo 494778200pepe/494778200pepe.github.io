@@ -66,7 +66,7 @@ android:theme 主题
         });
 ```
 
-> 亦可以通过setSupportActionbar，再调用getSupportActionBar，当成actionBar使用。若没有调用 setSupportActionbar，则onCreateOptionsMenu不会回调。
+> 亦可以通过setSupportActionbar，当成actionBar使用。若没有调用 setSupportActionbar，则onCreateOptionsMenu不会回调。
 
 
 ### **使用注意**
