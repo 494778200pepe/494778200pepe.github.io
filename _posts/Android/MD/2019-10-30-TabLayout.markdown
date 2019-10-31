@@ -36,7 +36,8 @@ description: 『 TabLayout 』
 
 参考：
 
-
+Material Design系列教程（8） - TabLayout - 简书
+https://www.jianshu.com/p/2042f5bf9122
 
 
 

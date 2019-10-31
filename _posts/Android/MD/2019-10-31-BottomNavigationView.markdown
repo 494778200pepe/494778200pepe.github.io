@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "NavigationView"
-date:   2019-10-31 09:36:00 +0800
+title:  "BottomNavigationView"
+date:   2019-10-31 22:28:00 +0800
 categories: Android
 tags: MD
 author: pepe
-description: 『 NavigationView 』
+description: 『 BottomNavigationView 』
 ---
 
 
@@ -33,7 +33,8 @@ description: 『 NavigationView 』
 
 参考：
 
-
+Material Design系列教程（11） - BottomNavigationView - 简书
+https://www.jianshu.com/p/854c458d2f0b
 
 
 
