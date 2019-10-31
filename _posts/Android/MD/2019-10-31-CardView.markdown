@@ -8,6 +8,38 @@ author: pepe
 description: 『 CardView 』
 ---
 
+* 圆角效果：app:cardCornerRadius="10dp"
+
+* 阴影效果：app:cardElevation="10dp"
+
+* 涟漪效果（Ripple）:
+
+```
+android:clickable="true"
+android:foreground="?attr/selectableItemBackground"
+```
+
+* app:cardBackgroundColor这是设置背景颜色
+
+* app:cardMaxElevation这是设置z轴的最大高度值
+
+* app:cardUseCompatPadding是否使用CompatPadding
+
+* app:cardPreventCornerOverlap是否使用PreventCornerOverlap
+
+* app:contentPadding 设置内容的padding
+
+* app:contentPaddingLeft 设置内容的左padding
+
+* app:contentPaddingTop 设置内容的上padding
+
+* app:contentPaddingRight 设置内容的右padding
+
+* app:contentPaddingBottom 设置内容的底padding
+
+
+
+
 『Material Design入门学习笔记』RecyclerView与CardView（附demo） - 掘金
 https://juejin.im/post/58f5a99a570c350056483062
 
