@@ -8,6 +8,40 @@ author: pepe
 description: 『 Palette 』
 ---
 
+![Palette]({{ site.baseurl }}/assets/images/android/md/Palette.png)
+
+如果我们想修改应用导航栏，状态栏或者上图所示其他位置颜色样式，只需修改`res/values/styles.xml`
+
+```
+<resources>
+    
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+</resources>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Palette让你的应用风格统一，绚丽多彩
 https://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=2653057719&idx=1&sn=6ae3db02825c0e70794050347ea8d78f&scene=21#wechat_redirect
 
