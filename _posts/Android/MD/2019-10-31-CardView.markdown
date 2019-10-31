@@ -8,6 +8,12 @@ author: pepe
 description: 『 CardView 』
 ---
 
+CardView是Android5.0之后为新增的控件，
+CardView是一个卡片布局，布局可以包含圆角和阴影，
+本质上CardView是一个FrameLayout，
+因此它作为一个布局容器，可以布局其他的View。
+
+
 * 圆角效果：app:cardCornerRadius="10dp"
 
 * 阴影效果：app:cardElevation="10dp"
@@ -38,16 +44,26 @@ android:foreground="?attr/selectableItemBackground"
 * app:contentPaddingBottom 设置内容的底padding
 
 
+一般使用 CardView 时，通常都会设置其涟漪效果（Ripple），`lift_on_touch` 动画效果以及高低版本系统兼容性等等，这些基本上算是标准配置属性，那么我们就可以将这些属性配置放入到一个 style 中，直接提供给 CardView 使用即可。
+
+```
+    <style name="AppCardView" parent="@style/CardView.Light">
+        <item name="cardPreventCornerOverlap">false</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:stateListAnimator" tools:targetApi="lollipop">@drawable/lift_on_touch</item>
+    </style>
+```
+
+最后通过`style="@style/AppCardView"`设置给 `CardView` 即可。
+
 
 
 
 参考：
 
-『Material Design入门学习笔记』RecyclerView与CardView（附demo） - 掘金
-https://juejin.im/post/58f5a99a570c350056483062
-
-Android Material Design系列之RecyclerView和CardView
-https://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=2653057706&idx=1&sn=40660d971b1a385bbfcba1a277e0c85b&scene=21#wechat_redirect
+[Material Design系列教程（12） - CardView - 简书](https://www.jianshu.com/p/2807c38c3927)
 
 
 
