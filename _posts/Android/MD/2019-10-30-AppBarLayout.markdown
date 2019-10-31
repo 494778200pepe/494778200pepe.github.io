@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "AppBarLayout scrollFlag"
+title:  "AppBarLayout"
 date:   2019-10-30 16:46:00 +0800
 categories: Android
 tags: MD
 author: pepe
-description: 『 AppBarLayout scrollFlag 』
+description: 『 AppBarLayout 』
 ---
 
 AppBarLayout继承自LinearLayout，布局方向为垂直方向。但是它内部封装了一些手势变换的动画。
