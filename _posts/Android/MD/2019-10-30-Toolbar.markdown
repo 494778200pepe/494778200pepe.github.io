@@ -140,15 +140,11 @@ android:theme 主题
 
 [Android基础知识之 Toolbar 的使用](http://blog.magicer.xyz/2016/10/toolbar-basic/)
 
+[Android开发：最详细的 Toolbar 开发实践总结 - 简书](https://www.jianshu.com/p/79604c3ddcae)
 
-Android开发：最详细的 Toolbar 开发实践总结 - 简书
-https://www.jianshu.com/p/79604c3ddcae
+[Material Design系列教程（1） - Toolbar - 简书](https://www.jianshu.com/p/fdedf09c6619)
 
-Material Design系列教程（1） - Toolbar - 简书
-https://www.jianshu.com/p/fdedf09c6619
-
-Android Material Design系列之Toolbar
-https://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=2653057635&idx=1&sn=bc8ea475db4f215226367eed71105f35&scene=21#wechat_redirect
+[Android Material Design系列之Toolbar](https://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=2653057635&idx=1&sn=bc8ea475db4f215226367eed71105f35&scene=21#wechat_redirect)
 
 
 
