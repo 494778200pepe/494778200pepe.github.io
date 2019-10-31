@@ -40,6 +40,9 @@ android:foreground="?attr/selectableItemBackground"
 
 
 
+
+参考：
+
 『Material Design入门学习笔记』RecyclerView与CardView（附demo） - 掘金
 https://juejin.im/post/58f5a99a570c350056483062
 
@@ -47,24 +50,6 @@ Android Material Design系列之RecyclerView和CardView
 https://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=2653057706&idx=1&sn=40660d971b1a385bbfcba1a277e0c85b&scene=21#wechat_redirect
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-参考：
 
 
 
