@@ -16,6 +16,10 @@ description: 『 动画 』
 
 [CollapsingToolbarLayout 与 AppBarLayout（附 demo） - 掘金](https://juejin.im/post/58f73f318d6d810057cb5264)
 
+[使用 CoordinatorLayout + 自定义 Behavior 实现卡片堆叠效果 - ganfanzhou的博客 - CSDN博客](https://blog.csdn.net/ganfanzhou/article/details/86563907)
+
+[Material Design系列 - 自定义Behavior实现伸缩标题栏 - 简书](https://www.jianshu.com/p/7534b87958ce)
+
 
 
 
