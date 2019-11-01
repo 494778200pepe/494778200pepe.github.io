@@ -8,16 +8,12 @@ author: pepe
 description: 『 Material Design 』
 ---
 
+[Material Design](https://www.material.io/)
 
 
+[一、CoordinatorLayout知识梳理 - 简书](https://www.jianshu.com/p/3596988b74ca)
 
-[『Material Design 入门学习笔记』前言 - 掘金](https://juejin.im/post/58e9eb8eda2f60005f045458)
-
-[Android 5.X 新特性详解（四）——Material Design 动画效果 - CSDN博客](https://blog.csdn.net/tw19911005/article/details/51645995)
-
-[Android5.0新特性-Material Design-慕课网](https://www.imooc.com/learn/215)
-
-[Material Design - 纸墨设计](http://design.goodev.org/)
+[Material Design系列教程（4） - CoordinatorLayout - 简书](https://www.jianshu.com/p/be21a824e469)
 
 
 APP

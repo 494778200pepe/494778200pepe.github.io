@@ -36,7 +36,8 @@ description: 『 BottomNavigationView 』
 Material Design系列教程（11） - BottomNavigationView - 简书
 https://www.jianshu.com/p/854c458d2f0b
 
-
+Android底部导航BottomNavigationBar的使用 - 简书
+https://www.jianshu.com/p/5f29dbaaa109
 
 
 

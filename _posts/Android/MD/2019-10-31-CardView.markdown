@@ -23,6 +23,12 @@ CardView是一个卡片布局，布局可以包含圆角和阴影，
 ```
 android:clickable="true"
 android:foreground="?attr/selectableItemBackground"
+
+/有界波纹
+android:background="?android:attr/selectableItemBackground"
+//无界波纹
+android:background="?android:attr/selectableItemBackgroundBorderless"
+
 ```
 
 * app:cardBackgroundColor 设置背景颜色(无法使用android:background设置背景)

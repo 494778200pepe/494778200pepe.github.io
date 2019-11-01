@@ -8,9 +8,25 @@ author: pepe
 description: 『 动画 』
 ---
 
+
+### **Ripple效果**
+
+在Android 5.X 中，Material Design 大量使用了Ripple效果，即点击后的波纹效果。可以通过如下代码设置波纹的背景。
+```
+//有界波纹
+android:background="?android:attr/selectableItemBackground"
+//无界波纹
+android:background="?android:attr/selectableItemBackgroundBorderless"
+```
+
+参考：
+
+
 『Material Design入门学习笔记』动画（含demo） - 掘金
 https://juejin.im/post/58edfa7bb123db43cc3708af
 
+Android 5.X 新特性详解（四）——Material Design 动画效果 - 黄飞的专栏 - CSDN博客
+https://blog.csdn.net/tw19911005/article/details/51645995
 
 
 
@@ -31,8 +47,6 @@ https://juejin.im/post/58edfa7bb123db43cc3708af
 
 
 
-
-参考：
 
 
 

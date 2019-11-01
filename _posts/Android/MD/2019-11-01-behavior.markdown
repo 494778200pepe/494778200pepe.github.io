@@ -1,0 +1,54 @@
+---
+layout: post
+title:  "behavior"
+date:   2019-11-01 15:11:00 +0800
+categories: behavior
+tags: MD
+author: pepe
+description: 『 动画 』
+---
+
+
+
+
+参考：
+
+
+[CollapsingToolbarLayout 与 AppBarLayout（附 demo） - 掘金](https://juejin.im/post/58f73f318d6d810057cb5264)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -66,8 +66,8 @@ android:layout_margin="20dp"
 
 [FloatingActionButton属性、用法，以及解析并解决sdk25以上只隐藏不显示的问题 - GSQ_Cat - CSDN博客](https://blog.csdn.net/chen_xi_hao/article/details/74347023)
 
-
-
+Material Design之-交互效果炸裂的 FloatingActionMenu - 掘金
+https://juejin.im/post/5c87c1efe51d453b7666c26b
 
 
 
