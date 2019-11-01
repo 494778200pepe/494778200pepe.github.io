@@ -8,10 +8,10 @@ author: pepe
 description: 『 Material Design 』
 ---
 
-『Material Design 入门学习笔记』前言 - 掘金
-https://juejin.im/post/58e9eb8eda2f60005f045458
 
 
+
+[『Material Design 入门学习笔记』前言 - 掘金](https://juejin.im/post/58e9eb8eda2f60005f045458)
 
 [Android 5.X 新特性详解（四）——Material Design 动画效果 - CSDN博客](https://blog.csdn.net/tw19911005/article/details/51645995)
 
