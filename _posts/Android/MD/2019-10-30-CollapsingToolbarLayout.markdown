@@ -94,23 +94,6 @@ CollapsingToolbarLayout是一个FrameLayout，它内部能有多个子元素，�
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 参考：
 
 [玩转AppBarLayout，更酷炫的顶部栏 - huachao1001的专栏 - CSDN博客](https://blog.csdn.net/huachao1001/article/details/51558835)
