@@ -40,11 +40,6 @@ CoordinatorLayout被誉为超级FrameLayout。主要是实现两个功能：
 
 [aterialDesign--(10)CoordinatorLayout和 Behavior 的源码分析及使用 - 简书](https://www.jianshu.com/p/5f11a78fd07b)
 
-[使用 CoordinatorLayout + 自定义 Behavior 实现卡片堆叠效果 - ganfanzhou的博客 - CSDN博客](https://blog.csdn.net/ganfanzhou/article/details/86563907)
-
-[Material Design系列 - 自定义Behavior实现伸缩标题栏 - 简书](https://www.jianshu.com/p/7534b87958ce)
-
-
 
 
 

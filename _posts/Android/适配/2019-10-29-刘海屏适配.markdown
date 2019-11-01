@@ -23,3 +23,9 @@ https://www.jianshu.com/p/2b8db60ba8df
 
 Android 屏幕适配之bug 刘海屏、水滴屏 - 简书
 https://www.jianshu.com/p/aeafa7499c1c
+
+Android - StatusBar&&NavigationBar适配 - 简书
+https://www.jianshu.com/p/f65c69351ffc?from=singlemessage
+
+Android NavigationBar - 简书
+https://www.jianshu.com/p/97eb321fdc83
