@@ -24,6 +24,8 @@ CoordinatorLayout被誉为超级FrameLayout。主要是实现两个功能：
 
 [Android 优化交互 —— CoordinatorLayout 与 Behavior - Gemini @ SegmentFault - SegmentFault 思否](https://segmentfault.com/a/1190000005024216?utm_source=Weibo)
 
+[Android CoordinatorLayout 自定义Behavior 高仿美团商家详情界面 实现页面内容复杂联动效果 - bfbx5173的专栏 - CSDN博客](https://blog.csdn.net/bfbx5173/article/details/80624322)
+
 [通过来模仿稀土掘金个人页面的布局来学习使用CoordinatorLayout - 简书](https://www.jianshu.com/p/ca6fddbd0e1f)
 
 [最能解决你的痛点问题，也是你最需要的，尽在Material Design 系列这篇](https://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=2653057738&idx=1&sn=f0b212bfe3343b8f707f32bfefbbda0b#wechat_redirect)
@@ -36,7 +38,6 @@ CoordinatorLayout被誉为超级FrameLayout。主要是实现两个功能：
 
 [aterialDesign--(10)CoordinatorLayout和 Behavior 的源码分析及使用 - 简书](https://www.jianshu.com/p/5f11a78fd07b)
 
-[Android CoordinatorLayout 自定义Behavior 高仿美团商家详情界面 实现页面内容复杂联动效果 - bfbx5173的专栏 - CSDN博客](https://blog.csdn.net/bfbx5173/article/details/80624322)
 
 [CoordinatorLayout使用详解: 打造折叠悬浮效果 - jxf_access的专栏 - CSDN博客](https://blog.csdn.net/jxf_access/article/details/79564669)
 
