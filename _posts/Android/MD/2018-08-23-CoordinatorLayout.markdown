@@ -28,8 +28,6 @@ CoordinatorLayout被誉为超级FrameLayout。主要是实现两个功能：
 
 [最能解决你的痛点问题，也是你最需要的，尽在Material Design 系列这篇](https://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=2653057738&idx=1&sn=f0b212bfe3343b8f707f32bfefbbda0b#wechat_redirect)
 
-
-
 [CoordinatorLayout+Behavior讲解 - mffandxx的博客 - CSDN博客](https://blog.csdn.net/mffandxx/article/details/69223021)
 
 [Android CoordinatorLayout和Behavior解析 - 忆_析风的博客 - CSDN博客](https://blog.csdn.net/dqh147258/article/details/81266442#android-coordinatorlayout￥ﾒﾌbehavior￨ﾧﾣ￦ﾞﾐ)
