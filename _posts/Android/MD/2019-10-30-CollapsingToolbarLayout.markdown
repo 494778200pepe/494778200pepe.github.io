@@ -50,19 +50,21 @@ description: 『 CollapsingToolbarLayout 』
 `CollapsingToolbarLayout`继承自`FrameLayout`，作用是为`Toolbar`提供了折叠功能。
 下面介绍一些参数：
 
-* app:contentScrim这个参数可以让CollapsingToolbarLayout在收缩的时候，背景图片消失的时候，指定一个颜色。
+* app:contentScrim这个参数可以让 CollapsingToolbarLayout 在收缩的时候，背景图片消失的时候，指定一个颜色。相当于给 Toolbar 设置了背景
 
 * app:collapsedTitleGravity 指定折叠状态的标题如何放置，可选值:top、bottom等
+
+* app:expandedTitleGravity  展开状态的标题如何放置
 
 * app:collapsedTitleTextAppearance指定折叠状态标题文字的样貌
 
 * app:expandedTitleTextAppearance指定展开状态标题文字的样貌
 
-* app:expandedTitleGravity  展开状态的标题如何放置
-
 * app:titleEnabled指定是否显示标题文本app:toolbarId指定与之关联的ToolBar，如果未指定则默认使用第一个被发现的ToolBar子View
 
 * app:expandedTitleMarginStart指定展开状态标题距离开始位置的高度
+
+* app:expandedTitleMarginTop
 
 * app:expandedTitleMarginBottom指定展开状态标题距离底部的距离
 
@@ -100,8 +102,8 @@ CollapsingToolbarLayout是一个FrameLayout，它内部能有多个子元素，�
 
 [CollapsingToolbarLayout源码分析 - 简书](https://www.jianshu.com/p/8ee6e8a35071)
 
-
-
+AndroidASD完全解析06之CollapsingToolbarLayout - 简书
+https://www.jianshu.com/p/953868d54c89
 
 
 

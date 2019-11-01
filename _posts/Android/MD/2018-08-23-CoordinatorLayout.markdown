@@ -20,7 +20,8 @@ CoordinatorLayout被誉为超级FrameLayout。主要是实现两个功能：
 『Material Design 入门学习笔记』CollapsingToolbarLayout 与 AppBarLayout（附 demo） - 掘金
 https://juejin.im/post/58f73f318d6d810057cb5264
 
-
+一、CoordinatorLayout知识梳理 - 简书
+https://www.jianshu.com/p/3596988b74ca
 
 参考：
 
