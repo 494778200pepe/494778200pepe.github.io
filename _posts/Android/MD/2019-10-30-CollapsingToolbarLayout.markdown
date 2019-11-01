@@ -8,7 +8,46 @@ author: pepe
 description: 『 CollapsingToolbarLayout 』
 ---
 
-CollapsingToolbarLayout继承自FrameLayout，作用是为Toolbar提供了折叠功能。
+`CollapsingToolbarLayout` 通常用来在布局中包裹一个 `Toolbar`，是对 `Toolbar` 的再次封装，以实现具有“折叠效果“的顶部栏。
+`CollapsingToolbarLayout` 是不能独立存在的，它必须只能作为 `AppBarLayout` 的直接子 View 来使用。
+
+`CollapsingToolbarLayout` 具备以下几个特点：
+
+* 可折叠标题（Collapsing title）
+
+	当布局完全显示时，标题最大化；当布局逐渐移出屏幕时，标题逐渐变小。
+	可以通过 setTitle(CharSequence) 来设置显示的标题。
+	标题外观可以通过`collapsedTextAppearance`和`expandedTextAppearance`进行调整。
+
+* 内容纱布（Content scrim）
+
+	当滚动位置到达临界点时，内容纱布会显示或隐藏。
+	可以通过 `setContentScrim(Drawable)` 来设置内容纱布。
+
+* 状态栏纱布（Status bar scrim)
+
+	当滚动位置到达临界点时，状态栏纱布会显示或隐藏（位于状态栏后）。
+	可以通过 `setStatusBarScrim(Drawable)` 来设置状态栏纱布。
+	状态栏纱布只能支持 `Android 5.0 LOLLIPOP` 及以上的设备，并且还要设置`android:fitsSystemWindows="true"`。
+
+* 视差滚动子 View（Parallax scrolling children）
+
+	子 View 可以选择以“视差”的方式来进行滚动。
+	（视觉效果上就是子 View 滚动的比其他 View 稍微慢些）。
+	设置方法为：`app:layout_collapseMode="parallax"`
+
+* 子 View 位置固定（Pinned position children）
+
+	子 View 可以选择是否在全局空间上固定位置，这对于 Toolbar 来说非常有用，
+	因为当布局在移动时，可以将 Toolbar 固定位置而不受移动的影响。 
+	设置方法为：`app:layout_collapseMode="pin"`。
+
+注：不要在运行时手动为 `Toolbar` 添加子View。在运行期间，`Toolbar` 会自动添加一个“虚拟的 View” 从而让我们能为 标题 计算出可用空间，
+如果你手动添加子View，这个过程会被干扰。
+
+
+
+`CollapsingToolbarLayout`继承自`FrameLayout`，作用是为`Toolbar`提供了折叠功能。
 下面介绍一些参数：
 
 * app:contentScrim这个参数可以让CollapsingToolbarLayout在收缩的时候，背景图片消失的时候，指定一个颜色。

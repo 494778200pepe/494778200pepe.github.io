@@ -8,7 +8,7 @@ author: pepe
 description: 『 AppBarLayout 』
 ---
 
-AppBarLayout继承自LinearLayout，布局方向为垂直方向。但是它内部封装了一些手势变换的动画。
+AppBarLayout继承自 LinearLayout，布局方向为垂直方向。但是它内部封装了一些手势变换的动画。
 首先它需要依赖CoordinatorLayout作为父容器，同时也要求一个具有可以独立滚动的子View。
 
 > AppBarLayout通过设置layout_scrollFlags参数，来控制AppBarLayout中控件的行为.
