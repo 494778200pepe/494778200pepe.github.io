@@ -22,6 +22,11 @@ https://blog.csdn.net/ysy950803/article/details/84930656
 从RxBus开始改变，源码要这么看，才算没白看 - 王学明 - CSDN博客
 https://blog.csdn.net/wangxueming/article/details/100729794
 
+RxJava Android 开发全家桶 - 云在千峰
+http://blog.chengyunfeng.com/?p=1011
+
+不该使用 RxJava 的一些情况 - 云在千峰
+http://blog.chengyunfeng.com/?p=1009
 
 // 通过RxJava实现的选择手机相册来获取多媒体的工具RxFile。
 [RxFile 一款选择多媒体文件精巧的工具类 - 简书](https://www.jianshu.com/p/eeba39f7df0a)

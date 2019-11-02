@@ -15,7 +15,11 @@ description: 『 RxJava系列一 』
 
 
 
+RxJava 参考资源 - 云在千峰
+http://blog.chengyunfeng.com/?p=985
 
+Intro To RxJava 系列教程 总结 - 云在千峰
+http://blog.chengyunfeng.com/?p=983
 
 
 RxJava（十五）RxJava线程的自由切换 - Chiclaim - CSDN博客
