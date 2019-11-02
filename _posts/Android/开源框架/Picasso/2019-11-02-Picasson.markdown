@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Picasso"
+date:   2019-11-02 11:44:00 +0800
+categories: Android
+tags: 开源框架
+author: pepe
+description: 『 Picasso 』
+---
+
+图片加载框架Picasso － 源码分析 - 掘金
+https://juejin.im/post/58b7f59a44d904006acbbb83

@@ -39,7 +39,7 @@ https://blog.csdn.net/johnny901114/article/details/80032801
 
 [RxJava入门七问（一） - Android_Study_OK的博客 - 博客频道 - CSDN.NET](http://blog.csdn.net/android_study_ok/article/details/51934191)
 
-[RxJava2 源码解析（一） - zxt0601的博客 - CSDN博客](http://blog.csdn.net/zxt0601/article/details/61614799)
+
 
 [【推荐】拆 JakeWharton 系列一之 RxAndroid](https://mp.weixin.qq.com/s/We2Eq5xUW7hQxSDThRn6rw)
 

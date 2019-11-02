@@ -29,6 +29,9 @@ https://www.jianshu.com/p/f1f17f816d1d
 Glide v4 : 下载和设置
 https://muyangmin.github.io/glide-docs-cn/doc/download-setup.html#proguard
 
+Glide 架构设计艺术
+https://mp.weixin.qq.com/s/D5wCbV4ra_w2jkLXtb1l7Q
+
 换肤
 潇风寒月 - CSDN博客
 https://blog.csdn.net/xfhy_
