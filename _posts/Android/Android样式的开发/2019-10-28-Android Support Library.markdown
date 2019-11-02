@@ -215,3 +215,9 @@ v8 renderscript library
 [Android Support Library详细介绍 - 简书](https://www.jianshu.com/p/a5aa5f209895)
 
 [Android Support 包里究竟有什么 - Jsoh的博客专栏 - CSDN博客](https://blog.csdn.net/u010015108/article/details/52459890)
+
+Android Support 库传记 - 云在千峰
+http://blog.chengyunfeng.com/?p=1047
+
+Android Support 库：SortedList - 云在千峰
+http://blog.chengyunfeng.com/?p=1058

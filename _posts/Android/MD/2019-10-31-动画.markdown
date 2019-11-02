@@ -28,6 +28,9 @@ https://juejin.im/post/58edfa7bb123db43cc3708af
 Android 5.X 新特性详解（四）——Material Design 动画效果 - 黄飞的专栏 - CSDN博客
 https://blog.csdn.net/tw19911005/article/details/51645995
 
+[IO17]Support 库之 符合物理规律的动画 - 云在千峰
+http://blog.chengyunfeng.com/?p=1062
+
 
 
 
