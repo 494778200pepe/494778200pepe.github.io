@@ -30,3 +30,7 @@ http://blog.chengyunfeng.com/?p=1009
 
 // 通过RxJava实现的选择手机相册来获取多媒体的工具RxFile。
 [RxFile 一款选择多媒体文件精巧的工具类 - 简书](https://www.jianshu.com/p/eeba39f7df0a)
+
+[Android 一些RxBinding使用场景](https://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650822145&idx=1&sn=24a1d455a1c38d5481ba3245859d6c40&chksm=80b7829fb7c00b89850c85751648125b1e7ea47400d4bce5fb16e154a0d77f37c22552ec00c6&mpshare=1&scene=23&srcid=02245lRvXAlNLAWDkGKoTcUR#rd)
+
+

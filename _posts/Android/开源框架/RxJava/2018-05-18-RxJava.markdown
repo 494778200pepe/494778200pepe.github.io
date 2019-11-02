@@ -15,23 +15,16 @@ description: 『 RxJava系列一 』
 
 
 
-RxJava 参考资源 - 云在千峰
-http://blog.chengyunfeng.com/?p=985
+[RxJava 参考资源 - 云在千峰](http://blog.chengyunfeng.com/?p=985)
 
-Intro To RxJava 系列教程 总结 - 云在千峰
-http://blog.chengyunfeng.com/?p=983
+[Intro To RxJava 系列教程 总结 - 云在千峰](http://blog.chengyunfeng.com/?p=983)
 
-
-RxJava（十五）RxJava线程的自由切换 - Chiclaim - CSDN博客
-https://blog.csdn.net/johnny901114/article/details/80032801
+[RxJava（十五）RxJava线程的自由切换 - Chiclaim - CSDN博客](https://blog.csdn.net/johnny901114/article/details/80032801)
 
 [RxJava开发精要8 - 与REST无缝结合-RxJava和Retrofit - CSDN博客](https://blog.csdn.net/bboyfeiyu/article/details/50512464)
 
 [专栏：RxJava详解 - CSDN博客](https://blog.csdn.net/column/details/20176.html)
 
-
-
-[可能是东半球最全的RxJava使用场景小结 - CSDN博客](https://blog.csdn.net/theone10211024/article/details/50435325)
 
 [lzyzsd/Awesome-RxJava: RxJava resources](https://github.com/lzyzsd/Awesome-RxJava)
 
@@ -44,10 +37,7 @@ https://blog.csdn.net/johnny901114/article/details/80032801
 [RxJava入门七问（一） - Android_Study_OK的博客 - 博客频道 - CSDN.NET](http://blog.csdn.net/android_study_ok/article/details/51934191)
 
 
-
 [【推荐】拆 JakeWharton 系列一之 RxAndroid](https://mp.weixin.qq.com/s/We2Eq5xUW7hQxSDThRn6rw)
-
-[Android 一些RxBinding使用场景](https://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650822145&idx=1&sn=24a1d455a1c38d5481ba3245859d6c40&chksm=80b7829fb7c00b89850c85751648125b1e7ea47400d4bce5fb16e154a0d77f37c22552ec00c6&mpshare=1&scene=23&srcid=02245lRvXAlNLAWDkGKoTcUR#rd)
 
 
 
