@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "RxJava - 实战"
+date:   2019-11-02 11:17:00 +0800
+categories: Android
+tags: RxJava
+author: pepe
+description: 『 实战 』
+---
+
+RxJava2 实战知识梳理(1) - 后台执行耗时操作，实时通知 UI 更新 - 简书
+https://www.jianshu.com/p/c935d0860186

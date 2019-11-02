@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "RxJava - 其他"
+date:   2019-11-02 11:19:00 +0800
+categories: Android
+tags: RxJava
+author: pepe
+description: 『 其他 』
+---
+
+
+
+用RxJava实现事件总线(Event Bus) - 简书
+https://www.jianshu.com/p/ca090f6e2fe2
+
+Android消息传递之基于RxJava实现一个EventBus - RxBus - 总李写代码 - 博客园
+https://www.cnblogs.com/whoislcj/p/5816992.html
+
+RxJava2开发小记：用CompositeDisposable来“安排”Retrofit网络请求 - 倚竹幽篁 - CSDN博客
+https://blog.csdn.net/ysy950803/article/details/84930656
+
+
+// 通过RxJava实现的选择手机相册来获取多媒体的工具RxFile。
+[RxFile 一款选择多媒体文件精巧的工具类 - 简书](https://www.jianshu.com/p/eeba39f7df0a)

@@ -11,9 +11,11 @@ description: 『 NestedScrollView 』
 Material Design系列教程（5） - NestedScrollView - 简书
 https://www.jianshu.com/p/f55abc60a879
 
+Android 嵌套滑动机制（NestedScrolling） - Gemini @ SegmentFault - SegmentFault 思否
+https://segmentfault.com/a/1190000002873657
 
-
-
+NestedScrollView的使用 - mChenys的博客 - CSDN博客
+https://blog.csdn.net/mchenys/article/details/51541306
 
 
 

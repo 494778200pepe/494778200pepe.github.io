@@ -11,3 +11,5 @@ description: 『 错误处理 』
 
 
 
+【译】对RxJava中.repeatWhen()和.retryWhen()操作符的思考 - 简书
+https://www.jianshu.com/p/023a5f60e6d0

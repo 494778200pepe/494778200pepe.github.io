@@ -8,11 +8,24 @@ author: pepe
 description: 『 RxJava系列一 』
 ---
 
+[给 Android 开发者的 RxJava 详解](http://gank.io/post/560e15be2dca930e00da1083)
+
+[rengwuxian/RxJavaSamples: RxJava 2 和 Retrofit 结合使用的几个最常见使用方式举例](https://github.com/rengwuxian/RxJavaSamples)
+
+
+
+
+
+
+
+RxJava（十五）RxJava线程的自由切换 - Chiclaim - CSDN博客
+https://blog.csdn.net/johnny901114/article/details/80032801
+
 [RxJava开发精要8 - 与REST无缝结合-RxJava和Retrofit - CSDN博客](https://blog.csdn.net/bboyfeiyu/article/details/50512464)
 
 [专栏：RxJava详解 - CSDN博客](https://blog.csdn.net/column/details/20176.html)
 
-[给 Android 开发者的 RxJava 详解](http://gank.io/post/560e15be2dca930e00da1083)
+
 
 [可能是东半球最全的RxJava使用场景小结 - CSDN博客](https://blog.csdn.net/theone10211024/article/details/50435325)
 

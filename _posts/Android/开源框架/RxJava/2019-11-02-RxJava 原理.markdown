@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "RxJava - 原理"
+date:   2019-11-02 11:18:00 +0800
+categories: Android
+tags: RxJava
+author: pepe
+description: 『 原理 』
+---
+
+深入理解 RxJava2：Scheduler（2） - 简书
+https://www.jianshu.com/p/b742526c7dec
+
+[RxJava2 源码解析（一） - zxt0601的博客 - CSDN博客](http://blog.csdn.net/zxt0601/article/details/61614799)
+
+
+
+
+
+
+
+
