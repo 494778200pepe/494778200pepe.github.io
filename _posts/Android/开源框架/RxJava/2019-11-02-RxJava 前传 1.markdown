@@ -38,7 +38,8 @@ public class Cat implements Comparable<Cat>{
 
 我们的 API 将会使用来自 cat-sdk.jar 中的阻塞风格的接口。
 
-```public interface Api {
+```
+public interface Api {
     List<Cat> queryCats(String query);
     Uri store(Cat cat);
 }
