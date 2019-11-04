@@ -8,45 +8,39 @@ author: pepe
 description: 『 Glide 』
 ---
 
-Glide - 开始！ - 简书
-https://www.jianshu.com/p/9341dfc7ccdc
+[Glide - 开始！ - 简书](https://www.jianshu.com/p/9341dfc7ccdc)
 
-深入理解Glide - 简书
-https://www.jianshu.com/p/7c72e040087c?utm_campaign=hugo&utm_medium=reader_share&utm_content=note&utm_source=weixin-timeline
+[深入理解Glide - 简书](https://www.jianshu.com/p/7c72e040087c?utm_campaign=hugo&utm_medium=reader_share&utm_content=note&utm_source=weixin-timeline)
 
-Google推荐的图片加载库Glide介绍 - 泡在网上的日子
-http://jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0327/2650.html
+[Google推荐的图片加载库Glide介绍 - 泡在网上的日子](http://jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0327/2650.html)
 
-Glide使用简介及流程分析 - 简书
-https://www.jianshu.com/p/7125feef0ddf
+[Glide使用简介及流程分析 - 简书](https://www.jianshu.com/p/7125feef0ddf)
 
-Glide 源码学习,了解 Glide 图片加载原理 - 简书
-https://www.jianshu.com/p/9d8aeaa5a329
+[Glide 源码学习,了解 Glide 图片加载原理 - 简书](https://www.jianshu.com/p/9d8aeaa5a329)
 
-Glide4.0集成及使用注意事项 - 简书
-https://www.jianshu.com/p/f1f17f816d1d
+[Glide4.0集成及使用注意事项 - 简书](https://www.jianshu.com/p/f1f17f816d1d)
 
-Glide v4 : 下载和设置
-https://muyangmin.github.io/glide-docs-cn/doc/download-setup.html#proguard
+[Glide v4 : 下载和设置](https://muyangmin.github.io/glide-docs-cn/doc/download-setup.html#proguard)
 
-Glide 架构设计艺术
-https://mp.weixin.qq.com/s/D5wCbV4ra_w2jkLXtb1l7Q
+[Glide 架构设计艺术](https://mp.weixin.qq.com/s/D5wCbV4ra_w2jkLXtb1l7Q)
 
 换肤
 潇风寒月 - CSDN博客
 https://blog.csdn.net/xfhy_
 
 
-| Glide | [Glide  - 系列综述 - 傅圆的博客]（https://mrfu.me/2016/02/28/Glide_Series_Roundup/）
-| Glide | [Google推荐的图片加载库Glide介绍 -  fancychendong的专栏 - 博客频道 -  CSDN.NET]（http://blog.csdn.net/fancylovejava/article/details/44747759）
-| Glide | [Google推荐的图片加载库Glide介绍 - 泡在网上的日子]（http://jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0327/2650.html）
-| Glide | [如何使用NodeJS获取图片的显色代码]（https://futurestud.io/tutorials/how-to-get-dominant-color-code-for-picture-with-nodejs）
-| Glide | [Glide使用简介及流程分析 - 简书]（http://www.jianshu.com/p/7125feefdddf）
-|滑翔| [开始新的系列，滑音的基本用法]（https://mp.weixin.qq.com/s/ccr1wqRYvZkVpeUT_V6fXQ）
-| Glide | [Glide源码详解]（https://mp.weixin.qq.com/s/m3L9aDC50Tt44Uur8-Qc5A）
-| Glide | [Android Glide库使用，一句话完成图片加载，gif，高斯模糊等&&【菜鸟窝的三个实战项目推荐】]（https://mp.weixin.qq.com/s/RjkZAo77qxmc_zVlGaA2cQ）
-|滑翔| [滑翔系列第二弹，从源码的角度深入理解滑翔的执行流程]（https://mp.weixin.qq.com/s/BRPQso58hJ0B3un9w1is_g）
-|滑翔| [开始新的系列，滑音的基本用法]（https://mp.weixin.qq.com/s/ccr1wqRYvZkVpeUT_V6fXQ）
+[Glide  - 系列综述 - 傅圆的博客](https://mrfu.me/2016/02/28/Glide_Series_Roundup/)
+[Google推荐的图片加载库Glide介绍 -  fancychendong的专栏 - 博客频道 -  CSDN.NET](http://blog.csdn.net/fancylovejava/article/details/44747759)
+[Google推荐的图片加载库Glide介绍 - 泡在网上的日子](http://jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0327/2650.html)
+[如何使用NodeJS获取图片的显色代码](https://futurestud.io/tutorials/how-to-get-dominant-color-code-for-picture-with-nodejs)
+[Glide使用简介及流程分析 - 简书](http://www.jianshu.com/p/7125feefdddf)
+
+[开始新的系列，滑音的基本用法](https://mp.weixin.qq.com/s/ccr1wqRYvZkVpeUT_V6fXQ)
+[Glide源码详解](https://mp.weixin.qq.com/s/m3L9aDC50Tt44Uur8-Qc5A)
+[Android Glide库使用，一句话完成图片加载，gif，高斯模糊等&&【菜鸟窝的三个实战项目推荐】](https://mp.weixin.qq.com/s/RjkZAo77qxmc_zVlGaA2cQ)
+
+ [滑翔系列第二弹，从源码的角度深入理解滑翔的执行流程](https://mp.weixin.qq.com/s/BRPQso58hJ0B3un9w1is_g)
+ [开始新的系列，滑音的基本用法](https://mp.weixin.qq.com/s/ccr1wqRYvZkVpeUT_V6fXQ)
 
 
 
