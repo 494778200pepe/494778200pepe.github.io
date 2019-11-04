@@ -10,4 +10,37 @@ description: 『 创建操作符 』
 
 
 
+All RxJava - 为Retrofit添加重试 - 简书
+https://www.jianshu.com/p/fca90d0da2b5
+
+【译】使用RxJava实现延迟订阅 - 简书
+https://www.jianshu.com/p/c83996149f5b
+
+【译】RxJava变换操作符：.concatMap( )与.flatMap( )的比较 - 简书
+https://www.jianshu.com/p/6d16805537ef
+
+【译】使用RxJava从多个数据源获取数据 - 简书
+https://www.jianshu.com/p/be084df924dc
+
+【译】在正确的线程上观察数据流 - 简书
+https://www.jianshu.com/p/72911b9ba2d7
+
+【译】避免打断链式结构：使用.compose( )操作符 - 简书
+https://www.jianshu.com/p/e9e03194199e
+
+(1条消息)Android RxJava使用介绍（四） RxJava的操作符 - 呼啸而过的专栏 - CSDN博客
+https://blog.csdn.net/Job_Hesc/article/details/46612015
+
+Architecting Android with RxJava - 简书
+https://www.jianshu.com/p/943ceaccfdff
+
+RxWeekend——RxJava周末狂欢 - 简书
+https://www.jianshu.com/p/ce228f517586
+
+
+
+
+
+
+
 
