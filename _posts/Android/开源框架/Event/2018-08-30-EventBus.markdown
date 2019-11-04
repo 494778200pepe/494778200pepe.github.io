@@ -10,6 +10,15 @@ description: 『 EventBus 』
 
 [Android EventBus 的源码解析](https://mp.weixin.qq.com/s/pZAbNe1pE1_JUUv4j9KAow)
 
+EventBus源码研读(上)|开源实验室
+https://www.kymjs.com/code/2015/12/12/01/
 
+事件总线 EventBus的设计 - small.ming - 博客园
+https://www.cnblogs.com/MartinChen999/archive/2011/12/21/2294034.html
 
+(1条消息)Android 框架炼成 教你如何写组件间通信框架EventBus - Hongyang - CSDN博客
+https://blog.csdn.net/lmj623565791/article/details/41096639
+
+(1条消息)快速Android开发系列通信篇之EventBus - AngelDevil的专栏 - CSDN博客
+https://blog.csdn.net/andevil/article/details/28270607
 
