@@ -40,6 +40,13 @@ https://github.com/jeasonlzy/ImagePicker
 
 
 
+＃图片框架
+|  -  |  - 
+|  -  |  - 
+|图片框架| [网络图片加载的封装【从零开始搭建android框架系列（4）】 - 简书]（http://www.jianshu.com/p/e26130a93289?utm_campaign=hugo&utm_medium=reader_share&utm_content=note&utm_source=qq ）
+|图片框架| [Android三大图片缓存原理，设计，分层，特性上对比]（http://www.trinea.cn/android/android-image-cache-compare/）
+|图片框架| [Android的一整套图片解决方案]（http://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650820998&idx=1&sn=c9670674dcfb71a24521e898776f234e&scene=1&srcid=0905pKhAxMgRiscCSAaZEp1F#rd）
+|图片框架| [一款好用的图片选择器 - 简书]（http://www.jianshu.com/p/4cec5c50dd41）
 
 
 
