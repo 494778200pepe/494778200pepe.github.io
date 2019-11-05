@@ -12,9 +12,11 @@ description: 『 Glide 使用 』
 
 [Glide v4 : 下载和设置](https://muyangmin.github.io/glide-docs-cn/doc/download-setup.html#proguard)
 
-[Glide使用简介及流程分析](https://blog.csdn.net/l_215851356/article/details/78617875)
+[Glide使用简介及流程分析 - 简书](https://www.jianshu.com/p/7125feef0ddf)
 
 [Android图片加载框架最全解析（二），从源码的角度理解Glide的执行流程 - 郭霖的专栏 - CSDN博客](https://blog.csdn.net/guolin_blog/article/details/53939176)
+
+[Glide-入门教程 - 夏雨 - CSDN博客](https://blog.csdn.net/yulyu/article/details/55053099)
 
 
 
