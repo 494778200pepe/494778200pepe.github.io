@@ -20,18 +20,20 @@ description: 『 Glide 』
 
 [Glide4.0集成及使用注意事项 - 简书](https://www.jianshu.com/p/f1f17f816d1d)
 
+各种ransformations：
+
+[wasabeef/glide-transformations: An Android transformation library providing a variety of image transformations for Glide.](https://github.com/wasabeef/glide-transformations)
 
 
 
 
+* 缓存的实现
+* 不同大小的图片的缓存
+* EventBus 和 Glide 关于优先级的设计
+* 缩略图的实现
+* 对自定义View的支持
+* 对OkHttp 和 Volley 的支持  如何实现的
 
-缓存的实现
-不同大小的图片的缓存
-EventBus 和 Glide 关于优先级的设计
-缩略图的实现
-对自定义View的支持
-对OkHttp 和 Volley 的支持  如何实现的
-各种ransformations：[wasabeef/glide-transformations: An Android transformation library providing a variety of image transformations for Glide.](https://github.com/wasabeef/glide-transformations)
 
 
 

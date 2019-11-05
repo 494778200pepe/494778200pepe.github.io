@@ -39,3 +39,9 @@ Gank.lu
 
 一之
 [Horrarndoo - 简书](https://www.jianshu.com/u/5c92e4ae9dc3)
+
+wasabeef/awesome-android-ui: A curated list of awesome Android UI/UX libraries
+https://github.com/wasabeef/awesome-android-ui
+
+Android-五子连珠-慕课网
+http://www.imooc.com/learn/641#0-tsina-1-6935-397232819ff9a47a7b7e80a40613cfe1
