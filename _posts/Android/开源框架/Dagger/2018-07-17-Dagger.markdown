@@ -8,7 +8,7 @@ author: pepe
 description: 『 Dagger 』
 ---
 
-[Annotation - CSDN博客](https://blog.csdn.net/qq_20198405/article/details/54892007)
+
 
 [Dagger2新版注解及源码解析 - 简书](https://www.jianshu.com/p/67fb36a3e43b)
 

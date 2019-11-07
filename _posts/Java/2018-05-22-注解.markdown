@@ -40,6 +40,8 @@ description: 『 注解 』
 
 参考:
 
+[Annotation - CSDN博客](https://blog.csdn.net/qq_20198405/article/details/54892007)
+
 Java基础---注解 - qq_20198405的博客 - CSDN博客
 https://blog.csdn.net/qq_20198405/article/details/51842727
 

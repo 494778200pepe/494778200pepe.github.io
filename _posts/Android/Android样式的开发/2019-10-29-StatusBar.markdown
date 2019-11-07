@@ -56,7 +56,13 @@ description: 『 StatusBar 』
 [从0到1优雅实现沉浸式状态栏 - Android 大强哥的博客 - CSDN博客](https://blog.csdn.net/u013541140/article/details/100065336)
 
 
-
+＃状态栏
+|  -  |  - 
+|  -  |
+|状态栏| [android状态栏一体化（沉浸式状态栏） - 享受技术带来的快乐 - 博客频道 -  CSDN.NET]（http://blog.csdn.net/jdsjlzx/article/details/41643587）
+|状态栏| [android状态栏一体化（沉浸式状态栏） - 享受技术带来的快乐 - 博客频道 -  CSDN.NET]（http://blog.csdn.net/jdsjlzx/article/details/41643587）
+|状态栏| [StatusBarUtil状态栏工具类（实现沉浸式状态栏/变色状态栏）]（http://jaeger.itscoder.com/android/2016/03/27/statusbar-util.html）
+|状态栏| [Android的系统更改状态栏字体颜色（http://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=404300912&idx=2&sn=89e980f83d5b2643d4d2f5fe84b151ef&scene=23&srcid=0331ICBb9FV6W3McZyDKlQv3#rd）
 
 
 
