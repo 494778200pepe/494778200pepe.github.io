@@ -14,3 +14,11 @@ description: 『 换肤 』
 Android-实用的App换肤功能-慕课网
 http://www.imooc.com/learn/782
 
+＃换肤
+|  -  |  - 
+|  -  |
+|换肤| [Android高仿腾讯旗下app的皮肤加载技术 - 希尔瓦娜斯女神 - 博客园]（http://www.cnblogs.com/punkisnotdead/p/5082932.html#3461534）
+|换肤| [开源中国源码学习（五） - 切换皮肤（日间模式和夜间模式） -  ZhangGeng的博客 - 博客频道 -  CSDN.NET]（http://blog.csdn.net/watermusicyes/article/细节/ 47392949）
+|换肤| [Android的夜间模式最佳实践（http://mp.weixin.qq.com/s?__biz=MzA4MjU5NTY0NA==&mid=401740657&idx=1&sn=8e6727fbe094ea42d5fd80b185a49395#rd）
+
+

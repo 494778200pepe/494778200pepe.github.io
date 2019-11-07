@@ -20,3 +20,5 @@ description: 『 Dagger 』
 
 [Dagger2.1不是Dagger2 - 简书](https://www.jianshu.com/p/77f47bd2409e)
 
+Android - Dagger2使用详解 - 简书
+https://www.jianshu.com/p/2cd491f0da01

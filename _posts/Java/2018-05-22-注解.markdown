@@ -7,6 +7,7 @@ tags: Java基础
 author: pepe
 description: 『 注解 』
 ---
+### **@Retention(CLASS)**
 
 * 1、RetentionPolicy.SOURCE：注解只保留在源文件，当Java文件编译成class文件的时候，注解被遗弃；
 
@@ -14,7 +15,7 @@ description: 『 注解 』
 
 * 3、RetentionPolicy.RUNTIME：注解不仅被保存到class文件中，jvm加载class文件之后，仍然存在，可以通过反射拿到该注解。
 
-
+### **@Target(FIELD)**
 
 * ElementType.CLASS：类，接口或对象，注解类也包括在内。
 * ElementType.ANNOTATION_CLASS：只有注解类。
@@ -33,6 +34,11 @@ description: 『 注解 』
 * ElementType.TYPEALIAS：@SinceKotlin("1.1") 类型别名，Kotlin1.1已可用。
 
 
+### **@Inherited**
+
+该注解是可继承的
+
+参考:
 
 Java基础---注解 - qq_20198405的博客 - CSDN博客
 https://blog.csdn.net/qq_20198405/article/details/51842727

@@ -19,6 +19,14 @@ https://www.cnblogs.com/flyinggod/p/8707883.html
 https://www.jianshu.com/p/e2866af44236
 
 
+＃二维码
+|  -  |
+|  -  |
+|二维码| [Android扫描二维码的实现（简化zxing） -  Gemini @SegmentFault  -  SegmentFault]（https://segmentfault.com/a/1190000003945592）
+|二维码| [一款好用的二维码扫描组件 - 简书]（http://www.jianshu.com/p/d01ddc8e2a16）
+|二维码| GitHub  -  yushiwo / QrScan
+
+
 
 
 
