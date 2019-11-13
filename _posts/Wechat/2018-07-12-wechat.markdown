@@ -2,8 +2,8 @@
 layout: post
 title:  "wechat"
 date:   2018-06-27 19:56:00 +0800
-categories: 小程序
-tags: Wechat
+categories: Wechat
+tags: 小程序
 author: pepe
 description: 『 wechat 』
 ---
