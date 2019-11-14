@@ -2,7 +2,7 @@
 layout: post
 title:  "装饰设计模式"
 date:   2018-08-19 23:52:00 +0800
-categories: Java
+categories: designpatterns
 tags: 设计模式
 author: pepe
 description: 『 装饰设计模式 』

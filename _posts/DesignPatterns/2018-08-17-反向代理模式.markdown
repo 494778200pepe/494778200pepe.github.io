@@ -2,7 +2,7 @@
 layout: post
 title:  "反向代理模式"
 date:   2018-08-17 16:39:00 +0800
-categories: Java
+categories: designpatterns
 tags: 设计模式
 author: pepe
 description: 『 反向代理模式 』

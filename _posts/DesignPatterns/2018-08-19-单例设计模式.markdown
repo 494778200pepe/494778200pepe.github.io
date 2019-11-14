@@ -2,7 +2,7 @@
 layout: post
 title:  "单例设计模式一"
 date:   2018-08-19 23:43:00 +0800
-categories: Java
+categories: designpatterns
 tags: 设计模式
 author: pepe
 description: 『 单例设计模式一 』

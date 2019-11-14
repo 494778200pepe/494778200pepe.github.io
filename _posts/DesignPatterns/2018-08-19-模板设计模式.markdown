@@ -2,7 +2,7 @@
 layout: post
 title:  "模板设计模式"
 date:   2018-08-19 23:53:00 +0800
-categories: Java
+categories: designpatterns
 tags: 设计模式
 author: pepe
 description: 『 模板设计模式 』
