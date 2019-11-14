@@ -19,6 +19,7 @@ kotlin: Kotlin
 success: Success
 wechat: wechat
 other: Other
+designpatterns: DesignPatterns
 hencoder: HenCoder
 thanks: " , Powered by"
 page: Page
