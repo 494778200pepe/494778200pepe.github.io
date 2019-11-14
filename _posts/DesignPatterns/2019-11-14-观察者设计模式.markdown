@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "观察者设计模式"
+date:   2019-11-14 10:02:00 +0800
+categories: designpatterns
+tags: 设计模式
+author: pepe
+description: 『 观察者设计模式 』
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
