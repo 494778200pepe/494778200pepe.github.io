@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="well article">
 {% assign trans = site.data.values[site.lan] %}
-{% for link in site.data.tag.wechat %}
+{% for link in site.data.tag.designpatterns %}
     <h2>{{ link.title }}</h2>
     <ul>
         {% for post in site.tags[link.title] %}
