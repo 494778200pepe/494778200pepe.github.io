@@ -1,0 +1,63 @@
+---
+layout: post
+title:  "数学中log"
+date:   2019-11-15 09:25:00 +0800
+categories: Algorithm
+tags: Algorithm
+author: pepe
+description: 『 数学中log 』
+---
+
+常见的时间复杂度量级有：
+
+* 常数阶O(1)
+
+* 对数阶O(logN)
+
+* 线性阶O(n)
+
+* 线性对数阶O(nlogN)
+
+* 平方阶O(n²)
+
+* 立方阶O(n³)
+
+* K次方阶O(n^k)【n的k次方，符号不会敲】
+
+* 指数阶(2^n)
+
+上面从上至下依次的时间复杂度越来越大，执行的效率越来越低。
+
+
+参考：
+
+[算法的时间与空间复杂度（一看就懂） - 不止思考 - CSDN博客](https://blog.csdn.net/jsjwk/article/details/84315770)
+
+[算法时间复杂度计算方式 - yq272393925的博客 - CSDN博客](https://blog.csdn.net/yq272393925/article/details/89146451)
+
+[算法—时间复杂度 - 千里android - CSDN博客](https://blog.csdn.net/user11223344abc/article/details/81485842)
+
+[算法复杂度分析 - 匠心十年 - 博客园](https://www.cnblogs.com/gaochundong/p/complexity_of_algorithms.html)
+
+[评估算法及算法的时间复杂度](https://baijiahao.baidu.com/s?id=1609024533531824968&wfr=spider&for=pc)
+
+[如何计算时间算法复杂度 - Com_ice的博客 - CSDN博客](https://blog.csdn.net/Com_ice/article/details/79025117)
+
+[算法系列之六 算法时间复杂度计算 - reposkeeper - 博客园](https://www.cnblogs.com/reposkeeper-wx/p/suan-fa-xi-lie-zhi-liu-suan-fa-shi-jian-fu-za-du-j.html)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
