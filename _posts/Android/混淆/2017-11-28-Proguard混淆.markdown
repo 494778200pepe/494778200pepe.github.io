@@ -195,6 +195,9 @@ buildTypes {
 
 参考：
 
+微信资源混淆AndResGuard源码解析(一) - Cc1over的博客 | C1☆ Blog
+https://cc1over.github.io/2019/08/08/%E5%BE%AE%E4%BF%A1%E8%B5%84%E6%BA%90%E6%B7%B7%E6%B7%86AndResGuard%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/
+
 一篇文章带你领略Android混淆的魅力 - 掘金
 https://juejin.im/post/5d1717996fb9a07eeb13bc95
 
