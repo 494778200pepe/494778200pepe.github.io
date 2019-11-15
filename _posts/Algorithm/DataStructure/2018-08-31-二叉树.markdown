@@ -3,7 +3,7 @@ layout: post
 title:  "二叉树"
 date:   2018-08-31 17:11:00 +0800
 categories: Algorithm
-tags: Algorithm
+tags: DataStructure
 author: pepe
 description: 『 二叉树 』
 ---
