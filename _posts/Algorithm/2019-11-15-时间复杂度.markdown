@@ -100,11 +100,67 @@ n = 2^k；
 k则是以2为底，n的对数，就是Log2N；
 那么二分查找的时间复杂度就是O(Log2N)；
  
+#### **（3）O(n)：线性阶，如n个数内找最大值。操作的数量与输入数据的规模 n 成正比。n = 10,000 -> 5000 operations**
 
+![Algorithm_time1]({{ site.baseurl }}/assets/images/Algorithm/Algorithm_time1.png)
 
+这一类算法中操作次数和n正比线性增长。
 
+#### **（4）O(nlogn)：对数阶，如快速排序算法**
 
+上面看了二分查找，是LogN的（LogN没写底数默认就是Log2N)；
+线性对数阶就是在LogN的基础上多了一个线性阶；
+比如这么一个算法流程：
+数组a和b，a的规模为n，遍历的同时对b进行二分查找，如下代码：
 
+```
+for(int i =0;i<n;i++)
+{
+    binary_search(b);
+}
+
+```
+
+#### **（5）O(n^2)：平方阶，如选择排序，冒泡排序。操作的数量与输入数据的规模 n 的比例为二次平方。n = 500 -> 250,000 operations**
+
+```
+	long SumMN(int n, int m)
+    {
+      long sum = 0;
+      for (int x = 0; x < n; x++)
+        for (int y = 0; y < m; y++)
+          sum += x * y;
+      return sum;
+    }
+```
+
+#### **（6）O(n^3)：立方阶，如两个n阶矩阵的乘法运算。操作的数量与输入数据的规模 n 的比例为三次方。n = 200 -> 8,000,000 operations**
+
+```
+long SumMNK(int n, int m,int k)
+    {
+      long sum = 0;
+      for (int x = 0; x < n; x++)
+        for (int y = 0; y < m; y++)
+          for(int z=0;z<k;z++)
+
+           sum += x * y*z;
+      return sum;
+    }
+```
+
+#### **（7）O(2^n)：指数阶，如n个元素集合的所有子集的算法。指数级的操作，快速的增长。n = 20 -> 1048576 operations**
+
+```
+long long Fib(long long N)
+{
+	return (N < 3) ? 1 : Fib(N - 1) + Fib(N - 2);
+}
+```
+
+![Algorithm_time2]({{ site.baseurl }}/assets/images/Algorithm/Algorithm_time2.png)
+
+#### **（8）O(n!)：阶乘阶，如n个元素全部排列的算法**
 
 
 
