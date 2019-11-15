@@ -11,6 +11,17 @@
                 {% endif %}
             {% endfor %}
     </p>
+	<p>
+            {% for thank in site.data.thanks %}
+                <a href="{{ thank.url }}">
+                {{ thank.title }}
+                </a>
+                <!-- not the last, output a ',' -->
+                {% if forloop.last == false %}
+                ,
+                {% endif %}
+            {% endfor %}
+    </p>
     <h5>匆匆太匆匆，几度夕阳红，心有千千结，窗外剪剪风!</h5>
 </div>
 
