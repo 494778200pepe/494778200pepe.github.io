@@ -70,11 +70,28 @@ b=temp;
 二分查找每次砍断一半，即为n/2；
 随着查询次数的提升，频度变化作表：
 
-查询次数     时间频度
-1     n/2
-2     n/2^2
-3     n/2^3
-k     n/2^k
+<table width="400" border="3" cellspacing="0" cellpadding="0">
+    <tr>
+        <td>查询次数</td>
+        <td>时间频度</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>n/2</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>n/2^2</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>n/2^3</td>
+    </tr>  
+	<tr>
+        <td>k</td>
+        <td>n/2^k</td>
+    </tr> 	
+</table>
 
 当最后找到7的时候时间频度则是1；
 也就是:
