@@ -114,31 +114,26 @@ k则是以2为底，n的对数，就是Log2N；
 数组a和b，a的规模为n，遍历的同时对b进行二分查找，如下代码：
 
 ```
-for(int i =0;i<n;i++)
-{
+for(int i =0;i<n;i++){
     binary_search(b);
 }
-
 ```
 
 #### **（5）O(n^2)：平方阶，如选择排序，冒泡排序。操作的数量与输入数据的规模 n 的比例为二次平方。n = 500 -> 250,000 operations**
 
-```
-	long SumMN(int n, int m)
-    {
+long SumMN(int n, int m){
       long sum = 0;
       for (int x = 0; x < n; x++)
         for (int y = 0; y < m; y++)
           sum += x * y;
       return sum;
-    }
+}
 ```
 
 #### **（6）O(n^3)：立方阶，如两个n阶矩阵的乘法运算。操作的数量与输入数据的规模 n 的比例为三次方。n = 200 -> 8,000,000 operations**
 
 ```
-long SumMNK(int n, int m,int k)
-    {
+long SumMNK(int n, int m,int k){
       long sum = 0;
       for (int x = 0; x < n; x++)
         for (int y = 0; y < m; y++)
@@ -152,8 +147,7 @@ long SumMNK(int n, int m,int k)
 #### **（7）O(2^n)：指数阶，如n个元素集合的所有子集的算法。指数级的操作，快速的增长。n = 20 -> 1048576 operations**
 
 ```
-long long Fib(long long N)
-{
+long Fib(long long N){
 	return (N < 3) ? 1 : Fib(N - 1) + Fib(N - 2);
 }
 ```
