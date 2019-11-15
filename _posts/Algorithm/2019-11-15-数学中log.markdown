@@ -48,17 +48,21 @@ log(0)0 = y,那么y为任何数时对数式成立,同理log(1)1 = y也成立.
 因此规定是科学的.
 
 
+### **常用对数**
 
+![Logarithm1]({{ site.baseurl }}/assets/images/Algorithm/Logarithm1.png)
 
+### **自然对数**
 
+![Logarithm2]({{ site.baseurl }}/assets/images/Algorithm/Logarithm2.png)
 
+### **例1**
 
+![Logarithm3]({{ site.baseurl }}/assets/images/Algorithm/Logarithm3.png)
 
+### **例2**
 
-
-
-
-
+![Logarithm4]({{ site.baseurl }}/assets/images/Algorithm/Logarithm4.png)
 
 
 

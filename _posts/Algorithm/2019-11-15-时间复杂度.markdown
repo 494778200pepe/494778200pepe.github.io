@@ -121,13 +121,15 @@ for(int i =0;i<n;i++){
 
 #### **（5）O(n^2)：平方阶，如选择排序，冒泡排序。操作的数量与输入数据的规模 n 的比例为二次平方。n = 500 -> 250,000 operations**
 
-long SumMN(int n, int m){
-      long sum = 0;
-      for (int x = 0; x < n; x++)
-        for (int y = 0; y < m; y++)
-          sum += x * y;
-      return sum;
-}
+```
+    private static void 等差数列平方阶() {
+        int n = 100;
+        for (int i = 0; i < n; i++) {//执行n次
+            for (int j = i; j < n; j++) {//执行n - i次
+                System.out.println("哈哈");
+            }
+        }
+    }
 ```
 
 #### **（6）O(n^3)：立方阶，如两个n阶矩阵的乘法运算。操作的数量与输入数据的规模 n 的比例为三次方。n = 200 -> 8,000,000 operations**
