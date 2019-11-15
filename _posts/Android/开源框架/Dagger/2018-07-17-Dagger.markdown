@@ -22,3 +22,6 @@ description: 『 Dagger 』
 
 Android - Dagger2使用详解 - 简书
 https://www.jianshu.com/p/2cd491f0da01
+
+最简单的Dagger2入门教程 - 茅屋 - CSDN博客
+https://blog.csdn.net/lisdye2/article/details/51942511
