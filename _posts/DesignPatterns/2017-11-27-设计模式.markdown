@@ -9,14 +9,7 @@ description: 『 设计模式 』
 ---
 
    
-   
-### 模板方法模式Template  
 
-参考：
-
-[设计模式 ( 十九 ) 模板方法模式Template method（类行为型） - CSDN博客](http://blog.csdn.net/hguisu/article/details/7564039)
-
-[《JAVA与模式》之模板方法模式 - java_my_life - 博客园](https://www.cnblogs.com/java-my-life/archive/2012/05/14/2495235.html)
 
 大话设计模式
 
