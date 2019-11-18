@@ -140,7 +140,180 @@ public class Factory2 {
 }
 ```
 
+### **2.工厂方法模式(Factory Method)：定义一个用于创建对象的接口，让子类决定实例化哪一个类，使一个类的实例化延迟到其子类。**
 
+使用简单工厂方式使得工厂函数很难维护，而且请求者还需知道被实例化的类，而工厂方法模式可避免之。
+
+新建抽象工厂 IFactory，对于每个数据库都新建相应的工厂类，如MysqlFactory,OracleFactory实现IFactory，这样在新增一种数据库时，不必修改工厂类而造成破坏封闭原则。
+
+```
+public interface IFactory {
+    public  DataBase get();
+}
+```
+
+```
+class SqlFactory implements IFactory{
+       public DataBase get(){
+           return new Mysql();
+       }
+}
+class OracleFactory implements IFactory{
+    public DataBase get(){
+        return new Oracle();
+    }
+}
+ class SQLserverFactory implements IFactory{
+     public DataBase get(){
+        return new SQLServer();
+    }
+}
+ //测试  
+ public class FactoryMethod{ 
+     public static void main(String[] args){
+         DataBase d1=new SqlFactory().get();
+         d1.open();
+     }
+ }
+```
+
+* 问题1：如果数据库类型越来越多，将无限的增加工厂子类，使用者同样还是需要知道工厂子类的名称。
+
+* 问题2：在使用时数据库时可能还需与其他的类相关联，工厂方法模式无法解决。
+
+### **3.抽象工厂模式（Abstract Factory）：提供一个创建一系列相关或者相互依赖对象的接口，而无需指定它们具体的类。**
+
+场景：若在新建数据库连接时需指定方言，而且不同数据库的SQL语言也不相同的情况下。
+
+      组成元素：
+
+       1.方言类和接口，如图所示：
+
+  
+
+      2.之前的数据库类和接口
+
+     
+
+      3.operFactory抽象工厂
+
+复制代码
+public  abstract class operFactory{
+        private IDialect dialect;       
+        abstract void  add();
+        abstract void  delete();
+        abstract void  update();
+        public void setDialect(String classname){
+                IDialect cf=null;
+                try {
+                    cf=(IDialect)Class.forName(classname).newInstance();
+                    setDialect(cf);
+                } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+        }
+        public IDialect getDialect() {
+            return dialect;
+        }
+        public void setDialect(IDialect dialect) {
+            this.dialect = dialect;
+        }
+        
+}
+复制代码
+ 
+
+  4. MysqlFatory，OracleFactory（ 均继承上面的抽象工厂类）
+
+复制代码
+public class MysqlFatory extends operFactory {
+    @Override
+    void add() {    
+        System.out.println("使用的方言为："+this.getDialect().showDialect());
+        System.out.println("mysql add()");
+    }
+    @Override
+    void delete() {
+        System.out.println("使用的方言为："+this.getDialect().showDialect());
+        System.out.println("mysql delete()");
+    }
+    @Override
+    void update() {
+        System.out.println("使用的方言为："+this.getDialect().showDialect());
+        System.out.println("mysql update()");
+    }
+    
+    
+}
+public class OracleFactory extends operFactory {
+    @Override
+    void add() {
+        System.out.println("使用的方言为："+this.getDialect().showDialect());
+        System.out.println("Oracle add()");
+    }
+    @Override
+    void delete() {
+        System.out.println("使用的方言为："+this.getDialect().showDialect());
+        System.out.println("Oracle delete()");
+        
+    }
+    @Override
+    void update() {
+        System.out.println("使用的方言为："+this.getDialect().showDialect());
+        System.out.println("Oracle update()");
+        
+    }
+
+
+}
+复制代码
+ 
+
+      5.工厂构造器类 FactoryProducer 负责生成想要的数据库工厂。
+
+复制代码
+public class FactoryProducer {
+       public static operFactory getFactory(String class_name) {
+         operFactory cf=null;
+        try {
+            cf=(operFactory)Class.forName(class_name).newInstance();
+        } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return cf;    
+    }
+}
+复制代码
+ 
+
+  6.测试
+
+复制代码
+public static void main(String[] args){  
+          operFactory of2=FactoryProducer.getFactory(DatabaseFactoryType.MYSQL);
+          of2.setDialect(DialectType.MySQL5InnoDBDialect);
+          of2.update();
+          
+          operFactory of= FactoryProducer.getFactory(DatabaseFactoryType.ORALCE);
+          of.setDialect(DialectType.Oracle10gDialect);
+          of.add();
+      }
+复制代码
+ 
+
+ 结果：
+
+ 
+
+  总之抽象工厂总是关于创建一系列相关或相互有依赖的对象，以上例子中即DataBase对象与Dialect对象具有相关性。但是使用者要了解各种工厂和方言。
+
+三者区别：
+
+           简单工厂实现简单，扩展也很容易，但是会频繁修改工厂类代码，难以维护，在维护的时候容易引发新的BUG。
+
+           工厂方法模式则是把对象的实例化延迟到了继承的子类里面，这样就变成了扩展工厂，从而满足了“开闭”原则， 但是不支持产品切换，也就是只能满足一层的产品（算法）抽象，当需与其他对象合作时无能为力。
+
+            抽象工厂则是继续把产品进行再次抽象，最后得到一个可以支持产品切换的结构，但问题过于复杂，不过我们使用反射机制，可以弥补这个缺点，但是使用者却需要知道工厂的名称。
 
 参考:
 
