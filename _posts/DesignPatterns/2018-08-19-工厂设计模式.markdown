@@ -18,14 +18,133 @@ description: 『 工厂设计模式 』
 
 有一个由浅入深的过程：简单工厂模式 -> 工厂方法模式 -> 抽象工厂模式
 
+### **1.简单工厂模式：代替new产生对象，产品的类型比较少时。**
+
+      我们要获得三种不同的数据库对象，如Mysql,SQLserver,Oracle，它们拥有共同的特征，即可以进行抽象，简单工厂目的是将获得具体数据库实体的任务交给工厂类。
+
+ 接口DataBase：
+```
+public interface DataBase {
+         public void open();
+         public void close();
+}
+```
+ 类Mysql:
+```
+public class Mysql implements DataBase {
+    @Override
+    public void open() {
+        System.out.println("open mysql");    
+    }
+
+    @Override
+    public void close() {
+       System.out.println("close mysql");
+        
+    }
+}
+```
+类Oracle:
+```
+public class Oracle implements DataBase {
+    @Override
+    public void open() {
+       System.out.println("open Oracle");
+        
+    }
+    @Override
+    public void close() {
+      System.out.println("close Oracle");    
+    }
+}
+```
+类SQLserver:
+```
+public class SQLServer implements DataBase {
+    @Override
+    public void open() {
+     System.out.println("open SQLServer");    
+    }
+    @Override
+    public void close() {
+        System.out.println("close SQLServer");    
+    }
+}
+```
+ 
+
+工厂类及测试：
+
+```
+public class Factory {
+     public DataBase getDataBase(String Type){
+          if(Type == null){
+             return null;
+          }        
+          if(Type.equalsIgnoreCase("MYSQL")){
+             return new Mysql();
+          } else if(Type.equalsIgnoreCase("ORACLE")){
+             return new Oracle();
+          } else if(Type.equalsIgnoreCase("SQLSERVER")){
+             return new SQLServer();
+          }
+          return null;
+       }
+     @Test
+     public void test(){
+          Factory factory = new Factory();      
+          DataBase d1= factory.getDataBase("MYSQL");
+          d1.open();
+          DataBase d2= factory.getDataBase("ORACLE");
+          d2.open();
+          DataBase d3= factory.getDataBase("SQLSERVER");
+          d3.open();
+     }
+     
+}
+```
+特点： 如果要新增其他数据库，只需创建新数据库类实现功能接口，修改工厂类。
+
+* 问题1：根据“开闭原则”：对现有功能进行拓展，但不允许修改原有代码。很明显，这时简单工厂模式需多次修改工厂类。
+
+* 问题2：使用者实际使用时并不知道类名，他只知道有DataBase这个接口,使用这个接口就能创建对象，使用open()函数,当然实际中肯定还需传入用户名和密码等参数。
+
+针对问题2：可以使用枚举的方式，代码如下：
+
+```
+public class Factory2 {
+    enum DatabaseType{
+        MYSQL,
+        SQLSERVER,
+        ORACLE
+    } 
+    public static DataBase getDataBase(DatabaseType type){
+        switch(type){
+            case MYSQL:
+                return new Mysql();
+            case ORACLE:
+                return new Oracle();
+            case SQLSERVER:
+                return new SQLServer();
+            default:
+                throw new UnknownTypeException(null, type);
+        }
+    }
+   @Test
+   public void test(){
+       DataBase s1=Factory2.getDataBase(DatabaseType.MYSQL);
+       s1.open();
+       DataBase s2=Factory2.getDataBase(DatabaseType.ORACLE);
+       s2.open();
+   }
+}
+```
+
+
+
 参考:
 
-设计模式-三种工厂模式实例 - 落枕的向日葵 - 博客园
-https://www.cnblogs.com/erroranswer/p/9529364.html
-
-[Java开发之设计模式总结：工厂模式](https://baijiahao.baidu.com/s?id=1625606999883136508&wfr=spider&for=pc)
-
-[Java反射+简单工厂模式总结 - dashuai的博客 - 博客园](https://www.cnblogs.com/kubixuesheng/p/10344427.html)
+[设计模式-三种工厂模式实例 - 落枕的向日葵 - 博客园](https://www.cnblogs.com/erroranswer/p/9529364.html)
 
 [JAVA设计模式之工厂模式 - 我的小叮当 - 博客园](https://www.cnblogs.com/zuotongbin/p/11070691.html)
 
