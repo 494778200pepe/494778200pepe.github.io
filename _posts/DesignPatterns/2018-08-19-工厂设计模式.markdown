@@ -16,16 +16,18 @@ description: 『 工厂设计模式 』
 * BitmapFactory、XmlPullParserFactory、LayoutInflateFactory
 
 
+有一个由浅入深的过程：简单工厂模式 -> 工厂方法模式 -> 抽象工厂模式
+
 参考:
 
-Java开发之设计模式总结：工厂模式
-https://baijiahao.baidu.com/s?id=1625606999883136508&wfr=spider&for=pc
+设计模式-三种工厂模式实例 - 落枕的向日葵 - 博客园
+https://www.cnblogs.com/erroranswer/p/9529364.html
 
-Java反射+简单工厂模式总结 - dashuai的博客 - 博客园
-https://www.cnblogs.com/kubixuesheng/p/10344427.html
+[Java开发之设计模式总结：工厂模式](https://baijiahao.baidu.com/s?id=1625606999883136508&wfr=spider&for=pc)
 
-JAVA设计模式之工厂模式 - 我的小叮当 - 博客园
-https://www.cnblogs.com/zuotongbin/p/11070691.html
+[Java反射+简单工厂模式总结 - dashuai的博客 - 博客园](https://www.cnblogs.com/kubixuesheng/p/10344427.html)
+
+[JAVA设计模式之工厂模式 - 我的小叮当 - 博客园](https://www.cnblogs.com/zuotongbin/p/11070691.html)
 
 
 
