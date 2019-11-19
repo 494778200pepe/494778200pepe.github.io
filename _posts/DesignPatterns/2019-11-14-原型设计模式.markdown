@@ -8,9 +8,24 @@ author: pepe
 description: 『 原型设计模式 』
 ---
 
+Object类的clone方法只会拷贝对象中的基本的数据类型，对于数组、集合、容器对象、引用对象等都不会拷贝。
 
 
 
+
+
+
+
+
+
+
+
+
+保护性拷贝(defensive copy) - Benson的专栏 - CSDN博客
+https://blog.csdn.net/tounaobun/article/details/8607174
+
+设计模式之原型模式 - chenliguan的博客 - CSDN博客
+https://blog.csdn.net/chenliguan/article/details/69855738
 
 
 
