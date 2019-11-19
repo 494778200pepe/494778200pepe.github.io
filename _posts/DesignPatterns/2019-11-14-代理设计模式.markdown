@@ -39,8 +39,9 @@ description: 『 代理设计模式 』
 
 参考：
 
-【java设计模式】（3）---代理模式（案例解析） - 雨点的名字 - 博客园
-https://www.cnblogs.com/qdhxhz/p/9241412.html
+[设计模式：代理模式与装饰模式 - 小灯笼 - 博客园](https://www.cnblogs.com/doucheyard/p/5737366.html)
+
+[代理模式（案例解析） - 雨点的名字 - 博客园](https://www.cnblogs.com/qdhxhz/p/9241412.html)
 
 
 
