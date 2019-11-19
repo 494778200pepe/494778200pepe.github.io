@@ -170,7 +170,7 @@ public class Test {
 
 参考：
 
-[设计模式 | 策略模式及典型应用 - 简书](https://www.jianshu.com/p/3d6a0054931d)
+[设计模式 - 策略模式及典型应用 - 简书](https://www.jianshu.com/p/3d6a0054931d)
 
 
 
