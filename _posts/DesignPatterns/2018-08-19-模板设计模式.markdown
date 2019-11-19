@@ -34,8 +34,7 @@ description: 『 模板设计模式 』
 
 参考：
 
-模板方法设计模式 - hoje - 博客园
-https://www.cnblogs.com/hoje/p/8087144.html
+[模板方法设计模式 - hoje - 博客园](https://www.cnblogs.com/hoje/p/8087144.html)
 
 [设计模式 ( 十九 ) 模板方法模式Template method（类行为型） - CSDN博客](http://blog.csdn.net/hguisu/article/details/7564039)
 
