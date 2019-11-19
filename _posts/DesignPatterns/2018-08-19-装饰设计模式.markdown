@@ -20,8 +20,7 @@ description: 『 装饰设计模式 』
 
 参考：
 
-【java设计模式】（5）---装饰者模式（案例解析） - 雨点的名字 - 博客园
-https://www.cnblogs.com/qdhxhz/p/9251083.html
+[装饰者模式（案例解析） - 雨点的名字 - 博客园](https://www.cnblogs.com/qdhxhz/p/9251083.html)
 
 
 
