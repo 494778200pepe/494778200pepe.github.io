@@ -20,9 +20,127 @@ description: 『 策略设计模式 』
 
 * 而适配器模式是定义好接口的实现方式以及内部需要引用的类，客户端直接调用适配器的方法
 
+### **示例**
+
+抽象策略类  Discount，它是所有具体优惠算法的父类，定义了一个 discount 抽象方法
+
+```
+import lombok.Data;
+
+@Data
+public abstract class Discount {
+    protected double finalPrice;
+    protected String desc;
+
+    public Discount(String desc) {
+        this.desc = desc;
+    }
+
+    abstract double discount(double price);
+}
+```
+四种具体策略类，继承自抽象策略类 Discount，并在 discount 方法中实现具体的优惠算法
+```
+public class Dis9Discount extends Discount {
+    public Dis9Discount() {
+        super("打九折");
+    }
+
+    @Override
+    double discount(double price) {
+        finalPrice = price * 0.9;
+        return finalPrice;
+    }
+}
+
+public class Dis8Discount extends Discount{
+    public Dis8Discount() {
+        super("打八折");
+    }
+
+    @Override
+    double discount(double price) {
+        finalPrice = price * 0.8;
+        return finalPrice;
+    }
+}
+
+public class Cash10Discount extends Discount {
+    public Cash10Discount() {
+        super("返现10元");
+    }
+
+    @Override
+    public double discount(double price) {
+        this.finalPrice = price >= 10 ? price - 10 : 0;
+        return finalPrice;
+    }
+}
+
+public class NoneDiscount extends Discount {
+    public NoneDiscount() {
+        super("不参与优惠活动");
+    }
+
+    @Override
+    double discount(double price) {
+        finalPrice = price;
+        return finalPrice;
+    }
+}
+```
+环境类 Shopping，维护了一个 Discount 引用
+```
+public class Shopping {
+    private String goods;
+    private double price;
+    private Discount discount;
+
+    public Shopping(String goods, double price, Discount discount) {
+        this.goods = goods;
+        this.price = price;
+        this.discount = discount;
+    }
+
+    public double calculate() {
+        double finalPrice = discount.discount(this.price);
+        String desc = discount.getDesc();
+        System.out.println(MessageFormat.format("购买的物品：{0}，原始价格：{1}，{2}，最终价格为：{3}", goods, price, desc, finalPrice));
+        return finalPrice;
+    }
+}
+```
+测试
+```
+public class Test {
+    public static void main(String[] args) {
+        Shopping shopping1 = new Shopping("书籍-深入理解Java虚拟机", 54.00, new Dis9Discount());
+        shopping1.calculate();
+
+        Shopping shopping2 = new Shopping("Apple 妙控鼠标", 588.00, new Dis8Discount());
+        shopping2.calculate();
+
+        Shopping shopping3 = new Shopping("戴尔U2417H显示器", 1479.00, new Cash10Discount());
+        shopping3.calculate();
+
+        Shopping shopping4 = new Shopping("索尼ILCE-6000L相机", 3599.00, new NoneDiscount());
+        shopping4.calculate();
+    }
+}
+```
+结果
+```
+购买的物品：书籍-深入理解Java虚拟机，原始价格：54，打九折，最终价格为：48.6
+购买的物品：Apple 妙控鼠标，原始价格：588，打八折，最终价格为：470.4
+购买的物品：戴尔U2417H显示器，原始价格：1,479，返现10元，最终价格为：1,469
+购买的物品：索尼ILCE-6000L相机，原始价格：3,599，不参与优惠活动，最终价格为：3,599
+```
 
 
 
+参考：
+
+[设计模式 | 策略模式及典型应用 - 简书](https://www.jianshu.com/p/3d6a0054931d)
 
 
 
