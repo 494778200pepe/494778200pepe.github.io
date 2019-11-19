@@ -8,13 +8,148 @@ author: pepe
 description: 『 Adapter设计模式 』
 ---
 
+### **适配器模式定义:**
 
+将两个不兼容的类纠合在一起使用，属于结构型模式,需要有Adaptee(被适配者)和Adaptor(适配器)两个身份.
 
+### **为何使用?**
 
+我们经常碰到要将两个没有关系的类组合在一起使用,第一解决方案是：修改各自类的接口，但是如果我们没有源代码，或者，我们不愿意为了一个应用而修改各自的接口。 怎么办?
 
+使用Adapter，在这两种接口之间创建一个混合接口(混血儿).
 
+### **类适配：**
 
+```
+// 使用继承的方式，完成其中一个功能，另外一个使用接口
+public class SquarePeg{
+　　public void insert(String str){
+　　　　System.out.println("SquarePeg insert():"+str);
+　　}
+}
 
+public interface ISquarePeg{
+　　void insertIntohole(String msg)；
+}
+
+public class PegAdapter extends SquarePeg implements ISquarePeg {
+
+　　private RoundPeg roundPeg;
+
+　　public PegAdapter(RoundPeg peg)(this.roundPeg=peg;)
+
+	@Override
+　　public void insert(String str){
+		System.out.println("RoundPeg insertIntoHole():"+msg);
+	}
+}
+```
+
+### **对象适配(常用)：**
+
+```
+// 使用对象的方式来实现具体功能
+public class PegAdapter implements IRoundPeg,ISquarePeg{
+
+　　private RoundPeg roundPeg;
+　　private SquarePeg squarePeg;
+
+　　// 构造方法
+　　public PegAdapter(RoundPeg peg){this.roundPeg=peg;}
+　　// 构造方法
+　　public PegAdapter(SquarePeg peg)(this.squarePeg=peg;)
+
+　　public void insert(String str){ roundPeg.insertIntoHole(str);}
+}
+```
+
+### **ListView 中的 Adapter**
+
+```
+// 功能接口
+public interface AdapterTarget {
+    /**
+     * 获取多少条
+     * @return
+     */
+    int getCount();
+
+    /**
+     * 获取View
+     * @param position
+     * @param parent
+     * @return
+     */
+    View getView(int position,ViewGroup parent);
+}
+```
+
+```
+// 功能接口的实现类
+public class ListAdapter implements AdapterTarget {
+    private List<String> mItems;
+    private Context context;
+    public ListAdapter(List<String> items, Context context){
+        this.mItems = items;
+        this.context = context;
+    }
+    @Override
+    public int getCount() {
+        return mItems.size();
+    }
+
+    @Override
+    public View getView(int position, ViewGroup parent) {
+        TextView itemView = (TextView) LayoutInflater.from(context)
+                .inflate(R.layout.item_main,parent,false);
+        itemView.setText(mItems.get(position));
+        return itemView;
+    }
+}
+```
+
+```
+// Adapter 的使用类
+public class DarrenListView extends ScrollView{
+    private LinearLayout mContainer;
+    private AdapterTarget mAdapter;
+
+    public DarrenListView(Context context) {
+        this(context,null);
+    }
+
+    public DarrenListView(Context context, AttributeSet attrs) {
+        this(context, attrs,0);
+    }
+
+    public DarrenListView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        mContainer = new LinearLayout(context);
+        mContainer.setOrientation(LinearLayout.VERTICAL);
+        addView(mContainer,0);
+    }
+
+    @Override
+    public void addView(View child) {
+        mContainer.addView(child);
+    }
+
+	// 这里使用对象适配来实现 AdapterTarget 所定义的功能
+    public void setAdapter(AdapterTarget adapter) {
+        this.mAdapter = adapter;
+        // 观察者，注册反注册
+        int count = mAdapter.getCount();
+        for (int i=0;i<count;i++){
+            View childView = mAdapter.getView(i,mContainer);
+            addView(childView);
+        }
+    }
+}
+```
+
+参考：
+
+[Adapter设计模式 适配器模式 - 解道Jdon](https://www.jdon.com/designpatterns/adapter.htm)
 
 
 
