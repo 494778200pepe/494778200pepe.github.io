@@ -20,3 +20,7 @@ description: 『 设计模式 』
 大话设计模式
 
 Head First设计模式
+
+
+设计模式 - chenliguan的博客 - CSDN博客
+https://blog.csdn.net/chenliguan/category_5792941.html
