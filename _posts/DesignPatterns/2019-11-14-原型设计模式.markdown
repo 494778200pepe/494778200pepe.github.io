@@ -8,6 +8,90 @@ author: pepe
 description: 『 原型设计模式 』
 ---
 
+### **深拷贝和浅拷贝区别是什么？**
+
+* 浅拷贝：基本类型的属性，复制值；引用类型的属性，复制地址，不复制堆内存中的对象。
+
+* 深拷贝：基本类型的属性，复制值；引用类型的属性，复制堆内存中的对象。
+
+![DesignPatterns_Prototype1]({{ site.baseurl }}/assets/images/DesignPatterns/DesignPatterns_Prototype1.png)
+
+![DesignPatterns_Prototype2]({{ site.baseurl }}/assets/images/DesignPatterns/DesignPatterns_Prototype2.png)
+
+### **保护性拷贝(defensive copy)**
+
+何为保护性拷贝？看一个例子：
+
+```
+public class Person {
+ 
+	private String name;
+	private Date birth;
+ 
+	public Person(String name, Date birth) {
+		this.name = name;
+		this.birth = birth;
+	}
+ 
+	public Date getBirth() {
+		return birth;
+	}
+ 
+	public String getName() {
+		return name;
+	}
+}
+```
+
+我们定义了一个Person类，该类的字段均为私有的，同时没有添加可以修改字段的方法(mutator)。这似乎就是一个不可变类(immutable class)，事实真的是这样吗？我们来测试一下。
+
+```
+	public static void main(String[] args) {
+ 
+		Person p = new Person("Benson",new Date(1990, 4, 13));
+		System.out.println(p.getName());
+		System.out.println(p.getBirth().getYear());
+		
+		Date hole = p.getBirth();
+		hole.setYear(2013);
+		
+		System.out.println(p.getName());
+		System.out.println(p.getBirth().getYear());
+	}
+```
+
+我们看看输出:
+
+```
+Benson
+1990
+Benson
+2013
+```
+
+从输出可以看出该类并不是一个不可变类。因为该类的内部状态被修改了。问题出在哪呢？关键在于Date类是一个可变类（而String是一个不可变类，可放心使用），当我们在客户端获取Date类的实例引用时，如果就可以对其内部状态进行修改。如上代码所示。
+一个解决办法就是使用保护性拷贝。
+
+```
+public class Person {
+ 
+...
+	public Date getBirth() {
+		return new Date(birth.toString());		//保护性拷贝
+	}
+...
+}
+```
+
+这里我们修改了getBirth方法，返回一个同原来值相同的新对象。这样，即使客户端获得了该对象的引用，也无法修改person对象的内部状态，从而使该对象不可变。
+再次运行测试类:
+```
+Benson
+1990
+Benson
+1990
+```
+
 Object类的clone方法只会拷贝对象中的基本的数据类型，对于数组、集合、容器对象、引用对象等都不会拷贝。
 
 
