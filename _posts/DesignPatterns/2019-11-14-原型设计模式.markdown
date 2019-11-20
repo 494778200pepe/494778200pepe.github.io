@@ -10,7 +10,7 @@ description: 『 原型设计模式 』
 
 ### **深拷贝和浅拷贝区别是什么？**
 
-* 浅拷贝：基本类型的属性，复制值；引用类型的属性，复制地址，不复制堆内存中的对象。
+* 浅拷贝：基本类型的属性，复制值；引用类型的属性，复制地址，不复制堆内存中的对象。（Object类的clone方法只会拷贝对象中的基本的数据类型，对于数组、集合、容器对象、引用对象等都不会拷贝。）
 
 * 深拷贝：基本类型的属性，复制值；引用类型的属性，复制堆内存中的对象。
 
@@ -92,21 +92,135 @@ Benson
 1990
 ```
 
-Object类的clone方法只会拷贝对象中的基本的数据类型，对于数组、集合、容器对象、引用对象等都不会拷贝。
+### **Android源码中的原型模式**
+
+#### **Intent** 
+
+比如有三个activity，从activity1启动到activity2，在启动activity3，而数据需要从activity1中传递到activity3中
+
+activity1:
+```
+		Intent intent = new Intent(this,Activity2.class);
+
+        intent.putExtra("Params1","Params1");
+        intent.putExtra("Params2","Params2");
+        intent.putExtra("Params3","Params3");
+
+        startActivity(intent);   
+```
+
+activity2:
+```
+		//默认
+		String Params1 = getIntent().getStringExtra("Params1");
+        String Params2 = getIntent().getStringExtra("Params2");
+        String Params3 = getIntent().getStringExtra("Params3");
+        // 又 new 一个 intent
+
+        // 把参数传递
+        Intent intent = new Intent(this,Activity3.class);
+
+        intent.putExtra("Params1",Params1);
+        intent.putExtra("Params2",Params2);
+        intent.putExtra("Params3",Params3);*/
+        //原型设计模式拷贝
+        Intent intent = (Intent) getIntent().clone();
+        intent.setClass(this, Activity3.class);
+        startActivity(intent);    
+```
+
+源码
+```
+    @Override
+    public Object clone() {
+        return new Intent(this);
+    }
+	
+	public Intent(Intent o) {
+        //赋值
+        this.mAction = o.mAction;
+        this.mData = o.mData;
+        this.mType = o.mType;
+        this.mPackage = o.mPackage;
+        this.mComponent = o.mComponent;
+        this.mFlags = o.mFlags;
+        this.mContentUserHint = o.mContentUserHint;
+    }
+```
+
+#### **2 . ArrayList**
+
+```
+ArrayList list=new ArrayList();
+// 有很多数据
+ArrayList copyList = (ArrayList) list.clone();
+```
+
+源码:
+```
+  public Object clone() {
+        try {
+            ArrayList<?> v = (ArrayList<?>) super.clone();
+            //数组拷贝
+            v.elementData = Arrays.copyOf(elementData, size);
+            v.modCount = 0;//重置修改次数
+            return v;
+        } catch (CloneNotSupportedException e) {
+            // this shouldn't happen, since we are Cloneable
+            throw new InternalError(e);
+        }
+    }
+```
+
+#### **3 . OkHttp**
+
+```
+OkHttpClient client = new OkHttpClient();
+client.newBuilder();
+```
+
+源码：
+
+```
+Builder(OkHttpClient okHttpClient) {
+      this.dispatcher = okHttpClient.dispatcher;
+      this.proxy = okHttpClient.proxy;
+      this.protocols = okHttpClient.protocols;
+      this.connectionSpecs = okHttpClient.connectionSpecs;
+      this.interceptors.addAll(okHttpClient.interceptors);
+      this.networkInterceptors.addAll(okHttpClient.networkInterceptors);
+      this.eventListenerFactory = okHttpClient.eventListenerFactory;
+      this.proxySelector = okHttpClient.proxySelector;
+      this.cookieJar = okHttpClient.cookieJar;
+      this.internalCache = okHttpClient.internalCache;
+      this.cache = okHttpClient.cache;
+      this.socketFactory = okHttpClient.socketFactory;
+      this.sslSocketFactory = okHttpClient.sslSocketFactory;
+      this.certificateChainCleaner = okHttpClient.certificateChainCleaner;
+      this.hostnameVerifier = okHttpClient.hostnameVerifier;
+      this.certificatePinner = okHttpClient.certificatePinner;
+      this.proxyAuthenticator = okHttpClient.proxyAuthenticator;
+      this.authenticator = okHttpClient.authenticator;
+      this.connectionPool = okHttpClient.connectionPool;
+      this.dns = okHttpClient.dns;
+      this.followSslRedirects = okHttpClient.followSslRedirects;
+      this.followRedirects = okHttpClient.followRedirects;
+      this.retryOnConnectionFailure = okHttpClient.retryOnConnectionFailure;
+      this.connectTimeout = okHttpClient.connectTimeout;
+      this.readTimeout = okHttpClient.readTimeout;
+      this.writeTimeout = okHttpClient.writeTimeout;
+      this.pingInterval = okHttpClient.pingInterval;
+    }
+```
 
 
 
+参考：
 
+[保护性拷贝(defensive copy) - Benson的专栏 - CSDN博客](https://blog.csdn.net/tounaobun/article/details/8607174)
 
+[原型设计模式 - 奋斗&努力 - CSDN博客](https://blog.csdn.net/qq_24675479/article/details/79725799)
 
-
-
-
-
-
-
-保护性拷贝(defensive copy) - Benson的专栏 - CSDN博客
-https://blog.csdn.net/tounaobun/article/details/8607174
 
 设计模式之原型模式 - chenliguan的博客 - CSDN博客
 https://blog.csdn.net/chenliguan/article/details/69855738
