@@ -25,7 +25,11 @@ description: 『 迭代器设计模式 』
 
 
 
+行为型设计模式-迭代器模式 - chenliguan的博客 - CSDN博客
+https://blog.csdn.net/chenliguan/article/details/73478473
 
+设计模式（十四）迭代器模式（Iterator）-行为型 - D.W 的专栏 - CSDN博客
+https://blog.csdn.net/Dream_angel_Z/article/details/45664933
 
 
 
