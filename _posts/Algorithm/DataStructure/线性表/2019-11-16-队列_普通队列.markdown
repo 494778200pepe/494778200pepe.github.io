@@ -11,18 +11,8 @@ description: 『 队列_普通队列 』
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+看图理解基于数组的队列 - 掘金
+https://juejin.im/post/5c7c75806fb9a04a01650d6d
 
 
 
