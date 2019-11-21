@@ -10,6 +10,8 @@ description: 『 Algorithm 』
 
 ![Algorithm]({{ site.baseurl }}/assets/images/Algorithm/Algorithm.png)
 
+数组、链表等常用数据结构和集合浅解（java） - 北极猩球 - 博客园
+https://www.cnblogs.com/bjxq-cs88/p/9039809.html
 
 动态规划求解最长公共子序列 - 掘金
 https://juejin.im/post/5c733670e51d4568b3326aac

@@ -8,10 +8,19 @@ author: pepe
 description: 『 队列_并发队列 』
 ---
 
+Java多线程之并发包，并发队列 - LoseMyFuture - 博客园
+https://www.cnblogs.com/losemyfuture/p/9375333.html#2.1%20ConcurrentLinkedQueue
 
 
+（八）java并发队列 - 冷夜轩的博客 - CSDN博客
+https://blog.csdn.net/qq_26676207/article/details/80844665
 
 
+（五）Lock锁的用法||Lock锁与 synchronized 关键字的区别 - 冷夜轩的博客 - CSDN博客
+https://blog.csdn.net/qq_26676207/article/details/80843650
+
+（四）wait()、notify()、notifyAll()方法||wait()与sleep()的区别 - 冷夜轩的博客 - CSDN博客
+https://blog.csdn.net/qq_26676207/article/details/80843388
 
 
 
