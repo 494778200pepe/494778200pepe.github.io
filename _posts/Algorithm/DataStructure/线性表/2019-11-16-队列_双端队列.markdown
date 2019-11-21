@@ -10,7 +10,8 @@ description: 『 队列_双端队列 』
 
 
 
-
+经典算法19--双端队列 - Jason的专栏 - CSDN博客
+https://blog.csdn.net/xiangxizhishi/article/details/79119501
 
 
 
