@@ -15,7 +15,8 @@ https://juejin.im/post/5b873a1af265da43741e2328
 看图轻松理解数据结构与算法系列(B树的删除) - 掘金
 https://juejin.im/post/5b95ba52f265da0af87952a9
 
-
+浅谈AVL树,红黑树,B树,B+树原理及应用
+https://mp.weixin.qq.com/s/lpkVhPRcoe8Q3h9OA0gCjw
 
 
 
