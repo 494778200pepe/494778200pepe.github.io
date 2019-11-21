@@ -9,6 +9,24 @@ description: 『 链表_静态链表 』
 ---
 
 
+* 首先我们让数组的元素都是由两个数据域组成，data和cur。也就是说，数组的每一个下标都对应一个data和一个cur。
+
+* 数据域data用来存放数据元素，也就是通常我们要处理的数据；而游标cur相当于单链表中的next指针，
+
+* 存放该元素的后继在数组中的下标。我们把这种用数组描述的链表叫做静态链表。
+
+* 数组的第一个元素，即下标为0的元素的cur就存放备用链表的第一个结点的下标；而数组的最后一个元素的cur
+
+* 则存放第一个有数值的元素的下标，相当于单链表的头节点作用，当整个链表为空时，则为0，表示无指向。如图3-12-2所示
+
+
+现在如果我们需要在“乙”和“丁”之间插入一个值为“丙”的元素，只需要将“乙”的cur改为7，表示下一位是“丙”，并将“丙”的cur改为3，表示下一位是丁。
+
+![Static_Linked_List1]({{ site.baseurl }}/assets/images/Algorithm/Static_Linked_List1.png)
+
+现在如果我们删除了第一个元素“甲”，表示现在“甲”这个位置空出来了，如果未来有新人要来则优先考虑这里，所以删除的位置成为第一个优先空位，即首元素的cur为1， 第一个元素位置的cur改为8，而下标为8的位置cur改为9，最后元素位置的cur改为2。
+
+![Static_Linked_List2]({{ site.baseurl }}/assets/images/Algorithm/Static_Linked_List2.png)
 
 
 
@@ -27,9 +45,8 @@ description: 『 链表_静态链表 』
 
 
 
-
-
-
+静态链表 - AlanTu - 博客园
+https://www.cnblogs.com/alantu2018/p/8471542.html
 
 
 

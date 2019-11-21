@@ -14,6 +14,9 @@ description: 『 Algorithm 』
 动态规划求解最长公共子序列 - 掘金
 https://juejin.im/post/5c733670e51d4568b3326aac
 
+算法与数据结构 - 随笔分类 - AlanTu - 博客园
+https://www.cnblogs.com/alantu2018/category/1163289.html
+
 
 参考：
 

@@ -10,10 +10,8 @@ description: 『 平衡二叉树 』
 
 
 
-
-
-
-
+6、二叉树树（java实现） - 编程小可爱 - 博客园
+https://www.cnblogs.com/karrya/p/11216039.html
 
 
 

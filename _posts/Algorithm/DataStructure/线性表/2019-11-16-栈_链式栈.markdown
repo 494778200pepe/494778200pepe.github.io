@@ -10,7 +10,8 @@ description: 『 栈_链式栈 』
 
 
 
-
+4、链栈的实现（java代码） - 编程小可爱 - 博客园
+https://www.cnblogs.com/karrya/p/11031335.html
 
 
 
