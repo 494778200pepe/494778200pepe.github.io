@@ -9,11 +9,19 @@ description: 『 栈_顺序栈 』
 ---
 
 
-4.1、顺序栈的实现（java实现） - 编程小可爱 - 博客园
-https://www.cnblogs.com/karrya/p/11204829.html
 
-看图轻松理解数据结构与算法系列(基于数组的栈) - 掘金
-https://juejin.im/post/5b6502a3f265da0f9313c409
+
+
+
+
+
+
+参考：
+
+[4.1、顺序栈的实现（java实现） - 编程小可爱 - 博客园](https://www.cnblogs.com/karrya/p/11204829.html)
+
+[栈 - 顺序存储结构 - AlanTu - 博客园](https://www.cnblogs.com/alantu2018/p/8471552.html)
+
 
 
 
