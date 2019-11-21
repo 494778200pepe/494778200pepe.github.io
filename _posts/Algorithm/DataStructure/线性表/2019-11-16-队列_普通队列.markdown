@@ -8,11 +8,49 @@ author: pepe
 description: 『 队列_普通队列 』
 ---
 
+阻塞队列是与普通队列的区别有两点
+
+* 1.阻塞队列获取元素时，如果队列为空，则会等待队列有元素，否则就阻塞队列（普通队列返回结果，无元素）
+
+* 2.阻塞队列放入元素时，如果队列满，则等待队列，直到有空位置，然后插入。（普通队列，要么直接扩容，要么直接无法插入，不阻塞）
+
+ 
+阻塞队列的最佳场景就是生产者和消费者，使用代码时无需判断直接获取并处理（普通队列得判断有没有元素，阻塞队列不用判断，无元素自身就会阻塞，直到有东西）
 
 
+代码比较
+```
+//阻塞队列
 
-看图理解基于数组的队列 - 掘金
-https://juejin.im/post/5c7c75806fb9a04a01650d6d
+element = queue.get();  //阻塞直到获取元素再处理
+
+// do something
+
+ 
+
+//非阻塞队列
+
+while(true) {
+
+	element = queue.get();
+
+	if (element != null){
+
+    //do something
+	
+	}
+
+}
+```
+
+
+参考:
+
+[实现一个简单的队列（底层数组） - shadowdoor - 博客园](https://www.cnblogs.com/shadowdoor/p/9245032.html)
+
+[看图理解基于数组的队列 - 掘金](https://juejin.im/post/5c7c75806fb9a04a01650d6d)
+
+[普通队列，循环队列以及链队列的相关操作 - 是我是我都是我的博客 - CSDN博客](https://blog.csdn.net/ismahui/article/details/76544253)
 
 
 
