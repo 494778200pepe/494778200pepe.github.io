@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "图_最短路径"
-date:   2019-11-20 10:04:00 +0800
+title:  "图_拓扑排序"
+date:   2019-11-21 10:03:00 +0800
 categories: Algorithm
 tags: DataStructure
 author: pepe
-description: 『 最短路径 』
+description: 『 拓扑排序 』
 ---
 
 

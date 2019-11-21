@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "图_二分图"
-date:   2019-11-20 10:07:00 +0800
+title:  "图_最小生成树"
+date:   2019-11-21 10:06:00 +0800
 categories: Algorithm
 tags: DataStructure
 author: pepe
-description: 『 二分图 』
+description: 『 最小生成树 』
 ---
 
 
