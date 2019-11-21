@@ -52,7 +52,7 @@ public class Node<T> {
  
 	//存储数据
 	private T data;
-    //上一个节点
+	//上一个节点
 	private Node<T> pre;
 	//下一个节点
 	private Node<T> next;
