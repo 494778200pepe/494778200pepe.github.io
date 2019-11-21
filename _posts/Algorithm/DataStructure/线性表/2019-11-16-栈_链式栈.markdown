@@ -10,11 +10,12 @@ description: 『 栈_链式栈 』
 
 
 
-4、链栈的实现（java代码） - 编程小可爱 - 博客园
-https://www.cnblogs.com/karrya/p/11031335.html
 
-栈 - 链式存储结构 - AlanTu - 博客园
-https://www.cnblogs.com/alantu2018/p/8471559.html
+参考：
+
+[4、链栈的实现（java代码） - 编程小可爱 - 博客园](https://www.cnblogs.com/karrya/p/11031335.html)
+
+[栈 - 链式存储结构 - AlanTu - 博客园](https://www.cnblogs.com/alantu2018/p/8471559.html)
 
 
 
