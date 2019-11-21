@@ -9,9 +9,11 @@ description: 『 多路查找树_B树 』
 ---
 
 
+看图轻松理解数据结构与算法系列(B树) - 掘金
+https://juejin.im/post/5b873a1af265da43741e2328
 
-
-
+看图轻松理解数据结构与算法系列(B树的删除) - 掘金
+https://juejin.im/post/5b95ba52f265da0af87952a9
 
 
 

@@ -11,6 +11,10 @@ description: 『 Algorithm 』
 ![Algorithm]({{ site.baseurl }}/assets/images/Algorithm/Algorithm.png)
 
 
+动态规划求解最长公共子序列 - 掘金
+https://juejin.im/post/5c733670e51d4568b3326aac
+
+
 参考：
 
 [数据结构与算法学习笔记 - ityqing的博客 - CSDN博客](https://blog.csdn.net/ityqing/article/details/82838524)

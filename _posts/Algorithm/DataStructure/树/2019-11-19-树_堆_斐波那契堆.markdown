@@ -9,6 +9,9 @@ description: 『 堆_斐波那契堆 』
 ---
 
 
+看图轻松理解斐波那契数列 - 掘金
+https://juejin.im/post/5c450d8ae51d45515f248214
+
 
 
 

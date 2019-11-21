@@ -10,7 +10,8 @@ description: 『 平衡二叉查找树_红黑树 』
 
 
 
-
+看图轻松理解数据结构与算法系列(红黑树) - 掘金
+https://juejin.im/post/5bcd19fbe51d457a964d08d7
 
 
 

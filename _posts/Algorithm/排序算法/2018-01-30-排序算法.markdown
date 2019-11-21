@@ -9,6 +9,15 @@ description: 『 排序算法 』
 ---
 
 
+看图轻松理解数据结构与算法系列(选择排序) - 掘金
+https://juejin.im/post/5b74c3b76fb9a009d22fc858
+
+看图轻松理解数据结构与算法系列(希尔排序) - 掘金
+https://juejin.im/post/5bac2575f265da0a8a6ab216
+
+基于桶的基数排序 - 掘金
+https://juejin.im/post/5c60c19551882562914eb257
+
 ![排序算法]({{ site.baseurl }}/assets/images/sort1.png)
 ![算法比较]({{ site.baseurl }}/assets/images/sort2.png)
 
