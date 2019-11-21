@@ -34,7 +34,7 @@ public class Node<T> {
 		this.data = data;
 	}
     
-    public Node getPre() {
+	public Node getPre() {
 		return pre;
 	}
  

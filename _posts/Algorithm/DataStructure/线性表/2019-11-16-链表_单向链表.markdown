@@ -67,7 +67,7 @@ public class SingleLinkImpl<T> {
 	//保存链表的头节点
 	private Node<T> header;
 	
-	//保存链表的尾节点
+	//保存链表的尾节点，为了 add 方便
 	private Node<T> tail;
 	
 	//保存节点数
