@@ -3,7 +3,7 @@ layout: post
 title:  "时间复杂度与空间复杂度的取舍问题"
 date:   2019-11-15 10:56:00 +0800
 categories: Algorithm
-tags: Algorithm
+tags: DataStructure
 author: pepe
 description: 『 时间复杂度与空间复杂度的取舍问题 』
 ---

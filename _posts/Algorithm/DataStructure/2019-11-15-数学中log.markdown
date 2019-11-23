@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "数学中log"
-date:   2019-11-15 09:25:00 +0800
+date:   2019-11-15 09:23:00 +0800
 categories: Algorithm
-tags: Algorithm
+tags: DataStructure
 author: pepe
 description: 『 数学中log 』
 ---

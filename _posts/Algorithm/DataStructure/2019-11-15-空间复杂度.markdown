@@ -3,7 +3,7 @@ layout: post
 title:  "空间复杂度"
 date:   2019-11-15 10:52:00 +0800
 categories: Algorithm
-tags: Algorithm
+tags: DataStructure
 author: pepe
 description: 『 空间复杂度 』
 ---
