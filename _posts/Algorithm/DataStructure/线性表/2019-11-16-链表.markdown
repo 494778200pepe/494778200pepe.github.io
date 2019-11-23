@@ -11,283 +11,35 @@ description: 『 链表 』
 链表需要实现的功能：
 
 ```
-interface ILink {
-    /**
-     * 链表增加节点操作
-     * @param data 节点内容
-     * @return
-     */
-    boolean add(Object data);
+public interface ILink<T> {
 
-    /**
-     * 判断指定内容节点在链表中是否存在
-     * @param data 要判断的内容
-     * @return 返回找到的节点索引
-     */
-    int contains(Object data);
-
-    /**
-     * 删除指定内容节点
-     * @param data
-     * @return 返回找到的节点索引（下标）
-     */
-    boolean remove(Object data);
-
-    /**
-     * 根据指定下标修改节点内容
-     * @param index 索引下标
-     * @param newData 替换后的内容
-     * @return 替换之前的节点内容
-     */
-    Object set(int index,Object newData);
-
-    /**
-     * 根据指定下标返回节点内容
-     * @param index
-     * @return
-     */
-    Object get(int index);
-
-    /**
-     * 链表清空
-     */
-    void clear();
-
-    /**
-     * 将链表转为数组
-     * @return 返回所有节点内容
-     */
-    Object[] toArray();
-
-    /**
-     * 链表长度
-     * @return
-     */
     int size();
 
-    /**
-     * 遍历链表
-     */
+    boolean isEmpty();
+
+    void add(T element);
+
+    void set(int index, T element);
+
+    boolean remove(T element);
+
+    void remove(int index);
+
+    int getDataIndex(T element);
+
+    T get(int index);
+
+    Node<T> getNodeByIndex(int index);
+
+    boolean contains(T element);
+
+    Object[] toArray();
+
     void printLink();
+
+    void clear();
+
 }
-
-class LinkImpl implements ILink {
-    private Node head;
-    private Node last;
-    private int size;
-
-    private class Node {
-        private Node prev;
-        private Object data;
-        private Node next;
-
-        public Node(Node prev, Object data, Node next) {
-            this.prev = prev;
-            this.data = data;
-            this.next = next;
-        }
-    }
-
-    @Override
-    public boolean add(Object data) {
-        Node temp = this.last;//temp为最后一个节点
-        Node newNode = new Node(temp, data,null);//新开辟一个节点,他的前置指针为temp,后置指向null
-        this.last = newNode;
-        if (this.head == null) {
-            this.head = newNode;
-        }else {
-            temp.next = newNode;
-        }
-        this.size++;
-        return true;
-    }
-
-    @Override
-    public int contains(Object data) {
-        if (data == null) {
-            int i = 0;
-            for (Node temp=head; temp!=null; temp=temp.next) {
-                if (temp.data == null) {
-                    return i;
-                }
-                i++;
-            }
-        }else {
-            int i = 0;
-            for (Node temp=head; temp!=null; temp=temp.next) {
-                if (data.equals(temp.data)) {
-                    return i;
-                }
-                i++;
-            }
-        }
-        return -1;
-    }
-
-    @Override
-    public boolean remove(Object data) {
-        if (data == null) {
-            for (Node temp=head; temp!=null; temp=temp.next) {
-                if (temp.data == null) {
-                    //删除操作
-                    unLink(temp);
-                    return true;
-                }
-
-            }
-        }else {
-            for (Node temp=head; temp!=null; temp=temp.next) {
-                if (data.equals(temp.data)) {
-                    //删除操作
-                    unLink(temp);
-                    return true;
-                }
-
-            }
-        }
-        return false;
-    }
-
-    @Override
-    public Object set(int index, Object newData) {
-        if (!isLinkIndex(index)) {
-            return null;
-        }
-        Node node = node(index);
-        Object elementData = newData;
-        node.data = newData;
-        return elementData;
-    }
-
-    @Override
-    public Object get(int index) {
-        if (!isLinkIndex(index)) {
-            return null;
-        }
-        return node(index).data;
-    }
-
-    @Override
-    public void clear() {
-        for (Node temp=head; temp!=null; ) {
-            Node node = temp.next;//把下一个节点保存起来
-            temp.data = null;
-            temp.prev = temp.next = null;
-            temp = node;
-            this.size--;
-        }
-    }
-
-    @Override
-    public Object[] toArray() {
-        Object[] result = new Object[this.size];
-        int i = 0;
-        for (Node temp=head; temp!=null; temp=temp.next) {
-            result[i++] = temp.data;//存储节点中的数据
-        }
-        return result;
-    }
-
-    @Override
-    public int size() {
-        return this.size;
-    }
-
-    @Override
-    public void printLink() {
-        Object[] data = this.toArray();//把返回节点的内容存储到数组data中
-        for (Object temp: data) {
-            System.out.print(temp+"--->");
-        }
-        System.out.println();
-    }
-
-    /**
-     * 判断指定索引是否合法
-     * @param index
-     * @return
-     */
-    public boolean isLinkIndex(int index) {
-        return index>=0 && index<this.size;
-    }
-
-    /**
-     * 根据指定索引取得具体节点
-     * @param index
-     * @return
-     */
-    public Node node(int index) {
-        if (index < (size>>1)) {
-            Node temp = this.head;
-            for (int i=0; i<index; i++) {
-                temp = temp.next;
-            }
-            return temp;
-        }else {
-            Node temp = this.last;
-            for (int i=size-1; i>index; i--) {
-                temp = temp.prev;
-            }
-            return temp;
-        }
-    }
-
-    /**
-     * 进行节点的删除操作
-     * @param x:要删除的节点
-     * @return 返回删除节点的数据
-     */
-    public Object unLink(Node x) {
-        Object elementData = x.data;
-        Node prev = x.prev;
-        Node next = x.next;
-        if (prev == null) {
-            this.head = next;
-
-        }else {
-            prev.next = next;
-            x.prev = null;
-        }
-        if (next == null) {
-            this.last = prev;
-        }else {
-            prev.next = next;
-            next.prev = prev;
-            x.next = null;
-        }
-        x.data = null;
-        this.size--;
-        return elementData;
-    }
-}
-class Factory {
-    private Factory(){}
-    public static ILink getILinkInstance() {
-        return new LinkImpl();
-    }
-}
-public class Test {
-    public static void main(String[] args) {
-        ILink1 link = Factory.getILinkInstance();
-        link.add("火车头");
-        link.add("车厢1");
-        link.add("车厢2");
-        link.add("车厢3");
-        link.add(null);
-        link.add("火车尾");
-        link.printLink();
-        System.out.println("size："+link.size());
-        System.out.println(link.contains(null));
-        System.out.println(link.contains(3));
-        System.out.println(link.get(3));
-        link.set(0,"bit");
-        System.out.println(link.remove("车厢2"));
-        link.printLink();
-        link.clear();
-        System.out.println(link.size());
-    }
-}
-
 ```
 
 参考：
