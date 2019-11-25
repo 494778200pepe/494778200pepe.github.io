@@ -25,48 +25,47 @@ description: 『 单向链表 』
 
 ```
 // 节点
-public class Node<T> {
- 
-	public T getData() {
-		return data;
-	}
- 
-	public void setData(T data) {
-		this.data = data;
-	}
- 
-	public Node getNext() {
-		return next;
-	}
- 
-	public void setNext(Node next) {
-		this.next = next;
-	}
- 
-	//存储数据
-	private T data;
-	//下一个节点
-	private Node<T> next;
-	
-	//定义构造方法
-	public Node(T data,Node<T> next){
-		this.data=data;
-		this.next=next;
-	}
-	
-	public Node(){
-		
-	}
+public class SingleNode<T> extends Node<T>{
+    private T data;
+    private SingleNode<T> next;
+
+    public SingleNode(){
+    }
+
+    public SingleNode(T data){
+        this.data = data;
+    }
+
+    public SingleNode(T data, SingleNode<T> next) {
+        this.data = data;
+        this.next = next;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+
+    public SingleNode<T> getNext() {
+        return next;
+    }
+
+    public void setNext(SingleNode<T> next) {
+        this.next = next;
+    }
 }
 ```
 
 
 ```
 //实现单向链表
-public class SingleLinkedList<T> implements ILink<T>{
+public class SingleLinkedList<T> implements ILink<T> {
 
-    private Node<T> header;
-    private Node<T> tail;
+    private SingleNode<T> header;
+    private SingleNode<T> tail;
     private int length;
 
     public SingleLinkedList() {
@@ -74,7 +73,7 @@ public class SingleLinkedList<T> implements ILink<T>{
     }
 
     public SingleLinkedList(T element) {
-        header = new Node<>(element, null);
+        header = new SingleNode<>(element, null);
         tail = header;
         length++;
     }
@@ -89,10 +88,10 @@ public class SingleLinkedList<T> implements ILink<T>{
 
     public void add(T element) {
         if (header == null) {
-            header = new Node<>(element, null);
+            header = new SingleNode<>(element, null);
             tail = header;
         } else {
-            Node node = new Node<>(element, null);
+            SingleNode node = new SingleNode<>(element, null);
             tail.setNext(node);
             tail = node;
         }
@@ -100,16 +99,20 @@ public class SingleLinkedList<T> implements ILink<T>{
     }
 
     public void set(int index, T element) {
-        if (index < 0 || index > length - 1) {
+        // index 的范围是 0 - length，length为最后一个，等同于add
+        if (index < 0 || index > length) {
             throw new IndexOutOfBoundsException("删除索引超出边界！");
         }
-        Node<T> node = new Node<>(element);
+        SingleNode<T> node = new SingleNode<>(element);
         if (index == 0) {
             node.setNext(header);
             header = node;
+        } else if (index == length) {
+            tail.setNext(node);
+            tail = node;
         } else {
-            Node<T> pre = getNodeByIndex(index - 1);
-            Node<T> next = getNodeByIndex(index);
+            SingleNode<T> pre = getNodeByIndex(index - 1);
+            SingleNode<T> next = getNodeByIndex(index);
             pre.setNext(node);
             node.setNext(next);
         }
@@ -129,14 +132,14 @@ public class SingleLinkedList<T> implements ILink<T>{
         if (index < 0 || index > length - 1) {
             throw new IndexOutOfBoundsException("删除索引超出边界！");
         }
-        if (header == null) {
-            throw new NullPointerException("链表为空！");
-        }
         if (index == 0) {
             header = header.getNext();
+        } else if (index == length - 1) {
+            tail = getNodeByIndex(length - 2);
+            tail.setNext(null);
         } else {
-            Node<T> pre = getNodeByIndex(index - 1);
-            Node<T> del = getNodeByIndex(index);
+            SingleNode<T> pre = getNodeByIndex(index - 1);
+            SingleNode<T> del = getNodeByIndex(index);
             pre.setNext(del.getNext());
         }
         length--;
@@ -146,10 +149,10 @@ public class SingleLinkedList<T> implements ILink<T>{
         if (element == null) {
             throw new NullPointerException("元素为空！");
         }
-        if (header == null) {
+        if (isEmpty()) {
             throw new NullPointerException("链表为空！");
         }
-        Node<T> curr = header;
+        SingleNode<T> curr = header;
         for (int i = 0; i < length; i++, curr = curr.getNext()) {
             if (curr.getData().equals(element)) {
                 return i;
@@ -162,11 +165,14 @@ public class SingleLinkedList<T> implements ILink<T>{
         return getNodeByIndex(index).getData();
     }
 
-    public Node<T> getNodeByIndex(int index) {
+    public SingleNode<T> getNodeByIndex(int index) {
         if (index < 0 || index > length - 1) {
             throw new IndexOutOfBoundsException("索引越界！");
         }
-        Node<T> curr = header;
+        if (isEmpty()) {
+            throw new NullPointerException("链表为空！");
+        }
+        SingleNode<T> curr = header;
         for (int i = 0; i < length; i++, curr = curr.getNext()) {
             if (i == index) {
                 return curr;
@@ -179,12 +185,12 @@ public class SingleLinkedList<T> implements ILink<T>{
         if (element == null) {
             throw new NullPointerException("元素为空！");
         }
-        if (header == null) {
+        if (isEmpty()) {
             return false;
         }
-        Node<T> curr = header;
+        SingleNode<T> curr = header;
         for (int i = 0; i < length; i++, curr = curr.getNext()) {
-            if (curr.getData().equals(element)) {
+            if (element.equals(curr.getData())) {
                 return true;
             }
         }
@@ -193,7 +199,7 @@ public class SingleLinkedList<T> implements ILink<T>{
 
     public Object[] toArray() {
         Object[] array = new Objects[length];
-        Node<T> node = header;
+        SingleNode<T> node = header;
         int index = 0;
         while (node != null) {
             array[index] = node.getData();
@@ -204,14 +210,18 @@ public class SingleLinkedList<T> implements ILink<T>{
     }
 
     public void printLink() {
-        Node<T> node = header;
+        System.out.println("打印链表");
+        SingleNode<T> node = header;
         while (node != null) {
-           System.out.println(node.getData().toString());
+            System.out.print("[");
+            System.out.print(node.getData().toString());
+            System.out.print("]");
+            System.out.println("");
             node = node.getNext();
         }
     }
 
-    public void clear(){
+    public void clear() {
         header = tail = null;
         length = 0;
     }

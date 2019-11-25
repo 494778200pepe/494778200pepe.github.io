@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "链表_循环链表"
-date:   2019-11-16 10:23:00 +0800
+date:   2019-11-16 10:22:00 +0800
 categories: Algorithm
 tags: DataStructure
 author: pepe
@@ -18,8 +18,256 @@ description: 『 链表_循环链表 』
 <font color="#dd0000"每数2个人后，将第3个人干掉，在循环链表中就是把这个节点del掉，然后指针指向后面一个人，数2个人后，又将第3个人干掉，一直这样，直到最后不足3个人，依次自杀后退出循环！</font>
 
 
+### **实现**
 
+```
+// 节点
+public class LoopNode<T> extends Node<T> {
 
+    private T data;
+    private LoopNode<T> next;
+
+    public LoopNode(){
+    }
+
+    public LoopNode(T data){
+        this.data = data;
+    }
+
+    public LoopNode(T data, LoopNode<T> next) {
+        this.data = data;
+        this.next = next;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+
+    public LoopNode<T> getNext() {
+        return next;
+    }
+
+    public void setNext(LoopNode<T> next) {
+        this.next = next;
+    }
+}
+```
+
+```
+//实现循环链表
+public class LoopLinkedList<T> implements ILink<T> {
+
+    private LoopNode<T> header;
+    private LoopNode<T> tail;
+    private int length;
+
+    public LoopLinkedList() {
+        header = tail = null;
+    }
+
+    public LoopLinkedList(T element) {
+        header = new LoopNode<>(element, null);
+        header.setNext(header);
+        tail = header;
+        length++;
+    }
+
+    @Override
+    public int size() {
+        return length;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return length == 0;
+    }
+
+    @Override
+    public void add(T element) {
+        if (header == null) {
+            header = new LoopNode<>(element, null);
+            header.setNext(header);
+            tail = header;
+        } else {
+            LoopNode node = new LoopNode<>(element, header);
+            tail.setNext(node);
+            tail = node;
+        }
+        length++;
+    }
+
+    @Override
+    public void set(int index, T element) {
+        // index 的范围是 0 - length，length为最后一个，等同于add
+        if (index < 0 || index > length) {
+            throw new IndexOutOfBoundsException("删除索引超出边界！");
+        }
+        LoopNode<T> node = new LoopNode<>(element);
+        if (index == 0) {// index 为0时，链表至少有一个元素
+            if (isEmpty()) {
+                header = new LoopNode<>(element, null);
+                header.setNext(header);
+                tail = header;
+            } else {
+                node.setNext(header);
+                header = node;
+                tail.setNext(node);
+            }
+        } else if (index == length) {
+            // 添加到尾部
+            node.setNext(header);
+            tail.setNext(node);
+            tail = node;
+        } else {// index >0的时候，链表至少有两个元素
+            LoopNode<T> pre = getNodeByIndex(index - 1);
+            LoopNode<T> next = getNodeByIndex(index);
+            pre.setNext(node);
+            node.setNext(next);
+        }
+        length++;
+    }
+
+    @Override
+    public boolean remove(T element) {
+        int index = getDataIndex(element);
+        if (index == -1) {
+            return false;
+        }
+        remove(index);
+        return true;
+    }
+
+    @Override
+    public void remove(int index) {
+        if (index < 0 || index > length - 1) {
+            throw new IndexOutOfBoundsException("删除索引超出边界！");
+        }
+        if (isEmpty()) {
+            throw new NullPointerException("链表为空！");
+        }
+        if (index == 0) {
+            if (length == 1) {
+                header = tail = null;
+            } else {
+                header = header.getNext();
+                tail.setNext(header);
+            }
+        } else if (index == length - 1) {
+            tail = getNodeByIndex(length - 2);
+            tail.setNext(header);
+        } else {
+            LoopNode<T> pre = getNodeByIndex(index - 1);
+            LoopNode<T> del = getNodeByIndex(index);
+            pre.setNext(del.getNext());
+        }
+        length--;
+    }
+
+    @Override
+    public int getDataIndex(T element) {
+        if (element == null) {
+            throw new NullPointerException("元素为空！");
+        }
+        if (isEmpty()) {
+            throw new NullPointerException("链表为空！");
+        }
+        LoopNode<T> curr = header;
+        for (int i = 0; i < length; i++, curr = curr.getNext()) {
+            if (element.equals(curr.getData())) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public T get(int index) {
+        return getNodeByIndex(index).getData();
+    }
+
+    public LoopNode<T> getNodeByIndex(int index) {
+        if (index < 0 || index > length - 1) {
+            throw new IndexOutOfBoundsException("索引越界！");
+        }
+        if (isEmpty()) {
+            throw new NullPointerException("链表为空！");
+        }
+        LoopNode<T> curr = header;
+        for (int i = 0; i < length; i++, curr = curr.getNext()) {
+            if (i == index) {
+                return curr;
+            }
+        }
+        return null;
+    }
+
+    public boolean contains(T element) {
+        if (element == null) {
+            throw new NullPointerException("元素为空！");
+        }
+        if (isEmpty()) {
+            return false;
+        }
+        LoopNode<T> curr = header;
+        for (int i = 0; i < length; i++, curr = curr.getNext()) {
+            if (element.equals(curr.getData())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public Object[] toArray() {
+        Object[] array = new Objects[length];
+        LoopNode<T> node = header;
+        for (int i = 0; i < length; i++) {
+            array[i] = node.getData();
+            node = node.getNext();
+        }
+        return array;
+    }
+
+    @Override
+    public void printLink() {
+        System.out.println("打印链表");
+        LoopNode<T> node = header;
+        for (int i = 0; i < length; i++) {
+            System.out.print("[");
+            System.out.print(node.getData().toString());
+            System.out.print("]");
+            System.out.println("");
+            node = node.getNext();
+        }
+    }
+
+    @Override
+    public void clear() {
+        header = tail = null;
+        length = 0;
+    }
+
+    public static void main(String[] args) {
+
+        LoopLinkedList<String> myTest = new LoopLinkedList();
+        myTest.add("123");
+        myTest.add("234");
+        myTest.add("wang");
+        System.out.println(myTest.size());
+        myTest.printLink();
+
+        myTest.set(2, "test");
+        myTest.printLink();
+        myTest.remove(3);
+        myTest.printLink();
+        System.out.println(myTest.get(2));
+        System.out.println(myTest.getDataIndex("wangpeili"));
+    }
+}
+```
 
 
 
@@ -42,6 +290,9 @@ description: 『 链表_循环链表 』
 
 
 参考：
+
+Java实现的循环单链表以及约瑟夫环的实现 - Hello什么来着？ - CSDN博客
+https://blog.csdn.net/qq_42405666/article/details/88898135
 
 3、循环链表（java实现） - 编程小可爱 - 博客园
 https://www.cnblogs.com/karrya/p/11030211.html
