@@ -8,7 +8,232 @@ author: pepe
 description: 『 链表_双向循环链 』
 ---
 
+实现
+```
+// 双向循环链表
+public class TwoWayLoopLinkedList <T> implements ILink<T> {
 
+    private TwoWayNode<T> header;
+    private TwoWayNode<T> tail;
+    private int length;
+
+    public TwoWayLoopLinkedList() {
+        header = tail = null;
+    }
+
+    public TwoWayLoopLinkedList(T element) {
+        header = new TwoWayNode<>(element,null, null);
+        header.setNext(header);
+        header.setPre(header);
+        tail = header;
+        length++;
+    }
+
+    @Override
+    public int size() {
+        return length;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return length == 0;
+    }
+
+    @Override
+    public void add(T element) {
+        TwoWayNode node = new TwoWayNode<>(element);
+        if (length == 0) {
+            tail = header;
+            header.setNext(header);
+            header.setPre(header);
+        } else if(length == 1) {
+            header.setNext(node);
+            header.setPre(node);
+            node.setPre(header);
+            node.setNext(header);
+            tail = node;
+        }else {
+            TwoWayNode pre = tail.getPre();
+            pre.setNext(node);
+            node.setPre(pre);
+            node.setNext(header);
+            header.setPre(node);
+            tail = node;
+        }
+        length++;
+    }
+
+    @Override
+    public void set(int index, T element) {
+        // index 的范围是 0 - length，length为最后一个，等同于add
+        if (index < 0 || index > length) {
+            throw new IndexOutOfBoundsException("删除索引超出边界！");
+        }
+        TwoWayNode<T> node = new TwoWayNode<>(element);
+        if (index == 0) {
+            if(isEmpty()){
+                tail = header;
+                header.setNext(header);
+                header.setPre(header);
+            }else if(length == 1){
+                header.setNext(node);
+                header.setPre(node);
+                node.setPre(header);
+                node.setNext(header);
+                header = node;
+            } else{
+                node.setPre(tail);
+                node.setNext(header);
+                header.setPre(node);
+                tail.setPre(node);
+                header = node;
+            }
+        } else if (index == length) {
+            tail.setNext(node);
+            node.setPre(tail);
+            node.setNext( header);
+            header.setPre(node);
+            tail = node;
+        } else {
+            TwoWayNode<T> pre = getNodeByIndex(index - 1);
+            TwoWayNode<T> next = getNodeByIndex(index);
+            pre.setNext(node);
+            node.setPre(pre);
+            node.setNext(next);
+            next.setPre(node);
+        }
+        length++;
+    }
+
+    @Override
+    public boolean remove(T element) {
+        int index = getDataIndex(element);
+        if (index == -1) {
+            return false;
+        }
+        remove(index);
+        return true;
+    }
+
+    @Override
+    public void remove(int index) {
+        if (index < 0 || index > length - 1) {
+            throw new IndexOutOfBoundsException("删除索引超出边界！");
+        }
+        if (isEmpty()) {
+            throw new NullPointerException("链表为空！");
+        }
+        if (index == 0) {
+            if(length == 1){
+                header = tail = null;
+            }else{
+                TwoWayNode<T> newHeader = header.getNext();
+                newHeader.setPre(tail);
+                tail.setNext(newHeader);
+                header = newHeader;
+            }
+        } else if (index == length - 1) {
+            TwoWayNode<T> newTail = tail.getPre();
+            newTail.setNext(header);
+            header.setPre(newTail);
+            tail = newTail;
+        } else {
+            TwoWayNode<T> pre = getNodeByIndex(index - 1);
+            TwoWayNode<T> del = getNodeByIndex(index);
+            TwoWayNode<T> next = del.getNext();
+            pre.setNext(next);
+            next.setPre(pre);
+        }
+        length--;
+    }
+
+    @Override
+    public int getDataIndex(T element) {
+        if (element == null) {
+            throw new NullPointerException("元素为空！");
+        }
+        if (isEmpty()) {
+            throw new NullPointerException("链表为空！");
+        }
+        TwoWayNode<T> curr = header;
+        for (int i = 0; i < length; i++, curr = curr.getNext()) {
+            if (curr.getData().equals(element)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    @Override
+    public T get(int index) {
+        return getNodeByIndex(index).getData();
+    }
+
+    @Override
+    public TwoWayNode<T> getNodeByIndex(int index) {
+        if (index < 0 || index > length - 1) {
+            throw new IndexOutOfBoundsException("索引越界！");
+        }
+        if (isEmpty()) {
+            throw new NullPointerException("链表为空！");
+        }
+        TwoWayNode<T> curr = header;
+        for (int i = 0; i < length; i++, curr = curr.getNext()) {
+            if (i == index) {
+                return curr;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public boolean contains(T element) {
+        if (element == null) {
+            throw new NullPointerException("元素为空！");
+        }
+        if (isEmpty()) {
+            return false;
+        }
+        TwoWayNode<T> curr = header;
+        for (int i = 0; i < length; i++, curr = curr.getNext()) {
+            if (element.equals(curr.getData())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public Object[] toArray() {
+        Object[] array = new Objects[length];
+        TwoWayNode<T> node = header;
+        for (int i = 0; i < length; i++) {
+            array[i] = node.getData();
+            node = node.getNext();
+        }
+        return array;
+    }
+
+    @Override
+    public void printLink() {
+        System.out.println("打印链表");
+        TwoWayNode<T> node = header;
+        for (int i = 0; i < length; i++) {
+            System.out.print("[");
+            System.out.print(node.getData().toString());
+            System.out.print("]");
+            System.out.println("");
+            node = node.getNext();
+        }
+    }
+
+    @Override
+    public void clear() {
+        header = tail = null;
+        length = 0;
+    }
+}
+```
 
 
 
