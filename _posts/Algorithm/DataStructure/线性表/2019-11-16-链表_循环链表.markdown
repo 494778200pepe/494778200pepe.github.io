@@ -278,27 +278,13 @@ public class LoopLinkedList<T> implements ILink<T> {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 参考：
 
-Java实现的循环单链表以及约瑟夫环的实现 - Hello什么来着？ - CSDN博客
-https://blog.csdn.net/qq_42405666/article/details/88898135
+[Java实现的循环单链表以及约瑟夫环的实现 - Hello什么来着？ - CSDN博客](https://blog.csdn.net/qq_42405666/article/details/88898135)
 
-3、循环链表（java实现） - 编程小可爱 - 博客园
-https://www.cnblogs.com/karrya/p/11030211.html
+[3、循环链表（java实现） - 编程小可爱 - 博客园](https://www.cnblogs.com/karrya/p/11030211.html)
 
-循环链表：约瑟夫问题（非常详细易理解） - 李四老师 - CSDN博客
-https://blog.csdn.net/qq_29542611/article/details/79038705
+[循环链表：约瑟夫问题（非常详细易理解） - 李四老师 - CSDN博客](https://blog.csdn.net/qq_29542611/article/details/79038705)
 
 
 
