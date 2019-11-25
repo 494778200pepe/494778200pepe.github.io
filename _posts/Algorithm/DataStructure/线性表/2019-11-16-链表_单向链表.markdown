@@ -87,11 +87,10 @@ public class SingleLinkedList<T> implements ILink<T> {
     }
 
     public void add(T element) {
+        SingleNode node = new SingleNode<>(element, null);
         if (header == null) {
-            header = new SingleNode<>(element, null);
-            tail = header;
+            tail = header = node;
         } else {
-            SingleNode node = new SingleNode<>(element, null);
             tail.setNext(node);
             tail = node;
         }
