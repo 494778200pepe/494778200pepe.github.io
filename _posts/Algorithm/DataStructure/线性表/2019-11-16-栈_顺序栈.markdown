@@ -8,7 +8,88 @@ author: pepe
 description: 『 栈_顺序栈 』
 ---
 
+> 栈（stack）是限定在表尾进行插入和删除操作的线性表。我们把允许插入和删除的一端称为栈顶（top），另一端称为栈底（bottom），栈又称为后进先出（Last In First Out)的线性表，简称LIFO结构。
 
+* 1、栈：一种只允许在一端进行插入或删除的线性表
+
+* 2、栈顶：线性表允许进行插入删除的那一端
+
+* 3、栈底：固定的，不允许进行插入和删除的那一端
+
+* 4、空栈：不含任何元素的空表
+
+
+### **顺序栈：**
+
+栈的顺序存储成为顺序栈，他是利用一组地址连续的储存单元存放自栈底到栈顶的数据元素，同时附设一个指针(Top)指示当前栈的位置。
+
+* 栈顶指针：S.top，初始值设定为S.top = -1; 栈顶元素：S.data[S.top]。
+
+* 进栈操作：栈不满的时候，栈顶指针先加1，再送值到栈顶元素
+
+* 出栈操作：栈非空的时候，先取值栈顶元素，再将栈顶指针减1
+
+* 栈空操作：S.top = -1; 栈满条件：S.top == MaxSize-1; 栈长：S.top + 1;
+
+* 由于顺序栈的入栈操作收到数组上界的约束，对栈的最大使用空间估计不足时候，有可能发生栈的上溢。
+
+```
+// 顺序栈
+public class OrderStack {
+    private final int MaxSize = 8;
+    private int top; //栈顶
+    private Object stack[];
+
+    public OrderStack() {
+        stack = new Object[MaxSize];
+        top = -1;
+    }
+
+    public boolean clearStack(OrderStack orderStack) {
+        orderStack.top = -1;
+        return true;
+    }
+
+    public boolean isEmpty(OrderStack orderStack) {
+        if (orderStack.top == -1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean isFull(OrderStack orderStack) {
+        if (orderStack.top >= MaxSize - 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean push(OrderStack orderStack, Object object) {
+        if (isFull(orderStack)) {
+            return false;
+        }
+        orderStack.stack[++top] = object;
+        return true;
+    }
+
+    public boolean pop(OrderStack orderStack) {
+        if (isEmpty(orderStack)) {
+            return false;
+        }
+        orderStack.top--;
+        return true;
+    }
+
+    public Object stackTop(OrderStack orderStack) {
+        if (isEmpty(orderStack)) {
+            return null;
+        }
+        return orderStack.stack[top];
+    }
+}
+```
 
 
 
