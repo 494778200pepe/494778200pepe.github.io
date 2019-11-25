@@ -111,7 +111,6 @@ public class TwoWayLinkedList<T> implements ILink<T> {
             node.setPre(header);
             header.setNext(node);
             tail.setPre(node);
-            length++;
         } else {
             TwoWayNode pre = tail.getPre();
             pre.setNext(node);
