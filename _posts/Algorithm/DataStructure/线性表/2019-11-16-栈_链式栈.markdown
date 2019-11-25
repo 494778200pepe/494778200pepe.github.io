@@ -8,6 +8,91 @@ author: pepe
 description: 『 栈_链式栈 』
 ---
 
+> 当单链表限定只能在头部进行插入和删除操作的时候，即为链栈，一般我们会将单链表的头指针和栈的栈顶指针top合二为一，通常对链栈来说，是不需要头节点的，因为我们维护了栈顶指针。对于链栈来说，基本不存在栈满的情况，除非内存已经没有可以使用的空间，对于空栈来说，链表原定义是头指针指向空，那么链栈的空其实就是top = = NULL的时候。
+
+
+实现：
+
+```
+// 节点
+public class StackNode<T> {
+    public T data;
+    public StackNode next;
+
+    public StackNode(T data) {
+        this.data = data;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+
+    public StackNode getNext() {
+        return next;
+    }
+
+    public void setNext(StackNode next) {
+        this.next = next;
+    }
+}
+```
+
+```
+// 链式栈
+public class LinkedStack<T> {
+
+    private StackNode<T> top; //栈顶指针
+    int size; //元素个数
+
+    public LinkedStack() {
+        top = null;
+        size = 0;
+    }
+
+    public void clearStack(LinkedStack linkedStack) {
+        top = null;
+        size = 0;
+    }
+
+    public boolean isEmpty(LinkedStack linkedStack) {
+        return size == 0;
+    }
+
+    public int size() {
+        return size;
+    }
+
+    public void push(LinkedStack linkedStack, T object) {
+        StackNode<T> node = new StackNode<>(object);
+        node.setNext(top);
+        top = node;
+    }
+
+    public boolean pop(LinkedStack linkedStack) {
+        if (isEmpty(linkedStack)) {
+            System.out.println("栈中没有元素！");
+        } else {
+            System.out.println("出栈操作：" + top.next.data + " ");
+            top = top.getNext();
+        }
+        size--;
+        return true;
+    }
+
+    public Object stackTop(LinkedStack linkedStack) {
+        if (isEmpty(linkedStack)) {
+            System.out.println("栈中没有元素！");
+            return null;
+        } else {
+            return top.getData();
+        }
+    }
+}
+```
 
 
 

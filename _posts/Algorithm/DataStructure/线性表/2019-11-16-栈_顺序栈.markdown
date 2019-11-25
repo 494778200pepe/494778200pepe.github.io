@@ -92,11 +92,6 @@ public class OrderStack {
 ```
 
 
-
-
-
-
-
 参考：
 
 [4.1、顺序栈的实现（java实现） - 编程小可爱 - 博客园](https://www.cnblogs.com/karrya/p/11204829.html)
