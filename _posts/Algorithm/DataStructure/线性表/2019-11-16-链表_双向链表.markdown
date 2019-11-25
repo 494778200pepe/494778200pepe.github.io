@@ -24,240 +24,267 @@ description: 『 双向链表 』
 
 ```
 // 节点
-public class Node<T> {
- 
-	public T getData() {
-		return data;
-	}
- 
-	public void setData(T data) {
-		this.data = data;
-	}
-    
-	public Node getPre() {
-		return pre;
-	}
- 
-	public void setPre(Node pre) {
-		this.pre = pre;
-	}
- 
-	public Node getNext() {
-		return next;
-	}
- 
-	public void setNext(Node next) {
-		this.next = next;
-	}
- 
-	//存储数据
-	private T data;
-	//上一个节点
-	private Node<T> pre;
-	//下一个节点
-	private Node<T> next;
-	
-	//定义构造方法
-	public Node(T data, Node<T> pre, Node<T> next) {
+public class TwoWayNode<T> extends Node<T> {
+
+    private T data;
+    private TwoWayNode<T> pre;
+    private TwoWayNode<T> next;
+
+    public TwoWayNode() {
+    }
+
+    public TwoWayNode(T data) {
+        this.data = data;
+    }
+
+    public TwoWayNode(T data, TwoWayNode<T> pre, TwoWayNode<T> next) {
         this.data = data;
         this.pre = pre;
         this.next = next;
     }
-	
-	public Node(){
 
-	}
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+
+    public TwoWayNode<T> getPre() {
+        return pre;
+    }
+
+    public void setPre(TwoWayNode<T> pre) {
+        this.pre = pre;
+    }
+
+    public TwoWayNode<T> getNext() {
+        return next;
+    }
+
+    public void setNext(TwoWayNode<T> next) {
+        this.next = next;
+    }
 }
 ```
 
 ```
-//实现双向链表
-public class DoublyLinkedList<T> {
-    //双向链表的头
-    private Node head;
-    
-    //双向链表的尾
-    private Node tail;
-    
-    //双向链表的size
-    private int size;
-    
-    //默认的构造函数
-    MyDoublyLinkedList() {
-        this.head = null;
-        this.tail = null;
+// 实现双向链表
+public class TwoWayLinkedList<T> implements ILink<T> {
+
+    private TwoWayNode<T> header;
+    private TwoWayNode<T> tail;
+    private int length;
+
+    public TwoWayLinkedList() {
+        header = new TwoWayNode<>(null);
+        tail = new TwoWayNode<>(null);
+        header.setNext(tail);
+        tail.setPre(header);
     }
-    
-    //以指定元素作为头的双向链表
-    MyDoublyLinkedList(T data) {
-        this.head = new Node(null, data, null);
-        this.tail = head;
-        this.size++;
+
+    public TwoWayLinkedList(T element) {
+        header = new TwoWayNode<>(null);
+        tail = new TwoWayNode<>(null);
+        TwoWayNode node = new TwoWayNode<>(element, header, tail);
+        header.setNext(node);
+        tail.setPre(node);
+        length++;
     }
-    
-    //向双向链表中插入数据,尾部插入法
-    public void add(T data) {
-        Node node = new Node(null, data, null);
-        if(null == this.head) {
-            this.head = this.tail = node;
-            this.size++;
-        }else {
-            this.tail.next = node;
-            node.preview = this.tail;
-            this.tail = node;
-            this.size++;
-        }
-    }
-    
-    //向双向链表的指定位置插入数据
-    public void insert(T data, int index) {
-        Node node = getNodeByIndex(index);
-        Node newNode = new Node(null, data, null);
-        Node preview = node.preview;
-        
-        //判断当前插入的位置是不是head
-        if(null == preview) {
-            newNode.next = this.head;
-            this.head.preview = newNode;
-            this.size++;
-        }else {
-            preview.next = newNode;
-            newNode.preview = preview;
-            newNode.next = node;
-            node.preview = newNode;
-            this.size++;
-        }
-    }
-    
-    //根据index获取data
-    public T get(int index) {
-        return getNodeByIndex(index).data;
-    }
-    
-    //根据传入的data获取index
-    public int getIndex(T data) {
-            Node current = this.head;
-            //从tail开始寻找该节点
-            for(int i = 0; i < this.size && null != current; i++, current = current.next) {
-                if(data.equals(current.data)) {
-                    return i;
-                }
-            }
-            return -1;
-    }
-    
-    //从链表的尾部删除元素
-    
-    public T remove() {
-        Node node = this.tail.preview;
-        Node tail = this.tail;
-        node.next = null;
-        this.size--;
-        return tail.data;
-    }
-    
-    //根据索引index删除元素
-    public T delete(int index) {
-        Node node = getNodeByIndex(index);
-        Node preview = node.preview;
-        Node next = node.next;
-        
-        //说明要删除head
-        if(null == preview) {
-            T data = this.head.data;
-            this.head = this.head.next;
-            this.size--;
-            return data;
-        }
-        
-        //说明要删除tail
-        if(null == next) {
-            T data = this.tail.data;
-            this.tail = this.tail.preview;
-            this.tail.next = null;
-            this.size--;
-            return data;
-        }
-        preview.next = next;
-        next.preview = preview;
-        this.size--;
-        return node.data;
-    }
-    
-    //判断当前的双向链表是否为空
-    public boolean isEmpty() {
-        return this.size == 0;
-    }
-    
-    //获取当前双向链表的size
-    public int size() {
-        return this.size;
-    }
-    
-    //清空双向链表
-    public void clear() {
-        this.head = null;
-        this.tail = null;
-        this.size = 0;
-    }
-    
+
     @Override
-    public String toString() {
-        if(null == this.head) {
-            return "[]";
-        }
-        
-        StringBuilder sb = new StringBuilder("[");
-        //循环遍历
-        for(Node current = head; current != null; current = current.next) {
-            sb.append(current.data.toString()).append(",");
-        }
-        return sb.deleteCharAt(sb.lastIndexOf(",")).append("]").toString();
+    public int size() {
+        return length;
     }
-    
-    //根据index获取Node
-    private Node getNodeByIndex(int index) {
-        if(index < 0 || index >= this.size) {
-            try{
-                throw new Exception("参数index：" + index + "异常!");
-            }catch(Exception e) {
-                e.printStackTrace();
-            }
-            return null;
+
+    @Override
+    public boolean isEmpty() {
+        return length == 0;
+    }
+
+    @Override
+    public void add(T element) {
+        TwoWayNode node = new TwoWayNode<>(element);
+        if (length == 0) {
+            node.setNext(tail);
+            node.setPre(header);
+            header.setNext(node);
+            tail.setPre(node);
+            length++;
+        } else {
+            TwoWayNode pre = tail.getPre();
+            pre.setNext(node);
+            node.setPre(pre);
+            node.setNext(tail);
         }
-        if(null == this.head) {
-            try{
-                throw new Exception("双向链表为空!");
-            }catch(Exception e) {
-                e.printStackTrace();
-            }
-            return null;
+        length++;
+    }
+
+    @Override
+    public void set(int index, T element) {
+        // index 的范围是 0 - length，length为最后一个，等同于add
+        if (index < 0 || index > length) {
+            throw new IndexOutOfBoundsException("删除索引超出边界！");
         }
-        
-        //判断从head寻找Node还是从tail寻找index对应的节点
-        if(index > this.size / 2) {
-            Node current = this.tail;
-            //从tail开始寻找该节点
-            for(int i = this.size - 1; i >= (this.size / 2 + 1) && null != current; i--, current = current.preview) {
-                if(index == i) {
-                    return current;
-                }
+        TwoWayNode<T> node = new TwoWayNode<>(element);
+        if (index == 0) {
+            if(isEmpty()){
+                node.setNext(tail);
+                node.setPre(header);
+                header.setNext(node);
+                tail.setPre(node);
+            }else{
+                TwoWayNode<T> next = header.getNext();
+                next.setPre(node);
+                node.setNext(next);
+                node.setPre(header);
+                header.setNext(node);
             }
-            return null;
-            
-        }else {
-            Node current = this.head;
-            //从head寻找该节点
-            for(int i = 0; i <= this.size / 2 && null != current; i++, current = current.next) {
-                if(index == i) {
-                    return current;
-                }
-            }
-            return null;
+        } else if (index == length) {
+            TwoWayNode<T> pre = tail.getPre();
+            pre.setNext(node);
+            node.setPre(pre);
+            node.setNext( tail);
+            tail.setPre(node);
+        } else {
+            TwoWayNode<T> pre = getNodeByIndex(index - 1);
+            TwoWayNode<T> next = getNodeByIndex(index);
+            pre.setNext(node);
+            next.setPre(node);
+            node.setPre(pre);
+            node.setNext(next);
         }
+        length++;
+    }
+
+    @Override
+    public boolean remove(T element) {
+        int index = getDataIndex(element);
+        if (index == -1) {
+            return false;
+        }
+        remove(index);
+        return true;
+    }
+
+    @Override
+    public void remove(int index) {
+        if (index < 0 || index > length - 1) {
+            throw new IndexOutOfBoundsException("删除索引超出边界！");
+        }
+        if (isEmpty()) {
+            throw new NullPointerException("链表为空！");
+        }
+        if (index == 0) {
+            TwoWayNode<T> node = header.getNext();
+            TwoWayNode<T> next = node.getNext();
+            header.setNext(next);
+            next.setPre(header);
+        } else if (index == length - 1) {
+            TwoWayNode<T> node = tail.getPre();
+            TwoWayNode<T> pre = node.getPre();
+            tail.setPre(pre);
+            pre.setNext(tail);
+        } else {
+            TwoWayNode<T> pre = getNodeByIndex(index - 1);
+            TwoWayNode<T> del = getNodeByIndex(index);
+            TwoWayNode<T> next = del.getNext();
+            pre.setNext(next);
+            next.setPre(pre);
+        }
+        length--;
+    }
+
+    @Override
+    public int getDataIndex(T element) {
+        if (element == null) {
+            throw new NullPointerException("元素为空！");
+        }
+        if (isEmpty()) {
+            throw new NullPointerException("链表为空！");
+        }
+        TwoWayNode<T> curr = header.getNext();
+        for (int i = 0; i < length; i++, curr = curr.getNext()) {
+            if (curr.getData().equals(element)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    @Override
+    public T get(int index) {
+        return getNodeByIndex(index).getData();
+    }
+
+    @Override
+    public TwoWayNode<T> getNodeByIndex(int index) {
+        if (index < 0 || index > length - 1) {
+            throw new IndexOutOfBoundsException("索引越界！");
+        }
+        if (isEmpty()) {
+            throw new NullPointerException("链表为空！");
+        }
+        TwoWayNode<T> curr = header.getNext();
+        for (int i = 0; i < length; i++, curr = curr.getNext()) {
+            if (i == index) {
+                return curr;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public boolean contains(T element) {
+        if (element == null) {
+            throw new NullPointerException("元素为空！");
+        }
+        if (isEmpty()) {
+            return false;
+        }
+        TwoWayNode<T> curr = header.getNext();
+        for (int i = 0; i < length; i++, curr = curr.getNext()) {
+            if (element.equals(curr.getData())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public Object[] toArray() {
+        Object[] array = new Objects[length];
+        TwoWayNode<T> node = header.getNext();
+        for (int i = 0; i < length; i++) {
+            array[i] = node.getData();
+            node = node.getNext();
+        }
+        return array;
+    }
+
+    @Override
+    public void printLink() {
+        System.out.println("打印链表");
+        TwoWayNode<T> node = header.getNext();
+        for (int i = 0; i < length; i++) {
+            System.out.print("[");
+            System.out.print(node.getData().toString());
+            System.out.print("]");
+            System.out.println("");
+            node = node.getNext();
+        }
+    }
+
+    @Override
+    public void clear() {
+        header.setNext(tail);
+        tail.setPre(header);
+        length = 0;
     }
 }
 ```
+
 
 
 
