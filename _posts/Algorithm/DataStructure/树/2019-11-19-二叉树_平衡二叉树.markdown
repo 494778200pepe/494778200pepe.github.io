@@ -8,6 +8,9 @@ author: pepe
 description: 『 平衡二叉树 』
 ---
 
+平衡二叉树的严格定义是这样的：二叉树中任意一个节点的左右子树的高度相差不能大于 1。从这个定义来看，上一节我们讲的完全二叉树、满二叉树其实都是平衡二叉树，但是非完全二叉树也有可能是平衡二叉树。
+
+![BinaryTree5]({{ site.baseurl }}/assets/images/Algorithm/tree/BinaryTree5.png)
 
 
 6、二叉树树（java实现） - 编程小可爱 - 博客园

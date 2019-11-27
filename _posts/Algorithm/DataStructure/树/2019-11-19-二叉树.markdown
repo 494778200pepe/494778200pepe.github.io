@@ -37,7 +37,7 @@ description: 『 二叉树 』
 
 * 一般来说，树中的每个节点的 key 值都不相等，但根据需要也可以将相同的 key 值插入树中。
 
-![BinaryTree]({{ site.baseurl }}/assets/images/Algorithm/DataStructure/BinaryTree.png)
+![BinaryTree]({{ site.baseurl }}/assets/images/Algorithm/tree/BinaryTree.png)
 
 
 
