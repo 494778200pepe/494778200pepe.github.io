@@ -36,6 +36,12 @@ description: 『 二叉树 』
 
 参考：
 
+6、二叉树树（java实现） - 编程小可爱 - 博客园
+https://www.cnblogs.com/karrya/p/11216039.html
+
+《二叉树》学习心得 - AlanTu - 博客园
+https://www.cnblogs.com/alantu2018/p/8985881.html
+
 [看图轻松理解数据结构与算法系列(二叉搜索树) - 掘金](https://juejin.im/post/5b60fd59f265da0f8d3675c5)
 
 [双向链表-java实现 - cai.zhiming的日志 - 网易博客](http://ahcaizhiming.blog.163.com/blog/static/13676545220148216355600/)
