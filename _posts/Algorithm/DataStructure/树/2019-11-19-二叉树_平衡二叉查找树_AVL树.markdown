@@ -22,9 +22,9 @@ AVL树，也称平衡二叉搜索树，AVL是其发明者姓名简写。AVL树�
 
 * 每个节点的左右子节点的高度之差的绝对值最多为1，即平衡因子为范围为[-1,1]。
 
-![BinaTree7]({{ site.baseurl }}/assets/images/Algorithm/tree/BinaTree7.png)
+![BinaryTree7]({{ site.baseurl }}/assets/images/Algorithm/tree/BinaryTree7.png)
 
-![BinaTree8]({{ site.baseurl }}/assets/images/Algorithm/tree/BinaTree8.png)
+![BinaryTree8]({{ site.baseurl }}/assets/images/Algorithm/tree/BinaryTree8.png)
 
 ### **平衡因子**
 
@@ -46,7 +46,7 @@ AVL树，也称平衡二叉搜索树，AVL是其发明者姓名简写。AVL树�
 
 距离插入节点最近的，且平衡因子的绝对值大于1的节点为根的子树.。
 
-![BinaTree9]({{ site.baseurl }}/assets/images/Algorithm/tree/BinaTree9.png)
+![BinaryTree9]({{ site.baseurl }}/assets/images/Algorithm/tree/BinaryTree9.png)
 
  在图三中，左边二叉树的节点45的BF = 1，插入节点43后，节点45的BF = 2。节点45是距离插入点43最近的BF不在[-1,1]范围内的节点，因此以节点45为根的子树为最小不平衡子树。
 
