@@ -24,12 +24,23 @@ AVL树，也称平衡二叉搜索树，AVL是其发明者姓名简写。AVL树�
 
 ![BinaTree7]({{ site.baseurl }}/assets/images/Algorithm/tree/BinaTree7.png)
 
-图中红色数字表示对应节点的层数，可以看到同一层的节点层数差都没有超过1。
+![BinaTree8]({{ site.baseurl }}/assets/images/Algorithm/tree/BinaTree8.png)
 
+### **平衡因子**
 
+将二叉树上节点的左子树高度减去右子树高度的值称为该节点的平衡因子BF(Balance Factor)。
 
+在图二右边的AVL树上
 
+* 节点50的左子树高度为3，右子树高度为2，BF= 3-2 = 1；
 
+* 节点45的左子树高度为2，右子树高度为1，BF= 2-1 = 1；
+
+* 节点46的左子树高度为0，右子树高度为0，BF= 0-0 = 0；
+
+* 节点65的左子树高度为0，右子树高度为1，BF= 0-1 = -1；
+
+* 对于平衡二叉树，BF的取值范围为[-1,1]。如果发现某个节点的BF值不在此范围，则需要对树进行调整。
 
 
 
