@@ -8,11 +8,43 @@ author: pepe
 description: 『 平衡二叉查找树_AVL树 』
 ---
 
-平衡二叉树 - 月雲之霄的博客 - CSDN博客
-https://blog.csdn.net/isunbin/article/details/81707606
 
-看图轻松理解数据结构与算法系列(AVL树) - 掘金
-https://juejin.im/post/5b6b897df265da0fab404318
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+参考：
+
+[平衡二叉树 - 月雲之霄的博客 - CSDN博客](https://blog.csdn.net/isunbin/article/details/81707606)
+
+[看图轻松理解数据结构与算法系列(AVL树) - 掘金](https://juejin.im/post/5b6b897df265da0fab404318)
 
 
 
