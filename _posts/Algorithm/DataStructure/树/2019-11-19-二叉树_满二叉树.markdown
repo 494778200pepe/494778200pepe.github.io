@@ -8,7 +8,7 @@ author: pepe
 description: 『 满二叉树 』
 ---
 
-![binar_tree1]({{ site.baseurl }}/assets/images/Algorithm/tree/BinarTree1.png)
+![binary_tree1]({{ site.baseurl }}/assets/images/Algorithm/tree/BinaryTree1.png)
 
 
 编号 2 的二叉树中，叶子节点全都在最底层，除了叶子节点之外，每个节点都有左右两 个子节点，这种二叉树就叫作**满二叉树**。
