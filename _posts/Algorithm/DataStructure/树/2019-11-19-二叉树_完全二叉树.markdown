@@ -14,7 +14,14 @@ description: 『 完全二叉树 』
 
 编号 3 的二叉树中，叶子节点都在最底下两层，最后一层的叶子节点都靠左排列，并且除了最 后一层，其他层的节点个数都要达到最大，这种二叉树叫作**完全二叉树**s。
 
+基于数组的顺序存储法：
 
+![binary_tree2]({{ site.baseurl }}/assets/images/Algorithm/tree/BinaryTree2.png)
+
+![binary_tree3]({{ site.baseurl }}/assets/images/Algorithm/tree/BinaryTree3.png)
+
+
+如果某棵二叉树是一棵完全二叉树，那用数组存储无疑是最节省内存的一种方式。因为数组的存储方式并不需要像链式存储法那样，要存储额外的左右子节点的指针。这也是为什么完全 二叉树会单独拎出来的原因，也是为什么完全二叉树要求最后一层的子节点都靠左的原因。
 
 
 
