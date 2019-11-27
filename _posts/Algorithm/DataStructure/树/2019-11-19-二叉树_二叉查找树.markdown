@@ -39,6 +39,9 @@ description: 『 二叉查找树 』
 
 ![BinaryTree6]({{ site.baseurl }}/assets/images/Algorithm/tree/BinaryTree6.png)
 
+### **二叉查找树的其他操作**
+
+除了插入、删除、查找操作之外，二叉查找树中还可以支持**快速地查找最大节点和最小节点、前驱节点和后继节点。**
 
 
 
