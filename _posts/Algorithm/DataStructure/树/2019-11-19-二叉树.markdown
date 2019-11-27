@@ -43,7 +43,7 @@ description: 『 二叉树 』
 
 参考：
 
-6、二叉树树（java实现） - 编程小可爱 - 博客园
+6、二叉树（java实现） - 编程小可爱 - 博客园
 https://www.cnblogs.com/karrya/p/11216039.html
 
 《二叉树》学习心得 - AlanTu - 博客园
