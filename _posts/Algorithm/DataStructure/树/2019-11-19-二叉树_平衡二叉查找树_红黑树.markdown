@@ -160,11 +160,11 @@ ok，插入位置已经找到，把插入结点放到正确的位置就可以啦
 
 情况一：父节点在左
 
-
+![rbt4.2.1_left]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt4.2.1_left.png)
 
 情况二：父节点在右
 
-
+![rbt4.2.2_right]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt4.2.2_right.png)
 
 
 
