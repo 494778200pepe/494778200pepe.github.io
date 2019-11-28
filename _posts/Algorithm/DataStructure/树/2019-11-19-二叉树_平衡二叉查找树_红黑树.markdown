@@ -251,13 +251,22 @@ ok，插入位置已经找到，把插入节点放到正确的位置就可以啦
 
 情况3.2.2:父节点为黑色
 
+![rbt3.2.2]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt3.2.2.png)
+
+①从节点P往上依然是全黑的情况
+
 ![rbt3.2.2_1]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt3.2.2_1.png)
 
+②从节点P往上是其他情况
+
+![rbt3.2.2_2]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt3.2.2_2.png)
 
 
 参考：
 
 [30张图带你彻底理解红黑树 - 简书](https://www.jianshu.com/p/e136ec79235c)
+
+[红黑树原理分析（图解） - 菜鸟28 - 博客园](https://www.cnblogs.com/panda28/p/11132462.html)
 
 [《红黑树》学习心得 - AlanTu - 博客园](https://www.cnblogs.com/alantu2018/p/8985743.html)
 
