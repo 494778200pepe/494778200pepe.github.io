@@ -181,6 +181,49 @@ ok，插入位置已经找到，把插入节点放到正确的位置就可以啦
 * 情景3：若删除节点有两个子节点，用后继节点（大于删除节点的最小节点）替换删除节点
 
 
+#### **删除情景1：删除节点无子节点**
+
+处理：直接删除
+
+#### **删除情景2：若删除节点只有一个子节点**
+
+处理：用子节点替换删除节点
+
+![rbt2_left]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt2_left.png)
+
+![rbt2_right]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt2_right.png)
+
+#### **删除情景3：若删除节点有两个子节点**
+
+处理：用后继节点（大于删除节点的最小节点）替换删除节点
+
+情景3又分为很多子情景：
+
+* 删除情景3.1：替换节点的兄弟节点是红色节点
+
+	* 既然兄弟节点是红色节点，那么必然有两个黑色的子节点
+
+* 删除情景3.2：替换节点的兄弟节点是黑色节点
+
+
+
+
+情况3.1：替换节点的兄弟节点是红色节点
+
+![rbt3.1_left]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt3.1_left.png)
+
+![rbt3.1_right]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt3.1_right.png)
+
+![rbt3.1_right_1]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt3.1_right_1.png)
+
+![rbt3.1_right_2]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt3.1_right_2.png)
+
+
+
+
+
+
+
 ![rbt9]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt9.png)
 
 ![rbt10]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt10.png)
@@ -255,7 +298,7 @@ ok，插入位置已经找到，把插入节点放到正确的位置就可以啦
 ![rbt2.1.2.1_right_1]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt2.1.2.1_right_1.png)
 ![rbt2.1.2.1_right_2]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt2.1.2.1_right_2.png)
 
-
+情况2.1.2.2：兄弟节点右红，左任意[要么是红色，要么是没有，不可能是黑色]
 
 
 
