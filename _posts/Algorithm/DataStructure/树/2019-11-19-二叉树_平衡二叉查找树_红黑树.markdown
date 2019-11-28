@@ -108,7 +108,10 @@ ok，插入位置已经找到，把插入结点放到正确的位置就可以啦
 
 情景4又分为很多子情景：
 
-* 插入情景4.1：叔叔结点不存在(插入节点有可能是左节点，或者右节点)
+* 插入情景4.1：叔叔结点不存在
+
+	* 4.1.1：插入节点是左节点
+	* 4.1.1：插入节点是右节点
 
 * 插入情景4.2：叔叔结点存在,黑色
 
@@ -136,9 +139,10 @@ ok，插入位置已经找到，把插入结点放到正确的位置就可以啦
 
 ##### **插入情景4.1：叔叔结点不存在**
 
-![rbt4.1]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt4.1.png)
+![rbt4.1_left]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt4.1_left.png)
+![rbt4.1_right]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt4.1_right.png)
 	
-
+##### **插入情景4.2：叔叔结点存在，黑色**
 
 
 
