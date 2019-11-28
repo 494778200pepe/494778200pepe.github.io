@@ -249,13 +249,12 @@ ok，插入位置已经找到，把插入节点放到正确的位置就可以啦
 
 ![rbt2.1.2.1_left_1]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt2.1.2.1_left_1.png)
 ![rbt2.1.2.1_left_2]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt2.1.2.1_left_2.png)
-![rbt2.1.2.1_left_3]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt2.1.2.1_left_3.png)
 
 子节点在右边：
 
 ![rbt2.1.2.1_right_1]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt2.1.2.1_right_1.png)
 ![rbt2.1.2.1_right_2]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt2.1.2.1_right_2.png)
-![rbt2.1.2.1_right_3]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt2.1.2.1_right_3.png)
+
 
 
 
