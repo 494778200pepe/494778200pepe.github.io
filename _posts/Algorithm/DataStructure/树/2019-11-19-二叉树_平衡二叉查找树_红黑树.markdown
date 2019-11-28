@@ -230,7 +230,8 @@ ok，插入位置已经找到，把插入节点放到正确的位置就可以啦
 		
 情况2.1.1：替换节点的兄弟节点是红节点
 
-![rbt2.1.1]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt2.1.1.png)
+![rbt2.1.1_1]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt2.1.1_1.png)
+![rbt2.1.1_2]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt2.1.1_2.png)
 
 情况二：替换节点的兄弟节点是黑节点
 
