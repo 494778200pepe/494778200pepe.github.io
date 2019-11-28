@@ -233,9 +233,14 @@ ok，插入位置已经找到，把插入节点放到正确的位置就可以啦
 ![rbt2.1.1_1]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt2.1.1_1.png)
 ![rbt2.1.1_2]({{ site.baseurl }}/assets/images/Algorithm/tree/rbt2.1.1_2.png)
 
-情况二：替换节点的兄弟节点是黑节点
+情况2.1.2.0：兄弟节点没有子节点
+
+父节点是红色:
+
+父节点是黑色:
 
 
+情况2.1.2.1：弟节点只有一个子节点，那必然是红的
 
 
 
