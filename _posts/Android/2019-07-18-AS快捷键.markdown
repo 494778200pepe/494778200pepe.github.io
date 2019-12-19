@@ -96,7 +96,7 @@ description: 『 快捷键 』
 
 　　切换面板或文件，功能类似Windows下的Alt + Tab。在切换面板/文件的对话框中，选中某个面板或文件，接着按Backspace即可关闭改面板或文件。
 
-　　22.`trl + Shift + Enter`
+　　22.`ctrl + Shift + Enter`
 
 　　快速补全语句。如if() {}、switch(){}代码块，只要输入if或者switch（甚至sw），接着按Ctrl + Shift + Enter可以快速完形代码块。
 
