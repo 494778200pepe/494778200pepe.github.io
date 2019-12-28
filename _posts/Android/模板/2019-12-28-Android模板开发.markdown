@@ -8,6 +8,11 @@ author: pepe
 description: 『 Android模板开发 』
 ---
 
+Android模板位置：[AS安装目录]\plugins\android\lib\templates\activities
+
+
+
+
 
 
 
