@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Android 查看依赖树"
+date:   2020-01-07 15:14:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 查看依赖树 』
+---
+
+
+点击android studio下的Terminal，输入命令：`gradlew :app:dependencies`
+
+
+
+
+
+
+
+
+
+
