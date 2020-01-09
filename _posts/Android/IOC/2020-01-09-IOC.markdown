@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "IOC"
+date:   2020-01-09 10:12:00 +0800
+categories: Android
+tags: AOP
+author: pepe
+description: 『 IOC 』
+---
+
+第一种方式：注解+反射(运行时注解)
+第二种方式：APT(编译时注解)
+
+
+
+
+
+
+
+
+

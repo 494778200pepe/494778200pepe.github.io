@@ -17,7 +17,7 @@ description: 『 多状态切换 』
 
 
 
-
+[fanturbo/MultiStatusLayoutManager: 多状态布局管理器](https://github.com/fanturbo/MultiStatusLayoutManager)
 
 [pengMaster/MultipleLayout: 最简单的状态切换布局](https://github.com/pengMaster/MultipleLayout)
 
