@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "陈美龄教育法"
+title:  "陈美龄教育法 1-5"
 date:   2020-02-12 19:01:00 +0800
 categories: nurture
 tags: 教育
