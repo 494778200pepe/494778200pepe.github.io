@@ -18,6 +18,7 @@ http: Http
 kotlin: Kotlin
 success: 成功
 wechat: wechat
+nurture: nurture
 other: Other
 designpatterns: 设计模式
 hencoder: HenCoder
