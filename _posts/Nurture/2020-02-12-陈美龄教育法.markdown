@@ -2,8 +2,8 @@
 layout: post
 title:  "陈美龄教育法"
 date:   2020-02-12 19:01:00 +0800
-categories: Android
-tags: other
+categories: nurture
+tags: 教育
 author: pepe
 description: 『 陈美龄教育法 』
 ---
