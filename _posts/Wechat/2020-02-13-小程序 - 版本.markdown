@@ -1,0 +1,41 @@
+---
+layout: post
+title:  "小程序 - 版本"
+date:   2020-02-13 10:41:00 +0800
+categories: Wechat
+tags: 小程序
+author: pepe
+description: 『 版本 』
+---
+
+```
+
+预览版本 -> 开发版本 -> 
+			   |		|
+			   |		  -> 审核版本 -> 线上版本
+			   |		|
+			体验版本 ->  
+
+Console：打印调试log
+Sources：所有脚本文件，可断点调试
+Network：各个网络请求状态
+Storage：wx.setStorage 和 wx.setStorageSync 设置缓存，可动态修改缓存数据
+AppData：小程序页面真实展示的数据，方便查看兼容情况
+Wxml：组件元素，可修改样式
+Sensor：地理位置和设备旋转
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+

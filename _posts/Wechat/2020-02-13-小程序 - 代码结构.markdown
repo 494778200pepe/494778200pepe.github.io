@@ -1,0 +1,56 @@
+---
+layout: post
+title:  "小程序 - 代码结构"
+date:   2020-02-13 09:29:00 +0800
+categories: Wechat
+tags: 小程序
+author: pepe
+description: 『 代码结构 』
+---
+
+```
+// 目录结构
+app.js:注册一个微信小程序应用
+app.json：微信小程序的全局配置
+app.wxss：全局样式
+project.config.json:个性化配置
+pages：所有的小程序页面
+
+// 配置文件
+配置文件有两个，一个是app.json全局配置文件，一个是页面的配置文件
+
+app.json
+1.Pages：注册微信小程序的所有页面
+2.tabBar
+3.networkTimeout
+4.debug
+5.navigationStyle
+
+app.json 和 page 共有
+1.navigationBarBackgroundColo
+2.navigationBarTextStyle
+3.navagationBarTtleText
+4.backgroundColor
+5.backgroundTextStyle
+6.onReachBottomDistance
+7.enablePullDownRefresh
+
+page
+1.disableScroll
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+

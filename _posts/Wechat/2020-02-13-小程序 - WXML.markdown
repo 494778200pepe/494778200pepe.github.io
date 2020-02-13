@@ -1,0 +1,74 @@
+---
+layout: post
+title:  "小程序 - WXML"
+date:   2020-02-13 11:19:00 +0800
+categories: Wechat
+tags: 小程序
+author: pepe
+description: 『 WXML 』
+---
+
+```
+1.标签 闭合
+2.属性 大小写敏感
+
+语言特性：
+1.数据绑定：
+Mustache语法 {{message}}
+也可以绑定 组件的属性
+
+注意：所有的组件和属性，都是小写的。
+
+运算符绑定，字符串运算绑定，组合式绑定，扩展运算符绑定
+<view hidden="{{flag?true:false}}">
+
+2.列表渲染
+3.条件渲染
+4.模板引用
+
+
+
+小程序标签 - 共同属性
+<table>
+<tbody>
+    <tr>
+        <th>属性名</th><th>类型</th><th>描述</th><th>注解</th>
+    </tr>
+    <tr>
+        <td>id</td><td>String</td><td>组件的唯一标识</td><td>保持整个页面唯一</td>
+    </tr>
+    <tr>
+        <td>class</td><td>String</td><td>组件的样式类</td><td>在对应的WXSS中定义的样式类</td>
+    </tr>
+	<tr>
+        <td>style</td><td>String</td><td>组件的内联样式</td><td>可以动态设置的内联样式</td>
+    </tr>
+	<tr>
+        <td>hidden</td><td>Boolean</td><td>组件是否显示</td><td>所有组件默认显示</td>
+    </tr>
+	<tr>
+        <td>data-*</td><td>Any</td><td>自定义属性</td><td>组件上触发的事件时，会发送给事件处理函数</td>
+    </tr>
+	<tr>
+        <td>bind*/catch*</td><td>EventHandler</td><td>组件的事件</td><td>详见 事件</td>
+    </tr>
+</tbody>
+</table>
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
