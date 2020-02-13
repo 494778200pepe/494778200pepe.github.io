@@ -28,7 +28,10 @@ Mustache语法 {{message}}
 
 
 
-小程序标签 - 共同属性
+
+```
+
+### **小程序标签 - 共同属性**
 <table>
 <tbody>
     <tr>
@@ -46,15 +49,14 @@ Mustache语法 {{message}}
 	<tr>
         <td>hidden</td><td>Boolean</td><td>组件是否显示</td><td>所有组件默认显示</td>
     </tr>
-	
+	<tr>
+        <td>data* *</td><td>Any</td><td>自定义属性</td><td>组件上触发的事件时，会发送给事件处理函数</td>
+    </tr>
+	<tr>
+        <td>bind*，catch* </td><td>EventHandler</td><td>组件的事件</td><td>详见 事件</td>
+    </tr>
 </tbody>
 </table>
-
-
-
-```
-
-
 
 
 
