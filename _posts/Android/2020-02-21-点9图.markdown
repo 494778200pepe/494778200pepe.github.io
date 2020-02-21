@@ -21,6 +21,16 @@ description: 『 点9图 』
 
 所以，`左上重合的区域就是拉伸区域；右下重合的区域就是显示区域。`
 
+### **使用Android Studio绘制.9图片总结**
+
+* Zoom滚动条可放大缩小左边图显示大小
+
+* Patch scale滚动条可放大缩小右边图显示大小
+
+* Show Patches显示可拉伸区域
+
+* Show content显示内容显示区域
+
 
 
 
