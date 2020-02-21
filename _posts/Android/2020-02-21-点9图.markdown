@@ -9,7 +9,7 @@ description: 『 点9图 』
 ---
 
 ### **.9图的定义**
-![9patch1]({{ site.baseurl }}/assets/images/android/9Patch/9Patch.png)
+![9patch1]({{ site.baseurl }}/assets/images/android/9Patch/9Patch1.png)
 
 * 左边的线代表垂直拉伸的区域
 
