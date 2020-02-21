@@ -1,0 +1,35 @@
+---
+layout: post
+title:  "点9图"
+date:   2020-02-21 17:05:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 点9图 』
+---
+
+### **.9图的定义**
+![9patch1]({{ site.baseurl }}/assets/images/android/9Patch/9Patch.png)
+
+* 左边的线代表垂直拉伸的区域
+
+* 上边的线代表水平拉伸的区域；
+
+* 右边的线代表文字等的垂直可可显示区域
+
+* 下边的线代表文字等的水平可显示区域。
+
+所以，`左上重合的区域就是拉伸区域；右下重合的区域就是显示区域。`
+
+
+
+
+
+
+
+
+
+
+
+
+

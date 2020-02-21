@@ -58,11 +58,40 @@ Mustache语法 {{message}}
 </tbody>
 </table>
 
+### **列表渲染**
+
+```
+<block wx:for="{{item.dynamic_img}}" wx:for-item="cell" wx:key="index">
+    <image class='dynamci_pic' style="width:170rpx;height:170rpx;" src="{{cell}}" data-src="{{cell}}" data-list="{{item.dynamic_origin_img}}" bindtap='previewImage'></image>
+</block>
+```
+
+### **条件渲染**
+
+```
+// index.wxml
+<view>今天吃什么？</view>
+<view wx:if="{{condition === 1}}">
+	饺子
+</view>
+<view wx:if="{{condition === 2}}">
+	米饭
+</view>
+<view wx:else>
+	面食
+</view>
+
+// index.js
+Page({
+	data:{
+		condition:Math.floor(Math.random()*3 + 1)
+	}
+})
+```
+if 和 hidden 的区别:if 会导致组件重新渲染，hidden会一直渲染，只是显示和隐藏。
 
 
-
-
-
+### **模板引用**
 
 
 
