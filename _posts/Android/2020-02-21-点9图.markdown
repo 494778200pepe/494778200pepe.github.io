@@ -23,19 +23,21 @@ description: 『 点9图 』
 
 ### **使用Android Studio绘制.9图片总结**
 
-* Zoom滚动条可放大缩小左边图显示大小
+* Zoom: 滚动条可放大缩小左边图显示大小
 
-* Patch scale滚动条可放大缩小右边图显示大小
+* Patch scale: 滚动条可放大缩小右边图显示大小
 
-* Show Patches显示可拉伸区域
+* Show Patches: 显示可拉伸区域
 
-* Show content显示内容显示区域
+* Show content: 显示内容显示区域
 
-
-
-
+* show bad patches: 显示做的不好的可拉伸的区域。
 
 
+
+参考：
+
+[点九图完全解析<附官方工具>-UI中国用户体验设计平台](http://www.ui.cn/detail/290941.html)
 
 
 
