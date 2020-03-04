@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "启动图适配"
+date:   2020-02-24 14:42:00 +0800
+categories: Android
+tags: 适配
+author: pepe
+description: 『 启动图适配 』
+---
+
+
+
+
+
+
+参考：
+
+Android开发中dip，dpi，density，px等详解 - 简书
+https://www.jianshu.com/p/cd66b7e01d4a/
+
+Android drawable微技巧，你所不知道的drawable的那些细节_移动开发_郭霖的专栏-CSDN博客
+https://blog.csdn.net/guolin_blog/article/details/50727753
+
+看完不会Android屏幕适配我跪搓板 - 简书
+https://www.jianshu.com/p/5678f23faed3
+
+(1条消息)Android适配——drawable和values的加载规则_移动开发_Cloud_Castle的博客-CSDN博客
+https://blog.csdn.net/cloud_castle/article/details/52313858
+
+Android手机 全面屏（18：9屏幕）适配指南 - 简书
+https://www.jianshu.com/p/686f9b54765f
+
+Android状态栏微技巧，带你真正理解沉浸式模式_移动开发_郭霖的专栏-CSDN博客
+https://blog.csdn.net/guolin_blog/article/details/51763825
+
+全面屏适配以及启动页适配（采用制作.9图的方式） - HaiyuKing - 博客园
+https://www.cnblogs.com/whycxb/p/9737613.html

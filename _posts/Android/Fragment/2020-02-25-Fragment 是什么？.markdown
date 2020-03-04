@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "Fragement"
+date:   2020-02-25 20:59:00 +0800
+categories: Android
+tags: Fragment
+author: pepe
+description: 『 Fragement 』
+---
+
+* 0.Fragment 是什么？
+
+* 1.Fragment 的生命周期：生命周期函数有哪些？和 Activity 之间的先后顺序？
+
+* 2.FragmentTransaction 是啥？
+
+* 2.Fragment 常用的 API
+
+* 3.Fragment 与 Activity 之间的通信
+
+* 4.工具类
+
+* 5.FragmentPagerAdapter 与 FragmentStatePagerAdapter
+
+* 6.Fragment 懒加载
+
+* 7.多层嵌套后的 Fragment 懒加载实现
+
+* 8.FragmentDialog
+
+* 9.

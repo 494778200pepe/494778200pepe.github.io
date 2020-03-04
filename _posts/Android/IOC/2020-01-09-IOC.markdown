@@ -12,7 +12,9 @@ description: 『 IOC 』
 第二种方式：APT(编译时注解)
 
 
-
+两个问题：
+banner 圆角的问题
+recyclerview快速下拉卡顿的问题，通过一个behavior解决的
 
 
 
