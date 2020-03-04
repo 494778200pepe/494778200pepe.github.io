@@ -8,30 +8,42 @@ author: pepe
 description: 『 启动图适配 』
 ---
 
+1.完全了解屏幕适配的基本概念
+
+[Android开发中dip，dpi，density，px等详解 - 简书](https://www.jianshu.com/p/cd66b7e01d4a/)
+
+2.熟悉和巩固基本概念并加深记忆
+
+[看完不会Android屏幕适配我跪搓板 - 简书](https://www.jianshu.com/p/5678f23faed3)
+
+3.drawable-xhdpi 的具体含义，以及不同目录下的图片相互转换时的缩放问题
+
+[Android drawable微技巧，你所不知道的drawable的那些细节_移动开发_郭霖的专栏-CSDN博客](https://blog.csdn.net/guolin_blog/article/details/50727753)
+
+4.drawable和values的加载规则
+
+[Android适配——drawable和values的加载规则_移动开发_Cloud_Castle的博客-CSDN博客](https://blog.csdn.net/cloud_castle/article/details/52313858)
+
+5.启动页适配方案一：centerCrop，使用layer-list
+
+[Android 启动页适配&启动优化_移动开发_kan137g的专栏-CSDN博客](https://blog.csdn.net/kan137g/article/details/86617122)
+
+[android中如何使用一张图片适配不同尺寸的APP引导页_移动开发_weixin_33918357的博客-CSDN博客](https://blog.csdn.net/weixin_33918357/article/details/89871091)
+
+6.启动页适配方案二：使用点9图
+
+[全面屏适配以及启动页适配（采用制作.9图的方式） - HaiyuKing - 博客园](https://www.cnblogs.com/whycxb/p/9737613.html)
+
+9.点9的制作及相关问题
+
+[点九图完全解析<附官方工具>-UI中国用户体验设计平台](https://www.ui.cn/detail/290941.html)
+
+[AndroidStudio .9图片编辑问题 - 简书](https://www.jianshu.com/p/b9757830fa6a)
 
 
 
+其他：
 
 
-参考：
+[Android状态栏微技巧，带你真正理解沉浸式模式_移动开发_郭霖的专栏-CSDN博客](https://blog.csdn.net/guolin_blog/article/details/51763825)
 
-Android开发中dip，dpi，density，px等详解 - 简书
-https://www.jianshu.com/p/cd66b7e01d4a/
-
-Android drawable微技巧，你所不知道的drawable的那些细节_移动开发_郭霖的专栏-CSDN博客
-https://blog.csdn.net/guolin_blog/article/details/50727753
-
-看完不会Android屏幕适配我跪搓板 - 简书
-https://www.jianshu.com/p/5678f23faed3
-
-(1条消息)Android适配——drawable和values的加载规则_移动开发_Cloud_Castle的博客-CSDN博客
-https://blog.csdn.net/cloud_castle/article/details/52313858
-
-Android手机 全面屏（18：9屏幕）适配指南 - 简书
-https://www.jianshu.com/p/686f9b54765f
-
-Android状态栏微技巧，带你真正理解沉浸式模式_移动开发_郭霖的专栏-CSDN博客
-https://blog.csdn.net/guolin_blog/article/details/51763825
-
-全面屏适配以及启动页适配（采用制作.9图的方式） - HaiyuKing - 博客园
-https://www.cnblogs.com/whycxb/p/9737613.html
