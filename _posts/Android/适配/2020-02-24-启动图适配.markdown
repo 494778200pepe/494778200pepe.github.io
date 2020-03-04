@@ -40,7 +40,19 @@ description: 『 启动图适配 』
 
 [AndroidStudio .9图片编辑问题 - 简书](https://www.jianshu.com/p/b9757830fa6a)
 
+10.drawable等资源的命名规则和查找规则
 
+[Android 开发之关于 drawable 你必须知道的规则_慕课手记](https://www.imooc.com/article/42283)
+
+[Android适配－资源文件夹命名与匹配规则 - 微笑yy520 - 博客园](https://www.cnblogs.com/weixiao870428/p/3503607.html)
+
+[Android-0.drawable等资源的命名规则和查找规则_移动开发_hgy413的专栏-CSDN博客](https://blog.csdn.net/hgy413/article/details/85263355)
+
+[Android 适配（drawable文件夹）图片适配（二） - 张亚楠 - 博客园](https://www.cnblogs.com/huihuizhang/p/9473698.html)
+
+[drawable文件夹详解_移动开发_persuit的专栏-CSDN博客](https://blog.csdn.net/persuit/article/details/7663574)
+
+[Android资源分组及匹配详解 - 程序园](http://www.voidcn.com/article/p-vxmeddmr-bpc.html)
 
 其他：
 
