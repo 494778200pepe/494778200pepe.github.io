@@ -36,23 +36,41 @@ description: 『 启动图适配 』
 
 9.点9的制作及相关问题
 
-[点九图完全解析<附官方工具>-UI中国用户体验设计平台](https://www.ui.cn/detail/290941.html)
+[点九图完全解析（附官方工具）-UI中国用户体验设计平台](https://www.ui.cn/detail/290941.html)
 
 [AndroidStudio .9图片编辑问题 - 简书](https://www.jianshu.com/p/b9757830fa6a)
 
 10.drawable等资源的命名规则和查找规则
 
+
 [Android 开发之关于 drawable 你必须知道的规则_慕课手记](https://www.imooc.com/article/42283)
 
-[Android适配－资源文件夹命名与匹配规则 - 微笑yy520 - 博客园](https://www.cnblogs.com/weixiao870428/p/3503607.html)
-
 [Android-0.drawable等资源的命名规则和查找规则_移动开发_hgy413的专栏-CSDN博客](https://blog.csdn.net/hgy413/article/details/85263355)
+
+[Android适配－资源文件夹命名与匹配规则 - 微笑yy520 - 博客园](https://www.cnblogs.com/weixiao870428/p/3503607.html)
 
 [Android 适配（drawable文件夹）图片适配（二） - 张亚楠 - 博客园](https://www.cnblogs.com/huihuizhang/p/9473698.html)
 
 [drawable文件夹详解_移动开发_persuit的专栏-CSDN博客](https://blog.csdn.net/persuit/article/details/7663574)
 
 [Android资源分组及匹配详解 - 程序园](http://www.voidcn.com/article/p-vxmeddmr-bpc.html)
+
+[android屏幕适配——1920x1200_移动开发_学习是孤独的，如何才能耐得住孤独-CSDN博客](https://blog.csdn.net/yljme/article/details/40071593?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task)
+
+[android 屏幕适配 drawable-hdpi-1920x1080 values-xhdpi-1800x1080 values-land-xhdpi-1824x1200_移动开发_风一样的男人-CSDN博客](https://blog.csdn.net/a2241076850/article/details/52535351)
+
+[Splash适配解决启动图拉伸的问题_移动开发_猴子请来的救兵-CSDN博客](https://blog.csdn.net/aa464971/article/details/86692198)
+
+[安卓APP设计规范之1080*1920设计稿对应开发尺寸 - 简书](https://www.jianshu.com/p/f79371f137c5)
+
+[Android 闪屏启动页全面屏适配_移动开发_RoyZheng-CSDN博客](https://blog.csdn.net/Zheng_Jiao/article/details/94010893)
+
+两个问题：1、图片大小和px的对应关系，确认下
+	  2、drawable-xhdpi-2100x1080，
+		这种图片是先找drawable-xhdpi
+		还是直接找的 drawable-xhdpi-2100x1080
+		如果屏幕宽高其中一个大于其中一个（宽 > 1080 或者 高 > 2100）
+		那么使用 drawable-xhdpi，否则使用 drawable-xhdpi-2100x1080
 
 其他：
 
