@@ -70,7 +70,7 @@ description: 『 启动图适配 』
 		这种图片是先找drawable-xhdpi
 		还是直接找的 drawable-xhdpi-2100x1080
 		如果屏幕宽高其中一个大于其中一个（宽 > 1080 或者 高 > 2100）
-		那么使用 drawable-xhdpi，否则使用 drawable-xhdpi-2100x1080
+		那么使用 drawable-xhdpi，否则使用 drawable-xhdpi-2100x1080 
 
 其他：
 
