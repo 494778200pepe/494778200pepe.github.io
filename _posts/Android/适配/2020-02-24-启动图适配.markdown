@@ -47,6 +47,8 @@ description: 『 启动图适配 』
 
 [Android-0.drawable等资源的命名规则和查找规则_移动开发_hgy413的专栏-CSDN博客](https://blog.csdn.net/hgy413/article/details/85263355)
 
+这篇文章对 1800*1200 做了说明
+
 [Android适配－资源文件夹命名与匹配规则 - 微笑yy520 - 博客园](https://www.cnblogs.com/weixiao870428/p/3503607.html)
 
 [Android 适配（drawable文件夹）图片适配（二） - 张亚楠 - 博客园](https://www.cnblogs.com/huihuizhang/p/9473698.html)
@@ -70,10 +72,29 @@ description: 『 启动图适配 』
 		这种图片是先找drawable-xhdpi
 		还是直接找的 drawable-xhdpi-2100x1080
 		如果屏幕宽高其中一个大于其中一个（宽 > 1080 或者 高 > 2100）
-		那么使用 drawable-xhdpi，否则使用 drawable-xhdpi-2100x1080 
+		那么使用 drawable-xhdpi，否则使用 drawable-xhdpi-2100x1080   
+		使用这种方式是在  range 的范围之内就行了
+		
+adb 命令  dumpsys window displays |head -n 5 :
+init=750x1500 320dpi cur=750x1500 app=750x1404 rng=750x604-1500x1354
+
+如果是：drawable-xhdpi-[h-px]x[w-px],比如：drawable-xhdpi-1354x750
+h <= 1404 px,w <= 750 px,才可能被选取，如果有多个，更接近的被选取,毕竟放大系数小。
+如果是：drawable-w[w-dp]dp-h[h-dp]dp-xhdpi,比如：drawable-w375dp-h663dp-xhdpi
+w <= 750/2 dp,h <= 1354/2 dp,,才可能被选取，如果有多个，更接近的被选取.先判断宽度，后判断高度
+
+
 
 其他：
 
+Android设备系统及屏幕分辨率统计信息汇总（截至2018年7月）_移动开发_sanmianti-CSDN博客
+https://blog.csdn.net/u012719153/article/details/81541918
+
+android 手机分辨率与DPI对照表_移动开发_Nothing-CSDN博客
+https://blog.csdn.net/tiankongcheng6/article/details/83899039
+
+友盟+, 全域罗盘
+https://compass.umeng.com/#/equipment?_k=zub6q7
 
 [Android状态栏微技巧，带你真正理解沉浸式模式_移动开发_郭霖的专栏-CSDN博客](https://blog.csdn.net/guolin_blog/article/details/51763825)
 
