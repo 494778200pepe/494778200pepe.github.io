@@ -61,6 +61,8 @@ description: 『 StatusBar 』
 
 [Android的系统更改状态栏字体颜色](http://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=404300912&idx=2&sn=89e980f83d5b2643d4d2f5fe84b151ef&scene=23&srcid=0331ICBb9FV6W3McZyDKlQv3#rd)
 
+[Android状态栏微技巧，带你真正理解沉浸式模式_移动开发_郭霖的专栏-CSDN博客](https://blog.csdn.net/guolin_blog/article/details/51763825)
+
 
 
 
