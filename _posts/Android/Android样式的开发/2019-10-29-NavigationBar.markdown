@@ -34,8 +34,7 @@ description: 『 NavigationBar 』
 
 参考:
 
-Android NavigationBar - 简书
-https://www.jianshu.com/p/97eb321fdc83
+[Android NavigationBar - 简书](https://www.jianshu.com/p/97eb321fdc83)
 
 
 
