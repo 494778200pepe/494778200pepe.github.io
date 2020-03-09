@@ -3,7 +3,7 @@ layout: post
 title:  "Fragement 懒加载"
 date:   2019-09-19 14:55:00 +0800
 categories: Android
-tags: Widget
+tags: Fragment
 author: pepe
 description: 『 懒加载 』
 ---

@@ -3,7 +3,7 @@ layout: post
 title:  "DialogFragment"
 date:   2019-07-28 19:58:00 +0800
 categories: Android
-tags: Widget
+tags: Fragment
 author: pepe
 description: 『 DialogFragment 』
 ---
