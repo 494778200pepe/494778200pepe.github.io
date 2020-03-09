@@ -33,9 +33,9 @@ description: 『 懒加载 』
 
 参考：
 
-Fragment懒加载实现，BaseFragment封装 - 简书
-https://www.jianshu.com/p/4eb74c9d5766
+[Fragment懒加载实现，BaseFragment封装 - 简书](https://www.jianshu.com/p/4eb74c9d5766)
 
-Android 懒加载简单介绍 - Jason_Jan - 博客园
-https://www.cnblogs.com/Jason-Jan/p/8018500.html
+[Android 懒加载简单介绍 - Jason_Jan - 博客园](https://www.cnblogs.com/Jason-Jan/p/8018500.html)
+
+[多层嵌套后的 Fragment 懒加载实现 - 简书](https://www.jianshu.com/p/ef488fd3ea97)
 
