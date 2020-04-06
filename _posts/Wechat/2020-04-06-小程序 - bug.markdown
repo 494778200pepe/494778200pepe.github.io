@@ -19,7 +19,7 @@ description: 『 bug 』
 把book-item中的宽度由上面的100%改成了730rpx。
 原因分析：当100%宽度时，如果此时再设置padding:10rpx;，会超过屏幕总宽度750rpx。730rpx = 750（注：小程序屏幕宽度总是750rpx） - 10rpx（注：这个是左边10） - 10rpx（注：这个是右边10）；
 
-[小程序 padding 对右侧和底部不起作用 - 简书(https://www.jianshu.com/p/fbd8e13687e6)
+[小程序 padding 对右侧和底部不起作用 - 简书](https://www.jianshu.com/p/fbd8e13687e6)
 
 
 
