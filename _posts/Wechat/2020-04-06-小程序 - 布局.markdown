@@ -60,8 +60,7 @@ description: 『 布局 』
   
 ```
 
-h5学习笔记：flex space-between 实现左右对齐布局_JavaScript_夏天的树人的专栏-CSDN博客
-https://blog.csdn.net/hero82748274/article/details/81039651
+[h5学习笔记：flex space-between 实现左右对齐布局_JavaScript_夏天的树人的专栏-CSDN博客(https://blog.csdn.net/hero82748274/article/details/81039651)
 
 
 

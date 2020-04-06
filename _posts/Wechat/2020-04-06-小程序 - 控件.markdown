@@ -33,8 +33,7 @@ description: 『 控件 』
 
 #### 自定义头部返回按钮及回到首页样式
 
-微信小程序自定义头部返回按钮及回到首页样式_开发工具_Gabriel的专栏-CSDN博客
-https://blog.csdn.net/gf771115/article/details/101285002
+[微信小程序自定义头部返回按钮及回到首页样式_开发工具_Gabriel的专栏-CSDN博客](https://blog.csdn.net/gf771115/article/details/101285002)
 
 
 
