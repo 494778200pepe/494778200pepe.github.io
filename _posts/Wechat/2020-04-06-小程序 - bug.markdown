@@ -12,7 +12,7 @@ description: 『 bug 』
 
 原因：在app.json中忘记配置路径
 
-[设置 navigationBarTitleText 不显示_移动开发_曹小心的博客-CSDN博客(https://blog.csdn.net/qq_34570390/article/details/89034016)
+[设置 navigationBarTitleText 不显示_移动开发_曹小心的博客-CSDN博客](https://blog.csdn.net/qq_34570390/article/details/89034016)
 
 #### padding 对右侧和底部不起作用
 
