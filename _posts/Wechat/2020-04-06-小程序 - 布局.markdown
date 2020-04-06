@@ -1,0 +1,74 @@
+---
+layout: post
+title:  "小程序 - 布局"
+date:   2020-04-06 21:22:00 +0800
+categories: Wechat
+tags: 小程序
+author: pepe
+description: 『 布局 』
+---
+
+### 左右对齐布局
+```
+  // setting.wxml
+  // 左边头像，右边名字+箭头
+  <view class='avatar_layout'  bindtap='clickAvatar'>
+     
+    <image class='headimage' src='../../../images/head.jpg' ></image>
+
+    <view class='avatar_right_layout' >
+      <view class='text_s_13'>name</view>
+      <image class='ic_right' src='../../../images/right.png' ></image>
+    </view>
+
+  </view>
+```  
+  
+```  
+// setting.wcss
+/**
+  display: flex;
+  flex-flow:  row nowrap;
+  justify-content: space-between;
+  **/
+.avatar_layout{
+  width: 730rpx;
+  height: 150rpx;
+  display: flex;
+  flex-flow:  row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFF;
+}
+
+// 圆角头像
+.headimage{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-left: 30rpx;
+}
+
+// 线性布局
+.avatar_right_layout{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1px;
+}
+  
+  
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
