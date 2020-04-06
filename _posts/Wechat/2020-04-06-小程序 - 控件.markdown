@@ -1,0 +1,47 @@
+---
+layout: post
+title:  "小程序 - 控件"
+date:   2020-04-06 21:29:00 +0800
+categories: Wechat
+tags: 小程序
+author: pepe
+description: 『 控件 』
+---
+
+#### 按钮
+```
+ // 两端对齐边缘的按钮
+ <view class='exit' bindtap='clickExit'>退出</view>
+ 
+ // 按钮中间实现了文字居中
+.exit{
+  width: 690rpx;
+  height: 100rpx;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  color: #222222;
+  display: flex;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  justify-content:center;
+  align-items:center;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 16px;
+}
+```
+
+#### 自定义头部返回按钮及回到首页样式
+
+微信小程序自定义头部返回按钮及回到首页样式_开发工具_Gabriel的专栏-CSDN博客
+https://blog.csdn.net/gf771115/article/details/101285002
+
+
+
+
+
+
+
+
+
+
