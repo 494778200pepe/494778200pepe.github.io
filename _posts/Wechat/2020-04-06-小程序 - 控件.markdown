@@ -31,9 +31,60 @@ description: 『 控件 』
 }
 ```
 
+#### 带边框input
+```
+.weui-input{
+  width: 670rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  background-color: #FEFEFE;
+  color: #333333;
+  display: flex;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  align-items:center;
+  padding-left: 20rpx;
+  margin-top: 30px;
+  font-size: 16px;
+  border:1px solid #DBDBDB;
+}
+```
+
+#### radio 和 switch 默认颜色修改
+```
+	<radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}} " color='#FF5A00'>
+		<text>{{item.value}}</text>
+	</radio>
+	
+	// switch 默认颜色修改
+	<switch name="switch" color='#FF5A00'/>
+	
+	data: {
+		items: [
+			{ name: 'CHN', value: '设为默认', checked: 'true' },
+		]
+	},
+```
+[小程序 radio默认颜色怎么修改 - 简书](https://www.jianshu.com/p/fc2b7c34985f)
+
 #### 自定义头部返回按钮及回到首页样式
 
 [微信小程序自定义头部返回按钮及回到首页样式_开发工具_Gabriel的专栏-CSDN博客](https://blog.csdn.net/gf771115/article/details/101285002)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

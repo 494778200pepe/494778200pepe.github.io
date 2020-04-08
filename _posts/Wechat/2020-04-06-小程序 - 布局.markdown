@@ -12,11 +12,11 @@ description: 『 布局 』
 ```
   // setting.wxml
   // 左边头像，右边名字+箭头
-  <view class='avatar_layout'  bindtap='clickAvatar'>
+  <view class='layout_left_right_auto'  bindtap='clickAvatar'>
      
     <image class='headimage' src='../../../images/head.jpg' ></image>
 
-    <view class='avatar_right_layout' >
+    <view class='linear_h' >
       <view class='text_s_13'>name</view>
       <image class='ic_right' src='../../../images/right.png' ></image>
     </view>
@@ -31,7 +31,7 @@ description: 『 布局 』
   flex-flow:  row nowrap;
   justify-content: space-between;
   **/
-.avatar_layout{
+.layout_left_right_auto{
   width: 730rpx;
   height: 150rpx;
   display: flex;
@@ -50,19 +50,53 @@ description: 『 布局 』
 }
 
 // 线性布局
-.avatar_right_layout{
+.linear_h{
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 1px;
 }
-  
-  
 ```
 
 [h5学习笔记：flex space-between 实现左右对齐布局_JavaScript_夏天的树人的专栏-CSDN博客](https://blog.csdn.net/hero82748274/article/details/81039651)
 
+### 垂直线性布局
+```
+.linear_v{
+  width: 670rpx;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start ;
+  align-items: flex-start;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}
+```
 
+### 水平线性布局
+```
+.linear_h{
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+```
+### input文字居右
+```
+<input class="weui-input" auto-focus placeholder="浙江省杭州市西湖区" placeholder-style='text-align:right' style="text-align:right" 
+
+.weui-input{
+  width: auto;
+  height: auto;
+  color: #333333;
+  font-size: 16px;
+}
+
+```
+[小程序输入框placeholder如何设置位置居右？输入的光标居左？](https://segmentfault.com/q/1010000012728613)
 
 
 
