@@ -1,0 +1,43 @@
+---
+layout: post
+title:  "小程序 - 其他"
+date:   2020-04-09 10:03:00 +0800
+categories: Wechat
+tags: 小程序
+author: pepe
+description: 『 其他 』
+---
+
+#### 打印log
+```
+console.log(data);
+console.log('get_detail_year接口中data数据如下'+data);
+console.log('get_detail_year接口中data数据如下',data);
+```
+
+[微信小程序之 打印json数据或者object类型的数据技巧。 - 简书](https://www.jianshu.com/p/342478e4bf54)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

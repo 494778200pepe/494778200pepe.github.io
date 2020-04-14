@@ -1,0 +1,63 @@
+---
+layout: post
+title:  "小程序 - 事件"
+date:   2020-04-12 10:12:00 +0800
+categories: Wechat
+tags: 小程序
+author: pepe
+description: 『 事件 』
+---
+
+#### for循环绑定item的点击事件
+
+```
+// manage_address.wxml
+<view class='linear_h'>
+	<view class='linear_h' bindtap="editAddress" data-bean="{{item}}" data-id="{{index}}" >
+		<image class='ic_image' src='../../../images/address_edit.png'></image>
+		<text class='title '>编辑</text>
+	</view>
+	<view class='linear_h' bindtap='deleteAddress' id="{{index}}">
+		<image class='ic_image' src='../../../images/address_delete.png'></image>
+		<text class='title '>删除</text>
+	</view>
+</view>
+
+
+// manage_address.js
+  editAddress: function (event) {
+    var $data = event.currentTarget.dataset;
+	// data-bean
+    console.log("name = ",$data.bean.name);
+	// data-id
+    console.log("id = ",$data.id);
+    wx.showToast({
+      title: '编辑',
+    })
+  },
+
+  deleteAddress: function (event) {
+    // id 
+    console.log(event.currentTarget.id);
+  },
+```
+
+* 1.通过 e.currentTarget.id 即可获取该元素id。
+
+* 2.通过e.currentTarget.dataset.id 即可获取你自己设置的data-id里面值。
+
+[微信小程序——获取绑定事件元素的ID - 前端[色色] - 博客园](https://www.cnblogs.com/sese/p/9235641.html)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

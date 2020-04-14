@@ -84,6 +84,27 @@ description: 『 布局 』
   align-items: center;
 }
 ```
+
+### 网格布局
+```
+index.js:
+ dataList: ['a','b','c','d','e','f']
+ 
+index.wxml:
+<view class='grid' wx:for='{{dataList}}' wx:if='{{index%2 === 0}}'>
+  <view wx:for='{{[dataList[index], dataList[index+1]]}}' wx:for-item='dataItem'>{{dataItem}}</view>
+</view>
+
+index.wxss:
+
+.grid{
+  display: flex;
+  justify-content: space-around;
+}
+```
+
+[微信小程序中通过flex实现网格布局(一)_JavaScript_Mr_Tony的专栏-CSDN博客](https://blog.csdn.net/Mr_Tony/article/details/92088897)
+
 ### input文字居右
 ```
 <input class="weui-input" auto-focus placeholder="浙江省杭州市西湖区" placeholder-style='text-align:right' style="text-align:right" 
@@ -98,6 +119,17 @@ description: 『 布局 』
 ```
 [小程序输入框placeholder如何设置位置居右？输入的光标居左？](https://segmentfault.com/q/1010000012728613)
 
+### 全屏背景
+
+```
+page{
+  height:100%;
+  background-color: #b3d4db; 
+}
+```
+
+微信小程序--窗口背景颜色铺满页面_数据库_LuuvyJune的博客-CSDN博客
+https://blog.csdn.net/LuuvyJune/article/details/88815228
 
 
 
