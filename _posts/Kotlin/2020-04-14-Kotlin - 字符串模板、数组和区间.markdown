@@ -1,0 +1,137 @@
+---
+layout: post
+title:  "Kotlin - 字符串模板、数组和区间"
+date:   2020-04-14 14:46:00 +0800
+categories: Kotlin
+tags: Kotlin
+author: pepe
+description: 『 字符串模板、数组和区间 』
+---
+
+### 字符串模板
+
+```
+// 需要拼接的话，用{}把变量包起来
+// 需要显示$的话，可以用转义 \$
+e("number:${number}1 -> str:${str}String -> bool:$bool -> char:$char -> float:$float -> double:$double")
+```
+
+### 类型转换
+```
+numberStr.toInt()，numberStr.toFloat(),numberStr.toDouble() 等等
+
+字符串比较 equals 可以用 == 替代，比较的是内容是否相等
+
+对象比较 也可以用 == 替代，相当于 对象的 equals 方法。
+```
+### 空安全
+
+// 任何对象都分为可空和不可空
+
+如果说对象可以为空，那么我们在使用的时候必须要判断，或者加 !! （!!代表信任）
+
+如果对象不可控空，那么我们则可以直接使用
+
+```
+val length = token?.length 
+
+如果 token 是空那么不会保存会返回 null , 
+如果token 不是空那么会返回 token.length
+
+// 方法允许返回 null，不加 ？ 会报错
+fun token():String?{
+	return null
+}
+
+```
+
+### 数组
+```
+// 数组，集合        
+// int[] arr = {1,2,3,4,5,6}        
+val intArrs = intArrayOf(1,2,3,4,5,6) 
+// 或者 arrayOfNulls<Int>(3)
+       
+e("intArrs[0] = ${intArrs[0]}")        
+// floatArrayOf()        
+// doubleArrayOf()        
+var strArrs = arrayOf("str1","str2")     // 字符串   
+e("strArrs[0] = ${strArrs[0]}")
+```
+
+遍历
+```
+// 方式一
+for (strArr in strArrs) {// for(String str:strArrs) java            
+	e(strArr)        
+}    
+
+// 方式二
+// 角标的方式遍历        
+for(i in strArrs.indices){            
+	e("strArr[$i] = ${strArrs[i]}")        
+}
+for(i in IntRange(0, strArrs.size - 1)){            
+	e("strArr[$i] = ${strArrs[i]}")        
+}
+for(i in  0..strArrs.size - 1)){            
+	e("strArr[$i] = ${strArrs[i]}")        
+}
+for(i in  0 until strArrs.size)){            
+	e("strArr[$i] = ${strArrs[i]}")        
+}
+```
+
+### 区间
+```
+// 区间        
+val intRange = IntRange(0,strArrs.size)// [0,3] 0,1,2,3        
+/*for(i in intRange){// 九宫格解锁 for(i in 0..8)            
+	e("i = $i")        
+}*/        
+
+val intRange1 = 0..strArrs.size // [0,3] 0,1,2,3        
+
+val intRange2 = 0 until strArrs.size // [0,3) 0,1,2        
+
+for(i in intRange2){            
+	e("i = $i")        
+}
+```
+
+### lambda
+```
+// 需求：过滤掉 strArrs 中的 "" 空字符串        
+// 步骤：1. 创建一个新的集合用来存放空字符串数组，2. 遍历数组判断字符串是否为空，3. 遍历数组        
+// RxJava(RxLogin , RxPay) or java8函数式 or lambda        
+strArrs.filter { it.isNotEmpty() }                
+	.forEach { 
+		e(it) 
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -77,6 +77,12 @@ fun add(number1:Int,number2:Int) = number1 + number2
 val minus = fun(number1:Int,number2:Int):Int{    
 	return number1 - number2;
 }
+
+// lambda 表达式
+// 表达式：函数入口参数 -> 返回值
+// number1：Int,number2:Int -> number1 - number2
+val minus = { number1：Int,number2:Int -> number1 - number2 }
+// 这个函数里面是不能加 return 的，所以必须是第一行就是返回值。如果有更多的代码，就必须用函数了。
 ```
 
 
