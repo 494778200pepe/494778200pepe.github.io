@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "多渠道打包"
+date:   2020-05-02 18:18:00 +0800
+categories: Android
+tags: 混淆
+author: pepe
+description: 『 多渠道打包 』
+---
+
+android插件自定义之多渠道打包插件（支持微信资源混淆andResGuard） - 简书
+https://www.jianshu.com/p/3e56303fb375
+

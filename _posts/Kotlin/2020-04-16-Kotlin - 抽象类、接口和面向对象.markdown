@@ -1,0 +1,236 @@
+---
+layout: post
+title:  "Kotlin -  抽象类、接口和面向对象"
+date:   2020-04-16 10:34:00 +0800
+categories: Kotlin
+tags: Kotlin
+author: pepe
+description: 『  抽象类、接口和面向对象 』
+---
+
+### 类的创建
+```
+// 创建类 Person  相当于 Java 类，并且定义了两个属性 name age ,而且定义了两个(get)方法 getAge getNameclass 
+Person(val name:String,val age:Int)
+
+class Person(var name: String?, var age:Int)
+// 重载构造方法
+{    
+	constructor(name: String):this(name,0)    
+	
+	constructor():this(null,0)
+}
+
+class Person{    
+	var name:String? = null    
+	var age:Int = 0    
+	
+	constructor()    
+	
+	constructor(name:String,age:Int){        
+		this.name = name        
+		this.age = age    
+	}    
+	
+	constructor(name:String){        
+		this.name = name    
+	}
+}
+
+// 定义 name 属性，默认的情况就会有 get 和 set 方法    
+// 默认属性前面有 protected ，如果想把 get 私有，那么可以把 属性设置为私有    
+var name: String? = null        
+	private set// 私有掉set方法    
+	
+var age: Int = 0        
+	get() {            
+		return if (field < 0) 0 else field        
+	}
+```
+
+### 类的继承
+```
+class QQStepView(context: Context?, attrs: AttributeSet?) : View(context, attrs)
+
+
+
+class QQStepView : View {    
+
+	constructor(context:Context):this(context,null)    
+	
+	constructor(context:Context,attrs: AttributeSet?):this(context,attrs,0)    
+	
+	constructor(context:Context,attrs: AttributeSet?,defStyleAttr:Int):super(context,attrs,defStyleAttr){        
+	// 写内容 获取自定义属性的内容    
+	}
+}
+```
+
+### . 抽象类、接口，匿名类
+// 定义接口
+interface Callback{    
+
+	fun onError(e:IOException)    
+	
+	fun onSuccess(resultJson:String)/*{         
+	
+		// 接口方法可以有默认实现        
+		Log.e("Callback","onSuccess")    
+	}*/
+}
+
+// 抽象类
+abstract class HttpCallback:Callback{    
+	override fun onSuccess(resultJson: String) {       
+		// Log.e("HttpCallback-onSuccess",resultJson)        
+		// 写一点伪代码 获取类上的泛型，gson 去转成可以直接使用的对象    
+	}    
+	
+	abstract fun onSuccess();
+}        
+
+// 匿名内部类 object:xxx        
+httpUtils.get(object:HttpCallback(){            
+	override fun onError(e: IOException) {            
+	
+	}            
+	
+	override fun onSuccess() {                
+		Log.e("TAG","onSuccess")            
+	}        
+})
+```
+
+### 方法重载与默认参数 
+```
+fun get(callback: Callback,url:String = "https://www.baidu.com",cache:Boolean = false){        
+	callback.onSuccess("成功")    
+}
+
+httpUtils.get(object:HttpCallback(){            
+	override fun onError(e: IOException) {            
+	
+	}            
+	
+	override fun onSuccess() {                
+		Log.e("TAG","onSuccess")            
+	}        
+},cache = true)// cache = true 是具名参数
+```
+
+### 运算符重载
+http://kotlinlang.org/docs/reference/operator-overloading.html
+
+```
+class Counter(val dayIndex: Int){    
+	// 操作符重载 +    
+	operator fun plus(counter: Counter):Counter{        
+		return Counter(dayIndex+counter.dayIndex)    
+	}    
+	
+	// 操作符重载 -    
+	operator fun minus(counter: Counter):Counter{        
+		return Counter(dayIndex-counter.dayIndex)    
+	}
+}
+```
+
+### 伴生对象与静态成员
+```    
+// 静态伴生对象 ，只有一份 相当于 java 的 static    
+companion object {        
+	// 相当于静态属性  
+	// 使用 Class.baseUrl
+	val baseUrl = "https://www.baidu.com"    
+    
+	// vararg 可变参数      
+	// 使用 Class.companion.sum()
+	fun sum(vararg nums: Int): Int {            
+		var sum = 0        
+		
+		/*for(num in nums)            
+		sum += num*/            
+		nums.forEach { sum += it }            
+		
+		return sum        
+	}    
+}
+```
+
+### 方法扩展
+
+```     
+// 对类方法进行扩展        
+	// abc.mulit(3) = abc*abc*abc      
+	
+	val str = "abc"       
+	var strMulit = str.mulit(3)        
+	Log.e("TAG","strMulit = $strMulit")    
+
+	
+	// 对一个类的方法进行扩展    
+	fun  String.mulit(number: Int): String {         
+		val stringBuilder = StringBuilder()         
+		for (num in 1..number){             
+			stringBuilder.append(this)         
+		}        
+		return stringBuilder.toString()    
+	}	
+	
+	var setTimes = str*3  
+	Log.e("TAG","setTimes = $setTimes")    
+	// 对一个类的操作符进行扩展    
+	operator fun  String.times(number: Int): String {         
+		val stringBuilder = StringBuilder()         
+		for (num in 1..number){             
+			stringBuilder.append(this)         
+		}        
+		return stringBuilder.toString()    
+	}
+```
+
+### 内部类和枚举
+
+```
+class Outer{    
+	val name = "Darren_Outer"    
+	
+	// 默认情况，不加 inner 就相当于 java 的静态类    
+	// 如果加了 inner 就是 内部类    
+	inner class Inner{        
+		val name = "Darren_Inner"        
+		fun printName(){            
+			// Darren_Inner
+			Log.e("Inner","name = ${this.name}")  
+			// Darren_Outer			
+			Log.e("Inner","name = ${this@Outer.name}")        			
+		}    
+	}
+}
+
+enum class Day(val day:Int){    
+	MonDay(1),WensDay(2)
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

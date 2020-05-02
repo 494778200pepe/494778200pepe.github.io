@@ -33,3 +33,12 @@ APK 在经过代码混淆处理后，包名、类名、成员名被转化为无�
 [一篇文章带你领略Android混淆的魅力](https://www.jianshu.com/p/2fab1510eef8)
 
 [使用第三方crunch工具做java混淆字典, - 简书](https://www.jianshu.com/p/791768f1f77c)
+
+“丧心病狂”的混淆操作！
+https://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650827210&idx=1&sn=6d0858db9b71650274dc1720843a8c17&chksm=80b7bd54b7c034429b2a79ed13db474a5b3221ac39ead8c15fda577efd573194f10fdfb68c32&scene=21#wechat_redirect
+
+“丧心病狂”的混淆操作！
+https://mp.weixin.qq.com/s/ya0RiLuHfIBrPLkl2lTbaA
+
+再“丧心病狂”的混淆也不怕
+https://mp.weixin.qq.com/s/nn-nwXnRI9JYSmknH1pzYg

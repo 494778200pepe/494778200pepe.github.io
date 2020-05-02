@@ -103,12 +103,38 @@ for(i in intRange2){
 ```
 // 需求：过滤掉 strArrs 中的 "" 空字符串        
 // 步骤：1. 创建一个新的集合用来存放空字符串数组，2. 遍历数组判断字符串是否为空，3. 遍历数组        
-// RxJava(RxLogin , RxPay) or java8函数式 or lambda        
+// RxJava(RxLogin , RxPay) or java8函数式 or lambda      
+// filter 演变过程 ({}) -> (){} -> {}
+// predicate:(T) -> Boolean  
+// => predicat -> predicate.isNotEmpty()
+// => it.isNotEmpty()  
 strArrs.filter { it.isNotEmpty() }                
 	.forEach { 
 		e(it) 
 	}
+```
 
+###  when 表达式
+
+```
+// when表达式 java switch case        
+val number = 1        
+when (number) {            
+	1 -> e("is 1")            
+	2 -> e("is 2")            
+	in 1..3 -> e("in 1..3")        
+}        
+
+val numberStr = when (number) {            
+	1 -> "1"            
+	2 -> "2"            
+	else -> {                
+		""            
+	}        
+}        
+e("numberStr = $numberStr")
+		
+```
 
 
 

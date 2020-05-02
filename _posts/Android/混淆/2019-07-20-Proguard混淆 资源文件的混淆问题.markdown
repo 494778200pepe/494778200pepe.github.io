@@ -18,3 +18,6 @@ Proguard 完全不会管我们的资源文件，因此如果资源文件名没�
 [android 防破解, 代码混淆，代码保护 - 晕菜一员 - 博客园](https://www.cnblogs.com/CharlesGrant/p/7544311.html)
 
 [AndResGuard](https://github.com/shwenzhang/AndResGuard/blob/master/README.zh-cn.md)
+
+安装包立减1M--微信Android资源混淆打包工具
+https://mp.weixin.qq.com/s?__biz=MzA3NTYzODYzMg==&mid=214472913&idx=1&sn=92b54b5fcd9bbab6513e46d92095a07f&scene=1&srcid=0427eTI2x0dnk2EsFnysnjZI#rd

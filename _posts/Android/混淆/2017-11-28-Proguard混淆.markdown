@@ -211,3 +211,26 @@ https://juejin.im/post/5d1717996fb9a07eeb13bc95
 
 美团Android资源混淆保护的具体实践 - 区长的专栏 - CSDN博客
 https://blog.csdn.net/sbsujjbcy/article/details/49002729
+
+
+
+
+1、混淆文件的分类，系统混淆文件摘出来  blog 纪录下
+proguardFile 'proguard-rules.pro'
+proguardFile 'proguard-android-optimize.txt' 
+
+4、混淆日志的反推和release开启debuggable = true 模式 测试
+一篇文章带你领略Android混淆的魅力
+https://mp.weixin.qq.com/s/Rr0atgupgoeHOEV3-20WqQ
+（译）理解混淆的输出 - 简书
+https://www.jianshu.com/p/a106e8c72eed
+Android 混淆查缺补漏
+https://mp.weixin.qq.com/s/g7AxmLHvJTX-JyGqs4SaHg
+5、混淆 view 和 Activity
+6、资源文件的混淆
+7、插入垃圾代码
+8、其他混淆方案
+9、开源库的混淆方案  
+Android | 代码混淆到底做了什么？ - 简书
+https://www.jianshu.com/p/65027e18c2fe
+
