@@ -1,0 +1,90 @@
+---
+layout: post
+title:  "小程序 - 搜索功能"
+date:   2020-05-10 00:31:00 +0800
+categories: Wechat
+tags: 小程序
+author: pepe
+description: 『 搜索功能 』
+---
+
+### **一、搜索功能的需求描述：**
+
+数据：教师名字列表的数组
+
+1、搜索文本为空时，展示所有教师列表
+
+2、输入搜索文本，展示与搜索文本匹配的教师列表
+
+ 
+
+### **二、搜索功能的算法描述：**
+
+1、声明一个数组存放搜索结果，
+
+2、判断搜索文本是否为空，为空则直接设置结果数组赋值为全部教师列表的数组
+
+3、若搜索文本不为空，先将搜索结果数组设置为空数组，
+
+    遍历教师列表数组，利用indexOf函数判断每一个教师名字与搜索文本是否匹配，匹配则将该教师push进搜索结果数组
+
+
+### **三、相关js代码：**
+```
+inputText: function(e) {
+    this.setData({
+      text: e.detail.value.replace(/\s+/g, '')
+    })
+    let text = this.data.text;
+    let showList = this.data.showList;//showList为教师列表
+    if (text == null || text.trim() == '') {
+      this.setData({
+        'resultList': showList
+      })
+      return;
+    }
+ 
+ 
+    let tempResultList = [];
+    for (var i = 0; i < showList.length; i++) {
+      if (showList[i].name_phone.indexOf(text) >= 0) { //如果老师列表中有匹配的
+        let ifHas = false; //用于记录temp结果列表中是否有这条数据
+        for (var j = 0; j < tempResultList.length; j++) {
+          if (tempResultList[j] == showList[i]) {
+            ifHas = true; //如果temp结果列表中有这条数据，改ifHas的值为true
+            break;
+          }
+        }
+        if (!ifHas) { //如果ifHas为false,即temp结果列表中没有这条数据，则把这条数据放入temp结果列表
+          tempResultList.push(showList[i]);
+        }
+      }
+    }
+ 
+    this.setData({
+      'resultList': tempResultList
+    })
+ 
+  },
+
+```
+
+
+参考：
+
+[搜索功能的实现----微信小程序_java_huangzhin的博客-CSDN博客](https://blog.csdn.net/weixin_38131507/article/details/102882791?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
