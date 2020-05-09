@@ -63,12 +63,24 @@ wx.reLanch({
 ```
 // navigator 组件默认的 open-type 为 navigate 
 <navigator url="/page/navigate/navigate?title=navigate" hover-class="navigator-hover">跳转到新页面</navigator>
+```
+
+```
 // redirect 对应 API 中的 wx.redirect 方法
 <navigator url="../../redirect/redirect/redirect?title=redirect" open-type="redirect" hover-class="other-navigator-hover">在当前页打开</navigator>
+```
+
+```
 // switchTab 对应 API 中的 wx.switchTab 方法
 <navigator url="/page/index/index" open-type="switchTab" hover-class="other-navigator-hover">切换 Tab</navigator>
+```
+
+```
 // reLanch 对应 API 中的 wx.reLanch 方法
 <navigator url="../../redirect/redirect/redirect?title=redirect" open-type="reLanch" hover-class="other-navigator-hover">关闭所有页面，打开到应用内的某个页面</navigator>
+```
+
+```
 // navigateBack 对应 API 中的 wx.navigateBack 方法
 <navigator url="/page/index/index" open-type="navigateBack" hover-class="other-navigator-hover">关闭当前页面，返回上一级页面或多级页面</navigator>
 ```
