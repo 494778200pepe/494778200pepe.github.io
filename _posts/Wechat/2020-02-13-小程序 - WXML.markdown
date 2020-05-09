@@ -90,6 +90,22 @@ Page({
 ```
 if 和 hidden 的区别:if 会导致组件重新渲染，hidden会一直渲染，只是显示和隐藏。
 
+### **判断显示不同图片的两种方式**
+
+1、src中
+```
+<image class="audio" catchtap='onMusicTap' src="{{isPlayingMusic? '/images/music/music-stop.png': '/images/music/music-start.png'}}"></image>
+```
+
+2、if-else
+
+```
+<image catchtap='onCollectiontap' wx:if="{{collected}}" src='/images/icon/collection.png'></image>
+<image catchtap='onCollectiontap' wx:else src='/images/icon/collection-anti.png'></image>
+```
+
+[小程序--判断显示不同图片的两种方式_运维_lsy__lsy的博客-CSDN博客](https://blog.csdn.net/lsy__lsy/article/details/80431599)
+
 
 ### **模板引用**
 
