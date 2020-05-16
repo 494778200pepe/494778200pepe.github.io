@@ -8,6 +8,71 @@ author: pepe
 description: 『 Tinker 』
 ---
 
+
+
+* 1.isProtectedApp=true的时候只能作为加固过的包应用补丁，
+  isProtectedApp=false的时候只能作为未加固的包应用补丁
+
+* 2.360加固助手，在加固时设置签名，是添加 v1 签名
+  如果要添加 v2 签名；
+  
+  。 a.使用 360加固助手的工具包里面的 v2 签名，这种签名方式显示的 isV3 是 false
+  。 b.自己使用签名工具签名，显示的 isV3 是 true
+
+* 3.自己使用签名工具签名
+  。 a.打开CMD，进入Android SDK -> build-tools -> 25.+目录，
+	例如：C:\Users\Administrator\AppData\Local\Android\Sdk\build-tools\25.0.2
+  。 b. 执行命令：
+	apksigner sign --ks [你的签名文件] [apk路径]
+
+* 4.检查是否适用V2签名
+
+```
+	java -jar CheckAndroidV2Signature.jar base_zipalign.apk
+	返回结果：
+	{"ret":0,"msg":"","isV1OK":true,"isV2":true,"isV2OK":true,"isV3":true,"isV3OK":true,"keystoreMd5":"b4eb3d902315b776af63d8ca002db1cc"}
+	
+	CheckAndroidV2Signature.jar 下载链接：
+		去除V2签名 - 简书 https://www.jianshu.com/p/3dcd23966d92
+		Releases · bihe0832/Android-GetAPKInfo   https://github.com/bihe0832/Android-GetAPKInfo/releases
+```
+	
+参考文章：
+Tinker使用过程及注意点(2)－360加固及多渠道分包_移动开发_forward-CSDN博客
+https://blog.csdn.net/likuan0214/article/details/71682993
+
+
+纪录：
+```
+签名：
+C:\install\SDK\build-tools\28.0.3>apksigner sign --ks C:\Users\Administrator\Desktop\yiwang.jks C:\Users\Administrator\Desktop\old-app_align.apk
+Keystore password for signer #1:
+
+检查：
+C:\install\SDK\build-tools\28.0.3>java -jar C:\Users\Administrator\Desktop\CheckAndroidSignature.jar C:\Users\Administrator\Desktop\old-app_align.apk
+{"ret":0,"msg":"","isV1OK":true,"isV2":true,"isV2OK":true,"isV3":true,"isV3OK":true,"keystoreMd5":"b4eb3d902315b776af63d8ca002db1cc"}
+
+
+压缩对齐：
+C:\install\SDK\build-tools\28.0.3>zipalign -v 4 C:\Users\Administrator\Desktop\old-app_jiagu.apk  C:\Users\Administrator\Desktop\old-app_align.apk
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 [Android热修复原理探索与实践 - 简书](https://www.jianshu.com/p/8edd8cd83423)
 
 [Tinker源码解析系列（一）—Application代理机制 - 简书](https://www.jianshu.com/p/3c1a015df4b3)
