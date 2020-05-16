@@ -123,12 +123,13 @@ String channel = ChannelReaderUtil.getChannel(getApplicationContext());
 java -jar VasDolly.jar put -c channel.txt /home/user/base.apk /home/user/
 ```
 
-VasDolly/README.md at master · Tencent/VasDolly
-https://github.com/Tencent/VasDolly/blob/master/command/README.md
+[VasDolly/README.md at master · Tencent/VasDolly](https://github.com/Tencent/VasDolly/blob/master/command/README.md)
 
 8.根据已有基础包重新生成多渠道包
+
 若是根据已有基础包重新生成多渠道包，首先要配置渠道文件、基础包的路径和渠道包的输出目录：
 
+```
 rebuildChannel {
   //指定渠道文件
   channelFile = file("/Users/leon/Downloads/testReChannel.txt")
@@ -143,9 +144,10 @@ rebuildChannel {
   //低内存模式（仅针对V2签名，默认为false）：只把签名块、中央目录和EOCD读取到内存，不把最大头的内容块读取到内存，在手机上合成APK时，可以使用该模式
   lowMemory = false
 }
-然后，通过gradle rebuildChannel命令生成多渠道包。
+```
+然后，通过`gradle rebuildChannel`命令生成多渠道包。
 
-为了方便临时生成渠道包进行测试，我们从v2.0.0开始支持添加渠道参数：gradle rebuildChannel -Pchannels=yingyongbao,gamecenter，这里通过属性channels指定的渠道列表拥有更高的优先级，且和原始的文件方式是互斥的。
+为了方便临时生成渠道包进行测试，我们从v2.0.0开始支持添加渠道参数：`gradle rebuildChannel -Pchannels=yingyongbao,gamecenter`，这里通过属性`channels`指定的渠道列表拥有更高的优先级，且和原始的文件方式是互斥的。
 
 
 
