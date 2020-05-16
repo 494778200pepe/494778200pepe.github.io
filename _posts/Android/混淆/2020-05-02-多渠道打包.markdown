@@ -10,51 +10,35 @@ description: 『 多渠道打包 』
 
 ### 原理：
 
-借腾讯开源VasDolly，说说Android签名和多渠道打包的原理
-https://mp.weixin.qq.com/s?__biz=MzIxNjc0ODExMA==&mid=2247485235&idx=1&sn=21e3c291f9ee4f8b8a3f7579ca8a9888&chksm=97851e12a0f2970489b61a6cc1d9ff3b1d4162cbce1860bf49f3731342040a34d01bbe23f284&scene=38#wechat_redirect
+[借腾讯开源VasDolly，说说Android签名和多渠道打包的原理](https://mp.weixin.qq.com/s?__biz=MzIxNjc0ODExMA==&mid=2247485235&idx=1&sn=21e3c291f9ee4f8b8a3f7579ca8a9888&chksm=97851e12a0f2970489b61a6cc1d9ff3b1d4162cbce1860bf49f3731342040a34d01bbe23f284&scene=38#wechat_redirect)
 
-腾讯开源 多渠道打包 VasDolly实现原理-玩Android - wanandroid.com
-https://www.wanandroid.com/blog/show/2045
-带你了解腾讯开源的多渠道打包技术 VasDolly源码解析-玩Android - wanandroid.com
-https://www.wanandroid.com/blog/show/2113
+[腾讯开源 多渠道打包 VasDolly实现原理-玩Android - wanandroid.com](https://www.wanandroid.com/blog/show/2045)
+[带你了解腾讯开源的多渠道打包技术 VasDolly源码解析-玩Android - wanandroid.com](https://www.wanandroid.com/blog/show/2113)
 
 ### 美团方案
-Android-V1、V2签名包和快速集成美团多渠道打包（原创） - 简书
-https://www.jianshu.com/p/332525b09a88
-Walle —— Android多渠道打包神器
-https://mp.weixin.qq.com/s/gb2S1IMKTQFfPVqtzqT8rQ
-Python多渠道打包的脚本-玩Android - wanandroid.com
-https://www.wanandroid.com/blog/show/2475
+[Android-V1、V2签名包和快速集成美团多渠道打包（原创） - 简书](https://www.jianshu.com/p/332525b09a88)
+[Walle —— Android多渠道打包神器](https://mp.weixin.qq.com/s/gb2S1IMKTQFfPVqtzqT8rQ)
+[Python多渠道打包的脚本-玩Android - wanandroid.com](https://www.wanandroid.com/blog/show/2475)
 
 
 
 ### 友盟多渠道：
-Android友盟统计的集成与使用（包含多渠道打包配置） - 简书
-https://www.jianshu.com/p/e4da2f477cd8
-Android友盟多渠道统计 - 简书
-https://www.jianshu.com/p/523db6ba9c42
-Android Studio 使用Gradle多渠道打包
-https://mp.weixin.qq.com/s/yKfesG8lodfhJVA-rPfyRg
-Android Gradle 多渠道打包
-https://mp.weixin.qq.com/s?__biz=MzIxNzU1Nzk3OQ==&mid=2247486694&idx=1&sn=f6114223b83e15921ec68fd7a577713d&chksm=97f6b252a0813b44413b908796e4d41846c79ba374cd1af5f198db9f7c08812a05f638794400&scene=38#wechat_redirect
+[Android友盟统计的集成与使用（包含多渠道打包配置） - 简书](https://www.jianshu.com/p/e4da2f477cd8)
+[Android友盟多渠道统计 - 简书](https://www.jianshu.com/p/523db6ba9c42)
+[Android Studio 使用Gradle多渠道打包](https://mp.weixin.qq.com/s/yKfesG8lodfhJVA-rPfyRg)
+[Android Gradle 多渠道打包](https://mp.weixin.qq.com/s?__biz=MzIxNzU1Nzk3OQ==&mid=2247486694&idx=1&sn=f6114223b83e15921ec68fd7a577713d&chksm=97f6b252a0813b44413b908796e4d41846c79ba374cd1af5f198db9f7c08812a05f638794400&scene=38#wechat_redirect)
 
 
 ### productFlavors 
-Gradle多渠道打包(动态设定App名称，应用图标，替换常量，更改包名，变更渠道) - 简书
-https://www.jianshu.com/p/533240d222d3
+[Gradle多渠道打包(动态设定App名称，应用图标，替换常量，更改包名，变更渠道) - 简书](https://www.jianshu.com/p/533240d222d3)
 
 ### 360加固保
-Android 加固和多渠道打包自动化实践 - 简书
-https://www.jianshu.com/p/7980004c6b06
-Gradle实现自动化加固与多渠道打包 - 掘金
-https://juejin.im/post/5e9eb95a6fb9a03c840d787b
+[Android 加固和多渠道打包自动化实践 - 简书](https://www.jianshu.com/p/7980004c6b06)
+[Gradle实现自动化加固与多渠道打包 - 掘金](https://juejin.im/post/5e9eb95a6fb9a03c840d787b)
 
 
 ### 其他
-android插件自定义之多渠道打包插件（支持微信资源混淆andResGuard） - 简书
-https://www.jianshu.com/p/3e56303fb375
-热修复技术的实践之旅——微信TinkerPatch热修复结合Walle多渠道打包的详解
-https://mp.weixin.qq.com/s?__biz=MzIxNzU1Nzk3OQ==&mid=2247487017&idx=1&sn=8abaad1612f871980c042f0fd214975d&chksm=97f6b09da081398b63c2dcd7642b858229ea7c82246af493041ff325c25beb01879bf24d6a0b&scene=38#wechat_redirect
-多渠道打包方案调研思考 - Cc1over的博客 | C1☆ Blog
-https://cc1over.github.io/2019/07/31/%E5%A4%9A%E6%B8%A0%E9%81%93%E6%89%93%E5%8C%85%E6%96%B9%E6%A1%88%E8%B0%83%E7%A0%94%E6%80%9D%E8%80%83/
+[android插件自定义之多渠道打包插件（支持微信资源混淆andResGuard） - 简书](https://www.jianshu.com/p/3e56303fb375)
+[热修复技术的实践之旅——微信TinkerPatch热修复结合Walle多渠道打包的详解](https://mp.weixin.qq.com/s?__biz=MzIxNzU1Nzk3OQ==&mid=2247487017&idx=1&sn=8abaad1612f871980c042f0fd214975d&chksm=97f6b09da081398b63c2dcd7642b858229ea7c82246af493041ff325c25beb01879bf24d6a0b&scene=38#wechat_redirect)
+[多渠道打包方案调研思考 - Cc1over的博客](https://cc1over.github.io/2019/07/31/%E5%A4%9A%E6%B8%A0%E9%81%93%E6%89%93%E5%8C%85%E6%96%B9%E6%A1%88%E8%B0%83%E7%A0%94%E6%80%9D%E8%80%83/)
 
