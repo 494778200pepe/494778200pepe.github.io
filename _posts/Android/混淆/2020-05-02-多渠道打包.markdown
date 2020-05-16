@@ -41,7 +41,7 @@ description: 『 多渠道打包 』
 
 [Gradle多渠道打包(动态设定App名称，应用图标，替换常量，更改包名，变更渠道) - 简书](https://www.jianshu.com/p/533240d222d3)
 
-### 360加固保
+### 360加固保+自动化实践
 
 [Android 加固和多渠道打包自动化实践 - 简书](https://www.jianshu.com/p/7980004c6b06)
 
