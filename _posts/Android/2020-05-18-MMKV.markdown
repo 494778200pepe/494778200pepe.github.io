@@ -12,7 +12,7 @@ description: 『 点9图 』
 
 [MMKV/readme_cn.md at master · Tencent/MMKV](https://github.com/Tencent/MMKV/blob/master/readme_cn.md)
 
-
+[安卓性能优化之持久化配置数据-MMKV_qq_23081779的博客-CSDN博客](https://blog.csdn.net/qq_23081779/article/details/89705088?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase)
 
 
 
