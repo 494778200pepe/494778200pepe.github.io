@@ -97,8 +97,12 @@ position：absolute;
 			top:50%;
 			left:50%
 			transform:translate(-50%,-50%);
-			
+	
+多列布局的分类：两列布局，三列布局，圣杯布局和双飞翼布局，等分布局，等高布局，CSS3多列布局	
 ### 两列布局
+方式一：float + margin 属性配合使用
+方式二：float + overflow 属性配合使用
+方式三：display 属性的 table 相关值使用
 
 
 
