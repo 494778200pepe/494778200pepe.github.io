@@ -51,7 +51,7 @@ auto：表示根据浏览器自动分配
 四个值：上，右，下，左
 
 方式三：
-父级元素：position：relative/fixed/relative;
+父级元素：position：relative/fixed/relative; // 三个里面，只有 relative 是不脱离文档流的
 子级元素：position:absolute;
 			left:50%;
 			transform:translateX(-50%);
@@ -79,13 +79,26 @@ position：absolute;
 缺点：vertical-align 属性具有继承性，导致父级元素的文本也是居中显示的
 
 方式二：
-父级元素：position：relative/fixed/relative;
+父级元素：position：relative/fixed/relative; // 三个里面，只有 relative 是不脱离文档流的
 子级元素：position:absolute;
 			top:50%;
 			transform:translateY(-50%);
 
 ### 居中布局
-
+方式一：
+父级元素：display：table-cell; 	// 相当于 td
+			vertical-align：middle;
+子级元素：	display：table/block;  // 如果是 table，td 应该是在 table 里面的，建议使用 block
+			margin:0 auto;
+			
+方式二：
+父级元素：position：relative/fixed/relative; // 三个里面，只有 relative 是不脱离文档流的
+子级元素：position:absolute;
+			top:50%;
+			left:50%
+			transform:translate(-50%,-50%);
+			
+### 两列布局
 
 
 
