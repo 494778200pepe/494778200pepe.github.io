@@ -101,6 +101,20 @@ position：absolute;
 多列布局的分类：两列布局，三列布局，圣杯布局和双飞翼布局，等分布局，等高布局，CSS3多列布局	
 ### 两列布局
 方式一：float + margin 属性配合使用
+left：float：left；// 当前元素脱离文档流
+right：margin-left：100px；
+
+优点：实现方式简单
+缺点：自适应元素 margin 属性值与定宽元素的 width 值保持一致
+		定宽元素浮动与自适应元素不浮动导致浏览器兼容性不好
+		
+方式一优化版：为右边元素增加父布局
+right-fix：float：right；
+			width：100%；
+			margin-left:-100px；
+		
+
+
 方式二：float + overflow 属性配合使用
 方式三：display 属性的 table 相关值使用
 
