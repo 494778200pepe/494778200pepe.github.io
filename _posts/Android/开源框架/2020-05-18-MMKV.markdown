@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "点9图"
-date:   2020-02-21 17:05:00 +0800
+title:  "MMKV"
+date:   2020-05-29 10:10:00 +0800
 categories: Android
-tags: Android
+tags: 开源框架
 author: pepe
-description: 『 点9图 』
+description: 『 MMKV 』
 ---
 
 

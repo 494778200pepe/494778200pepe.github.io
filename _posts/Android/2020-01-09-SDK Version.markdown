@@ -37,6 +37,10 @@ targetSdkVersion:目标设备的sdk版本
 	例如：compileSdkVersion 18  
 
 	buildToolsVersion "22.0.1"这样也是OK的。
+	
+* 4、com.android.support:appcompat-v7 版本号问题
+
+	supportLibVersion 的头数字是和targetSdkVersion 版本一样的。
 
 关键目录：
 
