@@ -27,7 +27,33 @@ description: 『 文字两行以点结尾 』
 ```
 
 
+或者
+```
+.demo_2{
+    display: flex;
+    flex-direction: column;
+}
 
+.text_3{
+    display: -webkit-box ;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:3; 
+}
+.text_5{
+    display: -webkit-box ;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:5; 
+}
+```
+
+
+[微信小程序开发手记之八：一个小程序上线后的总结（下）_前端_王梵-CSDN博客](https://blog.csdn.net/u013673799/article/details/71438265)
 
 
 
