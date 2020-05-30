@@ -10,15 +10,20 @@ description: 『 自定义组件_绑定事件 』
 
 
 
-![triangle1]({{ site.baseurl }}/assets/images/wechat/triangle1.png)
+
+
+
+
+
+
+
 
 
 
 参考：
 
 
-微信小程序自定义组件回调函数（二） - 简书
-https://www.jianshu.com/p/4a2e8ca47ded
+[微信小程序自定义组件回调函数（二） - 简书](https://www.jianshu.com/p/4a2e8ca47ded)
 
 
 
