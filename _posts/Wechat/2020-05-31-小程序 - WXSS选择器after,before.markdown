@@ -46,6 +46,7 @@ description: 『 WXSS选择器after,before 』
 
 [WXSS选择器::after,::before，您肯定不知道的！（框架细节七）-微信小程序俱乐部 www.wxappclub.com](http://www.wxappclub.com/topic/489)
 
+[微信小程序のwxss选择器 - 冬冬他哥哥 - 博客园](https://www.cnblogs.com/xietianjiao/p/11936876.html)
 
 
 
