@@ -8,7 +8,6 @@ author: pepe
 description: 『 上拉加载进度圈 』
 ---
 
-![Alt Text](https://media.giphy.com/media/555q4ngZRoxHCtGSrT/giphy.gif) 
 ![progress](https://img-blog.csdn.net/20170509233723992?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMzY3Mzc5OQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast) 
   
 ```
