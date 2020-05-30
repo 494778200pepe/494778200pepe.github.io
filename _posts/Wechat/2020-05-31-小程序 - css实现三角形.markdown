@@ -1,0 +1,99 @@
+---
+layout: post
+title:  "小程序 - css实现三角形"
+date:   2020-05-31 06:24:00 +0800
+categories: Wechat
+tags: 小程序
+author: pepe
+description: 『 css实现三角形 』
+---
+
+实现：
+```
+xml
+
+<view class="triangle_itemcontent">
+    <block a:for="{{[0,1,2,3]}}">
+      <view class="triangle_item">
+        <view class="triangle-up" hidden="{{currentIndex != index}}"/>
+      </view>
+    </block>
+ </view>
+
+css
+/* 三角形 */
+
+.triangle_itemcontent {
+  width: calc(100% - 30rpx);
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  background-color: #4792EE;
+}
+
+.triangle_item {
+  flex: 0 0 25%;
+  display: flex;
+  justify-content: center;
+}
+
+.triangle-up {
+  width: 0rpx;
+  height: 0rpx;
+  border: 10px solid transparent;
+  border-bottom-color: #fff;
+}
+```
+
+![triangle1]({{ site.baseurl }}/assets/images/wechat/triangle1.png)
+
+原理：
+将一个div的宽度和高度设置为0，然后设置边框样式
+
+```
+.triangle{
+    width: 0;
+    height: 0;
+    border-top: 50px solid black;
+    border-right: 50px solid red;
+    border-bottom: 50px solid green;
+    border-left: 50px solid blue;
+}
+```
+
+　　将一个div的border都设置成50px粗，并且不同颜色，结果如下图所示：
+
+![triangle2]({{ site.baseurl }}/assets/images/wechat/triangle2.png)
+
+参考：
+
+[CSS实现三角形 - guo&qi - 博客园](https://www.cnblogs.com/gg-qq/p/11138141.html)
+
+[纯 CSS 实现绘制各种三角形（各种角度） - saucxs - 博客园](https://www.cnblogs.com/chengxs/p/11406278.html)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

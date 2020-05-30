@@ -1,0 +1,50 @@
+---
+layout: post
+title:  "小程序 - 文字两行以点结尾"
+date:   2020-05-31 06:17:00 +0800
+categories: Wechat
+tags: 小程序
+author: pepe
+description: 『 文字两行以点结尾 』
+---
+
+```
+.activity-title {
+  font-size: 30rpx;
+  font-family: SourceHanSansCN;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  line-height: 33rpx;
+  width: 100%;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
