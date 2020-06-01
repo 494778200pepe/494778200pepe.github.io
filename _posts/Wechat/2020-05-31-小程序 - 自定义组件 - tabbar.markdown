@@ -16,17 +16,13 @@ description: 『 自定义组件 - tabbar 』
 
 参考：
 
-微信小程序自定义tabbar组件之中间按钮凸起_javascript_nan961136007的博客-CSDN博客
-https://blog.csdn.net/nan961136007/article/details/103919373
+[微信小程序自定义tabbar组件之中间按钮凸起_javascript_nan961136007的博客-CSDN博客](https://blog.csdn.net/nan961136007/article/details/103919373)
 
-小程序自定义tabbar实现中间图标突出效果(附带wx.hideTabBar不生效的bug解决方案) - 简书
-https://www.jianshu.com/p/ce1c3c25527c
+[小程序自定义tabbar实现中间图标突出效果(附带wx.hideTabBar不生效的bug解决方案) - 简书](https://www.jianshu.com/p/ce1c3c25527c)
 
-小程序自定义tabbar实现中间图标突出效果（萌新踩坑）_移动开发_weixin_40851250的博客-CSDN博客
-https://blog.csdn.net/weixin_40851250/article/details/89917985
+[小程序自定义tabbar实现中间图标突出效果（萌新踩坑）_移动开发_weixin_40851250的博客-CSDN博客](https://blog.csdn.net/weixin_40851250/article/details/89917985)
 
-SuRuiGit/wxapp-customTabbar: custom tabbar for wxapp
-https://github.com/SuRuiGit/wxapp-customTabbar
+[SuRuiGit/wxapp-customTabbar: custom tabbar for wxapp](https://github.com/SuRuiGit/wxapp-customTabbar)
 
 
 
