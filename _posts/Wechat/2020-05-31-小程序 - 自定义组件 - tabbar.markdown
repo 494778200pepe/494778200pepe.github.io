@@ -10,7 +10,7 @@ description: 『 自定义组件 - tabbar 』
 
 
 
-![triangle1]({{ site.baseurl }}/assets/images/wechat/triangle1.png)
+![tabbar]({{ site.baseurl }}/assets/images/wechat/tabbar.png)
 
 
 
