@@ -18,20 +18,15 @@ description: 『 HashMap 』
 
 
 
-HashMap源码详解一篇就够 - 简书
-https://www.jianshu.com/p/4aa3bb16f36c
+[HashMap源码详解一篇就够 - 简书](https://www.jianshu.com/p/4aa3bb16f36c)
 
-Java中HashMap底层实现原理(JDK1.8)源码分析_java_tuke_tuke的博客-CSDN博客
-https://blog.csdn.net/tuke_tuke/article/details/51588156?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase
+[Java中HashMap底层实现原理(JDK1.8)源码分析_java_tuke_tuke的博客-CSDN博客](https://blog.csdn.net/tuke_tuke/article/details/51588156?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase)
 
-HashMap深度解析 - 一名强者 - 博客园
-https://www.cnblogs.com/Snail-1174158844/p/10106664.html
+[HashMap深度解析 - 一名强者 - 博客园](https://www.cnblogs.com/Snail-1174158844/p/10106664.html)
 
-面试官：如何实现一个LruCache，原理是什么？
-https://mp.weixin.qq.com/s/Wz_iCTpttAqXPkckx7LkBg
+[面试官：如何实现一个LruCache，原理是什么？](https://mp.weixin.qq.com/s/Wz_iCTpttAqXPkckx7LkBg)
 
-LruCache源码解析
-https://mp.weixin.qq.com/s/Q9Sdce0FxyfkPJTJM_NO_g
+[LruCache源码解析](https://mp.weixin.qq.com/s/Q9Sdce0FxyfkPJTJM_NO_g)
 
 
 
