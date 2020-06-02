@@ -1,18 +1,41 @@
 ---
 layout: post
 title:  "HashMap - 哈希表的容量一定要是2的整数次幂"
-date:   2020-06-02 10:15:00 +0800
+date:   2020-06-02 10:30:00 +0800
 categories: Android
 tags: Collection
 author: pepe
 description: 『 哈希表的容量一定要是2的整数次幂 』
 ---
 
+### **hash算法**
+
+hash(int h)方法是根据key的hashCode重新计算一次散列。此算法加入了高位计算，防止低位不变，高位变化时，造成的hash冲突
+
+```
+final int hash(Object k) {
+    int h = 0;
+    if (useAltHashing) {
+        if (k instanceof String) {
+            return sun.misc.Hashing.stringHash32((String) k);
+        }
+        h = hashSeed;
+    }
+    //得到k的hashcode值
+    h ^= k.hashCode();
+    //进行计算
+    h ^= (h >>> 20) ^ (h >>> 12);
+    return h ^ (h >>> 7) ^ (h >>> 4);
+}
+```
+
+*我们根据hash值获得在数组中的位置，我们希望hashmap里面元素位置尽量分布均匀，尽量是的没个位置上的元素数量只有一个每当hash算法求得这个位置的时候，马上就可以知道对应位置的元素就是我们要读取的，不用再遍历链表，提神效率*
 
 
 
-HashMap的实现原理及hash冲突解决方法_数据结构与算法_ptsx0607的专栏-CSDN博客
-https://blog.csdn.net/ptsx0607/article/details/68945883
+参考：
+
+[HashMap的实现原理及hash冲突解决方法_数据结构与算法_ptsx0607的专栏-CSDN博客](https://blog.csdn.net/ptsx0607/article/details/68945883)
 
 
 
