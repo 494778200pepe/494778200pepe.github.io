@@ -15,12 +15,23 @@ description: 『 HashMap 』
  * 第三步：读源码，将涉及的各个知识点串起来
  * 第四步：查找各种面试问题，在源码中找答案
  
+简单说下HashMap的实现原理：
+
+> 首先有一个每个元素都是链表（可能表述不准确）的数组，当添加一个元素（key-value）时，就首先计算元素key的hash值，以此确定插入数组中的位置，但是可能存在同一hash值的元素已经被放在数组同一位置了，这时就添加到同一hash值的元素的后面，他们在数组的同一位置，但是形成了链表，同一各链表上的Hash值是相同的，所以说数组存放的是链表。而当链表长度太长时，链表就转换为红黑树，这样大大提高了查找的效率。
 
 
+当链表数组的容量超过初始容量的0.75时，再散列将链表数组扩大2倍，把原链表数组的搬移到新的数组中
 
-[HashMap源码详解一篇就够 - 简书](https://www.jianshu.com/p/4aa3bb16f36c)
+即HashMap的原理图是：
+
+![hashmap]({{ site.baseurl }}/assets/images/android/collection/hashmap.png)
+
+
+参考：
 
 [Java中HashMap底层实现原理(JDK1.8)源码分析_java_tuke_tuke的博客-CSDN博客](https://blog.csdn.net/tuke_tuke/article/details/51588156?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase)
+
+[HashMap源码详解一篇就够 - 简书](https://www.jianshu.com/p/4aa3bb16f36c)
 
 [HashMap深度解析 - 一名强者 - 博客园](https://www.cnblogs.com/Snail-1174158844/p/10106664.html)
 
