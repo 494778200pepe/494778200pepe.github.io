@@ -7,6 +7,11 @@ tags: 性能优化
 author: pepe
 description: 『 Optimize 』
 ---
+
+
+
+
+
 [Android性能优化系列之App启动优化](https://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650822284&idx=1&sn=d6b30ab442f417cbd992e784945c7799&chksm=80b78212b7c00b049243a474933e7a3f356c8b6fca1e8d67a9fcf654cef095c0c28f6a51e31c&mpshare=1&scene=23&srcid=0310SZs3jXcTKXTB8KyOZ2Jc#rd)
 
 [Android性能优化之使用Lint](https://mp.weixin.qq.com/s/qQ6-mVvsWyO9utmDLWHrzw)

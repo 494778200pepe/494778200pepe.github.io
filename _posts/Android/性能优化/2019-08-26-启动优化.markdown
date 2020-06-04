@@ -1,0 +1,33 @@
+---
+layout: post
+title:  "启动优化"
+date:   2019-08-26 22:05:00 +0800
+categories: Android
+tags: 性能优化
+author: pepe
+description: 『 启动优化 』
+---
+
+
+启动优化_测量
+https://494778200pepe.github.io/android/2019/08/26/%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96_%E6%B5%8B%E9%87%8F.html
+
+启动优化_工具
+https://494778200pepe.github.io/android/2019/09/11/启动优化_工具.html
+
+启动优化_方法耗时
+https://494778200pepe.github.io/android/2019/09/11/启动优化_方法耗时.html
+
+启动优化_异步优化
+https://494778200pepe.github.io/android/2019/09/11/启动优化_异步优化.html
+
+启动优化_其他方案
+https://494778200pepe.github.io/android/2019/09/15/启动优化_其他方案.html
+
+启动优化_延迟初始化
+https://494778200pepe.github.io/android/2019/09/15/启动优化_延迟初始化.html
+
+启动优化_最优解-启动器
+https://494778200pepe.github.io/android/2019/09/15/启动优化_最优解-启动器.html
+
+
