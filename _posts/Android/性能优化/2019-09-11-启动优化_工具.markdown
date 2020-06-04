@@ -58,7 +58,10 @@ description: 『 启动优化_工具 』
 
 
 
+参考：
 
+Systrace使用教程 - 简书
+https://www.jianshu.com/p/46c9d699fdb8
 
 
 

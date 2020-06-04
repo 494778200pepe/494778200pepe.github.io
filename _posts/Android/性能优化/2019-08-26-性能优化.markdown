@@ -121,9 +121,28 @@ description: 『 性能优化 』
 
 
     
+参考：
 
+Deep into Android
+https://jsonchao.github.io/
 
+Category: Android:Performance - 胡凯
+http://hukai.me/blog/categories/android-performance/
 
+Android性能优化—TraceView的使用 - 简书
+https://www.jianshu.com/p/7e9ca2c73c97
+
+Android 性能监控系列一（原理篇） - BaronZhang - 博客园
+https://www.cnblogs.com/baronzhang/p/9140074.html
+
+Android优化总结 - 简书
+https://www.jianshu.com/p/db56a3c52856
+
+性能优化_chenliguan的博客_陈李冠-CSDN博客
+https://blog.csdn.net/chenliguan/category_6517156.html
+
+「置顶」Android 性能优化必知必会 · Android Performance
+https://www.androidperformance.com/2018/05/07/Android-performance-optimization-skills-and-tools/
 
 
 

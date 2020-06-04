@@ -24,3 +24,16 @@ description: 『 启动优化 』
 [启动优化_最优解-启动器](https://494778200pepe.github.io/android/2019/09/15/启动优化_最优解-启动器.html)
 
 
+参考；
+
+启动优化方案的“第三板斧”终于齐了！
+https://mp.weixin.qq.com/s/a0O8zoZSXiZzyML2-Ctwng
+
+面试官：今日头条启动很快，你觉得可能是做了哪些优化？
+https://mp.weixin.qq.com/s/N3vp91usxclib1NuGEuPgA
+
+Android性能优化（一）之启动加速35% - 简书
+https://www.jianshu.com/p/f5514b1a826c
+
+Android性能优化典范 - 第6季 - 胡凯
+http://hukai.me/android-performance-patterns-season-6/

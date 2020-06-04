@@ -10,16 +10,23 @@ description: 『 布局优化 』
 
 
 
+微信开源了 Hardcoder，旨在解决手机「卡成狗」，但开发者先别高兴。
+https://mp.weixin.qq.com/s/9uPoKU7fHwvAj9lyGDbsFA
 
+看完这篇 Android ANR 分析，就可以和面试官装逼了！-云栖社区-阿里云
+https://yq.aliyun.com/articles/687786?spm=a2c4e.11155435.0.0.78246e22kLBIOx
 
+Android 性能优化实战 - 界面卡顿 - 简书
+https://www.jianshu.com/p/18bb507d6e62
 
+深入探索Android卡顿优化（上） - 掘金
+https://juejin.im/post/5e41fb7de51d4526c80e9108
 
+9102年了，还不知道Android为什么卡？
+https://mp.weixin.qq.com/s/wyN6I4KTNWI-VE3KbjtgUQ
 
-
-
-
-
-
+理解Android ANR的信息收集过程 - Gityuan博客 | 袁辉辉的技术博客
+http://gityuan.com/2016/12/02/app-not-response/
 
 
 

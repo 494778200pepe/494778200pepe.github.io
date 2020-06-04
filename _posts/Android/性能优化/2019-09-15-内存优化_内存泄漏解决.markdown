@@ -25,9 +25,13 @@ Memory Analyzer
 * 使用 Memory Analyzer 结合代码确认
 
 
+参考：
 
+Android性能优化：关于 内存泄露 的知识都在这里了！ - 简书
+https://www.jianshu.com/p/97fb764f2669?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=weixin
 
-
+android内存泄露分析工具MAT详解_红涛在反思的blog-CSDN博客
+https://blog.csdn.net/a910626/article/details/50760948
 
 
 

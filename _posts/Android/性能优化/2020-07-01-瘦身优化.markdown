@@ -9,8 +9,17 @@ description: 『 瘦身优化 』
 ---
 
 
+Android性能优化：使用Lint优化代码、去除多余资源_张拭心的博客shixinzhang-CSDN博客_androidlint
+https://blog.csdn.net/u011240877/article/details/54141714
 
+代码洁癖症的我，学习 Lint 学到心态爆炸
+https://mp.weixin.qq.com/s/4Ph8Gt2XMM6mCl13qIRcoA
 
+支付宝App构建优化：包大小极致压缩
+https://mp.weixin.qq.com/s/6Rn6j-q4UJ3h1wZNTG4E8g
+
+Android 性能优化实战篇 -- APK 瘦身 | 孤舟蓑笠翁，独钓寒江雪
+http://www.heqiangfly.com/2017/07/28/android-performance-optimization-reduce-apk-size/
 
 
 
