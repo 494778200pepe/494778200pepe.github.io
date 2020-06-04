@@ -9,13 +9,16 @@ description: 『 文字两行以点结尾 』
 ---
 
 ```
-.activity-title {
+.course_item_title {
+  height: 68rpx; // 如果下方还有内容，为了保持该部分内容相对固定的位置，就需要写死 height
   font-size: 30rpx;
-  font-family: SourceHanSansCN;
-  font-weight: 400;
-  color: rgba(0, 0, 0, 1);
-  line-height: 33rpx;
-  width: 100%;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  width: calc(100% - 40rpx);
+  text-align: left;
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -24,6 +27,26 @@ description: 『 文字两行以点结尾 』
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+
+.habit_item view {
+  /* height: 68rpx; */
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  width: calc(100% - 40rpx);
+  text-align: left;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
 ```
 
 
@@ -50,6 +73,15 @@ description: 『 文字两行以点结尾 』
     -webkit-box-orient: vertical;
     -webkit-line-clamp:5; 
 }
+```
+
+
+单行：
+```
+width:500rpx;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
 ```
 
 

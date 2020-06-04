@@ -28,6 +28,9 @@ https://mp.weixin.qq.com/s/wyN6I4KTNWI-VE3KbjtgUQ
 理解Android ANR的信息收集过程 - Gityuan博客 | 袁辉辉的技术博客
 http://gityuan.com/2016/12/02/app-not-response/
 
+看了这篇文章，再也不怕ANR了！
+https://mp.weixin.qq.com/s/aQ7UENbxdlZjGagKfyi6VQ
+
 
 
 
