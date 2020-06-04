@@ -8,6 +8,13 @@ author: pepe
 description: 『 布局优化 』
 ---
 
+[布局优化_布局加载原理](https://494778200pepe.github.io/android/2019/09/16/布局优化_布局加载原理.html)
+
+[布局优化_优雅获取界面布局耗时](https://494778200pepe.github.io/android/2019/09/16/布局优化_优雅获取界面布局耗时.html)
+
+
+
+
 ### **绘制原理**
 
 * CPU 负责计算显示内容

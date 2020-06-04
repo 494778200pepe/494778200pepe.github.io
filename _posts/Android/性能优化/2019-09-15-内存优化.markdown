@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "内存优化"
+date:   2019-09-15 14:42:00 +0800
+categories: Android
+tags: 性能优化
+author: pepe
+description: 『 内存优化 』
+---
+
+[内存优化_工具介绍](https://494778200pepe.github.io/android/2019/09/15/内存优化_工具介绍.html)
+
+[内存优化_内存管理机制](https://494778200pepe.github.io/android/2019/09/15/内存优化_内存管理机制.html)
+
+[内存优化_内存抖动解决](https://494778200pepe.github.io/android/2019/09/15/内存优化_内存抖动解决.html)
+
+[内存优化_内存泄漏解决](https://494778200pepe.github.io/android/2019/09/15/内存优化_内存泄漏解决.html)
+
+[内存优化_ARTHook优雅检测不合理图片](https://494778200pepe.github.io/android/2019/09/16/内存优化_ARTHook优雅检测不合理图片.html)
+
+[内存优化_线上内存监控方案](https://494778200pepe.github.io/android/2019/09/16/内存优化_线上内存监控方案.html)
+
+
+
+
+
+
+
+参考：
+
+[腾讯移动性能评测专家叶方正：Android优化笔记-CSDN.NET](https://www.csdn.net/article/2015-06-06/2824884#0-tsina-1-58084-397232819ff9a47a7b7e80a40613cfe1)
