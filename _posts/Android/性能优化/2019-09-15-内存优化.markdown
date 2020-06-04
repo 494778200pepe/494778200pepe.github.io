@@ -12,6 +12,8 @@ description: 『 内存优化 』
 
 [内存优化_内存管理机制](https://494778200pepe.github.io/android/2019/09/15/内存优化_内存管理机制.html)
 
+[内存优化_OOM](https://494778200pepe.github.io/android/2019/09/15/内存优化_OOM.html)
+
 [内存优化_内存抖动解决](https://494778200pepe.github.io/android/2019/09/15/内存优化_内存抖动解决.html)
 
 [内存优化_内存泄漏解决](https://494778200pepe.github.io/android/2019/09/15/内存优化_内存泄漏解决.html)
