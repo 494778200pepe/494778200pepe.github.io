@@ -11,7 +11,7 @@ description: 『 性能优化 』
 
 性能优化的方面：
 
-* 启动优化
+* [启动优化](https://494778200pepe.github.io/android/2019/08/26/启动优化.html)
 
 * 内存优化
 
