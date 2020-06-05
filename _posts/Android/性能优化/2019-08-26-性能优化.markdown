@@ -123,6 +123,9 @@ description: 『 性能优化 』
     
 参考：
 
+性能工具Systrace - Gityuan博客 | 袁辉辉的技术博客
+http://gityuan.com/2016/01/17/systrace/
+
 Deep into Android
 https://jsonchao.github.io/
 
