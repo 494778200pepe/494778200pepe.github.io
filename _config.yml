@@ -4,13 +4,13 @@ name: Android技术专家
 description: 时间不可管理
 
 # url is currently only used only for the RSS feed in feed.xml
-url: https://jose-md.github.io/study
+url: https://haha
 
 # baseurl will often be '', but for a project page on gh-pages, it needs to
 # be the project name.
 # *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
 #     run it like so: jekyll serve --baseurl=''
-baseurl: 'https://jose-md.github.io/study/'
+baseurl: ''
 ## default date_format
 ## archive: "%b" 只显示英文月份
 ## categories: "%b-%Y" APR-2018 中文年英文月
