@@ -10,7 +10,7 @@ url: https://jose-md.github.io/study
 # be the project name.
 # *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
 #     run it like so: jekyll serve --baseurl=''
-baseurl: ''
+baseurl: 'https://jose-md.github.io/study/'
 ## default date_format
 ## archive: "%b" 只显示英文月份
 ## categories: "%b-%Y" APR-2018 中文年英文月
