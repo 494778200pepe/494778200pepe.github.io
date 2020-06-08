@@ -4,7 +4,7 @@ name: Android技术专家
 description: 时间不可管理
 
 # url is currently only used only for the RSS feed in feed.xml
-url: https://jose-md.github.io/study/
+url: https://jose-md.github.io/study
 
 # baseurl will often be '', but for a project page on gh-pages, it needs to
 # be the project name.
