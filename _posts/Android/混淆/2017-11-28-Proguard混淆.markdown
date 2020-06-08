@@ -216,6 +216,15 @@ https://juejin.im/post/5d1717996fb9a07eeb13bc95
 https://blog.csdn.net/sbsujjbcy/article/details/49002729
 
 
+AndroidStudio混淆打包踩坑之retrofit2_azhoup的博客-CSDN博客_retrofit2混淆
+https://blog.csdn.net/azhoup/article/details/88635174
+
+【android 混淆bean】-博文推荐-CSDN博客
+https://www.csdn.net/gather_26/MtTakg4sODI2Mi1ibG9n.html
+
+Android-SDK默认混淆配置ProGuard - 简书
+https://www.jianshu.com/p/c667764f1f3a
+
 
 
 1、混淆文件的分类，系统混淆文件摘出来  blog 纪录下

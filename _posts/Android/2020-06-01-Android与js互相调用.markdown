@@ -10,4 +10,5 @@ description: 『 Android与js互相调用 』
 
 [Android与js互相调用 - 懒星人 - 博客园](https://www.cnblogs.com/lanxingren/p/9603633.html)
 
-
+Android和H5交互-基础篇 - 简书
+https://www.jianshu.com/p/a25907862523

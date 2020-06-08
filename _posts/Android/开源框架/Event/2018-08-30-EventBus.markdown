@@ -22,3 +22,11 @@ https://blog.csdn.net/lmj623565791/article/details/41096639
 (1条消息)快速Android开发系列通信篇之EventBus - AngelDevil的专栏 - CSDN博客
 https://blog.csdn.net/andevil/article/details/28270607
 
+EventBus 3.1.1源码分析 - 简书
+https://www.jianshu.com/p/af61682450d1?mType=Group
+
+EventBus源码浅析 - 简书
+https://www.jianshu.com/p/301edd6a2e61
+
+EventBus源码详解（一）
+https://mp.weixin.qq.com/s/ZUvOk8DSCKudHkYJJIQq3w
