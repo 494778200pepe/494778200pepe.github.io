@@ -30,3 +30,6 @@ https://www.jianshu.com/p/301edd6a2e61
 
 EventBus源码详解（一）
 https://mp.weixin.qq.com/s/ZUvOk8DSCKudHkYJJIQq3w
+
+“入职接手旧项目，所有网络请求数据通过 EventBus 分发，吓得我想离职...”
+https://mp.weixin.qq.com/s/aoZjtn5lufjJbsGNkJA6bg

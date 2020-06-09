@@ -106,5 +106,6 @@ Message是容纳任意数据的容器。生产线程发送消息给 Handler，Ha
 Looper.loop 为什么不会阻塞掉 UI 线程？来，我们从源码里面找到答案
 https://mp.weixin.qq.com/s/kGlZzhzRTRmK5XdW2pEqeQ
 
-
+Handler的智慧,从终极问题出发 - 掘金
+https://juejin.im/post/5b2715c2f265da5959468781
 
