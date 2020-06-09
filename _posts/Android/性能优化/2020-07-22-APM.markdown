@@ -8,6 +8,9 @@ author: pepe
 description: 『 APM 』
 ---
 
+给大家推荐一个库
+https://mp.weixin.qq.com/s/1fRcPeftZnmrVAQXToSULQ
+
 微信APM框架——性能优化 - 简书
 https://www.jianshu.com/p/1b4a5717241e
 

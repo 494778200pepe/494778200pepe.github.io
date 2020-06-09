@@ -103,7 +103,8 @@ Message是容纳任意数据的容器。生产线程发送消息给 Handler，Ha
 
 [Android Handler：图文解析 Handler通信机制 的工作原理 - 简书](https://www.jianshu.com/p/f0b23ee5a922?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=weixin&from=groupmessage&isappinstalled=0)
 
-
+Looper.loop 为什么不会阻塞掉 UI 线程？来，我们从源码里面找到答案
+https://mp.weixin.qq.com/s/kGlZzhzRTRmK5XdW2pEqeQ
 
 
 
