@@ -10,9 +10,6 @@ description: 『 Handler 线程切换的原理 』
 
 ### `Handler`学习系列
 
-Handler是如何实现线程之间的切换的_Android技术之家-CSDN博客_handler线程切换
-https://blog.csdn.net/c6E5UlI1N/article/details/79724023
-
 * [一、Handler、Message、MessageQueue、Looper调用过程](
 https://jose-md.github.io/study/android/2018/07/14/%E4%B8%80-Handler-Message-MessageQueue-Looper%E8%B0%83%E7%94%A8%E8%BF%87%E7%A8%8B.html)
 * [二、Handler 线程切换的原理](https://jose-md.github.io/study/android/2018/07/14/%E4%BA%8C-Handler-%E7%BA%BF%E7%A8%8B%E5%88%87%E6%8D%A2%E7%9A%84%E5%8E%9F%E7%90%86.html)
@@ -196,10 +193,11 @@ https://jose-md.github.io/study/android/2018/07/14/%E4%B8%80-Handler-Message-Mes
 
 参考：
 
+[Handler是如何实现线程之间的切换的_Android技术之家-CSDN博客_handler线程切换](https://blog.csdn.net/c6E5UlI1N/article/details/79724023)
+
 [Handler线程切换实现原理 - CSDN博客](https://blog.csdn.net/qq_16188829/article/details/76922757)
 
 [Handler解析(一)：是如何实现线程之间的切换 - CSDN博客](https://blog.csdn.net/adobesolo/article/details/75195394)
 
-Android 子线程创建handler - u013092755的博客 - CSDN博客
-https://blog.csdn.net/u013092755/article/details/78888247
+[Android 子线程创建handler - u013092755的博客 - CSDN博客](https://blog.csdn.net/u013092755/article/details/78888247)
 
