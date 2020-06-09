@@ -81,35 +81,27 @@ Message是容纳任意数据的容器。生产线程发送消息给 Handler，Ha
 
 [Android Handler 异步消息处理机制的妙用 创建强大的图片加载类 - CSDN博客](https://blog.csdn.net/lmj623565791/article/details/38476887)
 
-【Android源码系列】消息机制:Handler源码解析 - verymrq的博客 - CSDN博客
-https://blog.csdn.net/verymrq/article/details/78681901
+///////////////////////
 
-Handler与Thread的关系 | ErQi
-http://erqi.github.io/2016/08/31/handler%E5%92%8CThread%E7%9A%84%E5%85%B3%E7%B3%BB/
+[消息机制:Handler源码解析 - verymrq的博客 - CSDN博客](https://blog.csdn.net/verymrq/article/details/78681901)
 
-Android 异步消息处理机制 让你深入理解 Looper、Handler、Message三者关系 - Hongyang - CSDN博客
-https://blog.csdn.net/lmj623565791/article/details/38377229
+[Handler与Thread的关系 - ErQi](http://erqi.github.io/2016/08/31/handler%E5%92%8CThread%E7%9A%84%E5%85%B3%E7%B3%BB/)
 
-Android 为什么主线程的looper 一直循环不会ANR - 简书
-https://www.jianshu.com/p/a848b5ab96ce
+[Android 异步消息处理机制 让你深入理解 Looper、Handler、Message三者关系 - Hongyang - CSDN博客](https://blog.csdn.net/lmj623565791/article/details/38377229)
 
-Android的Handler机制详解3_Looper.looper()不会卡死主线程 - 十一月Siy - CSDN博客
-https://blog.csdn.net/baidu_34012226/article/details/80469036
+[Android 为什么主线程的looper 一直循环不会ANR - 简书](https://www.jianshu.com/p/a848b5ab96ce)
 
-Android中为什么主线程不会因为Looper.loop()里的死循环卡死？ - nbalichaoq的专栏 - CSDN博客
-https://blog.csdn.net/nbalichaoq/article/details/51967753
+[Android的Handler机制详解3_Looper.looper()不会卡死主线程 - 十一月Siy - CSDN博客](https://blog.csdn.net/baidu_34012226/article/details/80469036)
 
-Android中为什么主线程不会因为Looper.loop()的死循环卡死？ - 简书
-https://www.jianshu.com/p/733b1cc9b457
+[Android中为什么主线程不会因为Looper.loop()里的死循环卡死？ - nbalichaoq的专栏 - CSDN博客](https://blog.csdn.net/nbalichaoq/article/details/51967753)
 
-我所理解的Handler - 简书
-https://www.jianshu.com/p/a3b5a5b33e0a?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=weixin&from=groupmessage&isappinstalled=0&scene=1&clicktime=1578302619&enterid=1578302619
+[Android中为什么主线程不会因为Looper.loop()的死循环卡死？ - 简书](https://www.jianshu.com/p/733b1cc9b457)
 
-ThreadLocal，一篇文章就够了
-https://mp.weixin.qq.com/s/MxhbLVNKPgyVreLeCY0ZPg
+[我所理解的Handler - 简书](https://www.jianshu.com/p/a3b5a5b33e0a?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=weixin&from=groupmessage&isappinstalled=0&scene=1&clicktime=1578302619&enterid=1578302619)
 
-Android Handler：图文解析 Handler通信机制 的工作原理 - 简书
-https://www.jianshu.com/p/f0b23ee5a922?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=weixin&from=groupmessage&isappinstalled=0
+[ThreadLocal，一篇文章就够了](https://mp.weixin.qq.com/s/MxhbLVNKPgyVreLeCY0ZPg)
+
+[Android Handler：图文解析 Handler通信机制 的工作原理 - 简书](https://www.jianshu.com/p/f0b23ee5a922?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=weixin&from=groupmessage&isappinstalled=0)
 
 
 
