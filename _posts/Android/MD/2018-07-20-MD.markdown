@@ -16,8 +16,7 @@ description: 『 Material Design 』
 
 [Material Design系列教程（4） - CoordinatorLayout - 简书](https://www.jianshu.com/p/be21a824e469)
 
-Android 5.X 新特性详解（一）——主题、Palette、阴影、着色和裁剪 - 黄飞的专栏 - CSDN博客
-https://blog.csdn.net/tw19911005/article/details/51602567
+[Android 5.X 新特性详解（一）——主题、Palette、阴影、着色和裁剪 - 黄飞的专栏 - CSDN博客](https://blog.csdn.net/tw19911005/article/details/51602567)
 
 
 APP
@@ -43,8 +42,6 @@ Gank.lu
 一之
 [Horrarndoo - 简书](https://www.jianshu.com/u/5c92e4ae9dc3)
 
-wasabeef/awesome-android-ui: A curated list of awesome Android UI/UX libraries
-https://github.com/wasabeef/awesome-android-ui
+[wasabeef/awesome-android-ui: A curated list of awesome Android UI/UX libraries](https://github.com/wasabeef/awesome-android-ui)
 
-Android-五子连珠-慕课网
-http://www.imooc.com/learn/641#0-tsina-1-6935-397232819ff9a47a7b7e80a40613cfe1
+[Android-五子连珠-慕课网](http://www.imooc.com/learn/641#0-tsina-1-6935-397232819ff9a47a7b7e80a40613cfe1)
