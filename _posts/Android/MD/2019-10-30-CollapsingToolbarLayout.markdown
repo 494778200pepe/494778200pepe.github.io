@@ -102,8 +102,7 @@ CollapsingToolbarLayout是一个FrameLayout，它内部能有多个子元素，�
 
 [CollapsingToolbarLayout源码分析 - 简书](https://www.jianshu.com/p/8ee6e8a35071)
 
-AndroidASD完全解析06之CollapsingToolbarLayout - 简书
-https://www.jianshu.com/p/953868d54c89
+[AndroidASD完全解析06之CollapsingToolbarLayout - 简书](https://www.jianshu.com/p/953868d54c89)
 
 
 
