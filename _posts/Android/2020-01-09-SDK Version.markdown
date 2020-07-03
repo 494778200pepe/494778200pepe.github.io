@@ -12,6 +12,10 @@ Gradle 版本：`C:\Users\Administrator\.gradle\wrapper\dists`
 
 ![version1]({{ site.baseurl }}/assets/images/android/sdk_version/sdk_version1.png)
 
+Gradle 插件 版本：Project 的 build.gradle 查看
+ 或者：  File -> Project Structure 查看
+
+
 compileSdkVersion:编译SDK的版本 `C:\install\SDK\platforms`
 
 ![version2]({{ site.baseurl }}/assets/images/android/sdk_version/sdk_version2.png)
