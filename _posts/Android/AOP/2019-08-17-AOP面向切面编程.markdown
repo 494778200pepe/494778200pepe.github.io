@@ -77,43 +77,22 @@ description: 『 AOP面向切面编程 』
 
 参考：
 
-AOP 最后一块拼图 | AST 抽象语法树 —— 最轻量级的AOP方法 - 简书
-https://www.jianshu.com/p/0f1c7b3e907f
-
-
-[AOP面向切面编程 - 淘宝京东网络处理 - 简书](https://www.jianshu.com/p/890dd0b77ded)
-
-
-
-[AOP：APT,AspectJ,Javassist/Asm - 简书](https://www.jianshu.com/p/44d39585fc20)
+[AOP 最后一块拼图 | AST 抽象语法树 —— 最轻量级的AOP方法 - 简书](https://www.jianshu.com/p/0f1c7b3e907f)
 
 [安卓AOP三剑客:APT,AspectJ,Javassist - 简书](https://www.jianshu.com/p/dca3e2c8608a)
 
-[Android ASM自动埋点方案实践 - 简书](https://www.jianshu.com/p/9039a3e46dbc)
+[AOP：APT,AspectJ,Javassist/Asm - 简书](https://www.jianshu.com/p/44d39585fc20)
 
-深入理解Android之AOP - Innost的专栏 - CSDN博客
-https://blog.csdn.net/innost/article/details/49387395
+[27编译插桩的三种方法： AspectJ、ASM、ReDex_long117long的专栏-CSDN博客_目标代码插桩的三种执行模式](https://blog.csdn.net/long117long/article/details/90715694)
 
-Aspectj中call与execution区别，织入代码位置不同 - 吟啸徐行 - CSDN博客
-https://blog.csdn.net/Dax1n/article/details/81944975
-
-
-ASM
-
-AOP - 消除控件的点击抖动 - 简书
-https://www.jianshu.com/p/28751130c038
-
-【Android】函数插桩（Gradle + ASM） - 简书
-https://www.jianshu.com/p/16ed4d233fd1
 
 
 Java-AOP:
 
-AOP-JDK 和CGLIB、Javassist、ASM之间的差别 (详细)_szzt_lingpeng的专栏-CSDN博客_asm和cglib
-https://blog.csdn.net/szzt_lingpeng/article/details/81748396
+[AOP-JDK 和CGLIB、Javassist、ASM之间的差别 (详细)_szzt_lingpeng的专栏-CSDN博客_asm和cglib](https://blog.csdn.net/szzt_lingpeng/article/details/81748396)
 
-Java-AOP(Hook)实现机制(JDK/cglib动态代理/ASM/Javassist/AspectJ)_http://lioil.win-CSDN博客_aspectj asm
-https://blog.csdn.net/qq_32115439/article/details/78361596
+
+[Java-AOP(Hook)实现机制(JDK/cglib动态代理/ASM/Javassist/AspectJ)_http://lioil.win-CSDN博客_aspectj asm](https://blog.csdn.net/qq_32115439/article/details/78361596)
 
 
 
