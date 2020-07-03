@@ -91,8 +91,7 @@ description: 『 AOP面向切面编程 』
 
 [27编译插桩的三种方法： AspectJ、ASM、ReDex_long117long的专栏-CSDN博客_目标代码插桩的三种执行模式](https://blog.csdn.net/long117long/article/details/90715694)
 
-会用就行了？你知道 AOP 框架的原理吗？ - 简书
-https://www.jianshu.com/p/cfa16f4cf375
+[会用就行了？你知道 AOP 框架的原理吗？ - 简书](https://www.jianshu.com/p/cfa16f4cf375)
 
 Java-AOP:
 
