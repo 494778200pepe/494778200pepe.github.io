@@ -16,11 +16,17 @@ description: 『 AspectJ 』
 
 [Android优雅地处理按钮重复点击 - 简书](https://www.jianshu.com/p/7b354eb8d0d3)
 
+[AOP - 淘宝京东网络处理 - Darren](https://www.jianshu.com/p/890dd0b77ded)
+
 [关于android中使用AspectJ - 简书](https://www.jianshu.com/p/f577aec99e17)
 
 [在Android中使用AspectJ进行切面编程的简易步骤 - 简书](https://www.jianshu.com/p/9c338702d6a6)
 
 [Android 使用 Aspectj 限制快速点击 - 简书](https://www.jianshu.com/p/fa5886207bcb)
+
+[深入理解Android之AOP_Innost的专栏-CSDN博客_android aop](https://blog.csdn.net/innost/article/details/49387395)
+
+[Aspectj中call在调用处添加代码，execution在方法内部添加代码](https://blog.csdn.net/Dax1n/article/details/81944975)
 
 API详解：
 
