@@ -93,5 +93,15 @@ https://blog.csdn.net/innost/article/details/49387395
 Aspectj中call与execution区别，织入代码位置不同 - 吟啸徐行 - CSDN博客
 https://blog.csdn.net/Dax1n/article/details/81944975
 
-Android性能优化神器-AspectJ - 简书
-https://www.jianshu.com/p/e737c187e0c2
+
+ASM
+
+AOP - 消除控件的点击抖动 - 简书
+https://www.jianshu.com/p/28751130c038
+
+【Android】函数插桩（Gradle + ASM） - 简书
+https://www.jianshu.com/p/16ed4d233fd1
+
+
+
+

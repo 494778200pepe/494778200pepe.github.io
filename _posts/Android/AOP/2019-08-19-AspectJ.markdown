@@ -14,15 +14,43 @@ description: 『 AspectJ 』
 
 参考：
 
-[AspectJ 在 Android 中的使用 - yxhuang2008的专栏 - CSDN博客](https://blog.csdn.net/yxhuang2008/article/details/94193201)
+[Android优雅地处理按钮重复点击 - 简书](https://www.jianshu.com/p/7b354eb8d0d3)
 
 [关于android中使用AspectJ - 简书](https://www.jianshu.com/p/f577aec99e17)
 
 [在Android中使用AspectJ进行切面编程的简易步骤 - 简书](https://www.jianshu.com/p/9c338702d6a6)
 
-[Android 全埋点解决方案之 AspectJ](https://www.sensorsdata.cn/blog/20181206-8/)
+[Android 使用 Aspectj 限制快速点击 - 简书](https://www.jianshu.com/p/fa5886207bcb)
+
+API详解：
+
+[AspectJ 在 Android 中的使用 - yxhuang2008的专栏 - CSDN博客](https://blog.csdn.net/yxhuang2008/article/details/94193201)
 
 [AOP之AspectJ在Android中的应用 - xinzhou201的专栏 - CSDN博客](https://blog.csdn.net/xinzhou201/article/details/81566653)
+
+AspectJ 框架：
+
+借鉴了 Dagger2 的实现方式：
+
+[Android 无入侵解决按钮重复点击---onClick处理<一> - 简书](https://www.jianshu.com/p/7f3e5c8b8643)
+
+[Android 无入侵解决按钮重复点击---DoubleClick2.0的使用 - 简书](https://www.jianshu.com/p/df0ef3866cc1)
+
+[Android 无入侵解决按钮重复点击---DoubleClick3.0 - 简书](https://www.jianshu.com/p/daac21821c43)
+
+
+性能优化：
+
+[Android性能优化神器-AspectJ - 简书](https://www.jianshu.com/p/e737c187e0c2)
+
+[AspectJ 在APM上的应用（一) - 简书](https://www.jianshu.com/p/0440eb5f6c6b)
+
+
+埋点：
+
+[Android 全埋点解决方案之 AspectJ](https://www.sensorsdata.cn/blog/20181206-8/)
+
+
 
 
 
