@@ -33,6 +33,10 @@ description: 『 APT 』
 
 参考：
 
+[Android 利用 APT 技术在编译期生成代码](https://brucezz.itscoder.com/use-apt-in-android)
+
+[安卓AOP实战:APT打造极简路由 - 简书](https://www.jianshu.com/p/6ccfa7b50f0e)
+
 [APT - 简书](https://www.jianshu.com/p/7af58e8e3e18)
 
 [Android 框架炼成 教你如何写组件间通信框架EventBus - Hongyang - CSDN博客](https://blog.csdn.net/lmj623565791/article/details/41096639)
