@@ -79,6 +79,8 @@ description: 『 AOP面向切面编程 』
 
 [你想要的最全面 AOP 方法探讨 - 简书](https://www.jianshu.com/p/0799aa19ada1)
 
+[深入理解Android之AOP_Innost的专栏-CSDN博客_android aop](https://blog.csdn.net/innost/article/details/49387395)
+
 [最全选型考量 + 边剖析经典开源库边实践，美滋滋 - 简书](https://www.jianshu.com/p/42ce95450adb)
 
 [AOP 最后一块拼图 - AST 抽象语法树 —— 最轻量级的AOP方法 - 简书](https://www.jianshu.com/p/0f1c7b3e907f)

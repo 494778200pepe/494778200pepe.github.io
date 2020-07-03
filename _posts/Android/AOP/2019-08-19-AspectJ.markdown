@@ -30,6 +30,23 @@ description: 『 AspectJ 』
 
 [Aspectj中call在调用处添加代码，execution在方法内部添加代码](https://blog.csdn.net/Dax1n/article/details/81944975)
 
+参数判空：
+
+用注解和aop结合实现对方法参数的非空校验_Loong-CSDN博客_aop 参数校验
+https://blog.csdn.net/tongsh6/article/details/84346833
+用注解和aop结合实现对方法参数的非空校验_Loong-CSDN博客_aop 参数校验
+https://blog.csdn.net/tongsh6/article/details/84346833
+
+权限申请：
+
+利用AOP及APT实现的动态权限申请 - 简书
+https://www.jianshu.com/p/81765e51995d
+Android之AOP打造权限申请框架_calm1516的专栏-CSDN博客_android aop打造万能权限申请
+https://blog.csdn.net/calm1516/article/details/106728638/
+基于AOP的纯注解动态权限申请框架 - 简书
+https://www.jianshu.com/p/f4d8511461a3
+
+
 API详解：
 
 [AspectJ 在 Android 中的使用 - yxhuang2008的专栏 - CSDN博客](https://blog.csdn.net/yxhuang2008/article/details/94193201)
