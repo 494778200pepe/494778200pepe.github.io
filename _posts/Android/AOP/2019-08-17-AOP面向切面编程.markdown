@@ -77,7 +77,7 @@ description: 『 AOP面向切面编程 』
 
 参考：
 
-[AOP 最后一块拼图 | AST 抽象语法树 —— 最轻量级的AOP方法 - 简书](https://www.jianshu.com/p/0f1c7b3e907f)
+[AOP 最后一块拼图 - AST 抽象语法树 —— 最轻量级的AOP方法 - 简书](https://www.jianshu.com/p/0f1c7b3e907f)
 
 [安卓AOP三剑客:APT,AspectJ,Javassist - 简书](https://www.jianshu.com/p/dca3e2c8608a)
 
@@ -90,7 +90,6 @@ description: 『 AOP面向切面编程 』
 Java-AOP:
 
 [AOP-JDK 和CGLIB、Javassist、ASM之间的差别 (详细)_szzt_lingpeng的专栏-CSDN博客_asm和cglib](https://blog.csdn.net/szzt_lingpeng/article/details/81748396)
-
 
 [Java-AOP(Hook)实现机制(JDK/cglib动态代理/ASM/Javassist/AspectJ)_http://lioil.win-CSDN博客_aspectj asm](https://blog.csdn.net/qq_32115439/article/details/78361596)
 
