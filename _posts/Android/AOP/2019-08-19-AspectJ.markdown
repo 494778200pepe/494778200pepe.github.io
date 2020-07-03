@@ -9,7 +9,9 @@ description: 『 AspectJ 』
 ---
 ![AOP]({{ site.baseurl }}/assets/images/android/AOP/AOP.png)	
 
-
+重复点击
+网络监测
+权限检测
 
 
 参考：
