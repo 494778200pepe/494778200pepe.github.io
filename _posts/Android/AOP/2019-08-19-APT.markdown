@@ -39,7 +39,7 @@ description: 『 APT 』
 
 [APT - 简书](https://www.jianshu.com/p/7af58e8e3e18)
 
-[Android 框架炼成 教你如何写组件间通信框架EventBus - Hongyang - CSDN博客](https://blog.csdn.net/lmj623565791/article/details/41096639)
+
 
 
 
