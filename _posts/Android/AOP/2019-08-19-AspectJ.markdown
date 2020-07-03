@@ -26,8 +26,6 @@ description: 『 AspectJ 』
 
 [Android 使用 Aspectj 限制快速点击 - 简书](https://www.jianshu.com/p/fa5886207bcb)
 
-[深入理解Android之AOP_Innost的专栏-CSDN博客_android aop](https://blog.csdn.net/innost/article/details/49387395)
-
 [Aspectj中call在调用处添加代码，execution在方法内部添加代码](https://blog.csdn.net/Dax1n/article/details/81944975)
 
 参数判空：
