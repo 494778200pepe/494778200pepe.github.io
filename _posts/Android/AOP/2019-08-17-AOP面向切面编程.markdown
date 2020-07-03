@@ -77,6 +77,10 @@ description: 『 AOP面向切面编程 』
 
 参考：
 
+[你想要的最全面 AOP 方法探讨 - 简书](https://www.jianshu.com/p/0799aa19ada1)
+
+[最全选型考量 + 边剖析经典开源库边实践，美滋滋 - 简书](https://www.jianshu.com/p/42ce95450adb)
+
 [AOP 最后一块拼图 - AST 抽象语法树 —— 最轻量级的AOP方法 - 简书](https://www.jianshu.com/p/0f1c7b3e907f)
 
 [安卓AOP三剑客:APT,AspectJ,Javassist - 简书](https://www.jianshu.com/p/dca3e2c8608a)
@@ -85,7 +89,8 @@ description: 『 AOP面向切面编程 』
 
 [27编译插桩的三种方法： AspectJ、ASM、ReDex_long117long的专栏-CSDN博客_目标代码插桩的三种执行模式](https://blog.csdn.net/long117long/article/details/90715694)
 
-
+会用就行了？你知道 AOP 框架的原理吗？ - 简书
+https://www.jianshu.com/p/cfa16f4cf375
 
 Java-AOP:
 
