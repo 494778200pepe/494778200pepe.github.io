@@ -21,7 +21,7 @@ description: 『 Javassist 』
 
 参考：
 
-[Android Gradle高级用法，动态编译技术:Plugin Transform Javassist操作Class文件](https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650241354&idx=1&sn=92ace76bc19563e973a3712fae54246c&chksm=88638825bf1401334710d6f8dfe750b6999dc80212e3fe72c15936c434d3dccec0e7509451df&scene=38#wechat_redirect)
+[Android Gradle高级用法，动态编译技术:Plugin Transform Javassist操作Class文件](https://blog.csdn.net/yulong0809/article/details/77752098?locationNum=9&fps=1)
 
 [Android中使用 Javassist - 大专栏](https://www.dazhuanlan.com/2019/10/18/5da8a5ef81156/)
 
