@@ -54,6 +54,6 @@ https://www.jianshu.com/p/49aab8792274
 
 [android用 javassist实现捕获第三方库异常 - 码农教程](http://www.manongjc.com/detail/11-hqyulzqxqlbhfru.html)
 
-[干货 | Android 全埋点解决方案之 Javassist - 知乎](https://zhuanlan.zhihu.com/p/68141713)
+[Android 全埋点解决方案之 Javassist - 知乎](https://zhuanlan.zhihu.com/p/68141713)
 
 [安卓AOP实战:Javassist强撸EventBus - 简书](https://www.jianshu.com/p/33d8a3165b07)
