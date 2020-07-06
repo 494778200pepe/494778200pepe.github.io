@@ -21,11 +21,6 @@ description: 『 Javassist 』
 
 参考：
 
-Android动态编译技术 Plugin Transform Javassist操作Class文件 - 简书
-https://www.jianshu.com/p/a6be7cdcfc65
-
-Gradle Plugin: Transform + Javassist 编译期操作Class文件 - 简书
-https://www.jianshu.com/p/882325acd200
 
 [Android Gradle高级用法，动态编译技术:Plugin Transform Javassist操作Class文件](https://blog.csdn.net/yulong0809/article/details/77752098?locationNum=9&fps=1)
 
@@ -37,10 +32,14 @@ https://www.jianshu.com/p/882325acd200
 
 [了解下AOP中的Javassist - 掘金](https://juejin.im/post/5df9e44ce51d45584006e375)
 
+[Android动态编译技术 Plugin Transform Javassist操作Class文件 - 简书](https://www.jianshu.com/p/a6be7cdcfc65)
+
+[Gradle Plugin: Transform + Javassist 编译期操作Class文件 - 简书](https://www.jianshu.com/p/882325acd200)
+
+
 API:
 
-AOP之Javassist - 简书
-https://www.jianshu.com/p/49aab8792274
+[AOP之Javassist - 简书](https://www.jianshu.com/p/49aab8792274)
 
 [Java学习之javassist - 天~宇~翱~翔 - 博客园](https://www.cnblogs.com/sunfie/p/5154246.html)
 
