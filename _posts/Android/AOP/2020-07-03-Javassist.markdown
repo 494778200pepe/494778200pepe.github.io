@@ -11,14 +11,12 @@ description: 『 Javassist 』
 [Javassist Tutorial](http://www.javassist.org/tutorial/tutorial.html)
 
 ![javassist]({{ site.baseurl }}/assets/images/android/AOP/javassist.png)
+Javassist应用流程
 
 
+[yaozhukuang/javassist: 利用javassist和自定义gradle插件修改.class文件](https://github.com/yaozhukuang/javassist)
 
-yaozhukuang/javassist: 利用javassist和自定义gradle插件修改.class文件
-https://github.com/yaozhukuang/javassist
-
-android用 javassist实现捕获第三方库异常 - 码农教程
-http://www.manongjc.com/detail/11-hqyulzqxqlbhfru.html
+[android用 javassist实现捕获第三方库异常 - 码农教程](http://www.manongjc.com/detail/11-hqyulzqxqlbhfru.html)
 
 
 参考：

@@ -11,10 +11,13 @@ description: 『 AspectJ 』
 
 
 ![AspectJ]({{ site.baseurl }}/assets/images/android/AOP/AspectJ.png)	
+Aspect之hugo工作流程
 
 ![AspectJ2]({{ site.baseurl }}/assets/images/android/AOP/AspectJ2.png)	
+Aspect侵入式工作流程
 
 ![AspectJ3]({{ site.baseurl }}/assets/images/android/AOP/AspectJ3.png)	
+Aspect非侵入式工作流程
 
 
 重复点击

@@ -13,13 +13,17 @@ description: 『 APT 』
 
 
 ![APT_butterknife]({{ site.baseurl }}/assets/images/android/AOP/APT_butterknife.png)	
+APT之ButterKnife工作流程
+
 
 
 ![APT]({{ site.baseurl }}/assets/images/android/AOP/APT.png)	
+APT工作流程
+
 
 
 ![APT2]({{ site.baseurl }}/assets/images/android/AOP/APT2.png)	
-
+APT工作流程重点
 
 
 
