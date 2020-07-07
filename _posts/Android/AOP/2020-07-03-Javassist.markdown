@@ -26,11 +26,11 @@ http://www.manongjc.com/detail/11-hqyulzqxqlbhfru.html
 
 [Android Gradle高级用法，动态编译技术:Plugin Transform Javassist操作Class文件](https://blog.csdn.net/yulong0809/article/details/77752098?locationNum=9&fps=1)
 
+[Android热补丁动态修复技术（三）—— 使用Javassist注入字节码，完成热补丁框架雏形（可使用）_Altsuki的博客-CSDN博客_android里使用javassist](https://blog.csdn.net/u010386612/article/details/51131642)
+
 [Android中使用 Javassist - 大专栏](https://www.dazhuanlan.com/2019/10/18/5da8a5ef81156/)
 
 [使用javassist和ASM修改class，并实现方法耗时检测插件 - 掘金](https://juejin.im/post/5dea581fe51d45581d170b7c)
-
-[Android热补丁动态修复技术（三）—— 使用Javassist注入字节码，完成热补丁框架雏形（可使用）_Altsuki的博客-CSDN博客_android里使用javassist](https://blog.csdn.net/u010386612/article/details/51131642)
 
 [了解下AOP中的Javassist - 掘金](https://juejin.im/post/5df9e44ce51d45584006e375)
 
