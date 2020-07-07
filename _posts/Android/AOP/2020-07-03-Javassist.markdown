@@ -10,7 +10,7 @@ description: 『 Javassist 』
 
 [Javassist Tutorial](http://www.javassist.org/tutorial/tutorial.html)
 
-
+![javassist]({{ site.baseurl }}/assets/images/android/AOP/javassist.png)
 
 
 
