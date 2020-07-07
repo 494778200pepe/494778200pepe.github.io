@@ -22,7 +22,7 @@ http://www.manongjc.com/detail/11-hqyulzqxqlbhfru.html
 
 
 参考：
-
+[最全选型考量 + 边剖析经典开源库边实践，美滋滋 - 简书](https://www.jianshu.com/p/42ce95450adb)
 
 [Android Gradle高级用法，动态编译技术:Plugin Transform Javassist操作Class文件](https://blog.csdn.net/yulong0809/article/details/77752098?locationNum=9&fps=1)
 
