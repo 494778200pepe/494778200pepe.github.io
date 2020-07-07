@@ -9,6 +9,14 @@ description: 『 AspectJ 』
 ---
 ![AOP]({{ site.baseurl }}/assets/images/android/AOP/AOP.png)	
 
+
+![AspectJ]({{ site.baseurl }}/assets/images/android/AOP/AspectJ.png)	
+
+![AspectJ2]({{ site.baseurl }}/assets/images/android/AOP/AspectJ2.png)	
+
+![AspectJ3]({{ site.baseurl }}/assets/images/android/AOP/AspectJ3.png)	
+
+
 重复点击
 网络监测
 权限检测

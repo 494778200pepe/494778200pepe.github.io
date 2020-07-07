@@ -12,8 +12,13 @@ description: 『 APT 』
 简单来说就是在编译期，通过注解生成.java文件。
 
 
+![APT_butterknife]({{ site.baseurl }}/assets/images/android/AOP/APT_butterknife.png)	
 
 
+![APT]({{ site.baseurl }}/assets/images/android/AOP/APT.png)	
+
+
+![APT2]({{ site.baseurl }}/assets/images/android/AOP/APT2.png)	
 
 
 
@@ -32,6 +37,7 @@ description: 『 APT 』
 
 
 参考：
+[最全选型考量 + 边剖析经典开源库边实践，美滋滋 - 简书](https://www.jianshu.com/p/42ce95450adb)
 
 [Android APT - 简书](https://www.jianshu.com/p/7af58e8e3e18)
 

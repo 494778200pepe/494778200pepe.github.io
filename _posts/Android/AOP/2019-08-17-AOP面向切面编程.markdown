@@ -19,6 +19,7 @@ description: 『 AOP面向切面编程 』
 面向切面编程 AOP 技术就是为解决这个问题而诞生的，切面就是横切面，代表的是一个普遍存在的共有功能，例如，日志切面、权限切面及事务切面等。
 
 
+![AOP]({{ site.baseurl }}/assets/images/android/AOP/AOP.png)	
 
 
 ### **Android AOP主流框架**
@@ -51,7 +52,7 @@ description: 『 AOP面向切面编程 』
 </table>
 	
 	
-![AOP]({{ site.baseurl }}/assets/images/android/AOP/AOP.png)	
+![AOP2]({{ site.baseurl }}/assets/images/android/AOP/AOP2.png)	
 
 * Aspectj 是对 AOP 的实践，代表是 hugo，在编译期生成代码，主要用来处理跟主业务流程没太多关系的分支判断检测、统计等功能，非注入
 
