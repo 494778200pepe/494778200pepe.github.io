@@ -76,16 +76,24 @@ description: 『 启动图适配 』
 
 [Android 闪屏启动页全面屏适配_移动开发_RoyZheng-CSDN博客](https://blog.csdn.net/Zheng_Jiao/article/details/94010893)
 
-两个问题：1、图片大小和px的对应关系，确认下
-	  2、drawable-xhdpi-2100x1080，
+两个问题：
+
+1、图片大小和px的对应关系，确认下
+2、drawable-xhdpi-2100x1080，
 		这种图片是先找drawable-xhdpi
 		还是直接找的 drawable-xhdpi-2100x1080
 		如果屏幕宽高其中一个大于其中一个（宽 > 1080 或者 高 > 2100）
 		那么使用 drawable-xhdpi，否则使用 drawable-xhdpi-2100x1080   
 		使用这种方式是在  range 的范围之内就行了
 		
-adb 命令  dumpsys window displays |head -n 5 :
+adb 命令  `dumpsys window displays |head -n 5` :
+或者 
+adb 命令  `dumpsys window displays |head ` :
+
+结果：
+```
 init=750x1500 320dpi cur=750x1500 app=750x1404 rng=750x604-1500x1354
+```
 
 如果是：drawable-xhdpi-[h-px]x[w-px],比如：drawable-xhdpi-1354x750
 h <= 1404 px,w <= 750 px,才可能被选取，如果有多个，更接近的被选取,毕竟放大系数小。

@@ -37,3 +37,8 @@ ASM
 
 [Android ASM自动埋点方案实践 - 简书](https://www.jianshu.com/p/9039a3e46dbc)
 
+深入探索编译插桩技术（四、ASM 探秘） - 掘金
+https://juejin.im/post/5e8d87c4f265da47ad218e6b
+
+通过ASM实现大图监控 － 小专栏
+https://xiaozhuanlan.com/topic/3957428160?from=timeline

@@ -11,3 +11,9 @@ description: 『 onDraw 』
 
 Android View框架的draw机制 - CSDN博客
 https://blog.csdn.net/hjf_huangjinfu/article/details/51175398
+
+（4）自定义View Draw过程- 最易懂的自定义View原理系列 - 简书
+https://www.jianshu.com/p/95afeb7c8335?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=weixin
+
+（3）自定义View Layout过程 - 最易懂的自定义View原理系列 - 简书
+https://www.jianshu.com/p/158736a2549d?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=weixin

@@ -25,6 +25,9 @@ Aspect非侵入式工作流程
 权限检测
 
 
+深入探索编译插桩技术（二、AspectJ） - 掘金
+https://juejin.im/post/5e84384af265da47e1593102
+
 参考：
 [最全选型考量 + 边剖析经典开源库边实践，美滋滋 - 简书](https://www.jianshu.com/p/42ce95450adb)
 

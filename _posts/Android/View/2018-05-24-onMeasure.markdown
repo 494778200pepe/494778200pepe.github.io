@@ -27,3 +27,5 @@ http://blog.csdn.net/u013818990/article/details/50570944
 http://blog.csdn.net/u013818990/article/details/50603889
 
 
+自定义View Measure过程 - 最易懂的自定义View原理系列（2） - 简书
+https://www.jianshu.com/p/1dab927b2f36?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=weixin

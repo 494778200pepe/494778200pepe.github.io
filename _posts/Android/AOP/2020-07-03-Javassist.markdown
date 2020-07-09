@@ -14,6 +14,9 @@ description: 『 Javassist 』
 Javassist应用流程
 
 
+Android动态编译技术 Plugin Transform Javassist操作Class文件
+https://mp.weixin.qq.com/s/lNGk_s1QkJPfZeqTx0FZVw
+
 [yaozhukuang/javassist: 利用javassist和自定义gradle插件修改.class文件](https://github.com/yaozhukuang/javassist)
 
 [android用 javassist实现捕获第三方库异常 - 码农教程](http://www.manongjc.com/detail/11-hqyulzqxqlbhfru.html)

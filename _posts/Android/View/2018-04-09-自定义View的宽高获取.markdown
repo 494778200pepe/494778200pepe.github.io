@@ -43,5 +43,8 @@ Constructor -> onFinishInflate -> onMeasure.. -> onSizeChanged -> onLayout -> ad
 
 参考：
 
+解码自定义View-布局绘制与测量 - 掘金
+https://juejin.im/post/5da998f46fb9a04e054d9c48?from=timeline&isappinstalled=0
+
 [浅谈自定义View的宽高获取 - CSDN博客](https://blog.csdn.net/mchenys/article/details/50408819)
 
