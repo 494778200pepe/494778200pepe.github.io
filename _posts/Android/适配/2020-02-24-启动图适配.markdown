@@ -35,6 +35,8 @@ description: 『 启动图适配 』
 
 5.启动页适配方案一：centerCrop，使用layer-list
 
+[Splash适配解决启动图拉伸的问题_移动开发_猴子请来的救兵-CSDN博客](https://blog.csdn.net/aa464971/article/details/86692198)
+
 [Android 启动页适配&启动优化_移动开发_kan137g的专栏-CSDN博客](https://blog.csdn.net/kan137g/article/details/86617122)
 
 [android中如何使用一张图片适配不同尺寸的APP引导页_移动开发_weixin_33918357的博客-CSDN博客](https://blog.csdn.net/weixin_33918357/article/details/89871091)
@@ -69,8 +71,6 @@ description: 『 启动图适配 』
 [android屏幕适配——1920x1200_移动开发_学习是孤独的，如何才能耐得住孤独-CSDN博客](https://blog.csdn.net/yljme/article/details/40071593?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task)
 
 [android 屏幕适配 drawable-hdpi-1920x1080 values-xhdpi-1800x1080 values-land-xhdpi-1824x1200_移动开发_风一样的男人-CSDN博客](https://blog.csdn.net/a2241076850/article/details/52535351)
-
-[Splash适配解决启动图拉伸的问题_移动开发_猴子请来的救兵-CSDN博客](https://blog.csdn.net/aa464971/article/details/86692198)
 
 [安卓APP设计规范之1080*1920设计稿对应开发尺寸 - 简书](https://www.jianshu.com/p/f79371f137c5)
 
