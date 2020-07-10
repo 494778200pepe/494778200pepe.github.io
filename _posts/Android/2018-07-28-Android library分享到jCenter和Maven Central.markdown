@@ -23,6 +23,8 @@ description: 『 Android library分享到jCenter和Maven Central 』
 
 参考：
 
+[Android 快速发布开源项目到jcenter_Hongyang-CSDN博客_android 开源项目发布](https://blog.csdn.net/lmj623565791/article/details/51148825?utm_source=blogxgwz31)
+
 [如何使用AndroidStudio把自己的Androidlibrary分享到jCenter和MavenCentral_观千剑而后识器，操千曲而后晓声。-CSDN博客](https://blog.csdn.net/shimiso/article/details/52061520)
 
 [Android Studio 上传aar(Library)到JCenter - CSDN博客](https://blog.csdn.net/zyw_java/article/details/60336189)

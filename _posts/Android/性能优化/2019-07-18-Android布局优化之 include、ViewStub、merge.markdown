@@ -3,7 +3,7 @@ layout: post
 title:  "Android布局优化之 include、ViewStub、merge"
 date:   2019-07-18 14:24:00 +0800
 categories: Android
-tags: Android
+tags: 性能优化
 author: pepe
 description: 『 include、ViewStub、merge 』
 ---
