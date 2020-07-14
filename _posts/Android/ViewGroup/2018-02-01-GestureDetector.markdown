@@ -51,3 +51,10 @@ public interface OnDoubleTapListener {
 
 [Android_GestureDetector手势滑动使用 - CSDN博客](http://blog.csdn.net/y22222ly/article/details/51462674)
 
+Android中Gesture手势的基本用法（总结）_lpCrazyBoy的博客-CSDN博客_安卓gesture
+https://blog.csdn.net/lpCrazyBoy/article/details/83274470?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase
+
+用户手势检测-GestureDetector使用详解_weixin_30699741的博客-CSDN博客
+https://blog.csdn.net/weixin_30699741/article/details/97417686?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase
+
+

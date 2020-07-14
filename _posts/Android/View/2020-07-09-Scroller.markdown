@@ -22,7 +22,8 @@ description: 『 Scroller 』
 Android Scroller详解_hehe_heh的博客-CSDN博客_android scroller
 https://blog.csdn.net/hehe_heh/article/details/80255289
 
-
+Android Scroller与computeScroll的调用机制关系_随手记两笔-CSDN博客_android computescroll
+https://blog.csdn.net/u013749540/article/details/69371982
 
 
 

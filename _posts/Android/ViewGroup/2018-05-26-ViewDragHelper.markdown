@@ -8,6 +8,8 @@ author: pepe
 description: 『 ViewDragHelper 』
 ---
 
+```
+
     一、自定义ViewGroup里通过ViewDragHelper静态工厂方法create()创建实例并实现ViewDragHelper.CallBack抽象类。
 
     二、在自定义ViewGroup的onInterceptTouchEvent()方法里调用并返回ViewDragHelper的shouldInterceptTouchEvent()方法，
@@ -17,17 +19,19 @@ description: 『 ViewDragHelper 』
     三、依据自己需求实现ViewDragHelper.CallBack中相关方法即可。
 
     四、至此已经实现了子View拖动效果，如果需要Fling或者惯性滚动效果则还需要实现自定义ViewGroup的computeScroll()方法进行手动刷帧。
+```
 
 
 
-
-1、 创建：mDragHelper = ViewDragHelper.create(this, mDragHelperCallback);
-2、 TouchSlop：
+* 1、 创建：mDragHelper = ViewDragHelper.create(this, mDragHelperCallback);
+* 2、 TouchSlop：
     系统能识别出被认为是滑动的最小距离，小于这个常量，系统不认为你在进行滑动。与设备有关。
     通过
-        ViewConfigration.get(getContext()).getScaledTouchSlop()
+        `ViewConfigration.get(getContext()).getScaledTouchSlop()`
     方法获得
-3、 @Override
+* * 3、 
+```
+	@Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         final int action = MotionEventCompat.getActionMasked(ev);
         if (action == MotionEvent.ACTION_CANCEL || action == MotionEvent.ACTION_UP) {
@@ -36,12 +40,20 @@ description: 『 ViewDragHelper 』
         }
         return mDragHelper.shouldInterceptTouchEvent(ev);
     }
-4、 @Override
+```	
+	
+4、 
+```
+	@Override
     public boolean onTouchEvent(MotionEvent ev) {
         mDragHelper.processTouchEvent(ev);
         return true;
     }
-5、 关于Callback:
+```	
+	
+* 5、 关于Callback:
+
+```
     public static abstract class Callback {
         public void onViewDragStateChanged(int state) {}
             //当ViewDragHelper状态发生变化时回调（STATE_IDLE,STATE_DRAGGING,STATE_SETTLING）
@@ -80,7 +92,11 @@ description: 『 ViewDragHelper 』
             return 0;
         }
     }
-6、关于ViewDragHelper:
+```	
+	
+* 6、关于ViewDragHelper:
+
+```
     public static ViewDragHelper create(ViewGroup forParent, float sensitivity, Callback cb)
         //sensitivity越大,对滑动的检测就越敏感,默认传1即可，  用来设置滑动的最小检测距离
     public void setEdgeTrackingEnabled(int edgeFlags)
@@ -111,8 +127,9 @@ description: 『 ViewDragHelper 』
               invalidate();
           }
      }
+```
 
-7、为什么setOnClickable之后，就不能拦截了。
+* 7、为什么setOnClickable之后，就不能拦截了。
     如果是clickable的话，子view就消费事件了。
     鸿洋：
     原因是什么呢？主要是因为，如果子View不消耗事件，那么整个手势（DOWN-MOVE*-UP）都是直接进入onTouchEvent，
@@ -121,38 +138,40 @@ description: 『 ViewDragHelper 』
     这个解释有个问题：应该是先拦截，在判断是否消费。
                      怎么是先判断是否消费，再决定是否拦截呢。
 
-8、 a.STATE_IDLE：所有的View处于静止空闲状态
+* 8、 
+
+```
+	a.STATE_IDLE：所有的View处于静止空闲状态
     b.STATE_DRAGGING：某个View正在被用户拖动（用户正在与设备交互）
     c.STATE_SETTLING：某个View正在安置状态中（用户并没有交互操作），就是自动滚动的过程中
+```
 
-9、down时，子view的 state != STATE_DRAGGING,onInterceptTouchEvent 返回false
+* 9、down时，子view的 state != STATE_DRAGGING,onInterceptTouchEvent 返回false
    进入 group 的onTouchEvent，也就是DragHelper的 processTouchEvent(event)
    只有 processTouchEvent(event)返回true时，否则onTouchEvent()方法无法接收接下来的ACTION_MOVE等事件）
    同时之后的 ACTION_MOVE、ACTION_UP等事件再来时 就不会进入 onInterceptTouchEvent
 
 
+参考：
 
-Android应用ViewDragHelper详解及部分源码浅析 - 工匠若水 - CSDN博客
-http://blog.csdn.net/yanbober/article/details/50419059
+[Android应用ViewDragHelper详解及部分源码浅析 - 工匠若水 - CSDN博客](http://blog.csdn.net/yanbober/article/details/50419059)
 
-强大的ViewDragHelper和ViewDragHelper的妙用 一 - 大叔的愤怒，你驾驭不了 - CSDN博客
-http://blog.csdn.net/jaysong2012/article/details/46912875
-自定义控件辅助神器ViewDragHelper - 简书
-http://www.jianshu.com/p/e4d1f88ca922
-Viewdraghelper解析 · Mxn
-http://souly.cn/%E6%8A%80%E6%9C%AF%E5%8D%9A%E6%96%87/2015/09/23/viewDragHelper%E8%A7%A3%E6%9E%90/
-Android ViewDragHelper完全解析 自定义ViewGroup神器 - Hongyang - CSDN博客
-http://blog.csdn.net/lmj623565791/article/details/46858663
+[强大的ViewDragHelper和ViewDragHelper的妙用 一 - 大叔的愤怒，你驾驭不了 - CSDN博客](http://blog.csdn.net/jaysong2012/article/details/46912875)
 
+[自定义控件辅助神器ViewDragHelper - 简书](http://www.jianshu.com/p/e4d1f88ca922)
+
+[Viewdraghelper解析 · Mxn](http://souly.cn/%E6%8A%80%E6%9C%AF%E5%8D%9A%E6%96%87/2015/09/23/viewDragHelper%E8%A7%A3%E6%9E%90/)
+
+[Android ViewDragHelper完全解析 自定义ViewGroup神器 - Hongyang - CSDN博客](http://blog.csdn.net/lmj623565791/article/details/46858663)
 
 
-ViewDragHelper的简单分析（一) - 菜鸟博客 - CSDN博客
-http://blog.csdn.net/chunqiuwei/article/details/50778842
-Android ViewDragHelper源码解析 - 随心而悦StayReal - 博客园
-http://www.cnblogs.com/lqstayreal/p/4500219.html
-ViewDragHelper详解 - pi9nc的专栏 - CSDN博客
-http://blog.csdn.net/pi9nc/article/details/39583377
-ViewDragHelper详解 - 泡在网上的日子
-http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2014/0911/1680.html
+
+[ViewDragHelper的简单分析（一) - 菜鸟博客 - CSDN博客](http://blog.csdn.net/chunqiuwei/article/details/50778842)
+
+[Android ViewDragHelper源码解析 - 随心而悦StayReal - 博客园](http://www.cnblogs.com/lqstayreal/p/4500219.html)
+
+[ViewDragHelper详解 - pi9nc的专栏 - CSDN博客](http://blog.csdn.net/pi9nc/article/details/39583377)
+
+[ViewDragHelper详解 - 泡在网上的日子](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2014/0911/1680.html)
 
 

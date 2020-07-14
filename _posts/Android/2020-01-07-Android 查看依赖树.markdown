@@ -14,6 +14,9 @@ description: 『 查看依赖树 』
 
 
 
+[Android Studio 查看项目依赖的第三方包_nsongbai的博客-CSDN博客_android 查看第三方框架目录](https://blog.csdn.net/nsongbai/article/details/76624885)
+
+
 
 
 

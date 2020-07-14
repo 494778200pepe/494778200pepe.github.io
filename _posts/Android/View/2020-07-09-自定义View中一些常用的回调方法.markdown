@@ -15,7 +15,8 @@ description: 『 自定义View中一些常用的回调方法 』
 浅谈自定义View中一些常用的回调方法 - 简书
 https://www.jianshu.com/p/0faa47bc31d9
 
-
+【Android】自定义控件之View原理与使用
+https://mp.weixin.qq.com/s/Cz9LFCQvoaFOsXcJnsTFpw
 
 
 
