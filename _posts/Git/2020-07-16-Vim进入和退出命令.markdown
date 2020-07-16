@@ -1,0 +1,36 @@
+---
+layout: post
+title:  "Vim进入和退出命令"
+date:   2020-07-16 16:42:00 +0800
+categories: Git
+tags: Git
+author: pepe
+description: 『 Vim进入和退出命令 』
+---
+
+常用命令是ESC，然后:wq（保存并退出），:q!(不保存并强制退出），i进入vim模式。另外还有其它的，我可能都不会用到。。。 
+
+按ESC键 跳到命令模式，然后：
+
+```
+:w 保存文件但不退出vi 
+:w file 将修改另外保存到file中，不退出vi 
+:w! 强制保存，不推出vi 
+:wq 保存文件并退出vi 
+:wq! 强制保存文件，并退出vi 
+q: 不保存文件，退出vi 
+:q! 不保存文件，强制退出vi 
+:e! 放弃所有修改，从上次保存文件开始再编辑
+```
+
+
+参考：
+
+[Vim进入和退出命令_lzh657083979的博客-CSDN博客_进入vim怎么退出](https://blog.csdn.net/lzh657083979/article/details/79224017)
+
+
+
+
+
+
+

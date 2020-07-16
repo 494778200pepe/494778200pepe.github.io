@@ -42,3 +42,9 @@ https://juejin.im/post/5e8d87c4f265da47ad218e6b
 
 通过ASM实现大图监控 － 小专栏
 https://xiaozhuanlan.com/topic/3957428160?from=timeline
+
+ASM实战统计方法耗时 - 简书
+https://www.jianshu.com/p/1b8aa44452cd?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=weibo
+
+通过Gradle的Transform配合ASM实战路由框架和统计方法耗时 - 简书
+https://www.jianshu.com/p/5ff14f02ade3
