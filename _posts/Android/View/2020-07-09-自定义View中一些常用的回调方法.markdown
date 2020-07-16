@@ -10,6 +10,27 @@ description: 『 自定义View中一些常用的回调方法 』
 
 
 
+1、View() 构造方法，第一个被调用。
+
+2、onFinishInflate() 当View中所有的子控件均被映射成xml后触发。
+
+3、onMeasure() 在View放置到父容器时调用
+
+4、onSizeChanged() 在控件大小发生改变时调用。所以这里初始化会被调用一次
+
+5、onDraw() 绘制图形
+
+
+
+### **onFinisheInflate()和onSizeChange()**
+
+* onFinishInflate()：字面意思就是结束加载完布局后调用，一般是在onCreate()方法中执行，也就是在setContentView()完全加载完布局之后，才会去调用这个方法；
+
+* onSizeChange()：控件大小改变后调用，一般调用顺序是：
+onMeasure() -> onSizeChange() -> onLayout() -> onDraw()
+
+
+
 
 
 浅谈自定义View中一些常用的回调方法 - 简书
