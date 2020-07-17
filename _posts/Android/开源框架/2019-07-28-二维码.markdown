@@ -18,6 +18,15 @@ https://www.cnblogs.com/flyinggod/p/8707883.html
 媲美微信的二维码识别库 - 简书
 https://www.jianshu.com/p/e2866af44236
 
+jenly1314/ZXingLite: 🔥 ZXing的精简版，优化扫码和生成二维码/条形码，内置闪光灯等功能。扫描风格支持：微信的线条样式，支付宝的网格样式。几句代码轻松拥有扫码功能 ，ZXingLite让集成更简单。（扫码识别速度快如微信）
+https://github.com/jenly1314/ZXingLite
+
+我的ZXing快如闪电！ - 简书
+https://www.jianshu.com/p/d10e147a2709
+
+yangyiRunning/y-zxing: 基于Google zxing的二维码/条形码的功能库
+https://github.com/yangyiRunning/y-zxing
+
 
 ＃二维码
 |  -  |

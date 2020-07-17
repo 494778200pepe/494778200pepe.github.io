@@ -36,3 +36,6 @@ https://mp.weixin.qq.com/s/aoZjtn5lufjJbsGNkJA6bg
 
 Android编译时代码生成之三（实现自己的事件总线） - 简书
 https://www.jianshu.com/p/fcd9a68fdcb5
+
+Android EventBus3 源码解析 把控事件总线
+https://mp.weixin.qq.com/s/ptOCbs32jt-JvEC7saeemw?
