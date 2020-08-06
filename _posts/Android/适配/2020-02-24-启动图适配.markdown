@@ -41,6 +41,8 @@ description: 『 启动图适配 』
 
 [android中如何使用一张图片适配不同尺寸的APP引导页_移动开发_weixin_33918357的博客-CSDN博客](https://blog.csdn.net/weixin_33918357/article/details/89871091)
 
+[Android屏幕适配(二)：AutoSize今日头条屏幕适配方案_feng海涛-CSDN博客_autosize 适配 用dp还px](https://blog.csdn.net/weixin_42574892/article/details/106135700)
+
 6.启动页适配方案二：使用点9图
 
 [全面屏适配以及启动页适配（采用制作.9图的方式） - HaiyuKing - 博客园](https://www.cnblogs.com/whycxb/p/9737613.html)

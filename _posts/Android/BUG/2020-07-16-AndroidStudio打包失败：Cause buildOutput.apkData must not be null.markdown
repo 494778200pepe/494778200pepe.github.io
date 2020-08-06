@@ -1,50 +1,26 @@
 ---
 layout: post
-title:  "AS 出现 item inner element must either be a resource reference or empty"
-date:   2020-07-16 16:55:00 +0800
+title:  "AndroidStudio打包失败：Cause buildOutput.apkData must not be null"
+date:   2020-07-16 16:57:00 +0800
 categories: Android
 tags: BUG
 author: pepe
-description: 『 AS 出现 item inner element must either be a resource reference or empty 』
+description: 『 AndroidStudio打包失败：Cause buildOutput.apkData must not be null 』
 ---
 
 
-今天更新AS之后，之前有一个老的项目出现如上所示的问题，导致build失败。查看错误问题之后发现代码是如下格式的：
+今天打开之前编写的Android项目，编译，运行，调试都没问题，但是到最后打包的时候就死活不成功，
+试了很多方法，在网上也没找到解决的办法，网上说的方法都没有用，
+最后我尝试打包debug版本，成功了，于是我怀疑的以前的打包文件问题，
+于是把app/release目录下的apk都删掉，然后再进行签名打包，就成功了。
+可能是因为升级了Androidstudio跟gradle版本的原因
 
-```
-<item name="animator" type="id">false</item>
-<item name="date_picker_day" type="id">false</item>
-```
 
-然后网上找到了一些资料：
-
-在开发文档中，https://developer.android.com/guide/topics/resources/more-resources#Id
-也有提到说上面那种方式已经不能这么写了，新的方法如下：
-
-```
-<item name="animator" type="id"/>
-<item name="date_picker_day" type="id"/>
-```
-
-如果引入的是第三方包怎么修改呢？
-1、在你的项目res\values文件夹下新建`ids.xml`文件
-
-2、将之前编译出错的item重新写一遍，改成下面的
-
-```
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <item name="animator" type="id"/>
-    <item name="date_picker_day" type="id"/>
-   ...
-</resources>
-```
-
-重新build之后AS会自动处理这些问题。
 
 参考：
 
-[AS 出现:<item> inner element must either be a resource reference or empty. - 简书](https://www.jianshu.com/p/592308a335ff?tdsourcetag=s_pcqq_aiomsg)
+[AndroidStudio打包失败：Cause: buildOutput.apkData must not be null - 简书](https://www.jianshu.com/p/9ae1dc6bba16)
+
 
 
 

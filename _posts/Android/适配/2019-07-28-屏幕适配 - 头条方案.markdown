@@ -15,6 +15,8 @@ description: 『 头条方案 』
 
 参考：
 
+[Android屏幕适配(二)：AutoSize今日头条屏幕适配方案_feng海涛-CSDN博客_autosize 适配 用dp还px](https://blog.csdn.net/weixin_42574892/article/details/106135700)
+
 [一种极低成本的Android屏幕适配方式](https://mp.weixin.qq.com/s/d9QCoBP6kV9VSWvVldVVwA)
 
 [Android屏幕适配框架-(今日头条终极适配方案) - 简书](https://www.jianshu.com/p/cd373f529bea)
