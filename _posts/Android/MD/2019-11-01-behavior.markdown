@@ -22,9 +22,9 @@ description: 『 behavior 』
 
 [自定义 Behavior，实现嵌套滑动、平滑切换周月视图的日历](https://mp.weixin.qq.com/s/Haf4UEqdnnPZwujpSClqbw）
 
-Material Design 之 Behavior 的使用和自定义 Behavior - 掘金
-https://juejin.im/post/585bb76961ff4b006cc9d5b6
+[Material Design 之 Behavior 的使用和自定义 Behavior - 掘金](https://juejin.im/post/585bb76961ff4b006cc9d5b6)
 
+[Android CoordinatorLayout之自定义Behavior - 简书](https://www.jianshu.com/p/b987fad8fcb4)
 
 
 
