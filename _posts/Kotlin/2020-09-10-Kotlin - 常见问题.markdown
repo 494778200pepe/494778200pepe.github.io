@@ -1,0 +1,36 @@
+---
+layout: post
+title:  "Kotlin -  常见问题"
+date:   2020-09-10 11:09:00 +0800
+categories: Kotlin
+tags: Kotlin
+author: pepe
+description: 『  常见问题 』
+---
+
+### Kotlin 没有封装类
+
+在 kotlin 中，只有 int，没有 Integer
+ 
+ // 在 kotlin 中使用反射，调用 java 里面的 Integer 参数方法
+
+
+### Kotlin 类型空值敏感
+
+ 接受类对象的时候，一点要定义可空的变量（加？）
+
+
+### Kotlin 没有静态变量与静态方法
+
+```
+@JvmStatic 注解，生成静态方法
+```
+
+
+### 反射
+ 
+
+
+
+
+

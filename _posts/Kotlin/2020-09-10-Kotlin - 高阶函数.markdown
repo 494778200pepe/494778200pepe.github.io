@@ -1,0 +1,52 @@
+---
+layout: post
+title:  "Kotlin -  高阶函数"
+date:   2020-09-10 16:08:00 +0800
+categories: Kotlin
+tags: Kotlin
+author: pepe
+description: 『  高阶函数 』
+---
+
+```
+[inline] fun onlyif(isDebug:Boolean,block:() -> Unit){
+    if(isDebug)block()
+}
+
+fun main(args: Array<String>) {
+    onlyif(true){
+        println("打印日志")
+    }
+} 
+```
+
+函数是一等公民
+
+```
+	// 声明一个Runnable对象
+    val runnable = Runnable {
+        println("Runnable::run")
+    }
+
+    // 声明一个函数对象 
+    val function: () -> Unit
+    // 赋值
+    function = runnable::run
+    onlyif(true,function)
+}
+
+```
+
+kotlin 中 Lambda 表达式会变异成匿名内部类形式，如果过多，会生成很多临时无用对象
+
+可以使用inline修饰方法，这样当方法在编译时就会拆解方法的调用为语句调用，进而减少创建不必要的对象
+
+inline 乱用的话，代码块变庞大，查找问题麻烦，编译也会变慢，
+
+inline 一般用来修饰高阶函数。
+
+
+
+
+
+
