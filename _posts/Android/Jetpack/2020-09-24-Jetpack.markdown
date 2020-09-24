@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "Jetpack"
+date:   2020-09-24 10:00:00 +0800
+categories: Android
+tags: Jetpack
+author: pepe
+description: 『 Jetpack 』
+---
+
+
+
+
+
+
+参考：
+
+
+[Jetpack使用（一）Lifecycles核心原理 - 简书](https://www.jianshu.com/p/dbee973a0d6a)
