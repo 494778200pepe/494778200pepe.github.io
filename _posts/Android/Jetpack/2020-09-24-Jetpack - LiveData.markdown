@@ -15,5 +15,4 @@ description: 『 LiveData 』
 
 参考：
 
-Jetpack使用（二）LiveData核心原理 - 简书
-https://www.jianshu.com/p/ac6888134fa5
+[Jetpack使用（二）LiveData核心原理 - 简书](https://www.jianshu.com/p/ac6888134fa5)
