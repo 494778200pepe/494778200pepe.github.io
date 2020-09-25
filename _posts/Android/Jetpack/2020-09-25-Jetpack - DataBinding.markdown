@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Jetpack - DateBinding"
+title:  "Jetpack - DataBinding"
 date:   2020-09-25 14:34:00 +0800
 categories: Android
 tags: Jetpack
 author: pepe
-description: 『 DateBinding 』
+description: 『 DataBinding 』
 ---
 
 官方文档：
