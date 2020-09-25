@@ -10,11 +10,20 @@ description: 『 DateBinding 』
 
 官方文档：
 
-
+[数据绑定库  Android Developers](https://developer.android.google.cn/topic/libraries/data-binding)
 
 
 
 参考：
 
-Jetpack使用（三）DataBinding核心原理 - 简书
-https://www.jianshu.com/p/adba47bd2b3d
+[Jetpack使用（三）DataBinding核心原理 - 简书](https://www.jianshu.com/p/adba47bd2b3d)
+
+
+
+
+
+
+
+
+
+
