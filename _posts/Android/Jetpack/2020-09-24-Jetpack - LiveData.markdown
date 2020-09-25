@@ -8,7 +8,9 @@ author: pepe
 description: 『 LiveData 』
 ---
 
+官方文档：
 
+[LiveData 概览  Android Developers](https://developer.android.google.cn/topic/libraries/architecture/livedata)
 
 
 
