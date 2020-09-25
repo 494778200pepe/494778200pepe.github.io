@@ -17,4 +17,7 @@ description: 『 ViewModel 』
 
 参考：
 
+从源码看 Jetpack（6）-ViewModel源码详解
+https://juejin.im/post/6873356946896846856
+
 [Jetpack使用（四）ViewModel核心原理 - 简书](https://www.jianshu.com/p/00799899fe7b)

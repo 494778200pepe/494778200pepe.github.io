@@ -415,7 +415,7 @@ public interface LifecycleObserver {
 
 [Android LifeCycle原理分析 - 简书](https://www.jianshu.com/p/aff113e588e6)
 
-[Lifecycle源码解析，让你一次学个够！](https://mp.weixin.qq.com/s/7Z9UmvMCI90EyzFovV_rEw)
+[从源码看 Jetpack（1） -Lifecycle源码解析](https://juejin.im/post/6847902220755992589)
 
 [Retrofit结合Lifecycle, 将Http生命周期管理到极致 - 简书](https://www.jianshu.com/p/07fe489a53f2)
 

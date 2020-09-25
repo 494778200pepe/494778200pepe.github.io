@@ -170,4 +170,34 @@ description: 『 LiveData 』
 
 参考：
 
+[从源码看 Jetpack（3）-LiveData源码解析](https://juejin.im/post/6847902222345633806)
+
 [Jetpack使用（二）LiveData核心原理 - 简书](https://www.jianshu.com/p/ac6888134fa5)
+
+从源码看 Jetpack（4）-LiveData衍生
+https://juejin.im/post/6847902222353858567
+
+自己动手改造 Jetpack LiveData
+https://juejin.im/post/6854573208222318605
+
+Jetpack架构组件 — LiveData与ViewModel的使用
+https://juejin.im/post/6863031989155889166
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
