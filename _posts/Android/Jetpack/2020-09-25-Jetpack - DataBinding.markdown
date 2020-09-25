@@ -18,7 +18,8 @@ description: 『 DataBinding 』
 
 [Jetpack使用（三）DataBinding核心原理 - 简书](https://www.jianshu.com/p/adba47bd2b3d)
 
-
+Android DataBinding使用详解（一） - 简书
+https://www.jianshu.com/p/e4c4a9aece40
 
 
 
