@@ -72,6 +72,11 @@ WINDOW MANAGER DISPLAY CONTENTS (dumpsys window displays)
 其中 mDisplayId 为 显示屏编号，init 是初始分辨率和屏幕密度，app 的高度比 init 里的要小，表示屏幕底部有虚拟按键，高度为 1920 - 1794 = 126px 合 42dp。
 
 
+* 命令查看当前与用户交互的activity
+
+```
+adb shell dumpsys activity activities | sed -En -e '/Running activities/,/Run #0/p'
+```
 
 参考：
 
