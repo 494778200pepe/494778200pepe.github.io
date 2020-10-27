@@ -9,17 +9,13 @@ description: 『 组件化 』
 ---
 
 
-一篇文章搞懂Android组件化
-https://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650826808&idx=1&sn=0ed91abcc3561cb7a01915a9470eacd6&chksm=80b7bca6b7c035b0833111a64a428e9a05b0ae8034228bcb287ba1e58ef2d16922eb30eeb048&scene=21#wechat_redirect
+[一篇文章搞懂Android组件化](https://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650826808&idx=1&sn=0ed91abcc3561cb7a01915a9470eacd6&chksm=80b7bca6b7c035b0833111a64a428e9a05b0ae8034228bcb287ba1e58ef2d16922eb30eeb048&scene=21#wechat_redirect)
 
-腾讯大牛最佳总结！只需一篇文章教会你Android组件化 - 简书
-https://www.jianshu.com/p/18e46e0e4b9c
+[腾讯大牛最佳总结！只需一篇文章教会你Android组件化 - 简书](https://www.jianshu.com/p/18e46e0e4b9c)
 
-架构师的思维，聊一聊APP组件化的那些事儿
-https://mp.weixin.qq.com/s/EdfWRj7dF4XtIo_xqP6_sA
+[架构师的思维，聊一聊APP组件化的那些事儿](https://mp.weixin.qq.com/s/EdfWRj7dF4XtIo_xqP6_sA)
 
-Android组件化问题思考
-https://juejin.im/post/6847902221934264328
+[Android组件化问题思考](https://juejin.im/post/6847902221934264328)
 
 [Android 模块化探索与实践 - 掘金](https://juejin.im/post/590c8e2ca0bb9f0058879702)
 
