@@ -8,22 +8,7 @@ author: pepe
 description: 『 Modular 』
 ---
 
-[Android 模块化探索与实践 - 掘金](https://juejin.im/post/590c8e2ca0bb9f0058879702)
 
-[Android架构思考：模块化、多进程](https://mp.weixin.qq.com/s/mIogiDTYGDFISKU5kBXcFA)
-
-[组件化 & 模块化 & 插件化演进](https://mp.weixin.qq.com/s?__biz=MzI3MDE0NzYwNA==&mid=2651435454&idx=1&sn=ca5156b903967eeda7586ace818004c8&chksm=f12898c5c65f11d3857f627fc6057ce413ecf79bea2cdcdc6e47d99a48498c2d1798f6e19f3e&mpshare=1&scene=23&srcid=0516E1fPnXQD2RnHdTen3H5a#rd)
-
-[插件化研究之dexmaker动态生成Activity - 简书](https://www.jianshu.com/p/7a9d52e73d05)
-
-[Android路由的实现 - CSDN博客](https://blog.csdn.net/Vicent_9920/article/details/71425357)
-
-[Android插件化框架系列之类加载器 - 简书](https://www.jianshu.com/p/57fc356b9093)
-
-[Android组件化方案 - CSDN博客](https://blog.csdn.net/guiying712/article/details/55213884)
-
-组件化开源项目
-https://mp.weixin.qq.com/s?__biz=MzIwMTAzMTMxMg==&mid=2649493065&idx=1&sn=7dc29ce299ece8cc64ea982c787f5cd3&chksm=8eec85b6b99b0ca0873418a06fd7d33a9cf9501ca25105f1ab01650eee485b36b21b102baae6&mpshare=1&scene=1&srcid=0815gIcuM4yOQ6N9cZz9cD0t&pass_ticket=APKMdTPWu4%2F9x6WNRD2zqG1ySvhmTio8MEMgvLVi7DJvvVYHdTMFJE69z7cN7ueG#rd
 
 ### 插件化
 
