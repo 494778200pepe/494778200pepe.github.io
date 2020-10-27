@@ -31,24 +31,19 @@ description: 『 组件化 』
 
 [Android组件化方案 - CSDN博客](https://blog.csdn.net/guiying712/article/details/55213884)
 
-组件化开源项目
-https://mp.weixin.qq.com/s?__biz=MzIwMTAzMTMxMg==&mid=2649493065&idx=1&sn=7dc29ce299ece8cc64ea982c787f5cd3&chksm=8eec85b6b99b0ca0873418a06fd7d33a9cf9501ca25105f1ab01650eee485b36b21b102baae6&mpshare=1&scene=1&srcid=0815gIcuM4yOQ6N9cZz9cD0t&pass_ticket=APKMdTPWu4%2F9x6WNRD2zqG1ySvhmTio8MEMgvLVi7DJvvVYHdTMFJE69z7cN7ueG#rd
+[组件化开源项目](https://mp.weixin.qq.com/s?__biz=MzIwMTAzMTMxMg==&mid=2649493065&idx=1&sn=7dc29ce299ece8cc64ea982c787f5cd3&chksm=8eec85b6b99b0ca0873418a06fd7d33a9cf9501ca25105f1ab01650eee485b36b21b102baae6&mpshare=1&scene=1&srcid=0815gIcuM4yOQ6N9cZz9cD0t&pass_ticket=APKMdTPWu4%2F9x6WNRD2zqG1ySvhmTio8MEMgvLVi7DJvvVYHdTMFJE69z7cN7ueG#rd)
 
 
 
 
 
-(2条消息) 组件化开发之路由器模块详解（ActivityRouter源码详解）_xiatiandefeiyu的博客-CSDN博客
-https://blog.csdn.net/xiatiandefeiyu/article/details/79567253
+[组件化开发之路由器模块详解（ActivityRouter源码详解）_xiatiandefeiyu的博客-CSDN博客](https://blog.csdn.net/xiatiandefeiyu/article/details/79567253)
 
-(2条消息) ActivityRouter源码解析_weixin_43887839的博客-CSDN博客
-https://blog.csdn.net/weixin_43887839/article/details/86691907
+[ActivityRouter源码解析_weixin_43887839的博客-CSDN博客](https://blog.csdn.net/weixin_43887839/article/details/86691907)
 
-(2条消息) ARouter原理剖析和自己实现EasyRouter_jiang19921002的博客-CSDN博客
-https://blog.csdn.net/jiang19921002/article/details/81777406
+[ARouter原理剖析和自己实现EasyRouter_jiang19921002的博客-CSDN博客](https://blog.csdn.net/jiang19921002/article/details/81777406)
 
-ARouter原理剖析及手动实现 - 简书
-https://www.jianshu.com/p/857aea5b54a8
+[ARouter原理剖析及手动实现 - 简书](https://www.jianshu.com/p/857aea5b54a8)
 
 
 
