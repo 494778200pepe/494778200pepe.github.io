@@ -8,6 +8,7 @@ author: pepe
 description: 『 组件化 』
 ---
 
+[Android 多模块多组件开发 - 打造属于自己的路由 - 简书](https://www.jianshu.com/p/d0e1320704e4)
 
 [一篇文章搞懂Android组件化](https://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650826808&idx=1&sn=0ed91abcc3561cb7a01915a9470eacd6&chksm=80b7bca6b7c035b0833111a64a428e9a05b0ae8034228bcb287ba1e58ef2d16922eb30eeb048&scene=21#wechat_redirect)
 
@@ -25,17 +26,10 @@ description: 『 组件化 』
 
 [组件化开源项目](https://mp.weixin.qq.com/s?__biz=MzIwMTAzMTMxMg==&mid=2649493065&idx=1&sn=7dc29ce299ece8cc64ea982c787f5cd3&chksm=8eec85b6b99b0ca0873418a06fd7d33a9cf9501ca25105f1ab01650eee485b36b21b102baae6&mpshare=1&scene=1&srcid=0815gIcuM4yOQ6N9cZz9cD0t&pass_ticket=APKMdTPWu4%2F9x6WNRD2zqG1ySvhmTio8MEMgvLVi7DJvvVYHdTMFJE69z7cN7ueG#rd)
 
-
-
-
-
 [组件化开发之路由器模块详解（ActivityRouter源码详解）_xiatiandefeiyu的博客-CSDN博客](https://blog.csdn.net/xiatiandefeiyu/article/details/79567253)
 
 [ActivityRouter源码解析_weixin_43887839的博客-CSDN博客](https://blog.csdn.net/weixin_43887839/article/details/86691907)
 
-[ARouter原理剖析和自己实现EasyRouter_jiang19921002的博客-CSDN博客](https://blog.csdn.net/jiang19921002/article/details/81777406)
-
-[ARouter原理剖析及手动实现 - 简书](https://www.jianshu.com/p/857aea5b54a8)
 
 
 
