@@ -10,3 +10,6 @@ description: 『 Picasso 』
 
 图片加载框架Picasso － 源码分析 - 掘金
 https://juejin.im/post/58b7f59a44d904006acbbb83
+
+拆 Jake Wharton 系列之 Picasso - 简书
+https://www.jianshu.com/p/3c18985d4746
