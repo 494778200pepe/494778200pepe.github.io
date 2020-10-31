@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "Modular"
-date:   2018-07-02 16:17:00 +0800
+title:  "插件化"
+date:   2020-10-31 11:29:00 +0800
 categories: Android
-tags: Modular
+tags: Plugin
 author: pepe
-description: 『 Modular 』
+description: 『 插件化 』
 ---
+
 
 [组件化 & 模块化 & 插件化演进](https://mp.weixin.qq.com/s?__biz=MzI3MDE0NzYwNA==&mid=2651435454&idx=1&sn=ca5156b903967eeda7586ace818004c8&chksm=f12898c5c65f11d3857f627fc6057ce413ecf79bea2cdcdc6e47d99a48498c2d1798f6e19f3e&mpshare=1&scene=23&srcid=0516E1fPnXQD2RnHdTen3H5a#rd)
 
@@ -37,10 +38,26 @@ description: 『 Modular 』
 
 [插件化研究之dexmaker动态生成Activity - 简书](https://www.jianshu.com/p/7a9d52e73d05)
 
-
-### 系列
-
 [插件化开发系列之一---原理分析 - CSDN博客](https://blog.csdn.net/shouban1459/article/details/77232480)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
