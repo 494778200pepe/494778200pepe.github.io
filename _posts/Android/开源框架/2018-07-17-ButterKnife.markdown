@@ -20,8 +20,7 @@ description: 『 ButterKnife 』
 
 参考：
 
-Android主项目和Module中R类的区别 - 简书
-https://www.jianshu.com/p/ba127b56811b
+[Android主项目和Module中R类的区别 - 简书](https://www.jianshu.com/p/ba127b56811b)
 
 [AOP 最后一块拼图 - AST 抽象语法树 —— 最轻量级的AOP方法 - 简书](https://www.jianshu.com/p/0f1c7b3e907f)
 
