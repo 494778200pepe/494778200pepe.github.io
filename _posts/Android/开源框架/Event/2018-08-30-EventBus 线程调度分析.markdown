@@ -8,8 +8,7 @@ author: pepe
 description: 『 EventBus 』
 ---
 
-Android EventBus 的源码解析
-https://mp.weixin.qq.com/s/pZAbNe1pE1_JUUv4j9KAow
+[Android EventBus 的源码解析](https://mp.weixin.qq.com/s/pZAbNe1pE1_JUUv4j9KAow)
 
 
 
