@@ -10,7 +10,7 @@ description: 『 EventBus 』
 
 [Android EventBus 的源码解析](https://mp.weixin.qq.com/s/pZAbNe1pE1_JUUv4j9KAow)
 
-[EventBus源码研读(上)|开源实验室](https://www.kymjs.com/code/2015/12/12/01/)
+[EventBus源码研读(上) 开源实验室](https://www.kymjs.com/code/2015/12/12/01/)
 
 [事件总线 EventBus的设计 - small.ming - 博客园](https://www.cnblogs.com/MartinChen999/archive/2011/12/21/2294034.html)
 
