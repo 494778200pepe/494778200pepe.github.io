@@ -1,0 +1,177 @@
+---
+layout: post
+title:  "RxJava 例子 - 链式请求"
+date:   2020-11-28 11:35:00 +0800
+categories: Android
+tags: RxJava
+author: pepe
+description: 『 RxJava 例子 - 链式请求 』
+---
+
+第一种：第一个请求提供参数，不需要回调更新界面
+```
+		HttpApi httpApi = create(HttpApi.class);
+        Observable<BaseResponse<SuccessEntity>> giveTaskGiftObservable = httpApi.giveTaskGift(map);
+        Observable<BaseResponse<UserInfoTo>> userInfoObservable = httpApi.getUserInfo();
+        giveTaskGiftObservable
+                .subscribeOn(Schedulers.io())
+                .doOnSubscribe(new Consumer<Disposable>() {
+                    @Override
+                    public void accept(Disposable disposable) throws Exception {
+                        LogUtil.d("====> accept");
+                        if (mView != null) {
+                            LogUtil.d("====> accept     showLoadingDialog");
+                            mView.showLoadingDialog("");
+                        }
+                        compositeDisposable.add(disposable);
+                    }
+                })
+                .subscribeOn(AndroidSchedulers.mainThread()) //
+                .observeOn(Schedulers.io())
+                .flatMap(new BaseFunction<SuccessEntity, UserInfoTo>() {
+                    @Override
+                    Observable<BaseResponse<UserInfoTo>> doSuccess(BaseResponse<SuccessEntity> successEntityBaseResponse) {
+                        LogUtil.d("====> giveTaskGiftObservable     礼物数量够不够");
+                        if (!TextUtils.isEmpty(successEntityBaseResponse.getError())) {
+                            //  baseResponse.getError().contains("礼物数量不足")
+                            if (successEntityBaseResponse.getError().contains("礼物数量不足")) {
+                                LogUtil.d("====> giveTaskGiftObservable     礼物数量不足");
+                                return userInfoObservable;
+                            } else {
+                                return Observable.error(new Throwable(successEntityBaseResponse.getError()));
+                            }
+                        } else {
+                            LogUtil.d("====> giveTaskGiftObservable     礼物数量足够，赠送成功");
+                            return Observable.empty();
+                        }
+                    }
+                })
+                .subscribeOn(Schedulers.io()) // 这一行可以去掉
+                .observeOn(Schedulers.io())
+                .flatMap(new BaseFunction<UserInfoTo, SuccessEntity>() {
+                    @Override
+                    Observable<BaseResponse<SuccessEntity>> doSuccess(BaseResponse<UserInfoTo> userInfoToBaseResponse) {
+                        int myIntegral = Integer.valueOf(userInfoToBaseResponse.getData().getIntegral());
+                        if (myIntegral > integral) {
+                            // 积分充足，购买
+                            LogUtil.d("====> userInfoObservable     积分充足，购买");
+                            Map<String, Object> map = new HashMap<>();
+                            map.put("integral_goods_id", giftId);
+                            map.put("number", 1);
+                            return httpApi.buyIntegralGoods(map);
+                        } else {
+                            // 积分不足，提示
+                            LogUtil.d("====> userInfoObservable    积分不足，提示");
+                            return Observable.error(new Throwable("积分不足"));
+                        }
+                    }
+                })
+                .observeOn(Schedulers.io())// 这一行可以去掉
+                .flatMap(new BaseFunction<SuccessEntity, SuccessEntity>() {
+                    @Override
+                    Observable<BaseResponse<SuccessEntity>> doSuccess(BaseResponse<SuccessEntity> successEntityBaseResponse) {
+                        SuccessEntity successEntity = successEntityBaseResponse.getData();
+                        // 购买成功
+                        LogUtil.d("====> buyIntegralGoods     购买");
+                        if (successEntity.isIssuccess()) {
+                            // 购买成功
+                            LogUtil.d("====> buyIntegralGoods     购买成功");
+                            return giveTaskGiftObservable;
+                        } else {
+                            LogUtil.d("====> buyIntegralGoods     购买失败");
+                            return Observable.error(new Throwable(successEntityBaseResponse.getError()));
+                        }
+                    }
+                })
+                .subscribeOn(Schedulers.io())// 这一行可以去掉
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<BaseResponse<SuccessEntity>>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(BaseResponse<SuccessEntity> successEntityBaseResponse) {
+                        LogUtil.d("====> giveTaskGiftObservable - onNext     赠送成功");
+                        if (mView.getLoadingDialog() != null && mView.getLoadingDialog().isShow()) {
+                            mView.getLoadingDialog().dismiss();
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        if (mView.getLoadingDialog() != null && mView.getLoadingDialog().isShow()) {
+                            mView.getLoadingDialog().dismiss();
+                        }
+                        String msg = ExceptionHandler.handleException(e);
+                        if (msg.contains("重新登录")
+                                || msg.contains("另一地点登录")
+                                || msg.contains("请先登录")
+                                || msg.contains("已超时")) {
+
+                            mView.showMessage(msg);
+                            mView.showLoginPage();
+                        }else{
+                            mView.showMessage(msg);
+                        }
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        LogUtil.d("====> giveTaskGiftObservable - onComplete     赠送成功");
+                        if (mView.getLoadingDialog() != null && mView.getLoadingDialog().isShow()) {
+                            mView.getLoadingDialog().dismiss();
+                        }
+                        // 赠送成功
+                        SuccessEntity successEntity = new SuccessEntity();
+                        successEntity.setIssuccess(true);
+                        mView.giveGiftSuccess(successEntity);
+                    }
+                });
+```
+
+
+
+
+第二种；第一个请求，需要回调主线程更新界面
+```
+			Observable.just(4)
+                .subscribeOn(Schedulers.io())
+                .doOnSubscribe(new Action0() {
+                    @Override
+                    public void call() {
+                        Log.d(TAG, "doOnSubscribe，主线程");
+                        Log.d(TAG, "doOnSubscribe，线程 = " + Thread.currentThread().getName());
+                    }
+                })
+                .subscribeOn(AndroidSchedulers.mainThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .map(new Func1<Integer, String>() {
+                    @Override
+                    public String call(Integer integer) {
+                        Log.d(TAG, "map 所在的线程，应该是主线程 = " + Thread.currentThread().getName());
+                        return integer + "";
+                    }
+                })
+                .observeOn(Schedulers.io())
+                .flatMap(new Func1<String, Observable<String>>() {
+                    @Override
+                    public Observable<String> call(String s) {
+                        Log.d(TAG, "flatMap 所在的线程，应该是子线程 = " + Thread.currentThread().getName());
+                        return Observable.just("haha");
+                    }
+                })
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Action1<String>() {
+                    @Override
+                    public void call(String str) {
+                        Log.d(TAG, "最后回调，主线程 = " + Thread.currentThread().getName());
+                        log(str);
+                    }
+                });
+```
+
+
+
+

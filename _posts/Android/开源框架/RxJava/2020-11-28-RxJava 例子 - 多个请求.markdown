@@ -1,0 +1,54 @@
+---
+layout: post
+title:  "RxJava 例子 - 多个请求"
+date:   2020-11-28 13:42:00 +0800
+categories: Android
+tags: RxJava
+author: pepe
+description: 『 RxJava 例子 - 多个请求 』
+---
+
+```
+	@Override
+    public void getUserInfoAndGiftList(String business_id) {
+        Observable<BaseResponse<UserInfoTo>> userInfoObservable = create(HttpApi.class).getUserInfo();
+        Map<String, Object> map = new HashMap<>();
+        map.put("business_id", business_id);
+        Observable<BaseResponse<MyGiftTo>> giftObservable = create(HttpApi.class).getBusinessUserGiftList(map);
+
+        Observable<HashMap<String, BaseResponse>> zipObservable = Observable.zip(userInfoObservable, giftObservable, new BiFunction<BaseResponse<UserInfoTo>, BaseResponse<MyGiftTo>, HashMap<String, BaseResponse>>() {
+            @Override
+            public HashMap<String, BaseResponse> apply(BaseResponse<UserInfoTo> userInfoToBaseResponse, BaseResponse<MyGiftTo> giftHistoryToBaseResponse) throws Exception {
+				
+				// 回调结果组合成 map ，统一回调
+                return IntegralPayPresenter.this.createResponseMap(userInfoToBaseResponse, giftHistoryToBaseResponse);
+            }
+        });
+        addSubscribe(zipObservable, new ZipObserver(mView) {
+            @Override
+            protected void onSuccess(HashMap<String, BaseResponse> map) {
+                BaseResponse<UserInfoTo> userInfoResponse = (BaseResponse<UserInfoTo>) map.get("userInfo");
+                BaseResponse<MyGiftTo> giftResponse = (BaseResponse<MyGiftTo>) map.get("giftList");
+                mView.getUserInfoAndGiftListSuccess(userInfoResponse.getData(), giftResponse.getData().getList());
+            }
+
+            @Override
+            protected boolean isCanJumpLogin() {
+                return true;
+            }
+        });
+    }
+
+    @NonNull
+    private HashMap<String, BaseResponse> createResponseMap(BaseResponse<UserInfoTo> userInfoResponse,
+                                                            BaseResponse<MyGiftTo> giftHistoryToBaseResponse) {
+        HashMap<String, BaseResponse> map = new HashMap<>(2);
+        map.put("userInfo", userInfoResponse);
+        map.put("giftList", giftHistoryToBaseResponse);
+        return map;
+    }
+```
+
+
+
+
