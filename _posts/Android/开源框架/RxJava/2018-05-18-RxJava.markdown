@@ -37,4 +37,11 @@ description: 『 RxJava系列一 』
 
 [amitshekhariitbhu/RxJava2-Android-Samples: RxJava 2 Android Examples - Migration From RxJava 1 to RxJava 2 - How to use RxJava 2 in Android](https://github.com/amitshekhariitbhu/RxJava2-Android-Samples)
 
+[RxJava2 实战知识梳理(9) - 使用 timer/interval/delay 实现任务调度 - 简书](https://www.jianshu.com/p/6db5d213c9c6)
+
+[Android RxJava 实际应用讲解：从磁盘 / 内存缓存中 获取缓存数据 - 简书](https://www.jianshu.com/p/6f3b6b934787)
+
+[RxJava的四种Subjects：PublishSubject、ReplaySubject、BehaviorSubject、AsyncSubject的理解 - yongfengnice - 博客园](https://www.cnblogs.com/yongfengnice/p/10229473.html)
+
+
 
