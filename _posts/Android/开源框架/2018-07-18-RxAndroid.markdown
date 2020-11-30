@@ -8,8 +8,7 @@ author: pepe
 description: 『 RxAndroid 』
 ---
 
-拆 Jake Wharton 系列之 RxAndroid - 简书
-https://www.jianshu.com/p/ed304bcd4246?url_type=39&object_type=webpage&pos=1
+[拆 Jake Wharton 系列之 RxAndroid - 简书](https://www.jianshu.com/p/ed304bcd4246?url_type=39&object_type=webpage&pos=1)
 
-
+[【推荐】拆 JakeWharton 系列一之 RxAndroid](https://mp.weixin.qq.com/s/We2Eq5xUW7hQxSDThRn6rw)
 

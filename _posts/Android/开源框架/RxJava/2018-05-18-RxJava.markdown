@@ -23,29 +23,17 @@ description: 『 RxJava系列一 』
 
 [RxJava开发精要8 - 与REST无缝结合-RxJava和Retrofit - CSDN博客](https://blog.csdn.net/bboyfeiyu/article/details/50512464)
 
-[专栏：RxJava详解 - CSDN博客](https://blog.csdn.net/column/details/20176.html)
-
-
 [lzyzsd/Awesome-RxJava: RxJava resources](https://github.com/lzyzsd/Awesome-RxJava)
 
 [RxJava----简介 - CSDN博客](https://blog.csdn.net/qq_20198405/article/details/51243098)
 
-[给初学者的RxJava2.0教程(一) - 简书](https://www.jianshu.com/p/464fa025229e)
-
 [这可能是最好的RxJava 2.x 教程（完结版） - 简书](https://www.jianshu.com/p/0cd258eecf60)
-
-[RxJava入门七问（一） - Android_Study_OK的博客 - 博客频道 - CSDN.NET](http://blog.csdn.net/android_study_ok/article/details/51934191)
-
-
-[【推荐】拆 JakeWharton 系列一之 RxAndroid](https://mp.weixin.qq.com/s/We2Eq5xUW7hQxSDThRn6rw)
 
 [nanchen2251/RxJava2Examples: RxJava2 Examples —— 这可能是从 RxJava1 跳到 RxJava2（学习 RxJava2 ）最好的例子 Demo：https://github.com/nanchen2251/RxJava2Examples](https://github.com/nanchen2251/RxJava2Examples)
 
 [androidmalin/RxjavaSample: RxJava Sample](https://github.com/androidmalin/RxjavaSample)
 
 [kaushikgopal/RxJava-Android-Samples: Learning RxJava for Android by example](https://github.com/kaushikgopal/RxJava-Android-Samples)
-
-[lzyzsd/Awesome-RxJava: RxJava resources](https://github.com/lzyzsd/Awesome-RxJava)
 
 [amitshekhariitbhu/RxJava2-Android-Samples: RxJava 2 Android Examples - Migration From RxJava 1 to RxJava 2 - How to use RxJava 2 in Android](https://github.com/amitshekhariitbhu/RxJava2-Android-Samples)
 
