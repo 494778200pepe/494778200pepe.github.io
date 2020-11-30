@@ -28,7 +28,7 @@ java的动态代理机制详解 - xiaoluo501395377 - 博客园
 https://www.cnblogs.com/xiaoluo501395377/p/3383130.html
 
 
-Proxy 动态代理 详解（经典+自己理解） - 正大光明的日志 - 网易博客
+Proxy 动态代理 详解(经典+自己理解) - 正大光明的日志 - 网易博客
 http://mn960mn.blog.163.com/blog/static/114103084201076884973/
 
 JDK动态代理详解 - ImportNew
@@ -94,29 +94,29 @@ http://www.cnblogs.com/yangy608/archive/2011/07/23/2114900.html
 
 [Retrofit2 with LoganSquare封装 - 简书](http://www.jianshu.com/p/42eacc6d5188)
 
-[好用的网络请求库Retrofit2（入门及讲解） - biezhihua的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/biezhihua/article/details/49232289)
+[好用的网络请求库Retrofit2(入门及讲解) - biezhihua的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/biezhihua/article/details/49232289)
 
 [解决Retrofit多BaseUrl及运行时动态改变BaseUrl(二) - 掘金](https://juejin.im/post/5b42aa98f265da0f82021350)
 
-[这是一份很详细的 Retrofit 2.0 使用教程（含实例讲解） - CSDN博客](https://blog.csdn.net/carson_ho/article/details/73732076)
+[这是一份很详细的 Retrofit 2.0 使用教程(含实例讲解) - CSDN博客](https://blog.csdn.net/carson_ho/article/details/73732076)
 
 [Android Retrofit2&OkHttp3添加统一的请求头Header - CSDN博客](https://blog.csdn.net/jdsjlzx/article/details/51578231)
 
 [解决Retrofit多BaseUrl及运行时动态改变BaseUrl(二) - 掘金](https://juejin.im/post/5b42aa98f265da0f82021350)
 
-Retrofit 动态管理和修改 BaseUrl，从未如此简单
-https://mp.weixin.qq.com/s/Hy9wflrtIJjo9F-w0tGZuQ
+[Retrofit 动态管理和修改 BaseUrl，从未如此简单](https://mp.weixin.qq.com/s/Hy9wflrtIJjo9F-w0tGZuQ)
 
-＃Retrofit2.0 
-|  -  |  - 
-|  -  |
-| Retrofit2.0 | [有道云笔记]（http://note.youdao.com/share/?id=452636f2612f0727fd7502f38db4b57c&type=note#/）
-| Retrofit2.0 | [初识Retrofit2.0  -  Young_Kai  - 博客频道--CSDN.NET]（http://blog.csdn.net/tyk0910/article/details/51769834）
-| Retrofit2.0 | [OkHttp，Retrofit 1.x  -  2.x基本使用 -  KingsLanding  - 博客园]（http://www.cnblogs.com/zhuyp1015/p/5171066.html）
-| Retrofit2.0 | [MVP + Dagger2 + Retrofit实现更清晰的架构 -  NoBlueSky的专栏 - 博客频道 -  CSDN.NET]（http://blog.csdn.net/tiankong1206/article/details/46486401）
-| Retrofit2.0 | [从Dagger2基础到Google官方架构MVP + Dagger2架构详解 -  u014315849的博客 - 博客频道 -  CSDN.NET]（http://blog.csdn.net/u014315849/article/details/51566388）
-| Retrofit2.0 | [Retrofit源码解析 - 简书]（http://www.jianshu.com/p/7a56b08a42ec）
-| OKHttp | [OkHttp实现多文件断点下载]（http://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238683&idx=1&sn=9dd209394f2a2d1f4117c601e0b499f7&chksm=88639fb4bf1416a22771e70936c4ba3919835431bb822c4c9958d589c53ca1c48fcfdb30a126&mpshare=1&scene=23&srcid=0224xsLT8AIq3ihahiGcfh9e#rd）
+[初识Retrofit2.0  -  Young_Kai  - 博客频道--CSDN.NET](http://blog.csdn.net/tyk0910/article/details/51769834)
+
+[OkHttp，Retrofit 1.x  -  2.x基本使用 -  KingsLanding  - 博客园](http://www.cnblogs.com/zhuyp1015/p/5171066.html)
+
+[MVP + Dagger2 + Retrofit实现更清晰的架构 -  NoBlueSky的专栏 - 博客频道 -  CSDN.NET](http://blog.csdn.net/tiankong1206/article/details/46486401)
+
+[从Dagger2基础到Google官方架构MVP + Dagger2架构详解 -  u014315849的博客 - 博客频道 -  CSDN.NET](http://blog.csdn.net/u014315849/article/details/51566388)
+
+[Retrofit源码解析 - 简书](http://www.jianshu.com/p/7a56b08a42ec)
+
+[OkHttp实现多文件断点下载](http://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238683&idx=1&sn=9dd209394f2a2d1f4117c601e0b499f7&chksm=88639fb4bf1416a22771e70936c4ba3919835431bb822c4c9958d589c53ca1c48fcfdb30a126&mpshare=1&scene=23&srcid=0224xsLT8AIq3ihahiGcfh9e#rd)
 
 
 
