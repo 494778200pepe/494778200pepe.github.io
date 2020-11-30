@@ -116,7 +116,37 @@ http://www.cnblogs.com/yangy608/archive/2011/07/23/2114900.html
 
 [Retrofit源码解析 - 简书](http://www.jianshu.com/p/7a56b08a42ec)
 
-[OkHttp实现多文件断点下载](http://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238683&idx=1&sn=9dd209394f2a2d1f4117c601e0b499f7&chksm=88639fb4bf1416a22771e70936c4ba3919835431bb822c4c9958d589c53ca1c48fcfdb30a126&mpshare=1&scene=23&srcid=0224xsLT8AIq3ihahiGcfh9e#rd)
+在 Retrofit 和 OkHttp 中使用网络缓存，提高访问效率
+https://mp.weixin.qq.com/s/cCZKmqKrdCn63eWTbOuANw
+
+Android Retrofit请求服务器返回字符串（非JSON）_learner_lps的博客-CSDN博客_retrofit 返回字符串
+https://blog.csdn.net/learner_lps/article/details/77533215
+
+Retrofit 2.0 超能实践（三），轻松实现多文件/图片上传/Json字符串/表单 - 简书
+https://www.jianshu.com/p/acfefb0a204f
+
+Retrofit 传递数组参数 - 简书
+https://www.jianshu.com/p/d64f84ce7837
+
+Android Retrofit 2.0 的详细 使用攻略（含实例讲解） - 简书
+https://www.jianshu.com/p/a3e162261ab6?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=weixin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
