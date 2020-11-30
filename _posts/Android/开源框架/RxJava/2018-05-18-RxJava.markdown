@@ -39,6 +39,14 @@ description: 『 RxJava系列一 』
 
 [【推荐】拆 JakeWharton 系列一之 RxAndroid](https://mp.weixin.qq.com/s/We2Eq5xUW7hQxSDThRn6rw)
 
+[nanchen2251/RxJava2Examples: RxJava2 Examples —— 这可能是从 RxJava1 跳到 RxJava2（学习 RxJava2 ）最好的例子 Demo：https://github.com/nanchen2251/RxJava2Examples](https://github.com/nanchen2251/RxJava2Examples)
 
+[androidmalin/RxjavaSample: RxJava Sample](https://github.com/androidmalin/RxjavaSample)
+
+[kaushikgopal/RxJava-Android-Samples: Learning RxJava for Android by example](https://github.com/kaushikgopal/RxJava-Android-Samples)
+
+[lzyzsd/Awesome-RxJava: RxJava resources](https://github.com/lzyzsd/Awesome-RxJava)
+
+[amitshekhariitbhu/RxJava2-Android-Samples: RxJava 2 Android Examples - Migration From RxJava 1 to RxJava 2 - How to use RxJava 2 in Android](https://github.com/amitshekhariitbhu/RxJava2-Android-Samples)
 
 
