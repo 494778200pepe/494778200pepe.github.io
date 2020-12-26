@@ -132,7 +132,7 @@ description: 『 RecycleView 』
 
 [图文搞懂RecyclerView 的各部分组成 ](https://mp.weixin.qq.com/s/1G9J-Gyr5P_y6rymIm1Qxg)
 
-[图文搞懂RecyclerView 的各部分组成 | RecyclerView进阶](https://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650826828&idx=1&sn=1ef4b7cd83b2a7e78d99246d617418cb&chksm=80b7bcd2b7c035c41d00aac85738bb94d31f64da9110a4a71c00ecfc26379d04d5321b3f56f7&scene=21#wechat_redirect)
+[图文搞懂RecyclerView 的各部分组成 ](https://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650826828&idx=1&sn=1ef4b7cd83b2a7e78d99246d617418cb&chksm=80b7bcd2b7c035c41d00aac85738bb94d31f64da9110a4a71c00ecfc26379d04d5321b3f56f7&scene=21#wechat_redirect)
 
 [那些酷炫的RecyclerView开源库整理 - 简书](https://www.jianshu.com/p/154891851fe2)
 
