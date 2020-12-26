@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Linux"
+date:   2020-12-16 10:07:00 +0800
+categories: Linux
+tags: Linux
+author: pepe
+description: 『 Linux 』
+---
+
+[鳥哥的 Linux 私房菜 -- 基礎學習篇](http://linux.vbird.org/linux_basic/)

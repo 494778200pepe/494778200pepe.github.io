@@ -12,3 +12,7 @@ description: 『 Fresco 』
 | Fresco | [Facebook Fresco体验（一） - 布布扣-bubuko.com]（http://www.bubuko.com/infodetail-734570.html）
 | Fresco | [专栏：Fresco分析 - 博客频道 -  CSDN.NET]（http://blog.csdn.net/column/details/bzhfresco.html）
 | Fresco | [Android Fresco框架入门 -  true100的专栏 - 博客频道 -  CSDN.NET]（http://blog.csdn.net/true100/article/details/52192998）
+
+
+Facebook —— Fresco 一次加载流程 - Sharry's blog
+https://sharrychoo.github.io/blog/android-source-third-party/fresco-once-sequence
