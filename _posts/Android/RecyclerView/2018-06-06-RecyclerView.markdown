@@ -92,6 +92,12 @@ description: 『 RecycleView 』
 
 [自定义无限循环的LayoutManager](https://juejin.cn/post/6909363022980972552)
 
+[一个有趣的效果，自定义LayoutManager实现扇叶布局管理器](https://mp.weixin.qq.com/s/7X-omEyx4Z5XejsCKKqY3Q)
+
+[陈小缘的博客_CSDN博客-领域博主[(https://blog.csdn.net/u011387817)
+
+[Android自定义LayoutManager第十一式之飞龙在天_陈小缘的博客-CSDN博客_layoutmanager](https://blog.csdn.net/u011387817/article/details/81875021)
+
 ### 下拉刷新上拉加载
 
 [Demos/RecyclerViewRefreshDemo at master · alidili/Demos](https://github.com/alidili/Demos/tree/master/RecyclerViewRefreshDemo)
@@ -146,7 +152,7 @@ description: 『 RecycleView 』
 
 [仿知乎列表广告栏：在RecyclerView中实现大图片完整展示的视差效果-玩Android - wanandroid.com](https://www.wanandroid.com/blog/show/2736)
 
-
+[Android组件化——SXRecyclerView - 简书](https://www.jianshu.com/p/d1ab5f6be73f)
 
 
 
