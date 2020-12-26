@@ -144,7 +144,7 @@ description: 『 RecycleView 』
 
 [Paging在RecyclerView中的应用，有这一篇就够了](https://mp.weixin.qq.com/s/4zUjMCGuiNISOJvX0JTelw)
 
-
+[仿知乎列表广告栏：在RecyclerView中实现大图片完整展示的视差效果-玩Android - wanandroid.com](https://www.wanandroid.com/blog/show/2736)
 
 
 
