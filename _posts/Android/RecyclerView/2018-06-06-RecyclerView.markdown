@@ -86,6 +86,8 @@ description: 『 RecycleView 』
 
 ### LayoutManager
 
+[Android自定义LayoutManager第十一式之飞龙在天_陈小缘的博客-CSDN博客_layoutmanager](https://blog.csdn.net/u011387817/article/details/81875021)
+
 [wuyr/PathLayoutManager: RecyclerView的LayoutManager，轻松实现各种炫酷、特殊效果，再也不怕产品经理为难！](https://github.com/wuyr/PathLayoutManager)
 
 [RecyclerView真的是无所不能](https://mp.weixin.qq.com/s/BToTEL-IkVFtTQYKfR_CJw)
@@ -95,8 +97,6 @@ description: 『 RecycleView 』
 [一个有趣的效果，自定义LayoutManager实现扇叶布局管理器](https://mp.weixin.qq.com/s/7X-omEyx4Z5XejsCKKqY3Q)
 
 [陈小缘的博客_CSDN博客-领域博主[(https://blog.csdn.net/u011387817)
-
-[Android自定义LayoutManager第十一式之飞龙在天_陈小缘的博客-CSDN博客_layoutmanager](https://blog.csdn.net/u011387817/article/details/81875021)
 
 ### 下拉刷新上拉加载
 
