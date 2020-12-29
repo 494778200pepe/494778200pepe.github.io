@@ -144,6 +144,8 @@ description: 『 RecycleView 』
 
 [让你明明白白的使用RecyclerView——SnapHelper详解 - 简书](https://www.jianshu.com/p/e54db232df62)
 
+[RecyclerView + SnapHelper实现炫酷ViewPager效果 - 简书](https://www.jianshu.com/p/f23f6271a074)
+
 [RecyclerView：getLayoutPosition 和 getAdapterPosition - 简书](https://www.jianshu.com/p/83506d1d1ec8)
 
 [重学RecyclerView Adapter封装的深度思考和实现 - 简书](https://www.jianshu.com/p/7684fc2d4277)
