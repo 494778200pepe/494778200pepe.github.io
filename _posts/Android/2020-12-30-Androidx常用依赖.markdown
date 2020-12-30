@@ -1,0 +1,97 @@
+---
+layout: post
+title:  "Androidx常用依赖"
+date:   2020-12-30 10:11:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 Androidx常用依赖 』
+---
+
+### CardView
+
+```
+implementation 'androidx.cardview:cardview:1.0.0'
+```
+
+### TabLayout
+
+```
+implementation'com.google.android.material:material:1.0.0'
+```
+
+### RecycleView
+
+```
+implementation'androidx.recyclerview:recyclerview:1.0.0'
+```
+
+### Snackbar
+
+```
+implementation'com.google.android.material.snackbar.Snackbar:1.0.0-rc01'
+```
+
+### swiperefreshlayout
+
+```
+implementation'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
+```
+
+### viewpager
+
+```
+implementation 'androidx.viewpager:viewpager:1.0.0'
+```
+
+### coordinatorlayout
+
+```
+implementation'androidx.coordinatorlayout:coordinatorlayout:1.0.0'
+```
+
+### design ui 库
+
+```
+implementation'com.google.android.material:material:1.0.0-rc01'
+```
+
+### constraintlayout 约束布局
+
+```
+implementation'androidx.constraintlayout:constraintlayout:1.1.2'
+```
+
+### NavigationView 侧滑
+
+```
+implementation'com.google.android.material.navigation.NavigationView：1.0.0'
+```
+
+### drawerlayout 抽屉布局
+
+```
+implementation'androidx.drawerlayout:drawerlayout:1.0.0'
+```
+
+### gridlayout 网格布局
+
+```
+implementation'androidx.gridlayout:gridlayout:1.0.0'
+```
+
+### viewPager 2
+
+```
+implementation 'androidx.viewpager2:viewpager2:1.0.0'
+```
+
+如果没找的需要的可以到[点击进入](https://developer.android.google.cn/jetpack/androidx/migrate/class-mappings?hl=zh_cn)自己查找需要的。
+
+
+
+
+
+
+
+
