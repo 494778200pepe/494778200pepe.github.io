@@ -127,5 +127,8 @@ https://www.zhihu.com/question/421330220/answer/1480860373
 小题大做 | 内存泄漏简单问，你能答对吗
 https://juejin.cn/post/6909362503898595342
 
+关于Android中为什么主线程不会因为Looper.loop()里的死循环卡死？引发的思考，事实可能不是一个 epoll 那么 简单。 - 指尖下的幽灵 - 博客园
+https://www.cnblogs.com/linguanh/p/6412042.html?utm_source=tuicool&utm_medium=referral
+
 
 
