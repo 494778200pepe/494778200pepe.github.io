@@ -10,13 +10,13 @@ description: 『 RecycleView 』
 
 ### 基本使用
 
+[Android 控件 RecyclerView - 简书](https://www.jianshu.com/p/4f9591291365)
+
 [用RecyclerView的瀑布流布局实现表格展示_u014169119的博客-CSDN博客_recyclerview实现表格](https://blog.csdn.net/u014169119/article/details/72639606)
 
 [GridLayoutManager中setSpanSizeLookup()的基本操作，实现布局多样化_Nothing-CSDN博客](https://blog.csdn.net/tiankongcheng6/article/details/84105049)
 
 [RecyclerView使用全解析_openXu的专栏-CSDN博客](https://blog.csdn.net/xmxkf/article/details/79488089)
-
-[Android 控件 RecyclerView - 简书](https://www.jianshu.com/p/4f9591291365)
 
 [Android：RecyclerView 的使用，有这一篇就够了_whdAlive 's blog-CSDN博客_android recyclerview](https://blog.csdn.net/whdalive/article/details/80539976)
 
@@ -156,7 +156,7 @@ description: 『 RecycleView 』
 
 [Android组件化——SXRecyclerView - 简书](https://www.jianshu.com/p/d1ab5f6be73f)
 
-
+[RecyclerView源码解析(三)——深度解析缓存机制 - 简书](https://www.jianshu.com/p/2b19e9bcda84)
 
 
 
