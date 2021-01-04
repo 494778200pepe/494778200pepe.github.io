@@ -30,6 +30,10 @@ description: 『 RecycleView 』
 
 [RecycleView自定义ItemDecoration，实现时间轴效果_ali18510953445的博客-CSDN博客](https://blog.csdn.net/ali18510953445/article/details/78052191)
 
+[教你玩转 Android RecyclerView：深入解析 RecyclerView.ItemDecoration类（含实例讲解） - 简书](https://www.jianshu.com/p/9a796bb23a47)
+
+[Android 自定义View实战系列 ：时间轴 - 简书](https://www.jianshu.com/p/655ea359e3db)
+
 ### MultiType
 
 [RecyclerView 简单到想哭的多条目实现 - 简书](https://www.jianshu.com/p/8ec4dd5cbeed)
