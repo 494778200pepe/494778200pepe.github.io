@@ -62,6 +62,8 @@ description: 『 RecycleView 』
 
 ### StickHeader
 
+[RecyclerView 粘性（悬浮）头部_禽兽先生不禽兽-CSDN博客](https://blog.csdn.net/zgcqflqinhao/article/details/83013923)
+
 [使用sticky-headers-recyclerview 完成 recyclerview粘性头部_ -CSDN博客](https://blog.csdn.net/QS219/article/details/52293130)
 
 [RecyclerView 实现吸底效果，这个必须要会啊](https://mp.weixin.qq.com/s/uDj-wa3j6crA8mpsoTzmfQ)
@@ -69,8 +71,6 @@ description: 『 RecycleView 』
 [RecyclerStickyHeaderView 拥有粘性标题视图或悬浮视图的RecyclerView - Android开发社区 ](https://www.ctolib.com/RecyclerStickyHeaderView.html)
 
 [Android RecyclerView 使用ItemDecoration实现吸附效果，和业务代码完全解耦，即插即用](https://juejin.cn/post/6844903558760890381)
-
-[RecyclerView 粘性（悬浮）头部_禽兽先生不禽兽-CSDN博客](https://blog.csdn.net/zgcqflqinhao/article/details/83013923)
 
 [RecyclerView 使用ItemDecoration 巧妙实现吸附效果](https://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650825230&idx=1&sn=c0b8a385e2bf9a51e1f2dabb7a4fdd87&chksm=80b7b690b7c03f86a119d0db7d497f38e6020281cdf25c9d9f84126d7c697b98c06c59bdf200&mpshare=1&scene=23&srcid=0330kJQcNZdL7nFQ6cqnkKmF#rd)
 
