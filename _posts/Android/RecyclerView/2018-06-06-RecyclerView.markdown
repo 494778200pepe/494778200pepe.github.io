@@ -64,6 +64,8 @@ description: 『 RecycleView 』
 
 [RecyclerView 粘性（悬浮）头部_禽兽先生不禽兽-CSDN博客](https://blog.csdn.net/zgcqflqinhao/article/details/83013923)
 
+[android上使用RecyclerView实现顶部悬浮标题效果的Sticky Title View_蹦跶的小码哥-CSDN博客](https://blog.csdn.net/hua631150873/article/details/76048865)
+
 [使用sticky-headers-recyclerview 完成 recyclerview粘性头部_ -CSDN博客](https://blog.csdn.net/QS219/article/details/52293130)
 
 [RecyclerView 实现吸底效果，这个必须要会啊](https://mp.weixin.qq.com/s/uDj-wa3j6crA8mpsoTzmfQ)
@@ -72,13 +74,9 @@ description: 『 RecycleView 』
 
 [Android RecyclerView 使用ItemDecoration实现吸附效果，和业务代码完全解耦，即插即用](https://juejin.cn/post/6844903558760890381)
 
-[RecyclerView 使用ItemDecoration 巧妙实现吸附效果](https://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650825230&idx=1&sn=c0b8a385e2bf9a51e1f2dabb7a4fdd87&chksm=80b7b690b7c03f86a119d0db7d497f38e6020281cdf25c9d9f84126d7c697b98c06c59bdf200&mpshare=1&scene=23&srcid=0330kJQcNZdL7nFQ6cqnkKmF#rd)
-
 [RecyclerView轻松实现悬浮头部分组列表_Water的博客-CSDN博客](https://blog.csdn.net/binbinqq86/article/details/54427505)
 
 [RecyclerView Item 的悬浮效果（吸附效果）的实现_一个有思想的搬运工-CSDN博客](https://blog.csdn.net/OneDeveloper/article/details/79760228)
-
-[android上使用RecyclerView实现顶部悬浮标题效果的Sticky Title View_蹦跶的小码哥-CSDN博客](https://blog.csdn.net/hua631150873/article/details/76048865)
 
 [RecyclerView 悬浮/粘性头部——StickyHeaderDecoration_凶残的程序员-CSDN博客](https://blog.csdn.net/qian520ao/article/details/76167193)
 
@@ -96,7 +94,7 @@ description: 『 RecycleView 』
 
 [一个有趣的效果，自定义LayoutManager实现扇叶布局管理器](https://mp.weixin.qq.com/s/7X-omEyx4Z5XejsCKKqY3Q)
 
-[陈小缘的博客_CSDN博客-领域博主[(https://blog.csdn.net/u011387817)
+[陈小缘的博客_CSDN博客-领域博主](https://blog.csdn.net/u011387817)
 
 ### 下拉刷新上拉加载
 
