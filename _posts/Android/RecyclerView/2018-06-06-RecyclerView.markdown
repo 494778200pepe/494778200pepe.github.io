@@ -10,6 +10,10 @@ description: 『 RecycleView 』
 
 ### 基本使用
 
+[RecyclerView的基本设计结构](https://juejin.cn/post/6844903735714398216)
+
+[RecyclerView刷新机制](https://juejin.cn/post/6844903735974428680)
+
 [Android 控件 RecyclerView - 简书](https://www.jianshu.com/p/4f9591291365)
 
 [用RecyclerView的瀑布流布局实现表格展示_u014169119的博客-CSDN博客_recyclerview实现表格](https://blog.csdn.net/u014169119/article/details/72639606)
