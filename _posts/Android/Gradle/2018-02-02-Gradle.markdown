@@ -9,28 +9,28 @@ description: 『 Gradle学习 』
 ---
 
 Android 里面，涉及到 Gradle 的有三个文件：`setting.gradle`、`(Project 的)build.gradle`、`(module 的)build.gradle`，那么该怎么学习 Gradle 呢？
+							
+* 1、[这三个文件究竟是啥？](https://jose-md.github.io/study/android/2019/08/02/Gradle-%E4%B8%89%E4%B8%AA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.html)
 
-* 1、[这三个文件究竟是啥？](https://494778200pepe.github.io/android/2019/08/02/Gradle-%E4%B8%89%E4%B8%AA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.html)
+* 2、这三个文件是怎么运转起来的？也就是[工作时序。](https://jose-md.github.io/study/android/2019/07/22/Gradle-%E5%B7%A5%E4%BD%9C%E6%97%B6%E5%BA%8F.html)
 
-* 2、这三个文件是怎么运转起来的？也就是[工作时序。](https://494778200pepe.github.io/android/2019/07/22/Gradle-%E5%B7%A5%E4%BD%9C%E6%97%B6%E5%BA%8F.html)
+* 3、gradle 文件里面用的 [Groovy 语言，当然也是要学习的。](https://jose-md.github.io/study/android/2019/07/19/Gradle-Groovy.html)
 
-* 3、gradle 文件里面用的 [Groovy 语言，当然也是要学习的。](https://494778200pepe.github.io/android/2019/07/19/Gradle-Groovy.html)
+* 4、在 module 的 build.gradle 文件中，第一行 `apply plugin: 'com.android.application'`，那么这个 [com.android.application 是干什么的呢？](https://jose-md.github.io/study/android/2019/08/02/Gradle-AppExtension.html)
 
-* 4、在 module 的 build.gradle 文件中，第一行 `apply plugin: 'com.android.application'`，那么这个 [com.android.application 是干什么的呢？](https://494778200pepe.github.io/android/2019/08/02/Gradle-AppExtension.html)
+* 5、什么是 task，以及[自定义 task](https://jose-md.github.io/study/android/2019/08/05/Gradle-自定义-task.html)
 
-* 5、什么是 task，以及[自定义 task](https://494778200pepe.github.io/android/2019/08/05/Gradle-自定义-task.html)
+* 6、[增量构建](https://jose-md.github.io/study/android/2019/08/06/Gradle-增量构建.html)
 
-* 6、[增量构建](https://494778200pepe.github.io/android/2019/08/06/Gradle-增量构建.html)
+* 7、[自定义 Gradle 插件](https://jose-md.github.io/study/android/2019/08/05/Gradle-自定义-Gradle-插件.html)
 
-* 7、[自定义 Gradle 插件](https://494778200pepe.github.io/android/2019/08/05/Gradle-自定义-Gradle-插件.html)
+* 8、[gradle 插件上传 Jcenter 与自建 Maven 私服](https://jose-md.github.io/study/android/2019/08/06/Gradle-%E6%8F%92%E4%BB%B6%E4%B8%8A%E4%BC%A0Jcenter%E4%B8%8E%E8%87%AA%E5%BB%BAMaven%E7%A7%81%E6%9C%8D.html)
 
-* 8、[gradle 插件上传 Jcenter 与自建 Maven 私服](https://494778200pepe.github.io/android/2019/08/06/Gradle-%E6%8F%92%E4%BB%B6%E4%B8%8A%E4%BC%A0Jcenter%E4%B8%8E%E8%87%AA%E5%BB%BAMaven%E7%A7%81%E6%9C%8D.html)
+* 9、[多渠道打包](https://jose-md.github.io/study/android/2019/07/20/Gradle-多渠道打包.html)
 
-* 9、[多渠道打包](https://494778200pepe.github.io/android/2019/07/20/Gradle-多渠道打包.html)
+* 10、[Android动态编译技术:Plugin Transform Javassist操作Class文件](https://jose-md.github.io/study/android/2019/08/06/Gradle-动态编译.html)
 
-* 10、[Android动态编译技术:Plugin Transform Javassist操作Class文件](https://494778200pepe.github.io/android/2019/08/06/Gradle-动态编译.html)
-
-* 11、[debug 调试](https://494778200pepe.github.io/android/2019/08/06/Gradle-debug-调试.html)
+* 11、[debug 调试](https://jose-md.github.io/study/android/2019/08/06/Gradle-debug-调试.html)
 
 
 Android 源码系列之自定义Gradle Plugin，优雅的解决第三方Jar包中的bug - llew2011的专栏 - CSDN博客
