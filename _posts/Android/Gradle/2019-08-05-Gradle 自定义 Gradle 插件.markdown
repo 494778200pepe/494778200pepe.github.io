@@ -331,7 +331,7 @@ applicationId: com.a1one.myapplication
 
 参考：
 
-[一篇文章带你了解Gradle插件的所有创建方式](https://www.jianshu.com/p/5b99e3af4d6b)
+[一篇文章带你了解Gradle插件的所有创建方式](https://juejin.cn/post/6844903613911973901)
 
 [Gradle 实现自定义插件 - 小雨伞漂流记 - OSCHINA](https://my.oschina.net/ososchina/blog/2994131)
 
