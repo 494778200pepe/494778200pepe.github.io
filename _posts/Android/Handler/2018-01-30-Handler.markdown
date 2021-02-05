@@ -63,6 +63,9 @@ Message是容纳任意数据的容器。生产线程发送消息给 Handler，Ha
 
 [ Activity 中 Handler的正确使用_乃哥1的博客-CSDN博客](https://blog.csdn.net/qq_32886769/article/details/105598064)
 
+[Handler造成Activity泄漏，用弱引用真的有用么?_阳光下的小树-CSDN博客_activity 弱引用](https://blog.csdn.net/u013356254/article/details/52463636?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachine
+LearnPai2-4.control)
+
 [Android Handler机制1之Thread - 简书](https://www.jianshu.com/p/3d8f7ec1017a)
 
 [Android源码研究——Handler机制 - 文集 - 简书](https://www.jianshu.com/nb/21173643)
