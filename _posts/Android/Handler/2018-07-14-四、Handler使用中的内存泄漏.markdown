@@ -123,6 +123,8 @@ public void onDestroy() {
 
 参考：
 
+[小题大做 内存泄漏简单问，你能答对吗](https://juejin.cn/post/6909362503898595342)
+
 [Handler造成Activity泄漏，用弱引用真的有用么? ](https://www.freesion.com/article/4442246797/)
 
 [Handler内存泄露原理及解决方法 - 简书](https://www.jianshu.com/p/f2f186e3dd3e)

@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "八、epoll 机制"
-date:   2021-03-01 19:41:00 +0800
+title:  "八、同步屏障机制"
+date:   2021-03-01 20:28:00 +0800
 categories: Android
 tags: Handler
 author: pepe
-description: 『 epoll 机制 』
+description: 『 同步屏障机制 』
 ---
 
 ### `Handler`学习系列
@@ -20,6 +20,4 @@ https://494778200pepe.github.io/android/2018/07/14/%E4%B8%80-Handler-Message-Mes
 * [七、HandlerThread 使用](https://494778200pepe.github.io/android/2018/07/14/%E4%B8%83-HandlerThread-%E4%BD%BF%E7%94%A8.html)
 
 
-[我所理解的Handler - 简书](https://www.jianshu.com/p/a3b5a5b33e0a?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=weixin&from=groupmessage&isappinstalled=0&scene=1&clicktime=1578302619&enterid=1578302619)
-
-[我读过的最好的epoll讲解--转自”知乎“-永远的朋友-51CTO博客](https://blog.51cto.com/yaocoder/888374）
+[每日问答 Handler应该是大家再熟悉不过的类了，那么其中有个同步屏障机制，你了解多少呢？-玩Android - wanandroid.com](https://www.wanandroid.com/wenda/show/8710)
