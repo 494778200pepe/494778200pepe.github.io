@@ -320,7 +320,7 @@ if (msg != null && msg.target == null) {
 
 [有关Handler机制的源码学习 - 简书](https://www.jianshu.com/p/b5eb6fb14c95)
 
-[Handler机制 SUNNY空间](http://www.sunnyang.com/303.html)
+
 
 
 
