@@ -205,8 +205,7 @@ static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>();
 
 参考：
 
-Java 基础 -- ThreadLocal | 孤舟蓑笠翁，独钓寒江雪
-http://www.heqiangfly.com/2016/11/16/java-basic-threadlocal/
+[Java 基础 -- ThreadLocal | 孤舟蓑笠翁，独钓寒江雪](http://www.heqiangfly.com/2016/11/16/java-basic-threadlocal/)
 
 [ThreadLocal源码解析 - CSDN博客](https://blog.csdn.net/qq_17250009/article/details/50000753)
 
@@ -214,17 +213,13 @@ http://www.heqiangfly.com/2016/11/16/java-basic-threadlocal/
 
 [带你了解源码中的 ThreadLocal - 简书](https://www.jianshu.com/p/4167d7ff5ec1)
 
-ThreadLocalMap里弱引用 - vicoqi的博客 - CSDN博客
-https://blog.csdn.net/vicoqi/article/details/79743112
+[ThreadLocalMap里弱引用 - vicoqi的博客 - CSDN博客](https://blog.csdn.net/vicoqi/article/details/79743112)
 
-Java并发编程：深入剖析ThreadLocal - Matrix海子 - 博客园
-https://www.cnblogs.com/dolphin0520/p/3920407.html
+[Java并发编程：深入剖析ThreadLocal - Matrix海子 - 博客园](https://www.cnblogs.com/dolphin0520/p/3920407.html)
 
-Java中的堆和栈的区别 - 技术小黑屋
-https://droidyue.com/blog/2014/12/07/differences-between-stack-and-heap-in-java/
+[Java中的堆和栈的区别 - 技术小黑屋](https://droidyue.com/blog/2014/12/07/differences-between-stack-and-heap-in-java/)
 
-理解Java中的ThreadLocal - 技术小黑屋
-https://droidyue.com/blog/2016/03/13/learning-threadlocal-in-java/
+[理解Java中的ThreadLocal - 技术小黑屋](https://droidyue.com/blog/2016/03/13/learning-threadlocal-in-java/)
 
 
 
