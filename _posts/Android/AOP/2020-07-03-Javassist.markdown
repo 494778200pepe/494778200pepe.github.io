@@ -14,8 +14,7 @@ description: 『 Javassist 』
 Javassist应用流程
 
 
-Android动态编译技术 Plugin Transform Javassist操作Class文件
-https://mp.weixin.qq.com/s/lNGk_s1QkJPfZeqTx0FZVw
+[Android动态编译技术 Plugin Transform Javassist操作Class文件](https://mp.weixin.qq.com/s/lNGk_s1QkJPfZeqTx0FZVw)
 
 [yaozhukuang/javassist: 利用javassist和自定义gradle插件修改.class文件](https://github.com/yaozhukuang/javassist)
 
@@ -43,7 +42,7 @@ https://mp.weixin.qq.com/s/lNGk_s1QkJPfZeqTx0FZVw
 
 API:
 
-[使用Groovy开发之I/O - 简书](https://www.jianshu.com/p/6a2fe8069471）
+[使用Groovy开发之IO - 简书](https://www.jianshu.com/p/6a2fe8069471）
 
 [AOP之Javassist - 简书](https://www.jianshu.com/p/49aab8792274)
 
