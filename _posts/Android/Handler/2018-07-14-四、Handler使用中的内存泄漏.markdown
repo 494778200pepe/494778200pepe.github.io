@@ -118,9 +118,12 @@ public void onDestroy() {
 
 ```
 
+申明 static 是为了解决内部类持有宿主类的引用问题，由于Handler 是 static 的，为了 Handler 能够方便的调用 activity 的方法就持有 activity 的引用，并用 WeakReference 包裹一下。 如果 Handler 不是以内部类的形式出现，那么 static 是不需要的。 为什么用 static 和 为什么用 WeakReference 是逻辑是这样的，并不是没有用。
 
 
 参考：
+
+[Handler造成Activity泄漏，用弱引用真的有用么? ](https://www.freesion.com/article/4442246797/)
 
 [Handler内存泄露原理及解决方法 - 简书](https://www.jianshu.com/p/f2f186e3dd3e)
 
