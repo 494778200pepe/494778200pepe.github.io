@@ -205,7 +205,7 @@ static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>();
 
 参考：
 
-[Java 基础 -- ThreadLocal | 孤舟蓑笠翁，独钓寒江雪](http://www.heqiangfly.com/2016/11/16/java-basic-threadlocal/)
+[Java 基础 -- ThreadLocal  孤舟蓑笠翁，独钓寒江雪](http://www.heqiangfly.com/2016/11/16/java-basic-threadlocal/)
 
 [ThreadLocal源码解析 - CSDN博客](https://blog.csdn.net/qq_17250009/article/details/50000753)
 
