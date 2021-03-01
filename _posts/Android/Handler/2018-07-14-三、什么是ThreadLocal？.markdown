@@ -205,6 +205,8 @@ static final ThreadLocal<Looper> sThreadLocal = new ThreadLocal<Looper>();
 
 参考：
 
+[对于Java静态内部类的理解 - 风生水起 - 博客园](https://www.cnblogs.com/end/archive/2012/12/21/2827672.html)
+
 [Java 基础 -- ThreadLocal  孤舟蓑笠翁，独钓寒江雪](http://www.heqiangfly.com/2016/11/16/java-basic-threadlocal/)
 
 [ThreadLocal源码解析 - CSDN博客](https://blog.csdn.net/qq_17250009/article/details/50000753)
