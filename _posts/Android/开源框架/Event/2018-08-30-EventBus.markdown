@@ -8,6 +8,8 @@ author: pepe
 description: 『 EventBus 』
 ---
 
+[eventbus的使用（三）简洁易懂--EventBus3.0，如何使用annotationProcessor生成索引类_秦时明月-CSDN博客](https://blog.csdn.net/baidu_31093133/article/details/78696664)
+
 [Android EventBus 的源码解析](https://mp.weixin.qq.com/s/pZAbNe1pE1_JUUv4j9KAow)
 
 [EventBus源码研读(上) 开源实验室](https://www.kymjs.com/code/2015/12/12/01/)
