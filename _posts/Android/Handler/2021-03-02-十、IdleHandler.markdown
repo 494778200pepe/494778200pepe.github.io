@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "九、同步屏障机制"
-date:   2021-03-01 20:28:00 +0800
+title:  "十、IdelHandler"
+date:   2021-03-02 09:12:00 +0800
 categories: Android
 tags: Handler
 author: pepe
-description: 『 同步屏障机制 』
+description: 『 IdelHandler 』
 ---
 
 ### `Handler`学习系列
@@ -20,4 +20,5 @@ https://494778200pepe.github.io/android/2018/07/14/%E4%B8%80-Handler-Message-Mes
 * [七、HandlerThread 使用](https://494778200pepe.github.io/android/2018/07/14/%E4%B8%83-HandlerThread-%E4%BD%BF%E7%94%A8.html)
 
 
-[每日问答 Handler应该是大家再熟悉不过的类了，那么其中有个同步屏障机制，你了解多少呢？-玩Android - wanandroid.com](https://www.wanandroid.com/wenda/show/8710)
+
+[Android IdleHandler 原理浅析 - 简书](https://www.jianshu.com/p/a1d945c4f5a6)
