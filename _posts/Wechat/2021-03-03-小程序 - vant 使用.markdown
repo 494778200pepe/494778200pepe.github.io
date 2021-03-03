@@ -1,0 +1,51 @@
+---
+layout: post
+title:  "小程序 - vant 使用"
+date:   2021-03-03 11:59:00 +0800
+categories: Wechat
+tags: 小程序
+author: pepe
+description: 『 vant 使用 』
+---
+
+```
+1、第一步：npm init
+ 
+2、第二步：npm install --production
+ 
+3、第三步： npm i @vant/weapp -S --production
+	或者  npm i vant-weapp -S --production
+	
+4、第四步：勾选使用 npm 模块 
+
+5、第五步：构建 npm 
+
+6、第六步：使用组件 "van-button": "@vant/weapp/button/index"
+```
+
+
+参考：
+
+[小程序使用 组件库 vant-weapp详细教程_祈澈菇凉-CSDN博客](https://wangxiaoting.blog.csdn.net/article/details/109130362)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
