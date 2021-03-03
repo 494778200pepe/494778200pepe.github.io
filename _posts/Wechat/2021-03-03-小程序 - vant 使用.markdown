@@ -8,6 +8,8 @@ author: pepe
 description: 『 vant 使用 』
 ---
 
+项目目录下，也就是 `app.json` 的同级目录
+
 ```
 1、第一步：npm init
  
