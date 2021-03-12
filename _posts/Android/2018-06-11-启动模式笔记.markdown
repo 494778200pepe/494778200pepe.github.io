@@ -1,0 +1,60 @@
+---
+layout: post
+title:  "启动模式笔记"
+date:   2018-06-11 11:39:00 +0800
+categories: Android
+tags: Android
+author: pepe
+description: 『 Activity的四种启动模式 』
+---
+
+LaunchMode：
+standard、singleTop、singleTask、singleInstance
+按了选项键，显示的是各个任务，也就是 Task
+每个 Task 都是一个自己的回退栈
+Task 按顺序纪录了用户打开的每个 Activity，返回键的时候按照倒序依次关闭这些 Activity
+当最后一个 Activity 关闭的时候，这个 Task 的生命也就结束了，但它并不会在最近任务列表里面消失
+点击重新切回去，实际是对 App 的重新启动
+Activity 是一个可以跨进程跨应用的组件
+ 
+默认逻辑规则：
+在不同的 Task 中打开同一个 Activity，Activity 会被创建多个实例，分别放进每一个 Task，互不干扰
+
+
+singleTask 可以让 Activity 被别的 App 启动的时候，不会进入启动它的 Task 里，
+而是会在属于它自己的 Task 里创建，放在自己的栈顶
+然后把这整个 Task 一起拿过来，压在启动它的 Task 的上面。（Activity 切换动画为应用/Task切换动画）
+此时如果点击选项键，也就是进入后台时，那么两个 Task 就会分开。
+
+也就是说 不仅仅是 Activity 可以跌起来，不同的 Task 也是可以叠起来的。
+
+选项键 = 最近任务键
+
+只使用
+allowTaskReparenting = true
+A打开B（为Activity切换动画，而不是Task切换动画），B会在A的Task里面，即使按下 最近任务键，B仍然在A的Task里面。（而不是创建了一个B的Task）
+但是如果你按下 最近任务键，，然后点击B的App，那么该页面就会返回到B新创建的Task里面。
+在 Android9和10 上是坏掉的。
+
+Task 的另外一个行为规则：只有一个Task里有这个Activity，同时该Task里面最多只有一个该Activity
+
+singleTask 就是事实上的唯一。强调的是唯一性
+singleInstance：不仅仅是唯一性，而且是独占性。独占一个 Task。
+
+两者的区别：
+在被启动之后，用户按返回键时，singleTask 会在自己的 App 里进行回退（因为该 Task 里还有其他的 Activity）
+而 singleInstance 会直接回到原先的 App（因为该 Task 只有一个 Activity）。
+回退到桌面，点击 singleTask/singleInstance 的 app，singleTask 可以看到，该 Activity 仍然在栈顶
+而 singleInstance 就不在栈顶了。
+
+在最近任务里看见的 Task 未必还活着，可能是残影。
+在最近任务里看不见的 Task 也未必就死了，比如 singleInstance。
+
+taskAffinity 和 最近任务列表
+最近任务列表会列出现有的 Task（任务）
+  但它们的 taskAffinity 需要不一样
+  当多个 Task 具有相同的 taskAffinity 的时候，最近任务列表里只会显示最新展示过的那一个。
+
+参考：
+
+[Android 面试黑洞——当我按下 Home 键再切回来，会发生什么？_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/BV1CA41177Se)
