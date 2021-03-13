@@ -14,6 +14,6 @@ description: 『 HashMap 』
 
 [详解并发下的HashMap以及JDK8的优化 - 简书](https://www.jianshu.com/p/e1c020d37c6a?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=weixin)
 
-
+[JDK8 HashMap扩容优化_9栋108的博客-CSDN博客](https://blog.csdn.net/weixin_30814319/article/details/95851285)
 
 
