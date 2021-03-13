@@ -8,14 +8,11 @@ author: pepe
 description: 『 HashMap 』
 ---
 
-漫画：什么是HashMap？
-https://mp.weixin.qq.com/s/9kFFPI8DB7ac_69t6hFLTw
+[漫画：什么是HashMap？](https://mp.weixin.qq.com/s/9kFFPI8DB7ac_69t6hFLTw)
 
-Java：这是一份全面 & 详细的HashMap 1.7源码分析指南 - 简书
-https://www.jianshu.com/p/e5c8a814c0ca?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=weixin
+[Java：这是一份全面 & 详细的HashMap 1.7源码分析指南 - 简书](https://www.jianshu.com/p/e5c8a814c0ca?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=weixin)
 
-详解并发下的HashMap以及JDK8的优化 - 简书
-https://www.jianshu.com/p/e1c020d37c6a?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=weixin
+[详解并发下的HashMap以及JDK8的优化 - 简书](https://www.jianshu.com/p/e1c020d37c6a?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=weixin)
 
 
 

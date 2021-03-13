@@ -10,5 +10,5 @@ description: 『 LinkedHashMap 』
 
 
 
-图解LinkedHashMap原理 - 简书
-https://www.jianshu.com/p/8f4f58b4b8ab
+
+[图解LinkedHashMap原理 - 简书](https://www.jianshu.com/p/8f4f58b4b8ab)
