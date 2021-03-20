@@ -1,0 +1,160 @@
+---
+layout: post
+title:  "Kotlin -  类与对象6-内部类枚举类"
+date:   2021-03-16 19:59:00 +0800
+categories: Kotlin
+tags: Kotlin
+author: pepe
+description: 『  类与对象6-内部类枚举类" 』
+---
+
+### 嵌套类与内部类
+
+随便嵌套
+```
+class Outer {
+    private val bar: Int = 1
+    class Nested {
+        fun foo() = 2
+    }
+}
+
+// 嵌套类
+val demo = Outer.Nested().foo() // == 2
+
+
+interface OuterInterface {
+    class InnerClass
+    interface InnerInterface
+}
+
+class OuterClass {
+    class InnerClass
+    interface InnerInterface
+}
+```
+
+#### 内部类
+```
+class Outer {
+    private val bar: Int = 1
+	var name ="李武"
+    inner class Inner {
+        fun foo() = bar
+		fun hello(){
+            println("你好$name")
+            //内部类使用this,访问外部类的变量
+            println("你好${this@Outer.name}")  
+        }
+    }
+}
+
+val demo = Outer().Inner().foo() // == 1
+```
+
+### 枚举类
+```
+// 最基本的
+enum class Direction {
+    NORTH, SOUTH, WEST, EAST
+}
+
+// 带参数的
+enum class Color(val rgb: Int) {
+        RED(0xFF0000),
+        GREEN(0x00FF00),
+        BLUE(0x0000FF)
+}
+
+// 带方法的
+enum class ProtocolState {
+    WAITING {
+        override fun signal() = TALKING
+    },
+
+    TALKING {
+        override fun signal() = WAITING
+    };
+
+    abstract fun signal(): ProtocolState
+}
+```
+
+#### 实现接口
+```
+@RequiresApi(Build.VERSION_CODES.N)
+enum class IntArithmetics : BinaryOperator<Int>, IntBinaryOperator {
+    PLUS {
+        override fun apply(t: Int, u: Int): Int = t + u
+    },
+    TIMES {
+        override fun apply(t: Int, u: Int): Int = t * u
+    };
+
+    override fun applyAsInt(t: Int, u: Int) = apply(t, u)
+}
+```
+
+#### 使用枚举常量
+```
+EnumClass.valueOf(value: String): EnumClass
+EnumClass.values(): Array<EnumClass>
+
+
+// 使用 实现接口的 例子
+val result = IntArithmetics.valueOf("PLUS").apply(3, 4)
+d1("pepe","result = $result")
+val values:Array<IntArithmetics> = IntArithmetics.values();
+for(value in values){
+    d1("pepe","value = $value")
+}
+
+结果：
+
+result = 7
+value = PLUS
+value = TIMES
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

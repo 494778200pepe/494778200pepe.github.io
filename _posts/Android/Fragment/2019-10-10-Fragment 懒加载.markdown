@@ -33,6 +33,8 @@ description: 『 懒加载 』
 
 参考：
 
+[ViewPager2中的Fragment懒加载实现方式_快乐丸的博客-CSDN博客](https://blog.csdn.net/qq_36486247/article/details/103959356）
+
 [Fragment懒加载实现，BaseFragment封装 - 简书](https://www.jianshu.com/p/4eb74c9d5766)
 
 [Android 懒加载简单介绍 - Jason_Jan - 博客园](https://www.cnblogs.com/Jason-Jan/p/8018500.html)

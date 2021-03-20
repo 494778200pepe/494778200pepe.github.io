@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "Kotlin -  类与对象7"
+date:   2021-03-17 09:28:00 +0800
+categories: Kotlin
+tags: Kotlin
+author: pepe
+description: 『  类与对象7 』
+---
+
+### 对象
+
+
+### 类型别名
+
+
+### 内联类
+
+
+### 委托
+
+
+### 委托属性
+
+
+
+
+
+
+
+
+

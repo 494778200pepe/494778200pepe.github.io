@@ -1,0 +1,103 @@
+---
+layout: post
+title:  "Kotlin -  类与对象3-扩展"
+date:   2021-03-16 17:44:00 +0800
+categories: Kotlin
+tags: Kotlin
+author: pepe
+description: 『  类与对象3-扩展 』
+---
+
+### 可见性修饰符
+
+private  文件内可见
+// 注意：在 Kotlin 中，外部类不能访问内部类的 private 成员。
+protected 文件内+子类可见
+internal  module 内可见
+public 能看到类，就可见
+
+### 扩展
+
+> Kotlin 能够扩展一个类的新功能而无需继承该类或者使用像装饰者这样的设计模式。 这通过叫做 扩展 的特殊声明完成。
+
+[Kotlin扩展函数 - 简书](https://www.jianshu.com/p/b7c7ddbd6acc)
+
+```
+// 声明在类外部，就是静态方法
+// 声明在类内部，就是非静态方法，只能在该类和该类的子类中进行调用
+fun MutableList<Int>.swap(index1: Int, index2: Int) {
+    val tmp = this[index1] // “this”对应该列表
+    this[index1] = this[index2]
+    this[index2] = tmp
+}
+```
+
+#### 扩展是静态解析的
+```
+fun main() {
+    open class Shape
+
+    class Rectangle: Shape()
+
+    fun Shape.getName() = "Shape"
+
+    fun Rectangle.getName() = "Rectangle"
+
+    fun printClassName(s: Shape) {
+        println(s.getName())
+    }    
+
+    printClassName(Rectangle())
+}
+结果：Shape   
+```
+因为调用的扩展函数只取决于参数 s 的声明类型，该类型是 Shape 类。
+
+```
+fun main() {
+    class Example {
+        fun printFunctionType() { println("Class method") }
+    }
+
+    fun Example.printFunctionType() { println("Extension function") }
+
+    Example().printFunctionType()
+}
+结果：Class method
+
+冲突的时候，取成员函数
+```
+如果一个类定义有一个成员函数与一个扩展函数，而这两个函数又有相同的接收者类型、 相同的名字，并且都适用给定的参数，这种情况总是取成员函数。
+
+```
+fun main() {
+    class Example {
+        fun printFunctionType() { println("Class method") }
+    }
+
+    fun Example.printFunctionType(i: Int) { println("Extension function") }
+
+    Example().printFunctionType(1)
+}
+结果：Extension function
+
+参数不一样
+```
+
+#### 可空接收者
+```
+fun Any?.toString(): String {
+    if (this == null) return "null"
+    // 空检测之后，“this”会自动转换为非空类型，所以下面的 toString()
+    // 解析为 Any 类的成员函数
+    return toString()
+}
+```
+
+
+
+
+
+
+
+

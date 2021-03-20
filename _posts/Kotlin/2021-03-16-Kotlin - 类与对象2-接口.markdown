@@ -1,0 +1,161 @@
+---
+layout: post
+title:  "Kotlin -  类与对象2-接口"
+date:   2021-03-16 17:07:00 +0800
+categories: Kotlin
+tags: Kotlin
+author: pepe
+description: 『  类与对象2-接口 』
+---
+
+
+### 属性与字段
+
+#### Getter 和 Setter
+```
+var allByDefault: Int? // 错误：需要显式初始化器，隐含默认 getter 和 setter
+var initialized = 1 // 类型 Int、默认 getter 和 setter
+
+val simple: Int? // 类型 Int、默认 getter、必须在构造函数中初始化
+val inferredType = 1 // 类型 Int 、默认 getter
+```
+
+### 接口
+```
+// 定义
+interface MyInterface {
+    fun bar()
+    fun foo() {
+      // 可选的方法体
+    }
+}
+
+// 实现
+class Child : MyInterface {
+    override fun bar() {
+        // 方法体
+    }
+}
+```
+
+#### 接口属性
+```
+// 在接口中声明的属性要么是抽象的，要么提供访问器的实现。
+interface MyInterface {
+    val prop: Int // 抽象的
+
+    val propertyWithImplementation: String
+        get() = "foo"
+
+    fun foo() {
+        print(prop)
+    }
+}
+
+class Child : MyInterface {
+    override val prop: Int = 29
+}
+```
+
+#### 接口继承
+```
+interface Named {
+    val name: String
+}
+
+interface Person : Named {
+    val firstName: String
+    val lastName: String
+    
+    override val name: String get() = "$firstName $lastName"
+}
+
+// 只需定义缺少的实现
+data class Employee(
+    // 不必实现“name”
+    override val firstName: String,
+    override val lastName: String,
+    val position: Position
+) : Person
+```
+
+#### 覆盖冲突
+```
+interface A {
+    fun foo() { print("A") }
+    fun bar()
+}
+
+interface B {
+    fun foo() { print("B") }
+    fun bar() { print("bar") }
+}
+
+class C : A {
+    override fun bar() { print("bar") }
+}
+
+class D : A, B {
+    override fun foo() {
+        super<A>.foo()
+        super<B>.foo()
+    }
+
+    override fun bar() {
+        super<B>.bar()
+    }
+}
+```
+
+
+### 函数式（SAM）接口
+
+只有一个抽象方法的接口称为函数式接口或 SAM（单一抽象方法）接口。函数式接口可以有多个非抽象成员，但只能有一个抽象成员。
+
+可以用 fun 修饰符在 Kotlin 中声明一个函数式接口。
+
+```
+fun interface KRunnable {
+   fun invoke()
+}
+```
+
+#### SAM 转换
+```
+// 函数式接口
+fun interface IntPredicate {
+   fun accept(i: Int): Boolean
+}
+
+// 不使用 SAM 转换
+// 创建一个类的实例
+val isEven = object : IntPredicate {
+   override fun accept(i: Int): Boolean {
+       return i % 2 == 0
+   }
+}
+
+// 使用 SAM 转换
+// 通过 lambda 表达式创建一个实例
+val isEven = IntPredicate { it % 2 == 0 }
+
+
+fun interface IntPredicate {
+   fun accept(i: Int): Boolean
+}
+
+val isEven = IntPredicate { it % 2 == 0 }
+
+fun main() {
+   println("Is 7 even? - ${isEven.accept(7)}")
+}
+```
+
+
+
+
+
+
+
+
+

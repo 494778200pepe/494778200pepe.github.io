@@ -1,0 +1,77 @@
+---
+layout: post
+title:  "Kotlin -  类与对象4-数据类"
+date:   2021-03-16 19:01:00 +0800
+categories: Kotlin
+tags: Kotlin
+author: pepe
+description: 『  类与对象4-数据类 』
+---
+
+### 数据类
+
+在类体重声明的属性
+```
+data class Person(val name: String) {
+    var age: Int = 0
+}
+fun main() {
+    val person1 = Person("John")
+    val person2 = Person("John")
+    person1.age = 10
+    person2.age = 20
+    println("person1 == person2: ${person1 == person2}")
+    println("person1 with age ${person1.age}: ${person1}")
+    println("person2 with age ${person2.age}: ${person2}")
+}
+结果：
+person1 == person2: true
+person1 with age 10: Person(name=John)
+person2 with age 20: Person(name=John)
+
+在 toString()、 equals()、 hashCode() 以及 copy() 的实现中只会用到 name 属性，并且只有一个 component 函数 component1()。
+
+虽然两个 Person 对象可以有不同的年龄，但它们会视为相等。
+```
+
+#### 复制copy
+```
+fun copy(name: String = this.name, age: Int = this.age) = User(name, age)
+
+val jack = User(name = "Jack", age = 1)
+val olderJack = jack.copy(age = 2)
+
+复制一个对象改变它的一些属性，但其余部分保持不变。
+```
+
+### 密封类
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

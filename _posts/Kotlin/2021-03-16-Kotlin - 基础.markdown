@@ -1,0 +1,297 @@
+---
+layout: post
+title:  "Kotlin -  基础"
+date:   2021-03-16 14:30:00 +0800
+categories: Kotlin
+tags: Kotlin
+author: pepe
+description: 『  基础 』
+---
+
+### 基本类型
+
+#### 数字
+Byte  Short Int Long
+Float Double (默认是 double)
+
+Kotlin 中的数字没有隐式拓宽转换
+```
+fun main() {
+    fun printDouble(d: Double) { print(d) }
+
+    val i = 1    
+    val d = 1.1
+    val f = 1.1f 
+
+    printDouble(d)
+//    printDouble(i) // 错误：类型不匹配
+//    printDouble(f) // 错误：类型不匹配
+}
+```
+
+关于数字装箱：
+
+注意数字装箱不一定保留同一性:
+
+```
+val a: Int = 100
+val boxedA: Int? = a
+val anotherBoxedA: Int? = a
+​
+val b: Int = 10000
+val boxedB: Int? = b
+val anotherBoxedB: Int? = b
+​
+println(boxedA === anotherBoxedA) // true
+println(boxedB === anotherBoxedB) // false
+```
+另一方面，它保留了相等性:
+
+```
+val a: Int = 10000
+println(a == a) // 输出“true”
+val boxedA: Int? = a
+val anotherBoxedA: Int? = a
+println(boxedA == anotherBoxedA) // 输出“true”
+```
+
+关于显示转换：
+
+> 由于不同的表示方式，较小类型并不是较大类型的子类型。 如果它们是的话，就会出现下述问题：
+
+Int? 可空引用
+
+```
+// 假想的代码，实际上并不能编译：
+val a: Int? = 1 // 一个装箱的 Int (java.lang.Integer)   
+val b: Long? = a // 隐式转换产生一个装箱的 Long (java.lang.Long)
+print(b == a) // 惊！这将输出“false”鉴于 Long 的 equals() 会检测另一个是否也为 Long
+```
+
+转换方法：
+```
+- toByte(): Byte
+- toShort(): Short
+- toInt(): Int
+- toLong(): Long
+- toFloat(): Float
+- toDouble(): Double
+- toChar(): Char
+```
+
+位运算：
+
+```
+这是完整的位运算列表（只用于 Int 与 Long）：
+
+shl(bits) – 有符号左移
+shr(bits) – 有符号右移
+ushr(bits) – 无符号右移
+and(bits) – 位与
+or(bits) – 位或
+xor(bits) – 位异或
+inv() – 位非
+```
+
+#### 字符
+```
+fun check(c: Char) {
+    if (c == 1) { // 错误：类型不兼容
+        // ……
+    }
+}
+```
+
+### 数组
+创建：
+```
+val array1 = arrayOf(1,2,3)
+val array2 = arrayOfNulls(5) 创建一个指定大小的、所有元素都为空的数组
+
+// 创建一个 Array<String> 初始化为 ["0", "1", "4", "9", "16"]
+val asc = Array(5) { i -> (i * i).toString() }
+asc.forEach { println(it) }
+```
+
+原声类型数组：
+```
+val x: IntArray = intArrayOf(1, 2, 3)
+x[0] = x[1] + x[2]
+
+
+// 大小为 5、值为 [0, 0, 0, 0, 0] 的整型数组
+val arr = IntArray(5)
+
+// 例如：用常量初始化数组中的值
+// 大小为 5、值为 [42, 42, 42, 42, 42] 的整型数组
+val arr = IntArray(5) { 42 }
+
+// 例如：使用 lambda 表达式初始化数组中的值
+// 大小为 5、值为 [0, 1, 2, 3, 4] 的整型数组（值初始化为其索引值）
+var arr = IntArray(5) { it * 1 }
+```
+
+#### 字符串
+原始字符串 使用三个引号（"""）分界符括起来，内部没有转义并且可以包含换行以及任何其他字符:
+
+```
+val text = """
+    for (c in "foo")
+        print(c)
+"""
+
+val s = "abc"
+println("$s.length is ${s.length}") // 输出“abc.length is 3”
+```
+
+### 包与导入
+
+如果出现名字冲突，可以使用 as 关键字在本地重命名冲突项来消歧义：
+
+```
+import org.example.Message // Message 可访问
+import org.test.Message as testMessage // testMessage 代表“org.test.Message”
+```
+
+### 控制流
+
+if、when、for、while
+
+### 返回与跳转
+
+Kotlin 有三种结构化跳转表达式：
+
+ - return。默认从最直接包围它的函数或者匿名函数返回。
+ - break。终止最直接包围它的循环。
+ - continue。继续下一次最直接包围它的循环。
+ 
+ 
+#### Break 与 Continue 标签
+ 
+```
+// 嵌套循环
+loop@ for (i in 1..100) {
+    for (j in 1..100) {
+        if (……) break@loop
+    }
+}
+```
+
+#### 返回到标签
+```
+// return 方法
+fun foo() {
+    listOf(1, 2, 3, 4, 5).forEach {
+        if (it == 3) return // 非局部直接返回到 foo() 的调用者
+        print(it)
+    }
+    println("this point is unreachable")
+}
+结果：1 2
+
+// return 等同于 continue，表示从 lambda 表达式中返回
+fun foo() {
+    listOf(1, 2, 3, 4, 5).forEach lit@{
+        if (it == 3) return@lit // 局部返回到该 lambda 表达式的调用者，即 forEach 循环
+        print(it)
+    }
+    print(" done with explicit label")
+}
+结果：1 2 4 5 done with explicit label
+
+// return 等同于 continue, 换了一种写法
+fun foo() {
+    listOf(1, 2, 3, 4, 5).forEach {
+        if (it == 3) return@forEach // 局部返回到该 lambda 表达式的调用者，即 forEach 循环
+        print(it)
+    }
+    print(" done with implicit label")
+}
+结果：1 2 4 5 done with explicit label
+
+// return 的是匿名函数
+fun foo() {
+    listOf(1, 2, 3, 4, 5).forEach(fun(value: Int) {
+        if (value == 3) return  // 局部返回到匿名函数的调用者，即 forEach 循环
+        print(value)
+    })
+    print(" done with anonymous function")
+}
+结果：1 2 4 5 done with explicit label
+
+// return 等同于 break
+fun foo() {
+    run loop@{
+        listOf(1, 2, 3, 4, 5).forEach {
+            if (it == 3) return@loop // 从传入 run 的 lambda 表达式非局部返回
+            print(it)
+        }
+    }
+    print(" done with nested loop")
+}
+结果：1 2 done with explicit label
+```
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

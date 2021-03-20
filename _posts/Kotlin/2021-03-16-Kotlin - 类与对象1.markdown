@@ -1,0 +1,204 @@
+---
+layout: post
+title:  "Kotlin -  类与对象1"
+date:   2021-03-16 15:41:00 +0800
+categories: Kotlin
+tags: Kotlin
+author: pepe
+description: 『  类与对象1 』
+---
+
+### 类与继承
+
+#### 构造函数
+主构造函数：
+```
+class Person constructor(firstName: String)
+class Person(firstName: String) { /*……*/ }  与上相同
+
+// 添加注解和修饰符
+class Customer public @Inject constructor(name: String) { /*……*/ }
+```
+
+次构造函数：
+```
+// 如果类有一个主构造函数，每个次构造函数需要委托给主构造函数， 可以直接委托或者通过别的次构造函数间接委托。
+class Person(val name: String) {
+    var children: MutableList<Person> = mutableListOf()
+    constructor(name: String, parent: Person) : this(name) {
+        parent.children.add(this)
+    }
+}
+
+```
+
+#### 继承
+
+> 默认情况下，Kotlin 类是最终（final）的：它们不能被继承。 要使一个类可继承，请用 open 关键字标记它。
+
+```
+open class Base(p: Int)
+
+class Derived(p: Int) : Base(p)
+```
+如果子类有一个主构造函数，其父类可以（并且必须） 用子类主构造函数的参数就地初始化。
+
+#### 覆盖方法
+```
+// 也是用 override
+open class Shape {
+    open fun draw() { /*……*/ }
+    fun fill() { /*……*/ }
+}
+
+class Circle() : Shape() {
+    override fun draw() { /*……*/ }
+}
+
+// 禁止被再次覆盖
+open class Rectangle() : Shape() {
+    final override fun draw() { /*……*/ }
+}
+```
+
+#### 覆盖属性
+```
+open class Shape {
+    open val vertexCount: Int = 0
+}
+
+class Rectangle : Shape() {
+    override val vertexCount = 4
+}
+```
+
+> 你也可以用一个 var 属性覆盖一个 val 属性，但反之则不行。 这是允许的，因为一个 val 属性本质上声明了一个 get 方法， 而将其覆盖为 var 只是在子类中额外声明一个 set 方法。
+
+```
+interface Shape {
+    val vertexCount: Int
+}
+
+class Rectangle(override val vertexCount: Int = 4) : Shape // 总是有 4 个顶点
+
+class Polygon : Shape {
+    override var vertexCount: Int = 0  // 以后可以设置为任何数
+}
+```
+
+#### 子类的初始化顺序
+
+```
+open class Base(val name: String) {
+
+    init { println("Initializing Base") }								// 3
+
+    open val size: Int = 
+        name.length.also { println("Initializing size in Base: $it") }	// 4
+}
+
+class Derived(
+    name: String,
+    val lastName: String,
+) : Base(name.capitalize().also { println("Argument for Base: $it") }) { // 2
+
+    init { println("Initializing Derived") }							 // 5
+
+    override val size: Int =											 // 6
+        (super.size + lastName.length).also { println("Initializing size in Derived: $it") }
+}
+
+fun main() {
+    println("Constructing Derived(\"hello\", \"world\")")   			 // 1
+    val d = Derived("hello", "world")						
+}
+
+结果：
+Constructing Derived("hello", "world")
+Argument for Base: Hello
+Initializing Base
+Initializing size in Base: 5
+Initializing Derived
+Initializing size in Derived: 10
+```
+
+内部类中访问外部类的超类，super@Outer:
+```
+open class Rectangle {
+    open fun draw() { println("Drawing a rectangle") }
+    val borderColor: String get() = "black"
+}
+
+class FilledRectangle: Rectangle() {
+    override fun draw() { 
+        val filler = Filler()
+        filler.drawAndFill()
+    }
+
+    inner class Filler {
+        fun fill() { println("Filling") }
+        fun drawAndFill() {
+            super@FilledRectangle.draw() // 调用 Rectangle 的 draw() 实现
+            fill()
+            println("Drawn a filled rectangle with color ${super@FilledRectangle.borderColor}") // 使用 Rectangle 所实现的 borderColor 的 get()
+        }
+    }
+}
+
+fun main() {
+    val fr = FilledRectangle()
+        fr.draw()
+}
+```
+
+#### 覆盖规则
+必须覆盖，提供自身实现
+```
+open class Rectangle {
+    open fun draw() { /* …… */ }
+}
+
+interface Polygon {
+    fun draw() { /* …… */ } // 接口成员默认就是“open”的
+}
+
+class Square() : Rectangle(), Polygon {
+    // 编译器要求覆盖 draw()：
+    override fun draw() {
+        super<Rectangle>.draw() // 调用 Rectangle.draw()
+        super<Polygon>.draw() // 调用 Polygon.draw()
+    }
+}
+```
+
+#### 抽象类
+
+可以用一个抽象成员覆盖一个非抽象的开放成员
+```
+open class Polygon {
+    open fun draw() {}
+}
+
+abstract class Rectangle : Polygon() {
+    abstract override fun draw()
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
